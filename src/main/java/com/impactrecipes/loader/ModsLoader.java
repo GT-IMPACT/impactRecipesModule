@@ -10,6 +10,8 @@ import static com.impactrecipes.core.Reference.*;
  */
 public class ModsLoader {
     public static void loader() {
+        //ChiselGroup
+        ChiselGroup.run();
         //GregTech
         registerRecipeClass(GREGTECH, new Gregtech());
         registerRecipeClass(AE2, new AE());
