@@ -16,4 +16,14 @@ public class Reference {
     public final static String GALAXYSPACE = "GalaxySpace";
     public final static String AE2 = "appliedenergistics2";
     public final static String EC2 = "extracells";
+    public final static String CHISEL = "chisel";
+    public final static String BUILDCRAFT = "BuildCraft|Core";
+    public final static String ENDERIO = "EnderIO";
+    public final static String JABBA = "JABBA";
+    public final static String OC = "OpenComputers";
+    public final static String RAILCRAFT = "Railcraft";
+    public final static String SFM = "StevesFactoryManager";
+    public final static String SD = "StorageDrawers";
+    public final static String TICO = "TConstruct";
+    public final static String TECTECH = "tectech";
 }
