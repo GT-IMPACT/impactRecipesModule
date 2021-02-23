@@ -1,6 +1,8 @@
 package com.impactrecipes.recipes;
 
 import com.cricketcraft.chisel.api.carving.CarvingUtils;
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Blocks;
 import team.chisel.carving.Carving;
 
 import static com.riciJak.Ztones.init.ModBlocks.*;
@@ -24,7 +26,174 @@ public class ChiselGroup {
             }
             Carving.chisel.addVariation(name, mold[i], 32301 + i, 0);
         }*/
-        String name = "Agon";
+        // --- Glowstone
+        String name = "glowstone";
+        Carving.chisel.removeGroup(name);
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, Blocks.glowstone, 0, 0);
+        for (int i = 1; i < 16; i++) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("chisel", "glowstone"), i, 0);
+        }
+
+        // --- Cobblestone
+        name = "cobblestone";
+        Carving.chisel.removeGroup(name);
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, Blocks.cobblestone, 0, 0);
+        for (int i = 1; i < 16; i++) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("chisel", "cobblestone"), i, 0);
+        }
+
+        // --- Glass
+        name = "glass";
+        Carving.chisel.removeGroup(name);
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, Blocks.glass, 0, 0);
+        for (int i = 1; i < 16; i++) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("chisel", "glass"), i, 0);
+        }
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("chisel", "glass2"), 0, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "GlassBlock"), 0, 0);
+
+        // --- Marble
+        name = "marble";
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("Railcraft", "cube"), 7, 0);
+        //Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "metamorphicStone"), 2, 0);
+        for (int i = 0; i < 8; i++) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockstones"), i, 0);
+        }
+
+        // --- Abyssal Stone
+        name = "RCAbyssalBlock";
+        //Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousStone"), 1, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("Railcraft", "cube"), 6, 0);
+        for (int i = 0; i < 8; i++) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockgranites"), i, 0);
+        }
+
+        // --- Basalt
+        name = "basalt";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        //Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousStone"), 5, 0);
+        for (int i = 8; i < 16; i++) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockstones"), i, 0);
+        }
+
+        // --- Red Granite
+        name = "redgranite";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        //Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousStone"), 0, 0);
+        for (int i = 8; i < 16; i++) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockgranites"), i, 0);
+        }
+
+        // --- Andesite
+        name = "andesite";
+        //Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousStone"), 3, 0);
+
+        // --- Limestone
+        name = "limestone";
+        //Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "sedimentaryStone"), 0, 0);
+
+        // --- Seared Stone TConstruct
+        name = "searedStoneTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "Smeltery"), 4, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "Smeltery"), 6, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "Smeltery"), 11, 0);
+        name = "searedStoneNetherTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SmelteryNether"), 4, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SmelteryNether"), 6, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SmelteryNether"), 11, 0);
+
+        // --- Seared Bricks TConstruct
+        name = "searedBricksTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "Smeltery"), 2, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "Smeltery"), 8, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "Smeltery"), 9, 0);
+        name = "searedBricksNetherTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SmelteryNether"), 2, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SmelteryNether"), 8, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SmelteryNether"), 9, 0);
+
+        // --- SpeedBlock TConstruct
+        name = "speedBlockTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SpeedBlock"), 0, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SpeedBlock"), 1, 0);
+
+        // --- BrownStone TConstruct
+        name = "brownStoneTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SpeedBlock"), 2, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SpeedBlock"), 3, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SpeedBlock"), 4, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SpeedBlock"), 5, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SpeedBlock"), 6, 0);
+
+        // --- Bricks
+        name = "ironBricksTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 4, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 4, 0);
+        name = "goldBricksTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 5, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 5, 0);
+        name = "lapisBricksTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 6, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 6, 0);
+        name = "diamondBricksTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 7, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 7, 0);
+        name = "redstoneBricksTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 8, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 8, 0);
+        name = "boneBricksTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 9, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 9, 0);
+        name = "greenSlimeBricksTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 10, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 10, 0);
+        name = "blueSlimeBricksTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 11, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 11, 0);
+        name = "obsidianBricksTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 13, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 13, 0);
+        name = "alumiteBricksTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "MetalBlock"), 8, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 0, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 4, 0);
+        name = "arditeBricksTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "MetalBlock"), 1, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 1, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 5, 0);
+        name = "cobaltBricksTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "MetalBlock"), 0, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 2, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 6, 0);
+        name = "manyullynBricksTCon";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "MetalBlock"), 2, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 3, 0);
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 7, 0);
+
+        // --- Ztones
+        name = "Agon";
         Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
         for (int i = 0; i < 16; i++) {
             Carving.chisel.addVariation(name, agonBlock, i, 0);
