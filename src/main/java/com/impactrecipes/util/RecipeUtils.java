@@ -2,10 +2,11 @@ package com.impactrecipes.util;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import gregtech.api.GregTech_API;
-import net.minecraft.item.Item;
+import gregtech.api.enums.GT_Values;
 import net.minecraft.item.ItemStack;
 
-import static cpw.mods.fml.common.Loader.isModLoaded;
+import static cpw.mods.fml.common.Loader.*;
+import static gregtech.api.util.GT_ModHandler.*;
 
 /**
  * Как ни странно, класс для каких-либо утилит
@@ -66,5 +67,24 @@ public class RecipeUtils {
      */
     public static ItemStack getItemStack(String modid, String nameItem) {
         return getItemStack(modid, nameItem, 1);
+    }
+
+    /**
+     * @param modid - ID / название мода
+     * @param nameItem - наименование предмета
+     * @param amount - количество
+     * @return ItemStack
+     */
+    public static ItemStack getChargeItemStack(String modid, String nameItem, int amount) {
+        return getModItem(modid, nameItem, amount, GT_Values.W);
+    }
+
+    /**
+     * @param modid - ID / название мода
+     * @param nameItem - наименование предмета
+     * @return ItemStack
+     */
+    public static ItemStack getChargeItemStack(String modid, String nameItem) {
+        return getModItem(modid, nameItem, 1, GT_Values.W);
     }
 }
