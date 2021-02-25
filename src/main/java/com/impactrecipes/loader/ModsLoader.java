@@ -10,9 +10,7 @@ import static com.impactrecipes.core.Reference.*;
  */
 public class ModsLoader {
     public static void loader() {
-        //ChiselGroup
         ChiselGroup.run();
-        //GregTech
         registerRecipeClass(GREGTECH, new Gregtech());
         registerRecipeClass(AE2, new AE());
         registerRecipeClass(BUILDCRAFT, new BuildCraft());
@@ -24,5 +22,6 @@ public class ModsLoader {
         registerRecipeClass(SD, new StorageDrawers());
         registerRecipeClass(TICO, new TConstruct());
         registerRecipeClass(TECTECH, new TecTech());
+        registerRecipeClass(PROJECTRED, new ProjectRed());
     }
 }
