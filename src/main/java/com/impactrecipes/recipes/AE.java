@@ -4,6 +4,7 @@ import com.impact.common.item.Core_Items;
 import com.impact.common.item.Core_Items2;
 import com.impact.mods.GregTech.GT_ItemList;
 import gregtech.api.enums.*;
+import gregtech.api.interfaces.IOreRecipeRegistrator;
 import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
 import gregtech.api.util.GT_Utility;
@@ -13,8 +14,8 @@ import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.*;
 
 public class AE implements Runnable {
-    private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
-            | GT_ModHandler.RecipeBits.NOT_REMOVABLE/* | GT_ModHandler.RecipeBits.REVERSIBLE*/;
+
+    private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
     final Core_Items CoreItems = Core_Items.getInstance();
     final Core_Items2 CoreItems2 = Core_Items2.getInstance();
 
@@ -168,10 +169,24 @@ public class AE implements Runnable {
     }
 
     private void handRecipe() {
+        // --- Terminal
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("ae2wct", "wirelessCraftingTerminal", 1L, 0), tBitMask, new Object[]{"SAE", "PTP", "PBP", 'P', OrePrefixes.plate.get(Materials.HastelloyN), 'E', ItemList.Emitter_IV, 'B', ItemList.BatteryHull_IV_Full, 'S', ItemList.Sensor_IV, 'T', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 360), 'A', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 41)});
+        // --- Wireless Setup Kit
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("ae2stuff", "WirelessKit", 1L, 0), tBitMask, new Object[]{"SWS", "PAP", "dIw", 'S', OrePrefixes.screw.get(Materials.Titanium), 'P', OrePrefixes.plate.get(Materials.Birmabright), 'I', OrePrefixes.stick.get(Materials.Birmabright), 'W', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 41), 'A', GT_ModHandler.getModItem("appliedenergistics2", "item.ToolNetworkTool", 1L, 0)});
+        // --- Network Visualisation Tool
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("ae2stuff", "Visualiser", 1L, 0), tBitMask, new Object[]{"E S", "PMP", "PCP", 'P', OrePrefixes.plate.get(Materials.Birmabright), 'C', OrePrefixes.circuit.get(Materials.Data), 'E', ItemList.Emitter_EV, 'S', ItemList.Sensor_EV, 'M', GT_ModHandler.getModItem("OpenComputers", "hologram2", 1L)});
+        // --- Pattern Encoder
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("ae2stuff", "Encoder", 1L, 0), tBitMask, new Object[]{"POP", "ACA", "PEP", 'P', OrePrefixes.plate.get(Materials.VanadiumSteel), 'O', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 340), 'A', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 23), 'C', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), 'E', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 16)});
+        // --- Advanced Storage Housing
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L), tBitMask, new Object[]{"hGS", "TOT", "SVd", 'O', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 39), 'T', OrePrefixes.plate.get(Materials.Iridium), 'V', OrePrefixes.plate.get(Materials.HastelloyC276), 'S', OrePrefixes.screw.get(Materials.CertusQuartz), 'G', OrePrefixes.plate.get(Materials.ReinforcedGlass)});
+        // --- Fluid Storage Housing
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), tBitMask, new Object[]{"hQS", "TGT", "SVd", 'Q', OrePrefixes.plate.get(Materials.CertusQuartz), 'T', OrePrefixes.plate.get(Materials.Birmabright), 'V', OrePrefixes.plate.get(Materials.StainlessSteel), 'S', OrePrefixes.screw.get(Materials.NetherQuartz), 'G', "paneGlass"});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), tBitMask, new Object[]{"hQS", "TGT", "SVd", 'Q', OrePrefixes.plate.get(Materials.CertusQuartz), 'T', OrePrefixes.plate.get(Materials.Birmabright), 'V', OrePrefixes.plate.get(Materials.StainlessSteel), 'S', OrePrefixes.screw.get(Materials.NetherQuartz), 'G', GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L)});
+
         // --- Charger
         addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCharger", 1L), tBitMask,
-                        new Object[]{"PEP", "Cw ", "PEP", 'P', OrePrefixes.plateDouble.get(Materials.Vanadium), 'E', ItemList.Emitter_EV,
-                                'C', GT_ModHandler.getModItem("OpenComputers", "charger", 1L, 0)});
+                new Object[]{"PEP", "Cw ", "PEP", 'P', OrePrefixes.plateDouble.get(Materials.Vanadium), 'E', ItemList.Emitter_EV,
+                        'C', GT_ModHandler.getModItem("OpenComputers", "charger", 1L, 0)});
         // --- ME Storage Housing
         addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 39), tBitMask,
                 new Object[]{"hQS", "TGT", "SVd", 'Q', OrePrefixes.plate.get(Materials.CertusQuartz),
@@ -798,6 +813,100 @@ public class AE implements Runnable {
                         GT_Utility.getIntegratedCircuit(4)}, null,
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 16L, 43), 20,
                 500000);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 22), GT_ItemList.GoldCoreChip.get(1L), GT_ItemList.LogicProcessorItemGoldCore.get(1L), 100, 480);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.DiamondCoreChip.get(1L), GT_ItemList.EngineeringProcessorItemDiamondCore.get(1L), 100, 1920);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.EmeraldAdvancedCoreChip.get(1L), GT_ItemList.EngineeringProcessorItemEmeraldCore.get(1L), 100, 4096);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.EmeraldHighAdvancedCoreChip.get(1L), GT_ItemList.EngineeringProcessorItemAdvEmeraldCore.get(1L), 100, 30720);
+
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.GoldFluidCoreChip.get(1L), GT_ItemList.EngineeringProcessorFluidGoldCore.get(1L), 100, 480);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.DiamondFluidCoreChip.get(1L), GT_ItemList.EngineeringProcessorFluidDiamondCore.get(1L), 100, 1920);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.EmeraldAdvancedFluidCoreChip.get(1L), GT_ItemList.EngineeringProcessorFluidEmeraldCore.get(1L), 100, 4096);
+
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.PulsatingSpatialCoreChip.get(1L), GT_ItemList.EngineeringProcessorSpatialPulsatingCore.get(1L), 100, 4096);
+
+        // --- Storage Cell Component - 256K
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4L, 38), ItemList.Circuit_Chip_NAND.get(4), GT_ItemList.EngineeringProcessorItemEmeraldCore.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 0), 200, 7680);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 3), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4L, 38), ItemList.Circuit_Chip_NOR.get(3), GT_ItemList.EmeraldAdvancedCoreChip.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 0), 280, 30720);
+
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 3), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3L, 38), ItemList.Circuit_Chip_SoC2.get(1), GT_ItemList.EmeraldAdvancedCoreChip.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Americium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 0), 30, 122880);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 1), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2L, 38), ItemList.Circuit_Chip_SoC3.get(1), GT_ItemList.EngravedEnergyChip.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Neutronium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 0), 30, 500000);
+
+        // --- Storage Cell Component - 1024K
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 4), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 0), ItemList.Circuit_Chip_NAND.get(4), GT_ItemList.EngineeringProcessorItemEmeraldCore.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 1), 220, 7680);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 3), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 0), ItemList.Circuit_Chip_NOR.get(3), GT_ItemList.EmeraldAdvancedCoreChip.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 1), 300, 30720);
+
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 3), GT_ModHandler.getModItem("extracells", "storage.component", 3L, 0), ItemList.Circuit_Chip_SoC2.get(1), GT_ItemList.EmeraldAdvancedCoreChip.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Americium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 1), 30, 122880);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 1), GT_ModHandler.getModItem("extracells", "storage.component", 2L, 0), ItemList.Circuit_Chip_SoC3.get(1), GT_ItemList.EngravedEnergyChip.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Neutronium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 1), 30, 500000);
+
+        // --- Storage Cell Component - 4096K
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 4), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 1), ItemList.Circuit_Chip_NAND.get(4), GT_ItemList.EngineeringProcessorItemAdvEmeraldCore.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 2), 240, 30720);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 3), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 1), ItemList.Circuit_Chip_NOR.get(3), GT_ItemList.EmeraldHighAdvancedCoreChip.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 2), 320, 122880);
+
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 3), GT_ModHandler.getModItem("extracells", "storage.component", 3L, 1), ItemList.Circuit_Chip_SoC3.get(1), GT_ItemList.EmeraldHighAdvancedCoreChip.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Neutronium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 2), 30, 500000);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 1), GT_ModHandler.getModItem("extracells", "storage.component", 2L, 1), ItemList.Circuit_Chip_SoC4.get(1), GT_ItemList.EngravedQuantumChip.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Phoenixite.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 2), 30, 2000000);
+
+        // --- Storage Cell Component - 16384K
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 4), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 2), ItemList.Circuit_Chip_NAND.get(4), GT_ItemList.EngineeringProcessorItemAdvEmeraldCore.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 3), 260, 30720);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 3), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 2), ItemList.Circuit_Chip_NOR.get(3), GT_ItemList.EmeraldHighAdvancedCoreChip.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 3), 340, 122880);
+
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 3), GT_ModHandler.getModItem("extracells", "storage.component", 3L, 2), ItemList.Circuit_Chip_SoC3.get(1), GT_ItemList.EmeraldHighAdvancedCoreChip.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Neutronium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 3), 30, 500000);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 1), GT_ModHandler.getModItem("extracells", "storage.component", 2L, 2), ItemList.Circuit_Chip_SoC4.get(1), GT_ItemList.EngravedQuantumChip.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Phoenixite.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 3), 30, 2000000);
+
+        // --- Fluid Storage Cell Component - 1K
+        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Chip_Ram.get(4), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lapis, 4), GT_ItemList.EngineeringProcessorFluidGoldCore.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 4), 120, 480);
+        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Chip_NAND.get(3), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lapis, 4), GT_ItemList.GoldFluidCoreChip.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 4), 160, 1920);
+
+        // --- Fluid Storage Cell Component - 4K
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Basic, 4), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 4), ItemList.Circuit_Chip_Ram.get(4), GT_ItemList.EngineeringProcessorFluidGoldCore.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 5), 160, 480);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Basic, 3), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 4), ItemList.Circuit_Chip_NAND.get(3), GT_ItemList.GoldFluidCoreChip.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 5), 240, 1920);
+
+        // --- Fluid Storage Cell Component - 16K
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 4), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 5), ItemList.Circuit_Chip_Ram.get(4), GT_ItemList.EngineeringProcessorFluidDiamondCore.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 6), 180, 1920);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 3), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 5), ItemList.Circuit_Chip_NAND.get(3), GT_ItemList.DiamondFluidCoreChip.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 6), 260, 7680);
+
+        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Chip_Ram.get(32), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lapis, 32), ItemList.Circuit_Chip_SoC.get(1), GT_ItemList.DiamondFluidCoreChip.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Europium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 6), 30, 30720);
+        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Chip_NAND.get(16), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lapis, 16), ItemList.Circuit_Chip_SoC2.get(1), ItemList.Circuit_Parts_Crystal_Chip_Master.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Americium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 6), 30, 122880);
+
+        // --- Fluid Storage Cell Component - 64K
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 4), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 6), ItemList.Circuit_Chip_Ram.get(4), GT_ItemList.EngineeringProcessorFluidDiamondCore.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 7), 200, 1920);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 3), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 6), ItemList.Circuit_Chip_NAND.get(3), GT_ItemList.DiamondFluidCoreChip.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 7), 280, 7680);
+
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 3), GT_ModHandler.getModItem("extracells", "storage.component", 3L, 6), ItemList.Circuit_Chip_SoC.get(1), GT_ItemList.DiamondFluidCoreChip.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Europium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 7), 30, 30720);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 1), GT_ModHandler.getModItem("extracells", "storage.component", 2L, 6), ItemList.Circuit_Chip_SoC2.get(1), ItemList.Circuit_Parts_Crystal_Chip_Master.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Americium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 7), 30, 122880);
+
+        // --- Fluid Storage Cell Component - 256K
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 4), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 7), ItemList.Circuit_Chip_NAND.get(4), GT_ItemList.EngineeringProcessorFluidEmeraldCore.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 8), 200, 7680);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 3), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 7), ItemList.Circuit_Chip_NOR.get(3), GT_ItemList.EmeraldAdvancedFluidCoreChip.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 8), 280, 30720);
+
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 3), GT_ModHandler.getModItem("extracells", "storage.component", 3L, 7), ItemList.Circuit_Chip_SoC2.get(1), GT_ItemList.EmeraldAdvancedFluidCoreChip.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Americium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 8), 30, 122880);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 1), GT_ModHandler.getModItem("extracells", "storage.component", 2L, 7), ItemList.Circuit_Chip_SoC3.get(1), ItemList.Circuit_Parts_Crystal_Chip_Master.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Neutronium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 8), 30, 500000);
+
+        // --- Fluid Storage Cell Component - 1024K
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 4), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 8), ItemList.Circuit_Chip_NAND.get(4), GT_ItemList.EngineeringProcessorFluidEmeraldCore.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 9), 220, 7680);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 3), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 8), ItemList.Circuit_Chip_NOR.get(3), GT_ItemList.EmeraldAdvancedFluidCoreChip.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 9), 300, 30720);
+
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 3), GT_ModHandler.getModItem("extracells", "storage.component", 3L, 8), ItemList.Circuit_Chip_SoC2.get(1), GT_ItemList.EmeraldAdvancedFluidCoreChip.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Americium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 9), 30, 122880);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 1), GT_ModHandler.getModItem("extracells", "storage.component", 2L, 8), ItemList.Circuit_Chip_SoC3.get(1), ItemList.Circuit_Parts_Crystal_Chip_Master.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Neutronium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 9), 30, 500000);
+
+        // --- Fluid Storage Cell Component - 4096K
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 4), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 9), ItemList.Circuit_Chip_NAND.get(4), GT_ItemList.EngineeringProcessorFluidEmeraldCore.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 10), 240, 30720);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 3), GT_ModHandler.getModItem("extracells", "storage.component", 4L, 9), ItemList.Circuit_Chip_NOR.get(3), GT_ItemList.EmeraldAdvancedFluidCoreChip.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 10), 320, 122880);
+
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 3), GT_ModHandler.getModItem("extracells", "storage.component", 3L, 9), ItemList.Circuit_Chip_SoC3.get(1), GT_ItemList.EmeraldAdvancedFluidCoreChip.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Neutronium.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 10), 30, 500000);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 1), GT_ModHandler.getModItem("extracells", "storage.component", 2L, 9), ItemList.Circuit_Chip_SoC4.get(1), ItemList.Circuit_Parts_Crystal_Chip_Master.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Phoenixite.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 10), 30, 2000000);
+
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L), GT_ModHandler.getModItem("extracells", "storage.component", 1L), GT_ModHandler.getModItem("extracells", "storage.physical", 1L), 100, 7680);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.physical", 1L, 1), 100, 16384);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 2), GT_ModHandler.getModItem("extracells", "storage.physical", 1L, 2), 100, 30720);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 3), GT_ModHandler.getModItem("extracells", "storage.physical", 1L, 3), 100, 65536);
+
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 4), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L), 100, 120);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 5), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 1), 100, 256);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 6), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 2), 100, 480);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 7), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 3), 100, 1024);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 8), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 4), 100, 7680);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 9), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 5), 100, 16384);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 10), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 6), 100, 30720);
     }
 
     private void autoclaveRecipe() {
@@ -1388,13 +1497,41 @@ public class AE implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)
                 }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 64, 460), null, 900,
                 2000000);
+        // --- Wireless Connector
+        RA.addPrimitiveLineRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Vanadium, 1), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 56), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockWireless", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.VanadiumSteel, 4)}, GT_ModHandler.getModItem("ae2stuff", "Wireless", 1L, 0), null, 40 * 20, 480);
+        //ME Fluid Export Bus
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_LV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)}, GT_ModHandler.getModItem("extracells", "part.base", 1, 0), null, 200, 120);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_MV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)}, GT_ModHandler.getModItem("extracells", "part.base", 2, 0), null, 300, 480);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_HV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)}, GT_ModHandler.getModItem("extracells", "part.base", 4, 0), null, 400, 1920);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)}, GT_ModHandler.getModItem("extracells", "part.base", 8, 0), null, 500, 7680);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 10, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)}, GT_ModHandler.getModItem("extracells", "part.base", 12, 0), null, 600, 30720);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_LuV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 12, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)}, GT_ModHandler.getModItem("extracells", "part.base", 16, 0), null, 700, 122880);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_ZPM.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 14, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)}, GT_ModHandler.getModItem("extracells", "part.base", 24, 0), null, 800, 500000);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 16, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)}, GT_ModHandler.getModItem("extracells", "part.base", 32, 0), null, 900, 2000000);
+        //ME Fluid Import Bus
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_LV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)}, GT_ModHandler.getModItem("extracells", "part.base", 1, 1), null, 200, 120);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_MV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)}, GT_ModHandler.getModItem("extracells", "part.base", 2, 1), null, 300, 480);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_HV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)}, GT_ModHandler.getModItem("extracells", "part.base", 4, 1), null, 400, 1920);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)}, GT_ModHandler.getModItem("extracells", "part.base", 8, 1), null, 500, 7680);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 10, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)}, GT_ModHandler.getModItem("extracells", "part.base", 12, 1), null, 600, 30720);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_LuV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 12, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)}, GT_ModHandler.getModItem("extracells", "part.base", 16, 1), null, 700, 122880);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_ZPM.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 14, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)}, GT_ModHandler.getModItem("extracells", "part.base", 24, 1), null, 800, 500000);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 16, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)}, GT_ModHandler.getModItem("extracells", "part.base", 32, 1), null, 900, 2000000);
+        //ME Fluid Storage Bus
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_LV.get(1L), ItemList.Hatch_Output_LV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)}, GT_ModHandler.getModItem("extracells", "part.base", 1, 2), null, 200, 120);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_MV.get(1L), ItemList.Hatch_Output_MV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)}, GT_ModHandler.getModItem("extracells", "part.base", 2, 2), null, 300, 480);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_HV.get(1L), ItemList.Hatch_Output_HV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)}, GT_ModHandler.getModItem("extracells", "part.base", 4, 2), null, 400, 1920);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_EV.get(1L), ItemList.Hatch_Output_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)}, GT_ModHandler.getModItem("extracells", "part.base", 8, 2), null, 500, 7680);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_IV.get(1L), ItemList.Hatch_Output_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)}, GT_ModHandler.getModItem("extracells", "part.base", 12, 2), null, 600, 30720);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_LuV.get(1L), ItemList.Hatch_Output_LuV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)}, GT_ModHandler.getModItem("extracells", "part.base", 16, 2), null, 700, 122880);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_ZPM.get(1L), ItemList.Hatch_Output_ZPM.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)}, GT_ModHandler.getModItem("extracells", "part.base", 24, 2), null, 800, 500000);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_UV.get(1L), ItemList.Hatch_Output_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)}, GT_ModHandler.getModItem("extracells", "part.base", 32, 2), null, 900, 2000000);
+
     }
 
     private void pulveriserRecipe() {
-        RA.addPulveriserRecipe(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockFluix", 1L),
-                new ItemStack[]{GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4L, 7)},
-                new int[]{10000}, 300, 2);
+        RA.addPulveriserRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockFluix", 1L), new ItemStack[]{GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4L, 7)}, new int[]{10000}, 300, 2);
+        RA.addPulveriserRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 1), new ItemStack[]{CoreItems.getRecipe(38, 1)}, new int[]{10000}, 300, 2);
     }
 
     private void wireAssemblerRecipe() {
@@ -1453,8 +1590,28 @@ public class AE implements Runnable {
         RA.addWiremillRecipe(CoreItems2.getRecipe(153, 1), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 140), 80, 120);
     }
 
+    private void unboxingRecipe() {
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 0), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 35), 50, 16);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 1), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 36), 50, 30);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 2), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 37), 50, 48);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 3), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 38), 50, 64);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem("extracells", "craftingstorage", 1L, 0), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 0), 50, 96);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem("extracells", "craftingstorage", 1L, 1), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 1), 50, 120);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem("extracells", "craftingstorage", 1L, 2), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 2), 50, 192);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem("extracells", "craftingstorage", 1L, 3), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 3), 50, 256);
+    }
+
+    private void mixerRecipe() {
+        RA.addMixerRecipe(CoreItems.getRecipe(38, 1), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Redstone, 1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NetherQuartz, 1L), GT_Values.NI, Materials.Water.getFluid(500L), GT_Values.NF, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2L, 8), 20, 16);
+    }
+
+    private void latheRecipe() {
+        GT_Values.RA.addLatheRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2L, 1), CoreItems2.getRecipe(153, 2), CoreItems.getRecipe(38, 1), 980, 16);
+    }
+
     @Override
     public void run() {
+        new LaserEngraver();
         delRecipe();
         handRecipe();
         alloySmelterRecipe();
@@ -1468,5 +1625,32 @@ public class AE implements Runnable {
         printerRecipe();
         pulveriserRecipe();
         wireAssemblerRecipe();
+        mixerRecipe();
+        latheRecipe();
+    }
+
+    private static class LaserEngraver implements IOreRecipeRegistrator {
+
+        private LaserEngraver() {
+            OrePrefixes.crafting.add(this);
+        }
+
+        @Override
+        public void registerOre(OrePrefixes aPrefix, Materials aMaterial, String aOreDictName, String aModName, ItemStack aStack) {
+            switch (aOreDictName) {
+                case "craftingLensGreen":
+                    RA.addLaserEngraverRecipe(GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Steel, 1L), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 15), 6000, 480, false);
+                    break;
+                case "craftingLensWhite":
+                    RA.addLaserEngraverRecipe(GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Steel, 1L), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 19), 6000, 480, false);
+                    break;
+                case "craftingLensYellow":
+                    RA.addLaserEngraverRecipe(GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Steel, 1L), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 14), 6000, 480, false);
+                    break;
+                case "craftingLensBlue":
+                    RA.addLaserEngraverRecipe(GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Steel, 1L), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 13), 6000, 480, false);
+                    break;
+            }
+        }
     }
 }
