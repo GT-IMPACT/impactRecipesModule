@@ -19,7 +19,7 @@ public class Jabba implements Runnable {
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
             | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
-    public void delRecipe() {
+    private void delRecipe() {
         removeRecipeByOutput(new ItemStack(BetterBarrels.itemUpgradeCore, 1, GT_Values.W));
         removeRecipeByOutput(new ItemStack(BetterBarrels.itemHammer, 1, 0));
         removeRecipeByOutput(new ItemStack(BetterBarrels.itemMover, 1, 0));
@@ -28,7 +28,7 @@ public class Jabba implements Runnable {
         removeRecipeByOutput(new ItemStack(BetterBarrels.itemUpgradeStructural, 1, GT_Values.W));
     }
 
-    public void handRecipe() {
+    private void handRecipe() {
         // --- Void Upgrade
         GT_ModHandler.addCraftingRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 1, 7), tBitMask,
                 new Object[]{"STS", "PVP", "SRS", 'P', OrePrefixes.itemCasing.get(Materials.Steel), 'S',
@@ -126,7 +126,7 @@ public class Jabba implements Runnable {
                         new ItemStack(Blocks.hopper), 'T', new ItemStack(Blocks.piston)});
     }
 
-    public void assemblerRecipe() {
+    private void assemblerRecipe() {
         // --- Barrel
         GT_Values.RA
                 .addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Wood, 1),

@@ -20,7 +20,7 @@ public class TConstruct implements Runnable {
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
             | GT_ModHandler.RecipeBits.NOT_REMOVABLE/* | GT_ModHandler.RecipeBits.REVERSIBLE*/;
 
-    public void delRecipe() {
+    private void delRecipe() {
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelGoggles", 1L, 0));
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelWings", 1L, 0));
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelVest", 1L, 0));
@@ -31,7 +31,7 @@ public class TConstruct implements Runnable {
 
     }
 
-    public void handRecipe() {
+    private void handRecipe() {
         ItemStack leather = GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L, 0);
         GT_ModHandler
                 .addCraftingRecipe(travelGoggles.getDefaultItem(), tBitMask,
@@ -65,7 +65,7 @@ public class TConstruct implements Runnable {
 
     }
 
-    public void alloySmelterRecipe() {
+    private void alloySmelterRecipe() {
         GT_Values.RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 1L, 1),
                 ItemList.Shape_Mold_Ingot.get(0),
                 GT_ModHandler.getModItem("TConstruct", "materials", 1L, 2), 200, 16);
@@ -108,7 +108,7 @@ public class TConstruct implements Runnable {
                         GT_ModHandler.getModItem("TConstruct", "materials", 4L, 14), 200, 16);
     }
 
-    public void assemblerRecipe() {
+    private void assemblerRecipe() {
         // --- Green SDX TNT
         GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("TConstruct", "slime.gel", 1L, 1),
                 GT_ModHandler.getModItem("IC2", "blockITNT", 1L),
@@ -124,7 +124,7 @@ public class TConstruct implements Runnable {
                 GT_ModHandler.getModItem("TConstruct", "heartCanister", 1L), 2400, 480);
     }
 
-    public void chemicalBathRecipe() {
+    private void chemicalBathRecipe() {
         for (int i = 0; i < 16; i++) {
             for (int j = 0; j < Dyes.VALUES[i].getSizeOfFluidList(); j++) {
                 GT_Values.RA
@@ -141,14 +141,14 @@ public class TConstruct implements Runnable {
         }
     }
 
-    public void chemicalReactorRecipe() {
+    private void chemicalReactorRecipe() {
         GT_Values.RA
                 .addChemicalRecipe(GT_OreDictUnificator.get(OrePrefixes.block, Materials.Diamond, 8L),
                         new ItemStack(Items.golden_apple, 1, 1), null, null,
                         GT_ModHandler.getModItem("TConstruct", "diamondApple", 1L, 0), 3600);
     }
 
-    public void compressorRecipe() {
+    private void compressorRecipe() {
         GT_Values.RA.addCompressorRecipe(GT_ModHandler.getModItem("TConstruct", "materials", 9L, 14),
                 GT_ModHandler.getModItem("TConstruct", "MetalBlock", 1L, 7), 300, 2);
         GT_Values.RA.addCompressorRecipe(GT_ModHandler.getModItem("TConstruct", "materials", 9L, 5),
@@ -167,7 +167,7 @@ public class TConstruct implements Runnable {
                 GT_ModHandler.getModItem("TConstruct", "materials", 1L, 0), 300, 2);
     }
 
-    public void cutterRecipe() {
+    private void cutterRecipe() {
         for (int i = 0; i < 16; i++) {
             GT_Values.RA
                     .addCutterRecipe(GT_ModHandler.getModItem("TConstruct", "GlassBlock.StainedClear", 3L, i),
@@ -176,7 +176,7 @@ public class TConstruct implements Runnable {
         }
     }
 
-    public void EBFRecipe() {
+    private void EBFRecipe() {
         GT_Values.RA.addBlastRecipe(new ItemStack(Blocks.glass, 1), GT_Utility.getIntegratedCircuit(1),
                 GT_Values.NF, GT_Values.NF, GT_ModHandler.getModItem("TConstruct", "GlassBlock", 1L),
                 GT_Values.NI, 100, 120, 1000);
@@ -192,7 +192,7 @@ public class TConstruct implements Runnable {
                 GT_ModHandler.getModItem("TConstruct", "materials", 1L, 4), GT_Values.NI, 1200, 120, 1200);
     }
 
-    public void extractorRecipe() {
+    private void extractorRecipe() {
         GT_Values.RA.addExtractorRecipe(GT_ModHandler.getModItem("TConstruct", "Smeltery", 1L, 2),
                 GT_ModHandler.getModItem("TConstruct", "materials", 4L, 2), 300, 2);
         GT_Values.RA.addExtractorRecipe(GT_ModHandler.getModItem("TConstruct", "slime.sapling", 1L),
@@ -205,7 +205,7 @@ public class TConstruct implements Runnable {
                 Materials.RawRubber.getDust(1), 300, 2);
     }
 
-    public void extruderRecipe() {
+    private void extruderRecipe() {
         //Tool Rods
         GT_Values.RA.addExtruderRecipe(Materials.Iron.getIngots(1),
                 GT_ModHandler.getModItem("TConstruct", "metalPattern", 0L, 1),
@@ -1137,17 +1137,17 @@ public class TConstruct implements Runnable {
                 GT_ModHandler.getModItem("TConstruct", "BowLimbPart", 1L, 17), 2000, 30);
     }
 
-    public void forgeHammerRecipe() {
+    private void forgeHammerRecipe() {
         GT_Values.RA.addForgeHammerRecipe(GT_ModHandler.getModItem("TConstruct", "Smeltery", 1L, 2),
                 GT_ModHandler.getModItem("TConstruct", "materials", 3L, 2), 16, 20);
     }
 
-    public void latheRecipe() {
+    private void latheRecipe() {
         GT_Values.RA.addLatheRecipe(new ItemStack(Blocks.stone),
                 GT_ModHandler.getModItem("TConstruct", "toolRod", 2L, 1), null, 100, 16);
     }
 
-    public void mixerRecipe() {
+    private void mixerRecipe() {
         // --- Grout
         GT_Values.RA
                 .addMixerRecipe(new ItemStack(Blocks.sand, 1, GT_Values.W), new ItemStack(Blocks.gravel, 3),
@@ -1167,7 +1167,7 @@ public class TConstruct implements Runnable {
                 GT_ModHandler.getModItem("TConstruct", "materials", 1L, 41), 200, 16);
     }
 
-    public void pulveriserRecipe() {
+    private void pulveriserRecipe() {
         GT_Values.RA.addPulveriserRecipe(GT_ModHandler.getModItem("TConstruct", "materials", 1L, 4),
                 new ItemStack[]{GT_ModHandler.getModItem("TConstruct", "materials", 1L, 38)},
                 new int[]{10000}, 300, 2);
@@ -1202,7 +1202,7 @@ public class TConstruct implements Runnable {
                 new int[]{10000}, 300, 2);
     }
 
-    public void dryingRackRecipe() {
+    private void dryingRackRecipe() {
         if (Loader.isModLoaded("Backpack")) {
             DryingRackRecipes
                     .addDryingRecipe(GT_ModHandler.getModItem("Backpack", "boundLeather", 1L, 0), 4000,

@@ -19,7 +19,7 @@ public class StorageDrawers implements Runnable {
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
             | GT_ModHandler.RecipeBits.NOT_REMOVABLE/* | GT_ModHandler.RecipeBits.REVERSIBLE*/;
 
-    public void handRecipe() {
+    private void handRecipe() {
 
         for (int i = 0; i < 6; i++) {
             // --- Drawers 1
@@ -182,7 +182,7 @@ public class StorageDrawers implements Runnable {
                         OrePrefixes.screw.get(Materials.Wood)});
     }
 
-    public void assemblerRecipe() {
+    private void assemblerRecipe() {
 
         for (int i = 0; i < 6; i++) {
             // --- Drawers 1

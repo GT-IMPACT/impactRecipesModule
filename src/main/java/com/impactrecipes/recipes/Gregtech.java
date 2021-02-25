@@ -22,7 +22,7 @@ public class Gregtech implements Runnable {
     }
 
     //Рецепты ручные
-    public void handRecipe() {
+    private void handRecipe() {
         //TODO | удалишь, это для проверки работы метода регистрации класса
         ItemStack is = new ItemStack(ItemDebug.getInstance(), 1);
         final Object[] mk3_recipe = {
@@ -33,7 +33,7 @@ public class Gregtech implements Runnable {
     }
 
     //Рецепты в Ассемблере
-    public void assemblerRecipe() {
+    private void assemblerRecipe() {
 
     }
 }

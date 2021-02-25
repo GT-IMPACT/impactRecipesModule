@@ -20,7 +20,7 @@ public class StevesFactoryManager implements Runnable {
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
             | GT_ModHandler.RecipeBits.NOT_REMOVABLE/* | GT_ModHandler.RecipeBits.REVERSIBLE*/;
 
-    public void delRecipe() {
+    private void delRecipe() {
         removeRecipeByOutput(new ItemStack(ModBlocks.blockManager, 1, 0), true, false, false);
         removeRecipeByOutput(new ItemStack(ModBlocks.blockCable, 1, 0), true, false, false);
         removeRecipeByOutput(new ItemStack(ModBlocks.blockCableBreaker, 1, 0), true, false, false);
@@ -42,7 +42,7 @@ public class StevesFactoryManager implements Runnable {
         removeRecipeByOutput(new ItemStack(labeler, 1, 0), true, false, false);
     }
 
-    public void handRecipe() {
+    private void handRecipe() {
         // --- Manager
         GT_ModHandler.addCraftingRecipe(new ItemStack(ModBlocks.blockManager, 1, 0), tBitMask,
                 new Object[]{"PTP", "RDR", "PCP", 'P', OrePrefixes.plate.get(Materials.StainlessSteel), 'R',
@@ -51,7 +51,7 @@ public class StevesFactoryManager implements Runnable {
                         ItemList.Casing_Processor, 'C', new ItemStack(ModBlocks.blockCable, 1, 0)});
     }
 
-    public void assemblerRecipe() {
+    private void assemblerRecipe() {
         // --- Inventory Cable
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.StainlessSteel, 1),

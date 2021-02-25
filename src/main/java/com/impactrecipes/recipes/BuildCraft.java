@@ -22,7 +22,7 @@ public class BuildCraft implements Runnable {
             | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
     final Core_Items2 CoreItems2 = Core_Items2.getInstance();
 
-    public void delRecipe() {
+    private void delRecipe() {
         removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Builders", "fillerBlock", 1L, 0));
         removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Builders", "builderBlock", 1L, 0));
         removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Builders", "architectBlock", 1L, 0));
@@ -163,7 +163,7 @@ public class BuildCraft implements Runnable {
                         GT_Values.W));
     }
 
-    public void handRecipe() {
+    private void handRecipe() {
         // --- Filler
         GT_ModHandler
                 .addCraftingRecipe(GT_ModHandler.getModItem("BuildCraft|Builders", "fillerBlock", 1L, 0),
@@ -333,7 +333,7 @@ public class BuildCraft implements Runnable {
 
     }
 
-    public void assemblerRecipe() {
+    private void assemblerRecipe() {
         // --- Wooden Pipe
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Wood, 2L),

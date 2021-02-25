@@ -26,4 +26,5 @@ public class Reference {
     public final static String SD = "StorageDrawers";
     public final static String TICO = "TConstruct";
     public final static String TECTECH = "tectech";
+    public final static String PROJECTRED = "ProjRed|Core";
 }

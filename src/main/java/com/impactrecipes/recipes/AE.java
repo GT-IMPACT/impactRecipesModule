@@ -18,7 +18,7 @@ public class AE implements Runnable {
     final Core_Items CoreItems = Core_Items.getInstance();
     final Core_Items2 CoreItems2 = Core_Items2.getInstance();
 
-    public void delRecipe() {
+    private void delRecipe() {
         removeRecipeByOutput(
                 GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockFluix", 1L, 0));
         removeRecipeByOutput(
@@ -167,7 +167,7 @@ public class AE implements Runnable {
                 false);
     }
 
-    public void handRecipe() {
+    private void handRecipe() {
         // --- Charger
         addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCharger", 1L), tBitMask,
                         new Object[]{"PEP", "Cw ", "PEP", 'P', OrePrefixes.plateDouble.get(Materials.Vanadium), 'E', ItemList.Emitter_EV,
@@ -483,7 +483,7 @@ public class AE implements Runnable {
 
     }
 
-    public void alloySmelterRecipe() {
+    private void alloySmelterRecipe() {
         // --- Quartz Glass
         RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("minecraft", "glass", 1L, 0),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.CertusQuartz, 1L),
@@ -493,7 +493,7 @@ public class AE implements Runnable {
                 GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 1L, 0), 100, 16);
     }
 
-    public void assemblerRecipe() {
+    private void assemblerRecipe() {
         // --- Dark Illuminated Panel
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 180),
                 GT_Utility.getIntegratedCircuit(2),
@@ -800,7 +800,7 @@ public class AE implements Runnable {
                 500000);
     }
 
-    public void autoclaveRecipe() {
+    private void autoclaveRecipe() {
         RA.addAutoclaveRecipe(CoreItems.getRecipe(38, 1), Materials.Water.getFluid(200L),
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 1), 7000,
                 2000, 24);
@@ -810,7 +810,7 @@ public class AE implements Runnable {
                         1500, 24);
     }
 
-    public void centrifugeRecipe() {
+    private void centrifugeRecipe() {
         // --- Tiny TNT
         RA.addCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "blockITNT", 1L),
                 GT_Values.NI, GT_Values.NF, GT_Values.NF,
@@ -820,7 +820,7 @@ public class AE implements Runnable {
                 new int[]{10000, 10000}, 100, 16);
     }
 
-    public void chemicalBathRecipe() {
+    private void chemicalBathRecipe() {
         for (int i = 0; i < 16; i++) {
             for (int j = 0; j < Dyes.VALUES[i].getSizeOfFluidList(); j++) {
                 RA.addChemicalBathRecipe(
@@ -877,7 +877,7 @@ public class AE implements Runnable {
         }
     }
 
-    public void chemicalReactorRecipe() {
+    private void chemicalReactorRecipe() {
         // --- Seeds
         RA
                 .addChemicalRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.CertusQuartz, 1L),
@@ -909,13 +909,13 @@ public class AE implements Runnable {
 
     }
 
-    public void compressorRecipe() {
+    private void compressorRecipe() {
         RA
                 .addCompressorRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4L, 7),
                         GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockFluix", 1L), 200, 8);
     }
 
-    public void cuttingSawRecipe() {
+    private void cuttingSawRecipe() {
         RA.addCutterRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartz", 1L, 0),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.CertusQuartz, 4L), GT_Values.NI, 800, 30);
         RA.addCutterRecipe(GT_ModHandler.getModItem("minecraft", "quartz_block", 1L, 0),
@@ -944,7 +944,7 @@ public class AE implements Runnable {
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 6L, 120), GT_Values.NI, 80, 8);
     }
 
-    public void printerRecipe() {
+    private void printerRecipe() {
         //ME Controller
         RA.addPrimitiveLineRecipe(new ItemStack[]{
                         GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyAcceptor", 1, 0),
@@ -1390,14 +1390,14 @@ public class AE implements Runnable {
                 2000000);
     }
 
-    public void pulveriserRecipe() {
+    private void pulveriserRecipe() {
         RA.addPulveriserRecipe(
                 GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockFluix", 1L),
                 new ItemStack[]{GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4L, 7)},
                 new int[]{10000}, 300, 2);
     }
 
-    public void wireAssemblerRecipe() {
+    private void wireAssemblerRecipe() {
         RA.addWireAssemblerRecipe(new ItemStack[]{
                         GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 16),
                         GT_Utility.getIntegratedCircuit(24)},

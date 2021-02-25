@@ -20,7 +20,7 @@ public class EnderIO implements Runnable {
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
             | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
-    public void delRecipe() {
+    private void delRecipe() {
         removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockInventoryPanel, 1, 0), true, false, false);
         removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemFunctionUpgrade, 1, 0), true, false, false);
         removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemItemConduit, 1, 0), true, false, false);
@@ -137,7 +137,7 @@ public class EnderIO implements Runnable {
         removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemExtractSpeedUpgrade, 1, 1), true, false, false);
     }
 
-    public void handRecipe() {
+    private void handRecipe() {
         // --- Inventory Panel
         GT_ModHandler.addCraftingRecipe(new ItemStack(crazypants.enderio.EnderIO.blockInventoryPanel, 1, 0), tBitMask,
                 new Object[]{"PGP", "COR", "PIP", 'O',
@@ -283,14 +283,14 @@ public class EnderIO implements Runnable {
                         ItemList.Electric_Piston_HV.get(1L)});
     }
 
-    public void alloySmelterRecipe() {
+    private void alloySmelterRecipe() {
         // --- Fused Quartz
         GT_Values.RA.addAlloySmelterRecipe(new ItemStack(Items.quartz, 4),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Glass, 1L),
                 new ItemStack(crazypants.enderio.EnderIO.blockFusedQuartz, 1, 0), 200, 8);
     }
 
-    public void assemblerRecipe() {
+    private void assemblerRecipe() {
         // --- Item Conduit
         GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Conveyor_Module_LV.get(1),
                         GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Electrum, 4L),
@@ -465,7 +465,7 @@ public class EnderIO implements Runnable {
                 new ItemStack(crazypants.enderio.EnderIO.blockElectricLight, 64, 0), 300, 256);
     }
 
-    public void chemicalBathRecipe() {
+    private void chemicalBathRecipe() {
         GT_Values.RA.addChemicalBathRecipe(new ItemStack(crazypants.enderio.EnderIO.blockFusedQuartz, 1, 0),
                 Materials.Glowstone.getMolten(576L), new ItemStack(crazypants.enderio.EnderIO.blockFusedQuartz, 1, 2),
                 GT_Values.NI, GT_Values.NI, null, 100, 8);
@@ -478,12 +478,12 @@ public class EnderIO implements Runnable {
                         2);
     }
 
-    public void fluidSolidifierRecipe() {
+    private void fluidSolidifierRecipe() {
         GT_Values.RA.addFluidSolidifierRecipe(ItemList.Shape_Mold_Ball.get(0L),
                 Materials.Concrete.getMolten(36L), new ItemStack(crazypants.enderio.EnderIO.itemMaterial, 1, 1), 20, 4);
     }
 
-    public void printerRecipe() {
+    private void printerRecipe() {
         // --- Telepad
         GT_Values.RA.addPrimitiveLineRecipe(new ItemStack[]{
                 GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.StainlessSteel, 1),

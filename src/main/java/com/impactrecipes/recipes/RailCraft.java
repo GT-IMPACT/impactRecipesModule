@@ -33,7 +33,7 @@ import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 public class RailCraft implements Runnable {
     final Core_Items2 CoreItems2 = Core_Items2.getInstance();
 
-    public void delRecipe() {
+    private void delRecipe() {
         removeRecipeByOutput(EnumTrack.CONTROL.getItem());
         removeRecipeByOutput(EnumTrack.LOCKING.getItem());
         removeRecipeByOutput(EnumTrack.DISEMBARK.getItem());
@@ -166,7 +166,7 @@ public class RailCraft implements Runnable {
         removeRecipeByOutput(new ItemStack(Objects.ocComponents, 4, 0));
     }
 
-    public void handRecipe() {
+    private void handRecipe() {
         Object[] recipe;
         // --- Wire Support Frame
         recipe = new Object[]{
@@ -1602,7 +1602,7 @@ public class RailCraft implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ItemList.Rail_Assembler.get(1L), recipe);
     }
 
-    public void assemblerRecipe() {
+    private void assemblerRecipe() {
         // --- BatBox Cart
         GT_Values.RA.addAssemblerRecipe(new ItemStack(Items.minecart, 1),
                 GT_ModHandler.getModItem("IC2", "blockElectric", 1L, 0),
@@ -1676,7 +1676,7 @@ public class RailCraft implements Runnable {
                 RailcraftItem.rail.getStack(12, ItemRail.EnumRail.WOOD), 400, 4);
     }
 
-    public void benderRecipe() {
+    private void benderRecipe() {
         // --- Rebar
         GT_Values.RA
                 .addBenderRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Aluminium, 12L),
@@ -1703,7 +1703,7 @@ public class RailCraft implements Runnable {
                 RailcraftItem.rebar.getStack(64), 2400, 15);
     }
 
-    public void chemicalBathRecipe() {
+    private void chemicalBathRecipe() {
         // --- Wooden Tie
         GT_Values.RA.addChemicalBathRecipe(
                 GT_ModHandler.getModItem("minecraft", "wooden_slab", 1L, GT_Values.W),
@@ -1715,7 +1715,7 @@ public class RailCraft implements Runnable {
                         CoreItems2.getRecipe(164, 1), GT_Values.NI, GT_Values.NI, new int[]{10000}, 160, 5);
     }
 
-    public void circuitAssemblerRecipe() {
+    private void circuitAssemblerRecipe() {
         for (Materials tMat : Materials.values()) {
             if (tMat.mStandardMoltenFluid != null && tMat.contains(SubTag.SOLDERING_MATERIAL) && !(
                     GregTech_API.mUseOnlyGoodSolderingMaterials && !tMat
@@ -1749,7 +1749,7 @@ public class RailCraft implements Runnable {
         }
     }
 
-    public void extruderRecipe() {
+    private void extruderRecipe() {
         // --- Standard Rail
         GT_Values.RA
                 .addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Aluminium, 3L),
@@ -1799,7 +1799,7 @@ public class RailCraft implements Runnable {
                 RailcraftItem.rail.getStack(6, ItemRail.EnumRail.SPEED), 100, 24);
     }
 
-    public void trackAssemblerRecipe() {
+    private void trackAssemblerRecipe() {
         // --- Wooden Track
         impact.I_RA.addTrackAssemblerRecipe(new ItemStack[]{GT_Utility.getIntegratedCircuit(1),
                         RailcraftItem.railbed.getStack(1, ItemRailbed.EnumRailbed.WOOD),
