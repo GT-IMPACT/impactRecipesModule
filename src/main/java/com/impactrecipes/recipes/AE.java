@@ -1584,10 +1584,10 @@ public class AE implements Runnable {
                 null, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 56),
                 100, 120, false);
         // --- Quartz Fiber
-        RA.addWiremillRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Quartzite, 8L), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 140), 80, 120);
+        /*RA.addWiremillRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Quartzite, 8L), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 140), 80, 120);
         RA.addWiremillRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.NetherQuartz, 4L), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 140), 80, 120);
         RA.addWiremillRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.CertusQuartz, 2L), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 140), 80, 120);
-        RA.addWiremillRecipe(CoreItems2.getRecipe(153, 1), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 140), 80, 120);
+        RA.addWiremillRecipe(CoreItems2.getRecipe(153, 1), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 140), 80, 120);*/
     }
 
     private void unboxingRecipe() {
@@ -1609,6 +1609,19 @@ public class AE implements Runnable {
         GT_Values.RA.addLatheRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2L, 1), CoreItems2.getRecipe(153, 2), CoreItems.getRecipe(38, 1), 980, 16);
     }
 
+    private void fluidSolidifierRecipe() {
+        // --- Quartz Fiber
+        RA.addFluidSolidifierRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Quartzite, 1L),
+                Materials.BorosilicateGlass.getMolten(18L), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 140), 60, 120);
+        RA.addFluidSolidifierRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.NetherQuartz, 1L),
+                Materials.BorosilicateGlass.getMolten(36L), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2L, 140), 80, 120);
+        RA.addFluidSolidifierRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.CertusQuartz, 1L),
+                Materials.BorosilicateGlass.getMolten(72L), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 4L, 140), 100, 120);
+        RA.addFluidSolidifierRecipe(CoreItems2.getRecipe(153, 1),
+                Materials.BorosilicateGlass.getMolten(144L), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 8L, 140), 120, 120);
+
+    }
+
     @Override
     public void run() {
         new LaserEngraver();
@@ -1625,8 +1638,10 @@ public class AE implements Runnable {
         printerRecipe();
         pulveriserRecipe();
         wireAssemblerRecipe();
+        unboxingRecipe();
         mixerRecipe();
         latheRecipe();
+        fluidSolidifierRecipe();
     }
 
     private static class LaserEngraver implements IOreRecipeRegistrator {
