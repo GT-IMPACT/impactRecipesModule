@@ -11,7 +11,10 @@ import net.minecraft.item.ItemStack;
 import tconstruct.library.crafting.DryingRackRecipes;
 import tconstruct.weaponry.TinkerWeaponry;
 
+import static com.impactrecipes.util.RecipeUtils.ordictItemStack;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
+import static iguanaman.iguanatweakstconstruct.claybuckets.IguanaItems.clayBucketLava;
+import static iguanaman.iguanatweakstconstruct.claybuckets.IguanaItems.clayBucketWater;
 import static tconstruct.armor.TinkerArmor.*;
 import static tconstruct.armor.TinkerArmor.travelBelt;
 
@@ -28,6 +31,8 @@ public class TConstruct implements Runnable {
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelGlove", 1L, 0));
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelBelt", 1L, 0));
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "Smeltery", 1L, 2));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 1L, 1));
 
     }
 
@@ -62,6 +67,103 @@ public class TConstruct implements Runnable {
         GT_ModHandler
                 .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1), tBitMask,
                         new Object[]{"f ", " S", 'S', new ItemStack(Blocks.stone)});
+
+        // --- Seared Bricks
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "Smeltery", 2L, 2), tBitMask,
+                        new Object[]{"BBB", "BOB", "BBB", 'O', new ItemStack(Items.water_bucket), 'B', GT_ModHandler.getModItem("TConstruct", "materials", 1L, 2)});
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "SmelteryNether", 2L, 2), tBitMask,
+                        new Object[]{"BBB", "BOB", "BBB", 'O', new ItemStack(Items.lava_bucket), 'B', GT_ModHandler.getModItem("TConstruct", "materials", 1L, 37)});
+        if (Loader.isModLoaded("IguanaTweaksTConstruct")) {
+            GT_ModHandler
+                    .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "Smeltery", 2L, 2), tBitMask,
+                            new Object[]{"BBB", "BOB", "BBB", 'O', new ItemStack(clayBucketWater), 'B', GT_ModHandler.getModItem("TConstruct", "materials", 1L, 2)});
+            GT_ModHandler
+                    .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "SmelteryNether", 2L, 2), tBitMask,
+                            new Object[]{"BBB", "BOB", "BBB", 'O', new ItemStack(clayBucketLava), 'B', GT_ModHandler.getModItem("TConstruct", "materials", 1L, 37)});
+        }
+        // --- Grout
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 4L, 1), tBitMask,
+                        new Object[]{"SSS", "COC", "GGG", 'O', new ItemStack(Items.water_bucket), 'S', new ItemStack(Blocks.sand),
+                        'G', new ItemStack(Blocks.gravel), 'C', OrePrefixes.dust.get(Materials.Clay)});
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 4L, 1), tBitMask,
+                        new Object[]{"GGG", "COC", "SSS", 'O', new ItemStack(Items.water_bucket), 'S', new ItemStack(Blocks.sand),
+                                'G', new ItemStack(Blocks.gravel), 'C', OrePrefixes.dust.get(Materials.Clay)});
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 4L, 1), tBitMask,
+                        new Object[]{"GCS", "GOS", "GCS", 'O', new ItemStack(Items.water_bucket), 'S', new ItemStack(Blocks.sand),
+                                'G', new ItemStack(Blocks.gravel), 'C', OrePrefixes.dust.get(Materials.Clay)});
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 4L, 1), tBitMask,
+                        new Object[]{"SCG", "SOG", "SCG", 'O', new ItemStack(Items.water_bucket), 'S', new ItemStack(Blocks.sand),
+                                'G', new ItemStack(Blocks.gravel), 'C', OrePrefixes.dust.get(Materials.Clay)});
+        if (Loader.isModLoaded("IguanaTweaksTConstruct")) {
+            GT_ModHandler
+                    .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 4L, 1), tBitMask,
+                            new Object[]{"SSS", "COC", "GGG", 'O', new ItemStack(clayBucketWater), 'S', new ItemStack(Blocks.sand),
+                                    'G', new ItemStack(Blocks.gravel), 'C', OrePrefixes.dust.get(Materials.Clay)});
+            GT_ModHandler
+                    .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 4L, 1), tBitMask,
+                            new Object[]{"GGG", "COC", "SSS", 'O', new ItemStack(clayBucketWater), 'S', new ItemStack(Blocks.sand),
+                                    'G', new ItemStack(Blocks.gravel), 'C', OrePrefixes.dust.get(Materials.Clay)});
+            GT_ModHandler
+                    .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 4L, 1), tBitMask,
+                            new Object[]{"GCS", "GOS", "GCS", 'O', new ItemStack(clayBucketWater), 'S', new ItemStack(Blocks.sand),
+                                    'G', new ItemStack(Blocks.gravel), 'C', OrePrefixes.dust.get(Materials.Clay)});
+            GT_ModHandler
+                    .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 4L, 1), tBitMask,
+                            new Object[]{"SCG", "SOG", "SCG", 'O', new ItemStack(clayBucketWater), 'S', new ItemStack(Blocks.sand),
+                                    'G', new ItemStack(Blocks.gravel), 'C', OrePrefixes.dust.get(Materials.Clay)});
+        }
+
+        // --- Glider Wing
+        GT_ModHandler.addShapelessCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 1L, 6),
+                tBitMask, new Object[]{new ItemStack(Items.nether_wart), new ItemStack(Blocks.soul_sand), new ItemStack(Blocks.gravel),
+                        new ItemStack(Items.water_bucket)});
+        if (Loader.isModLoaded("IguanaTweaksTConstruct")) {
+            GT_ModHandler.addShapelessCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 1L, 6),
+                    tBitMask, new Object[]{new ItemStack(Items.nether_wart), new ItemStack(Blocks.soul_sand), new ItemStack(Blocks.gravel),
+                            new ItemStack(clayBucketWater)});
+        }
+
+        // --- Blank Pattern
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "blankPattern", 1L), tBitMask,
+                        new Object[]{"DDD", "DOD", "DDD", 'O', new ItemStack(Items.water_bucket), 'D', OrePrefixes.dust.get(Materials.Wood)});
+        if (Loader.isModLoaded("IguanaTweaksTConstruct")) {
+            GT_ModHandler
+                    .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "blankPattern", 1L), tBitMask,
+                            new Object[]{"DDD", "DOD", "DDD", 'O', new ItemStack(clayBucketWater), 'D', OrePrefixes.dust.get(Materials.Wood)});
+        }
+
+        // --- Slime Channel
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "slime.channel", 1L), tBitMask,
+                        new Object[]{"SSS", "COC", "SSS", 'O', new ItemStack(Items.water_bucket), 'S', ordictItemStack("slimeball"),
+                                'C', OrePrefixes.dust.get(Materials.Redstone)});
+        if (Loader.isModLoaded("IguanaTweaksTConstruct")) {
+            GT_ModHandler
+                    .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "slime.channel", 1L), tBitMask,
+                            new Object[]{"SSS", "COC", "SSS", 'O', new ItemStack(clayBucketWater), 'S', ordictItemStack("slimeball"),
+                                    'C', OrePrefixes.dust.get(Materials.Redstone)});
+        }
+
+        // --- Blood Channel
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "blood.channel", 1L), tBitMask,
+                        new Object[]{"SSS", "COC", "SSS", 'O', new ItemStack(Items.water_bucket),
+                                'S', GT_ModHandler.getModItem("TConstruct", "strangeFood", 1L, 1),
+                                'C', OrePrefixes.dust.get(Materials.Redstone)});
+        if (Loader.isModLoaded("IguanaTweaksTConstruct")) {
+            GT_ModHandler
+                    .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "blood.channel", 1L), tBitMask,
+                            new Object[]{"SSS", "COC", "SSS", 'O', new ItemStack(clayBucketWater),
+                                    'S', GT_ModHandler.getModItem("TConstruct", "strangeFood", 1L, 1),
+                                    'C', OrePrefixes.dust.get(Materials.Redstone)});
+        }
 
     }
 
