@@ -98,11 +98,25 @@ public class RecipeUtils {
      * @param is - ItemStack Output Recipe
      */
     public static void removeRecipeByOutput(ItemStack is) {
+        removeRecipeByOutput(is, false);
+    }
+
+    /**
+     * @param is - ItemStack Output Recipe
+     * @param checkStack - boolean for check amount items
+     */
+    public static void removeRecipeByOutput(ItemStack is, boolean checkStack) {
         Iterator<IRecipe> removerRecipes = CraftingManager.getInstance().getRecipeList().iterator();
         while (removerRecipes.hasNext()) {
             ItemStack itemStack = removerRecipes.next().getRecipeOutput();
-            if (itemStack != null && itemStack.getItem() == is.getItem() && itemStack.stackSize == is.stackSize) {
-                removerRecipes.remove();
+            if (checkStack) {
+                if (itemStack != null && itemStack.getItem() == is.getItem() && itemStack.stackSize == is.stackSize) {
+                    removerRecipes.remove();
+                }
+            } else {
+                if (itemStack != null && itemStack.getItem() == is.getItem()) {
+                    removerRecipes.remove();
+                }
             }
         }
     }
