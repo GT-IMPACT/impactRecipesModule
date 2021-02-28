@@ -3,6 +3,7 @@ package com.impactrecipes.util;
 import cpw.mods.fml.common.registry.GameRegistry;
 import gregtech.api.GregTech_API;
 import gregtech.api.enums.GT_Values;
+import gregtech.api.util.GT_Utility;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
@@ -97,27 +98,9 @@ public class RecipeUtils {
     /**
      * @param is - ItemStack Output Recipe
      */
+    @SuppressWarnings("unchecked")
     public static void removeRecipeByOutput(ItemStack is) {
-        removeRecipeByOutput(is, false);
-    }
-
-    /**
-     * @param is - ItemStack Output Recipe
-     * @param checkStack - boolean for check amount items
-     */
-    public static void removeRecipeByOutput(ItemStack is, boolean checkStack) {
-        Iterator<IRecipe> removerRecipes = CraftingManager.getInstance().getRecipeList().iterator();
-        while (removerRecipes.hasNext()) {
-            ItemStack itemStack = removerRecipes.next().getRecipeOutput();
-            if (checkStack) {
-                if (itemStack != null && itemStack.getItem() == is.getItem() && itemStack.stackSize == is.stackSize) {
-                    removerRecipes.remove();
-                }
-            } else {
-                if (itemStack != null && itemStack.getItem() == is.getItem()) {
-                    removerRecipes.remove();
-                }
-            }
-        }
+        ArrayList<IRecipe> tList = (ArrayList<IRecipe>) CraftingManager.getInstance().getRecipeList();
+        tList.removeIf(next -> GT_Utility.areStacksEqual(is, next.getRecipeOutput(), true));
     }
 }
