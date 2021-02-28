@@ -298,18 +298,10 @@ public class EnderIO implements Runnable {
                 new ItemStack(crazypants.enderio.EnderIO.itemItemConduit, 4, 0), 120, 16);
         GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Conveyor_Module_MV.get(1),
                         GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Platinum, 4L),
-                        new ItemStack(crazypants.enderio.EnderIO.itemMaterial, 8, 1), GT_Utility.getIntegratedCircuit(1)}, null,
-                new ItemStack(crazypants.enderio.EnderIO.itemItemConduit, 8, 0), 140, 30);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Conveyor_Module_HV.get(1),
-                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Osmium, 4L),
                         new ItemStack(crazypants.enderio.EnderIO.itemMaterial, 16, 1), GT_Utility.getIntegratedCircuit(1)}, null,
                 new ItemStack(crazypants.enderio.EnderIO.itemItemConduit, 16, 0), 160, 48);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Conveyor_Module_EV.get(1),
-                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.ElectrumFlux, 4L),
-                        new ItemStack(crazypants.enderio.EnderIO.itemMaterial, 32, 1), GT_Utility.getIntegratedCircuit(1)}, null,
-                new ItemStack(crazypants.enderio.EnderIO.itemItemConduit, 32, 0), 180, 96);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Conveyor_Module_IV.get(1),
-                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Americium, 4L),
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Conveyor_Module_HV.get(1),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Osmium, 4L),
                         new ItemStack(crazypants.enderio.EnderIO.itemMaterial, 64, 1), GT_Utility.getIntegratedCircuit(1)}, null,
                 new ItemStack(crazypants.enderio.EnderIO.itemItemConduit, 64, 0), 200, 120);
         // --- Fluid Conduit
