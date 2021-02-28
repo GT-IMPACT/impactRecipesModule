@@ -1,6 +1,7 @@
 package com.impactrecipes.recipes;
 
 import com.cricketcraft.chisel.api.carving.CarvingUtils;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import team.chisel.carving.Carving;
@@ -58,14 +59,18 @@ public class ChiselGroup {
         // --- Marble
         name = "marble";
         Carving.chisel.addVariation(name, GameRegistry.findBlock("Railcraft", "cube"), 7, 0);
-        //Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "metamorphicStone"), 2, 0);
+        if (Loader.isModLoaded("UndergroundBiomes")) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "metamorphicStone"), 2, 0);
+        }
         for (int i = 0; i < 8; i++) {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockstones"), i, 0);
         }
 
         // --- Abyssal Stone
         name = "RCAbyssalBlock";
-        //Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousStone"), 1, 0);
+        if (Loader.isModLoaded("UndergroundBiomes")) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousStone"), 1, 0);
+        }
         Carving.chisel.addVariation(name, GameRegistry.findBlock("Railcraft", "cube"), 6, 0);
         for (int i = 0; i < 8; i++) {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockgranites"), i, 0);
@@ -74,7 +79,9 @@ public class ChiselGroup {
         // --- Basalt
         name = "basalt";
         Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        //Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousStone"), 5, 0);
+        if (Loader.isModLoaded("UndergroundBiomes")) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousStone"), 5, 0);
+        }
         for (int i = 8; i < 16; i++) {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockstones"), i, 0);
         }
@@ -82,18 +89,22 @@ public class ChiselGroup {
         // --- Red Granite
         name = "redgranite";
         Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        //Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousStone"), 0, 0);
+        if (Loader.isModLoaded("UndergroundBiomes")) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousStone"), 0, 0);
+        }
         for (int i = 8; i < 16; i++) {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockgranites"), i, 0);
         }
 
-        // --- Andesite
-        name = "andesite";
-        //Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousStone"), 3, 0);
+        if (Loader.isModLoaded("UndergroundBiomes")) {
+            // --- Andesite
+            name = "andesite";
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousStone"), 3, 0);
 
-        // --- Limestone
-        name = "limestone";
-        //Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "sedimentaryStone"), 0, 0);
+            // --- Limestone
+            name = "limestone";
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "sedimentaryStone"), 0, 0);
+        }
 
         // --- Seared Stone TConstruct
         name = "searedStoneTCon";
@@ -191,6 +202,21 @@ public class ChiselGroup {
         Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "MetalBlock"), 2, 0);
         Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 3, 0);
         Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 7, 0);
+
+        // --- GregTech
+        name = "steelCasing";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockcasings2"), 0, 0);
+        for (int i = 0; i < 10; i++) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockcasings3"), i, 0);
+        }
+
+        // --- Impact
+        name = "clearConcrete";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        for (int i = 0; i < 16; i++) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("Impact|Architecture", "i_concrete_block"), i, 0);
+        }
 
         // --- Ztones
         name = "Agon";
