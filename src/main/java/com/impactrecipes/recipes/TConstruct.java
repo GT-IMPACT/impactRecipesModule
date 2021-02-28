@@ -24,15 +24,19 @@ public class TConstruct implements Runnable {
             | GT_ModHandler.RecipeBits.NOT_REMOVABLE/* | GT_ModHandler.RecipeBits.REVERSIBLE*/;
 
     private void delRecipe() {
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelGoggles", 1L, 0));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelWings", 1L, 0));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelVest", 1L, 0));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelBoots", 1L, 0));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelGlove", 1L, 0));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelBelt", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelGoggles", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelWings", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelVest", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelBoots", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelGlove", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelBelt", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1));
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "Smeltery", 1L, 2));
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 1L, 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 1L, 6));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "blankPattern", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "blood.channel", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "slime.channel", 1L));
 
     }
 
@@ -119,7 +123,7 @@ public class TConstruct implements Runnable {
                                     'G', new ItemStack(Blocks.gravel), 'C', OrePrefixes.dust.get(Materials.Clay)});
         }
 
-        // --- Glider Wing
+        // --- Slime Soil
         GT_ModHandler.addShapelessCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 1L, 6),
                 tBitMask, new Object[]{new ItemStack(Items.nether_wart), new ItemStack(Blocks.soul_sand), new ItemStack(Blocks.gravel),
                         new ItemStack(Items.water_bucket)});
@@ -130,6 +134,9 @@ public class TConstruct implements Runnable {
         }
 
         // --- Blank Pattern
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "blankPattern", 1L), tBitMask,
+                        new Object[]{"PP", "PP", 'P', new ItemStack(Items.paper)});
         GT_ModHandler
                 .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "blankPattern", 1L), tBitMask,
                         new Object[]{"DDD", "DOD", "DDD", 'O', new ItemStack(Items.water_bucket), 'D', OrePrefixes.dust.get(Materials.Wood)});
