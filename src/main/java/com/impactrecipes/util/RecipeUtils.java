@@ -4,6 +4,12 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import gregtech.api.GregTech_API;
 import gregtech.api.enums.GT_Values;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.CraftingManager;
+import net.minecraft.item.crafting.IRecipe;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 import static cpw.mods.fml.common.Loader.*;
 import static gregtech.api.util.GT_ModHandler.*;
@@ -86,5 +92,18 @@ public class RecipeUtils {
      */
     public static ItemStack getChargeItemStack(String modid, String nameItem) {
         return getModItem(modid, nameItem, 1, GT_Values.W);
+    }
+
+    /**
+     * @param is - ItemStack Output Recipe
+     */
+    public static void removeRecipeByOutput(ItemStack is) {
+        Iterator<IRecipe> removerRecipes = CraftingManager.getInstance().getRecipeList().iterator();
+        while (removerRecipes.hasNext()) {
+            ItemStack itemStack = removerRecipes.next().getRecipeOutput();
+            if (itemStack != null && itemStack.getItem() == is.getItem() && itemStack.stackSize == is.stackSize) {
+                removerRecipes.remove();
+            }
+        }
     }
 }
