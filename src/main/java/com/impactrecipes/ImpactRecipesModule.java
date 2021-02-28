@@ -16,8 +16,7 @@ import java.util.List;
         name = "Impact | Recipes Module",
         version = ImpactRecipesModule.VERSION,
         modid = ImpactRecipesModule.MODID,
-        dependencies =
-                "required-after:impact"
+        dependencies = "required-after:Forge; after:impact; after:IC2; after:gregtech; after:tectech;"
 )
 public class ImpactRecipesModule {
 
