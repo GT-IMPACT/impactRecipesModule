@@ -24,5 +24,6 @@ public class ModsLoader {
         registerRecipeClass(TECTECH, new TecTech());
         registerRecipeClass(PROJECTRED, new ProjectRed());
         registerRecipeClass(OPENBLOCKS, new OpenBlocks());
+        registerRecipeClass(PL, new PracticalLogistics());
     }
 }
