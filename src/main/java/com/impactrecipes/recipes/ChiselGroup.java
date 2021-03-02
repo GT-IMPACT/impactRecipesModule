@@ -212,8 +212,8 @@ public class ChiselGroup {
         }
 
         // --- Impact
-        name = "clearConcrete";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        name = "concrete";
+        Carving.chisel.addVariation(name, GameRegistry.findBlock("impact", "impact_util"), 2, 0);
         for (int i = 0; i < 16; i++) {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("Impact|Architecture", "i_concrete_block"), i, 0);
         }
