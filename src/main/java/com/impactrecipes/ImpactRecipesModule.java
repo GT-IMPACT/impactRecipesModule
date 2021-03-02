@@ -7,6 +7,7 @@ import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -42,6 +43,10 @@ public class ImpactRecipesModule {
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
+    }
+
+    @EventHandler
+    public void serverStarting(FMLServerStartingEvent event) {
         ModsLoader.loader();
     }
 
