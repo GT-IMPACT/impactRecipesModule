@@ -118,6 +118,8 @@ public class ProjectRed implements Runnable {
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Redstone, 1), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 4), 400, 30);
         // --- Cathode
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 0), new ItemStack(Blocks.redstone_torch, 1), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 5), 400, 30);
+        // --- Pointer
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 5), GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Ruby, 1), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 6), 500, 30);
         // --- Platformed Plate
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 4L, 2), GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Plastic, 4), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 9), 300, 64);
         // --- Bundled Plate
