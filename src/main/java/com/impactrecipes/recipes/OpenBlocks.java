@@ -57,7 +57,7 @@ public class OpenBlocks implements Runnable {
                         'L', OrePrefixes.lens.get(Materials.Diamond), 'E', GT_ModHandler.getModItem("IC2", "blockLuminatorDark", 1L, 0)});
         // --- Glider
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("OpenBlocks", "hangglider", 1L, 0),
-                tBitMask, new Object[]{"SSS", "GPG", "wSd", 'P', OrePrefixes.screw.get(Materials.Steel),
+                tBitMask, new Object[]{"SSS", "GPG", "wSd", 'P', OrePrefixes.plate.get(Materials.Steel),
                         'S', OrePrefixes.screw.get(Materials.Steel), 'G', GT_ModHandler.getModItem("OpenBlocks", "generic", 1L, 0)});
         // --- Glider Wing
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("OpenBlocks", "generic", 1L, 0),
