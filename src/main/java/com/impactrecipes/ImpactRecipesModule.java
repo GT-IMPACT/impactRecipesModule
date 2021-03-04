@@ -43,11 +43,11 @@ public class ImpactRecipesModule {
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
+        ModsLoader.loader();
     }
 
     @EventHandler
     public void serverStarting(FMLServerStartingEvent event) {
-        ModsLoader.loader();
     }
 
     private void initModInfo(ModMetadata info) {
