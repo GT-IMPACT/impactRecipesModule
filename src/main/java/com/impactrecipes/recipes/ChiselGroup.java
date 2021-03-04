@@ -217,6 +217,9 @@ public class ChiselGroup {
         for (int i = 0; i < 16; i++) {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("Impact|Architecture", "i_concrete_block"), i, 0);
         }
+        for (int i = 0; i < 16; i++) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockconcretes"), i, 0);
+        }
 
         // --- Ztones
         name = "Agon";
