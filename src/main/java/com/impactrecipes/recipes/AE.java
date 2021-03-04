@@ -1578,7 +1578,7 @@ public class AE implements Runnable {
                 100, 8, false);
         // --- Dense Cable
         RA.addWireAssemblerRecipe(new ItemStack[]{
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 56),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 4L, 56),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Vanadium, 2L), GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.EnergeticAlloy, 2L)},
                 null, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 76),
                 200, 480, false);
