@@ -183,6 +183,12 @@ public class AE implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), tBitMask, new Object[]{"hQS", "TGT", "SVd", 'Q', OrePrefixes.plate.get(Materials.CertusQuartz), 'T', OrePrefixes.plate.get(Materials.Birmabright), 'V', OrePrefixes.plate.get(Materials.StainlessSteel), 'S', OrePrefixes.screw.get(Materials.NetherQuartz), 'G', "paneGlass"});
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), tBitMask, new Object[]{"hQS", "TGT", "SVd", 'Q', OrePrefixes.plate.get(Materials.CertusQuartz), 'T', OrePrefixes.plate.get(Materials.Birmabright), 'V', OrePrefixes.plate.get(Materials.StainlessSteel), 'S', OrePrefixes.screw.get(Materials.NetherQuartz), 'G', GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L)});
 
+        // --- Quartz Cutting Knife
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ToolCertusQuartzCuttingKnife", 1L),
+                tBitMask, new Object[]{"  S", " S ", "Gf ", 'G', OrePrefixes.gem.get(Materials.CertusQuartz), 'S', OrePrefixes.stick.get(Materials.Wood)});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ToolNetherQuartzCuttingKnife", 1L),
+                tBitMask, new Object[]{"  S", " S ", "Gf ", 'G', OrePrefixes.gem.get(Materials.NetherQuartz), 'S', OrePrefixes.stick.get(Materials.Wood)});
+
         // --- Charger
         addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCharger", 1L), tBitMask,
                 new Object[]{"PEP", "Cw ", "PEP", 'P', OrePrefixes.plateDouble.get(Materials.Vanadium), 'E', ItemList.Emitter_EV,
