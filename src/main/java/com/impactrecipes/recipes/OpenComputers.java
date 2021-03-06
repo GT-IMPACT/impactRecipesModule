@@ -664,7 +664,7 @@ public class OpenComputers implements Runnable {
                         .addMixerRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Redstone, 4L),
                                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Silicon, 4L),
                                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Coal, 1L), GT_Values.NI,
-                                GT_Values.NI, GT_Utility.getIntegratedCircuit(2), Materials.Water.getFluid(1000L),
+                                GT_Values.NI, GT_Utility.getIntegratedCircuit(3), Materials.Water.getFluid(1000L),
                                 GT_Values.NF, GT_ModHandler.getModItem("OpenComputers", "item", 9L, 96), 200, 120);
 
                 // --- Screen t1
