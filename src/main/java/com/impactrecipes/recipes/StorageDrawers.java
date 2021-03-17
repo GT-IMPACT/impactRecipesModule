@@ -1,6 +1,6 @@
 package com.impactrecipes.recipes;
 
-import com.impact.mods.GregTech.GT_ItemList;
+import com.impact.mods.gregtech.GT_ItemList;
 import com.jaquadro.minecraft.storagedrawers.core.ModBlocks;
 import com.jaquadro.minecraft.storagedrawers.core.ModItems;
 import gregtech.api.enums.GT_Values;
@@ -17,7 +17,13 @@ import net.minecraft.item.ItemStack;
 public class StorageDrawers implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
-            | GT_ModHandler.RecipeBits.NOT_REMOVABLE/* | GT_ModHandler.RecipeBits.REVERSIBLE*/;
+            | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
+
+    @Override
+    public void run() {
+        handRecipe();
+        assemblerRecipe();
+    }
 
     private void handRecipe() {
 
@@ -270,11 +276,5 @@ public class StorageDrawers implements Runnable {
                         GT_ModHandler.getModItem("ExtraUtilities", "trashcan", 1),
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1)},
                 Materials.Redstone.getMolten(144), new ItemStack(ModItems.upgradeVoid, 1, 0), 400, 30);
-    }
-
-    @Override
-    public void run() {
-        handRecipe();
-        assemblerRecipe();
     }
 }

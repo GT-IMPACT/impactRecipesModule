@@ -1,5 +1,6 @@
 package com.impactrecipes.recipes;
 
+import com.impact.common.item.Core_Items;
 import cpw.mods.fml.common.Loader;
 import gregtech.api.enums.*;
 import gregtech.api.util.GT_ModHandler;
@@ -12,32 +13,36 @@ import tconstruct.library.crafting.DryingRackRecipes;
 import tconstruct.weaponry.TinkerWeaponry;
 
 import static com.impactrecipes.util.RecipeUtils.ordictItemStack;
-import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 import static iguanaman.iguanatweakstconstruct.claybuckets.IguanaItems.clayBucketLava;
 import static iguanaman.iguanatweakstconstruct.claybuckets.IguanaItems.clayBucketWater;
 import static tconstruct.armor.TinkerArmor.*;
-import static tconstruct.armor.TinkerArmor.travelBelt;
 
 public class TConstruct implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
-            | GT_ModHandler.RecipeBits.NOT_REMOVABLE/* | GT_ModHandler.RecipeBits.REVERSIBLE*/;
+            | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
+    final Core_Items CoreItems = Core_Items.getInstance();
 
-    private void delRecipe() {
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelGoggles", 1L));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelWings", 1L));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelVest", 1L));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelBoots", 1L));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelGlove", 1L));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelBelt", 1L));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "Smeltery", 1L, 2));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 1L, 1));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 1L, 6));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "blankPattern", 1L));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "blood.channel", 1L));
-        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "slime.channel", 1L));
-
+    @Override
+    public void run() {
+        handRecipe();
+        alloySmelterRecipe();
+        assemblerRecipe();
+        chemicalBathRecipe();
+        chemicalReactorRecipe();
+        compressorRecipe();
+        cutterRecipe();
+        EBFRecipe();
+        extractorRecipe();
+        extruderRecipe();
+        forgeHammerRecipe();
+        latheRecipe();
+        mixerRecipe();
+        pulveriserRecipe();
+        dryingRackRecipe();
+        forgeHammer();
+        extractor();
+        alloySmelter();
     }
 
     private void handRecipe() {
@@ -91,7 +96,7 @@ public class TConstruct implements Runnable {
         GT_ModHandler
                 .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 4L, 1), tBitMask,
                         new Object[]{"SSS", "COC", "GGG", 'O', new ItemStack(Items.water_bucket), 'S', new ItemStack(Blocks.sand),
-                        'G', new ItemStack(Blocks.gravel), 'C', OrePrefixes.dust.get(Materials.Clay)});
+                                'G', new ItemStack(Blocks.gravel), 'C', OrePrefixes.dust.get(Materials.Clay)});
         GT_ModHandler
                 .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 4L, 1), tBitMask,
                         new Object[]{"GGG", "COC", "SSS", 'O', new ItemStack(Items.water_bucket), 'S', new ItemStack(Blocks.sand),
@@ -1319,23 +1324,22 @@ public class TConstruct implements Runnable {
         }
     }
 
-    @Override
-    public void run() {
-        delRecipe();
-        handRecipe();
-        alloySmelterRecipe();
-        assemblerRecipe();
-        chemicalBathRecipe();
-        chemicalReactorRecipe();
-        compressorRecipe();
-        cutterRecipe();
-        EBFRecipe();
-        extractorRecipe();
-        extruderRecipe();
-        forgeHammerRecipe();
-        latheRecipe();
-        mixerRecipe();
-        pulveriserRecipe();
-        dryingRackRecipe();
+    private void forgeHammer() {
+        GT_Values.RA.addForgeHammerRecipe(GT_ModHandler.getModItem("TConstruct", "GlassBlock", 1L, 0),
+                CoreItems.getRecipe(33, 1), 40, 16);
+    }
+
+    private void extractor() {
+        GT_Values.RA.addExtractorRecipe(GT_ModHandler.getModItem("TConstruct", "Smeltery", 1L, 2),
+                GT_ModHandler.getModItem("TConstruct", "materials", 4L, 2), 300, 2);
+    }
+
+    private void alloySmelter() {
+        GT_Values.RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 1L, 1),
+                ItemList.Shape_Mold_Ingot.get(0),
+                GT_ModHandler.getModItem("TConstruct", "materials", 1L, 2), 130, 3);
+        GT_Values.RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 1L, 1),
+                ItemList.Shape_Mold_Ingot.get(0),
+                GT_ModHandler.getModItem("TConstruct", "materials", 1L, 2), 130, 3);
     }
 }

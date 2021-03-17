@@ -15,23 +15,11 @@ public class OpenBlocks implements Runnable {
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
             | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
-    private void delRecipe() {
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("OpenBlocks", "elevator", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("OpenBlocks", "devnull", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("OpenBlocks", "builder_guide", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("OpenBlocks", "elevator_rotating", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("OpenBlocks", "guide", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("OpenBlocks", "hangglider", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("OpenBlocks", "generic", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("OpenBlocks", "generic", 1L, 0));
+    @Override
+    public void run() {
+        handRecipe();
+        assemblerRecipe();
+        chemicalBathRecipe();
     }
 
     private void handRecipe() {
@@ -87,13 +75,5 @@ public class OpenBlocks implements Runnable {
                         GT_Values.NI, GT_Values.NI, null, 200, 2);
             }
         }
-    }
-
-    @Override
-    public void run() {
-        delRecipe();
-        handRecipe();
-        assemblerRecipe();
-        chemicalBathRecipe();
     }
 }

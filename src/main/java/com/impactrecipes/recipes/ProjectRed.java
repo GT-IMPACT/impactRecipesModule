@@ -19,7 +19,6 @@ public class ProjectRed implements Runnable {
     @Override
     public void run() {
         new LaserEngraver();
-        delRecipe();
         handRecipe();
         wiremillRecipe();
         formingPressRecipe();
@@ -28,26 +27,7 @@ public class ProjectRed implements Runnable {
         assemblerRecipe();
         circuitAssemblerRecipe();
         chemicalBathRecipe();
-    }
-
-    private void delRecipe() {
-        removeFurnaceSmelting(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 42));
-        removeFurnaceSmelting(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 43));
-        removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.fabrication.icchip", 1L, 0), true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.integration.icblock", 1L, 0), true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.integration.icblock", 1L, 1), true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.screwdriver", 1L, 0), true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 42), true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 43), true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.wiredebugger", 1L, 0), true, false, false);
-
-        for (int i = 0; i < 16; i++) {
-            removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 19 + i), true, false, false);
-            removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Transmission", "projectred.transmission.wire", 1L, i), true, false, false);
-        }
-        for (int i = 1; i < 10; i++) {
-            removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, i), true, false, false);
-        }
+        chemical();
     }
 
     private void handRecipe() {
@@ -137,6 +117,48 @@ public class ProjectRed implements Runnable {
             RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.StainlessSteel, 1), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 8L, 19 + i), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Redstone, 4), GT_Utility.getIntegratedCircuit(1)}, Materials.Glass.getMolten(864), GT_ModHandler.getModItem("ProjRed|Illumination", "projectred.illumination.lamp", 32L, i), 160, 10, false);
             RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.StainlessSteel, 1), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 8L, 19 + i), new ItemStack(Blocks.redstone_torch, 4), GT_Utility.getIntegratedCircuit(1)}, Materials.Glass.getMolten(864), GT_ModHandler.getModItem("ProjRed|Illumination", "projectred.illumination.lamp", 32L, 16 + i), 160, 10, false);
         }
+
+        GT_Values.RA.addAssemblerRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Birmabright, 1L),
+                GT_ModHandler.getModItem("WR-CBE|Core", "retherPearl", 1L, 0),
+                GT_ModHandler.getModItem("WR-CBE|Core", "wirelessTransceiver", 1L, 0), 600, 120);
+        // --- Blaze Transceiver
+        GT_Values.RA
+                .addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Electrum, 1L),
+                        GT_ModHandler.getModItem("WR-CBE|Core", "retherPearl", 1L, 0),
+                        GT_ModHandler.getModItem("WR-CBE|Core", "blazeTransceiver", 1L, 0), 600, 120);
+        // --- Receiver Dish
+        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("WR-CBE|Core", "stoneBowl", 1L, 0),
+                GT_ModHandler.getModItem("WR-CBE|Core", "wirelessTransceiver", 1L, 0),
+                GT_ModHandler.getModItem("WR-CBE|Core", "recieverDish", 1L, 0), 600, 256);
+        // --- Blaze Receiver Dish
+        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("WR-CBE|Core", "stoneBowl", 1L, 0),
+                GT_ModHandler.getModItem("WR-CBE|Core", "blazeTransceiver", 1L, 0),
+                GT_ModHandler.getModItem("WR-CBE|Core", "blazeRecieverDish", 1L, 0), 600, 256);
+        // --- Triangulatior
+        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "compass", 1L, 0),
+                GT_ModHandler.getModItem("WR-CBE|Core", "wirelessTransceiver", 1L, 0),
+                Materials.Redstone.getMolten(144),
+                GT_ModHandler.getModItem("WR-CBE|Addons", "triangulator", 1L, 0), 600, 120);
+        // --- Wireless Map
+        GT_Values.RA
+                .addAssemblerRecipe(GT_ModHandler.getModItem("WR-CBE|Addons", "triangulator", 1L, 0),
+                        GT_ModHandler.getModItem("minecraft", "paper", 8L, 0),
+                        Materials.Redstone.getMolten(144),
+                        GT_ModHandler.getModItem("WR-CBE|Addons", "map", 1L, 0), 300, 64);
+        // --- Tracker
+        GT_Values.RA
+                .addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Obsidian, 3L),
+                        GT_ModHandler.getModItem("WR-CBE|Core", "wirelessTransceiver", 1L, 0),
+                        Materials.Redstone.getMolten(144),
+                        GT_ModHandler.getModItem("WR-CBE|Addons", "tracker", 1L, 0), 600, 120);
+        // --- REP
+        GT_Values.RA
+                .addAssemblerRecipe(GT_ModHandler.getModItem("WR-CBE|Core", "blazeTransceiver", 2L, 0),
+                        GT_ModHandler.getModItem("WR-CBE|Core", "retherPearl", 2L, 0),
+                        Materials.Obsidian.getMolten(1296),
+                        GT_ModHandler.getModItem("WR-CBE|Addons", "rep", 1L, 0), 600, 120);
+
     }
 
     private void circuitAssemblerRecipe() {
@@ -157,6 +179,14 @@ public class ProjectRed implements Runnable {
                 GT_Values.RA.addChemicalBathRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Glowstone, 2L), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 34 - i), GT_Values.NI, GT_Values.NI, null, 64, 2);
             }
         }
+    }
+
+    private void chemical() {
+        GT_Values.RA.addChemicalRecipe(GT_OreDictUnificator.get(OrePrefixes.gemFlawless, Materials.Diamond, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Glowstone, 1L),
+                Materials.Redstone.getMolten(144), null,
+                GT_ModHandler.getModItem("WR-CBE|Core", "retherPearl", 1L, 0), 1200);
+
     }
 
     private static class LaserEngraver implements IOreRecipeRegistrator {

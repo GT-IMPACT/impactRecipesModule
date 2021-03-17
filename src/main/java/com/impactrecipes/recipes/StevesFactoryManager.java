@@ -18,28 +18,12 @@ import static stevesaddons.registry.ItemRegistry.labeler;
 public class StevesFactoryManager implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
-            | GT_ModHandler.RecipeBits.NOT_REMOVABLE/* | GT_ModHandler.RecipeBits.REVERSIBLE*/;
+            | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
-    private void delRecipe() {
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockManager, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCable, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableBreaker, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableSign, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableCluster, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableCluster, 1, 8), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableOutput, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableInput, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableRelay, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableRelay, 1, 8), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableBUD, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableCamouflage, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableCamouflage, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableCamouflage, 1, 2), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableIntake, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableIntake, 1, 8), true, false, false);
-        removeRecipeByOutput(new ItemStack(cableRFNode, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(duplicator, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(labeler, 1, 0), true, false, false);
+    @Override
+    public void run() {
+        handRecipe();
+        assemblerRecipe();
     }
 
     private void handRecipe() {
@@ -146,12 +130,5 @@ public class StevesFactoryManager implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2),
                         GT_Utility.getIntegratedCircuit(2)}, Materials.Redstone.getMolten(144),
                 new ItemStack(labeler, 1, 0), 150, 480);
-    }
-
-    @Override
-    public void run() {
-        delRecipe();
-        handRecipe();
-        assemblerRecipe();
     }
 }

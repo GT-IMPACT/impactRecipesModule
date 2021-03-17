@@ -14,6 +14,12 @@ public class PracticalLogistics implements Runnable {
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
             | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
+    @Override
+    public void run() {
+        handRecipe();
+        assemblerRecipe();
+    }
+
     private void handRecipe() {
         // --- Energy Reader
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("PracticalLogistics", "EnergyReader", 1L, 0),
@@ -121,9 +127,5 @@ public class PracticalLogistics implements Runnable {
                 GT_ModHandler.getModItem("PracticalLogistics", "LargeDisplayScreen", 1L, 0), 100, 8);
     }
 
-    @Override
-    public void run() {
-        handRecipe();
-        assemblerRecipe();
-    }
+
 }

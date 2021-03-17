@@ -1,6 +1,6 @@
 package com.impactrecipes.recipes;
 
-import com.impact.mods.GregTech.GT_ItemList;
+import com.impact.mods.gregtech.GT_ItemList;
 import crazypants.enderio.item.darksteel.DarkSteelItems;
 import gregtech.api.enums.GT_Values;
 import gregtech.api.enums.ItemList;
@@ -13,129 +13,11 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
-import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
-
 public class EnderIO implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
             | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
-    private void delRecipe() {
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockInventoryPanel, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemFunctionUpgrade, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemItemConduit, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemLiquidConduit, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemYetaWench, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemBigFilterUpgrade, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemBigFilterUpgrade, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemPowerItemFilter, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemOCConduit, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockTravelPlatform, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockTelePad, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockTransceiver, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(DarkSteelItems.itemGliderWing, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(DarkSteelItems.itemGliderWing, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemTravelStaff, 1, 16), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockKillerJoe, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockEnderRail, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockEnderIo, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockAlloySmelter, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockCrusher, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockPowerMonitor, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemMaterial, 1, 2), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockVat, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockWirelessCharger, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockZombieGenerator, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockSolarPanel, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockSolarPanel, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockSolarPanel, 1, 2), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemEnderFood, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockSpawnGuard, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockWeatherObelisk, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemCoordSelector, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockBuffer, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockBuffer, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockBuffer, 1, 2), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockBuffer, 1, 3), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockReinforcedObsidian, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockEnchanter, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockDarkIronBars, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockDarkSteelPressurePlate, 1, 0), true, false,
-                false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockVacuumChest, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemBasicCapacitor, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemBasicCapacitor, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemBasicCapacitor, 1, 2), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockCapBank, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockCapBank, 1, 2), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockCapBank, 1, 3), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemConduitProbe, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockPainter, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockCrafter, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockFarmStation, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockCombustionGenerator, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockStirlingGenerator, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockReservoir, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(DarkSteelItems.itemMagnet, 1, 16), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockElectricLight, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockElectricLight, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockElectricLight, 1, 2), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockElectricLight, 1, 3), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockElectricLight, 1, 4), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockElectricLight, 1, 5), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockAttractor, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockExperianceOblisk, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemXpTransfer, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemSoulVessel, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemBasicFilterUpgrade, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemBasicFilterUpgrade, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemModItemFilter, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemRedstoneConduit, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemRedstoneConduit, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemRedstoneConduit, 1, 2), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemPowerConduit, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemPowerConduit, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemPowerConduit, 1, 2), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemLiquidConduit, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemLiquidConduit, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemLiquidConduit, 1, 2), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemMEConduit, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemMEConduit, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockSliceAndSplice, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockSoulFuser, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockPoweredSpawner, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockKillerJoe, 1, 0), true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("EnderIO", "darkSteel_helmet", 1L, 0), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("EnderIO", "darkSteel_chestplate", 1L, 0), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("EnderIO", "darkSteel_leggings", 1L, 0), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("EnderIO", "darkSteel_boots", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(DarkSteelItems.itemDarkSteelSword.createItemStack(), true, false, false);
-        removeRecipeByOutput(DarkSteelItems.itemDarkSteelPickaxe.createItemStack(), true, false, false);
-        removeRecipeByOutput(DarkSteelItems.itemDarkSteelAxe.createItemStack(), true, false, false);
-        removeRecipeByOutput(DarkSteelItems.itemDarkSteelShears.createItemStack(), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemMachinePart, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockTank, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockTank, 1, 1), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemMaterial, 1, 7), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemMachinePart, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemMaterial, 1, 6), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemMaterial, 1, 5), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemPowderIngot, 1, GT_Values.W), true, false,
-                false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemMaterial, 1, 3), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemMaterial, 1, 4), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockDarkSteelAnvil, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockDarkSteelAnvil, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockFrankenZombieGenerator, 1, 0), true, false,
-                false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.blockEnderGenerator, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemExtractSpeedUpgrade, 1, 0), true, false, false);
-        removeRecipeByOutput(new ItemStack(crazypants.enderio.EnderIO.itemExtractSpeedUpgrade, 1, 1), true, false, false);
-    }
 
     private void handRecipe() {
         // --- Inventory Panel
@@ -497,7 +379,6 @@ public class EnderIO implements Runnable {
 
     @Override
     public void run() {
-        delRecipe();
         handRecipe();
         alloySmelterRecipe();
         assemblerRecipe();

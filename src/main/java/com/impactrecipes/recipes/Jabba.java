@@ -1,6 +1,6 @@
 package com.impactrecipes.recipes;
 
-import com.impact.mods.GregTech.GT_ItemList;
+import com.impact.mods.gregtech.GT_ItemList;
 import gregtech.api.enums.GT_Values;
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
@@ -19,13 +19,10 @@ public class Jabba implements Runnable {
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
             | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
-    private void delRecipe() {
-        removeRecipeByOutput(new ItemStack(BetterBarrels.itemUpgradeCore, 1, GT_Values.W));
-        removeRecipeByOutput(new ItemStack(BetterBarrels.itemHammer, 1, 0));
-        removeRecipeByOutput(new ItemStack(BetterBarrels.itemMover, 1, 0));
-        removeRecipeByOutput(new ItemStack(BetterBarrels.itemMoverDiamond, 1, 0));
-        removeRecipeByOutput(new ItemStack(BetterBarrels.itemTuningFork, 1, 0));
-        removeRecipeByOutput(new ItemStack(BetterBarrels.itemUpgradeStructural, 1, GT_Values.W));
+    @Override
+    public void run() {
+        handRecipe();
+        assemblerRecipe();
     }
 
     private void handRecipe() {
@@ -215,10 +212,4 @@ public class Jabba implements Runnable {
                 30);
     }
 
-    @Override
-    public void run() {
-        delRecipe();
-        handRecipe();
-        assemblerRecipe();
-    }
 }

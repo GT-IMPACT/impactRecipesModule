@@ -2,7 +2,7 @@ package com.impactrecipes.recipes;
 
 import com.impact.common.item.Core_Items;
 import com.impact.common.item.Core_Items2;
-import com.impact.mods.GregTech.GT_ItemList;
+import com.impact.mods.gregtech.GT_ItemList;
 import gregtech.api.enums.*;
 import gregtech.api.interfaces.IOreRecipeRegistrator;
 import gregtech.api.util.GT_ModHandler;
@@ -19,154 +19,27 @@ public class AE implements Runnable {
     final Core_Items CoreItems = Core_Items.getInstance();
     final Core_Items2 CoreItems2 = Core_Items2.getInstance();
 
-    private void delRecipe() {
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockFluix", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartz", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzChiseled", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGrowthAccelerator", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCharger", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCellWorkbench", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockIOPort", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCondenser", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSecurity", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSkyCompass", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, GT_Values.W));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, GT_Values.W));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzLamp", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzTorch", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockLightDetector", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockTinyTNT", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolMassCannon", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolMemoryCard", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolChargedStaff", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolEntropyManipulator", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolColorApplicator", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolBiometricCard", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemCrystalSeed", 1L, GT_Values.W));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolPortableCell", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInscriber", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockGrinder", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCrank", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.ChiseledQuartzSlabBlock", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.QuartzPillarSlabBlock", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.QuartzSlabBlock", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("minecraft", "quartz_block", 1L, 0));
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockController", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockChest", 1L, 0),
-                true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockDrive", 1L, 0),
-                true, false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockMolecularAssembler", 1L, 0),
-                true, false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuantumRing", 1L, 0), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuantumLinkChamber", 1L, 0),
-                true, false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSpatialPylon", 1L, 0), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSpatialIOPort", 1L, 0), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyAcceptor", 1L, 0), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemBasicStorageCell.1k", 1L), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemBasicStorageCell.4k", 1L), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemBasicStorageCell.16k", 1L), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemBasicStorageCell.64k", 1L), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemSpatialStorageCell.2Cubed", 1L),
-                true, false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemSpatialStorageCell.16Cubed", 1L),
-                true, false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemSpatialStorageCell.128Cubed", 1L),
-                true, false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemViewCell", 1L),
-                true, false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyCell", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockDenseEnergyCell", 1L, 0), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 1), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 0), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 1), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 2), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 3), true,
-                false, false);
-        removeRecipeByOutput(
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockWireless", 1L, 0), true, false,
-                false);
+    @Override
+    public void run() {
+        new LaserEngraver();
+        handRecipe();
+        alloySmelterRecipe();
+        assemblerRecipe();
+        autoclaveRecipe();
+        centrifugeRecipe();
+        chemicalBathRecipe();
+        chemicalReactorRecipe();
+        compressorRecipe();
+        cuttingSawRecipe();
+        printerRecipe();
+        pulveriserRecipe();
+        wireAssemblerRecipe();
+        unboxingRecipe();
+        mixerRecipe();
+        latheRecipe();
+        fluidSolidifierRecipe();
     }
+
 
     private void handRecipe() {
         // --- Terminal
@@ -913,6 +786,25 @@ public class AE implements Runnable {
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 8), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 4), 100, 7680);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 9), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 5), 100, 16384);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 10), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 6), 100, 30720);
+
+        // --- Magnet
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.block, Materials.NeodymiumMagnetic, 2L),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 28),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24),
+                        GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.HastelloyN, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Inconel792, 24)}, null,
+                GT_ModHandler.getModItem("ae2wct", "magnetCard", 1L, 0), 1000, 1920);
+        // --- Booster
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 64L, 42),
+                        ItemList.Field_Generator_UV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.CinobiteA243, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Quantium, 24),
+                        GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Osmium, 64)}, null,
+                GT_ModHandler.getModItem("ae2wct", "infinityBoosterCard", 1L, 0), 4000, 122880);
+
+
     }
 
     private void autoclaveRecipe() {
@@ -1626,28 +1518,6 @@ public class AE implements Runnable {
         RA.addFluidSolidifierRecipe(CoreItems2.getRecipe(153, 1),
                 Materials.BorosilicateGlass.getMolten(144L), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 8L, 140), 120, 120);
 
-    }
-
-    @Override
-    public void run() {
-        new LaserEngraver();
-        delRecipe();
-        handRecipe();
-        alloySmelterRecipe();
-        assemblerRecipe();
-        autoclaveRecipe();
-        centrifugeRecipe();
-        chemicalBathRecipe();
-        chemicalReactorRecipe();
-        compressorRecipe();
-        cuttingSawRecipe();
-        printerRecipe();
-        pulveriserRecipe();
-        wireAssemblerRecipe();
-        unboxingRecipe();
-        mixerRecipe();
-        latheRecipe();
-        fluidSolidifierRecipe();
     }
 
     private static class LaserEngraver implements IOreRecipeRegistrator {

@@ -1,7 +1,7 @@
 package com.impactrecipes.recipes;
 
 import com.impact.common.item.Core_Items2;
-import com.impact.mods.GregTech.GT_ItemList;
+import com.impact.mods.gregtech.GT_ItemList;
 import gregtech.api.GregTech_API;
 import gregtech.api.enums.*;
 import gregtech.api.util.GT_ModHandler;
@@ -137,6 +137,11 @@ public class OpenComputers implements Runnable {
 
     @Override
     public void run() {
+
+        GT_Values.RA.addCutterRecipe(CoreItems2.getRecipe(158, 1),
+                GT_ModHandler.getModItem("OpenComputers", "item", 16L, 28), null, 400, 16);
+        GT_Values.RA.addCutterRecipe(CoreItems2.getRecipe(157, 1),
+                GT_ModHandler.getModItem("OpenComputers", "item", 16L, 27), null, 400, 16);
 
         GT_ModHandler
                 .addShapelessCraftingRecipe(GT_ModHandler.getModItem("OpenComputers", "cable", 1L, 0),

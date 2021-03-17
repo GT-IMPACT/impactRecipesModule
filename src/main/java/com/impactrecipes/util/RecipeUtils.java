@@ -2,6 +2,7 @@ package com.impactrecipes.util;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import gregtech.api.GregTech_API;
+import gregtech.api.commands.RecipesReload;
 import gregtech.api.enums.GT_Values;
 import gregtech.api.util.GT_Utility;
 import net.minecraft.item.ItemStack;
@@ -9,8 +10,6 @@ import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 import static cpw.mods.fml.common.Loader.*;
 import static gregtech.api.util.GT_ModHandler.*;
@@ -25,6 +24,7 @@ public class RecipeUtils {
      * @param loader - класс с рецептами
      */
     public static void registerRecipeClass(String isMod, Runnable loader) {
+        RecipesReload.classMap.put(loader.toString(), loader.getClass());
         if (isModLoaded(isMod)) { loader.run(); }
     }
 
