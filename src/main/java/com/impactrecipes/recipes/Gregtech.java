@@ -2697,7 +2697,7 @@ public class Gregtech implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Chrome, 6),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Molybdenum, 4),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 4)}, null, null,
-                Materials.TiBetaC.getMoltenHot(144L * 23), 161 * 20, 7680, 4555);
+                Materials.TiBetaC.getMoltenHot(144L * 27), 161 * 20, 7680, 4555);
         GT_Values.RA.addBlastSmelterRecipe(
                 new ItemStack[]{ItemList.Circuit_Integrated.getWithDamage(0L, 1L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Titanium, 9),
