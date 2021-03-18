@@ -307,7 +307,7 @@ public class TecTech implements Runnable {
                 ItemList.Electric_Motor_UHV.get(1L), 1000, 200000);
 
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Electric_Motor_UHV.get(1L),
-                48000, 64, 2000000, 8, new ItemStack[]{
+                48000, 64, 200000, 8, new ItemStack[]{
                         GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.EuropiumoxideMagnetic, 8L),
                         GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.CosmicNeutronium, 16L),
                         GT_OreDictUnificator.get(OrePrefixes.ring, Materials.CosmicNeutronium, 8L),
