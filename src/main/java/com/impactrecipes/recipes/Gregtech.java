@@ -2511,7 +2511,7 @@ public class Gregtech implements Runnable {
 
         //Empty Shape Plate
         GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 4),
-                GT_Utility.getIntegratedCircuit(1), GT_Values.NF, ItemList.Shape_Empty.get(1L), 2 * 20, 8);
+                GT_Utility.getIntegratedCircuit(4), GT_Values.NF, ItemList.Shape_Empty.get(1L), 2 * 20, 8);
 
         //OilDrill1
         GT_Values.RA.addAssemblerRecipe(
