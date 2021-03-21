@@ -62,15 +62,6 @@ public class IC2 implements Runnable {
     }
 
     private void printer3d() {
-        //Nuclear Reactor
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
-                ItemList.Hull_IV.get(1L), ItemList.Robot_Arm_IV.get(2L),
-                GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Titanium, 4),
-                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 4),
-                GT_ModHandler.getModItem("IC2", "blockReactorChamber", 4L, 0), CoreItems2.getRecipe(141, 8),
-                GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 12)
-        }, GT_ModHandler.getModItem("IC2", "blockGenerator", 1L, 5), null, 40 * 20, 1920);
-
         //Kinetic Generator
         GT_Values.RA.addPrimitiveLineRecipe(new ItemStack[]{
                 ItemList.Hatch_Dynamo_HV.get(1L),
