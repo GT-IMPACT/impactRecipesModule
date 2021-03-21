@@ -684,17 +684,31 @@ public class ImpactCore implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 10)
         }, GT_ItemList.Nuclear_Reactor_II.get(1), null, 50 * 20, 7680);
 
-        //Nuclear Reactor II
+        //Nuclear Reactor III
         RA.addBasicLineRecipe(new ItemStack[]{
                 ItemList.Hull_LuV.get(1L), ItemList.Robot_Arm_LuV.get(4L),
                 GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Titanium, 8),
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 8),
                 CoreItems2.getRecipe(142, 8), GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 12)
         }, GT_ItemList.Nuclear_Reactor_III.get(1), null, 80 * 20, 30720);
+
+        //Huge Steam Turbine
+        RA.addBasicLineRecipe(new ItemStack[]{
+                ItemList.Hull_IV.get(1L), ItemList.Electric_Pump_IV.get(4L),
+                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.TiBetaC, 4),
+                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 6),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Titaniolum, 8),
+                GT_OreDictUnificator.get(OrePrefixes.pipeHuge, Materials.Inconel690, 8),
+                GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Inconel792, 8),
+                GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Desh, 8),
+                GT_OreDictUnificator.get(OrePrefixes.round, Materials.HSSG, 16),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Inconel792, 16)
+        }, GT_ItemList.Huge_Steam_Turbine.get(1L), null, 60 * 20, 7680);
+
     }
 
     private void mixer() {
-//HastelloyC276
+        //HastelloyC276
         RA.addMixerRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Nickel, 32L),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Molybdenum, 8L),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Chrome, 7L),
@@ -717,8 +731,7 @@ public class ImpactCore implements Runnable {
                 GT_Utility.getIntegratedCircuit(3), GT_Values.NF, GT_Values.NF,
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.EglinSteel, 16L), 30 * 20, 16);
 
-        RA
-                .addMixerRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Neutronium, 16L),
+        RA.addMixerRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Neutronium, 16L),
                         GT_Utility.getIntegratedCircuit(1), GT_Values.NI, GT_Values.NI,
                         Materials.Helium.getPlasma(2304L), GT_Values.NF, CoreItems.getRecipe(34, 16), 3600,
                         122880);
@@ -1661,7 +1674,15 @@ public class ImpactCore implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlackSteel, 12),
                         GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSS, 16)},
                 Materials.HSSG.getMolten(288L), GT_ItemList.CycloneCasing.get(2), 200, 7680);
-//SolarPanel
+
+        // --- Turbine Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Titaniolum, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TiBetaC, 6),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 16)},
+                Materials.HSSE.getMolten(288L), GT_ItemList.Huge_Casing_Turbine.get(2), 200, 1920);
+
+        //SolarPanel
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[]{ItemList.Cover_SolarPanel_8V.get(1L), GT_ItemList.ULVRobotArm.get(1L),
                         ItemList.Large_Fluid_Cell_Steel.get(1L), ItemList.Sensor_LV.get(1L),
