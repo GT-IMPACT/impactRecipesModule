@@ -229,7 +229,16 @@ public class TConstruct implements Runnable {
                         new Object[]{"C", "S",
                                 'C', GT_ModHandler.getModItem("IC2", "itemHarz", 1L),
                                 'S', GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1)});
-
+        // --- Silky Cloth
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "materials", 1L, 25), tBitMask,
+                        new Object[]{"SSS", "SIS", "SSS",
+                                'I', OrePrefixes.ingot.get(Materials.Brass), 'S', new ItemStack(Items.string)});
+        // --- Silky Jewel
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "materials", 1L, 26), tBitMask,
+                        new Object[]{" S ", "SGS", " S ",
+                                'G', OrePrefixes.gem.get(Materials.Diamond), 'S', GT_ModHandler.getModItem("TConstruct", "materials", 1L, 25)});
     }
 
     private void alloySmelterRecipe() {
