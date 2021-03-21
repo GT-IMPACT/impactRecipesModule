@@ -769,7 +769,7 @@ public class NEED_TODO implements Runnable {
             // --- Glass Pane
             GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.stained_glass_pane, 2, i), tBitMask, new Object[]{"sW", 'W', new ItemStack(Blocks.stained_glass, 1, i)});
             GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.stained_glass_pane, 8, 15 - i), tBitMask, new Object[]{"WWW", "WDW", "WWW", 'W', new ItemStack(Blocks.glass_pane, 1, 0), 'D', Dyes.VALUES[i]});
-            GT_ModHandler.addShapelessCraftingRecipe(new ItemStack(Blocks.stained_glass, 1, 15 - i), GT_ModHandler.RecipeBits.NOT_REMOVABLE, new Object[]{new ItemStack(Blocks.glass_pane, 1, 0), Dyes.VALUES[i]});
+            GT_ModHandler.addShapelessCraftingRecipe(new ItemStack(Blocks.stained_glass_pane, 1, 15 - i), GT_ModHandler.RecipeBits.NOT_REMOVABLE, new Object[]{new ItemStack(Blocks.glass_pane, 1, 0), Dyes.VALUES[i]});
             // --- GT's Dye
             GT_ModHandler.addShapelessCraftingRecipe(ItemList.DYE_ONLY_ITEMS[i].get(1), GT_ModHandler.RecipeBits.NOT_REMOVABLE, new Object[]{Dyes.VALUES[i]});
         }
@@ -806,7 +806,7 @@ public class NEED_TODO implements Runnable {
         // --- Rusty Handle
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.rustyHandle", 1L), tBitMask, new Object[]{"SRS", "RwR", "SRS", 'S', OrePrefixes.stick.get(Materials.Iron), 'R', OrePrefixes.ring.get(Materials.Iron)});
         // --- Rusty Ladder
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "rustyLadder", 1L), tBitMask, new Object[]{"RRR", "SwS", "RRR", 'S', OrePrefixes.screw.get(Materials.Iron), 'R', OrePrefixes.stick.get(Materials.Iron)});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "rustyLadder", 4L), tBitMask, new Object[]{"RRR", "SwS", "RRR", 'S', OrePrefixes.screw.get(Materials.Iron), 'R', OrePrefixes.stick.get(Materials.Iron)});
         // --- Acacia Door
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.door_acacia", 1L), tBitMask, new Object[]{"SPP", "RPP", "dPP", 'S', OrePrefixes.screw.get(Materials.Iron), 'R', OrePrefixes.ring.get(Materials.Iron), 'P', GT_ModHandler.getModItem("minecraft", "planks", 1L, 4)});
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.door_acacia", 1L), tBitMask, new Object[]{"SPP", "RPP", "dPP", 'S', OrePrefixes.screw.get(Materials.Copper), 'R', OrePrefixes.ring.get(Materials.Copper), 'P', GT_ModHandler.getModItem("minecraft", "planks", 1L, 4)});
@@ -1185,7 +1185,7 @@ public class NEED_TODO implements Runnable {
         // --- Mine Coal
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "minicoal", 7L, 0), tBitMask, new Object[]{"h", "C", 'C', "gemCoal"});
         // --- Aurora Block
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "auroraBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', "blockGlass", 'S', "dye"});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "auroraBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LLL", "LSL", 'L', "blockGlass", 'S', "dye"});
         // --- Korp Block
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.korpBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', OrePrefixes.plate.get(Materials.Obsidian)});
         // --- Tank Block

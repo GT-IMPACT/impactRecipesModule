@@ -47,23 +47,23 @@ public class MalisisDoors implements Runnable {
                 GT_ModHandler.getModItem("malisisdoors", "sliding_trapdoor", 1L), 150, 16);
         // --- Wooden Vanishing Frame
         GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 4L),
-                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.EnderEye, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Glass, 1L),
                 Materials.Redstone.getMolten(288),
                 GT_ModHandler.getModItem("malisisdoors", "vanishing_block", 1L), 300, 30);
         // --- Iron Vanishing Frame
         GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Iron, 4L),
-                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.EnderEye, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Glass, 1L),
                 Materials.Redstone.getMolten(288),
                 GT_ModHandler.getModItem("malisisdoors", "vanishing_block", 1L, 1), 400, 30);
         // --- Gold Vanishing Frame
         GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Gold, 4L),
-                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.EnderEye, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Glass, 1L),
                 Materials.Redstone.getMolten(288),
                 GT_ModHandler.getModItem("malisisdoors", "vanishing_block", 1L, 2), 500, 30);
         // --- Diamond Vanishing Frame
         GT_Values.RA
                 .addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Diamond, 4L),
-                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.EnderEye, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Glass, 1L),
                         Materials.Redstone.getMolten(288),
                         GT_ModHandler.getModItem("malisisdoors", "vanishing_block", 1L, 3), 600, 30);
         // --- Rusty Hatch
@@ -89,7 +89,7 @@ public class MalisisDoors implements Runnable {
         // --- Rusty Ladder
         GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Iron, 3L),
                 GT_Utility.getIntegratedCircuit(5),
-                GT_ModHandler.getModItem("malisisdoors", "rustyLadder", 1L), 60, 16);
+                GT_ModHandler.getModItem("malisisdoors", "rustyLadder", 2L), 60, 16);
         GT_Values.RA
                 .addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Steel, 3L),
                         GT_Utility.getIntegratedCircuit(5),

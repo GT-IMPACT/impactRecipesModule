@@ -177,6 +177,59 @@ public class TConstruct implements Runnable {
                                     'C', OrePrefixes.dust.get(Materials.Redstone)});
         }
 
+        // --- Ladder (stone)
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "decoration.stoneladder", 1L), tBitMask,
+                        new Object[]{"SIS", "SSS", "SrS",
+                                'S', GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1),
+                                'I', GT_ModHandler.getModItem("minecraft", "string", 1L)});
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "decoration.stoneladder", 4L), tBitMask,
+                        new Object[]{"SdS", "SDS", "SrS",
+                                'S', GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1),
+                                'D', OrePrefixes.screw.get(Materials.Iron)});
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "decoration.stoneladder", 6L), tBitMask,
+                        new Object[]{"SdS", "SDS", "SrS",
+                                'S', GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1),
+                                'D', OrePrefixes.screw.get(Materials.Steel)});
+        // --- Torch (stone)
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 3L), tBitMask,
+                        new Object[]{"C", "S",
+                                'C', OrePrefixes.gem.get(Materials.Coal),
+                                'S', GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1)});
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 2L), tBitMask,
+                        new Object[]{"C", "S",
+                                'C', OrePrefixes.gem.get(Materials.Charcoal),
+                                'S', GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1)});
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 1L), tBitMask,
+                        new Object[]{"C", "S",
+                                'C', OrePrefixes.gem.get(Materials.Lignite),
+                                'S', GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1)});
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 5L), tBitMask,
+                        new Object[]{"C", "S",
+                                'C', OrePrefixes.gem.get(Materials.CokeCoal),
+                                'S', GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1)});
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 2L), tBitMask,
+                        new Object[]{"C", "S",
+                                'C', OrePrefixes.dust.get(Materials.Sulfur),
+                                'S', GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1)});
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 6L), tBitMask,
+                        new Object[]{"C", "S",
+                                'C', OrePrefixes.dust.get(Materials.Phosphorus),
+                                'S', GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1)});
+        GT_ModHandler
+                .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 2L), tBitMask,
+                        new Object[]{"C", "S",
+                                'C', GT_ModHandler.getModItem("IC2", "itemHarz", 1L),
+                                'S', GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1)});
+
     }
 
     private void alloySmelterRecipe() {
@@ -236,6 +289,45 @@ public class TConstruct implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Aluminium, 1),
                 GT_OreDictUnificator.get(OrePrefixes.screw, Materials.StainlessSteel, 4),
                 GT_ModHandler.getModItem("TConstruct", "heartCanister", 1L), 2400, 480);
+        // --- Ladder (stone)
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("TConstruct", "toolRod", 3L, 1),
+                        GT_Utility.getIntegratedCircuit(5)}, null,
+                GT_ModHandler.getModItem("TConstruct", "decoration.stoneladder", 2L), 400, 4);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("TConstruct", "toolRod", 3L, 1),
+                        GT_Utility.getIntegratedCircuit(6)}, Materials.Iron.getMolten(16),
+                GT_ModHandler.getModItem("TConstruct", "decoration.stoneladder", 4L), 400, 4);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("TConstruct", "toolRod", 3L, 1),
+                        GT_Utility.getIntegratedCircuit(7)}, Materials.Steel.getMolten(16),
+                GT_ModHandler.getModItem("TConstruct", "decoration.stoneladder", 6L), 400, 4);
+        // --- Torch (stone)
+        GT_Values.RA.addAssemblerRecipe(
+                GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1),
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Phosphorus, 1),
+                GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 6L), 400, 1);
+        GT_Values.RA.addAssemblerRecipe(
+                GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1),
+                GT_ModHandler.getModItem("IC2", "itemHarz", 1L),
+                GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 6L), 400, 1);
+        GT_Values.RA.addAssemblerRecipe(
+                GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1),
+                GT_OreDictUnificator.get(OrePrefixes.gem, Materials.Coal, 1),
+                GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 4L), 400, 1);
+        GT_Values.RA.addAssemblerRecipe(
+                GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1),
+                GT_OreDictUnificator.get(OrePrefixes.gem, Materials.Charcoal, 1),
+                GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 4L), 400, 1);
+        GT_Values.RA.addAssemblerRecipe(
+                GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1),
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Sulfur, 1),
+                GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 2L), 400, 1);
+        GT_Values.RA.addAssemblerRecipe(
+                GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1), new ItemStack(Blocks.wool, 1, 32767),
+                Materials.Creosote.getFluid(1000L),
+                GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 6L), 400, 1);
+
     }
 
     private void chemicalBathRecipe() {
