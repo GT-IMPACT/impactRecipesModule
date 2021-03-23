@@ -12,6 +12,7 @@ public class ModsLoader {
 
     public static void loader() {
         ChiselGroup.run();
+        new Vanilla().run();
         registerRecipeClass(GREGTECH, new Gregtech());
         registerRecipeClass(AE2, new AE());
         registerRecipeClass(BUILDCRAFT, new BuildCraft());
@@ -42,6 +43,8 @@ public class ModsLoader {
         registerRecipeClass(BACKPACK, new Backpack());
         registerRecipeClass(BIBLIO, new BiblioCraft());
         registerRecipeClass(CHICKENS, new ChickenChunks());
-        new NEED_TODO().run();
+        registerRecipeClass(ARCHITEC, new ArchitectureCraft());
+        registerRecipeClass(CARPENTERS, new CarpentersBlocks());
+        registerRecipeClass(NUCLEARCONTROL, new NuclearControl());
     }
 }

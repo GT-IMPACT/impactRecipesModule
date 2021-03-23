@@ -9,11 +9,46 @@ import gregtech.api.util.GT_Utility;
 
 public class Ztones implements Runnable {
 
+    private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
+
     @Override
     public void run() {
+        hand();
         forgeHammer();
         assembler();
         cutting();
+    }
+
+    private void hand() {
+        // --- Ztones Tile
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "stoneTile", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("minecraft", "stone_slab", 1L, 0), 'S', GT_ModHandler.getModItem("minecraft", "stone", 1L, 0)});
+        // --- Mine Charcoal
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "minicharcoal", 7L, 0), tBitMask, new Object[]{"h", "C", 'C', "gemCharcoal"});
+        // --- Mine Coal
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "minicoal", 7L, 0), tBitMask, new Object[]{"h", "C", 'C', "gemCoal"});
+        // --- Aurora Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "auroraBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LLL", "LSL", 'L', "blockGlass", 'S', "dye"});
+        // --- Korp Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.korpBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', OrePrefixes.plate.get(Materials.Obsidian)});
+        // --- Tank Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.tankBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', OrePrefixes.plate.get(Materials.Iron)});
+        // --- Sols Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.solsBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', OrePrefixes.plate.get(Materials.Brass)});
+        // --- Ztyl Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.ztylBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', OrePrefixes.plate.get(Materials.Steel)});
+        // --- Vect Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.vectBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', OrePrefixes.plate.get(Materials.Carbon)});
+        // --- Jelt Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.jeltBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', OrePrefixes.plate.get(Materials.Gold)});
+        // --- Reed Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.reedBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', OrePrefixes.plate.get(Materials.Wood)});
+        // --- Vena Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.venaBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', OrePrefixes.plate.get(Materials.Lapis)});
+        // --- Ofanix
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "ofanix", 1L, 0), tBitMask,
+                new Object[]{"hSC", "SGS", "fSs", 'C', GT_ModHandler.getModItem("TConstruct", "CraftingSlab", 1L, 0),
+                        'S', OrePrefixes.stick.get(Materials.Iron), 'G', OrePrefixes.gem.get(Materials.Diamond)});
+
     }
 
     private void forgeHammer() {

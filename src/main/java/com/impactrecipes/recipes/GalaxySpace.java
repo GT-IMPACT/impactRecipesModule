@@ -14,16 +14,20 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 
+import static com.impact.common.item.Core_List_Items.IceCompressedPlate;
 import static com.impact.common.item.Core_List_Items.TCetiESeaweedExtract;
 import static gregtech.api.enums.GT_Values.RA;
 
 public class GalaxySpace implements Runnable {
+
+    private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
     final Core_Items2 CoreItems2 = Core_Items2.getInstance();
     final Core_Items CoreItems = Core_Items.getInstance();
 
     @Override
     public void run() {
+        hand();
         sifter();
         pulverizer();
         fluidCanner();
@@ -35,6 +39,68 @@ public class GalaxySpace implements Runnable {
         compressor();
         chemical();
         assemblyLine();
+    }
+
+    private void hand() {
+        // --- Cobalt Boots
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.cobalt_boots", 1L), tBitMask, new Object[]{"P P", "ChC", "C C", 'P', OrePrefixes.plate.get(Materials.Desh), 'C', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 0)});
+        // --- Cobalt Chestplate
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.cobalt_plate", 1L), tBitMask, new Object[]{"ChC", "CPC", "C C", 'P', OrePrefixes.plate.get(Materials.Desh), 'C', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 0)});
+        // --- Cobalt Helmet
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.cobalt_helmet", 1L), tBitMask, new Object[]{"CCC", "ChC", "P P", 'P', OrePrefixes.plate.get(Materials.Desh), 'C', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 0)});
+        // --- Cobalt Leggings
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.cobalt_leg", 1L), tBitMask, new Object[]{"CCC", "CPC", "ChC", 'P', OrePrefixes.plate.get(Materials.Desh), 'C', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 0)});
+        // --- Plasma Sword
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.plasmasword", 1L), tBitMask, new Object[]{"PCP", "fCh", "PBW", 'P', OrePrefixes.plate.get(Materials.Desh), 'C', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 0), 'B', GT_ModHandler.getModItem("GalaxySpace", "item.LeadBattery", 1L, 100), 'W', GT_ModHandler.getModItem("GalacticraftCore", "tile.aluminumWire", 1L, 1)});
+        // --- Plasma Pickaxe
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.plasmapickaxe", 1L), tBitMask, new Object[]{"CCC", "fSh", "PBW", 'P', OrePrefixes.plate.get(Materials.Desh), 'C', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 0), 'B', GT_ModHandler.getModItem("GalaxySpace", "item.LeadBattery", 1L, 100), 'W', GT_ModHandler.getModItem("GalacticraftCore", "tile.aluminumWire", 1L, 1), 'S', GT_ModHandler.getModItem("GalacticraftCore", "item.steelPole", 1L)});
+        // --- Plasma Axe
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.plasmaaxe", 1L), tBitMask, new Object[]{"CCh", "CSP", "fBW", 'P', OrePrefixes.plate.get(Materials.Desh), 'C', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 0), 'B', GT_ModHandler.getModItem("GalaxySpace", "item.LeadBattery", 1L, 100), 'W', GT_ModHandler.getModItem("GalacticraftCore", "tile.aluminumWire", 1L, 1), 'S', GT_ModHandler.getModItem("GalacticraftCore", "item.steelPole", 1L)});
+        // --- Plasma Hoe
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.plasmahoe", 1L), tBitMask, new Object[]{"CCh", "fSP", "WBP", 'P', OrePrefixes.plate.get(Materials.Desh), 'C', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 0), 'B', GT_ModHandler.getModItem("GalaxySpace", "item.LeadBattery", 1L, 100), 'W', GT_ModHandler.getModItem("GalacticraftCore", "tile.aluminumWire", 1L, 1), 'S', GT_ModHandler.getModItem("GalacticraftCore", "item.steelPole", 1L)});
+        // --- Plasma Shovel
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.plasmashovel", 1L), tBitMask, new Object[]{"fCh", "PSP", "WBW", 'P', OrePrefixes.plate.get(Materials.Desh), 'C', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 0), 'B', GT_ModHandler.getModItem("GalaxySpace", "item.LeadBattery", 1L, 100), 'W', GT_ModHandler.getModItem("GalacticraftCore", "tile.aluminumWire", 1L, 1), 'S', GT_ModHandler.getModItem("GalacticraftCore", "item.steelPole", 1L)});
+        // --- Small Fuel Canister
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Modules", 1L, 3), tBitMask, new Object[]{"SdS", "CMC", "ShS", 'C', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 4), 'S', OrePrefixes.screw.get(Materials.HSLA), 'M', GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 1L)});
+        // --- Blank Fuel Tank
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 1L), tBitMask, new Object[]{"PRP", "PwP", "PRP", 'P', GT_ModHandler.getModItem("GalacticraftCore", "item.basicItem", 1L, 9), 'R', OrePrefixes.ring.get(Materials.Steel)});
+        // --- Decorate Lead
+        //GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 5L), tBitMask, new Object[]{"hP ", "PSP", " Pw", 'P', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 3), 'S', "stone"});
+        // --- Decorate Adamantite
+        //GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 5L, 1), tBitMask, new Object[]{"hP ", "PSP", " Pw", 'P', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L), 'S', "stone"});
+        // --- Decorate Cobaltum
+        //GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 5L, 2), tBitMask, new Object[]{"hP ", "PSP", " Pw", 'P', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 1), 'S', "stone"});
+        // --- Decorate Magnesium
+        //GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 5L, 3), tBitMask, new Object[]{"hP ", "PSP", " Pw", 'P', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 4), 'S', "stone"});
+        // --- Decorate Mithril
+        //GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 5L, 4), tBitMask, new Object[]{"hP ", "PSP", " Pw", 'P', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 5), 'S', "stone"});
+        // --- Decorate Nickel
+        //GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 5L, 5), tBitMask, new Object[]{"hP ", "PSP", " Pw", 'P', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 6), 'S', "stone"});
+        // --- Decorate Oriharukon
+        //GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 5L, 6), tBitMask, new Object[]{"hP ", "PSP", " Pw", 'P', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 7), 'S', "stone"});
+        // --- Decorate Platinum
+        //GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 5L, 7), tBitMask, new Object[]{"hP ", "PSP", " Pw", 'P', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 8), 'S', "stone"});
+        // --- Decorate Tungsten
+        //GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 5L, 8), tBitMask, new Object[]{"hP ", "PSP", " Pw", 'P', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 9), 'S', "stone"});
+        // --- Decorate Copper
+        //GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 5L, 9), tBitMask, new Object[]{"hP ", "PSP", " Pw", 'P', GT_ModHandler.getModItem("GalacticraftCore", "item.basicItem", 1L, 6), 'S', "stone"});
+        // --- Advanced Fuel Loader
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "advFuelLoader", 1L), tBitMask, new Object[]{"SWS", "PTM", "AIA", 'I', OrePrefixes.pipeMedium.get(Materials.TungstenSteel), 'S', GT_ModHandler.getModItem("GalacticraftMars", "item.null", 1L, 5), 'A', CoreItems2.getRecipe(IceCompressedPlate.getMetaID(), 1), 'W', OrePrefixes.circuit.get(Materials.Elite), 'M', ItemList.Electric_Motor_IV, 'P', ItemList.Electric_Pump_IV, 'T', ItemList.Large_Fluid_Cell_TungstenSteel});
+        // --- Gravity Module
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "gravitationmoduleon", 1L), tBitMask, new Object[]{"PLP", "CFC", "IHI", 'L', OrePrefixes.lens.get(Materials.Diamond), 'C', OrePrefixes.cableGt02.get(Materials.Aluminium), 'I', OrePrefixes.circuit.get(Materials.Data), 'F', ItemList.Field_Generator_HV, 'H', ItemList.Hull_EV, 'P', GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 4)});
+        // --- Magnetic Field Generator
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "radiationstabiliser", 1L), tBitMask, new Object[]{"ACA", "WHF", "SCS", 'A', OrePrefixes.compressed.get(Materials.Aluminium), 'S', OrePrefixes.compressed.get(Materials.Steel), 'C', OrePrefixes.circuit.get(Materials.Data), 'W', OrePrefixes.cableGt02.get(Materials.Aluminium), 'F', ItemList.EV_Coil, 'H', ItemList.Hull_EV});
+        // --- Very Heavy Oxygen Tank
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.oxygentank_t4", 1L, 10800), tBitMask, new Object[]{"PTP", "PCP", "PPP", 'P', CoreItems2.getRecipe(79, 1), 'C', ItemList.Large_Fluid_Cell_Chrome.get(1), 'T', GT_ModHandler.getModItem("GalacticraftCore", "tile.oxygenPipe", 1L)});
+        // --- Ultra Oxygen Tank
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.oxygentank_t5", 1L, 12600), tBitMask, new Object[]{"PTP", "PCP", "PPP", 'P', CoreItems2.getRecipe(83, 1), 'C', ItemList.Large_Fluid_Cell_Iridium.get(1), 'T', GT_ModHandler.getModItem("GalacticraftCore", "tile.oxygenPipe", 1L)});
+        // --- Very Ultra Oxygen Tank
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.oxygentank_t6", 1L, 14400), tBitMask, new Object[]{"PTP", "PCP", "PPP", 'P', CoreItems2.getRecipe(85, 1), 'C', ItemList.Large_Fluid_Cell_Osmium.get(1), 'T', GT_ModHandler.getModItem("GalacticraftCore", "tile.oxygenPipe", 1L)});
+        // --- Module "Expander"
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 1L, 14), tBitMask, new Object[]{"SCS", "PIP", "RFR", 'S', OrePrefixes.stick.get(Materials.ElectricalSteel), 'P', OrePrefixes.plate.get(Materials.ElectricalSteel), 'R', OrePrefixes.ring.get(Materials.ElectricalSteel), 'I', OrePrefixes.circuit.get(Materials.Advanced), 'F', ItemList.Field_Generator_MV, 'C', ItemList.HV_Coil});
+        // --- Module "Stabilization"
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 1L, 15), tBitMask, new Object[]{"SCS", "PIP", "RFR", 'S', OrePrefixes.stick.get(Materials.VanadiumSteel), 'P', OrePrefixes.plate.get(Materials.VanadiumSteel), 'R', OrePrefixes.ring.get(Materials.VanadiumSteel), 'I', OrePrefixes.circuit.get(Materials.Advanced), 'F', ItemList.Field_Generator_MV, 'C', ItemList.Electric_Pump_HV});
+
     }
 
     private void sifter() {

@@ -1,5 +1,6 @@
 package com.impactrecipes.recipes;
 
+import com.impactrecipes.util.RecipeUtils;
 import crazypants.enderio.item.darksteel.DarkSteelItems;
 import gregtech.api.enums.GT_Values;
 import gregtech.api.enums.Materials;
@@ -25,6 +26,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import vswe.stevesfactory.blocks.ModBlocks;
 
+import static com.impactrecipes.util.RecipeUtils.getItemStack;
 import static gregtech.api.util.GT_ModHandler.removeFurnaceSmelting;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 import static stevesaddons.registry.BlockRegistry.cableRFNode;
@@ -530,6 +532,7 @@ public class RemoveRecipes implements Runnable {
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "decoration.stoneladder", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "materials", 1L, 26));
+
     }
 
     private void removeGraviSuite() {
@@ -666,6 +669,7 @@ public class RemoveRecipes implements Runnable {
         removeFurnaceSmelting(new ItemStack(Items.clay_ball, 1, 0));
         removeFurnaceSmelting(new ItemStack(Blocks.stone));
         removeFurnaceSmelting(new ItemStack(Blocks.gravel));
+
         removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "crafting_table", 1L, 0), true,
                 false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "chest", 1L, 0), true, false, false);
@@ -751,6 +755,19 @@ public class RemoveRecipes implements Runnable {
         removeRecipeByOutput(new ItemStack(Blocks.stained_glass_pane, 1, GT_Values.W), true, false,
                 false);
         removeRecipeByOutput(new ItemStack(Items.enchanted_book, 1, 0), true, false,
+                false);
+
+        removeRecipeByOutput(getItemStack("minecraft", "ender_chest", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "iron_ingot", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(new ItemStack(Blocks.stone_button, 1,0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "wooden_button", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "stone_slab", 1, GT_Values.W), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "wooden_slab", 1, GT_Values.W), true, false,
                 false);
     }
 

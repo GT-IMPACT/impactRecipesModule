@@ -43,4 +43,6 @@ public class Reference {
     public final static String BACKPACK = "Backpack";
     public final static String BIBLIO = "BiblioCraft";
     public final static String CHICKENS = "ChickenChunks";
+    public final static String ARCHITEC = "ArchitectureCraft";
+    public final static String NUCLEARCONTROL = "IC2NuclearControl";
 }

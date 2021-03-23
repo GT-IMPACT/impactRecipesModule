@@ -1,6 +1,7 @@
 package com.impactrecipes.recipes;
 
 import com.impact.common.item.Core_Items2;
+import com.impact.mods.gregtech.GT_ItemList;
 import gregtech.api.enums.GT_Values;
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
@@ -13,12 +14,52 @@ import net.minecraftforge.fluids.FluidStack;
 
 public class GraviSuite implements Runnable {
 
+    private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
+
     final Core_Items2 CoreItems2 = Core_Items2.getInstance();
 
     @Override
     public void run() {
+        hand();
         printer3d();
         assemblyLine();
+    }
+
+    private void hand() {
+        // --- Super Conductor
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 1), tBitMask, new Object[]{"GGG", "SPS", "GGG", 'G', GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L), 'S', OrePrefixes.wireGt02.get(Materials.SuperconductorLuV), 'P', OrePrefixes.plateTriple.get(Materials.Platinum)});
+        // --- Super Conductor Cover
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 2L), tBitMask, new Object[]{"PPP", "III", "PPP", 'I', GT_ModHandler.getModItem("IC2", "itemPartIridium", 1L), 'P', OrePrefixes.plate.get(Materials.NiobiumTitanium)});
+        // --- Engine Booster
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 6), tBitMask, new Object[]{"PCP", "PMP", "SVS", 'V', GT_ModHandler.getModItem("IC2", "reactorVentDiamond", 1L, 1), 'M', GT_ModHandler.getModItem("IC2", "upgradeModule", 1L), 'P', OrePrefixes.plate.get(Materials.StainlessSteel), 'S', OrePrefixes.screw.get(Materials.StainlessSteel), 'C', OrePrefixes.circuit.get(Materials.Advanced)});
+        // --- Gravitation Engine
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 3), tBitMask, new Object[]{"ESE", "COC", "ESE", 'S', GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 1), 'C', GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 2), 'E', ItemList.Emitter_IV, 'O', ItemList.Energy_LapotronicOrb});
+        // --- Magnetron
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 4), tBitMask, new Object[]{"MCM", "PSP", "MCM", 'M', OrePrefixes.plateDense.get(Materials.NeodymiumMagnetic), 'P', OrePrefixes.plateDense.get(Materials.Copper), 'S', GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 1), 'C', ItemList.IV_Coil});
+        // --- Vajra Core
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 5), tBitMask, new Object[]{"SwS", "IMI", "STS", 'I', GT_ModHandler.getModItem("IC2", "itemPartIridium", 1L), 'M', GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 4), 'S', GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 1), 'T', ItemList.Transformer_LuV_IV});
+        // --- Gravitational Engine 2
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 7), tBitMask, new Object[]{"ESE", "COC", "ESE", 'S', OrePrefixes.wireGt04.get(Materials.SuperconductorLuV), 'C', GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 3), 'E', ItemList.Emitter_LuV, 'O', ItemList.Energy_LapotronicOrb2});
+        // --- Cooling Core
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 2), tBitMask, new Object[]{"IHI", "RCR", "PHP", 'P', OrePrefixes.plateDouble.get(Materials.Inconel792), 'I', GT_ModHandler.getModItem("IC2", "itemPartIridium", 1L), 'H', GT_ModHandler.getModItem("IC2", "reactorHeatSwitchDiamond", 1L, 1), 'R', GT_ModHandler.getModItem("IC2", "reactorPlatingHeat", 1L), 'C', ItemList.Reactor_Coolant_He_6});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 2), tBitMask, new Object[]{"PHP", "RCR", "IHI", 'P', OrePrefixes.plateDouble.get(Materials.Inconel792), 'I', GT_ModHandler.getModItem("IC2", "itemPartIridium", 1L), 'H', GT_ModHandler.getModItem("IC2", "reactorHeatSwitchDiamond", 1L, 1), 'R', GT_ModHandler.getModItem("IC2", "reactorPlatingHeat", 1L), 'C', ItemList.Reactor_Coolant_He_6});
+        // --- Epic Lappack
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "epicLappack", 1L, 27), tBitMask, new Object[]{"PCP", "PUP", "SOS", 'P', OrePrefixes.itemCasing.get(Materials.HSSG), 'C', OrePrefixes.circuit.get(Materials.Superconductor), 'S', OrePrefixes.wireGt12.get(Materials.SuperconductorZPM), 'U', GT_ModHandler.getModItem("GraviSuite", "ultimateLappack", 1L, GT_Values.W), 'O', ItemList.Energy_LapotronicOrb2});
+        // --- Vajra
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "vajra", 1L, 27), tBitMask, new Object[]{"HVL", "CIC", "SOS", 'S', OrePrefixes.stick.get(Materials.Trinium), 'C', OrePrefixes.circuit.get(Materials.Elite), 'L', OrePrefixes.lens.get(Materials.ReinforcedGlass), 'V', GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 4), 'I', GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 5), 'H', GT_ItemList.EngravedEnergyChip, 'O', CoreItems2.getRecipe(46, 1)});
+        // --- GraviTool
+        //GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "graviTool", 1L), tBitMask, new Object[]{"AHA", "RBR", "WCT", 'A', "plateAlloyCarbon", 'B', "batteryElite", 'R', "plateAlloyAdvanced", 'C', OrePrefixes.circuit.get(Materials.Advanced), 'H', GT_ModHandler.getModItem("IC2", "itemToolHoe", 1L, GT_Values.W), 'W', GT_ModHandler.getModItem("IC2", "itemToolWrenchElectric", 1L, GT_Values.W), 'T', GT_ModHandler.getModItem("IC2", "itemTreetapElectric", 1L, GT_Values.W)});
+        // --- Advanced Chainsaw
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "advChainsaw", 1L), tBitMask, new Object[]{"SBd", "GMG", "PIP", 'P', OrePrefixes.plate.get(Materials.HSSG), 'G', OrePrefixes.gearGtSmall.get(Materials.HSSG), 'D', OrePrefixes.toolHeadChainsaw.get(Materials.TungstenSteel), 'S', OrePrefixes.screw.get(Materials.HSSG), 'I', GT_ModHandler.getModItem("IC2", "itemBatChargeLamaCrystal", 1L, GT_Values.W), 'M', ItemList.Electric_Motor_EV});
+        // --- Advanced Nanochestplate
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "advNanoChestPlate", 1L, 27), tBitMask, new Object[]{"AJA", "ANA", "WCW", 'A', "plateAlloyAdvanced", 'W', OrePrefixes.wireGt04.get(Materials.Platinum), 'C', OrePrefixes.circuit.get(Materials.Elite), 'J', GT_ModHandler.getModItem("GraviSuite", "advJetpack", 1L, GT_Values.W), 'N', GT_ModHandler.getModItem("IC2", "itemArmorNanoChestplate", 1L, GT_Values.W)});
+        // --- Advanced Jetpack
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "advJetpack", 1L, 27), tBitMask, new Object[]{"AJA", "ELE", "WCW", 'A', "plateAlloyAdvanced", 'W', OrePrefixes.wireGt04.get(Materials.Platinum), 'C', OrePrefixes.circuit.get(Materials.Data), 'J', GT_ModHandler.getModItem("IC2", "itemArmorJetpackElectric", 1L, GT_Values.W), 'L', GT_ModHandler.getModItem("GraviSuite", "advLappack", 1L, GT_Values.W), 'E', GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 6)});
+        // --- Ultimate Lappack
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "ultimateLappack", 1L, 27), tBitMask, new Object[]{"PIP", "LAL", "CSC", 'P', OrePrefixes.itemCasing.get(Materials.TungstenSteel), 'C', OrePrefixes.circuit.get(Materials.Elite), 'I', GT_ModHandler.getModItem("IC2", "itemPartIridium", 1L), 'L', ItemList.LapotronCrystal.get(1), 'A', GT_ModHandler.getModItem("GraviSuite", "advLappack", 1L, GT_Values.W), 'S', GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 1)});
+        // --- Advanced Lappack
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "advLappack", 1, 27), new Object[]{"CEC", "EJE", "WPW", 'C', OrePrefixes.plateAlloy.get(Materials.Carbon), 'J', GT_ModHandler.getModItem("IC2","itemArmorEnergypack", 1L, GT_Values.W), 'E', ItemList.EnergyCrystal.get(1),  'W', OrePrefixes.wireGt04.get(Materials.Platinum), 'P', OrePrefixes.circuit.get(Materials.Data)});
+
     }
 
     private void printer3d() {
