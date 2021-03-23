@@ -13,8 +13,7 @@ import tconstruct.library.crafting.DryingRackRecipes;
 import tconstruct.weaponry.TinkerWeaponry;
 
 import static com.impactrecipes.util.RecipeUtils.ordictItemStack;
-import static iguanaman.iguanatweakstconstruct.claybuckets.IguanaItems.clayBucketLava;
-import static iguanaman.iguanatweakstconstruct.claybuckets.IguanaItems.clayBucketWater;
+import static iguanaman.iguanatweakstconstruct.claybuckets.IguanaItems.*;
 import static tconstruct.armor.TinkerArmor.*;
 
 public class TConstruct implements Runnable {
@@ -239,6 +238,14 @@ public class TConstruct implements Runnable {
                 .addCraftingRecipe(GT_ModHandler.getModItem("TConstruct", "materials", 1L, 26), tBitMask,
                         new Object[]{" S ", "SGS", " S ",
                                 'G', OrePrefixes.gem.get(Materials.Diamond), 'S', GT_ModHandler.getModItem("TConstruct", "materials", 1L, 25)});
+
+        if (Loader.isModLoaded("IguanaTweaksTConstruct")) {
+            // --- Unfired Clay Bucket
+            GT_ModHandler
+                    .addCraftingRecipe(new ItemStack(clayBucketUnfired), tBitMask,
+                            new Object[]{"C C", "CCC", 'C', OrePrefixes.dust.get(Materials.Clay)});
+
+        }
     }
 
     private void alloySmelterRecipe() {

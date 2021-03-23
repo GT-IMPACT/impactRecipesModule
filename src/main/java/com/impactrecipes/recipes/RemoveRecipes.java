@@ -532,7 +532,7 @@ public class RemoveRecipes implements Runnable {
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "decoration.stoneladder", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "materials", 1L, 26));
-
+        removeRecipeByOutput(GT_ModHandler.getModItem("IguanaTweaksTConstruct", "clayBucketUnfired", 1L, 0));
     }
 
     private void removeGraviSuite() {
