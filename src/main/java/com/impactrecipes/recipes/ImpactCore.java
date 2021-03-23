@@ -297,6 +297,11 @@ public class ImpactCore implements Runnable {
         //White Concrete
         GT_ModHandler.addCraftingRecipe(Blockstack(UtilBlock, 8, 2), tBitMask, new Object[]{"CCC", "CDC", "CCC", 'C', Blockstack(UtilBlock, 1, 0), 'D', Dyes.dyeWhite});
 
+        // --- Long Distance Pipeline
+        GT_ModHandler.addCraftingRecipe(GT_ItemList.Long_Distance_Pipeline_Fluid.get(1L),tBitMask, new Object[]{"GPG", "IwI", "GPG", 'G', GT_OreDictUnificator.get(OrePrefixes.gear, Materials.Steel, 1L), 'P', GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1L), 'I', GT_OreDictUnificator.get(OrePrefixes.pipeHuge, Materials.Steel, 1L)});
+        GT_ModHandler.addCraftingRecipe(GT_ItemList.Long_Distance_Pipeline_Item.get(1L), tBitMask, new Object[]{"GPG", "IwI", "GPG",'G' ,GT_OreDictUnificator.get(OrePrefixes.gear, Materials.Steel, 1L), 'P', GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1L), 'I', GT_OreDictUnificator.get(OrePrefixes.pipeHuge, Materials.Tin, 1L)});
+        GT_ModHandler.addCraftingRecipe(GT_ItemList.Long_Distance_Pipeline_Fluid_Pipe.get(32L), tBitMask, new Object[]{"PPP", "IwI", "PPP", 'P',GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1L), 'I', GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Steel, 1L)});
+        GT_ModHandler.addCraftingRecipe(GT_ItemList.Long_Distance_Pipeline_Item_Pipe.get(32L), tBitMask, new Object[]{"PPP", "IwI", "PPP", 'P',GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1L), 'I', GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Tin, 1L)});
     }
 
     private void furnace() {
@@ -2847,6 +2852,30 @@ public class ImpactCore implements Runnable {
                         Dyes.VALUES[i].getFluidDye(j, 24L), new ItemStack(Blocks.carpet, 2, 15 - i), 128, 5);
             }
         }
+
+        // --- Long Distance Pipeline
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.pipeHuge, Materials.Steel, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 6L),
+                        GT_OreDictUnificator.get(OrePrefixes.gear, Materials.Steel, 2L),
+                        GT_Utility.getIntegratedCircuit(2)}, Materials.Tin.getMolten(144L),
+                GT_ItemList.Long_Distance_Pipeline_Fluid.get(2L), 300, 16);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.pipeHuge, Materials.Tin, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 6L),
+                        GT_OreDictUnificator.get(OrePrefixes.gear, Materials.Steel, 2L),
+                        GT_Utility.getIntegratedCircuit(2)}, Materials.Tin.getMolten(144L),
+                GT_ItemList.Long_Distance_Pipeline_Item.get(2L), 300, 16);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Steel, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 9L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.Tin.getMolten(144L),
+                GT_ItemList.Long_Distance_Pipeline_Fluid_Pipe.get(64L), 600, 24);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Tin, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 9L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.Tin.getMolten(144L),
+                GT_ItemList.Long_Distance_Pipeline_Item_Pipe.get(64L), 600, 24);
         //endregion
     }
 
