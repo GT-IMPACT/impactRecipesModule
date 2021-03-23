@@ -63,6 +63,7 @@ public class ImpactCore implements Runnable {
         bath();
         ciruit();
         assemblyLine();
+        wireassembler();
         new LaserEngraver();
     }
 
@@ -3311,6 +3312,15 @@ public class ImpactCore implements Runnable {
                         Materials.Hydrogen.getGas(2000)
                 },
                 GT_ItemList.Parallel_Computer.get(1L), 100 * 20, 30720);
+    }
+
+    public void wireassembler() {
+        // --- Space Elevator Hawser
+        RA.addWireAssemblerRecipe(new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.HSLA, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Steel, 64L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Vanadium, 64L)}, null,
+                new ItemStack(SpaceElevatorBlock, 1, 0), 80 * 20, 1024, false);
     }
 
     public static class LaserEngraver implements IOreRecipeRegistrator {

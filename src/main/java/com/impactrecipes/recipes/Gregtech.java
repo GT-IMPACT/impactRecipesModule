@@ -259,15 +259,6 @@ public class Gregtech implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.NiobiumTitanium, 4L)},
                 Materials.Trinium.getMolten(720L), ItemList.Casing_Coil_Superconductor.get(1L), 375,
                 2000000, true);
-
-        //todo рецепт не работает!
-        RA.addWireAssemblerRecipe(new ItemStack[]{
-                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.HSLA, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Vanadium, 64L),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Vanadium, 64L),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Vanadium, 64L),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Vanadium, 64L)}, null,
-                new ItemStack(SpaceElevatorBlock, 1, 0), 80 * 20, 1024, false);
     }
 
     private void vacuumFreezer() {
