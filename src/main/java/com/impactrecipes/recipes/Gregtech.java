@@ -641,13 +641,13 @@ public class Gregtech implements Runnable {
         }, ItemList.LargeGasTurbine.get(1L), null, 40 * 20, 480);
 
         //HP Turbine
-        RA.addBasicLineRecipe(new ItemStack[]{
-                ItemList.Hull_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 4),
+        RA.addPrimitiveLineRecipe(new ItemStack[]{
+                ItemList.Hull_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 4),
                 GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Titanium, 4),
                 GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Titanium, 4),
-                GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Titanium, 8),
-                GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Inconel792, 8),
-                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 16)
+                GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Titanium, 4),
+                GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.HSLA, 6),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 12)
         }, ItemList.LargeHPSteamTurbine.get(1L), null, 60 * 20, 1920);
 
         //Plasma Turbine
