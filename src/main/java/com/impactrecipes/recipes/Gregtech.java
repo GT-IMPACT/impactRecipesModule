@@ -1631,7 +1631,7 @@ public class Gregtech implements Runnable {
                 .addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Europiumoxide, 1L),
                         GT_Utility.getIntegratedCircuit(11), Materials.Helium.getGas(1000L), GT_Values.NF,
                         GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Europiumoxide, 1L),
-                        GT_Values.NI, 1000, 30720, 7200);
+                        GT_Values.NI, 800, 30720, 7200);
         GT_Values.RA
                 .addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Europiumoxide, 1L),
                         GT_Utility.getIntegratedCircuit(1), GT_Values.NF, GT_Values.NF,
@@ -1720,11 +1720,11 @@ public class Gregtech implements Runnable {
                 900, 480, 5000);
         GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Silicon, 32),
                 GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.Gallium, 1), null, null,
-                ItemList.Circuit_Silicon_Ingot.get(1, new Object[0]), null, 6000, 120, 1784);
+                ItemList.Circuit_Silicon_Ingot.get(1), null, 6000, 120, 1784);
         GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Silicon, 64),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Glowstone, 8),
                 Materials.Nitrogen.getGas(8000), null,
-                ItemList.Circuit_Silicon_Ingot2.get(1, new Object[0]), null, 9000, 480, 2484);
+                ItemList.Circuit_Silicon_Ingot2.get(1), null, 9000, 480, 2484);
         GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.block, Materials.Silicon, 16),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Naquadah, 1),
                 Materials.Argon.getGas(8000), null, ItemList.Circuit_Silicon_Ingot3.get(1, new Object[0]),
@@ -1760,10 +1760,14 @@ public class Gregtech implements Runnable {
         GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.block, Materials.Silicon, 64),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Neutronium, 4),
                 Materials.PerroxGas.getGas(480), null,
-                ItemList.Circuit_Silicon_Ingot10.get(1, new Object[0]), null, 6400, 500000, 12600);
+                ItemList.Circuit_Silicon_Ingot10.get(1), null, 6400, 500000, 12600);
+        GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Trinium, 1L),
+                GT_Utility.getIntegratedCircuit(1), GT_Values.NF, GT_Values.NF,
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Trinium, 1L), GT_Values.NI, 1600,
+                30720, 7200);
         GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Trinium, 1L),
                 GT_Utility.getIntegratedCircuit(11), Materials.Argon.getGas(1000L), GT_Values.NF,
-                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Trinium, 1L), GT_Values.NI, 1500,
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Trinium, 1L), GT_Values.NI, 800,
                 30720, 7200);
         GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.HSLA, 1L),
                 GT_Utility.getIntegratedCircuit(1), GT_Values.NF, GT_Values.NF,
