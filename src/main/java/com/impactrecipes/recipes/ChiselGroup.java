@@ -52,6 +52,8 @@ public class ChiselGroup {
         Carving.chisel.addVariation(name, Blocks.glass, 0, 0);
         for (int i = 1; i < 16; i++) {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("chisel", "glass"), i, 0);
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("Impact|Architecture", "i_glass"), i, 0);
+            Carving.chisel.addVariation(name, glaxx, i, 0);
         }
         Carving.chisel.addVariation(name, GameRegistry.findBlock("chisel", "glass2"), 0, 0);
         Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "GlassBlock"), 0, 0);
@@ -244,12 +246,6 @@ public class ChiselGroup {
         Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
         for (int i = 0; i < 16; i++) {
             Carving.chisel.addVariation(name, fortBlock, i, 0);
-        }
-
-        name = "Glaxx";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        for (int i = 0; i < 16; i++) {
-            Carving.chisel.addVariation(name, glaxx, i, 0);
         }
 
         name = "Iszm";
