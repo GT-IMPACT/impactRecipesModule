@@ -988,9 +988,9 @@ public class ImpactCore implements Runnable {
                 GT_Utility.getIntegratedCircuit(3), GT_Values.NF, GT_Values.NF,
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.EglinSteel, 16L), 30 * 20, 16);
 
-        RA.addMixerRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Neutronium, 16L),
+        RA.addMixerRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Neutronium, 1L),
                         GT_Utility.getIntegratedCircuit(1), GT_Values.NI, GT_Values.NI,
-                        Materials.Helium.getPlasma(2304L), GT_Values.NF, CoreItems.getRecipe(34, 16), 3600,
+                        Materials.Helium.getPlasma(125), GT_Values.NF, CoreItems.getRecipe(34, 1), 200,
                         122880);
 
         RA.addMixerRecipe(CoreItems.getRecipe(28, 64), Materials.DeepIron.getDust(64),
