@@ -831,6 +831,26 @@ public class ImpactCore implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Neutronium, 64)
         }, new ItemStack(lscLapotronicEnergyUnit, 1, 5), null, 180 * 20, 2000000);
 
+        //Mysterious Crystal Orb Capacitor
+        RA.addBasicLineRecipe(new ItemStack[]{
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
+                ItemList.MysteriousCrystalOrb.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 8),
+                ItemList.Circuit_Chip_PPIC.get(12L),
+                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Europium, 32),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Pikyonium64B, 64),
+                GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Neutronium, 64)
+        }, new ItemStack(lscLapotronicEnergyUnit, 1, 7), null, 180 * 20, 2000000);
+
+        //Mysterious Crystal Module Capacitor
+        RA.addBasicLineRecipe(new ItemStack[]{
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
+                ItemList.MysteriousCrystalModule.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 8),
+                ItemList.Circuit_Chip_QPIC.get(12L),
+                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Draconium, 32),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quantum, 64),
+                GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Phoenixite, 64)
+        }, new ItemStack(lscLapotronicEnergyUnit, 1, 8), null, 200 * 20, 8000000);
+
         //AdvancedPyrolyseOven
         RA.addPrimitiveLineRecipe(new ItemStack[]{
                 GT_ItemList.Pyrolyse.get(1L),
@@ -3492,6 +3512,26 @@ public class ImpactCore implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Europium, 32),
                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Pikyonium64B, 64),
                 GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Neutronium, 64)}, 1800 * 20, 500000);
+
+        //Mysterious Crystal Orb Capacitor
+        RA.addDisassemblerRecipe(
+                new ItemStack(lscLapotronicEnergyUnit, 1, 7),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
+                ItemList.MysteriousCrystalOrb.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 8),
+                ItemList.Circuit_Chip_PPIC.get(12L),
+                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Europium, 32),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Pikyonium64B, 64),
+                GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Neutronium, 64)}, 1800 * 20, 500000);
+
+        //Mysterious Crystal Module Capacitor
+        RA.addDisassemblerRecipe(
+                new ItemStack(lscLapotronicEnergyUnit, 1, 8),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
+                ItemList.MysteriousCrystalModule.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Neutronium, 8),
+                ItemList.Circuit_Chip_QPIC.get(12L),
+                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Draconium, 32),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quantum, 64),
+                GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Phoenixite, 64)}, 2000 * 20, 500000);
 
         //Dynamo Hatches IV-UHV
         RA.addDisassemblerRecipe(
