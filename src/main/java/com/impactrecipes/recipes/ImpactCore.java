@@ -750,6 +750,19 @@ public class ImpactCore implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSE, 64)
         }, GT_ItemList.AdvVacuumFreezer.get(1L), null, 200 * 20, 122880);
 
+        //AdvancedEBF
+        RA.addBasicLineRecipe(new ItemStack[]{
+                ItemList.Hull_ZPM.get(1L),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Lafium, 4),
+                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 6),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Iridium, 8),
+                ItemList.Conveyor_Module_ZPM.get(4L), ItemList.Robot_Arm_ZPM.get(4L),
+                ItemList.Casing_Coil_Superconductor.get(8L), ItemList.Casing_Coil_NaquadahAlloy.get(16L),
+                GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Naquadah, 16),
+                GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Osmiridium, 16),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSE, 64)
+        }, GT_ItemList.Machine_EIF.get(1L), null, 200 * 20, 122880);
+
         //LapatronicSupercapacitor
         RA.addBasicLineRecipe(new ItemStack[]{
                 ItemList.Hull_IV.get(1L), ItemList.Battery_TurboCharger_4by4_IV.get(1L),
@@ -983,6 +996,47 @@ public class ImpactCore implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.round, Materials.HSSG, 16),
                 GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Inconel792, 16)
         }, GT_ItemList.Huge_Steam_Turbine.get(1L), null, 60 * 20, 7680);
+
+        //MultiChemicalReactor
+        RA.addBasicLineRecipe(new ItemStack[]{
+                ItemList.Hull_LuV.get(1L),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Talonite, 4),
+                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 8),
+                ItemList.Electric_Pump_LuV.get(4L),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Talonite, 8),
+                GT_OreDictUnificator.get(OrePrefixes.pipeHuge, Materials.Polytetrafluoroethylene, 4),
+                GT_OreDictUnificator.get(OrePrefixes.gear, Materials.Inconel792, 4),
+                GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Grisium, 8),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSE, 16),
+                GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSE, 16)
+        }, GT_ItemList.Machine_ChemicalReactor.get(1L), null, 80 * 20, 30720);
+
+        //MultiDistillationTower
+        RA.addBasicLineRecipe(new ItemStack[]{
+                ItemList.Hull_LuV.get(1L),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.MaragingSteel250, 4),
+                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 8),
+                ItemList.Electric_Pump_LuV.get(8L),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TiBetaC, 8),
+                GT_OreDictUnificator.get(OrePrefixes.pipeHuge, Materials.NiobiumTitanium, 4),
+                GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Tungsten, 16),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSE, 16),
+                GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSE, 16)
+        }, GT_ItemList.Machine_DistTower.get(1L), null, 80 * 20, 30720);
+
+        //ElectricImplosionCompressor
+        RA.addBasicLineRecipe(new ItemStack[]{
+                ItemList.Hull_LuV.get(1L),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Kovar, 4),
+                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 8),
+                ItemList.Electric_Piston_LuV.get(8L),
+                GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Zamak, 8),
+                GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.HSSG, 8),
+                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Titaniolum, 8),
+                GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Titaniolum, 16),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSE, 16),
+                GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSE, 16)
+        }, GT_ItemList.Machine_ElectricImplosion.get(1L), null, 80 * 20, 30720);
 
     }
 
@@ -2899,7 +2953,15 @@ public class ImpactCore implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 9L),
                         GT_Utility.getIntegratedCircuit(24)}, Materials.Tin.getMolten(144L),
                 GT_ItemList.Long_Distance_Pipeline_Item_Pipe.get(64L), 600, 24);
-        //endregion
+
+        // --- Electromagnetic Chamber
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{ItemList.Block_Magnetic_Coil.get(1),
+                        GT_ModHandler.getModItem("IC2", "blockAlloyGlass", 1L, 0),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Trinium, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.TungstenSteel, 20),
+                        GT_OreDictUnificator.get(OrePrefixes.screw, Materials.TungstenSteel, 20),
+                        ItemList.Field_Generator_IV.get(1L)}, null, new ItemStack(InsideBlock, 1, 5), 400, 122880);
     }
 
     private void cutting() {
