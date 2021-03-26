@@ -981,6 +981,7 @@ public class ImpactCore implements Runnable {
                 ItemList.Hull_LuV.get(1L), ItemList.Robot_Arm_LuV.get(4L),
                 GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Titanium, 8),
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 8),
+                GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.TungstenSteel, 8),
                 CoreItems2.getRecipe(142, 8), GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 12)
         }, GT_ItemList.Nuclear_Reactor_III.get(1), null, 80 * 20, 30720);
 
@@ -3751,6 +3752,30 @@ public class ImpactCore implements Runnable {
                         CustomItemList.eM_energyMulti16_UHV.get(1), ItemList.Circuit_Chip_QPIC.get(6),
                         ItemList.UHV_Coil.get(8), GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Europium, 32),
                         GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 4)}, 4000, 2000000);
+
+        //Nuclear Reactor I
+        RA.addDisassemblerRecipe(
+                GT_ItemList.Nuclear_Reactor_I.get(1), new ItemStack[]{ItemList.Hull_EV.get(1L),
+                        ItemList.Robot_Arm_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Titanium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 4),
+                        GT_ModHandler.getModItem("IC2", "reactorPlatingExplosive", 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 8)}, 30 * 20, 1920);
+
+        //Nuclear Reactor II
+        RA.addDisassemblerRecipe(
+                GT_ItemList.Nuclear_Reactor_II.get(1), new ItemStack[]{ItemList.Hull_IV.get(1L),
+                        ItemList.Robot_Arm_IV.get(2L), GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Titanium, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 6),
+                        GT_ModHandler.getModItem("IC2", "reactorPlatingExplosive", 8), CoreItems2.getRecipe(141, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 10)}, 50 * 20, 7680);
+
+        //Nuclear Reactor III
+        RA.addDisassemblerRecipe(
+                GT_ItemList.Nuclear_Reactor_III.get(1), new ItemStack[]{ItemList.Hull_LuV.get(1L),
+                        ItemList.Robot_Arm_LuV.get(4L), GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Titanium, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.TungstenSteel, 8), CoreItems2.getRecipe(142, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 12)}, 80 * 20, 30720);
     }
 
     public static class LaserEngraver implements IOreRecipeRegistrator {
