@@ -78,23 +78,45 @@ public class ChiselGroup {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockgranites"), i, 0);
         }
 
-        // --- Basalt
+        // --- Basalt Stone
         name = "basalt";
         Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
         if (Loader.isModLoaded("UndergroundBiomes")) {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousStone"), 5, 0);
         }
         for (int i = 8; i < 16; i++) {
+            if (i == 9 || i == 10) { continue; }
             Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockstones"), i, 0);
         }
 
-        // --- Red Granite
+        // --- Basalt Stone Cobble
+        name = "basaltcobble";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        if (Loader.isModLoaded("UndergroundBiomes")) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousCobblestone"), 5, 0);
+        }
+        for (int i = 9; i < 10; i++) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockstones"), i, 0);
+        }
+
+        // --- Red Granite Stone
         name = "redgranite";
         Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
         if (Loader.isModLoaded("UndergroundBiomes")) {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousStone"), 0, 0);
         }
         for (int i = 8; i < 16; i++) {
+            if (i == 9 || i == 10) { continue; }
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockgranites"), i, 0);
+        }
+
+        // --- Red Granite Stone Cobble
+        name = "redgranitecobble";
+        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
+        if (Loader.isModLoaded("UndergroundBiomes")) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "igneousCobblestone"), 0, 0);
+        }
+        for (int i = 9; i < 10; i++) {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockgranites"), i, 0);
         }
 
