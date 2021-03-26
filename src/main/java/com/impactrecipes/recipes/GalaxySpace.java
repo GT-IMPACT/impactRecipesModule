@@ -459,6 +459,11 @@ public class GalaxySpace implements Runnable {
                         new ItemStack[]{
                                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.MysteriousCrystal, 1L)},
                         new int[]{10000}, 300, 2);
+        RA.addPulveriserRecipe(GT_ModHandler.getModItem("GalaxySpace", "surfaceice", 1L, 0),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Ledox, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.dustSmall, Materials.SiliconDioxide, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.dustSmall, Materials.MeteoricIron, 1)},
+                new int[]{10000, 5000, 2500}, 400, 120);
     }
 
     private void fluidCanner() {
