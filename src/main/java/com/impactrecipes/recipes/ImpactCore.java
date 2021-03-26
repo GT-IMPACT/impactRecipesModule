@@ -1,5 +1,6 @@
 package com.impactrecipes.recipes;
 
+import com.github.technus.tectech.thing.CustomItemList;
 import com.impact.common.item.Core_Items;
 import com.impact.common.item.Core_Items2;
 import com.impact.common.item.WoodBrickFormTool;
@@ -64,6 +65,7 @@ public class ImpactCore implements Runnable {
         ciruit();
         assemblyLine();
         wireassembler();
+        disassembler();
         new LaserEngraver();
     }
 
@@ -2203,7 +2205,7 @@ public class ImpactCore implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Wood, 4L),
                         GT_Utility.getIntegratedCircuit(1)}, null,
                 GT_ModHandler.getModItem("impact", "impact_sawmill_block", 5L), 60, 30);
-//Communication Transmitter Hatch
+        //Communication Transmitter Hatch
         GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
                 ItemList.Hull_HV.get(1L),
                 ItemList.Field_Generator_HV.get(2L), ItemList.Sensor_HV.get(4L),
@@ -3321,6 +3323,332 @@ public class ImpactCore implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Steel, 64L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Vanadium, 64L)}, null,
                 new ItemStack(SpaceElevatorBlock, 1, 0), 80 * 20, 1024, false);
+    }
+
+    private void disassembler() {
+        //Parallel Hatch 4P IN
+        RA.addDisassemblerRecipe(
+                GT_ItemList.Parallel_Hatch_IN4.get(1), new ItemStack[]{ItemList.Hull_IV.get(1),
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 1),
+                        ItemList.Sensor_IV.get(1), ItemList.Circuit_Elite.get(4)}, 6000, 7680);
+        //Parallel Hatch 4P OUT
+        RA.addDisassemblerRecipe(
+                GT_ItemList.Parallel_Hatch_OUT4.get(1), new ItemStack[]{ItemList.Hull_IV.get(1),
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 1),
+                        ItemList.Emitter_IV.get(1), ItemList.Circuit_Elite.get(4)}, 6000, 7680);
+        //Parallel Hatch 16P IN
+        RA.addDisassemblerRecipe(
+                GT_ItemList.Parallel_Hatch_IN16.get(1), new ItemStack[]{ItemList.Hull_LuV.get(1),
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 2),
+                        ItemList.Sensor_LuV.get(1), ItemList.Circuit_Master.get(4)}, 8000, 30720);
+        //Parallel Hatch 16P OUT
+        RA.addDisassemblerRecipe(
+                GT_ItemList.Parallel_Hatch_OUT16.get(1), new ItemStack[]{ItemList.Hull_LuV.get(1),
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 2),
+                        ItemList.Emitter_LuV.get(1), ItemList.Circuit_Master.get(4)}, 8000, 30720);
+        //Parallel Hatch 64P IN
+        RA.addDisassemblerRecipe(
+                GT_ItemList.Parallel_Hatch_IN64.get(1), new ItemStack[]{ItemList.Hull_ZPM.get(1),
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 3),
+                        ItemList.Sensor_ZPM.get(1), ItemList.Circuit_Quantummainframe.get(4)}, 10000, 122880);
+        //Parallel Hatch 64P OUT
+        RA.addDisassemblerRecipe(
+                GT_ItemList.Parallel_Hatch_OUT64.get(1), new ItemStack[]{ItemList.Hull_ZPM.get(1),
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 3),
+                        ItemList.Emitter_ZPM.get(1), ItemList.Circuit_Quantummainframe.get(4)}, 10000, 122880);
+        //Parallel Hatch 256P IN
+        RA.addDisassemblerRecipe(
+                GT_ItemList.Parallel_Hatch_IN256.get(1), new ItemStack[]{ItemList.Hull_UV.get(1),
+                        GT_ModHandler.getModItem("extracells", "craftingstorage", 1L),
+                        ItemList.Sensor_UV.get(1), ItemList.Circuit_Crystalmainframe.get(4L)}, 12000, 500000);
+        //Parallel Hatch 256P OUT
+        RA.addDisassemblerRecipe(
+                GT_ItemList.Parallel_Hatch_OUT256.get(1), new ItemStack[]{ItemList.Hull_UV.get(1),
+                        GT_ModHandler.getModItem("extracells", "craftingstorage", 1L),
+                        ItemList.Emitter_UV.get(1), ItemList.Circuit_Crystalmainframe.get(4L)}, 12000, 500000);
+
+        //SolarPanel
+        RA.addDisassemblerRecipe(
+                GT_ModHandler.getModItem("impact", "BlockAdvSolarPanel", 1L, 0),
+                new ItemStack[]{ItemList.Cover_SolarPanel_8V.get(1L), GT_ItemList.ULVRobotArm.get(1L),
+                        ItemList.Large_Fluid_Cell_Steel.get(1L), ItemList.Sensor_LV.get(1L),
+                        GT_ModHandler.getModItem("IC2", "itemPartCircuit", 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Silicon, 6),
+                        ItemList.Battery_Buffer_2by2_ULV.get(1L)}, 1000, 30);
+        RA.addDisassemblerRecipe(
+                GT_ModHandler.getModItem("impact", "BlockAdvSolarPanel", 1L, 1),
+                new ItemStack[]{ItemList.Cover_SolarPanel_LV.get(1L), ItemList.Robot_Arm_LV.get(1L),
+                        ItemList.Large_Fluid_Cell_Aluminium.get(1L), ItemList.Sensor_MV.get(1L),
+                        ItemList.Circuit_Good.get(4), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Silicon, 6),
+                        ItemList.Battery_Buffer_2by2_LV.get(1L)}, 2000, 120);
+        RA.addDisassemblerRecipe(
+                GT_ModHandler.getModItem("impact", "BlockAdvSolarPanel", 1L, 2),
+                new ItemStack[]{ItemList.Cover_SolarPanel_MV.get(1L), ItemList.Robot_Arm_MV.get(1L),
+                        ItemList.Large_Fluid_Cell_StainlessSteel.get(1L), ItemList.Sensor_HV.get(1L),
+                        GT_ModHandler.getModItem("IC2", "itemPartCircuitAdv", 6L),
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Silicon, 6),
+                        ItemList.Battery_Buffer_2by2_MV.get(1L)}, 3000, 480);
+        RA.addDisassemblerRecipe(
+                GT_ModHandler.getModItem("impact", "BlockAdvSolarPanel", 1L, 3),
+                new ItemStack[]{ItemList.Cover_SolarPanel_HV.get(1L), ItemList.Robot_Arm_HV.get(1L),
+                        ItemList.Large_Fluid_Cell_Titanium.get(1L), ItemList.Sensor_EV.get(1L),
+                        ItemList.Circuit_Data.get(8), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.GalliumArsenide, 8),
+                        ItemList.Battery_Buffer_2by2_HV.get(1L)}, 4000, 1920);
+        RA.addDisassemblerRecipe(
+                GT_ModHandler.getModItem("impact", "BlockAdvSolarPanel", 1L, 4),
+                new ItemStack[]{ItemList.Cover_SolarPanel_EV.get(1L), ItemList.Robot_Arm_EV.get(1L),
+                        ItemList.Large_Fluid_Cell_TungstenSteel.get(1L), ItemList.Sensor_IV.get(1L),
+                        ItemList.Circuit_Elite.get(10), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.GalliumArsenide, 8),
+                        ItemList.Battery_Buffer_2by2_EV.get(1L)}, 5000, 7680);
+        RA.addDisassemblerRecipe(
+                GT_ModHandler.getModItem("impact", "BlockAdvSolarPanel", 1L, 5),
+                new ItemStack[]{ItemList.Cover_SolarPanel_IV.get(1L), ItemList.Robot_Arm_IV.get(1L),
+                        ItemList.Large_Fluid_Cell_Chrome.get(1L), ItemList.Sensor_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 12),
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.GalliumArsenide, 8),
+                        ItemList.Battery_Buffer_2by2_IV.get(1L)}, 6000, 30720);
+        RA.addDisassemblerRecipe(
+                GT_ModHandler.getModItem("impact", "BlockAdvSolarPanel", 1L, 6),
+                new ItemStack[]{ItemList.Cover_SolarPanel_LuV.get(1L), ItemList.Robot_Arm_LuV.get(1L),
+                        ItemList.Large_Fluid_Cell_Iridium.get(1L), ItemList.Sensor_ZPM.get(1L),
+                        ItemList.Circuit_Quantummainframe.get(14),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Sunnarium, 10),
+                        ItemList.Battery_Buffer_2by2_LuV.get(1L)}, 7000, 122880);
+        RA.addDisassemblerRecipe(
+                GT_ModHandler.getModItem("impact", "BlockAdvSolarPanel", 1L, 7),
+                new ItemStack[]{ItemList.Cover_SolarPanel_ZPM.get(1L), ItemList.Robot_Arm_ZPM.get(1L),
+                        ItemList.Large_Fluid_Cell_Osmium.get(1L), ItemList.Sensor_UV.get(1L),
+                        ItemList.Circuit_Crystalmainframe.get(16L),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Sunnarium, 10),
+                        ItemList.Battery_Buffer_2by2_ZPM.get(1L)}, 8000, 500000);
+        RA.addDisassemblerRecipe(
+                GT_ModHandler.getModItem("impact", "BlockAdvSolarPanel", 1L, 8),
+                new ItemStack[]{ItemList.Cover_SolarPanel_UV.get(1L), ItemList.Robot_Arm_UV.get(1L),
+                        ItemList.Large_Fluid_Cell_Neutronium.get(1L), ItemList.Sensor_UHV.get(1L),
+                        ItemList.Circuit_Wetwaremainframe.get(18),
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Sunnarium, 10),
+                        ItemList.Battery_Buffer_2by2_UV.get(1L)}, 10000, 500000);
+
+        //LapotronicCapacitorIV
+        RA.addDisassemblerRecipe(
+                new ItemStack(lscLapotronicEnergyUnit, 1, 1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
+                ItemList.Energy_LapotronicOrb.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8),
+                ItemList.Circuit_Chip_PIC.get(12L),
+                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.TungstenSteel, 32),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HastelloyC276, 64),
+                GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSG, 64)}, 1000 * 20, 7680);
+
+        //Energium Orb Capacitor
+        RA.addDisassemblerRecipe(
+                new ItemStack(lscLapotronicEnergyUnit, 1, 6),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
+                ItemList.EnergyCrystal_IV.get(1L),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8),
+                ItemList.Circuit_Chip_PIC.get(12L),
+                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.TungstenSteel, 32),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HastelloyC276, 64),
+                GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSG, 64)}, 1000 * 20, 7680);
+
+        //LapotronicCapacitorLuV
+        RA.addDisassemblerRecipe(
+                new ItemStack(lscLapotronicEnergyUnit, 1, 2),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
+                ItemList.Energy_LapotronicOrb2.get(1L),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.NiobiumTitanium, 8),
+                ItemList.Circuit_Chip_HPIC.get(12L),
+                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.YttriumBariumCuprate, 32),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HastelloyN, 64),
+                GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSE, 64)}, 1200 * 20, 30720);
+
+        //LapotronicCapacitorZPM
+        RA.addDisassemblerRecipe(
+                new ItemStack(lscLapotronicEnergyUnit, 1, 3),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
+                ItemList.Energy_Module.get(1L),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Osmiridium, 8),
+                ItemList.Circuit_Chip_UHPIC.get(12L),
+                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Naquadah, 32),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Lafium, 64),
+                GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSS, 64)}, 1400 * 20, 122880);
+
+        //LapotronicCapacitorUV
+        RA.addBasicLineRecipe(new ItemStack[]{
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
+                ItemList.Energy_Cluster.get(1L),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.NaquadahAlloy, 8),
+                ItemList.Circuit_Chip_NPIC.get(12L),
+                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Duranium, 32),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CinobiteA243, 64),
+                GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Tritanium, 64)
+        }, new ItemStack(lscLapotronicEnergyUnit, 1, 4), null, 1600 * 20, 500000);
+
+        //LapotronicCapacitorUHV
+        RA.addDisassemblerRecipe(
+                new ItemStack(lscLapotronicEnergyUnit, 1, 5),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
+                ItemList.ZPM2.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 8),
+                ItemList.Circuit_Chip_PPIC.get(12L),
+                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Europium, 32),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Pikyonium64B, 64),
+                GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Neutronium, 64)}, 1800 * 20, 500000);
+
+        //Dynamo Hatches IV-UHV
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti2_EV.get(1), new ItemStack[]{ItemList.Hatch_Dynamo_EV.get(1L),
+                        ItemList.EV_Coil.get(1), GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.BlackSteel, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.BT6, 1)}, 500, 1920);
+
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti2_IV.get(1), new ItemStack[]{ItemList.Hatch_Dynamo_IV.get(1L),
+                        ItemList.IV_Coil.get(1), GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.TungstenSteel, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Nitinol, 1)}, 500, 7680);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti4_IV.get(1), new ItemStack[]{ItemList.Transformer_LuV_IV.get(1L),
+                        CustomItemList.eM_dynamoMulti2_IV.get(1L), ItemList.Circuit_Chip_HPIC.get(2L),
+                        ItemList.IV_Coil.get(2), GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.TungstenSteel, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Nitinol, 1)}, 1000, 7680);
+
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti2_LuV.get(1), new ItemStack[]{ItemList.Hatch_Dynamo_LuV.get(1),
+                        ItemList.LuV_Coil.get(1), GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.VanadiumGallium, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.HastelloyN, 1)}, 500, 30720);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti4_LuV.get(1), new ItemStack[]{ItemList.Transformer_ZPM_LuV.get(1L),
+                        CustomItemList.eM_dynamoMulti2_LuV.get(1), ItemList.Circuit_Chip_UHPIC.get(2),
+                        ItemList.LuV_Coil.get(2), GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.VanadiumGallium, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.HastelloyN, 1)}, 1000, 30720);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti16_LuV.get(1), new ItemStack[]{ItemList.Transformer_HA_ZPM_LuV.get(1L),
+                        CustomItemList.eM_dynamoMulti4_LuV.get(1), ItemList.Circuit_Chip_UHPIC.get(4),
+                        ItemList.LuV_Coil.get(4), GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.VanadiumGallium, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.HastelloyN, 2)}, 2000, 30720);
+
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti2_ZPM.get(1), new ItemStack[]{ItemList.Hatch_Dynamo_ZPM.get(1),
+                        ItemList.ZPM_Coil.get(1), GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.Naquadah, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lafium, 1)}, 500, 122880);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti4_ZPM.get(1), new ItemStack[]{ItemList.Transformer_UV_ZPM.get(1L),
+                        CustomItemList.eM_dynamoMulti2_ZPM.get(1), ItemList.Circuit_Chip_NPIC.get(2),
+                        ItemList.ZPM_Coil.get(2), GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Naquadah, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Lafium, 1)}, 1000, 122880);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti16_ZPM.get(1), new ItemStack[]{ItemList.Transformer_HA_UV_ZPM.get(1L),
+                        CustomItemList.eM_dynamoMulti4_ZPM.get(1), ItemList.Circuit_Chip_NPIC.get(4),
+                        ItemList.ZPM_Coil.get(4), GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Naquadah, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Lafium, 2)}, 2000, 122880);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti64_ZPM.get(1), new ItemStack[]{ItemList.WetTransformer_UV_ZPM.get(1L),
+                        CustomItemList.eM_dynamoMulti16_ZPM.get(1), ItemList.Circuit_Chip_NPIC.get(6),
+                        ItemList.ZPM_Coil.get(8), GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Naquadah, 32),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Lafium, 4)}, 4000, 122880);
+
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti2_UV.get(1), new ItemStack[]{ItemList.Hatch_Dynamo_UV.get(1),
+                        ItemList.UV_Coil.get(1), GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.ElectrumFlux, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.CinobiteA243, 1)}, 500, 500000);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti4_UV.get(1), new ItemStack[]{ItemList.Transformer_MAX_UV.get(1L),
+                        CustomItemList.eM_dynamoMulti2_UV.get(1), ItemList.Circuit_Chip_PPIC.get(2),
+                        ItemList.UV_Coil.get(2), GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.ElectrumFlux, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.CinobiteA243, 1)}, 1000, 500000);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti16_UV.get(1), new ItemStack[]{ItemList.Transformer_HA_UHV_UV.get(1L),
+                        CustomItemList.eM_dynamoMulti4_UV.get(1), ItemList.Circuit_Chip_PPIC.get(4),
+                        ItemList.UV_Coil.get(4), GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.ElectrumFlux, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.CinobiteA243, 2)}, 2000, 500000);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti64_UV.get(1), new ItemStack[]{ItemList.WetTransformer_UHV_UV.get(1L),
+                        CustomItemList.eM_dynamoMulti16_UV.get(1), ItemList.Circuit_Chip_PPIC.get(6),
+                        ItemList.UV_Coil.get(8), GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.ElectrumFlux, 32),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.CinobiteA243, 4)}, 4000, 500000);
+
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti2_UHV.get(1), new ItemStack[]{ItemList.Hatch_Dynamo_MAX.get(1),
+                        ItemList.UHV_Coil.get(1), GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.Europium, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Pikyonium64B, 1)}, 500, 2000000);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti4_UHV.get(1), new ItemStack[]{ItemList.Transformer_UEV_UHV.get(1L),
+                        CustomItemList.eM_dynamoMulti2_UHV.get(1), ItemList.Circuit_Chip_QPIC.get(2),
+                        ItemList.UHV_Coil.get(2), GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Europium, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 1)}, 1000, 2000000);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti16_UHV.get(1), new ItemStack[]{ItemList.Transformer_HA_UEV_UHV.get(1L),
+                        CustomItemList.eM_dynamoMulti4_UHV.get(1), ItemList.Circuit_Chip_QPIC.get(4),
+                        ItemList.UHV_Coil.get(4), GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Europium, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 2)}, 2000, 2000000);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_dynamoMulti64_UHV.get(1), new ItemStack[]{ItemList.WetTransformer_UEV_UHV.get(1L),
+                        CustomItemList.eM_dynamoMulti16_UHV.get(1), ItemList.Circuit_Chip_QPIC.get(6),
+                        ItemList.UHV_Coil.get(8), GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Europium, 32),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 4)}, 4000, 2000000);
+
+        //Energy Hatches 4A-64A  IV-UHV
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_energyMulti4_IV.get(1), new ItemStack[]{ItemList.Transformer_LuV_IV.get(1L),
+                        ItemList.Hatch_Energy_IV.get(1), ItemList.Circuit_Chip_HPIC.get(2),
+                        ItemList.IV_Coil.get(2), GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.TungstenSteel, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Nitinol, 1)}, 1000, 7680);
+
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_energyMulti4_LuV.get(1), new ItemStack[]{ItemList.Transformer_ZPM_LuV.get(1L),
+                        ItemList.Hatch_Energy_LuV.get(1), ItemList.Circuit_Chip_UHPIC.get(2),
+                        ItemList.LuV_Coil.get(2), GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.VanadiumGallium, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.HastelloyN, 1)}, 1000, 30720);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_energyMulti16_LuV.get(1), new ItemStack[]{ItemList.Transformer_HA_ZPM_LuV.get(1L),
+                        CustomItemList.eM_energyMulti4_LuV.get(1), ItemList.Circuit_Chip_UHPIC.get(4),
+                        ItemList.LuV_Coil.get(4), GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.VanadiumGallium, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.HastelloyN, 2)}, 2000, 30720);
+
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_energyMulti4_ZPM.get(1), new ItemStack[]{ItemList.Transformer_UV_ZPM.get(1L),
+                        ItemList.Hatch_Energy_ZPM.get(1), ItemList.Circuit_Chip_NPIC.get(2),
+                        ItemList.ZPM_Coil.get(2), GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Naquadah, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Lafium, 1)}, 1000, 122880);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_energyMulti16_ZPM.get(1), new ItemStack[]{ItemList.Transformer_HA_UV_ZPM.get(1L),
+                        CustomItemList.eM_energyMulti4_ZPM.get(1), ItemList.Circuit_Chip_NPIC.get(4),
+                        ItemList.ZPM_Coil.get(4), GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Naquadah, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Lafium, 2)}, 2000, 122880);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_energyMulti64_ZPM.get(1), new ItemStack[]{ItemList.WetTransformer_UV_ZPM.get(1L),
+                        CustomItemList.eM_energyMulti16_ZPM.get(1), ItemList.Circuit_Chip_NPIC.get(6),
+                        ItemList.ZPM_Coil.get(8), GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Naquadah, 32),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Lafium, 4)}, 4000, 122880);
+
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_energyMulti4_UV.get(1), new ItemStack[]{ItemList.Transformer_MAX_UV.get(1L),
+                        ItemList.Hatch_Energy_UV.get(1), ItemList.Circuit_Chip_PPIC.get(2),
+                        ItemList.UV_Coil.get(2), GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.ElectrumFlux, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.CinobiteA243, 1)}, 1000, 500000);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_energyMulti16_UV.get(1), new ItemStack[]{ItemList.Transformer_HA_UHV_UV.get(1L),
+                        CustomItemList.eM_energyMulti4_UV.get(1), ItemList.Circuit_Chip_PPIC.get(4),
+                        ItemList.UV_Coil.get(4), GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.ElectrumFlux, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.CinobiteA243, 2)}, 2000, 500000);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_energyMulti64_UV.get(1), new ItemStack[]{ItemList.WetTransformer_UHV_UV.get(1L),
+                        CustomItemList.eM_energyMulti16_UV.get(1), ItemList.Circuit_Chip_PPIC.get(6),
+                        ItemList.UV_Coil.get(8), GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.ElectrumFlux, 32),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.CinobiteA243, 4)}, 4000, 500000);
+
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_energyMulti4_UHV.get(1), new ItemStack[]{ItemList.Transformer_UEV_UHV.get(1L),
+                        ItemList.Hatch_Energy_MAX.get(1), ItemList.Circuit_Chip_QPIC.get(2),
+                        ItemList.UHV_Coil.get(2), GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Europium, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 1)}, 1000, 2000000);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_energyMulti16_UHV.get(1), new ItemStack[]{ItemList.Transformer_HA_UEV_UHV.get(1L),
+                        CustomItemList.eM_energyMulti4_UHV.get(1), ItemList.Circuit_Chip_QPIC.get(4),
+                        ItemList.UHV_Coil.get(4), GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Europium, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 2)}, 2000, 2000000);
+        RA.addDisassemblerRecipe(
+                CustomItemList.eM_energyMulti64_UHV.get(1), new ItemStack[]{ItemList.WetTransformer_UEV_UHV.get(1L),
+                        CustomItemList.eM_energyMulti16_UHV.get(1), ItemList.Circuit_Chip_QPIC.get(6),
+                        ItemList.UHV_Coil.get(8), GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Europium, 32),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 4)}, 4000, 2000000);
     }
 
     public static class LaserEngraver implements IOreRecipeRegistrator {
