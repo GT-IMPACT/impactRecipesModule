@@ -19,7 +19,7 @@ import java.util.List;
         name = "Impact | Recipes Module",
         version = ImpactRecipesModule.VERSION,
         modid = ImpactRecipesModule.MODID,
-        dependencies = "required-after:Forge; after:impact; after:IC2; after:gregtech; after:tectech;"
+        dependencies = "required-after:Forge; after:impact; after:IC2; after:gregtech; after:tectech; after:EnderIO;"
 )
 public class ImpactRecipesModule {
 
@@ -45,8 +45,8 @@ public class ImpactRecipesModule {
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
+        new RemoveRecipes().run();
         ModsLoader.loader();
-        GregTech_API.sAfterGTPostload.add(() -> new RemoveRecipes().run());
     }
 
     @EventHandler

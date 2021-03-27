@@ -11,7 +11,6 @@ import net.minecraft.item.crafting.IRecipe;
 
 import java.util.ArrayList;
 
-import static cpw.mods.fml.common.Loader.*;
 import static gregtech.api.util.GT_ModHandler.*;
 
 /**
@@ -20,12 +19,10 @@ import static gregtech.api.util.GT_ModHandler.*;
 public class RecipeUtils {
 
     /**
-     * @param isMod - проверка загрузки мода
      * @param loader - класс с рецептами
      */
-    public static void registerRecipeClass(String isMod, Runnable loader) {
+    public static void registerRecipeClass(Runnable loader) {
         RecipesReload.classMap.put(loader.toString(), loader.getClass());
-        if (isModLoaded(isMod)) { loader.run(); }
     }
 
     /**

@@ -1,5 +1,6 @@
 package com.impactrecipes.recipes;
 
+import com.impactrecipes.util.RecipeUtils;
 import gregtech.api.enums.*;
 import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
@@ -21,21 +22,27 @@ public class Vanilla implements Runnable {
     }
 
     private void handRecipe() {
-        // --- Slabs
-        ItemStack[] blocks = new ItemStack[]{
-                ordictItemStack("stone"), ordictItemStack("sandstone"), null, ordictItemStack("cobblestone"),
-                new ItemStack(Blocks.brick_block), ordictItemStack("stoneBricks"), ordictItemStack("stoneNetherBrick"),
-                ordictItemStack("blockQuartz")
-        };
-        for (int i = 0; i < 8; i++) {
-            if (i != 2) {
-                continue;
-            }
-            GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.stone_slab, i, 2),
-                    tBitMask, new Object[]{"sB", 'B', blocks[i]});
+
+        GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.stone_slab, 2, 0), new Object[]{"TB", 'T', "craftingToolSaw", 'B', ordictItemStack("stone")});
+        GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.stone_slab, 2, 1), new Object[]{"TB", 'T', "craftingToolSaw", 'B', ordictItemStack(
+                "sandstone")});
+        GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.stone_slab, 2, 3), new Object[]{"TB", 'T', "craftingToolSaw", 'B', ordictItemStack(
+                "cobblestone")});
+        GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.stone_slab, 2, 4), new Object[]{"TB", 'T', "craftingToolSaw", 'B',
+                new ItemStack(Blocks.brick_block)});
+        GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.stone_slab, 2, 5), new Object[]{"TB", 'T', "craftingToolSaw", 'B', ordictItemStack(
+                "stoneBricks")});
+        GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.stone_slab, 2, 6), new Object[]{"TB", 'T', "craftingToolSaw", 'B', ordictItemStack(
+                "stoneNetherBrick")});
+        GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.stone_slab, 2, 7), new Object[]{"TB", 'T', "craftingToolSaw", 'B', ordictItemStack(
+                "blockQuartz")});
+
+        RecipeUtils.removeRecipeByOutput(getItemStack("minecraft", "wooden_slab", 1, GT_Values.W));
+
+        for (int i = 0; i <= 5; i++) {
+            GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.wooden_slab, 2, i), new Object[]{"TB", 'T', "craftingToolSaw", 'B',
+                    new ItemStack(Blocks.planks, 1, i)});
         }
-        GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.wooden_slab, 0, 2),
-                tBitMask, new Object[]{"sB", 'B', new ItemStack(Blocks.planks, 0)});
 
         // --- Crafting Table
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "crafting_table", 1L), tBitMask, new Object[]{"WW", "WW", 'W', "logWood"});

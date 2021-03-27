@@ -761,13 +761,10 @@ public class RemoveRecipes implements Runnable {
                 false);
         removeRecipeByOutput(getItemStack("minecraft", "iron_ingot", 1, 0), true, false,
                 false);
-        removeRecipeByOutput(new ItemStack(Blocks.stone_button, 1,0), true, false,
-                false);
+
         removeRecipeByOutput(getItemStack("minecraft", "wooden_button", 1, 0), true, false,
                 false);
         removeRecipeByOutput(getItemStack("minecraft", "stone_slab", 1, GT_Values.W), true, false,
-                false);
-        removeRecipeByOutput(getItemStack("minecraft", "wooden_slab", 1, GT_Values.W), true, false,
                 false);
     }
 

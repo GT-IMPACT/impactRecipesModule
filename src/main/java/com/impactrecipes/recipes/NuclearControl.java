@@ -1,7 +1,11 @@
 package com.impactrecipes.recipes;
 
+import com.impactrecipes.util.RecipeUtils;
+import gregtech.api.enums.GT_Values;
 import gregtech.api.enums.ItemList;
 import gregtech.api.util.GT_ModHandler;
+
+import static com.impactrecipes.util.RecipeUtils.getItemStack;
 
 public class NuclearControl implements Runnable {
 
@@ -9,6 +13,7 @@ public class NuclearControl implements Runnable {
 
     @Override
     public void run() {
+        RecipeUtils.removeRecipeByOutput(getItemStack("minecraft", "stone_button"));
         // --- Remote Sensor Kit
         GT_ModHandler.addShapelessCraftingRecipe(GT_ModHandler.getModItem("IC2NuclearControl", "ItemRemoteSensorKit", 1L, 0), tBitMask, new Object[]{GT_ModHandler.getModItem("IC2NuclearControl", "ItemSensorLocationCard", 1L, 0)});
         // --- Energy Sensor Kit
