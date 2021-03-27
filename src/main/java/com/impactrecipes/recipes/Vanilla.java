@@ -21,6 +21,22 @@ public class Vanilla implements Runnable {
     }
 
     private void handRecipe() {
+        // --- Slabs
+        ItemStack[] blocks = new ItemStack[]{
+                ordictItemStack("stone"), ordictItemStack("sandstone"), null, ordictItemStack("cobblestone"),
+                new ItemStack(Blocks.brick_block), ordictItemStack("stoneBricks"), ordictItemStack("stoneNetherBrick"),
+                ordictItemStack("blockQuartz")
+        };
+        for (int i = 0; i < 8; i++) {
+            if (i != 2) {
+                continue;
+            }
+            GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.stone_slab, i, 2),
+                    tBitMask, new Object[]{"sB", 'B', blocks[i]});
+        }
+        GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.wooden_slab, 0, 2),
+                tBitMask, new Object[]{"sB", 'B', new ItemStack(Blocks.planks, 0)});
+
         // --- Crafting Table
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "crafting_table", 1L), tBitMask, new Object[]{"WW", "WW", 'W', "logWood"});
         // --- Chest
