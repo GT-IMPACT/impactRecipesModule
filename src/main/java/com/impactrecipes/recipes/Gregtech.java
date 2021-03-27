@@ -59,6 +59,9 @@ public class Gregtech implements Runnable {
         bath();
         ciruit();
         assemblyLine();
+        centrifuge();
+        canner();
+        distil();
     }
 
     private void handRecipe() {
@@ -226,10 +229,15 @@ public class Gregtech implements Runnable {
         GT_ModHandler.addCraftingRecipe(ItemList.Cover_SolarPanel_MV.get(1L), tBitMask, new Object[]{"GRG", "CAC", "GRG", 'C', OrePrefixes.circuit.get(Materials.Advanced), 'G', ItemList.Cover_SolarPanel_LV, 'R', OrePrefixes.plate.get(Materials.Polytetrafluoroethylene), 'A', CoreItems2.getRecipe(110, 1)});
         GT_ModHandler.addCraftingRecipe(ItemList.Cover_SolarPanel_HV.get(1L), tBitMask, new Object[]{"GRG", "CAC", "GRG", 'C', OrePrefixes.circuit.get(Materials.Data), 'G', ItemList.Cover_SolarPanel_MV, 'R', OrePrefixes.plate.get(Materials.EpoxidFiberReinforced), 'A', CoreItems2.getRecipe(111, 1)});
 
-
+        // --- Air Filter
+        GT_ModHandler.addCraftingRecipe(ItemList.Casing_AirFilter_Vent.get(2L), bits, new Object[]{"PhP", "TFT", "PwP", 'T', CoreItems2.getRecipe(SteelBars.getMetaID(), 1), 'F', OrePrefixes.frameGt.get(Materials.Steel), 'P', OrePrefixes.plate.get(Materials.Steel)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Casing_AirFilter.get(1L), bits, new Object[]{"SSS", "RVR", "MSM", 'V', ItemList.Casing_AirFilter_Vent, 'S',OrePrefixes.stickLong.get(Materials.StainlessSteel), 'R', OrePrefixes.rotor.get(Materials.StainlessSteel), 'M', ItemList.Electric_Motor_HV, 'R', OrePrefixes.screw.get(Materials.StainlessSteel)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Machine_Multi_AirFilter.get(1L), bits, new Object[]{"RPR", "MBM", "CGC", 'B', ItemList.Hull_HV, 'R', OrePrefixes.rotor.get(Materials.StainlessSteel), 'P', ItemList.Electric_Pump_HV, 'M', ItemList.Electric_Motor_HV, 'C', OrePrefixes.cableGt01.get(Materials.Gold), 'G', ItemList.Casing_Turbine1});
     }
 
     private void assemblerRecipe() {
+        // --- Air Filter
+        GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.StainlessSteel, 16L), GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Titanium, 4L), ItemList.AdsorptionFilterCasing.get(1L), 200, 480);
 
     }
 
@@ -3951,7 +3959,23 @@ public class Gregtech implements Runnable {
                 },
                 ItemList.Electric_Motor_UV.get(1), 600, 100000);
 
+    }
+
+    private void centrifuge() {
+        GT_Values.RA.addCentrifugeRecipe(ItemList.AdsorptionFilterDirty.get(1L), GT_Values.NI, GT_Values.NF, Materials.Pollution.getFluid(100), ItemList.AdsorptionFilterCasing.get(1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Coal, 8L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DarkAsh, 8L), GT_Values.NI, GT_Values.NI, GT_Values.NI, new int[]{9900, 10000, 10000}, 800, 480);
 
     }
 
+    private void canner() {
+        //Air Filter
+        GT_Values.RA.addCannerRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Coal, 32L),
+                ItemList.AdsorptionFilterCasing.get(1L),
+                ItemList.AdsorptionFilter.get(1L),
+                null, 100, 120);
+    }
+
+    private void distil() {
+        GT_Values.RA.addDistillationTowerRecipe(Materials.Pollution.getFluid(1300), new FluidStack[]{Materials.CarbonMonoxide.getGas(50L), Materials.CarbonDioxide.getGas(50L), Materials.HydricSulfide.getGas(50L), Materials.SulfuricAcid.getFluid(50L), Materials.NitrogenDioxide.getGas(50L), Materials.Methane.getGas(50L), Materials.Mercury.getFluid(1L)}, GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Ash, 1L), 600, 480);
+
+    }
 }
