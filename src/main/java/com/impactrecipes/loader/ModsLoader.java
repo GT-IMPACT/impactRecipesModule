@@ -35,11 +35,6 @@ public class ModsLoader {
             GregTech_API.sAfterGTPostload.add(() -> new BuildCraft().run());
         }
 
-        if (isModLoaded(ENDERIO)) {
-            registerRecipeClass(new EnderIO());
-            GregTech_API.sAfterGTPostload.add(EnderIO::new);
-        }
-
         if (isModLoaded(JABBA)) {
             registerRecipeClass(new Jabba());
             GregTech_API.sAfterGTPostload.add(() -> new Jabba().run());
@@ -183,6 +178,11 @@ public class ModsLoader {
         if (isModLoaded(NUCLEARCONTROL)) {
             registerRecipeClass(new NuclearControl());
             GregTech_API.sAfterGTPostload.add(() -> new NuclearControl().run());
+        }
+
+        if (isModLoaded(ENDERIO)) {
+            registerRecipeClass(new EnderIO());
+            GregTech_API.sAfterGTPostload.add(() -> new EnderIO().run());
         }
     }
 }
