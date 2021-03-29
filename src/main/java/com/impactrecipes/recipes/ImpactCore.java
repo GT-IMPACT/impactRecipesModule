@@ -3487,7 +3487,7 @@ public class ImpactCore implements Runnable {
                 GT_ModHandler.getModItem("impact", "BlockAdvSolarPanel", 1L, 5),
                 new ItemStack[]{ItemList.Cover_SolarPanel_IV.get(1L), ItemList.Robot_Arm_IV.get(1L),
                         ItemList.Large_Fluid_Cell_Chrome.get(1L), ItemList.Sensor_LuV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 12),
+                        ItemList.Circuit_Master.get(12),
                         GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.GalliumArsenide, 8),
                         ItemList.Battery_Buffer_2by2_IV.get(1L)}, 6000, 30720);
         RA.addDisassemblerRecipe(
@@ -3675,17 +3675,17 @@ public class ImpactCore implements Runnable {
                 CustomItemList.eM_dynamoMulti4_UHV.get(1), new ItemStack[]{ItemList.Transformer_UEV_UHV.get(1L),
                         CustomItemList.eM_dynamoMulti2_UHV.get(1), ItemList.Circuit_Chip_QPIC.get(2),
                         ItemList.UHV_Coil.get(2), GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Europium, 8),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 1)}, 1000, 2000000);
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 1)}, 1000, 500000);
         RA.addDisassemblerRecipe(
                 CustomItemList.eM_dynamoMulti16_UHV.get(1), new ItemStack[]{ItemList.Transformer_HA_UEV_UHV.get(1L),
                         CustomItemList.eM_dynamoMulti4_UHV.get(1), ItemList.Circuit_Chip_QPIC.get(4),
                         ItemList.UHV_Coil.get(4), GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Europium, 16),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 2)}, 2000, 2000000);
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 2)}, 2000, 500000);
         RA.addDisassemblerRecipe(
                 CustomItemList.eM_dynamoMulti64_UHV.get(1), new ItemStack[]{ItemList.WetTransformer_UEV_UHV.get(1L),
                         CustomItemList.eM_dynamoMulti16_UHV.get(1), ItemList.Circuit_Chip_QPIC.get(6),
                         ItemList.UHV_Coil.get(8), GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Europium, 32),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 4)}, 4000, 2000000);
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 4)}, 4000, 500000);
 
         //Energy Hatches 4A-64A  IV-UHV
         RA.addDisassemblerRecipe(
@@ -3741,41 +3741,277 @@ public class ImpactCore implements Runnable {
                 CustomItemList.eM_energyMulti4_UHV.get(1), new ItemStack[]{ItemList.Transformer_UEV_UHV.get(1L),
                         ItemList.Hatch_Energy_MAX.get(1), ItemList.Circuit_Chip_QPIC.get(2),
                         ItemList.UHV_Coil.get(2), GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Europium, 8),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 1)}, 1000, 2000000);
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 1)}, 1000, 500000);
         RA.addDisassemblerRecipe(
                 CustomItemList.eM_energyMulti16_UHV.get(1), new ItemStack[]{ItemList.Transformer_HA_UEV_UHV.get(1L),
                         CustomItemList.eM_energyMulti4_UHV.get(1), ItemList.Circuit_Chip_QPIC.get(4),
                         ItemList.UHV_Coil.get(4), GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Europium, 16),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 2)}, 2000, 2000000);
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 2)}, 2000, 500000);
         RA.addDisassemblerRecipe(
                 CustomItemList.eM_energyMulti64_UHV.get(1), new ItemStack[]{ItemList.WetTransformer_UEV_UHV.get(1L),
                         CustomItemList.eM_energyMulti16_UHV.get(1), ItemList.Circuit_Chip_QPIC.get(6),
                         ItemList.UHV_Coil.get(8), GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.Europium, 32),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 4)}, 4000, 2000000);
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 4)}, 4000, 500000);
 
         //Nuclear Reactor I
         RA.addDisassemblerRecipe(
                 GT_ItemList.Nuclear_Reactor_I.get(1), new ItemStack[]{ItemList.Hull_EV.get(1L),
                         ItemList.Robot_Arm_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Titanium, 2),
-                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 4),
+                        ItemList.Circuit_Data.get(4),
                         GT_ModHandler.getModItem("IC2", "reactorPlatingExplosive", 8),
-                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 8)}, 30 * 20, 1920);
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 8)}, 300 * 20, 1920);
 
         //Nuclear Reactor II
         RA.addDisassemblerRecipe(
                 GT_ItemList.Nuclear_Reactor_II.get(1), new ItemStack[]{ItemList.Hull_IV.get(1L),
                         ItemList.Robot_Arm_IV.get(2L), GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Titanium, 4),
-                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 6),
+                        ItemList.Circuit_Elite.get(6),
                         GT_ModHandler.getModItem("IC2", "reactorPlatingExplosive", 8), CoreItems2.getRecipe(141, 8),
-                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 10)}, 50 * 20, 7680);
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 10)}, 500 * 20, 7680);
 
         //Nuclear Reactor III
         RA.addDisassemblerRecipe(
                 GT_ItemList.Nuclear_Reactor_III.get(1), new ItemStack[]{ItemList.Hull_LuV.get(1L),
                         ItemList.Robot_Arm_LuV.get(4L), GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Titanium, 8),
-                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 8),
+                        ItemList.Circuit_Master.get(8),
                         GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.TungstenSteel, 8), CoreItems2.getRecipe(142, 8),
-                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 12)}, 80 * 20, 30720);
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 12)}, 800 * 20, 30720);
+
+        //Steam Turbine
+        RA.addDisassemblerRecipe(ItemList.LargeSteamTurbine.get(1L),
+                new ItemStack[]{ItemList.Hull_HV.get(1L),
+                        GT_ModHandler.getModItem("IC2", "itemPartCircuit", 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Steel, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Steel, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Steel, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Steel, 12)
+                },  200 * 20, 120);
+
+        //Gas Turbine
+        RA.addDisassemblerRecipe(ItemList.LargeGasTurbine.get(1L),
+                new ItemStack[]{ItemList.Hull_EV.get(1L),
+                        ItemList.Circuit_Data.get(2),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.StainlessSteel, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.StainlessSteel, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.ring, Materials.StainlessSteel, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.StainlessSteel, 12)
+                }, 400 * 20, 480);
+
+        //HP Turbine
+        RA.addDisassemblerRecipe(ItemList.LargeHPSteamTurbine.get(1L),
+                new ItemStack[]{ItemList.Hull_EV.get(1L),
+                        ItemList.Circuit_Data.get(4),
+                        GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Titanium, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Titanium, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Titanium, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.HSLA, 6),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 12)
+                }, 600 * 20, 1920);
+
+        //Heat Exchanger
+        RA.addDisassemblerRecipe(ItemList.Machine_Multi_HeatExchanger.get(1L),
+                new ItemStack[]{ItemList.Hull_EV.get(1L),
+                        ItemList.Casing_Firebox_Titanium.get(1L),
+                        ItemList.Electric_Pump_EV.get(2L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Titanium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Titanium, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Titanium, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 8)
+                }, 400 * 20, 480);
+
+        //OilDrill2
+        RA.addDisassemblerRecipe(ItemList.OilDrill2.get(1L),
+                new ItemStack[]{ItemList.Hull_HV.get(1L),
+                        ItemList.Electric_Motor_HV.get(2L),
+                        ItemList.Electric_Pump_HV.get(2L),
+                        GT_ModHandler.getModItem("IC2", "itemPartCircuit", 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Titanium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Titanium, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 10)
+                }, 400 * 20, 480);
+
+        //OilDrill3
+        RA.addDisassemblerRecipe(ItemList.OilDrill3.get(1L),
+                new ItemStack[]{ItemList.Hull_EV.get(1L),
+                ItemList.Electric_Motor_EV.get(2L),
+                ItemList.Electric_Pump_EV.get(2L),
+                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.TungstenSteel, 4),
+                ItemList.Circuit_Master.get(4L),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenSteel, 12),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TungstenSteel, 16)
+        }, 600 * 20, 1920);
+
+        //OreDrill1
+        RA.addDisassemblerRecipe(ItemList.OreDrill1.get(1L),
+                new ItemStack[]{ItemList.Hull_EV.get(1L),
+                ItemList.Electric_Motor_EV.get(2L),
+                ItemList.Conveyor_Module_EV.get(2L),
+                ItemList.Circuit_Data.get(2L),
+                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Steel, 2),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Titanium, 4),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Steel, 12)
+        }, 400 * 20, 480);
+
+        //OreDrill2
+        RA.addDisassemblerRecipe(ItemList.OreDrill2.get(1L),
+                new ItemStack[]{ItemList.Hull_IV.get(1L),
+                ItemList.Electric_Motor_IV.get(2L),
+                ItemList.Conveyor_Module_IV.get(2L),
+                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Desh, 4),
+                ItemList.Circuit_Elite.get(8L),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenSteel, 12),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 16)
+        }, 600 * 20, 1920);
+
+        //OreDrill3
+        RA.addDisassemblerRecipe(ItemList.OreDrill3.get(1L),
+                new ItemStack[]{ItemList.Hull_LuV.get(1L),
+                ItemList.Electric_Motor_LuV.get(2L),
+                ItemList.Conveyor_Module_LuV.get(2L),
+                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Trinium, 8),
+                ItemList.Circuit_Master.get(10L),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Osmiridium, 12),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TungstenSteel, 20)
+        }, 800 * 20, 7680);
+
+        //OreDrill4
+        RA.addDisassemblerRecipe(ItemList.OreDrill4.get(1L),
+                new ItemStack[]{ItemList.Hull_ZPM.get(1L),
+                ItemList.Electric_Motor_ZPM.get(4L),
+                ItemList.Conveyor_Module_ZPM.get(4L),
+                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Oriharukon, 12),
+                ItemList.Circuit_Quantummainframe.get(12L),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 16),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Osmiridium, 24)
+        }, 1000 * 20, 30720);
+
+        //OreDrill5
+        RA.addDisassemblerRecipe(ItemList.OreDrill5.get(1L),
+                new ItemStack[]{ItemList.Hull_UV.get(1L),
+                ItemList.Electric_Motor_UV.get(6L),
+                ItemList.Conveyor_Module_UV.get(6L),
+                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Adamantium, 16),
+                ItemList.Circuit_Crystalmainframe.get(14L),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Neutronium, 20),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Tritanium, 26)
+        }, 1200 * 20, 122880);
+
+        //Oil Cracker
+        RA.addDisassemblerRecipe(ItemList.OilCracker.get(1L),
+                new ItemStack[]{ItemList.Hull_HV.get(1L),
+                GT_ModHandler.getModItem("IC2", "itemPartCircuit", 4L),
+                ItemList.Casing_Coil_Cupronickel.get(4L),
+                ItemList.Electric_Pump_HV.get(4L),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 8)
+        }, 200 * 20, 120);
+
+        //DieselGen1
+        RA.addDisassemblerRecipe(ItemList.Machine_Multi_DieselEngine.get(1L),
+                new ItemStack[]{ItemList.Hull_EV.get(1L),
+                ItemList.Circuit_Data.get(2L),
+                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Titanium, 2),
+                ItemList.Electric_Piston_EV.get(2L), ItemList.Electric_Motor_EV.get(2L),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Titanium, 4),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Titanium, 8)
+        }, 400 * 20, 1920);
+
+        //DieselGen2
+        RA.addDisassemblerRecipe(ItemList.Machine_Multi_DieselEngine2.get(1L),
+                new ItemStack[]{ItemList.Hull_IV.get(1L),
+                ItemList.Circuit_Elite.get(2L),
+                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.TungstenSteel, 2),
+                ItemList.Electric_Piston_IV.get(2L), ItemList.Electric_Motor_IV.get(2L),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenSteel, 4),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TungstenSteel, 8)
+        }, 800 * 20, 7680);
+
+        //LCR
+        RA.addDisassemblerRecipe(ItemList.Machine_Multi_LargeChemicalReactor.get(1L),
+                new ItemStack[]{ItemList.Hull_HV.get(1L),
+                ItemList.Electric_Pump_HV.get(2L),
+                ItemList.Electric_Motor_HV.get(2L),
+                GT_ModHandler.getModItem("IC2", "itemPartCircuit", 2L),
+                GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.StainlessSteel, 2),
+                GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Polytetrafluoroethylene, 2),
+                GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.StainlessSteel, 4),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 6)
+        }, 200 * 20, 120);
+
+        //Implosion Compressor
+        RA.addDisassemblerRecipe(ItemList.Machine_Multi_ImplosionCompressor.get(1L),
+                new ItemStack[]{ItemList.Hull_HV.get(1L), ItemList.Electric_Piston_HV.get(2L),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 2),
+                GT_ModHandler.getModItem("IC2", "itemPartCircuit", 4L),
+                GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Steel, 8),
+                ItemList.Casing_ExplosionHazard.get(1L)
+        }, 300 * 20, 256);
+
+        //Vacuum Freezer
+        RA.addDisassemblerRecipe(ItemList.Machine_Multi_VacuumFreezer.get(1L),
+                new ItemStack[]{
+                ItemList.Hull_HV.get(1L), ItemList.Electric_Pump_HV.get(2L),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Aluminium, 2),
+                ItemList.Circuit_Data.get(4L),
+                GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Aluminium, 8),
+                ItemList.Casing_FrostHazard.get(1L)
+        }, 300 * 20, 256);
+
+        //Titanium
+        RA.addDisassemblerRecipe(ItemList.Machine_Multi_LargeBoiler_Titanium.get(1L),
+                new ItemStack[]{
+                ItemList.Hull_EV.get(1L), ItemList.Casing_Firebox_Titanium.get(1L),
+                GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Titanium, 3),
+                ItemList.Circuit_Data.get(4L),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 4),
+                GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Titanium, 12)
+        }, 400 * 20, 480);
+
+        //TungstenSteel
+        RA.addDisassemblerRecipe(ItemList.Machine_Multi_LargeBoiler_TungstenSteel.get(1L),
+                new ItemStack[]{
+                ItemList.Hull_IV.get(1L), ItemList.Casing_Firebox_TungstenSteel.get(1L),
+                GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.TungstenSteel, 3),
+                ItemList.Circuit_Elite.get(4L),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TungstenSteel, 4),
+                GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.TungstenSteel, 12)
+        }, 600 * 20, 1920);
+
+        //Distillation_Tower
+        RA.addDisassemblerRecipe(ItemList.Distillation_Tower.get(1L),
+                new ItemStack[]{
+                ItemList.Hull_EV.get(1L), ItemList.Electric_Pump_EV.get(4L),
+                ItemList.Circuit_Data.get(4L),
+                GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.StainlessSteel, 8),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.StainlessSteel, 12)
+        }, 400 * 20, 480);
+
+        //Centrifuge
+        RA.addDisassemblerRecipe(ItemList.Machine_MultiblockCentrifuge.get(1L),
+                new ItemStack[]{
+                ItemList.Machine_EV_Centrifuge.get(1L), ItemList.Electric_Motor_EV.get(4L),
+                ItemList.Circuit_Data.get(4L),
+                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Titanium, 4),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Titanium, 8)
+        }, 400 * 20, 480);
+
+        //Electrolyzer
+        RA.addDisassemblerRecipe(ItemList.Machine_MultiblockElectrolyzer.get(1L),
+                new ItemStack[]{
+                ItemList.Machine_EV_Electrolyzer.get(1L),
+                GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Aluminium, 4),
+                ItemList.Circuit_Data.get(4L),
+                GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Tungsten, 4),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Titanium, 8)
+        }, 400 * 20, 480);
+
+        //Flotation Unit
+        RA.addDisassemblerRecipe(ItemList.Machine_FlotationUnit.get(1L),
+                new ItemStack[]{
+                ItemList.Hull_EV.get(1L), ItemList.Electric_Pump_EV.get(4L),
+                ItemList.Circuit_Data.get(6L),
+                GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Titanium, 8),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 12)
+        }, 400 * 20, 480);
     }
 
     public static class LaserEngraver implements IOreRecipeRegistrator {
