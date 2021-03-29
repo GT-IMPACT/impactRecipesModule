@@ -192,7 +192,7 @@ public class ProjectRed implements Runnable {
     private static class LaserEngraver implements IOreRecipeRegistrator {
 
         private LaserEngraver() {
-            OrePrefixes.crafting.add(this);
+            OrePrefixes.lens.add(this);
         }
 
         @Override

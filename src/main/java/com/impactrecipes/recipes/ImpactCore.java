@@ -3781,7 +3781,7 @@ public class ImpactCore implements Runnable {
     public static class LaserEngraver implements IOreRecipeRegistrator {
 
         private LaserEngraver() {
-            OrePrefixes.crafting.add(this);
+            OrePrefixes.lens.add(this);
         }
 
         public void registerOre(OrePrefixes aPrefix, Materials aMaterial, String aOreDictName, String aModName, ItemStack aStack) {
