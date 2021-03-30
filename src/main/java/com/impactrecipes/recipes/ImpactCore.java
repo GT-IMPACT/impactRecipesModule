@@ -3670,7 +3670,7 @@ public class ImpactCore implements Runnable {
         RA.addDisassemblerRecipe(
                 CustomItemList.eM_dynamoMulti2_UHV.get(1), new ItemStack[]{ItemList.Hatch_Dynamo_MAX.get(1),
                         ItemList.UHV_Coil.get(1), GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.Europium, 4),
-                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Pikyonium64B, 1)}, 500, 2000000);
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Pikyonium64B, 1)}, 500, 500000);
         RA.addDisassemblerRecipe(
                 CustomItemList.eM_dynamoMulti4_UHV.get(1), new ItemStack[]{ItemList.Transformer_UEV_UHV.get(1L),
                         CustomItemList.eM_dynamoMulti2_UHV.get(1), ItemList.Circuit_Chip_QPIC.get(2),
