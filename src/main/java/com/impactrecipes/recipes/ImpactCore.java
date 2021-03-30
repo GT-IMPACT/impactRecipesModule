@@ -66,6 +66,7 @@ public class ImpactCore implements Runnable {
         assemblyLine();
         wireassembler();
         disassembler();
+        cyclon();
         new LaserEngraver();
     }
 
@@ -1798,14 +1799,7 @@ public class ImpactCore implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Redstone, 1L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Electrum, 1L), GT_Values.NI,
                         GT_Values.NI, GT_Values.NI, GT_Values.NI, new int[]{10000, 10000}, 400, 480);
-        GT_Values.RA.addCentrifugeRecipe(
-                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.BlackPlutonium, 1L), GT_Values.NI,
-                GT_Values.NF, GT_Values.NF,
-                GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.CosmicNeutronium, 1L),
-                GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.CosmicNeutronium, 1L),
-                GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.CosmicNeutronium, 1L),
-                GT_Values.NI, GT_Values.NI, GT_Values.NI, new int[]{1000, 500, 100}, 200, 500000);
-
+        
         GT_Values.RA
                 .addCentrifugeRecipe(CoreItems.getRecipe(31, 1), GT_Values.NI, GT_Values.NF, GT_Values.NF,
                         GT_OreDictUnificator.get(OrePrefixes.dustSmall, Materials.Clay, 2L),
@@ -4012,6 +4006,11 @@ public class ImpactCore implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Titanium, 8),
                 GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 12)
         }, 400 * 20, 480);
+    }
+
+    public void cyclon() {
+        GT_Values.RA.addCyclonRecipe(new ItemStack[]{Materials.Draconium.getDust(1)}, new FluidStack[]{Materials.NaquadhaGas.getGas(100), Materials.SulfuricAcid.getFluid(900)}, new FluidStack[]{Materials.DilutedSulfuricAcid.getFluid(900)}, new ItemStack[]{Materials.DeepIron.getDustTiny(1), Materials.Naquadah.getDustTiny(1), Materials.Osmium.getDustTiny(1), Materials.DraconiumAwakened.getDustTiny(1)}, new int[]{10000, 10000, 10000, 10000}, 200, 2000000);
+        GT_Values.RA.addCyclonRecipe(new ItemStack[]{Materials.BlackPlutonium.getDust(1)}, new FluidStack[]{Materials.EnrichedNaquadria.getFluid(144), Materials.SulfuricAcid.getFluid(900)}, new FluidStack[]{Materials.DilutedSulfuricAcid.getFluid(900)}, new ItemStack[]{Materials.Uranium235.getDustSmall(1), Materials.Plutonium.getDustSmall(1), Materials.Plutonium241.getDustTiny(1), Materials.CosmicNeutronium.getDustTiny(1)}, new int[]{10000, 10000, 10000, 10000}, 300, 2000000);
     }
 
     public static class LaserEngraver implements IOreRecipeRegistrator {
