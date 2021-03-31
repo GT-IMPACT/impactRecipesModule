@@ -52,7 +52,11 @@ public class ChiselGroup {
         Carving.chisel.addVariation(name, Blocks.glass, 0, 0);
         for (int i = 1; i < 16; i++) {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("chisel", "glass"), i, 0);
+        }
+        for (int i = 1; i < 16; i++) {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("Impact|Architecture", "i_glass"), i, 0);
+        }
+        for (int i = 1; i < 16; i++) {
             Carving.chisel.addVariation(name, glaxx, i, 0);
         }
         Carving.chisel.addVariation(name, GameRegistry.findBlock("chisel", "glass2"), 0, 0);
