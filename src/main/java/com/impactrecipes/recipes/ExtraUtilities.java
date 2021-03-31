@@ -9,17 +9,90 @@ import gregtech.api.util.GT_OreDictUnificator;
 import gregtech.api.util.GT_Utility;
 import net.minecraft.item.ItemStack;
 
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
+
 public class ExtraUtilities implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
     @Override
     public void run() {
+        removeExtraUtilities();
         hand();
         printer3d();
         alloySmalter();
         assembler();
         chemical();
+    }
+
+    private void removeExtraUtilities() {
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "enderQuarry", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "endMarker", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "dark_portal", 1L, 2), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "dark_portal", 1, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "enderThermicPump", 1, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "chestMini", 1, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "chestFull", 1, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "trashcan", 1, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "watering_can", 1, 1), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "timer", 1, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "angelBlock", 1, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "golden_bag", 1, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock2", 1, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock2", 1, 4), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock2", 1, 5), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock2", 1, 3), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock2", 1, 7), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock2", 1, 8), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock2", 1, 1), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock2", 1, 2), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock2", 1, 6), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock2", 1, 9), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock2", 1, 10),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock2", 1, 11),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock1", 1), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock1", 1, 9), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock1", 1, 4), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock1", 1, 7), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock1", 1, 6), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock1", 1, 3), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock1", 1, 10),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock1", 1, 13),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock1", 1, 8),
+                true, false, true);
+
     }
 
     private void hand() {

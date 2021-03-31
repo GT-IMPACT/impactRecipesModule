@@ -17,9 +17,29 @@ public class OpenBlocks implements Runnable {
 
     @Override
     public void run() {
+        removeOpenBlocks();
         handRecipe();
         assemblerRecipe();
         chemicalBathRecipe();
+    }
+
+    private void removeOpenBlocks() {
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("OpenBlocks", "elevator", 1L, 0));
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("OpenBlocks", "devnull", 1L, 0));
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("OpenBlocks", "builder_guide", 1L, 0));
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("OpenBlocks", "elevator_rotating", 1L, 0));
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("OpenBlocks", "guide", 1L, 0));
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("OpenBlocks", "hangglider", 1L, 0));
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("OpenBlocks", "generic", 1L, 0));
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("OpenBlocks", "generic", 1L, 0));
     }
 
     private void handRecipe() {

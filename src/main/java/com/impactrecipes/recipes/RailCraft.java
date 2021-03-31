@@ -36,6 +36,7 @@ public class RailCraft implements Runnable {
 
     @Override
     public void run() {
+        removeRailCraft();
         handRecipe();
         assemblerRecipe();
         benderRecipe();
@@ -43,6 +44,139 @@ public class RailCraft implements Runnable {
         circuitAssemblerRecipe();
         extruderRecipe();
         trackAssemblerRecipe();
+    }
+
+    private void removeRailCraft() {
+        removeRecipeByOutput(EnumTrack.CONTROL.getItem());
+        removeRecipeByOutput(EnumTrack.LOCKING.getItem());
+        removeRecipeByOutput(EnumTrack.DISEMBARK.getItem());
+        removeRecipeByOutput(EnumTrack.LOCOMOTIVE.getItem());
+        removeRecipeByOutput(EnumTrack.LIMITER.getItem());
+        removeRecipeByOutput(EnumTrack.BUFFER_STOP.getItem());
+        removeRecipeByOutput(EnumTrack.ELECTRIC.getItem());
+        removeRecipeByOutput(EnumTrack.SWITCH.getItem());
+        removeRecipeByOutput(EnumTrack.WYE.getItem());
+        removeRecipeByOutput(EnumTrack.ONEWAY.getItem());
+        removeRecipeByOutput(EnumTrack.GATED.getItem());
+        removeRecipeByOutput(EnumTrack.DISPOSAL.getItem());
+        removeRecipeByOutput(EnumTrack.SLOW.getItem());
+        removeRecipeByOutput(EnumTrack.SLOW_SWITCH.getItem());
+        removeRecipeByOutput(EnumTrack.REINFORCED_JUNCTION.getItem());
+        removeRecipeByOutput(EnumTrack.ELECTRIC_SWITCH.getItem());
+        removeRecipeByOutput(EnumTrack.SPEED.getItem());
+        removeRecipeByOutput(EnumTrack.SPEED_TRANSITION.getItem());
+        removeRecipeByOutput(EnumTrack.SPEED_SWITCH.getItem());
+        removeRecipeByOutput(EnumTrack.PRIMING.getItem());
+        removeRecipeByOutput(EnumDetector.ITEM.getItem());
+        removeRecipeByOutput(EnumDetector.ANY.getItem());
+        removeRecipeByOutput(EnumDetector.EMPTY.getItem());
+        removeRecipeByOutput(EnumDetector.MOB.getItem());
+        removeRecipeByOutput(EnumDetector.POWERED.getItem());
+        removeRecipeByOutput(EnumDetector.PLAYER.getItem());
+        removeRecipeByOutput(EnumDetector.EXPLOSIVE.getItem());
+        removeRecipeByOutput(EnumDetector.ANIMAL.getItem());
+        removeRecipeByOutput(EnumDetector.TANK.getItem());
+        removeRecipeByOutput(EnumDetector.ADVANCED.getItem());
+        removeRecipeByOutput(EnumDetector.ENERGY.getItem());
+        removeRecipeByOutput(EnumDetector.AGE.getItem());
+        removeRecipeByOutput(EnumDetector.TRAIN.getItem());
+        removeRecipeByOutput(EnumDetector.SHEEP.getItem());
+        removeRecipeByOutput(EnumDetector.VILLAGER.getItem());
+        removeRecipeByOutput(EnumDetector.LOCOMOTIVE.getItem());
+        removeRecipeByOutput(EnumDetector.ROUTING.getItem());
+        removeRecipeByOutput(EnumMachineGamma.ITEM_LOADER.getItem());
+        removeRecipeByOutput(EnumMachineGamma.ITEM_UNLOADER.getItem());
+        removeRecipeByOutput(EnumMachineGamma.ITEM_LOADER_ADVANCED.getItem());
+        removeRecipeByOutput(EnumMachineGamma.ITEM_UNLOADER_ADVANCED.getItem());
+        removeRecipeByOutput(EnumMachineGamma.FLUID_LOADER.getItem());
+        removeRecipeByOutput(EnumMachineGamma.FLUID_UNLOADER.getItem());
+        removeRecipeByOutput(EnumMachineGamma.ENERGY_LOADER.getItem());
+        removeRecipeByOutput(EnumMachineGamma.ENERGY_UNLOADER.getItem());
+        removeRecipeByOutput(EnumMachineGamma.DISPENSER_CART.getItem());
+        removeRecipeByOutput(EnumMachineGamma.DISPENSER_TRAIN.getItem());
+        removeRecipeByOutput(EnumMachineGamma.RF_LOADER.getItem());
+        removeRecipeByOutput(EnumMachineGamma.RF_UNLOADER.getItem());
+        removeRecipeByOutput(EnumMachineEpsilon.ELECTRIC_FEEDER.getItem());
+        removeRecipeByOutput(EnumMachineEpsilon.FORCE_TRACK_EMITTER.getItem());
+        removeRecipeByOutput(EnumMachineEpsilon.FLUX_TRANSFORMER.getItem());
+        removeRecipeByOutput(EnumSignal.BOX_INTERLOCK.getItem());
+        removeRecipeByOutput(EnumSignal.DUAL_HEAD_BLOCK_SIGNAL.getItem());
+        removeRecipeByOutput(EnumSignal.SWITCH_MOTOR.getItem());
+        removeRecipeByOutput(EnumSignal.BLOCK_SIGNAL.getItem());
+        removeRecipeByOutput(EnumSignal.SWITCH_LEVER.getItem());
+        removeRecipeByOutput(EnumSignal.BOX_SEQUENCER.getItem());
+        removeRecipeByOutput(EnumSignal.BOX_CAPACITOR.getItem());
+        removeRecipeByOutput(EnumSignal.BOX_RECEIVER.getItem());
+        removeRecipeByOutput(EnumSignal.BOX_CONTROLLER.getItem());
+        removeRecipeByOutput(EnumSignal.BOX_ANALOG_CONTROLLER.getItem());
+        removeRecipeByOutput(EnumSignal.DISTANT_SIGNAL.getItem());
+        removeRecipeByOutput(EnumSignal.DUAL_HEAD_DISTANT_SIGNAL.getItem());
+        removeRecipeByOutput(EnumSignal.BOX_BLOCK_RELAY.getItem());
+        removeRecipeByOutput(EnumCart.WORK.getCartItem());
+        removeRecipeByOutput(EnumCart.TANK.getCartItem());
+        removeRecipeByOutput(EnumCart.CARGO.getCartItem());
+        removeRecipeByOutput(EnumCart.TRACK_RELAYER.getCartItem());
+        removeRecipeByOutput(EnumCart.UNDERCUTTER.getCartItem());
+        removeRecipeByOutput(EnumCart.TRACK_LAYER.getCartItem());
+        removeRecipeByOutput(EnumCart.TRACK_REMOVER.getCartItem());
+        removeRecipeByOutput(EnumCart.REDSTONE_FLUX.getCartItem());
+        removeRecipeByOutput(EnumCart.LOCO_ELECTRIC.getCartItem());
+        removeRecipeByOutput(EnumCart.LOCO_STEAM_SOLID.getCartItem());
+        removeRecipeByOutput(EnumCart.BORE.getCartItem());
+        removeRecipeByOutput(EnumCart.ENERGY_BATBOX.getCartItem());
+        removeRecipeByOutput(EnumCart.ENERGY_CESU.getCartItem());
+        removeRecipeByOutput(EnumCart.ENERGY_MFE.getCartItem());
+        removeRecipeByOutput(EnumMachineAlpha.STEAM_TRAP_AUTO.getItem());
+        removeRecipeByOutput(EnumMachineAlpha.STEAM_TRAP_MANUAL.getItem());
+        removeRecipeByOutput(EnumMachineAlpha.FEED_STATION.getItem());
+        removeRecipeByOutput(EnumMachineAlpha.TRADE_STATION.getItem());
+        removeRecipeByOutput(ItemCrowbar.getItem());
+        removeRecipeByOutput(ItemCrowbarReinforced.getItem());
+        removeRecipeByOutput(ItemWhistleTuner.getItem());
+        removeRecipeByOutput(ItemElectricMeter.getItem());
+        removeRecipeByOutput(ItemSignalTuner.getItem());
+        removeRecipeByOutput(ItemSignalBlockSurveyor.getItem());
+        removeRecipeByOutput(RailcraftItem.signalLamp.getStack());
+        removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "tool.magnifying.glass", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "armor.goggles", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "upgrade.lapotron", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "borehead.iron", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "borehead.steel", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "borehead.diamond", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "frame", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "part.circuit.controller", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "part.circuit.signal", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "part.circuit.receiver", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "machine.delta", 1L));
+        removeRecipeByOutput(RailcraftItem.rail.getStack(1, ItemRail.EnumRail.WOOD));
+
+        //todo НУЖНО ПРОВЕРИТЬ - НЕ УВЕРЕН ЧТО ПОФИКСИЛ
+        removeRecipeByOutput(RailcraftItem.rail.getStack(1, ItemRail.EnumRail.STANDARD));
+        removeRecipeByOutput(RailcraftItem.rail.getStack(1, ItemRail.EnumRail.ADVANCED));
+        removeRecipeByOutput(RailcraftItem.rail.getStack(1, ItemRail.EnumRail.ELECTRIC));
+        removeRecipeByOutput(RailcraftItem.rail.getStack(1, ItemRail.EnumRail.REINFORCED));
+        removeRecipeByOutput(RailcraftItem.rail.getStack(1, ItemRail.EnumRail.SPEED));
+        removeRecipeByOutput(RailcraftItem.rebar.getStack(1));
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("computronics", "computronics.digitalReceiverBox", 1L));
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("computronics", "computronics.digitalControllerBox", 1L));
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("computronics", "computronics.locomotiveRelay", 1L));
+
+        removeRecipeByOutput(new ItemStack(Blocks.rail));
+        removeRecipeByOutput(new ItemStack(Blocks.golden_rail));
+        removeRecipeByOutput(new ItemStack(Blocks.detector_rail));
+        removeRecipeByOutput(new ItemStack(Blocks.activator_rail));
+
+        removeRecipeByOutput(new ItemStack(Objects.metaItem, 1, 0));
+        removeRecipeByOutput(new ItemStack(Objects.metaItem, 1, 1));
+        removeRecipeByOutput(new ItemStack(Objects.metaItem, 1, 2));
+        removeRecipeByOutput(ModRenderType.DIESEL
+                .getItemWithRenderer("railcraft:default", ModEnumCart.LOCO_DIESEL.getCartItem()));
+        removeRecipeByOutput(new ItemStack(Objects.nfcTrack, 1, 0));
+        removeRecipeByOutput(new ItemStack(Objects.metaItem, 1, 3));
+        removeRecipeByOutput(new ItemStack(Objects.ocComponents, 4, 0));
     }
 
     private void handRecipe() {

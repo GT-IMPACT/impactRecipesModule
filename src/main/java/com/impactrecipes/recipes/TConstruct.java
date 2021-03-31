@@ -13,6 +13,8 @@ import tconstruct.library.crafting.DryingRackRecipes;
 import tconstruct.weaponry.TinkerWeaponry;
 
 import static com.impactrecipes.util.RecipeUtils.ordictItemStack;
+import static gregtech.api.util.GT_ModHandler.removeFurnaceSmelting;
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 import static iguanaman.iguanatweakstconstruct.claybuckets.IguanaItems.*;
 import static tconstruct.armor.TinkerArmor.*;
 
@@ -24,6 +26,7 @@ public class TConstruct implements Runnable {
 
     @Override
     public void run() {
+        removeTinker();
         handRecipe();
         alloySmelterRecipe();
         assemblerRecipe();
@@ -42,6 +45,27 @@ public class TConstruct implements Runnable {
         forgeHammer();
         extractor();
         alloySmelter();
+    }
+
+    private void removeTinker() {
+        removeFurnaceSmelting(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 1L, 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelGoggles", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelWings", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelVest", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelBoots", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelGlove", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "travelBelt", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "Smeltery", 1L, 2));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 1L, 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "CraftedSoil", 1L, 6));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "blankPattern", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "blood.channel", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "slime.channel", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "decoration.stoneladder", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "decoration.stonetorch", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("TConstruct", "materials", 1L, 26));
+        removeRecipeByOutput(GT_ModHandler.getModItem("IguanaTweaksTConstruct", "clayBucketUnfired", 1L, 0));
     }
 
     private void handRecipe() {

@@ -17,6 +17,7 @@ import net.minecraftforge.fluids.FluidStack;
 
 import static com.impact.common.item.Core_List_Items.NeutronReflectorParts;
 import static com.impact.common.item.Core_List_Items.NeutronReflectorSmallParts;
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class IC2 implements Runnable {
 
@@ -27,6 +28,8 @@ public class IC2 implements Runnable {
 
     @Override
     public void run() {
+        removeIC2();
+        removeCompactGen();
         hand();
         compactGens(); //компакт гены
         thermalCentrifuge();
@@ -36,6 +39,119 @@ public class IC2 implements Runnable {
         fluidCanner();
         extruder();
         assembler();
+    }
+
+    private void removeIC2() {
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockGenerator", 1L, 5), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockGenerator", 1L, 9), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockKineticGenerator", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockKineticGenerator", 1L, 4), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getIC2Item("nanoHelmet", 1, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getIC2Item("nanoBodyarmor", 1, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getIC2Item("nanoLeggings", 1, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getIC2Item("nanoBoots", 1, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getIC2Item("quantumHelmet", 1, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getIC2Item("quantumBodyarmor", 1, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getIC2Item("quantumLeggings", 1, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getIC2Item("quantumBoots", 1, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemBatChargeRE", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemBatChargeAdv", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemBatChargeCrystal", 1L, GT_Values.W));
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("IC2", "itemBatChargeLamaCrystal", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorReflectorThick", 1L, 1), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorPlating", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorPlatingHeat", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorPlatingExplosive", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorVent", 1L, 1), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorVentCore", 1L, 1), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorVentGold", 1L, 1), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorVentSpread", 1L), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorVentDiamond", 1L, 1), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorHeatSwitch", 1L, 1), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorHeatSwitchCore", 1L, 1), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorHeatSwitchSpread", 1L, 1), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorHeatSwitchDiamond", 1L, 1), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorCoolantSimple", 1L, 1), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorCoolantTriple", 1L, 1), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorCoolantSix", 1L, 1), true, false,
+                true);
+        // --- Recrafting Iron Scaffold
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockIronScaffold", 1L), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemTreetapElectric", 1, GT_Values.W), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemToolHoe", 1, GT_Values.W), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemRecipePart", 1, 3), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockChargepad", 1L), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockChargepad", 1L, 1), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockChargepad", 1L, 2), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockChargepad", 1L, 3), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemMOX", 1L), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemUran", 1L), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorUraniumSimple", 1L), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorMOXSimple", 1L), true, false,
+                true);
+    }
+
+    private void removeCompactGen() {
+        removeRecipeByOutput(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 1),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 2),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 3),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 4),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 5),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 6),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 7),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 8),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 9),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 10),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 11),
+                true, false, false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("compactkineticgenerators", "IridiumRotor", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("compactkineticgenerators", "IridiumBlade", 1L, 0), true, false,
+                true);
     }
 
     private void hand() {

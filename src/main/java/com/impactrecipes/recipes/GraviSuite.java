@@ -12,6 +12,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
+
 public class GraviSuite implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
@@ -20,9 +22,42 @@ public class GraviSuite implements Runnable {
 
     @Override
     public void run() {
+        removeGraviSuite();
         hand();
         printer3d();
         assemblyLine();
+    }
+
+    private void removeGraviSuite() {
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 1), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advJetpack", GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advLappack", GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advNanoChestPlate", GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "ultimateLappack", GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "relocator", GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "vajra", GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "graviTool", GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advChainsaw", GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advDDrill", GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 4), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 5), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 7), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 2), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 6), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 3), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "graviChestPlate", 1L, GT_Values.W),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "kpChestPlate", 1L, GT_Values.W),
+                true, false, false);
     }
 
     private void hand() {

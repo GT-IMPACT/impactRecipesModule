@@ -66,7 +66,6 @@ public class ImpactCore implements Runnable {
         assemblyLine();
         wireassembler();
         disassembler();
-        new LaserEngraver();
     }
 
     private void hand() {
@@ -3776,58 +3775,5 @@ public class ImpactCore implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 8),
                         GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.TungstenSteel, 8), CoreItems2.getRecipe(142, 8),
                         GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 12)}, 80 * 20, 30720);
-    }
-
-    public static class LaserEngraver implements IOreRecipeRegistrator {
-
-        private LaserEngraver() {
-            OrePrefixes.lens.add(this);
-        }
-
-        public void registerOre(OrePrefixes aPrefix, Materials aMaterial, String aOreDictName, String aModName, ItemStack aStack) {
-            switch (aOreDictName) {
-                case "craftingLensRed":
-                    RA.addLaserEngraverRecipe(
-                            GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Redstone, 1L),
-                            GT_Utility.copyAmount(0L, aStack), GT_ItemList.RedstoneRedChipset.get(1L), 50, 120,
-                            false);
-                    RA.addLaserEngraverRecipe(ItemList.EnergyCrystal.get(1L),
-                            GT_Utility.copyAmount(0L, aStack), GT_ItemList.EngravedEnergyChip.get(1L), 600, 4096,
-                            true);
-                    RA
-                            .addLaserEngraverRecipe(CoreItems2.getRecipe(154, 1), GT_Utility.copyAmount(0L, aStack),
-                                    GT_ModHandler.getModItem("OpenComputers", "item", 16L, 24), 600, 120, false);
-
-                    break;
-                case "craftingLensGreen":
-                    RA.addLaserEngraverRecipe(ItemList.LapotronCrystal.get(1L),
-                            GT_Utility.copyAmount(0L, aStack), CoreItems2.getRecipe(46, 1), 600, 480, true);
-                    RA.addLaserEngraverRecipe(ItemList.EnergyCrystal.get(1L),
-                            GT_Utility.copyAmount(0L, aStack), CoreItems2.getRecipe(100, 1), 300, 120, false);
-                    RA
-                            .addLaserEngraverRecipe(CoreItems2.getRecipe(155, 1), GT_Utility.copyAmount(0L, aStack),
-                                    GT_ModHandler.getModItem("OpenComputers", "item", 9L, 25), 600, 256, false);
-                    break;
-                case "craftingLensWhite":
-                    RA.addLaserEngraverRecipe(
-                            GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Diamond, 4L),
-                            GT_Utility.copyAmount(0L, aStack), GT_ItemList.EngravedDiamondCrystalChip.get(1L), 400,
-                            1920, true);
-                    break;
-                case "craftingLensYellow":
-                    RA.addLaserEngraverRecipe(
-                            GT_OreDictUnificator.get(OrePrefixes.gemExquisite, Materials.GarnetYellow, 1L),
-                            GT_Utility.copyAmount(0L, aStack), GT_ItemList.EngravedQuantumChip.get(1L), 1200, 30720,
-                            true);
-                    RA
-                            .addLaserEngraverRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Gold, 4L),
-                                    GT_Utility.copyAmount(0L, aStack), GT_ItemList.EngravedGoldChip.get(1L), 300, 480,
-                                    false);
-                    RA
-                            .addLaserEngraverRecipe(CoreItems2.getRecipe(156, 1), GT_Utility.copyAmount(0L, aStack),
-                                    GT_ModHandler.getModItem("OpenComputers", "item", 6L, 26), 600, 480, true);
-                    break;
-            }
-        }
     }
 }

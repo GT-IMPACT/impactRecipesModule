@@ -17,6 +17,7 @@ import net.minecraftforge.fluids.FluidStack;
 import static com.impact.common.item.Core_List_Items.IceCompressedPlate;
 import static com.impact.common.item.Core_List_Items.TCetiESeaweedExtract;
 import static gregtech.api.enums.GT_Values.RA;
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class GalaxySpace implements Runnable {
 
@@ -27,6 +28,7 @@ public class GalaxySpace implements Runnable {
 
     @Override
     public void run() {
+        removeGalaxySpace();
         hand();
         sifter();
         pulverizer();
@@ -39,6 +41,160 @@ public class GalaxySpace implements Runnable {
         compressor();
         chemical();
         assemblyLine();
+    }
+
+    private void removeGalaxySpace() {
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.ThermalClothT2", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.ThermalPaddingT2", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.ThermalPaddingT2", 1L, 1),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.ThermalPaddingT2", 1L, 2),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.ThermalPaddingT2", 1L, 3),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "futureglass", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.cobalt_boots", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.cobalt_plate", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.cobalt_helmet", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.cobalt_leg", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.plasmasword", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.plasmapickaxe", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.plasmaaxe", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.plasmahoe", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.plasmashovel", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.Modules", 1L, 3), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 1L, 1), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 1L, 2), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "solarwindpanel", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.QuantBow", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.JetPack", 1L, GT_Values.W),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "fuelgenerator", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "assemblymachine", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "convertersurface", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "dungeonglowstone", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "dungeonglowstone", 1L, 1), true, false,
+                true);
+        //removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.RocketParts", 1L, 0), true, false, true);
+        //removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.RocketParts", 1L, 1), true, false, true);
+        //removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.RocketParts", 1L, 2), true, false, true);
+        //removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.RocketParts", 1L, 3), true, false, true);
+        //removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 1L, 0), true, false, true);
+        //removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 1L, 1), true, false, true);
+        //removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 1L, 2), true, false, true);
+        //removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 1L, 3), true, false, true);
+        //removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 1L, 4), true, false, true);
+        //removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 1L, 5), true, false, true);
+        //removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 1L, 6), true, false, true);
+        //removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 1L, 7), true, false, true);
+        //removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 1L, 8), true, false, true);
+        //removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "metalsblock", 1L, 9), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "machineframes", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "solarPanel", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "storagemoduleT3", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "oxstoragemoduleT2", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "machineframes", 1L, 2), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "advFuelLoader", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "advlandingpad", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "fluidtank", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "gravitationmoduleon", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "hydroponicbase", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "hydroponicfarm", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "liquidextractor", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "liquidseparator", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "modificationtable", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "oxygenfiller", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "portablenuclearreactor", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "radiationstabiliser", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "recycler", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "rocketAssembly", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "windTurbine", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 1L, 3), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 1L, 14), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 1L, 15), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.cobalt_sword", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.cobalt_pickaxe", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.cobalt_axe", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.cobalt_shovel", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.cobalt_hoe", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("GalaxySpace", "item.AdvancedBattery", 1L, GT_Values.W), true,
+                false, true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("GalaxySpace", "item.ModernBattery", 1L, GT_Values.W), true, false,
+                true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("GalaxySpace", "item.ExtraBattery", 1L, GT_Values.W), true, false,
+                true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("GalaxySpace", "item.UltraBattery", 1L, GT_Values.W), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.Modules", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.Modules", 1L, 1), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalaxySpace", "item.Modules", 1L, 2), true,
+                false, true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("GalaxySpace", "item.oxygentank_t4", 1L, GT_Values.W), true, false,
+                true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("GalaxySpace", "item.oxygentank_t5", 1L, GT_Values.W), true, false,
+                true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("GalaxySpace", "item.oxygentank_t6", 1L, GT_Values.W), true, false,
+                true);
     }
 
     private void hand() {

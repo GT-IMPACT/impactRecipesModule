@@ -10,6 +10,8 @@ import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
 import net.minecraft.item.ItemStack;
 
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
+
 public class StarGate implements Runnable {
 
     final Core_Items2 CoreItems2 = Core_Items2.getInstance();
@@ -17,9 +19,33 @@ public class StarGate implements Runnable {
 
     @Override
     public void run() {
+        removeSG();
         printer3d();
         assembler();
         autoclave();
+    }
+
+    private void removeSG() {
+        removeRecipeByOutput(GT_ModHandler.getModItem("SGCraft", "sgChevronUpgrade", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("SGCraft", "stargateRing", 1L, 1), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("SGCraft", "stargateRing", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("SGCraft", "stargateBase", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("SGCraft", "stargateController", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("SGCraft", "ic2PowerUnit", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("SGCraft", "sgIrisUpgrade", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("SGCraft", "sgIrisBlade", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("SGCraft", "ocInterface", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("SGCraft", "ic2Capacitor", 1L, 0), true, false,
+                true);
     }
 
     private void  printer3d() {

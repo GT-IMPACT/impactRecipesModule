@@ -1,7 +1,6 @@
 package com.impactrecipes;
 
 import com.impactrecipes.loader.ModsLoader;
-import com.impactrecipes.recipes.RemoveRecipes;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.ModMetadata;
@@ -9,7 +8,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import gregtech.api.GregTech_API;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -45,7 +43,6 @@ public class ImpactRecipesModule {
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-        new RemoveRecipes().run();
         ModsLoader.loader();
     }
 

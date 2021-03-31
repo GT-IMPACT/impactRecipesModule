@@ -21,8 +21,18 @@ public class Jabba implements Runnable {
 
     @Override
     public void run() {
+        removeJabba();
         handRecipe();
         assemblerRecipe();
+    }
+
+    private void removeJabba() {
+        removeRecipeByOutput(new ItemStack(BetterBarrels.itemUpgradeCore, 1, GT_Values.W));
+        removeRecipeByOutput(new ItemStack(BetterBarrels.itemHammer, 1, 0));
+        removeRecipeByOutput(new ItemStack(BetterBarrels.itemMover, 1, 0));
+        removeRecipeByOutput(new ItemStack(BetterBarrels.itemMoverDiamond, 1, 0));
+        removeRecipeByOutput(new ItemStack(BetterBarrels.itemTuningFork, 1, 0));
+        removeRecipeByOutput(new ItemStack(BetterBarrels.itemUpgradeStructural, 1, GT_Values.W));
     }
 
     private void handRecipe() {

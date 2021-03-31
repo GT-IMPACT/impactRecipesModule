@@ -21,6 +21,7 @@ import static com.impact.loader.ItemRegistery.UtilBlock;
 import static com.impact.util.Utilits.Blockstack;
 import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.RecipeBits.DELETE_ALL_OTHER_RECIPES;
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 /**
  * Runnable во всех классах обязателен!
@@ -37,6 +38,7 @@ public class Gregtech implements Runnable {
 
     @Override
     public void run() {
+        removeGT_WTF_CHECK_GT_CODE();
         handRecipe();
         assemblerRecipe();
         wireAssemblerRecipe();
@@ -62,6 +64,15 @@ public class Gregtech implements Runnable {
         centrifuge();
         canner();
         distil();
+    }
+
+    private void removeGT_WTF_CHECK_GT_CODE() {
+        removeRecipeByOutput(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.CokeCoal, 1), true,
+                false, false);
+        removeRecipeByOutput(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Desh, 1), true,
+                false, false);
+        removeRecipeByOutput(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.MeteoricIron, 1),
+                true, false, false);
     }
 
     private void handRecipe() {

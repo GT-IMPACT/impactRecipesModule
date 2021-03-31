@@ -4,13 +4,29 @@ import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.util.GT_ModHandler;
 
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
+
 public class ArchitectureCraft implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
     @Override
     public void run() {
+        removeArchitectureCraft();
         hand();
+    }
+
+    private void removeArchitectureCraft() {
+        removeRecipeByOutput(GT_ModHandler.getModItem("ArchitectureCraft", "sawbench", 1, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ArchitectureCraft", "sawblade", 1, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ArchitectureCraft", "largePulley", 1, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ArchitectureCraft", "hammer", 1, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ArchitectureCraft", "chisel", 1, 0), true, false,
+                true);
     }
 
     private void hand() {

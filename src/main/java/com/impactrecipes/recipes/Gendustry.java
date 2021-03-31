@@ -13,6 +13,8 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
+
 public class Gendustry implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
@@ -21,9 +23,67 @@ public class Gendustry implements Runnable {
 
     @Override
     public void run() {
+        removeGendustry();
         hand();
         printer3d();
         assembler();
+    }
+
+    private void removeGendustry() {
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "IndustrialApiary", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "MutagenProducer", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "Mutatron", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "Imprinter", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "Sampler", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "MutatronAdv", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "Liquifier", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "Extractor", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "Transposer", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "Replicator", 1L, 0), true, false,
+                false);
+    /*removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "GeneSampleBlank", 1L, 0), true,
+        false, false);
+    removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "GeneTemplate", 1L, 0), true, false,
+        false);
+        */
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "Labware", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "BeeReceptacle", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "PowerModule", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "MutagenTank", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "GeneticsProcessor", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "EnvProcessor", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "UpgradeFrame", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "ClimateModule", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "ApiaryUpgrade", 1L, GT_Values.W),
+                true, false, false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("gendustry", "IndustrialGrafter", 1L, GT_Values.W), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "IndustrialScoop", 1L, GT_Values.W),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "EjectCover", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "ImportCover", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("gendustry", "ErrorSensorCover", 1L, 0), true,
+                false, false);
     }
 
     private void hand() {

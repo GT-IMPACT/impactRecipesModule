@@ -10,15 +10,29 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
+
 public class Backpack implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
     @Override
     public void run() {
+        removeBackPack();
         hand();
         assembler();
         bath();
+    }
+
+    private void removeBackPack() {
+        removeRecipeByOutput(GT_ModHandler.getModItem("Backpack", "workbenchbackpack", 1L, GT_Values.W),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Backpack", "boundLeather", 1L), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Backpack", "backpack", 1L, GT_Values.W), true,
+                false, false);
     }
 
     private void hand() {

@@ -14,12 +14,161 @@ import net.minecraft.item.ItemStack;
 
 import static com.impact.common.item.Core_List_Items.*;
 import static gregtech.api.GregTech_API.getStackofAmountFromOreDict;
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class BuildCraft implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
             | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
     final Core_Items2 CoreItems2 = Core_Items2.getInstance();
+
+    @Override
+    public void run() {
+        removeBuildCraft();
+        handRecipe();
+        assemblerRecipe();
+    }
+
+    private void removeBuildCraft() {
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Builders", "fillerBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Builders", "builderBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Builders", "architectBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Builders", "libraryBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Core", "markerBlock", 1L, 0));
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("BuildCraft|Core", "constructionMarkerBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Core", "pathMarkerBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Builders", "blueprintItem", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Builders", "templateItem", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Builders", "machineBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Core", "engineBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Core", "engineBlock", 1L, 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Core", "engineBlock", 1L, 2));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Core", "woodenGearItem", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Core", "stoneGearItem", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Core", "ironGearItem", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Core", "goldGearItem", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Core", "diamondGearItem", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Factory", "miningWellBlock", 1L, 0));
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("BuildCraft|Factory", "autoWorkbenchBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Factory", "tankBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Factory", "pumpBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Factory", "floodGateBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Factory", "refineryBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Factory", "blockHopper", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Factory", "zonePlan", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Factory", "requester", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Silicon", "laserBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Silicon", "laserTableBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Silicon", "laserTableBlock", 1L, 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Silicon", "laserTableBlock", 1L, 2));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Silicon", "laserTableBlock", 1L, 3));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Silicon", "laserTableBlock", 1L, 4));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Silicon", "laserTableBlock", 1L, 5));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Silicon", "packagerBlock", 1L, 0));
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("BuildCraft|Transport", "filteredBufferBlock", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Robotics", "zonePlan", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Robotics", "requester", 1L, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Transport", "pipeWaterproof", 1L, 0));
+
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemswood", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsemerald", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemscobblestone", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsstone", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsquartz", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsiron", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsgold", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsdiamond", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsobsidian", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemslapis", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsdaizuli", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemssandstone", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsvoid", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsemzuli", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsstripes", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsclay", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipefluidswood", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipefluidscobblestone", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipefluidsstone", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipefluidsquartz", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipefluidsiron", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipefluidsgold", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipefluidsemerald", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipefluidsdiamond", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipefluidssandstone", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipefluidsvoid", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipefluidsclay", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipepowerwood", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipepowercobblestone", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipepowerstone", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipepowerquartz", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipepoweriron", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipepowergold", 1L, GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipepowerdiamond", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipepoweremerald", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipepowersandstone", 1L,
+                        GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler
+                .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipestructurecobblestone", 1L,
+                        GT_Values.W));
+    }
 
     private void handRecipe() {
         // --- Filler
@@ -325,11 +474,5 @@ public class BuildCraft implements Runnable {
                             .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsemerald", 8L,
                                     i + 1), 200, 64);
         }
-    }
-
-    @Override
-    public void run() {
-        handRecipe();
-        assemblerRecipe();
     }
 }

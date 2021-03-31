@@ -8,15 +8,116 @@ import gregtech.api.util.GT_OreDictUnificator;
 import gregtech.api.util.GT_Utility;
 import net.minecraft.item.ItemStack;
 
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
+
 public class LogisticPipes implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
     @Override
     public void run() {
+        removeLP();
         hand();
         assembler();
         ciruit();
+    }
+
+    private void removeLP() {
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "logisticsSolidBlock", 1L, 15),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "logisticsSolidBlock", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "logisticsSolidBlock", 1L, 1),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "logisticsSolidBlock", 1L, 2),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "logisticsSolidBlock", 1L, 3),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "logisticsSolidBlock", 1L, 4),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "logisticsSolidBlock", 1L, 5),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "logisticsSolidBlock", 1L, 11),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "logisticsSolidBlock", 1L, 12),
+                true, false, false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsBasicTransport", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsBasicLogistics", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeFluidBasic", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("LogisticsPipes", "item.PipeBlockRequestTable", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.remoteOrdererItem", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.itemModule", 1L, GT_Values.W),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, GT_Values.W),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.pipeController", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsRequestLogistics", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsProviderLogistics", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsCraftingLogistics", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsSatelliteLogistics", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsSupplierLogistics", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeLogisticsChassiMk1", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeLogisticsChassiMk2", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeLogisticsChassiMk3", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeLogisticsChassiMk4", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeLogisticsChassiMk5", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsCraftingLogisticsMk2", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsRequestLogisticsMk2", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsRemoteOrdererLogistics", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsProviderLogisticsMk2", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsApiaristAnalyser", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsApiaristSink", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsInvSysConnector", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsSystemEntranceLogistics", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsSystemDestinationLogistics", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsCraftingLogisticsMk3", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsFirewall", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsFluidSupplier", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeFluidBasic", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeFluidInsertion", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeFluidProvider", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeFluidRequestLogistics", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeFluidExtractor", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeFluidSatellite", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeFluidSupplierMk2", 1L, 0),
+                true, false, false);
     }
 
     private void hand() {

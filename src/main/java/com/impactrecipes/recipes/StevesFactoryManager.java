@@ -22,8 +22,32 @@ public class StevesFactoryManager implements Runnable {
 
     @Override
     public void run() {
+        removeStevesFactoryManager();
         handRecipe();
         assemblerRecipe();
+    }
+
+    private void removeStevesFactoryManager() {
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockManager, 1, 0), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCable, 1, 0), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableBreaker, 1, 0), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableSign, 1, 0), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableCluster, 1, 0), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableCluster, 1, 8), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableOutput, 1, 0), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableInput, 1, 0), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableRelay, 1, 0), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableRelay, 1, 8), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableBUD, 1, 0), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableCamouflage, 1, 0), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableCamouflage, 1, 1), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableCamouflage, 1, 2), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableIntake, 1, 0), true, false, false);
+        removeRecipeByOutput(new ItemStack(ModBlocks.blockCableIntake, 1, 8), true, false, false);
+        removeRecipeByOutput(new ItemStack(cableRFNode, 1, 0), true, false, false);
+        removeRecipeByOutput(new ItemStack(duplicator, 1, 0), true, false, false);
+        removeRecipeByOutput(new ItemStack(labeler, 1, 0), true, false, false);
+
     }
 
     private void handRecipe() {

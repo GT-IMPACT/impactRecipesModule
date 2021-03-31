@@ -21,8 +21,11 @@ public class RecipeUtils {
     /**
      * @param loader - класс с рецептами
      */
-    public static void registerRecipeClass(Runnable loader) {
-        RecipesReload.classMap.put(loader.toString(), loader.getClass());
+    public static void registerRecipeClass(Class cl) {
+        String clasStr = cl.getName();
+        clasStr = clasStr.replaceAll("class", "");
+        String[] text = clasStr.split("\\.");
+        RecipesReload.classMap.put(text[text.length - 1], cl);
     }
 
     /**

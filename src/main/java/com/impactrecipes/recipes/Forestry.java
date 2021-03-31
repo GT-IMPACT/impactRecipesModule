@@ -10,6 +10,8 @@ import gregtech.api.util.GT_OreDictUnificator;
 import gregtech.api.util.GT_Utility;
 import net.minecraft.item.ItemStack;
 
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
+
 public class Forestry implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
@@ -18,9 +20,30 @@ public class Forestry implements Runnable {
 
     @Override
     public void run() {
+        removeForestry();
         hand();
         assembler();
         ciruit();
+    }
+
+    private void removeForestry() {
+        removeRecipeByOutput(GT_ModHandler.getModItem("Forestry", "apiaristBag", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Forestry", "lepidopteristBag", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Forestry", "minerBag", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Forestry", "diggerBag", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Forestry", "foresterBag", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Forestry", "hunterBag", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Forestry", "adventurerBag", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Forestry", "builderBag", 1L, 0), true, false,
+                true);
+
     }
 
     private void hand() {

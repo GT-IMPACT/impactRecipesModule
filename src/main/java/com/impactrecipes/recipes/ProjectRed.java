@@ -18,7 +18,7 @@ public class ProjectRed implements Runnable {
 
     @Override
     public void run() {
-        new LaserEngraver();
+        removeProjectRed();
         handRecipe();
         wiremillRecipe();
         formingPressRecipe();
@@ -28,6 +28,60 @@ public class ProjectRed implements Runnable {
         circuitAssemblerRecipe();
         chemicalBathRecipe();
         chemical();
+    }
+
+    private void removeProjectRed() {
+        removeFurnaceSmelting(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 42));
+        removeFurnaceSmelting(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 43));
+        removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.fabrication.icchip", 1L, 0), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.integration.icblock", 1L, 0), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.integration.icblock", 1L, 1), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.screwdriver", 1L, 0), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 42), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 43), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.wiredebugger", 1L, 0), true, false, false);
+
+        for (int i = 0; i < 16; i++) {
+            removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 19 + i), true, false, false);
+            removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Transmission", "projectred.transmission.wire", 1L, i), true, false, false);
+        }
+        for (int i = 1; i < 10; i++) {
+            removeRecipeByOutput(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, i), true, false, false);
+        }
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Core", "obsidianStick", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Core", "stoneBowl", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Core", "retherPearl", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Core", "wirelessTransceiver", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Core", "blazeTransceiver", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Core", "recieverDish", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Core", "blazeRecieverDish", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Logic", "wirelessLogic", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Logic", "wirelessLogic", 1L, 1), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Logic", "wirelessLogic", 1L, 2), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Addons", "triangulator", 1L, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Addons", "remote", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Addons", "sniffer", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Addons", "map", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Addons", "tracker", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Addons", "rep", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("WR-CBE|Addons", "psniffer", 1L, 0), true, false,
+                true);
     }
 
     private void handRecipe() {
@@ -198,7 +252,6 @@ public class ProjectRed implements Runnable {
         @Override
         public void registerOre(OrePrefixes aPrefix, Materials aMaterial, String aOreDictName, String aModName, ItemStack aStack) {
             if (aOreDictName.equals("craftingLensRed")) {
-                RA.addLaserEngraverRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 5), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 6), 500, 30, false);
             }
         }
     }

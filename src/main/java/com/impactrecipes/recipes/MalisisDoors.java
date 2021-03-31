@@ -12,6 +12,7 @@ import gregtech.api.util.GT_Utility;
 import net.minecraft.item.ItemStack;
 
 import static com.impact.common.item.Core_List_Items.SteelBars;
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class MalisisDoors implements Runnable {
 
@@ -21,8 +22,116 @@ public class MalisisDoors implements Runnable {
 
     @Override
     public void run() {
+        removeMalisisDoors();
         hand();
         assembler();
+    }
+
+    private void removeMalisisDoors() {
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "iron_trapdoor", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "sliding_trapdoor", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "player_sensor", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "vanishing_block", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "vanishing_block", 1L, 1), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "vanishing_block", 1L, 2), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "vanishing_block", 1L, 3), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "block_mixer", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "door_factory", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "rustyHatch", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "garage_door", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.rustyHandle", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "rustyLadder", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.door_acacia", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.door_birch", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.door_dark_oak", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.door_jungle", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.door_spruce", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.iron_sliding_door", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.jail_door", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.laboratory_door", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.factory_door", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.shoji_door", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_purple", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_yellow", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_magenta", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_pink", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_white", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_blue", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_gray", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_cyan", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_red", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_brown", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_lime", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_orange", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_silver", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_green", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_light_blue", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.curtain_black", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.saloon", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "item.forcefieldItem", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "acaciaFenceGate", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "birchFenceGate", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "darkOakFenceGate", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "jungleFenceGate", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "spruceFenceGate", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "trapdoor_acacia", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "trapdoor_birch", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "trapdoor_dark_oak", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "trapdoor_jungle", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("malisisdoors", "trapdoor_spruce", 1L, 0), true,
+                false, false);
     }
 
     private void hand() {

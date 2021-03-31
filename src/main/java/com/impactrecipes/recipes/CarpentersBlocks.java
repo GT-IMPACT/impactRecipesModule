@@ -4,15 +4,72 @@ import gregtech.api.enums.*;
 import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
 
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
+
 public class CarpentersBlocks implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
     @Override
     public void run() {
+        removeCarpentersBlocks();
         hand();
         assembler();
         cuttingSaw();
+    }
+
+    private void removeCarpentersBlocks() {
+        removeRecipeByOutput(GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersBlock", 1, 0),
+                true, false, true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersCollapsibleBlock", 1, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("CarpentersBlocks", "itemCarpentersChisel", 1, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("CarpentersBlocks", "itemCarpentersHammer", 1, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersSafe", 1, 0),
+                true, false, true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersDaylightSensor", 1, 0), true,
+                false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("CarpentersBlocks", "itemCarpentersBed", 1, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersTorch", 1, 0),
+                true, false, true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersGarageDoor", 1, 0), true,
+                false, true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersLadder", 1, 0), true, false,
+                true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersBarrier", 1, 0), true, false,
+                true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersPressurePlate", 1, 0), true,
+                false, true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersButton", 1, 0), true, false,
+                true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersFlowerPot", 1, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersGate", 1, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersHatch", 1, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersLever", 1, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersSlope", 1, 0),
+                true, false, true);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersStairs", 1, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("CarpentersBlocks", "itemCarpentersTile", 1, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("CarpentersBlocks", "itemCarpentersDoor", 1, 0),
+                true, false, true);
     }
 
     private void hand() {

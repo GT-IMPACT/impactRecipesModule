@@ -5,10 +5,13 @@ import gregtech.api.enums.*;
 import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 import static com.impactrecipes.util.RecipeUtils.*;
+import static gregtech.api.util.GT_ModHandler.removeFurnaceSmelting;
+import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class Vanilla implements Runnable {
 
@@ -17,8 +20,114 @@ public class Vanilla implements Runnable {
 
     @Override
     public void run() {
+        removeVanila();
         handRecipe();
         oreRegisterRecipe();
+    }
+
+    private void removeVanila() {
+        removeFurnaceSmelting(new ItemStack(Items.clay_ball, 1, 0));
+        removeFurnaceSmelting(new ItemStack(Blocks.stone));
+        removeFurnaceSmelting(new ItemStack(Blocks.gravel));
+        RecipeUtils.removeRecipeByOutput(new ItemStack(Blocks.wooden_slab, 1, 0) /*getItemStack("minecraft", "wooden_slab", 1, GT_Values.W)*/);
+
+
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "crafting_table", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "chest", 1L, 0), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "trapped_chest", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "dispenser", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "dropper", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "sticky_piston", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "noteblock", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "jukebox", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "trapdoor", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "stone_pressure_plate", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "wooden_pressure_plate", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "glass_pane", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "torch", 1L, 0), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "fence", 1L, 0), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "fence_gate", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "tripwire_hook", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "anvil", 1L, 0), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "wooden_door", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "iron_door", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "diamond_sword", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "diamond_shovel", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "diamond_pickaxe", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "diamond_axe", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "diamond_hoe", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "diamond_helmet", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "diamond_chestplate", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "diamond_leggings", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "diamond_boots", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "saddle", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "item_frame", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "bed", 1L, 0), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "fishing_rod", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "ladder", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "stone_pressure_plate", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "wooden_pressure_plate", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "enchanting_table", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "brewing_stand", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "lit_pumpkin", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "redstone_lamp", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "daylight_detector", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "comparator", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "repeater", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "ender_eye", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(new ItemStack(Blocks.carpet, 1, GT_Values.W), true, false, false);
+        removeRecipeByOutput(new ItemStack(Blocks.stained_glass_pane, 1, GT_Values.W), true, false,
+                false);
+        removeRecipeByOutput(new ItemStack(Items.enchanted_book, 1, 0), true, false,
+                false);
+
+        removeRecipeByOutput(getItemStack("minecraft", "ender_chest", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "iron_ingot", 1, 0), true, false,
+                false);
+
+        removeRecipeByOutput(getItemStack("minecraft", "wooden_button", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "stone_slab", 1, GT_Values.W), true, false,
+                false);
     }
 
     private void handRecipe() {
@@ -36,8 +145,6 @@ public class Vanilla implements Runnable {
                 "stoneNetherBrick")});
         GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.stone_slab, 2, 7), new Object[]{"TB", 'T', "craftingToolSaw", 'B', ordictItemStack(
                 "blockQuartz")});
-
-        RecipeUtils.removeRecipeByOutput(getItemStack("minecraft", "wooden_slab", 1, GT_Values.W));
 
         for (int i = 0; i <= 5; i++) {
             GT_ModHandler.addCraftingRecipe(new ItemStack(Blocks.wooden_slab, 2, i), new Object[]{"TB", 'T', "craftingToolSaw", 'B',
