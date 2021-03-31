@@ -26,6 +26,7 @@ public class LaserEngraver implements IOreRecipeRegistrator {
     public void registerOre(OrePrefixes aPrefix, Materials aMaterial, String aOreDictName, String aModName, ItemStack aStack) {
         switch (aOreDictName) {
             case "craftingLensRed":
+                RA.addLaserEngraverRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Redstone, 1L), GT_Utility.copyAmount(0L, aStack), GT_ItemList.RedstoneRedChipset.get(1L), 50, 120, false);
                 RA.addLaserEngraverRecipe(ItemList.EnergyCrystal.get(1L), GT_Utility.copyAmount(0L, aStack), GT_ItemList.EngravedEnergyChip.get(1L), 600, 4096, true);
                 RA.addLaserEngraverRecipe(CoreItems2.getRecipe(154, 1), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("OpenComputers", "item", 16L, 24), 600, 120, false);
                 RA.addLaserEngraverRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 5), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 6), 500, 30, false);
