@@ -1088,7 +1088,7 @@ public class ImpactCore implements Runnable {
         RA.addMixerRecipe(CoreItems.getRecipe(35, 8), Materials.MysteriousCrystal.getDust(2),
                 Materials.Oriharukon.getDust(2), Materials.BlackPlutonium.getDustTiny(1),
                 GT_Utility.getIntegratedCircuit(1), GT_Values.NI, Materials.Mutagen.getFluid(2000),
-                Materials.BioMediumRaw.getFluid(1000), Materials.Diamond.getDustSmall(2), 200, 122880);
+                Materials.BioMediumRaw.getFluid(4000), Materials.Diamond.getDustSmall(2), 200, 122880);
         RA.addMixerRecipe(CoreItems.getRecipe(28, 32), Materials.MysteriousCrystal.getDust(8),
                 Materials.Oriharukon.getDust(8), Materials.InfinityCatalyst.getDustTiny(1),
                 GT_Utility.getIntegratedCircuit(2), GT_Values.NI, Materials.Mutagen.getFluid(8000),
@@ -1096,7 +1096,7 @@ public class ImpactCore implements Runnable {
         RA.addMixerRecipe(CoreItems.getRecipe(35, 32), Materials.MysteriousCrystal.getDust(8),
                 Materials.Oriharukon.getDust(8), Materials.InfinityCatalyst.getDustTiny(1),
                 GT_Utility.getIntegratedCircuit(2), GT_Values.NI, Materials.Mutagen.getFluid(8000),
-                Materials.BioMediumRaw.getFluid(8000), Materials.Diamond.getDustTiny(2), 400, 122880);
+                Materials.BioMediumRaw.getFluid(16000), Materials.Diamond.getDustTiny(2), 400, 122880);
 
         RA.addMixerRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Stone, 2L),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Gypsum, 1L),
@@ -1492,22 +1492,20 @@ public class ImpactCore implements Runnable {
         GT_Values.RA.addFarmRecipe(CoreItems2.getRecipe(BarnardaCScheme.getMetaID(), 0),
                 CoreItems.getRecipe(DustTinyFertilizer.getMetaID(), 1), GT_Utility.getIntegratedCircuit(1),
                 Materials.Water.getFluid(1000L), GT_Values.NF,
-                new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "barnardaClog", 25L),
-                        GT_ModHandler.getModItem("GalaxySpace", "barnardaClog", 3L),
-                        GT_ModHandler.getModItem("GalaxySpace", "barnardaCsapling", 3L),
-                        GT_ModHandler.getModItem("GalaxySpace", "barnardaCsapling", 2L),
-                        GT_ModHandler.getModItem("GalaxySpace", "BarnardaCStrawberry", 3L)},
-                new int[]{10000, 4000, 10000, 6000, 2000}, 200, 120);
+                new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "barnardaclog", 25L),
+                        GT_ModHandler.getModItem("GalaxySpace", "barnardalog", 3L),
+                        GT_ModHandler.getModItem("minecraft", "sapling", 3L, 3),
+                        GT_ModHandler.getModItem("minecraft", "sapling", 2L, 3)},
+                new int[]{10000, 4000, 10000, 6000}, 200, 120);
         GT_Values.RA.addFarmRecipe(CoreItems2.getRecipe(BarnardaCScheme.getMetaID(), 0),
                 CoreItems.getRecipe(DustSmallFertilizer.getMetaID(), 1), GT_Utility.getIntegratedCircuit(2),
                 Materials.Water.getFluid(1000L), GT_Values.NF,
-                new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "barnardaClog", 25L),
-                        GT_ModHandler.getModItem("GalaxySpace", "barnardaClog", 3L),
-                        GT_ModHandler.getModItem("GalaxySpace", "barnardaCsapling", 5L),
-                        GT_ModHandler.getModItem("GalaxySpace", "BarnardaCStrawberry", 3L),
-                        GT_ModHandler.getModItem("GalaxySpace", "barnardaCdandelion3", 5L),
-                        GT_ModHandler.getModItem("GalaxySpace", "barnardaCleaves", 24L)},
-                new int[]{10000, 4000, 10000, 2000, 10000, 10000}, 400, 120);
+                new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "barnardaclog", 25L),
+                        GT_ModHandler.getModItem("GalaxySpace", "barnardaclog", 3L),
+                        GT_ModHandler.getModItem("minecraft", "sapling", 5L, 3),
+                        GT_ModHandler.getModItem("GalaxySpace", "barnardacdandelions", 5L, 1),
+                        GT_ModHandler.getModItem("GalaxySpace", "barnardacleaves", 24L)},
+                new int[]{10000, 4000, 10000, 10000, 10000}, 400, 120);
     }
 
     private void extruder() {
@@ -1817,12 +1815,12 @@ public class ImpactCore implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.Neutronium, 1L),
                 GT_ModHandler.getModItem("minecraft", "sand", 1L), GT_Values.NI, GT_Values.NI, GT_Values.NI,
                 new int[]{5000, 1000, 5000}, 400, 8);
-        GT_Values.RA.addCentrifugeRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardaCdirt", 1L),
+        GT_Values.RA.addCentrifugeRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardacblocks", 1L),
                 GT_Values.NI, GT_Values.NF, GT_Values.NF, CoreItems2.getRecipe(151, 1),
                 GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.Neutronium, 1L),
                 GT_ModHandler.getModItem("minecraft", "sand", 1L), GT_Values.NI, GT_Values.NI, GT_Values.NI,
                 new int[]{2500, 1000, 5000}, 400, 8);
-        GT_Values.RA.addCentrifugeRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardaClog", 1L),
+        GT_Values.RA.addCentrifugeRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardaclog", 1L),
                 GT_Values.NI, GT_Values.NF, Materials.Radon.getGas(60L), CoreItems2.getRecipe(151, 1),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Carbon, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Wood, 1L), GT_Values.NI, GT_Values.NI,
@@ -1847,7 +1845,7 @@ public class ImpactCore implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.AlienOrganic, 4L), GT_Values.NI,
                         GT_Values.NI, GT_Values.NI, new int[]{10000, 10000, 10000}, 400, 8);
         GT_Values.RA
-                .addCentrifugeRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardaCdandelions", 64L, 1),
+                .addCentrifugeRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardacdandelions", 64L, 1),
                         GT_Values.NI, GT_Values.NF, Materials.Biomass.getGas(1000L),
                         GT_ModHandler.getModItem("IC2", "itemFuelPlantBall", 64L),
                         CoreItems2.getRecipe(151, 16),
@@ -2984,7 +2982,7 @@ public class ImpactCore implements Runnable {
         GT_Values.RA
                 .addCompressorRecipe(CoreItems2.getRecipe(125, 9), CoreItems2.getRecipe(126, 1), 400, 1920);
         GT_Values.RA
-                .addCompressorRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardaCsapling", 8L),
+                .addCompressorRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardacleaves", 16L),
                         CoreItems2.getRecipe(151, 1), 200, 8);
 
         GT_Values.RA
@@ -3185,7 +3183,8 @@ public class ImpactCore implements Runnable {
                         CoreItems2.getRecipe(RubberScheme.getMetaID(), 1), 200, 30);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Bio, 1L),
-                                GT_ModHandler.getModItem("GalaxySpace", "barnardaCsapling", 64L, 1)},
+                                GT_ModHandler.getModItem("minecraft", "sapling", 64L, 3),
+                                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.AlienOrganic, 64L)},
                         tMat.getMolten(1152L * tMultiplier / 2L),
                         CoreItems2.getRecipe(BarnardaCScheme.getMetaID(), 1), 1000, 8000000);
 

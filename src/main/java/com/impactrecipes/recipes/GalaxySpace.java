@@ -592,15 +592,15 @@ public class GalaxySpace implements Runnable {
                                 GT_OreDictUnificator.get(OrePrefixes.dustSmall, Materials.MysteriousCrystal, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.MysteriousCrystal, 1)},
                         new int[]{10000, 3500, 2000, 1500}, 200, 480);
-        RA.addPulveriserRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardaClog", 1L),
+        RA.addPulveriserRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardaclog", 1L),
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Wood, 6L),
                         CoreItems2.getRecipe(151, 1)}, new int[]{10000, 3300}, 600, 8);
-        RA.addPulveriserRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardaCleaves", 8L),
+        RA.addPulveriserRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardacleaves", 8L),
                 new ItemStack[]{CoreItems2.getRecipe(152, 1),
-                        GT_ModHandler.getModItem("GalaxySpace", "barnardaCdandelion3", 1L)},
+                        GT_ModHandler.getModItem("GalaxySpace", "barnardacdandelions", 1L, 1)},
                 new int[]{10000, 5000}, 200, 2);
         RA.addPulveriserRecipe(CoreItems2.getRecipe(152, 1),
-                new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "barnardaCdirt", 1L),
+                new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "barnardacblocks", 1L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.AlienOrganic, 1L)},
                 new int[]{10000, 2000}, 100, 40);
         RA
