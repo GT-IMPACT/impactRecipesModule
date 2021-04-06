@@ -3183,12 +3183,13 @@ public class ImpactCore implements Runnable {
                         CoreItems2.getRecipe(RubberScheme.getMetaID(), 1), 200, 30);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Bio, 1L),
+								GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.DraconiumAwakened, 4L),
                                 GT_ModHandler.getModItem("minecraft", "sapling", 64L, 3),
-                                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.AlienOrganic, 64L)},
+                                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.AlienOrganic, 64L),
+								GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Phoenixite, 64L),
+								GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CosmicNeutronium, 64L)},
                         tMat.getMolten(1152L * tMultiplier / 2L),
                         CoreItems2.getRecipe(BarnardaCScheme.getMetaID(), 1), 1000, 8000000);
-
-
             }
         }
     }
