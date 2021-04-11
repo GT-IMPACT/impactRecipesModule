@@ -1493,7 +1493,7 @@ public class ImpactCore implements Runnable {
                 CoreItems.getRecipe(DustTinyFertilizer.getMetaID(), 1), GT_Utility.getIntegratedCircuit(1),
                 Materials.Water.getFluid(1000L), GT_Values.NF,
                 new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "barnardaclog", 25L),
-                        GT_ModHandler.getModItem("GalaxySpace", "barnardalog", 3L),
+                        GT_ModHandler.getModItem("GalaxySpace", "barnardaclog", 3L),
                         GT_ModHandler.getModItem("minecraft", "sapling", 3L, 3),
                         GT_ModHandler.getModItem("minecraft", "sapling", 2L, 3)},
                 new int[]{10000, 4000, 10000, 6000}, 200, 120);
