@@ -17,6 +17,7 @@ import net.minecraftforge.fluids.FluidStack;
 
 import static com.impact.common.item.Core_List_Items.NeutronReflectorParts;
 import static com.impact.common.item.Core_List_Items.NeutronReflectorSmallParts;
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class IC2 implements Runnable {
@@ -39,6 +40,7 @@ public class IC2 implements Runnable {
         fluidCanner();
         extruder();
         assembler();
+        disassembler();
     }
 
     private void removeIC2() {
@@ -565,5 +567,23 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.CinobiteA243, 12)
                 }, GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 11), null, 50 * 20,
                 65536);
+    }
+
+    public void disassembler() {
+        // --- Reactor Chamber
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("IC2", "blockReactorChamber", 1L, 0),
+                new ItemStack[]{
+                        ItemList.Hull_EV.get(1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Lead, 4)
+                }, 2000, 256);
+
+        // --- Nuclear Reactor
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("IC2", "blockGenerator", 1L, 5),
+                new ItemStack[]{
+                        ItemList.Hull_IV.get(1L), ItemList.Robot_Arm_IV.get(2L),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Titanium, 4),
+                        ItemList.Circuit_Data.get(4),
+                        GT_ModHandler.getModItem("IC2", "blockReactorChamber", 4L, 0), CoreItems2.getRecipe(141, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 12)
+                }, 400 * 20, 1920);
     }
 }
