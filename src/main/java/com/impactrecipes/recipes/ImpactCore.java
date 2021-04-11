@@ -305,6 +305,9 @@ public class ImpactCore implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ItemList.Long_Distance_Pipeline_Item.get(1L), tBitMask, new Object[]{"GPG", "IwI", "GPG",'G' ,GT_OreDictUnificator.get(OrePrefixes.gear, Materials.Steel, 1L), 'P', GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1L), 'I', GT_OreDictUnificator.get(OrePrefixes.pipeHuge, Materials.Tin, 1L)});
         GT_ModHandler.addCraftingRecipe(GT_ItemList.Long_Distance_Pipeline_Fluid_Pipe.get(32L), tBitMask, new Object[]{"PPP", "IwI", "PPP", 'P',GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1L), 'I', GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Steel, 1L)});
         GT_ModHandler.addCraftingRecipe(GT_ItemList.Long_Distance_Pipeline_Item_Pipe.get(32L), tBitMask, new Object[]{"PPP", "IwI", "PPP", 'P',GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1L), 'I', GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Tin, 1L)});
+
+        // --- Regulate Digital Chest
+        GT_ModHandler.addCraftingRecipe(GT_ItemList.Regulate_Digital_Chest.get(1L), bitsd, new Object[]{"COY", 'C', OrePrefixes.circuit.get(Materials.Advanced), 'O', ItemList.Super_Chest_LV, 'Y', ItemList.Conveyor_Module_HV});
     }
 
     private void furnace() {
