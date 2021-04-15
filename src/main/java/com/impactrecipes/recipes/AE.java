@@ -450,6 +450,12 @@ public class AE implements Runnable {
                 new Object[]{"DGE", "PPP", 'P', OrePrefixes.plate.get(Materials.VanadiumSteel), 'E', OrePrefixes.plate.get(Materials.EnderPearl),
                         'G', OrePrefixes.gem.get(Materials.CertusQuartz),
                         'D', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 8)});
+        // --- OreDict Filter Card
+        addShapelessCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 55), tBitMask,
+                new Object[]{GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 28),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 23),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 23),
+                        GT_ModHandler.getModItem("EnderIO", "itemBasicFilterUpgrade", 1L, 1)});
         // --- ME Annihilation Plane
         addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 300), tBitMask,
                 new Object[]{"DDD", "PAP", 'P', OrePrefixes.plate.get(Materials.VanadiumSteel),
