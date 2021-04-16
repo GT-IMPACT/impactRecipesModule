@@ -908,7 +908,7 @@ public class TecTech implements Runnable {
                 48000, 128, 1000000, 4, new Object[]{
                         ItemList.Hull_UEV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.SuperconductorUEV, 6L),
-                        ItemList.Circuit_Chip_QPIC.get(4L),
+                        ItemList.Circuit_Chip_FPIC.get(2L),
                         ItemList.Circuit_HighEnergyFlow.get(2L),
                         new Object[]{OrePrefixes.circuit.get(Materials.Bio), 2},
                         ItemList.UEV_Coil.get(2L),
@@ -921,25 +921,6 @@ public class TecTech implements Runnable {
                         Materials.SolderingAlloy.getMolten(11520)
                 },
                 ItemList.Hatch_Energy_UEV.get(1), 1200, 8000000);
-
-        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Hatch_Energy_UEV.get(1L),
-                96000, 256, 2000000, 4, new Object[]{
-                        ItemList.Hull_UIV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Neutronium, 8L),
-                        ItemList.Circuit_Chip_QPIC.get(8L),
-                        ItemList.Circuit_HighEnergyFlow.get(4L),
-                        new Object[]{OrePrefixes.circuit.get(Materials.Bio), 2},
-                        ItemList.UIV_Coil.get(2L),
-                        ItemList.Reactor_Coolant_Le_2.get(1L),
-                        ItemList.Reactor_Coolant_Le_2.get(1L),
-                        ItemList.Reactor_Coolant_Le_2.get(1L),
-                        ItemList.Reactor_Coolant_Le_2.get(1L),
-                        ItemList.Electric_Pump_UEV.get(1L)},
-                new FluidStack[]{
-                        new FluidStack(FluidRegistry.getFluid("ic2coolant"), 64000),
-                        Materials.SolderingAlloy.getMolten(23040)
-                },
-                ItemList.Hatch_Energy_UIV.get(1), 1400, 32000000);
 
         //UHV - UIV Dynamo Hatches
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Hatch_Dynamo_UV.get(1L),
@@ -967,7 +948,7 @@ public class TecTech implements Runnable {
                 48000, 128, 1000000, 4, new Object[]{
                         ItemList.Hull_UEV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Diamericiumtitanium, 6L),
-                        ItemList.Circuit_Chip_QPIC.get(4L),
+                        ItemList.Circuit_Chip_FPIC.get(2L),
                         ItemList.Circuit_HighEnergyFlow.get(2L),
                         new Object[]{OrePrefixes.circuit.get(Materials.Bio), 2},
                         ItemList.UEV_Coil.get(2L),
@@ -980,25 +961,6 @@ public class TecTech implements Runnable {
                         Materials.SolderingAlloy.getMolten(11520)
                 },
                 ItemList.Hatch_Dynamo_UEV.get(1), 1200, 8000000);
-
-        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Hatch_Dynamo_UEV.get(1L),
-                96000, 256, 2000000, 4, new Object[]{
-                        ItemList.Hull_UIV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Neutronium, 8L),
-                        ItemList.Circuit_Chip_QPIC.get(8L),
-                        ItemList.Circuit_HighEnergyFlow.get(4L),
-                        new Object[]{OrePrefixes.circuit.get(Materials.Bio), 2},
-                        ItemList.UIV_Coil.get(2L),
-                        ItemList.Reactor_Coolant_Le_2.get(1L),
-                        ItemList.Reactor_Coolant_Le_2.get(1L),
-                        ItemList.Reactor_Coolant_Le_2.get(1L),
-                        ItemList.Reactor_Coolant_Le_2.get(1L),
-                        ItemList.Electric_Pump_UEV.get(1L)},
-                new FluidStack[]{
-                        new FluidStack(FluidRegistry.getFluid("ic2coolant"), 64000),
-                        Materials.SolderingAlloy.getMolten(23040)
-                },
-                ItemList.Hatch_Dynamo_UIV.get(1), 1400, 32000000);
 
         //Stargate Stuff
         //if (Loader.isModLoaded("SGCraft")) {
