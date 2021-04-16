@@ -1052,13 +1052,6 @@ public class Gregtech implements Runnable {
                         .getDust(Materials.NaquadahAlloy, 4L * OrePrefixes.dust.mMaterialAmount),
                 (int) (400L * OrePrefixes.dust.mMaterialAmount / 3628800L), 8000);
 
-        RA.addMixerRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.CosmicNeutronium, 64L),
-                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DraconiumAwakened, 48L),
-                CoreItems.getRecipe(36, 32),
-                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.InfinityCatalyst, 16L),
-                GT_Utility.getIntegratedCircuit(1), GT_Values.NI, GT_Values.NF, GT_Values.NF,
-                GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.Infinity, 1L),
-                1000, 2000000);
         RA.addMixerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.cell, Materials.NitricAcid, 1L), GT_Values.NI,
                 GT_Values.NI, GT_Values.NI,
@@ -1075,6 +1068,9 @@ public class Gregtech implements Runnable {
         RA.addFusionReactorRecipe(Materials.EnrichedTartarite.getFluid(16),
                 Materials.Neutronium.getMolten(16), Materials.DraconiumAwakenedPlasma.getFluid(16), 64,
                 262144, 1000000000);
+        RA.addFusionReactorRecipe(Materials.InfinityCatalyst.getMolten(16),
+                Materials.Phoenixite.getMolten(16), Materials.Neutronium.getPlasma(16), 64,
+                800000, 2000000000);
     }
 
     private void freezSolidifier() {

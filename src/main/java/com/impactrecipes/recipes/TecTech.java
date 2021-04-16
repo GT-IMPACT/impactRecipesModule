@@ -1022,7 +1022,7 @@ public class TecTech implements Runnable {
                 .addResearchableAssemblylineRecipe(GT_ModHandler.getModItem("SGCraft", "sgIrisUpgrade", 1L),
                         192000, 512, 2000000, 16, new Object[]{
                                 GT_ModHandler.getModItem("SGCraft", "stargateController", 1L),
-                                GT_ModHandler.getModItem("SGCraft", "stargateBase", 1L),
+                                ItemList.Teleporter.get(1L),
                                 ItemList.Field_Generator_UEV.get(4L),
                                 ItemList.Sensor_UEV.get(16L),
                                 ItemList.Emitter_UEV.get(16L),
@@ -1032,7 +1032,7 @@ public class TecTech implements Runnable {
                                 new Object[]{OrePrefixes.circuit.get(Materials.Quantum), 1}
                         },
                         new FluidStack[]{
-                                Materials.InfinityCatalyst.getMolten(2304L),
+                                Materials.Infinity.getMolten(2304L),
                                 Materials.PerroxPolymer.getMolten(9216L),
                                 Materials.Phoenixite.getMolten(9216L),
                                 Materials.Americium.getPlasma(9216L)

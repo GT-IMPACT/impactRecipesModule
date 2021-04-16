@@ -67,6 +67,7 @@ public class ImpactCore implements Runnable {
         wireassembler();
         disassembler();
         cyclon();
+        tesseract();
     }
 
     private void hand() {
@@ -3056,6 +3057,20 @@ public class ImpactCore implements Runnable {
                 Utilits.arrayFS(Materials.NitrogenDioxide.getGas(3000L)),
                 null, 8 * 20, 30
         );
+
+        //InfinityCatalyst
+        GT_Values.RA.addMultiblockChemicalRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("SGCraft", "sgCoreCrystal", 1L), ItemList.Gravistar.get(16),
+                        Materials.CosmicNeutronium.getDust(32), Materials.Adamantium.getDust(64)},
+                new FluidStack[]{Materials.InfinityCatalyst.getMolten(5760L)}, new FluidStack[]{GT_Values.NF},
+                new ItemStack[]{CoreItems2.getRecipe(181, 1)}, 3000, 8000000);
+
+        //Infinity
+        GT_Values.RA.addMultiblockChemicalRecipe(
+                new ItemStack[]{CoreItems2.getRecipe(181, 1), GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Adamantium, 1L)},
+                new FluidStack[]{Materials.Neutronium.getPlasma(144L)}, new FluidStack[]{Materials.Neutronium.getMolten(144L)},
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Infinity, 1L)}, 4000, 8000000);
+
     }
 
     private void bath() {
@@ -4011,7 +4026,15 @@ public class ImpactCore implements Runnable {
     }
 
     public void cyclon() {
-        GT_Values.RA.addCyclonRecipe(new ItemStack[]{Materials.Draconium.getDust(1)}, new FluidStack[]{Materials.NaquadhaGas.getGas(100), Materials.SulfuricAcid.getFluid(900)}, new FluidStack[]{Materials.DilutedSulfuricAcid.getFluid(900)}, new ItemStack[]{Materials.DeepIron.getDustTiny(1), Materials.Naquadah.getDustTiny(1), Materials.Osmium.getDustTiny(1), Materials.DraconiumAwakened.getDustTiny(1)}, new int[]{10000, 10000, 10000, 10000}, 200, 2000000);
-        GT_Values.RA.addCyclonRecipe(new ItemStack[]{Materials.BlackPlutonium.getDust(1)}, new FluidStack[]{Materials.EnrichedNaquadria.getFluid(144), Materials.SulfuricAcid.getFluid(900)}, new FluidStack[]{Materials.DilutedSulfuricAcid.getFluid(900)}, new ItemStack[]{Materials.Uranium235.getDustSmall(1), Materials.Plutonium.getDustSmall(1), Materials.Plutonium241.getDustTiny(1), Materials.CosmicNeutronium.getDustTiny(1)}, new int[]{10000, 10000, 10000, 10000}, 300, 2000000);
+        RA.addCyclonRecipe(new ItemStack[]{Materials.Draconium.getDust(1)}, new FluidStack[]{Materials.NaquadhaGas.getGas(100), Materials.SulfuricAcid.getFluid(900)}, new FluidStack[]{Materials.DilutedSulfuricAcid.getFluid(900)}, new ItemStack[]{Materials.DeepIron.getDustTiny(1), Materials.Naquadah.getDustTiny(1), Materials.Osmium.getDustTiny(1), Materials.DraconiumAwakened.getDustTiny(1)}, new int[]{10000, 10000, 10000, 10000}, 200, 2000000);
+        RA.addCyclonRecipe(new ItemStack[]{Materials.Adamantium.getDust(1)}, new FluidStack[]{Materials.NaquadriaLiquid.getFluid(100), Materials.SulfuricAcid.getFluid(900)}, new FluidStack[]{Materials.DilutedSulfuricAcid.getFluid(900)}, new ItemStack[]{Materials.Trinium.getDustTiny(1), Materials.Americium.getDustTiny(1), Materials.Tungsten.getDustTiny(1), Materials.InfinityCatalyst.getDustTiny(1)}, new int[]{10000, 10000, 10000, 10000}, 250, 2000000);
+        RA.addCyclonRecipe(new ItemStack[]{Materials.BlackPlutonium.getDust(1)}, new FluidStack[]{Materials.EnrichedNaquadria.getFluid(144), Materials.SulfuricAcid.getFluid(900)}, new FluidStack[]{Materials.DilutedSulfuricAcid.getFluid(900)}, new ItemStack[]{Materials.Uranium235.getDustSmall(1), Materials.Plutonium.getDustSmall(1), Materials.Plutonium241.getDustTiny(1), Materials.CosmicNeutronium.getDustTiny(1)}, new int[]{10000, 10000, 10000, 10000}, 300, 2000000);
+    }
+
+    public void tesseract() {
+        //Tesseract
+        GT_Values.RA.addTesseractRecipe(GT_Values.NI, Materials.HyperFuelI.getFluid(1000L), GT_Values.NF, GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Osmium, 64L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Iridium, 64L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.MysteriousCrystal, 51L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Desh, 47L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Quantium, 25L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.AlienOrganic, 16L), new int[]{10000, 10000, 10000, 10000, 10000, 10000}, 500, 8000000);
+        GT_Values.RA.addTesseractRecipe(GT_Values.NI, Materials.HyperFuelII.getFluid(1000L), GT_Values.NF, GT_OreDictUnificator.get(OrePrefixes.gemExquisite, Materials.GarnetYellow, 64L), GT_OreDictUnificator.get(OrePrefixes.gemFlawless, Materials.Amethyst, 64L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadah, 57L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Draconium, 49L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Adamantium, 36L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NetherStar, 20L), new int[]{10000, 10000, 10000, 10000, 10000, 10000}, 400, 8000000);
+        GT_Values.RA.addTesseractRecipe(GT_Values.NI, Materials.HyperFuelIII.getFluid(1000L), GT_Values.NF, GT_OreDictUnificator.get(OrePrefixes.gemExquisite, Materials.GarnetRed, 64L), GT_OreDictUnificator.get(OrePrefixes.gemFlawless, Materials.MysteriousCrystal, 64L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Oriharukon, 61L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadria, 53L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.BlackPlutonium, 47L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Americium, 39L), new int[]{10000, 10000, 10000, 10000, 10000, 10000}, 300, 8000000);
     }
 }
