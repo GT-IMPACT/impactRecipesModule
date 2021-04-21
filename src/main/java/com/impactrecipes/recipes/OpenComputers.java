@@ -650,7 +650,7 @@ public class OpenComputers implements Runnable {
                         GT_ModHandler.getModItem("OpenComputers", "item", 1L, 92), 400, 256);
                 // --- Remote Terminal
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[]{GT_ModHandler.getModItem("PracticalLogistics", "LargeDisplayScreen", 1L),
+                        new ItemStack[]{Itemstack(Core_Items2.getInstance(), 1, 182),
                                 GT_ModHandler.getModItem("OpenComputers", "item", 1L, 13),
                                 GT_ModHandler.getModItem("OpenComputers", "item", 2L, 26),
                                 GT_ModHandler.getModItem("OpenComputers", "keyboard", 1L, 0),
@@ -678,39 +678,39 @@ public class OpenComputers implements Runnable {
 
                 // --- Screen t1
                 GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Casing_MV.get(1L),
-                                GT_ModHandler.getModItem("PracticalLogistics", "LargeDisplayScreen", 1L),
+                                Itemstack(Core_Items2.getInstance(), 1, 182),
                                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 2L),
                                 ItemList.Circuit_Parts_Transistor.get(2L), GT_Utility.getIntegratedCircuit(1)},
                         tMat.getMolten(144L * tMultiplier / 2L),
                         GT_ModHandler.getModItem("OpenComputers", "screen1", 1L, 0), 240, 64);
                 GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Casing_MV.get(1L),
-                                GT_ModHandler.getModItem("PracticalLogistics", "LargeDisplayScreen", 1L),
+                                Itemstack(Core_Items2.getInstance(), 1, 182),
                                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 2L),
                                 ItemList.Circuit_Parts_TransistorSMD.get(1L), GT_Utility.getIntegratedCircuit(1)},
                         tMat.getMolten(144L * tMultiplier / 2L),
                         GT_ModHandler.getModItem("OpenComputers", "screen1", 1L, 0), 240, 64);
                 // --- Screen t2
                 GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Casing_HV.get(1L),
-                                GT_ModHandler.getModItem("PracticalLogistics", "LargeDisplayScreen", 1L),
+                                Itemstack(Core_Items2.getInstance(), 1, 182),
                                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2L),
                                 ItemList.Circuit_Parts_Transistor.get(4L), GT_Utility.getIntegratedCircuit(1)},
                         tMat.getMolten(144L * tMultiplier / 2L),
                         GT_ModHandler.getModItem("OpenComputers", "screen2", 1L, 0), 240, 120);
                 GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Casing_HV.get(1L),
-                                GT_ModHandler.getModItem("PracticalLogistics", "LargeDisplayScreen", 1L),
+                                Itemstack(Core_Items2.getInstance(), 1, 182),
                                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2L),
                                 ItemList.Circuit_Parts_TransistorSMD.get(2L), GT_Utility.getIntegratedCircuit(1)},
                         tMat.getMolten(144L * tMultiplier / 2L),
                         GT_ModHandler.getModItem("OpenComputers", "screen2", 1L, 0), 240, 120);
                 // --- Screen t3
                 GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Casing_EV.get(1L),
-                                GT_ModHandler.getModItem("PracticalLogistics", "LargeDisplayScreen", 1L),
+                                Itemstack(Core_Items2.getInstance(), 1, 182),
                                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2L),
                                 ItemList.Circuit_Parts_Transistor.get(8L), GT_Utility.getIntegratedCircuit(1)},
                         tMat.getMolten(288L * tMultiplier / 2L),
                         GT_ModHandler.getModItem("OpenComputers", "screen3", 1L, 0), 240, 256);
                 GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Casing_EV.get(1L),
-                                GT_ModHandler.getModItem("PracticalLogistics", "LargeDisplayScreen", 1L),
+                                Itemstack(Core_Items2.getInstance(), 1, 182),
                                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2L),
                                 ItemList.Circuit_Parts_TransistorSMD.get(4L), GT_Utility.getIntegratedCircuit(1)},
                         tMat.getMolten(288L * tMultiplier / 2L),

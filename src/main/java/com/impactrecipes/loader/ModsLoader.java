@@ -27,7 +27,6 @@ public class ModsLoader {
         new TecTech().run();
         new ProjectRed().run();
         new OpenBlocks().run();
-        new PracticalLogistics().run();
         new ImpactCore().run();
         new GalaxySpace().run();
         new GalactiCraft().run();
@@ -64,7 +63,6 @@ public class ModsLoader {
         registerRecipeClass(TecTech.class);
         registerRecipeClass(ProjectRed.class);
         registerRecipeClass(OpenBlocks.class);
-        registerRecipeClass(PracticalLogistics.class);
         registerRecipeClass(ImpactCore.class);
         registerRecipeClass(GalaxySpace.class);
         registerRecipeClass(GalactiCraft.class);

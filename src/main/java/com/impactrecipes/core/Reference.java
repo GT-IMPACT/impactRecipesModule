@@ -27,7 +27,6 @@ public class Reference {
     public final static String TECTECH = "tectech";
     public final static String PROJECTRED = "ProjRed|Core";
     public final static String OPENBLOCKS = "OpenBlocks";
-    public final static String PL = "PracticalLogistics";
     public final static String IMPACT = "impact";
     public final static String IC2 = "IC2";
     public final static String GRAVISUITE = "GraviSuite";
