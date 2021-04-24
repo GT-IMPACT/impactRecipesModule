@@ -491,12 +491,14 @@ public class IC2 implements Runnable {
                         GT_Utility.getIntegratedCircuit(1)}, null,
                 GT_ModHandler.getModItem("IC2", "reactorReflectorThick", 1L, 1), 600, 64);
         GT_Values.RA.addAssemblerRecipe(
-                new ItemStack[]{CoreItems2.getRecipe(NeutronReflectorSmallParts.getMetaID(), 8),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Californium, 1),
+                        CoreItems2.getRecipe(NeutronReflectorSmallParts.getMetaID(), 8),
                         GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Beryllium, 16),
                         GT_Utility.getIntegratedCircuit(2)}, null,
                 CoreItems2.getRecipe(NeutronReflectorParts.getMetaID(), 1), 400, 256);
         GT_Values.RA.addAssemblerRecipe(
-                new ItemStack[]{CoreItems2.getRecipe(NeutronReflectorSmallParts.getMetaID(), 8),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Californium, 1),
+                        CoreItems2.getRecipe(NeutronReflectorSmallParts.getMetaID(), 8),
                         GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TungstenCarbide, 8),
                         GT_Utility.getIntegratedCircuit(2)}, null,
                 CoreItems2.getRecipe(NeutronReflectorParts.getMetaID(), 1), 400, 256);
