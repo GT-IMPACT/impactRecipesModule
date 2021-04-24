@@ -19,6 +19,7 @@ import static com.impact.common.item.Core_List_Items.*;
 import static com.impact.loader.ItemRegistery.*;
 import static com.impact.loader.ItemRegistery.UtilBlock;
 import static com.impact.util.Utilits.Blockstack;
+import static com.impact.util.Utilits.Itemstack;
 import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.RecipeBits.DELETE_ALL_OTHER_RECIPES;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
@@ -3979,6 +3980,14 @@ public class Gregtech implements Runnable {
                 ItemList.AdsorptionFilterCasing.get(1L),
                 ItemList.AdsorptionFilter.get(1L),
                 null, 100, 120);
+
+        GT_Values.RA.addCannerRecipe(ItemList.Large_Fluid_Cell_TungstenSteel.get(1L),
+                Itemstack(Core_Items2.getInstance(), 1, 184),
+                ItemList.NaquadahCell_1.get(1L), null, 30, 16);
+        GT_Values.RA.addCannerRecipe(ItemList.Large_Fluid_Cell_TungstenSteel.get(1L),
+                Itemstack(Core_Items2.getInstance(), 1, 186),
+                ItemList.MNqCell_1.get(1L), null, 30, 16);
+
     }
 
     private void distil() {

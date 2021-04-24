@@ -17,6 +17,7 @@ import net.minecraftforge.fluids.FluidStack;
 
 import static com.impact.common.item.Core_List_Items.NeutronReflectorParts;
 import static com.impact.common.item.Core_List_Items.NeutronReflectorSmallParts;
+import static com.impact.util.Utilits.Itemstack;
 import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
@@ -221,30 +222,121 @@ public class IC2 implements Runnable {
     }
 
     private void thermalCentrifuge() {
-        GT_ModHandler.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorMOXSimpledepleted", 1L),
-                5000, GT_ModHandler.getModItem("IC2", "itemPlutoniumSmall", 1L),
-                GT_ModHandler.getModItem("IC2", "itemPlutonium", 3L),
-                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 1L));
-        GT_ModHandler.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorMOXDualdepleted", 1L),
-                5000, GT_ModHandler.getModItem("IC2", "itemPlutoniumSmall", 2L),
-                GT_ModHandler.getModItem("IC2", "itemPlutonium", 6L),
-                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 3L));
-        GT_ModHandler.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorMOXQuaddepleted", 1L),
-                5000, GT_ModHandler.getModItem("IC2", "itemPlutoniumSmall", 4L),
-                GT_ModHandler.getModItem("IC2", "itemPlutonium", 12L),
-                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 6L));
-        GT_ModHandler.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorUraniumSimpledepleted", 1L),
-                5000, GT_ModHandler.getModItem("IC2", "itemPlutoniumSmall", 1L),
-                GT_ModHandler.getModItem("IC2", "itemUran238", 4L),
-                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 1L));
-        GT_ModHandler.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorUraniumDualdepleted", 1L),
-                5000, GT_ModHandler.getModItem("IC2", "itemPlutoniumSmall", 2L),
-                GT_ModHandler.getModItem("IC2", "itemUran238", 8L),
-                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 3L));
-        GT_ModHandler.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorUraniumQuaddepleted", 1L),
-                5000, GT_ModHandler.getModItem("IC2", "itemPlutoniumSmall", 4L),
-                GT_ModHandler.getModItem("IC2", "itemUran238", 16L),
-                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 6L));
+        // --- U Fuel
+        GT_Values.RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorUraniumSimpledepleted", 1L),
+                new ItemStack[]{
+                        GT_ModHandler.getModItem("IC2", "itemUran238", 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium235, 1L)
+                },
+                new int[]{10000,10000,1000,1000},200,500);
+        GT_Values.RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorUraniumDualdepleted", 1L),
+                new ItemStack[]{
+                        GT_ModHandler.getModItem("IC2", "itemUran238", 8L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 3L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium235, 2L)
+                },
+                new int[]{10000,10000,1000,1000},200,500);
+        GT_Values.RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorUraniumQuaddepleted", 1L),
+                new ItemStack[]{
+                        GT_ModHandler.getModItem("IC2", "itemUran238", 16L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 7L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium235, 4L)
+                },
+                new int[]{10000,10000,1000,1000},200,500);
+
+        // --- MOX Fuel
+        GT_Values.RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorMOXSimpledepleted", 1L),
+                new ItemStack[]{
+                        GT_ModHandler.getModItem("IC2", "itemPlutonium", 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium235, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Californium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 1L)
+                },
+                new int[]{10000,10000,9500,2000,1000,1000,500},200,500);
+        GT_Values.RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorMOXDualdepleted", 1L),
+                new ItemStack[]{
+                        GT_ModHandler.getModItem("IC2", "itemPlutonium", 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 3L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium235, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Californium, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 2L)
+                },
+                new int[]{10000,10000,9500,2000,1000,1000,500},200,500);
+        GT_Values.RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorMOXQuaddepleted", 1L),
+                new ItemStack[]{
+                        GT_ModHandler.getModItem("IC2", "itemPlutonium", 8L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 7L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium235, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Californium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 4L)
+                },
+                new int[]{10000,10000,9500,2000,1000,1000,500},200,500);
+
+        // --- Nq Fuel
+        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_Naquadah_1.get(1),
+                new ItemStack[]{
+                        Itemstack(Core_Items2.getInstance(), 4, 183),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.TungstenSteel, 9L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahEnriched, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 1L)
+                },
+                new int[]{10000,10000,1000,1000},500,2000);
+        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_Naquadah_2.get(1),
+                new ItemStack[]{
+                        Itemstack(Core_Items2.getInstance(), 8, 183),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.TungstenSteel, 20L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahEnriched, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 2L)
+                },
+                new int[]{10000,10000,1000,1000},500,2000);
+        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_Naquadah_4.get(1),
+                new ItemStack[]{
+                        Itemstack(Core_Items2.getInstance(), 16, 183),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.TungstenSteel, 42L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahEnriched, 8L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 4L)
+                },
+                new int[]{10000,10000,1000,1000},500,2000);
+
+        // --- Nq+ Fuel
+        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_MNq_1.get(1),
+                new ItemStack[]{
+                        Itemstack(Core_Items2.getInstance(), 2, 185),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.TungstenSteel, 9L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahEnriched, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadah, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Californium, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadria, 2L)
+                },
+                new int[]{10000,10000,9500,2000,1000,1000,500},500,2000);
+        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_MNq_2.get(1),
+                new ItemStack[]{
+                        Itemstack(Core_Items2.getInstance(), 4, 185),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.TungstenSteel, 20L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahEnriched, 8L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadah, 8L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Californium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadria, 4L)
+                },
+                new int[]{10000,10000,9500,2000,1000,1000,500},500,2000);
+        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_MNq_4.get(1),
+                new ItemStack[]{
+                        Itemstack(Core_Items2.getInstance(), 8, 185),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.TungstenSteel, 42L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahEnriched, 16L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadah, 16L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Californium, 8L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadria, 8L)
+                },
+                new int[]{10000,10000,9500,2000,1000,1000,500},500,2000);
     }
 
     private void printer3d() {

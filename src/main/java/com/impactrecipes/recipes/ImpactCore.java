@@ -2965,6 +2965,20 @@ public class ImpactCore implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Cobalt, 4),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicon, 8)}, null,
                 Itemstack(Core_Items2.getInstance(), 1, 182), 200, 8);
+
+        // --- NaquadahE Nuclear Fuel
+        GT_Values.RA.addAssemblerRecipe(
+                Itemstack(Core_Items2.getInstance(), 6, 183),
+                Itemstack(Core_Items2.getInstance(), 3, 185),
+                Materials.SuperCoolant.getFluid(1000L),
+                Itemstack(Core_Items2.getInstance(), 1, 186), 500, 1920);
+        // --- Naquadah Nuclear Fuel
+        GT_Values.RA.addAssemblerRecipe(
+                Itemstack(Core_Items2.getInstance(), 6, 183),
+                GT_OreDictUnificator.get(OrePrefixes.nugget, Materials.Plutonium241, 3),
+                Materials.SuperCoolant.getFluid(1000L),
+                Itemstack(Core_Items2.getInstance(), 1, 184), 500, 1024);
+
     }
 
     private void cutting() {
@@ -3024,6 +3038,11 @@ public class ImpactCore implements Runnable {
                 .addCompressorRecipe(Blockstack(CoalBlock, 9, 10), Blockstack(CoalBlock, 1, 11), 110, 480);
         GT_Values.RA
                 .addCompressorRecipe(Blockstack(CoalBlock, 9, 11), Blockstack(CoalBlock, 1, 12), 110, 1920);
+
+        GT_Values.RA
+                .addCompressorRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadah, 4L), Itemstack(Core_Items2.getInstance(), 1, 183), 400, 120);
+        GT_Values.RA
+                .addCompressorRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahEnriched, 4L), Itemstack(Core_Items2.getInstance(), 1, 185), 400, 120);
 
     }
 
