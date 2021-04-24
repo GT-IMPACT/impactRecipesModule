@@ -895,7 +895,7 @@ public class ImpactCore implements Runnable {
         //Tachyon Tube
         RA.addBasicLineRecipe(new ItemStack[]{
                 CoreItems2.getRecipe(163, 3), CoreItems2.getRecipe(161, 4),
-                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Naquadria, 32),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Californium, 32),
                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.NiobiumTitanium, 32),
                 GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Trinium, 32),
                 GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Iridium, 32),
@@ -1043,6 +1043,170 @@ public class ImpactCore implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSE, 16)
         }, GT_ItemList.Machine_ElectricImplosion.get(1L), null, 80 * 20, 30720);
 
+        // --- LuV Orb
+        RA.addBasicLineRecipe(new ItemStack[]{
+                ItemList.Circuit_Board_Fiberglass_Advanced.get(1),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Plutonium241, 4),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Europium, 32L),
+                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 4),
+                GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 8),
+                ItemList.Energy_LapotronicOrb.get(4L),
+                ItemList.Field_Generator_EV.get(1),
+                ItemList.Circuit_Chip_UHPIC.get(16),
+                ItemList.Circuit_Parts_DiodeASMD.get(8),
+                ItemList.Circuit_Parts_CapacitorASMD.get(8),
+                ItemList.Circuit_Parts_ResistorASMD.get(8),
+                ItemList.Circuit_Parts_TransistorASMD.get(8),
+                GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorLuV, 16),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Trinium, 16L)
+        },
+                ItemList.Energy_LapotronicOrb2.get(1), null, 1000, 80000);
+
+        RA.addBasicLineRecipe(new ItemStack[]{
+                 ItemList.Circuit_Board_Fiberglass_Advanced.get(1),
+                 GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.NaquadahEnriched, 4),
+                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Europium, 32L),
+                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 4),
+                 GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 8),
+                 ItemList.Energy_LapotronicOrb.get(2L),
+                 ItemList.Field_Generator_IV.get(1),
+                 ItemList.Circuit_Chip_UHPIC.get(16),
+                 ItemList.Circuit_Parts_DiodeASMD.get(8),
+                 ItemList.Circuit_Parts_CapacitorASMD.get(8),
+                 ItemList.Circuit_Parts_ResistorASMD.get(8),
+                 ItemList.Circuit_Parts_TransistorASMD.get(8),
+                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorLuV, 16),
+                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Oriharukon, 16L)
+        },
+                ItemList.Energy_LapotronicOrb2.get(1), null, 1000, 80000);
+
+        RA.addBasicLineRecipe(new ItemStack[]{
+                ItemList.Circuit_Board_Fiberglass_Advanced.get(1),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Naquadria, 4),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Europium, 32L),
+                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 4),
+                GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 8),
+                ItemList.Energy_LapotronicOrb.get(1L),
+                ItemList.Field_Generator_LuV.get(1),
+                ItemList.Circuit_Chip_UHPIC.get(16),
+                ItemList.Circuit_Parts_DiodeASMD.get(8),
+                ItemList.Circuit_Parts_CapacitorASMD.get(8),
+                ItemList.Circuit_Parts_ResistorASMD.get(8),
+                ItemList.Circuit_Parts_TransistorASMD.get(8),
+                GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorLuV, 16),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quantium, 16L)
+        },
+                ItemList.Energy_LapotronicOrb2.get(1), null, 1000, 80000);
+
+        // --- ZPM Orb
+        RA.addBasicLineRecipe(new ItemStack[]{
+                ItemList.Circuit_Board_Multifiberglass_Elite.get(1),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Plutonium241, 8),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 32L),
+                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 4),
+                GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 16),
+                ItemList.Energy_LapotronicOrb2.get(4L),
+                ItemList.Field_Generator_IV.get(1),
+                ItemList.Circuit_Chip_NPIC.get(16),
+                ItemList.Circuit_Parts_DiodeASMD.get(16),
+                ItemList.Circuit_Parts_CapacitorASMD.get(16),
+                ItemList.Circuit_Parts_ResistorASMD.get(16),
+                ItemList.Circuit_Parts_TransistorASMD.get(16),
+                GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorZPM, 16),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Oriharukon, 16L)
+        },
+                ItemList.Energy_Module.get(1), null, 1200, 100000);
+
+        RA.addBasicLineRecipe(new ItemStack[]{
+                ItemList.Circuit_Board_Multifiberglass_Elite.get(1),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.NaquadahEnriched, 8),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 32L),
+                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 4),
+                GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 16),
+                ItemList.Energy_LapotronicOrb2.get(2L),
+                ItemList.Field_Generator_LuV.get(1),
+                ItemList.Circuit_Chip_NPIC.get(16),
+                ItemList.Circuit_Parts_DiodeASMD.get(16),
+                ItemList.Circuit_Parts_CapacitorASMD.get(16),
+                ItemList.Circuit_Parts_ResistorASMD.get(16),
+                ItemList.Circuit_Parts_TransistorASMD.get(16),
+                GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorZPM, 16),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quantium, 16L)
+        },
+                ItemList.Energy_Module.get(1), null, 1200, 100000);
+
+        RA.addBasicLineRecipe(new ItemStack[]{
+                 ItemList.Circuit_Board_Multifiberglass_Elite.get(1),
+                 GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Naquadria, 8),
+                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 32L),
+                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 4),
+                 GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 16),
+                 ItemList.Energy_LapotronicOrb2.get(1L),
+                 ItemList.Field_Generator_ZPM.get(1),
+                 ItemList.Circuit_Chip_NPIC.get(16),
+                 ItemList.Circuit_Parts_DiodeASMD.get(16),
+                 ItemList.Circuit_Parts_CapacitorASMD.get(16),
+                 ItemList.Circuit_Parts_ResistorASMD.get(16),
+                 ItemList.Circuit_Parts_TransistorASMD.get(16),
+                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorZPM, 16),
+                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Adamantium, 16L)
+        },
+                ItemList.Energy_Module.get(1), null, 1200, 100000);
+
+        // --- UV Orb
+        RA.addBasicLineRecipe(new ItemStack[]{
+                ItemList.Circuit_Board_Wetware_Extreme.get(1),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Plutonium241, 16),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Neutronium, 32L),
+                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 4),
+                GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 32),
+                ItemList.Energy_Module.get(4L),
+                ItemList.Field_Generator_LuV.get(1),
+                ItemList.Circuit_Chip_PPIC.get(16),
+                ItemList.Circuit_Parts_DiodeASMD.get(32),
+                ItemList.Circuit_Parts_CapacitorASMD.get(32),
+                ItemList.Circuit_Parts_ResistorASMD.get(32),
+                ItemList.Circuit_Parts_TransistorASMD.get(32),
+                GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUV, 16),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quantium, 16L)
+        },
+                ItemList.Energy_Cluster.get(1), null, 1400, 200000);
+
+        RA.addBasicLineRecipe(new ItemStack[]{
+                ItemList.Circuit_Board_Wetware_Extreme.get(1),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.NaquadahEnriched, 16),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Neutronium, 32L),
+                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 4),
+                GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 32),
+                ItemList.Energy_Module.get(2L),
+                ItemList.Field_Generator_ZPM.get(1),
+                ItemList.Circuit_Chip_PPIC.get(16),
+                ItemList.Circuit_Parts_DiodeASMD.get(32),
+                ItemList.Circuit_Parts_CapacitorASMD.get(32),
+                ItemList.Circuit_Parts_ResistorASMD.get(32),
+                ItemList.Circuit_Parts_TransistorASMD.get(32),
+                GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUV, 16),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Adamantium, 16L)
+        },
+                ItemList.Energy_Cluster.get(1), null, 1400, 200000);
+
+        RA.addBasicLineRecipe(new ItemStack[]{
+                ItemList.Circuit_Board_Wetware_Extreme.get(1),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Naquadria, 16),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Neutronium, 32L),
+                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 4),
+                GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 32),
+                ItemList.Energy_Module.get(1L),
+                ItemList.Field_Generator_UV.get(1),
+                ItemList.Circuit_Chip_PPIC.get(16),
+                ItemList.Circuit_Parts_DiodeASMD.get(32),
+                ItemList.Circuit_Parts_CapacitorASMD.get(32),
+                ItemList.Circuit_Parts_ResistorASMD.get(32),
+                ItemList.Circuit_Parts_TransistorASMD.get(32),
+                GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUV, 16),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.BlackPlutonium, 16L)
+        },
+                ItemList.Energy_Cluster.get(1), null, 1400, 200000);
     }
 
     private void mixer() {
