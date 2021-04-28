@@ -337,6 +337,71 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadria, 8L)
                 },
                 new int[]{10000,10000,9500,2000,1000,1000,500},500,2000);
+
+        // --- Th Fuel
+        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_Thorium_1.get(1),
+                new ItemStack[]{
+                        GT_ModHandler.getModItem("IC2", "itemUran238", 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Thorium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium235, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lutetium, 1L)
+                },
+                new int[]{10000,10000,10000,10000,5000,5000},200,500);
+        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_Thorium_2.get(1),
+                new ItemStack[]{
+                        GT_ModHandler.getModItem("IC2", "itemUran238", 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 3L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Thorium, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium235, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lutetium, 2L)
+                },
+                new int[]{10000,10000,10000,10000,5000,5000},200,500);
+        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_Thorium_4.get(1),
+                new ItemStack[]{
+                        GT_ModHandler.getModItem("IC2", "itemUran238", 8L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 7L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Thorium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium235, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lutetium, 4L)
+                },
+                new int[]{10000,10000,10000,10000,5000,5000},200,500);
+
+        // --- MOX Th Fuel
+        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_MThCell_1.get(1),
+                new ItemStack[]{
+                        GT_ModHandler.getModItem("IC2", "itemPlutonium", 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lutetium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 1L)
+                },
+                new int[]{10000,10000,10000,8000,5000,100},200,500);
+        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_MThCell_2.get(1),
+                new ItemStack[]{
+                        GT_ModHandler.getModItem("IC2", "itemPlutonium", 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 3L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lutetium, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 2L)
+                },
+                new int[]{10000,10000,10000,8000,5000,100},200,500);
+        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_MThCell_4.get(1),
+                new ItemStack[]{
+                        GT_ModHandler.getModItem("IC2", "itemPlutonium", 8L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 7L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lutetium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 4L)
+                },
+                new int[]{10000,10000,10000,8000,5000,100},200,500);
+
     }
 
     private void printer3d() {

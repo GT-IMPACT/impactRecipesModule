@@ -3132,16 +3132,29 @@ public class ImpactCore implements Runnable {
 
         // --- NaquadahE Nuclear Fuel
         GT_Values.RA.addAssemblerRecipe(
-                Itemstack(Core_Items2.getInstance(), 6, 183),
-                Itemstack(Core_Items2.getInstance(), 3, 185),
+                CoreItems2.getRecipe(183, 6),
+                CoreItems2.getRecipe(185, 3),
                 Materials.SuperCoolant.getFluid(1000L),
-                Itemstack(Core_Items2.getInstance(), 1, 186), 500, 1920);
+                CoreItems2.getRecipe(186, 1), 500, 1920);
         // --- Naquadah Nuclear Fuel
         GT_Values.RA.addAssemblerRecipe(
-                Itemstack(Core_Items2.getInstance(), 6, 183),
+                CoreItems2.getRecipe(183, 6),
                 GT_OreDictUnificator.get(OrePrefixes.nugget, Materials.Plutonium241, 3),
                 Materials.SuperCoolant.getFluid(1000L),
-                Itemstack(Core_Items2.getInstance(), 1, 184), 500, 1024);
+                CoreItems2.getRecipe(184, 1), 500, 1024);
+
+        // --- Thorium Nuclear Fuel
+        GT_Values.RA.addAssemblerRecipe(
+                GT_ModHandler.getModItem("IC2", "itemUran238", 6L),
+                CoreItems2.getRecipe(187, 3),
+                new FluidStack(FluidRegistry.getFluid("ic2coolant"), 1000),
+                CoreItems2.getRecipe(188, 1), 400, 120);
+        // --- MOX Thorium Fuel
+        GT_Values.RA.addAssemblerRecipe(
+                CoreItems2.getRecipe(187, 6),
+                GT_ModHandler.getModItem("IC2", "itemPlutonium", 3L),
+                new FluidStack(FluidRegistry.getFluid("ic2coolant"), 1000),
+                CoreItems2.getRecipe(189, 1), 400, 256);
 
     }
 
@@ -3207,6 +3220,9 @@ public class ImpactCore implements Runnable {
                 .addCompressorRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadah, 4L), Itemstack(Core_Items2.getInstance(), 1, 183), 400, 120);
         GT_Values.RA
                 .addCompressorRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahEnriched, 4L), Itemstack(Core_Items2.getInstance(), 1, 185), 400, 120);
+
+        GT_Values.RA
+                .addCompressorRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Thorium, 1L), Itemstack(Core_Items2.getInstance(), 1, 187), 400, 120);
 
     }
 

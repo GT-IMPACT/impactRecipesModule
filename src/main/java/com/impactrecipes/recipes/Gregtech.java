@@ -3988,6 +3988,13 @@ public class Gregtech implements Runnable {
                 Itemstack(Core_Items2.getInstance(), 1, 186),
                 ItemList.MNqCell_1.get(1L), null, 30, 16);
 
+        GT_Values.RA.addCannerRecipe(GT_ModHandler.getIC2Item("fuelRod", 1),
+                CoreItems2.getRecipe(188, 1),
+                ItemList.ThoriumCell_1.get(1L), null, 30, 16);
+        GT_Values.RA.addCannerRecipe(GT_ModHandler.getIC2Item("fuelRod", 1),
+                CoreItems2.getRecipe(189, 1),
+                ItemList.MThCell_1.get(1L), null, 30, 16);
+
     }
 
     private void distil() {
