@@ -3056,9 +3056,6 @@ public class Gregtech implements Runnable {
                 Materials.Polystyrene.getMolten(144L), GT_ItemList.packCallisto.get(1L), GT_Values.NI,
                 GT_Values.NI, new int[]{10000}, 200, 125);
         //spacebox4
-        GT_Values.RA.addChemicalBathRecipe(GregTech_API.getStackofAmountFromOreDict("dustIo", 64),
-                Materials.Polytetrafluoroethylene.getMolten(144L), GT_ItemList.packIo.get(1L), GT_Values.NI,
-                GT_Values.NI, new int[]{10000}, 200, 312);
         GT_Values.RA.addChemicalBathRecipe(GregTech_API.getStackofAmountFromOreDict("dustVenus", 64),
                 Materials.Polytetrafluoroethylene.getMolten(144L), GT_ItemList.packVenus.get(1L),
                 GT_Values.NI, GT_Values.NI, new int[]{10000}, 200, 312);

@@ -2801,7 +2801,7 @@ public class ImpactCore implements Runnable {
                         GT_ItemList.packEuropa.get(64L), GT_ItemList.packGanymed.get(64L)},
                 Materials.HastelloyN.getMolten(288), GT_ItemList.spacebox4.get(1L), 1200, 4096);
         GT_Values.RA.addAssemblerRecipe(
-                new ItemStack[]{GT_ItemList.packIo.get(64L), GT_ItemList.packMercury.get(64L),
+                new ItemStack[]{GT_ItemList.packMercury.get(64L),
                         GT_ItemList.packVenus.get(64L)}, Materials.Lafium.getMolten(288),
                 GT_ItemList.spacebox5.get(1L), 1200, 16384);
         GT_Values.RA.addAssemblerRecipe(
