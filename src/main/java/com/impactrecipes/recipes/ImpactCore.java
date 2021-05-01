@@ -4162,6 +4162,47 @@ public class ImpactCore implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Titanium, 8),
                 GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 12)
         }, 400 * 20, 480);
+
+        // ---  T1 Rocket + chest
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("GalacticraftCore", "item.spaceship", 1L, 3),
+                new ItemStack[]{
+                GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
+                GT_ModHandler.getModItem("GalacticraftCore", "item.spaceship", 1L)}, 2000, 64);
+        // ---  T2 Rocket + chest
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("GalacticraftMars", "item.spaceshipTier2", 1L, 3),
+                new ItemStack[]{
+                GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
+                GT_ModHandler.getModItem("GalacticraftMars", "item.spaceshipTier2", 1L)}, 2000, 64);
+        // ---  T3 Rocket + chest
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("GalacticraftMars", "item.itemTier3Rocket", 1L, 3),
+                new ItemStack[]{
+                GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
+                GT_ModHandler.getModItem("GalacticraftMars", "item.itemTier3Rocket", 1L)}, 2000, 64);
+        // ---  T4 Rocket + chest
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier4Rocket", 1L, 3),
+                new ItemStack[]{
+                GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
+                GT_ModHandler.getModItem("GalaxySpace", "item.Tier4Rocket", 1L)}, 2000, 64);
+        // ---  T5 Rocket + chest
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier5Rocket", 1L, 3),
+                new ItemStack[]{
+                GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
+                GT_ModHandler.getModItem("GalaxySpace", "item.Tier5Rocket", 1L)}, 2000, 64);
+        // ---  T6 Rocket + chest
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier6Rocket", 1L, 3),
+                new ItemStack[]{
+                GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
+                GT_ModHandler.getModItem("GalaxySpace", "item.Tier6Rocket", 1L)}, 2000, 64);
+        // ---  T7 Rocket + chest
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier7Rocket", 1L, 3),
+                new ItemStack[]{
+                GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
+                GT_ModHandler.getModItem("GalaxySpace", "item.Tier7Rocket", 1L)}, 2000, 64);
+        // ---  T8 Rocket + chest
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier8Rocket", 1L, 3),
+                new ItemStack[]{
+                GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
+                GT_ModHandler.getModItem("GalaxySpace", "item.Tier8Rocket", 1L)}, 2000, 64);
     }
 
     public void cyclon() {
