@@ -1231,12 +1231,12 @@ public class Gregtech implements Runnable {
         GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Iron, 1L),
                 GT_Utility.getIntegratedCircuit(11), Materials.Oxygen.getGas(1000L), GT_Values.NF,
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Steel, 1L),
-                Materials.Ash.getDustTiny(1), 500, 120, 1000);
+                null, 500, 120, 1000);
         GT_Values.RA
                 .addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.WroughtIron, 1L),
                         GT_Utility.getIntegratedCircuit(11), Materials.Oxygen.getGas(1000L), GT_Values.NF,
                         GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Steel, 1L),
-                        Materials.Ash.getDustTiny(1), 100, 120, 1000);
+                        null, 100, 120, 1000);
         GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Copper, 1L),
                 GT_Utility.getIntegratedCircuit(11), Materials.Oxygen.getGas(1000L), GT_Values.NF,
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.AnnealedCopper, 1L), GT_Values.NI,
@@ -1244,22 +1244,22 @@ public class Gregtech implements Runnable {
         GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Ruby, 1L),
                 GT_Values.NI, GT_Values.NF, GT_Values.NF,
                 GT_OreDictUnificator.get(OrePrefixes.nugget, Materials.Aluminium, 3L),
-                GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.DarkAsh, 1L), 400, 100, 1200);
+                null, 400, 100, 1200);
         GT_Values.RA
                 .addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.gem, Materials.Ruby, 1L), GT_Values.NI,
                         GT_Values.NF, GT_Values.NF,
                         GT_OreDictUnificator.get(OrePrefixes.nugget, Materials.Aluminium, 3L),
-                        GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.DarkAsh, 1L), 320, 100, 1200);
+                        null, 320, 100, 1200);
         GT_Values.RA
                 .addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.GreenSapphire, 1L),
                         GT_Values.NI, GT_Values.NF, GT_Values.NF,
                         GT_OreDictUnificator.get(OrePrefixes.nugget, Materials.Aluminium, 3L),
-                        GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.DarkAsh, 1L), 400, 100, 1200);
+                        null, 400, 100, 1200);
         GT_Values.RA
                 .addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.gem, Materials.GreenSapphire, 1L),
                         GT_Values.NI, GT_Values.NF, GT_Values.NF,
                         GT_OreDictUnificator.get(OrePrefixes.nugget, Materials.Aluminium, 3L),
-                        GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.DarkAsh, 1L), 320, 100, 1200);
+                        null, 320, 100, 1200);
         GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Sapphire, 1L),
                 GT_Values.NI, GT_Values.NF, GT_Values.NF,
                 GT_OreDictUnificator.get(OrePrefixes.nugget, Materials.Aluminium, 3L), GT_Values.NI, 400,
@@ -1268,10 +1268,10 @@ public class Gregtech implements Runnable {
                 GT_Values.NI, GT_Values.NF, GT_Values.NF,
                 GT_OreDictUnificator.get(OrePrefixes.nugget, Materials.Aluminium, 3L), GT_Values.NI, 320,
                 100, 1200);
-        GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Ilmenite, 1L),
-                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Carbon, 1L), GT_Values.NF,
-                GT_Values.NF, GT_OreDictUnificator.get(OrePrefixes.nugget, Materials.WroughtIron, 4L),
-                GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.Rutile, 4L), 800, 480, 1700);
+        GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Ilmenite, 2L),
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Carbon, 2L), GT_Values.NF,
+                GT_Values.NF, GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.WroughtIron, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Rutile, 1L), 800, 480, 1700);
         GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Magnesium, 2L),
                 GT_Utility.getIntegratedCircuit(11), Materials.Titaniumtetrachloride.getFluid(1000L),
                 GT_Values.NF, GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Titanium, 1L),
@@ -1631,17 +1631,17 @@ public class Gregtech implements Runnable {
                 GT_Utility.getIntegratedCircuit(1), GT_Values.NF, GT_Values.NF,
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.DarkSteel, 1L), GT_Values.NI, 1500,
                 480, 2200);
-        GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Draconium, 1L),
-                GT_Utility.getIntegratedCircuit(12), Materials.Naquadah.getMolten(144L),
-                Materials.Tartarite.getFluid(144L),
-                GT_OreDictUnificator.get(OrePrefixes.dustSmall, Materials.Naquadah, 2L),
-                GT_OreDictUnificator.get(OrePrefixes.dustSmall, Materials.Uranium, 1L), 800, 30720, 7200);
+        GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Draconium, 4L),
+                GT_Utility.getIntegratedCircuit(12), Materials.Naquadah.getMolten(576L),
+                Materials.Tartarite.getFluid(576L),
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadah, 2L),
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium, 1L), 800, 30720, 7200);
         GT_Values.RA
-                .addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DraconiumAwakened, 1L),
-                        GT_Utility.getIntegratedCircuit(12), Materials.NaquadahEnriched.getMolten(144L),
-                        Materials.EnrichedTartarite.getFluid(144L),
-                        GT_OreDictUnificator.get(OrePrefixes.dustSmall, Materials.NaquadahEnriched, 2L),
-                        GT_OreDictUnificator.get(OrePrefixes.dustSmall, Materials.Plutonium, 1L), 1600, 122880,
+                .addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DraconiumAwakened, 4L),
+                        GT_Utility.getIntegratedCircuit(12), Materials.NaquadahEnriched.getMolten(576L),
+                        Materials.EnrichedTartarite.getFluid(576L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahEnriched, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium, 1L), 1600, 122880,
                         10800);
         GT_Values.RA
                 .addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Europiumoxide, 1L),
