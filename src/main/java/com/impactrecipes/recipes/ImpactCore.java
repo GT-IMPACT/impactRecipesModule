@@ -243,9 +243,6 @@ public class ImpactCore implements Runnable {
 
         /*====END SPACE ADDITION====*/
 
-        GT_ModHandler.addCraftingRecipe(CoreItems2.getRecipe(NeutronReflectorSmallParts.getMetaID(), 1), tBitMask, new Object[]{"PPP", "PwP", 'P', GT_ModHandler.getModItem("IC2", "reactorReflector", 1L, 1)});
-        GT_ModHandler.addCraftingRecipe(CoreItems2.getRecipe(NeutronReflectorParts.getMetaID(), 1), tBitMask, new Object[]{"PPP", "PwP", "PPP", 'P', GT_ModHandler.getModItem("IC2", "reactorReflectorThick", 1L, 1)});
-
         GT_ModHandler.addCraftingRecipe(CoreItems2.getRecipe(IndustryFrame.getMetaID(), 1), tBitMask, new Object[]{"PPP", "SBS", "SSS", 'P', OrePrefixes.plate.get(Materials.Iridium), 'S', OrePrefixes.stick.get(Materials.Osmium), 'B', GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Europium, 1)});
 
         GT_ModHandler.addShapelessCraftingRecipe(new ItemStack(WoodBrickFormTool.WoodBrickFormTool, 1), tBitMask, new Object[]{GT_ModHandler.getModItem("TConstruct", "blankPattern", 1L), ToolDictNames.craftingToolKnife});
