@@ -1246,7 +1246,7 @@ public class OpenComputers implements Runnable {
                 //database upgrade 1
                 GT_Values.RA.addAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1L),
-                                GT_ModHandler.getModItem("OpenComputers", "item", 1L, 0),
+                                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1),
                                 GT_ModHandler.getModItem("OpenComputers", "item", 1L, 5),
                                 GT_ModHandler.getModItem("OpenComputers", "item", 2L, 24),
                                 GT_Utility.getIntegratedCircuit(1)}, tMat.getMolten(144L * tMultiplier / 2L),
@@ -1254,7 +1254,7 @@ public class OpenComputers implements Runnable {
                 //database upgrade 2
                 GT_Values.RA.addAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1L),
-                                GT_ModHandler.getModItem("OpenComputers", "item", 1L, 0),
+                                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Birmabright, 1),
                                 GT_ModHandler.getModItem("OpenComputers", "item", 1L, 6),
                                 GT_ModHandler.getModItem("OpenComputers", "item", 2L, 25),
                                 GT_Utility.getIntegratedCircuit(1)}, tMat.getMolten(144L * tMultiplier / 2L),
@@ -1262,7 +1262,7 @@ public class OpenComputers implements Runnable {
                 //database upgrade 3
                 GT_Values.RA.addAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1L),
-                                GT_ModHandler.getModItem("OpenComputers", "item", 1L, 0),
+                                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.StainlessSteel, 1),
                                 GT_ModHandler.getModItem("OpenComputers", "item", 1L, 7),
                                 GT_ModHandler.getModItem("OpenComputers", "item", 2L, 26),
                                 GT_Utility.getIntegratedCircuit(1)}, tMat.getMolten(144L * tMultiplier / 2L),
