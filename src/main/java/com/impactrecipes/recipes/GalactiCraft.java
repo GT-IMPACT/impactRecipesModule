@@ -696,8 +696,25 @@ public class GalactiCraft implements Runnable {
                 GT_ModHandler.getModItem("GalacticraftMars", "item.itemBasicAsteroids", 4L, 7),
                 GT_Utility.getIntegratedCircuit(4),
                 GT_ModHandler.getModItem("GalacticraftMars", "item.thermalPadding", 1L, 3), 600, 1024);
-
-
+        // --- Arc Lamp
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        ItemList.Emitter_HV.get(1),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.lens, Materials.ReinforcedGlass, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.DarkSteel, 4)}, null,
+                GT_ModHandler.getModItem("GalacticraftCore", "tile.arclamp", 4L), 200, 64);
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        ItemList.Emitter_EV.get(1),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Vanadium, 8)}, null,
+                GT_ModHandler.getModItem("GalacticraftCore", "tile.arclamp", 16L), 300, 256);
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        ItemList.Emitter_IV.get(1),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 1),
+                        GT_ModHandler.getModItem("GalacticraftCore", "item.sensorLens", 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Desh, 16)}, null,
+                GT_ModHandler.getModItem("GalacticraftCore", "tile.arclamp", 64L), 400, 1024);
     }
 
     private void cuttingSaw() {
