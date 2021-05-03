@@ -1726,7 +1726,7 @@ public class AE implements Runnable {
     }
 
     private void latheRecipe() {
-        GT_Values.RA.addLatheRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2L, 1), CoreItems2.getRecipe(153, 2), CoreItems.getRecipe(38, 1), 980, 16);
+        GT_Values.RA.addLatheRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 1), CoreItems2.getRecipe(153, 1), CoreItems.getRecipe(38, 1), new int[]{10000, 5000}, 480, 16);
     }
 
     private void fluidSolidifierRecipe() {
