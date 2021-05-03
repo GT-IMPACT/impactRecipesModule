@@ -17,6 +17,7 @@ import static gregtech.api.util.GT_ModHandler.removeFurnaceSmelting;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 import static iguanaman.iguanatweakstconstruct.claybuckets.IguanaItems.*;
 import static tconstruct.armor.TinkerArmor.*;
+import static tconstruct.world.TinkerWorld.strangeFood;
 
 public class TConstruct implements Runnable {
 
@@ -1454,6 +1455,14 @@ public class TConstruct implements Runnable {
                     .addDryingRecipe(GT_ModHandler.getModItem("Backpack", "boundLeather", 1L, 0), 4000,
                             GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L, 0));
         }
+        // --- Coagulated Blood Drop
+        DryingRackRecipes
+                .addDryingRecipe(new ItemStack(strangeFood, 1, 1), 6000,
+                        new ItemStack(jerky, 1, 7));
+        // --- Gelatinous Slime Ball
+        DryingRackRecipes
+                .addDryingRecipe(new ItemStack(strangeFood, 1, 0), 6000,
+                        new ItemStack(jerky, 1, 6));
     }
 
     private void forgeHammer() {
