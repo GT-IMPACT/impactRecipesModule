@@ -422,11 +422,11 @@ public class Ender_IO implements Runnable {
         // --- Powered Light Inverted
         GT_Values.RA.addAssemblerRecipe(new ItemStack(EnderIO.blockElectricLight, 1, 0),
                 GT_ModHandler.getModItem("minecraft", "redstone_torch", 1L),
-                new ItemStack(EnderIO.blockElectricLight, 1, 1), 200, 64);
+                new ItemStack(EnderIO.blockElectricLight, 1, 1), 40, 64);
         // --- Light Inverted
         GT_Values.RA.addAssemblerRecipe(new ItemStack(EnderIO.blockElectricLight, 1, 2),
                 GT_ModHandler.getModItem("minecraft", "redstone_torch", 1L),
-                new ItemStack(EnderIO.blockElectricLight, 1, 3), 100, 16);
+                new ItemStack(EnderIO.blockElectricLight, 1, 3), 40, 16);
         // --- Wireless Powered Light
         GT_Values.RA.addAssemblerRecipe(new ItemStack[]{new ItemStack(EnderIO.blockElectricLight, 4, 0),
                         GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Copper, 1L),
@@ -445,7 +445,21 @@ public class Ender_IO implements Runnable {
         // --- Wireless Powered Light Inverted
         GT_Values.RA.addAssemblerRecipe(new ItemStack(EnderIO.blockElectricLight, 1, 4),
                 GT_ModHandler.getModItem("minecraft", "redstone_torch", 1L),
-                new ItemStack(EnderIO.blockElectricLight, 1, 5), 100, 64);
+                new ItemStack(EnderIO.blockElectricLight, 1, 5), 40, 64);
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{new ItemStack(EnderIO.blockElectricLight, 4, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Copper, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Aluminium, 4L)}, null,
+                new ItemStack(EnderIO.blockElectricLight, 4, 5), 100, 120);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{new ItemStack(EnderIO.blockElectricLight, 16, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Electrum, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4L)}, null,
+                new ItemStack(EnderIO.blockElectricLight, 16, 5), 150, 480);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{new ItemStack(EnderIO.blockElectricLight, 64, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Platinum, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.TungstenSteel, 4L)}, null,
+                new ItemStack(EnderIO.blockElectricLight, 64, 5), 200, 1920);
         // --- Light
         GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.ElectricalSteel, 1L),
