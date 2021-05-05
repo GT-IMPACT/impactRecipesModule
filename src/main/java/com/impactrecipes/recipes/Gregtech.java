@@ -1733,9 +1733,9 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Olivine, 1),
                 Materials.Helium.getGas(1000), null, ItemList.Circuit_Parts_Crystal_Chip_Elite.get(1), null,
                 900, 480, 5000);
-        GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Silicon, 32),
-                GT_OreDictUnificator.get(OrePrefixes.dustTiny, Materials.Gallium, 1), null, null,
-                ItemList.Circuit_Silicon_Ingot.get(1), null, 6000, 120, 1784);
+        GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Silicon, 64),
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Gallium, 1), null, null,
+                ItemList.Circuit_Silicon_Ingot.get(2), null, 6000, 120, 1784);
         GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Silicon, 64),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Glowstone, 8),
                 Materials.Nitrogen.getGas(8000), null,

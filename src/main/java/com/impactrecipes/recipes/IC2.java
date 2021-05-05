@@ -914,7 +914,7 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Lafium, 2),
                         GT_ModHandler.getModItem("compactkineticgenerators", "IridiumBlade", 4L, 0)
                 }, 200 * 20, 1920);
-        
+
         // --- Iridium Rotor Blade
         RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "IridiumBlade", 1L, 0),
                 new ItemStack[]{
