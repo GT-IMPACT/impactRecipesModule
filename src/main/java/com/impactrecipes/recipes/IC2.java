@@ -744,5 +744,182 @@ public class IC2 implements Runnable {
                         GT_ModHandler.getModItem("IC2", "blockReactorChamber", 4L, 0), CoreItems2.getRecipe(141, 8),
                         GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 12)
                 }, 400 * 20, 1920);
+
+        // --- Kinetic Generator
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("IC2", "blockGenerator", 1L, 9),
+                new ItemStack[]{
+                        ItemList.Hatch_Dynamo_HV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt02, Materials.Aluminium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Titanium, 2),
+                        ItemList.Circuit_Data.get(2),
+                        ItemList.Electric_Motor_HV.get(2L),
+                        ItemList.Casing_Motor.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.HSLA, 6)
+                }, 100 * 20, 480);
+
+        // --- Kinetic Wind Generator
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("IC2", "blockKineticGenerator", 1L, 0),
+                new ItemStack[]{
+                        ItemList.Casing_Gearbox_Steel.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt02, Materials.Aluminium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Titanium, 2),
+                        ItemList.Circuit_Data.get(2),
+                        ItemList.Electric_Motor_HV.get(2L),
+                        GT_ModHandler.getModItem("IC2", "itemRecipePart", 4, 12),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.HSLA, 6)
+                }, 100 * 20, 480);
+
+        // --- Kinetic Water Generator
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("IC2", "blockKineticGenerator", 1L, 4),
+                new ItemStack[]{
+                        ItemList.Casing_Gearbox_Steel.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt02, Materials.Aluminium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Titanium, 2),
+                        ItemList.Circuit_Data.get(2),
+                        ItemList.Electric_Pump_HV.get(2L),
+                        GT_ModHandler.getModItem("IC2", "itemRecipePart", 4, 12),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.HSLA, 6)
+                }, 100 * 20, 480);
+
+        //Wind Generators
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 0),
+                new ItemStack[]{
+                        ItemList.Hull_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt02, Materials.Tungsten, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Desh, 2),
+                        ItemList.Circuit_Elite.get(2),
+                        ItemList.Electric_Motor_EV.get(2L),
+                        GT_ModHandler.getModItem("IC2", "blockKineticGenerator", 2, 0),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TungstenSteel, 6)
+                }, 200 * 20, 1024);
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 1),
+                new ItemStack[]{
+                        ItemList.Hull_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt04, Materials.HSSG, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Trinium, 2),
+                        ItemList.Circuit_Master.get(2),
+                        ItemList.Electric_Motor_IV.get(2L),
+                        GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 2L, 0),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.HastelloyN, 8)
+                }, 300 * 20, 4096);
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 2),
+                new ItemStack[]{
+                        ItemList.Hull_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt08, Materials.VanadiumGallium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Draconium, 2),
+                        ItemList.Circuit_Quantummainframe.get(2),
+                        ItemList.Electric_Motor_LuV.get(2L),
+                        GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 2L, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Lafium, 10)
+                }, 400 * 20, 16384);
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 3),
+                new ItemStack[]{
+                        ItemList.Hull_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt12, Materials.Duranium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Oriharukon, 2),
+                        ItemList.Circuit_Crystalmainframe.get(2),
+                        ItemList.Electric_Motor_ZPM.get(2L),
+                        GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 2L, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.CinobiteA243, 12)
+                }, 500 * 20, 65536);
+
+        //Water Generators
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 4),
+                new ItemStack[]{
+                        ItemList.Hull_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt02, Materials.Tungsten, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Desh, 2),
+                        ItemList.Circuit_Elite.get(2),
+                        ItemList.Electric_Pump_EV.get(2L),
+                        GT_ModHandler.getModItem("IC2", "blockKineticGenerator", 2, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TungstenSteel, 6)
+                }, 200 * 20, 1024);
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 5),
+                new ItemStack[]{
+                        ItemList.Hull_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt04, Materials.HSSG, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Trinium, 2),
+                        ItemList.Circuit_Master.get(2),
+                        ItemList.Electric_Pump_IV.get(2L),
+                        GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 2L, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.HastelloyN, 8)
+                }, 300 * 20, 4096);
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 6),
+                new ItemStack[]{
+                        ItemList.Hull_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt08, Materials.VanadiumGallium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Draconium, 2),
+                        ItemList.Circuit_Quantummainframe.get(2),
+                        ItemList.Electric_Pump_LuV.get(2L),
+                        GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 2L, 5),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Lafium, 10)
+                }, 400 * 20, 16384);
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 7),
+                new ItemStack[]{
+                        ItemList.Hull_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt12, Materials.Duranium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Oriharukon, 2),
+                        ItemList.Circuit_Crystalmainframe.get(2),
+                        ItemList.Electric_Pump_ZPM.get(2L),
+                        GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 2L, 6),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.CinobiteA243, 12)
+                }, 500 * 20, 65536);
+
+        //Kinetic Generators
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 8),
+                new ItemStack[]{
+                        ItemList.Hatch_Dynamo_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt02, Materials.Tungsten, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Desh, 2),
+                        ItemList.Circuit_Elite.get(2),
+                        ItemList.Electric_Motor_EV.get(2L),
+                        GT_ModHandler.getModItem("IC2", "blockGenerator", 1, 9),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TungstenSteel, 6)
+                }, 200 * 20, 1024);
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 9),
+                new ItemStack[]{
+                        ItemList.Hatch_Dynamo_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt04, Materials.HSSG, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Trinium, 2),
+                        ItemList.Circuit_Master.get(2),
+                        ItemList.Electric_Motor_IV.get(2L),
+                        GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.HastelloyN, 8)
+                }, 300 * 20, 4096);
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 10),
+                new ItemStack[]{
+                        ItemList.Hatch_Dynamo_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt08, Materials.VanadiumGallium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Draconium, 2),
+                        ItemList.Circuit_Quantummainframe.get(2),
+                        ItemList.Electric_Motor_LuV.get(2L),
+                        GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 9),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Lafium, 10)
+                }, 400 * 20, 16384);
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 11),
+                new ItemStack[]{
+                        ItemList.Hatch_Dynamo_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt12, Materials.Duranium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Oriharukon, 2),
+                        ItemList.Circuit_Crystalmainframe.get(2),
+                        ItemList.Electric_Motor_ZPM.get(2L),
+                        GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 10),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.CinobiteA243, 12)
+                }, 500 * 20, 65536);
+
+        // --- Kinetic Gearbox Rotor (Iridium)
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "IridiumRotor", 1L, 0),
+                new ItemStack[]{
+                        GT_ModHandler.getModItem("IC2", "itemRecipePart", 1L, 12),
+                        GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Lafium, 2),
+                        GT_ModHandler.getModItem("compactkineticgenerators", "IridiumBlade", 4L, 0)
+                }, 200 * 20, 1920);
+        
+        // --- Iridium Rotor Blade
+        RA.addDisassemblerRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "IridiumBlade", 1L, 0),
+                new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Lafium, 1),
+                        GT_ModHandler.getModItem("IC2", "itemPartIridium", 8L, 0)
+                }, 200 * 20, 1920);
     }
 }
