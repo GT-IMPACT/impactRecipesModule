@@ -286,46 +286,41 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Pentacadmiummagnesiumhexaoxid, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Pentacadmiummagnesiumhexaoxid, 1L),
                 400, 480);
-        RA.addVacuumFreezerRecipe(GT_OreDictUnificator
-                        .get(OrePrefixes.ingotHot, Materials.Titaniumonabariumdecacoppereikosaoxid, 1L),
-                GT_OreDictUnificator
-                        .get(OrePrefixes.ingot, Materials.Titaniumonabariumdecacoppereikosaoxid, 1L), 500, 480);
+        RA.addVacuumFreezerRecipe(GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Titaniumonabariumdecacoppereikosaoxid, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Titaniumonabariumdecacoppereikosaoxid, 1L),
+                500, 480);
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Uraniumtriplatinid, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Uraniumtriplatinid, 1L), 600, 480);
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Vanadiumtriindinid, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Vanadiumtriindinid, 1L), 600, 480);
-        RA.addVacuumFreezerRecipe(GT_OreDictUnificator.get(OrePrefixes.ingotHot,
-                Materials.Tetraindiumditindibariumtitaniumheptacoppertetrakaidekaoxid, 1L),
-                GT_OreDictUnificator.get(OrePrefixes.ingot,
-                        Materials.Tetraindiumditindibariumtitaniumheptacoppertetrakaidekaoxid, 1L), 600, 480);
-        RA.addVacuumFreezerRecipe(GT_OreDictUnificator
-                        .get(OrePrefixes.ingotHot, Materials.Tetranaquadahdiindiumhexaplatiumosminid, 1L),
-                GT_OreDictUnificator
-                        .get(OrePrefixes.ingot, Materials.Tetranaquadahdiindiumhexaplatiumosminid, 1L), 720,
-                480);
+        RA.addVacuumFreezerRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Tetraindiumditindibariumtitaniumheptacoppertetrakaidekaoxid, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Tetraindiumditindibariumtitaniumheptacoppertetrakaidekaoxid, 1L),
+                600, 480);
+        RA.addVacuumFreezerRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Tetranaquadahdiindiumhexaplatiumosminid, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Tetranaquadahdiindiumhexaplatiumosminid, 1L),
+                720, 480);
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Neutronium, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Neutronium, 1L), 780, 30720);
-        RA.addVacuumFreezerRecipe(GT_OreDictUnificator
-                        .get(OrePrefixes.ingotHot, Materials.Longasssuperconductornameforuvwire, 1L),
-                GT_OreDictUnificator
-                        .get(OrePrefixes.ingot, Materials.Longasssuperconductornameforuvwire, 1L), 500, 30720);
-        RA.addVacuumFreezerRecipe(GT_OreDictUnificator
-                        .get(OrePrefixes.ingotHot, Materials.Longasssuperconductornameforuhvwire, 1L),
-                GT_OreDictUnificator
-                        .get(OrePrefixes.ingot, Materials.Longasssuperconductornameforuhvwire, 1L), 550,
-                122880);
-        RA.addVacuumFreezerRecipe(GT_OreDictUnificator
-                        .get(OrePrefixes.ingotHot, Materials.Longasssuperconductornameforuevwire, 1L),
-                GT_OreDictUnificator
-                        .get(OrePrefixes.ingot, Materials.Longasssuperconductornameforuevwire, 1L), 600,
-                500000);
+        RA.addVacuumFreezerRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Longasssuperconductornameforuvwire, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Longasssuperconductornameforuvwire, 1L),
+                500, 30720);
+        RA.addVacuumFreezerRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Longasssuperconductornameforuhvwire, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Longasssuperconductornameforuhvwire, 1L),
+                550, 122880);
+        RA.addVacuumFreezerRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Longasssuperconductornameforuevwire, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Longasssuperconductornameforuevwire, 1L),
+                600, 500000);
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Diamericiumtitanium, 1L),
-                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Diamericiumtitanium, 1L), 480,
-                122880);
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Diamericiumtitanium, 1L), 480, 122880);
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Naquadah, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Naquadah, 1L), 420, 7860);
@@ -356,9 +351,9 @@ public class Gregtech implements Runnable {
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Europium, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Europium, 1L), 377, 1920);
-        RA
-                .addVacuumFreezerRecipe(GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.HSSS, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSS, 1L), 220, 1920);
+        RA.addVacuumFreezerRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.HSSS, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSS, 1L), 220, 1920);
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Enderium, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Enderium, 1L), 245, 480);
@@ -368,9 +363,9 @@ public class Gregtech implements Runnable {
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Palladium, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Palladium, 1L), 216, 480);
-        RA
-                .addVacuumFreezerRecipe(GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.HSSG, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1L), 186, 480);
+        RA.addVacuumFreezerRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.HSSG, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1L), 186, 480);
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.NaquadahAlloy, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.NaquadahAlloy, 1L), 220, 30720);
@@ -389,9 +384,9 @@ public class Gregtech implements Runnable {
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.TungstenCarbide, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.TungstenCarbide, 1L), 215, 1920);
-        RA
-                .addVacuumFreezerRecipe(GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.HSSE, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1L), 194, 480);
+        RA.addVacuumFreezerRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.HSSE, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1L), 194, 480);
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.NiobiumTitanium, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.NiobiumTitanium, 1L), 152, 4096);
@@ -404,9 +399,9 @@ public class Gregtech implements Runnable {
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.YttriumBariumCuprate, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.YttriumBariumCuprate, 1L), 96, 1920);
-        RA
-                .addVacuumFreezerRecipe(GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Desh, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Desh, 1L), 87, 1920);
+        RA.addVacuumFreezerRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Desh, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Desh, 1L), 87, 1920);
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Titanium, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Titanium, 1L), 75, 480);
@@ -431,9 +426,9 @@ public class Gregtech implements Runnable {
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Trinium, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Trinium, 1L), 294, 7860);
-        RA
-                .addVacuumFreezerRecipe(GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.BT6, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.BT6, 1L), 164, 480);
+        RA.addVacuumFreezerRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.BT6, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.BT6, 1L), 164, 480);
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.CosmicNeutronium, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.CosmicNeutronium, 1L), 400, 122880);
@@ -450,14 +445,18 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Mytryl, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Mytryl, 1L), 324, 1920);
 
-        RA
-                .addVacuumFreezerRecipe(CoreItems2.getRecipe(70, 1), CoreItems2.getRecipe(69, 1), 300, 480);
-        RA
-                .addVacuumFreezerRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Ledox, 1L),
-                        CoreItems2.getRecipe(71, 1), 300, 480);
-        RA
-                .addVacuumFreezerRecipe(CoreItems2.getRecipe(73, 1), CoreItems2.getRecipe(72, 1), 400,
-                        1920);
+        RA.addVacuumFreezerRecipe(
+                CoreItems2.getRecipe(70, 1),
+                CoreItems2.getRecipe(69, 1), 300, 480);
+        RA.addVacuumFreezerRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Ledox, 1L),
+                CoreItems2.getRecipe(71, 1), 300, 480);
+        RA.addVacuumFreezerRecipe(
+                CoreItems2.getRecipe(73, 1),
+                CoreItems2.getRecipe(72, 1), 400, 1920);
+        RA.addVacuumFreezerRecipe(
+                null, new FluidStack(FluidRegistry.getFluid("ic2coolant"), 1000),
+                null, new FluidStack(FluidRegistry.getFluid("ic2hotcoolant"), 1000), 300, 120);
     }
 
     private void sifter() {
