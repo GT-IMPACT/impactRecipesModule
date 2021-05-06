@@ -455,8 +455,8 @@ public class Gregtech implements Runnable {
                 CoreItems2.getRecipe(73, 1),
                 CoreItems2.getRecipe(72, 1), 400, 1920);
         RA.addVacuumFreezerRecipe(
-                null, new FluidStack(FluidRegistry.getFluid("ic2coolant"), 1000),
-                null, new FluidStack(FluidRegistry.getFluid("ic2hotcoolant"), 1000), 300, 120);
+                new FluidStack(FluidRegistry.getFluid("ic2hotcoolant"), 1000),
+                new FluidStack(FluidRegistry.getFluid("ic2coolant"), 1000), 300, 120);
     }
 
     private void sifter() {
