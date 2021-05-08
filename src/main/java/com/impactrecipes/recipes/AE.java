@@ -607,6 +607,10 @@ public class AE implements Runnable {
         RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("minecraft", "glass", 1L, 0),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NetherQuartz, 1L),
                 GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 1L, 0), 100, 16);
+        RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("minecraft", "glass", 1L, 0),
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Quartzite, 1L),
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 1L, 0), 100, 16);
+
     }
 
     private void assemblerRecipe() {
