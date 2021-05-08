@@ -8,7 +8,10 @@ import gregtech.api.enums.*;
 import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
 import gregtech.api.util.GT_Utility;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fluids.FluidStack;
 
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
@@ -22,8 +25,11 @@ public class Forestry implements Runnable {
     public void run() {
         removeForestry();
         hand();
+        alloySmelter();
         assembler();
         ciruit();
+        press();
+        fluidSolidifier();
     }
 
     private void removeForestry() {
@@ -78,6 +84,37 @@ public class Forestry implements Runnable {
         // --- Builder's Woven Backpack
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "builderBagT2", 1L, 0), tBitMask, new Object[]{"WRW", "WBW", "WCW", 'R', OrePrefixes.ring.get(Materials.Steel), 'B', GT_ModHandler.getModItem("Forestry", "builderBag", 1L, 0), 'C', GT_ModHandler.getModItem("Backpack", "backpack", 1L, 100), 'W', GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L, 0)});
 
+        // --- Fence
+        for (int i = 0; i < 29; i++) {
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "fences", 1L, i), tBitMask, new Object[]{"SPS", "SPS", "SPS", 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("Forestry", "planks", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "fences", 1L, i), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Wood), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("Forestry", "planks", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "fences", 2L, i), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Iron), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("Forestry", "planks", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "fences", 4L, i), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Steel), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("Forestry", "planks", 1L, i)});
+
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "fencesFireproof", 1L, i), tBitMask, new Object[]{"SPS", "SPS", "SPS", 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("Forestry", "planksFireproof", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "fencesFireproof", 1L, i), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Wood), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("Forestry", "planksFireproof", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "fencesFireproof", 2L, i), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Iron), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("Forestry", "planksFireproof", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "fencesFireproof", 4L, i), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Steel), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("Forestry", "planksFireproof", 1L, i)});
+        }
+
+        // --- Spectacles
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "naturalistHelmet", 1L),
+                tBitMask, new Object[]{"SRS", "L L", 'S', OrePrefixes.screw.get(Materials.Iron),
+                        'R', OrePrefixes.ring.get(Materials.Iron), 'L', OrePrefixes.lens.get(Materials.Glass)});
+        // --- Proven Grafter
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "grafterProven", 1L, 0),
+                tBitMask, new Object[]{" I ", "fI ", "PNh", 'I', OrePrefixes.stick.get(Materials.Wood),
+                        'P', OrePrefixes.plate.get(Materials.Steel), 'N', OrePrefixes.ingot.get(Materials.Steel)});
+
+    }
+
+    private void alloySmelter() {
+        GT_Values.RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("Forestry", "beeswax", 9L),
+                ItemList.Shape_Mold_Block.get(0), GT_ModHandler.getModItem("Forestry", "waxCast", 1L),
+                200, 16);
+        GT_Values.RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("Forestry", "refractoryWax", 9L),
+                ItemList.Shape_Mold_Block.get(0), GT_ModHandler.getModItem("Forestry", "waxCast", 1L),
+                200, 16);
     }
 
     private void assembler() {
@@ -97,6 +134,40 @@ public class Forestry implements Runnable {
                         ItemList.Plank_Oak.get(1L)}, Materials.Redstone.getMolten(72L),
                 CoreItems2.getRecipe(53, 1), 100, 30, false);
 
+        // --- Fence
+        for (int i = 0; i < 29; i++) {
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planks", 2L, i),
+                            GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
+                            GT_Utility.getIntegratedCircuit(10)}, null,
+                    GT_ModHandler.getModItem("Forestry", "fences", 1L, i), 300, 8);
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planks", 2L, i),
+                            GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
+                            GT_Utility.getIntegratedCircuit(11)}, Materials.Iron.getMolten(16),
+                    GT_ModHandler.getModItem("Forestry", "fences", 2L, i), 300, 8);
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planks", 2L, i),
+                            GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
+                            GT_Utility.getIntegratedCircuit(11)}, Materials.Steel.getMolten(16),
+                    GT_ModHandler.getModItem("Forestry", "fences", 4L, i), 300, 8);
+
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planksFireproof", 2L, i),
+                            GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
+                            GT_Utility.getIntegratedCircuit(10)}, null,
+                    GT_ModHandler.getModItem("Forestry", "fencesFireproof", 1L, i), 300, 8);
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planksFireproof", 2L, i),
+                            GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
+                            GT_Utility.getIntegratedCircuit(11)}, Materials.Iron.getMolten(16),
+                    GT_ModHandler.getModItem("Forestry", "fencesFireproof", 2L, i), 300, 8);
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planksFireproof", 2L, i),
+                            GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
+                            GT_Utility.getIntegratedCircuit(11)}, Materials.Steel.getMolten(16),
+                    GT_ModHandler.getModItem("Forestry", "fencesFireproof", 4L, i), 300, 8);
+        }
     }
 
     private void ciruit() {
@@ -143,5 +214,22 @@ public class Forestry implements Runnable {
 
             }
         }
+    }
+
+    private void press() {
+        // --- Wax Cast
+        GT_Values.RA
+                .addFormingPressRecipe(GT_ModHandler.getModItem("Forestry", "beeswax", 9L),
+                        ItemList.Shape_Mold_Block.get(0), GT_ModHandler.getModItem("Forestry", "waxCast", 1L), 100, 30);
+        GT_Values.RA
+                .addFormingPressRecipe(GT_ModHandler.getModItem("Forestry", "refractoryWax", 9L),
+                        ItemList.Shape_Mold_Block.get(0), GT_ModHandler.getModItem("Forestry", "waxCast", 1L), 100, 30);
+
+    }
+
+    private void fluidSolidifier() {
+        GT_Values.RA
+                .addFluidSolidifierRecipe(ItemList.Shape_Mold_Nugget.get(1), new FluidStack(FluidRegistry.getFluid("for.honey"), 200),
+                        GT_ModHandler.getModItem("Forestry", "honeyDrop", 1L), 400, 8);
     }
 }

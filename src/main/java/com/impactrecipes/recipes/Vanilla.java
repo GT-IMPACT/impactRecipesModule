@@ -4,6 +4,7 @@ import com.impactrecipes.util.RecipeUtils;
 import gregtech.api.enums.*;
 import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
+import gregtech.api.util.GT_Utility;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -23,6 +24,7 @@ public class Vanilla implements Runnable {
         removeVanila();
         handRecipe();
         oreRegisterRecipe();
+        assembler();
     }
 
     private void removeVanila() {
@@ -217,10 +219,12 @@ public class Vanilla implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "ladder", 4L), tBitMask, new Object[]{"SdS", "SWS", "SrS", 'S', OrePrefixes.stick.get(Materials.Wood), 'W', OrePrefixes.screw.get(Materials.Iron)});
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "ladder", 6L), tBitMask, new Object[]{"SdS", "SWS", "SrS", 'S', OrePrefixes.stick.get(Materials.Wood), 'W', OrePrefixes.screw.get(Materials.Steel)});
         // --- Fence
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "fence", 1L), tBitMask, new Object[]{"SPS", "SPS", "SPS", 'S', OrePrefixes.stick.get(Materials.Wood), 'P', "plankWood"});
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "fence", 1L), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Wood), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', "plankWood"});
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "fence", 2L), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Iron), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', "plankWood"});
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "fence", 4L), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Steel), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', "plankWood"});
+        for (int i = 0; i < 6; i++) {
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "fence", 1L), tBitMask, new Object[]{"SPS", "SPS", "SPS", 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("minecraft", "planks", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "fence", 1L), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Wood), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("minecraft", "planks", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "fence", 2L), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Iron), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("minecraft", "planks", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "fence", 4L), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Steel), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("minecraft", "planks", 1L, i)});
+        }
         // --- Oak Fence Gate
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "fence_gate", 1L), tBitMask, new Object[]{"PSP", "PSP", "PSP", 'P', GT_ModHandler.getModItem("minecraft", "planks", 1L), 'S', OrePrefixes.stick.get(Materials.Wood)});
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "fence_gate", 1L), tBitMask, new Object[]{"CdC", "PSP", "PSP", 'P', GT_ModHandler.getModItem("minecraft", "planks", 1L), 'S', OrePrefixes.stick.get(Materials.Wood), 'C', OrePrefixes.screw.get(Materials.Wood)});
@@ -308,6 +312,99 @@ public class Vanilla implements Runnable {
         OreDictionary.registerOre("dyeBrown", GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lignite, 1L));
         for (int i = 0; i < 6; i++) {
             OreDictionary.registerOre("plankWood", new ItemStack(Blocks.planks, i));
+        }
+    }
+
+    private void assembler() {
+        // --- Oak Door
+        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "planks", 6L),
+                GT_Utility.getIntegratedCircuit(6), Materials.Iron.getMolten(16),
+                GT_ModHandler.getModItem("minecraft", "wooden_door", 1L), 400, 4);
+        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "planks", 6L),
+                GT_Utility.getIntegratedCircuit(6), Materials.Copper.getMolten(16),
+                GT_ModHandler.getModItem("minecraft", "wooden_door", 1L), 400, 4);
+        // --- Iron Door
+        GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 6L),
+                GT_Utility.getIntegratedCircuit(6), Materials.Steel.getMolten(16),
+                GT_ModHandler.getModItem("minecraft", "iron_door", 1L), 400, 8);
+        // --- Traped Door Oak
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("minecraft", "wooden_slab", 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 4L),
+                        GT_Utility.getIntegratedCircuit(1)}, null,
+                GT_ModHandler.getModItem("minecraft", "trapdoor", 2L), 600, 4);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("minecraft", "wooden_slab", 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 4L),
+                        GT_Utility.getIntegratedCircuit(2)}, Materials.Iron.getMolten(16),
+                GT_ModHandler.getModItem("minecraft", "trapdoor", 4L), 600, 4);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("minecraft", "wooden_slab", 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 4L),
+                        GT_Utility.getIntegratedCircuit(3)}, Materials.Steel.getMolten(16),
+                GT_ModHandler.getModItem("minecraft", "trapdoor", 6L), 600, 4);
+        // --- Fence Gate Oak
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("minecraft", "planks", 3L),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
+                        GT_Utility.getIntegratedCircuit(2)}, null,
+                GT_ModHandler.getModItem("minecraft", "fence_gate", 1L), 300, 8);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("minecraft", "planks", 3L),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
+                        GT_Utility.getIntegratedCircuit(3)}, Materials.Iron.getMolten(16),
+                GT_ModHandler.getModItem("minecraft", "fence_gate", 2L), 300, 8);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("minecraft", "planks", 3L),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
+                        GT_Utility.getIntegratedCircuit(3)}, Materials.Steel.getMolten(16),
+                GT_ModHandler.getModItem("minecraft", "fence_gate", 4L), 300, 8);
+        // --- Wooden Pressure Plate
+        GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.slab, Materials.Wood, 2L),
+                GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Iron, 1L),
+                GT_ModHandler.getModItem("minecraft", "wooden_pressure_plate", 2L), 100, 8);
+        // --- Pressure Plate
+        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "stone_slab", 2L),
+                GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Iron, 1L),
+                GT_ModHandler.getModItem("minecraft", "stone_pressure_plate", 2L), 100, 8);
+        // --- Ladder
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 3L),
+                        GT_Utility.getIntegratedCircuit(5)}, null,
+                GT_ModHandler.getModItem("minecraft", "ladder", 2L), 400, 4);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 3L),
+                        GT_Utility.getIntegratedCircuit(6)}, Materials.Iron.getMolten(16),
+                GT_ModHandler.getModItem("minecraft", "ladder", 4L), 400, 4);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 3L),
+                        GT_Utility.getIntegratedCircuit(7)}, Materials.Steel.getMolten(16),
+                GT_ModHandler.getModItem("minecraft", "ladder", 6L), 400, 4);
+        // --- Fence
+        for (int i = 0; i < 6; i++) {
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("minecraft", "planks", 2L, i),
+                            GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
+                            GT_Utility.getIntegratedCircuit(10)}, null,
+                    GT_ModHandler.getModItem("minecraft", "fence", 1L), 300, 8);
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("minecraft", "planks", 2L, i),
+                            GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
+                            GT_Utility.getIntegratedCircuit(11)}, Materials.Iron.getMolten(16),
+                    GT_ModHandler.getModItem("minecraft", "fence", 2L), 300, 8);
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("minecraft", "planks", 2L, i),
+                            GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
+                            GT_Utility.getIntegratedCircuit(11)}, Materials.Steel.getMolten(16),
+                    GT_ModHandler.getModItem("minecraft", "fence", 4L), 300, 8);
+        }
+        // --- Carpet
+        for (int i = 0; i < 16; i++) {
+            for (int j = 0; j < Dyes.VALUES[i].getSizeOfFluidList(); j++) {
+                GT_Values.RA.addAssemblerRecipe(new ItemStack(Items.string, 3),
+                        ItemList.Circuit_Integrated.getWithDamage(0L, 3L),
+                        Dyes.VALUES[i].getFluidDye(j, 24L), new ItemStack(Blocks.carpet, 2, 15 - i), 128, 5);
+            }
         }
     }
 
