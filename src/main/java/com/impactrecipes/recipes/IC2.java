@@ -122,6 +122,16 @@ public class IC2 implements Runnable {
                 true);
         removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorMOXSimple", 1L), true, false,
                 true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemToolBronzePickaxe", 1L), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemToolBronzeAxe", 1L), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemToolBronzeSpade", 1L), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemToolBronzeHoe", 1L), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemToolBronzeSword", 1L), true, false,
+                true);
     }
 
     private void removeCompactGen() {

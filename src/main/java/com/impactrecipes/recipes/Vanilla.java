@@ -66,6 +66,26 @@ public class Vanilla implements Runnable {
                 false);
         removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "iron_door", 1L, 0), true, false,
                 false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "iron_sword", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "iron_shovel", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "iron_pickaxe", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "iron_axe", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "iron_hoe", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "golden_sword", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "golden_shovel", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "golden_pickaxe", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "golden_axe", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "golden_hoe", 1L, 0), true, false,
+                false);
         removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "diamond_sword", 1L, 0), true, false,
                 false);
         removeRecipeByOutput(GT_ModHandler.getModItem("minecraft", "diamond_shovel", 1L, 0), true,
@@ -128,6 +148,9 @@ public class Vanilla implements Runnable {
                 false);
         removeRecipeByOutput(getItemStack("minecraft", "stone_slab", 1, GT_Values.W), true, false,
                 false);
+        removeRecipeByOutput(getItemStack("minecraft", "arrow", 1, 0), true, false,
+                false);
+
     }
 
     private void handRecipe() {

@@ -43,7 +43,12 @@ public class Forestry implements Runnable {
                 true);
         removeRecipeByOutput(GT_ModHandler.getModItem("Forestry", "builderBag", 1L, 0), true, false,
                 true);
-
+        removeRecipeByOutput(GT_ModHandler.getModItem("Forestry", "bronzePickaxe", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Forestry", "bronzeShovel", 1L, 0), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Forestry", "wrench", 1L, 0), true, false,
+                true);
     }
 
     private void hand() {
