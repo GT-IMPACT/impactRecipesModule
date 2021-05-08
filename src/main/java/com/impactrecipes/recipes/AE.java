@@ -87,14 +87,31 @@ public class AE implements Runnable {
                 false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 6), true,
                 false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.physical", 1L), true,
+        for (int i = 0; i < 5; i++) {
+            removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.physical", 1L), true,
+                    false, false);
+        }
+        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "certustank", 1L), true,
                 false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.physical", 1L, 1), true,
+        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "pattern.fluid", 1L), true,
                 false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.physical", 1L, 2), true,
+        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "pattern.base", 1L), true,
                 false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.physical", 1L, 3), true,
+        for (int i = 0; i < 10; i++) {
+            removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "part.base", 1L, i), true,
+                    false, false);
+        }
+        for (int i = 0; i < 4; i++) {
+            removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "craftingstorage", 1L, i), true,
+                    false, false);
+        }
+        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "terminal.fluid.wireless", 1L, 0), true,
                 false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "ecbaseblock", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.fluid.portable", 1L, 0), true,
+                false, false);
+
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2stuff", "Wireless", 1L, 0), true, false,
                 true);
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2stuff", "WirelessKit", 1L, 0), true, false,
@@ -597,6 +614,42 @@ public class AE implements Runnable {
                         'E', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 140),
                         'O', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 9)});
 
+        // --- ME Fluid Terminal
+        addCraftingRecipe(GT_ModHandler.getModItem("extracells", "part.base", 1L, 3), tBitMask,
+                new Object[]{"PAP", "FTY", "PAP", 'P', OrePrefixes.plate.get(Materials.Lapis),
+                        'A', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 16),
+                        'F', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 43),
+                        'Y', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 44),
+                        'T', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 380)});
+        // --- Wireless Fluid Terminal
+        addCraftingRecipe(GT_ModHandler.getModItem("extracells", "terminal.fluid.wireless", 1L), tBitMask,
+                new Object[]{"FEF", "PMP", "PAP", 'P', OrePrefixes.plate.get(Materials.HastelloyN),
+                        'A', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockDenseEnergyCell", 1L),
+                        'F', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 41),
+                        'M', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24),
+                        'E', GT_ModHandler.getModItem("extracells", "part.base", 1L, 3)});
+        // --- ME Fluid Interface
+        addCraftingRecipe(GT_ModHandler.getModItem("extracells", "ecbaseblock", 1L), tBitMask,
+                new Object[]{"POP", "FIF", "POP", 'P', OrePrefixes.plate.get(Materials.Lapis),
+                        'F', GT_ModHandler.getModItem("extracells", "storage.component", 1L, 4),
+                        'I', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 1L),
+                        'O', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 16)});
+        addShapelessCraftingRecipe(GT_ModHandler.getModItem("extracells", "part.base", 1L, 9), tBitMask,
+                new Object[]{GT_ModHandler.getModItem("extracells", "ecbaseblock", 1L)});
+        addShapelessCraftingRecipe(GT_ModHandler.getModItem("extracells", "ecbaseblock", 1L), tBitMask,
+                new Object[]{GT_ModHandler.getModItem("extracells", "part.base", 1L, 9)});
+        // --- ME Block Container
+        addCraftingRecipe(GT_ModHandler.getModItem("extracells", "storage.physical", 1L, 4), tBitMask,
+                new Object[]{" A ", "SBS", "dIw", 'S', OrePrefixes.screw.get(Materials.VanadiumSteel),
+                        'A', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 35),
+                        'B', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockChest", 1L),
+                        'I', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 39)});
+        // --- ME Block Container
+        addCraftingRecipe(GT_ModHandler.getModItem("extracells", "storage.fluid.portable", 1L), tBitMask,
+                new Object[]{" A ", "SBS", "dIw", 'S', OrePrefixes.screw.get(Materials.VanadiumSteel),
+                        'A', GT_ModHandler.getModItem("extracells", "storage.component", 1L, 4),
+                        'B', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockChest", 1L),
+                        'I', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyCell", 1L)});
     }
 
     private void alloySmelterRecipe() {
@@ -610,6 +663,11 @@ public class AE implements Runnable {
         RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("minecraft", "glass", 1L, 0),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Quartzite, 1L),
                 GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 1L, 0), 100, 16);
+
+        // --- Quartz Tank
+        RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 8L),
+                ItemList.Shape_Mold_Block.get(0),
+                GT_ModHandler.getModItem("extracells", "certustank", 1L), 800, 30);
 
     }
 
@@ -852,6 +910,31 @@ public class AE implements Runnable {
                 Materials.SolderingAlloy.getMolten(9216),
                 GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 3), 1200,
                 4096);
+        RA.addAssemblerRecipe(
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0),
+                GT_ModHandler.getModItem("extracells", "storage.component", 1L),
+                Materials.SolderingAlloy.getMolten(9216),
+                GT_ModHandler.getModItem("extracells", "craftingstorage", 1L), 1200,
+                16384);
+        RA.addAssemblerRecipe(
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0),
+                GT_ModHandler.getModItem("extracells", "storage.component", 1L, 1),
+                Materials.SolderingAlloy.getMolten(18432),
+                GT_ModHandler.getModItem("extracells", "craftingstorage", 1L, 1), 1200,
+                65536);
+        RA.addAssemblerRecipe(
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0),
+                GT_ModHandler.getModItem("extracells", "storage.component", 1L, 2),
+                Materials.SolderingAlloy.getMolten(36864),
+                GT_ModHandler.getModItem("extracells", "craftingstorage", 1L, 2), 1200,
+                262144);
+        RA.addAssemblerRecipe(
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0),
+                GT_ModHandler.getModItem("extracells", "storage.component", 1L, 3),
+                Materials.SolderingAlloy.getMolten(36864),
+                GT_ModHandler.getModItem("extracells", "craftingstorage", 1L, 3), 1200,
+                1048576);
+
         // --- Annihilation Core
         RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 1),
@@ -1030,7 +1113,30 @@ public class AE implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Osmium, 64)}, null,
                 GT_ModHandler.getModItem("ae2wct", "infinityBoosterCard", 1L, 0), 4000, 122880);
 
-
+        // --- ME Fluid Pattern
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1),
+                GT_ModHandler.getModItem("minecraft", "bucket", 1L),
+                GT_ModHandler.getModItem("extracells", "pattern.fluid", 1L), 100, 120);
+        // --- ME Fluid Level Emitter
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 280),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Lapis, 1),
+                GT_ModHandler.getModItem("extracells", "part.base", 1L, 4), 100, 120);
+        // --- ME Fluid Annihilation Plane
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 300),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Lapis, 3),
+                GT_ModHandler.getModItem("extracells", "part.base", 1L, 5), 300, 120);
+        // --- ME Fluid Formation Plane
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 320),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Lapis, 3),
+                GT_ModHandler.getModItem("extracells", "part.base", 1L, 6), 300, 120);
+        // --- ME Drive Fixture
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockDrive", 1L),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 1),
+                GT_ModHandler.getModItem("extracells", "part.base", 1L, 7), 300, 120);
+        // --- ME Energy Cell Fixture
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyCell", 1L),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 1),
+                GT_ModHandler.getModItem("extracells", "part.base", 1L, 8), 300, 120);
     }
 
     private void autoclaveRecipe() {
