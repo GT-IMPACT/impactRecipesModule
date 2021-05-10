@@ -2999,6 +2999,12 @@ public class ImpactCore implements Runnable {
                 new FluidStack(FluidRegistry.getFluid("ic2coolant"), 1000),
                 CoreItems2.getRecipe(189, 1), 400, 256);
 
+        // --- Input Item/Fluid Bus
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{ItemList.Hatch_Input_Bus_HV.get(1),
+                        ItemList.Large_Fluid_Cell_Aluminium.get(1),
+                        GT_Utility.getIntegratedCircuit(1)}, null,
+                GT_ItemList.BusHatch_Input.get(1L), 480, 480);
     }
 
     private void cutting() {
