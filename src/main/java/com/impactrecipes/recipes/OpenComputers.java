@@ -651,7 +651,7 @@ public class OpenComputers implements Runnable {
                         GT_ModHandler.getModItem("OpenComputers", "item", 1L, 92), 400, 256);
                 // --- Remote Terminal
                 GT_Values.RA.addAssemblerRecipe(
-                        new ItemStack[]{CoreItems2.getRecipe(1, 182),
+                        new ItemStack[]{CoreItems2.getRecipe(182, 1),
                                 GT_ModHandler.getModItem("OpenComputers", "item", 1L, 13),
                                 GT_ModHandler.getModItem("OpenComputers", "item", 2L, 26),
                                 GT_ModHandler.getModItem("OpenComputers", "keyboard", 1L, 0),
@@ -679,7 +679,7 @@ public class OpenComputers implements Runnable {
 
                 // --- Screen t1
                 GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Casing_MV.get(1L),
-                                CoreItems2.getRecipe(1, 182),
+                                CoreItems2.getRecipe(182, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 2L),
                                 ItemList.Circuit_Parts_Transistor.get(2L), GT_Utility.getIntegratedCircuit(1)},
                         tMat.getMolten(144L * tMultiplier / 2L),
