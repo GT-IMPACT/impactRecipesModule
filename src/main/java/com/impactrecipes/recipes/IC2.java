@@ -97,9 +97,6 @@ public class IC2 implements Runnable {
                 false, true);
         removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "reactorCoolantSix", 1L, 1), true, false,
                 true);
-        // --- Recrafting Iron Scaffold
-        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockIronScaffold", 1L), true, false,
-                true);
         removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemTreetapElectric", 1, GT_Values.W), true, false,
                 true);
         removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemToolHoe", 1, GT_Values.W), true, false,
@@ -131,6 +128,10 @@ public class IC2 implements Runnable {
         removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemToolBronzeHoe", 1L), true, false,
                 true);
         removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemToolBronzeSword", 1L), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockScaffold", 1L), true, false,
+                true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockIronScaffold", 1L), true, false,
                 true);
     }
 
@@ -188,10 +189,6 @@ public class IC2 implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2", "reactorHeatSwitchSpread", 1L, 1), tBitMask, new Object[]{"CSC", "SVS", "CSC", 'C', OrePrefixes.screw.get(Materials.StainlessSteel), 'S', OrePrefixes.plate.get(Materials.Gold), 'V', GT_ModHandler.getModItem("IC2", "reactorHeatSwitchCore", 1L, 1)});
         // --- Advanced Heat Exchanger
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2", "reactorHeatSwitchDiamond", 1L, 1), tBitMask, new Object[]{"LCL", "VDV", "LCL", 'L', OrePrefixes.plate.get(Materials.Lapis), 'D', OrePrefixes.plate.get(Materials.Diamond), 'C', OrePrefixes.circuit.get(Materials.Advanced), 'V', GT_ModHandler.getModItem("IC2", "reactorHeatSwitchSpread", 1L, 1)});
-        // --- Recrafting Iron Scaffold
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2", "blockIronScaffold", 1L), new Object[]{"L", 'L', OrePrefixes.frameGt.get(Materials.Steel)});
-        // --- Recrafting Iron Scaffold
-        GT_ModHandler.addCraftingRecipe(GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1L), new Object[]{"L", 'L', GT_ModHandler.getModItem("IC2", "blockIronScaffold", 1L)});
         // --- Electric Treetap
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemTreetapElectric",1, 26),tBitMask,
                 new Object[] {"dRD","RPB","ECS",'R', OrePrefixes.stickLong.get(Materials.Steel),'D', OrePrefixes.toolHeadDrill.get(Materials.Steel),
@@ -228,7 +225,20 @@ public class IC2 implements Runnable {
                 new Object[] {"SHS","COC","PdP",'S', OrePrefixes.screw.get(Materials.StainlessSteel),'P', OrePrefixes.itemCasing.get(Materials.StainlessSteel),
                         'C', OrePrefixes.circuit.get(Materials.Data), 'H', GT_ModHandler.getModItem("minecraft","light_weighted_pressure_plate",1,0),
                         'O', GT_ModHandler.getModItem("IC2","blockElectric",1,2)});
-
+        // --- Wood Scaffold
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","blockScaffold",1), tBitMask,
+                new Object[] {"SPS","IdI", 'S', OrePrefixes.screw.get(Materials.Wood),'P', OrePrefixes.plank.get(Materials.Wood),
+                        'I', OrePrefixes.stick.get(Materials.Wood)});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","blockScaffold",2), tBitMask,
+                new Object[] {"SPS","IdI", 'S', OrePrefixes.screw.get(Materials.WoodSealed),'P', OrePrefixes.plate.get(Materials.WoodSealed),
+                        'I', OrePrefixes.stick.get(Materials.WoodSealed)});
+        // --- Iron Scaffold
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","blockIronScaffold",1), tBitMask,
+                new Object[] {"SPS","IdI", 'S', OrePrefixes.screw.get(Materials.Iron),'P', OrePrefixes.plate.get(Materials.Iron),
+                        'I', OrePrefixes.stick.get(Materials.Iron)});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","blockIronScaffold",2), tBitMask,
+                new Object[] {"SPS","IdI", 'S', OrePrefixes.screw.get(Materials.Steel),'P', OrePrefixes.plate.get(Materials.Steel),
+                        'I', OrePrefixes.stick.get(Materials.Steel)});
     }
 
     private void thermalCentrifuge() {
@@ -593,7 +603,28 @@ public class IC2 implements Runnable {
                 GT_ModHandler.getModItem("IC2", "itemUran235small", 3L),
                 new FluidStack(FluidRegistry.getFluid("ic2coolant"), 1000),
                 GT_ModHandler.getModItem("IC2", "itemUran", 1L), 400, 120);
-
+        // --- Wood Scaffold
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plank, Materials.Wood, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2),
+                        GT_Utility.getIntegratedCircuit(12)}, null,
+                GT_ModHandler.getModItem("IC2", "blockScaffold", 1L), 20, 4);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.WoodSealed, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.WoodSealed, 2),
+                        GT_Utility.getIntegratedCircuit(12)}, null,
+                GT_ModHandler.getModItem("IC2", "blockScaffold", 2L), 20, 4);
+        // --- Iron Scaffold
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Iron, 2),
+                        GT_Utility.getIntegratedCircuit(12)}, null,
+                GT_ModHandler.getModItem("IC2", "blockIronScaffold", 1L), 20, 4);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Steel, 2),
+                        GT_Utility.getIntegratedCircuit(12)}, null,
+                GT_ModHandler.getModItem("IC2", "blockIronScaffold", 2L), 20, 4);
 
     }
 

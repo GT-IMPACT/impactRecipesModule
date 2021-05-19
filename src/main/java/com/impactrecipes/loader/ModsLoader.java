@@ -47,6 +47,7 @@ public class ModsLoader {
         new CarpentersBlocks().run();
         new NuclearControl().run();
         new Ender_IO().run();
+        new CatWalks().run();
 
 
         registerRecipeClass(LaserEngraver.class);
@@ -83,5 +84,6 @@ public class ModsLoader {
         registerRecipeClass(CarpentersBlocks.class);
         registerRecipeClass(NuclearControl.class);
         registerRecipeClass(Ender_IO.class);
+        registerRecipeClass(CatWalks.class);
     }
 }

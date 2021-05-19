@@ -44,4 +44,5 @@ public class Reference {
     public final static String CHICKENS = "ChickenChunks";
     public final static String ARCHITEC = "ArchitectureCraft";
     public final static String NUCLEARCONTROL = "IC2NuclearControl";
+    public final static String CATWALKS = "catwalks";
 }

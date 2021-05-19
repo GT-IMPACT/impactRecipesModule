@@ -3,6 +3,7 @@ package com.impactrecipes.recipes;
 import com.impact.common.item.Core_Items2;
 import com.impact.impact;
 import com.impact.mods.gregtech.GT_ItemList;
+import cpw.mods.fml.common.Loader;
 import gregtech.api.GregTech_API;
 import gregtech.api.enums.*;
 import gregtech.api.util.GT_ModHandler;
@@ -2423,6 +2424,103 @@ public class RailCraft implements Runnable {
                         new ItemStack(Objects.metaItem, 1, 3),
                         GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Steel, 2L)},
                 new ItemStack(Objects.nfcTrack, 16, 0), 400, 12);
+
+        if (Loader.isModLoaded("catwalks")) {
+            // --- Sturdy Rail
+            impact.I_RA.addTrackAssemblerRecipe(
+                    new ItemStack[]{GT_Utility.getIntegratedCircuit(8),
+                            RailcraftItem.railbed.getStack(1, ItemRailbed.EnumRailbed.WOOD),
+                            RailcraftItem.rail.getStack(2, ItemRail.EnumRail.STANDARD),
+                            GT_ModHandler.getModItem("catwalks", "steelgrate", 2L),
+                            GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Iron, 2L)},
+                    GT_ModHandler.getModItem("catwalks", "sturdy_rail", 8), 200, 6);
+            impact.I_RA.addTrackAssemblerRecipe(
+                    new ItemStack[]{GT_Utility.getIntegratedCircuit(8),
+                            RailcraftItem.railbed.getStack(1, ItemRailbed.EnumRailbed.STONE),
+                            RailcraftItem.rail.getStack(4, ItemRail.EnumRail.STANDARD),
+                            GT_ModHandler.getModItem("catwalks", "steelgrate", 4L),
+                            GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Steel, 2L)},
+                    GT_ModHandler.getModItem("catwalks", "sturdy_rail", 16), 300, 8);
+            impact.I_RA.addTrackAssemblerRecipe(
+                    new ItemStack[]{GT_Utility.getIntegratedCircuit(8), CoreItems2.getRecipe(165, 1),
+                            RailcraftItem.rail.getStack(6, ItemRail.EnumRail.STANDARD),
+                            GT_ModHandler.getModItem("catwalks", "steelgrate", 6L),
+                            GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Steel, 2L)},
+                    GT_ModHandler.getModItem("catwalks", "sturdy_rail", 32), 400, 12);
+            // --- Sturdy Power Rail
+            impact.I_RA.addTrackAssemblerRecipe(
+                    new ItemStack[]{GT_Utility.getIntegratedCircuit(9),
+                            RailcraftItem.railbed.getStack(1, ItemRailbed.EnumRailbed.WOOD),
+                            RailcraftItem.rail.getStack(2, ItemRail.EnumRail.ADVANCED),
+                            GT_OreDictUnificator.get(OrePrefixes.plate, Materials.RedAlloy, 1L),
+                            GT_ModHandler.getModItem("catwalks", "steelgrate", 2L),
+                            GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Steel, 2L)},
+                    GT_ModHandler.getModItem("catwalks", "sturdy_rail_powered", 4), 200, 6);
+            impact.I_RA.addTrackAssemblerRecipe(
+                    new ItemStack[]{GT_Utility.getIntegratedCircuit(9),
+                            RailcraftItem.railbed.getStack(1, ItemRailbed.EnumRailbed.STONE),
+                            RailcraftItem.rail.getStack(4, ItemRail.EnumRail.ADVANCED),
+                            GT_OreDictUnificator.get(OrePrefixes.stick, Materials.RedAlloy, 1L),
+                            GT_ModHandler.getModItem("catwalks", "steelgrate", 4L),
+                            GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Steel, 2L)},
+                    GT_ModHandler.getModItem("catwalks", "sturdy_rail_powered", 8), 300, 8);
+            impact.I_RA.addTrackAssemblerRecipe(
+                    new ItemStack[]{GT_Utility.getIntegratedCircuit(9), CoreItems2.getRecipe(165, 1),
+                            RailcraftItem.rail.getStack(6, ItemRail.EnumRail.ADVANCED),
+                            GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 1L),
+                            GT_ModHandler.getModItem("catwalks", "steelgrate", 6L),
+                            GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSLA, 2L)},
+                    GT_ModHandler.getModItem("catwalks", "sturdy_rail_powered", 16), 400, 12);
+            // --- Sturdy Activator Rail
+            impact.I_RA.addTrackAssemblerRecipe(
+                    new ItemStack[]{GT_Utility.getIntegratedCircuit(10),
+                            RailcraftItem.railbed.getStack(1, ItemRailbed.EnumRailbed.WOOD),
+                            RailcraftItem.rail.getStack(2, ItemRail.EnumRail.STANDARD),
+                            new ItemStack(Blocks.redstone_torch),
+                            GT_ModHandler.getModItem("catwalks", "steelgrate", 2L),
+                            GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Iron, 2L)},
+                    GT_ModHandler.getModItem("catwalks", "sturdy_rail_activator", 4), 200, 6);
+            impact.I_RA.addTrackAssemblerRecipe(
+                    new ItemStack[]{GT_Utility.getIntegratedCircuit(10),
+                            RailcraftItem.railbed.getStack(1, ItemRailbed.EnumRailbed.STONE),
+                            RailcraftItem.rail.getStack(4, ItemRail.EnumRail.STANDARD),
+                            new ItemStack(Blocks.redstone_torch),
+                            GT_ModHandler.getModItem("catwalks", "steelgrate", 4L),
+                            GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Iron, 2L)},
+                    GT_ModHandler.getModItem("catwalks", "sturdy_rail_activator", 8), 300, 8);
+            impact.I_RA.addTrackAssemblerRecipe(
+                    new ItemStack[]{GT_Utility.getIntegratedCircuit(10),
+                            CoreItems2.getRecipe(165, 1),
+                            RailcraftItem.rail.getStack(6, ItemRail.EnumRail.STANDARD),
+                            new ItemStack(Blocks.redstone_torch),
+                            GT_ModHandler.getModItem("catwalks", "steelgrate", 6L),
+                            GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Steel, 2L)},
+                    GT_ModHandler.getModItem("catwalks", "sturdy_rail_activator", 16), 400, 12);
+            // --- Sturdy Rail Detector
+            impact.I_RA.addTrackAssemblerRecipe(
+                    new ItemStack[]{GT_Utility.getIntegratedCircuit(10),
+                            RailcraftItem.railbed.getStack(1, ItemRailbed.EnumRailbed.WOOD),
+                            RailcraftItem.rail.getStack(2, ItemRail.EnumRail.STANDARD),
+                            new ItemStack(Blocks.stone_pressure_plate),
+                            GT_ModHandler.getModItem("catwalks", "steelgrate", 2L),
+                            GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Iron, 2L)},
+                    GT_ModHandler.getModItem("catwalks", "sturdy_rail_detector", 4), 200, 6);
+            impact.I_RA.addTrackAssemblerRecipe(
+                    new ItemStack[]{GT_Utility.getIntegratedCircuit(10),
+                            RailcraftItem.railbed.getStack(1, ItemRailbed.EnumRailbed.STONE),
+                            RailcraftItem.rail.getStack(4, ItemRail.EnumRail.STANDARD),
+                            new ItemStack(Blocks.stone_pressure_plate),
+                            GT_ModHandler.getModItem("catwalks", "steelgrate", 4L),
+                            GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Iron, 2L)},
+                    GT_ModHandler.getModItem("catwalks", "sturdy_rail_detector", 8), 300, 8);
+            impact.I_RA.addTrackAssemblerRecipe(
+                    new ItemStack[]{GT_Utility.getIntegratedCircuit(10), CoreItems2.getRecipe(165, 1),
+                            RailcraftItem.rail.getStack(6, ItemRail.EnumRail.STANDARD),
+                            new ItemStack(Blocks.stone_pressure_plate),
+                            GT_ModHandler.getModItem("catwalks", "steelgrate", 6L),
+                            GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Steel, 2L)},
+                    GT_ModHandler.getModItem("catwalks", "sturdy_rail_detector", 16), 400, 12);
+        }
     }
 
 }
