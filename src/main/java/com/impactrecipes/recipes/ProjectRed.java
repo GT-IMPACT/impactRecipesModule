@@ -157,7 +157,7 @@ public class ProjectRed implements Runnable {
         // --- Platformed Plate
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 4L, 2), GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Plastic, 4), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 9), 300, 64);
         // --- Bundled Plate
-        for (int i = 18; i < 34; i++) {
+        for (int i = 17; i < 34; i++) {
             RA.addAssemblerRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 0), GT_ModHandler.getModItem("ProjRed|Transmission", "projectred.transmission.wire", 1L, i), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 3), 400, 30);
         }
         // --- Lamp
