@@ -664,7 +664,7 @@ public class OpenComputers implements Runnable {
                                 GT_ModHandler.getModItem("OpenComputers", "item", 2L, 25),
                                 GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Titanium, 4L),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Electrum, 16L),
-                                GT_Utility.getIntegratedCircuit(1)}, Materials.Plastic.getMolten(72L),
+                                GT_Utility.getIntegratedCircuit(1)}, Materials.Plastic.getMolten(144L),
                         GT_ModHandler.getModItem("OpenComputers", "item", 1L, 108), 400, 480);
                 //Block of Chamelium
                 GT_Values.RA.addCompressorRecipe(GT_ModHandler.getModItem("OpenComputers", "item", 9L, 96),
@@ -717,7 +717,7 @@ public class OpenComputers implements Runnable {
                         tMat.getMolten(288L * tMultiplier / 2L),
                         GT_ModHandler.getModItem("OpenComputers", "screen3", 1L, 0), 240, 256);
                 GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Casing_EV.get(1L),
-                                GT_ModHandler.getModItem("OpenComputers", "screen2", 1L, 0),
+                                Itemstack(Core_Items2.getInstance(), 1, 182),
                                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2L),
                                 ItemList.Circuit_Parts_TransistorASMD.get(1L), GT_Utility.getIntegratedCircuit(1)},
                         tMat.getMolten(288L * tMultiplier / 2L),

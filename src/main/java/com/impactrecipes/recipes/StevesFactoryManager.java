@@ -1,5 +1,6 @@
 package com.impactrecipes.recipes;
 
+import com.impact.common.item.Core_Items2;
 import gregtech.api.enums.GT_Values;
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
@@ -19,6 +20,8 @@ public class StevesFactoryManager implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
             | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
+
+    final Core_Items2 CoreItems2 = Core_Items2.getInstance();
 
     @Override
     public void run() {
@@ -55,7 +58,7 @@ public class StevesFactoryManager implements Runnable {
         GT_ModHandler.addCraftingRecipe(new ItemStack(ModBlocks.blockManager, 1, 0), tBitMask,
                 new Object[]{"PTP", "RDR", "PCP", 'P', OrePrefixes.plate.get(Materials.StainlessSteel), 'R',
                         OrePrefixes.plate.get(Materials.RedAlloy), 'T',
-                        GT_ModHandler.getModItem("PracticalLogistics", "LargeDisplayScreen", 1L, 0), 'D',
+                        CoreItems2.getRecipe(182, 1), 'D',
                         ItemList.Casing_Processor, 'C', new ItemStack(ModBlocks.blockCable, 1, 0)});
     }
 
@@ -150,7 +153,7 @@ public class StevesFactoryManager implements Runnable {
                 new ItemStack(duplicator, 1, 0), 150, 480);
         // --- Factory Labeler
         GT_Values.RA.addAssemblerRecipe(
-                new ItemStack[]{GT_ModHandler.getModItem("PracticalLogistics", "DisplayScreenItem", 1L, 0),
+                new ItemStack[]{CoreItems2.getRecipe(182, 1),
                         GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2),
                         GT_Utility.getIntegratedCircuit(2)}, Materials.Redstone.getMolten(144),
                 new ItemStack(labeler, 1, 0), 150, 480);
