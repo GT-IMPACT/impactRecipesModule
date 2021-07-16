@@ -903,6 +903,7 @@ public class OpenComputers implements Runnable {
                                 GT_Utility.getIntegratedCircuit(7)}, tMat.getMolten(144L * tMultiplier / 2L),
                         GT_ModHandler.getModItem("OpenComputers", "item", 1L, 39), 250, 480);
                 //Circuit 1
+                //1
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1L),
                                 ItemList.Circuit_Parts_Transistor.get(2L),
@@ -924,7 +925,52 @@ public class OpenComputers implements Runnable {
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Electrum, 16L),
                                 GT_Utility.getIntegratedCircuit(1)}, tMat.getMolten(288L * tMultiplier / 2L),
                         CoreItems2.getRecipe(154, 2), 400, 120);
+                //2
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1L),
+                                ItemList.Circuit_Parts_Transistor.get(2L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueAlloy, 8L),
+                                GT_Utility.getIntegratedCircuit(2)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(154, 4), 400, 256);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1L),
+                                ItemList.Circuit_Parts_TransistorSMD.get(2L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueAlloy, 8L),
+                                GT_Utility.getIntegratedCircuit(2)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(154, 4), 400, 256);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(2L),
+                                ItemList.Circuit_Parts_TransistorASMD.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 4),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueAlloy, 16L),
+                                GT_Utility.getIntegratedCircuit(2)}, tMat.getMolten(288L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(154, 8), 400, 256);
+                //3
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1L),
+                                ItemList.Circuit_Parts_Transistor.get(2L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 4),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8L),
+                                GT_Utility.getIntegratedCircuit(3)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(154, 16), 400, 480);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1L),
+                                ItemList.Circuit_Parts_TransistorSMD.get(2L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 4),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8L),
+                                GT_Utility.getIntegratedCircuit(3)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(154, 16), 400, 480);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(2L),
+                                ItemList.Circuit_Parts_TransistorASMD.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 8),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 16L),
+                                GT_Utility.getIntegratedCircuit(3)}, tMat.getMolten(288L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(154, 32), 400, 480);
                 //Circuit 2
+                //1
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1L),
                                 ItemList.Circuit_Parts_Transistor.get(4L),
@@ -946,7 +992,52 @@ public class OpenComputers implements Runnable {
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Electrum, 8L),
                                 GT_Utility.getIntegratedCircuit(2)}, tMat.getMolten(144L * tMultiplier / 2L),
                         CoreItems2.getRecipe(155, 1), 250, 256);
+                //2
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1L),
+                                ItemList.Circuit_Parts_Transistor.get(4L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueAlloy, 8L),
+                                GT_Utility.getIntegratedCircuit(2)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(155, 3), 500, 480);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1L),
+                                ItemList.Circuit_Parts_TransistorSMD.get(4L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueAlloy, 8L),
+                                GT_Utility.getIntegratedCircuit(2)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(155, 3), 500, 480);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1L),
+                                ItemList.Circuit_Parts_TransistorASMD.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueAlloy, 8L),
+                                GT_Utility.getIntegratedCircuit(2)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(155, 3), 250, 480);
+                //3
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Fiberglass_Advanced.get(1L),
+                                ItemList.Circuit_Parts_Transistor.get(4L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 4),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8L),
+                                GT_Utility.getIntegratedCircuit(3)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(155, 9), 500, 1024);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Fiberglass_Advanced.get(1L),
+                                ItemList.Circuit_Parts_TransistorSMD.get(4L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 4),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8L),
+                                GT_Utility.getIntegratedCircuit(3)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(155, 9), 500, 1024);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Fiberglass_Advanced.get(1L),
+                                ItemList.Circuit_Parts_TransistorASMD.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 4),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8L),
+                                GT_Utility.getIntegratedCircuit(3)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(155, 9), 250, 1024);
                 //Circuit 3
+                //1
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1L),
                                 ItemList.Circuit_Parts_Transistor.get(8L),
@@ -968,6 +1059,51 @@ public class OpenComputers implements Runnable {
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Electrum, 8L),
                                 GT_Utility.getIntegratedCircuit(1)}, tMat.getMolten(144L * tMultiplier / 2L),
                         CoreItems2.getRecipe(156, 1), 300, 480);
+                //2
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Fiberglass_Advanced.get(1L),
+                                ItemList.Circuit_Parts_Transistor.get(8L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueAlloy, 8L),
+                                GT_Utility.getIntegratedCircuit(2)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(156, 2), 600, 1024);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Fiberglass_Advanced.get(1L),
+                                ItemList.Circuit_Parts_TransistorSMD.get(8L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueAlloy, 8L),
+                                GT_Utility.getIntegratedCircuit(2)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(156, 2), 600, 1024);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Fiberglass_Advanced.get(1L),
+                                ItemList.Circuit_Parts_TransistorASMD.get(2L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueAlloy, 8L),
+                                GT_Utility.getIntegratedCircuit(2)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(156, 2), 300, 1024);
+                //3
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Multifiberglass_Elite.get(1L),
+                                ItemList.Circuit_Parts_Transistor.get(8L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 4),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8L),
+                                GT_Utility.getIntegratedCircuit(3)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(156, 4), 600, 1920);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Multifiberglass_Elite.get(1L),
+                                ItemList.Circuit_Parts_TransistorSMD.get(8L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 4),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8L),
+                                GT_Utility.getIntegratedCircuit(3)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(156, 4), 600, 1920);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Multifiberglass_Elite.get(1L),
+                                ItemList.Circuit_Parts_TransistorASMD.get(2L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 4),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8L),
+                                GT_Utility.getIntegratedCircuit(3)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(156, 4), 300, 1920);
+
                 //network card
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{GT_ModHandler.getModItem("OpenComputers", "item", 1L, 33),
