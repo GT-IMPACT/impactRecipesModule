@@ -1204,6 +1204,116 @@ public class ImpactCore implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.BlackPlutonium, 16L)
         },
                 ItemList.Energy_Cluster.get(1), null, 1400, 200000);
+
+        // --- UHV Orb
+        RA.addBasicLineRecipe(new ItemStack[]{
+                        CoreItems2.getRecipe(190, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Plutonium241, 24),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Neutronium, 32L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Infinite, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 48),
+                        ItemList.Circuit_Parts_MECrystal_Chip_Elite.get(60L),
+                        ItemList.Field_Generator_IV.get(1),
+                        ItemList.Circuit_Chip_QPIC.get(16),
+                        ItemList.Circuit_Parts_DiodeASMD.get(48),
+                        ItemList.Circuit_Parts_CapacitorASMD.get(48),
+                        ItemList.Circuit_Parts_ResistorASMD.get(48),
+                        ItemList.Circuit_Parts_TransistorASMD.get(48),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Europium, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Adamantium, 16L)
+                },
+                ItemList.MysteriousCrystalOrb.get(1), null, 2000, 1000000);
+
+        RA.addBasicLineRecipe(new ItemStack[]{
+                        CoreItems2.getRecipe(190, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.NaquadahEnriched, 24),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Neutronium, 32L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Infinite, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 48),
+                        ItemList.Circuit_Parts_MECrystal_Chip_Elite.get(48L),
+                        ItemList.Field_Generator_LuV.get(1),
+                        ItemList.Circuit_Chip_QPIC.get(16),
+                        ItemList.Circuit_Parts_DiodeASMD.get(48),
+                        ItemList.Circuit_Parts_CapacitorASMD.get(48),
+                        ItemList.Circuit_Parts_ResistorASMD.get(48),
+                        ItemList.Circuit_Parts_TransistorASMD.get(48),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Europium, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.BlackPlutonium, 16L)
+                },
+                ItemList.MysteriousCrystalOrb.get(1), null, 1600, 1000000);
+
+        RA.addBasicLineRecipe(new ItemStack[]{
+                        CoreItems2.getRecipe(190, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Naquadria, 24),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Neutronium, 32L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Infinite, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 48),
+                        ItemList.Circuit_Parts_MECrystal_Chip_Elite.get(36L),
+                        ItemList.Field_Generator_ZPM.get(1),
+                        ItemList.Circuit_Chip_QPIC.get(16),
+                        ItemList.Circuit_Parts_DiodeASMD.get(48),
+                        ItemList.Circuit_Parts_CapacitorASMD.get(48),
+                        ItemList.Circuit_Parts_ResistorASMD.get(48),
+                        ItemList.Circuit_Parts_TransistorASMD.get(48),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Europium, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CosmicNeutronium, 16L)
+                },
+                ItemList.MysteriousCrystalOrb.get(1), null, 1200, 1000000);
+
+        // --- UEV Orb
+        RA.addBasicLineRecipe(new ItemStack[]{
+                        CoreItems2.getRecipe(191, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Plutonium241, 32),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Phoenixite, 32L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Bio, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 64),
+                        ItemList.MysteriousCrystalOrb.get(4),
+                        ItemList.Field_Generator_ZPM.get(1),
+                        ItemList.Circuit_Chip_FPIC.get(16),
+                        ItemList.Circuit_Parts_DiodeASMD.get(64),
+                        ItemList.Circuit_Parts_CapacitorASMD.get(64),
+                        ItemList.Circuit_Parts_ResistorASMD.get(64),
+                        ItemList.Circuit_Parts_TransistorASMD.get(64),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUEV, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.BlackPlutonium, 16L)
+                },
+                ItemList.MysteriousCrystalModule.get(1), null, 1600, 4000000);
+
+        RA.addBasicLineRecipe(new ItemStack[]{
+                        CoreItems2.getRecipe(191, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.NaquadahEnriched, 32),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Phoenixite, 32L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Bio, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 64),
+                        ItemList.MysteriousCrystalOrb.get(2),
+                        ItemList.Field_Generator_UV.get(1),
+                        ItemList.Circuit_Chip_FPIC.get(16),
+                        ItemList.Circuit_Parts_DiodeASMD.get(64),
+                        ItemList.Circuit_Parts_CapacitorASMD.get(64),
+                        ItemList.Circuit_Parts_ResistorASMD.get(64),
+                        ItemList.Circuit_Parts_TransistorASMD.get(64),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUEV, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CosmicNeutronium, 16L)
+                },
+                ItemList.MysteriousCrystalModule.get(1), null, 1600, 4000000);
+
+        RA.addBasicLineRecipe(new ItemStack[]{
+                        CoreItems2.getRecipe(191, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Naquadria, 32),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Phoenixite, 32L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Bio, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Californium, 64),
+                        ItemList.MysteriousCrystalOrb.get(1),
+                        ItemList.Field_Generator_UHV.get(1),
+                        ItemList.Circuit_Chip_FPIC.get(16),
+                        ItemList.Circuit_Parts_DiodeASMD.get(64),
+                        ItemList.Circuit_Parts_CapacitorASMD.get(64),
+                        ItemList.Circuit_Parts_ResistorASMD.get(64),
+                        ItemList.Circuit_Parts_TransistorASMD.get(64),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUEV, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.DraconiumAwakened, 16L)
+                },
+                ItemList.MysteriousCrystalModule.get(1), null, 1600, 4000000);
     }
 
     private void mixer() {

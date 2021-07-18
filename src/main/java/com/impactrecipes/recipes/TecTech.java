@@ -734,42 +734,32 @@ public class TecTech implements Runnable {
                         new FluidStack(FluidRegistry.getFluid("ic2coolant"), 32000)
                 }, ItemList.ZPM3.get(1), 4000, 1600000);
 
-        TT_recipeAdder
-                .addResearchableAssemblylineRecipe(ItemList.MysteriousCrystal.get(1L), 12000, 16, 500000, 3,
-                        new Object[]{
-                                ItemList.Circuit_Board_Bio_Ultra.get(1L),
-                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Neutronium, 32L),
-                                new Object[]{OrePrefixes.circuit.get(Materials.Infinite), 4L},
-                                ItemList.Circuit_HighEnergyFlow.get(2L),
-                                ItemList.Circuit_Parts_MECrystal_Chip_Elite.get(36L),
-                                ItemList.Circuit_Parts_MECrystal_Chip_Elite.get(36L),
-                                ItemList.Circuit_Chip_PPIC.get(64L),
-                                ItemList.Circuit_Parts_DiodeASMD.get(64L),
-                                ItemList.Circuit_Parts_CapacitorASMD.get(64L),
-                                ItemList.Circuit_Parts_ResistorASMD.get(64L),
-                                ItemList.Circuit_Parts_TransistorASMD.get(64L),
-                                GT_OreDictUnificator.get(OrePrefixes.wireFine.get(Materials.Neutronium), 64L)},
-                        new FluidStack[]{
-                                Materials.SolderingAlloy.getMolten(1440),
-                                new FluidStack(FluidRegistry.getFluid("ic2coolant"), 8000)},
-                        ItemList.MysteriousCrystalOrb.get(1), 1000, 2000000);
+        //Orb Housing
+        TT_recipeAdder.addResearchableAssemblylineRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Quantium, 1L), 12000, 16, 500000, 3,
+                new ItemStack[]{
+                        ItemList.Circuit_Board_Bio_Ultra.get(1L),
+                        CoreItems2.getRecipe(85, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Neutronium, 6),
+                        GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Pikyonium64B, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSE, 16),
+                },
+                new FluidStack[]{},
+                CoreItems2.getRecipe(190, 1), 400, 300000);
+        TT_recipeAdder.addResearchableAssemblylineRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Adamantium, 1L), 16000, 18, 1000000, 6,
+                new ItemStack[]{
+                        ItemList.Circuit_Board_Crystal_Extreme.get(1L),
+                        CoreItems2.getRecipe(174, 6),
+                        GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Phoenixite, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Quantum, 12),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 24),
+                        GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSE, 24),
+                },
+                new FluidStack[]{},
+                CoreItems2.getRecipe(191, 1), 500, 800000);
 
-        TT_recipeAdder
-                .addResearchableAssemblylineRecipe(ItemList.MysteriousCrystalOrb.get(1L), 24000, 16,
-                        1000000, 6, new Object[]{
-                                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Phoenixite, 16L),
-                                new Object[]{OrePrefixes.circuit.get(Materials.Bio), 4L},
-                                ItemList.Circuit_HighEnergyFlow.get(4L),
-                                ItemList.MysteriousCrystalOrb.get(8L),
-                                ItemList.Field_Generator_UEV.get(2),
-                                ItemList.Circuit_Wafer_SoC3.get(64),
-                                ItemList.Circuit_Wafer_SoC3.get(64),
-                                ItemList.Circuit_Parts_DiodeASMD.get(64),
-                                GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorUEV, 16),},
-                        new FluidStack[]{
-                                Materials.SolderingAlloy.getMolten(2880),
-                                new FluidStack(FluidRegistry.getFluid("ic2coolant"), 16000)},
-                        ItemList.MysteriousCrystalModule.get(1), 2000, 8000000);
 
         //Blocks and Multiblocks
         TT_recipeAdder
