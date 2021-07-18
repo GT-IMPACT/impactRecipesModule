@@ -649,7 +649,7 @@ public class TecTech implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Polybenzimidazole, 64)
                 }, new FluidStack[]{
-                        Materials.SolderingAlloy.getMolten(3760L),
+                        Materials.SolderingAlloy.getMolten(4032L),
                         Materials.Naquadria.getMolten(4032L),
                         new FluidStack(FluidRegistry.getFluid("ic2coolant"), 20000)
                 },
@@ -670,7 +670,7 @@ public class TecTech implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Neutronium, 16),
                         GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Lanthanum, 64)
                 }, new FluidStack[]{
-                        Materials.SolderingAlloy.getMolten(3760L),
+                        Materials.SolderingAlloy.getMolten(4032L),
                         Materials.UUMatter.getFluid(8000L),
                         Materials.Osmium.getMolten(1152L)
                 },
@@ -690,7 +690,7 @@ public class TecTech implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Neutronium, 8),
                         GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Lanthanum, 64)
                 }, new FluidStack[]{
-                        Materials.SolderingAlloy.getMolten(3760L),
+                        Materials.SolderingAlloy.getMolten(4032L),
                         Materials.UUMatter.getFluid(24000L),
                         Materials.Osmium.getMolten(2304L)
                 },
@@ -729,7 +729,7 @@ public class TecTech implements Runnable {
                         ItemList.Circuit_Parts_DiodeASMD.get(64),
                         GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorUEV, 64),
                 }, new FluidStack[]{
-                        Materials.SolderingAlloy.getMolten(3760),
+                        Materials.SolderingAlloy.getMolten(4032),
                         Materials.Naquadria.getMolten(9000),
                         new FluidStack(FluidRegistry.getFluid("ic2coolant"), 32000)
                 }, ItemList.ZPM3.get(1), 4000, 1600000);
