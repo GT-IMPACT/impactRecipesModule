@@ -82,6 +82,8 @@ public class BiblioCraft implements Runnable {
     }
 
     private void hand() {
+        // --- ItemStack Name Tester (Book)
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("BiblioCraft", "item.TesterItem", 1L, 0), tBitMask, new Object[]{"sD ", "Sh ", 'S', new ItemStack(Items.book, 1, 0), 'D', new ItemStack(Items.diamond, 1, 0)});
         // --- Print Press Case
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("BiblioCraft", "item.BiblioChase", 1L, 0), tBitMask, new Object[]{"SSS", "S S", "SSS", 'S', OrePrefixes.stick.get(Materials.WoodSealed)});
         // --- Typesetting Table
