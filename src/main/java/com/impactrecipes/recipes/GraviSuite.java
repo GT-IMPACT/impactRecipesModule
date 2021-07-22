@@ -29,35 +29,26 @@ public class GraviSuite implements Runnable {
     }
 
     private void removeGraviSuite() {
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 1), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 0), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advJetpack", GT_Values.W));
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advLappack", GT_Values.W));
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advNanoChestPlate", GT_Values.W));
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "ultimateLappack", GT_Values.W));
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "relocator", GT_Values.W));
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "vajra", GT_Values.W));
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "graviTool", GT_Values.W));
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advChainsaw", GT_Values.W));
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advDDrill", GT_Values.W));
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 4), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 5), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 7), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 2), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 6), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 3), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "graviChestPlate", 1L, GT_Values.W),
-                true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "kpChestPlate", 1L, GT_Values.W),
-                true, false, false);
+        /*removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 3, 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 3, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advJetpack", 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advLappack", 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advNanoChestPlate", 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "ultimateLappack", 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "relocator", 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "vajra", 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "graviTool", 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advChainsaw", 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "advDDrill", 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 4));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 5));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 7));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 2));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 6));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 3));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "graviChestPlate", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("GraviSuite", "kpChestPlate", 1L));
+        */
     }
 
     private void hand() {
