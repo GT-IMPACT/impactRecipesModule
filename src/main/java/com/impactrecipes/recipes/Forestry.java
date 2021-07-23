@@ -84,7 +84,7 @@ public class Forestry implements Runnable {
         // --- Builder's Woven Backpack
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "builderBagT2", 1L, 0), tBitMask, new Object[]{"WRW", "WBW", "WCW", 'R', OrePrefixes.ring.get(Materials.Steel), 'B', GT_ModHandler.getModItem("Forestry", "builderBag", 1L, 0), 'C', GT_ModHandler.getModItem("Backpack", "backpack", 1L, 100), 'W', GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L, 0)});
 
-        // --- Fence
+        // --- Fence & Stairs
         for (int i = 0; i < 29; i++) {
             GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "fences", 1L, i), tBitMask, new Object[]{"SPS", "SPS", "SPS", 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("Forestry", "planks", 1L, i)});
             GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "fences", 1L, i), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Wood), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("Forestry", "planks", 1L, i)});
@@ -95,6 +95,12 @@ public class Forestry implements Runnable {
             GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "fencesFireproof", 1L, i), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Wood), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("Forestry", "planksFireproof", 1L, i)});
             GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "fencesFireproof", 2L, i), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Iron), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("Forestry", "planksFireproof", 1L, i)});
             GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "fencesFireproof", 4L, i), tBitMask, new Object[]{"WdW", "SPS", "SPS", 'W', OrePrefixes.screw.get(Materials.Steel), 'S', OrePrefixes.stick.get(Materials.Wood), 'P', GT_ModHandler.getModItem("Forestry", "planksFireproof", 1L, i)});
+
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "stairs", 2L, i), tBitMask, new Object[]{"sP", "PP", 'P', GT_ModHandler.getModItem("Forestry", "slabs", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "stairs", 4L, i), tBitMask, new Object[]{"sP", "PP", 'P', GT_ModHandler.getModItem("Forestry", "planks", 1L, i)});
+
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "stairsFireproof", 2L, i), tBitMask, new Object[]{"sP", "PP", 'P', GT_ModHandler.getModItem("Forestry", "slabsFireproof", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Forestry", "stairsFireproof", 4L, i), tBitMask, new Object[]{"sP", "PP", 'P', GT_ModHandler.getModItem("Forestry", "planksFireproof", 1L, i)});
         }
 
         // --- Spectacles
@@ -134,7 +140,7 @@ public class Forestry implements Runnable {
                         ItemList.Plank_Oak.get(1L)}, Materials.Redstone.getMolten(72L),
                 CoreItems2.getRecipe(53, 1), 100, 30, false);
 
-        // --- Fence
+        // --- Fences & Stairs
         for (int i = 0; i < 29; i++) {
             GT_Values.RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planks", 2L, i),
@@ -167,6 +173,24 @@ public class Forestry implements Runnable {
                             GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
                             GT_Utility.getIntegratedCircuit(11)}, Materials.Steel.getMolten(16),
                     GT_ModHandler.getModItem("Forestry", "fencesFireproof", 4L, i), 300, 8);
+
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("Forestry", "slabs", 3L, i),
+                            GT_Utility.getIntegratedCircuit(7)}, null,
+                    GT_ModHandler.getModItem("Forestry", "stairs", 2L, i), 300, 8);
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planks", 3L, i),
+                            GT_Utility.getIntegratedCircuit(7)}, null,
+                    GT_ModHandler.getModItem("Forestry", "stairs", 4L, i), 300, 8);
+
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("Forestry", "slabsFireproof", 3L, i),
+                            GT_Utility.getIntegratedCircuit(7)}, null,
+                    GT_ModHandler.getModItem("Forestry", "stairsFireproof", 2L, i), 300, 8);
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planksFireproof", 3L, i),
+                            GT_Utility.getIntegratedCircuit(7)}, null,
+                    GT_ModHandler.getModItem("Forestry", "stairsFireproof", 4L, i), 300, 8);
         }
     }
 

@@ -153,6 +153,19 @@ public class Vanilla implements Runnable {
         removeRecipeByOutput(getItemStack("minecraft", "arrow", 1, 0), true, false,
                 false);
 
+        removeRecipeByOutput(getItemStack("minecraft", "oak_stairs", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "spruce_stairs", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "birch_stairs", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "jungle_stairs", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "acacia_stairs", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "dark_oak_stairs", 1, 0), true, false,
+                false);
+
     }
 
     private void handRecipe() {
@@ -283,6 +296,17 @@ public class Vanilla implements Runnable {
 
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "string", 2L), tBitMask, new Object[]{"Wk", 'W', "blockWool"});
 
+        // --- Stairs
+        ItemStack[] stairs2 = {GT_ModHandler.getModItem("minecraft", "oak_stairs", 2L), GT_ModHandler.getModItem("minecraft", "spruce_stairs", 2L),
+                GT_ModHandler.getModItem("minecraft", "birch_stairs", 2L), GT_ModHandler.getModItem("minecraft", "jungle_stairs", 2L),
+                GT_ModHandler.getModItem("minecraft", "acacia_stairs", 2L), GT_ModHandler.getModItem("minecraft", "dark_oak_stairs", 2L)};
+        ItemStack[] stairs4 = {GT_ModHandler.getModItem("minecraft", "oak_stairs", 4L), GT_ModHandler.getModItem("minecraft", "spruce_stairs", 4L),
+                GT_ModHandler.getModItem("minecraft", "birch_stairs", 4L), GT_ModHandler.getModItem("minecraft", "jungle_stairs", 4L),
+                GT_ModHandler.getModItem("minecraft", "acacia_stairs", 4L), GT_ModHandler.getModItem("minecraft", "dark_oak_stairs", 4L)};
+        for (int i = 0; i < 6; i++) {
+            GT_ModHandler.addCraftingRecipe(stairs2[i], tBitMask, new Object[]{"sP", "PP", 'P', GT_ModHandler.getModItem("minecraft", "wooden_slab", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(stairs4[i], tBitMask, new Object[]{"sP", "PP", 'P', GT_ModHandler.getModItem("minecraft", "planks", 1L, i)});
+        }
     }
 
     private void oreRegisterRecipe() {
@@ -405,6 +429,21 @@ public class Vanilla implements Runnable {
                         ItemList.Circuit_Integrated.getWithDamage(0L, 3L),
                         Dyes.VALUES[i].getFluidDye(j, 24L), new ItemStack(Blocks.carpet, 2, 15 - i), 128, 5);
             }
+        }
+        // --- Stairs
+        ItemStack[] stairs2 = {GT_ModHandler.getModItem("minecraft", "oak_stairs", 2L), GT_ModHandler.getModItem("minecraft", "spruce_stairs", 2L),
+                GT_ModHandler.getModItem("minecraft", "birch_stairs", 2L), GT_ModHandler.getModItem("minecraft", "jungle_stairs", 2L),
+                GT_ModHandler.getModItem("minecraft", "acacia_stairs", 2L), GT_ModHandler.getModItem("minecraft", "dark_oak_stairs", 2L)};
+        ItemStack[] stairs4 = {GT_ModHandler.getModItem("minecraft", "oak_stairs", 4L), GT_ModHandler.getModItem("minecraft", "spruce_stairs", 4L),
+                GT_ModHandler.getModItem("minecraft", "birch_stairs", 4L), GT_ModHandler.getModItem("minecraft", "jungle_stairs", 4L),
+                GT_ModHandler.getModItem("minecraft", "acacia_stairs", 4L), GT_ModHandler.getModItem("minecraft", "dark_oak_stairs", 4L)};
+        for (int i = 0; i < 6; i++) {
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("minecraft", "wooden_slab", 3L, i),
+                            GT_Utility.getIntegratedCircuit(7)}, null, stairs2[i], 300, 8);
+            GT_Values.RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("minecraft", "planks", 3L, i),
+                            GT_Utility.getIntegratedCircuit(7)}, null, stairs4[i], 300, 8);
         }
     }
 
