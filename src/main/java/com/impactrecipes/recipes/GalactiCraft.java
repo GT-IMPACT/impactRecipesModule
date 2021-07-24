@@ -332,6 +332,7 @@ public class GalactiCraft implements Runnable {
                 false, true);
         removeRecipeByOutput(GT_ModHandler.getModItem("GalacticraftCore", "slabGCHalf", 1L, 5), true,
                 false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalacticraftCore", "item.basicItem", 1L, 20));
     }
 
     private void hand() {
@@ -455,7 +456,14 @@ public class GalactiCraft implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalacticraftCore", "slabGCHalf", 2L, 5), tBitMask, new Object[]{"sB", 'B', GT_ModHandler.getModItem("GalacticraftMars", "tile.mars", 1L, 7)});
         // --- Battery
         GT_ModHandler.addShapelessCraftingRecipe(GT_ModHandler.getModItem("GalacticraftCore", "item.battery", 1L, 100), tBitMask, new Object[]{ItemList.Battery_Hull_LV});
-
+        // --- Ambient Thermal Controller
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalacticraftCore", "item.basicItem", 1L, 20), tBitMask,
+                new Object[]{"CVC", "BSB", "AOA", 'B', GT_ModHandler.getModItem("GalacticraftCore", "item.basicItem", 1L, 10),
+                        'A', GT_ModHandler.getModItem("GalacticraftCore", "item.basicItem", 1L, 8),
+                        'S', GT_ModHandler.getModItem("GalacticraftCore", "item.basicItem", 1L, 9),
+                        'V', GT_ModHandler.getModItem("GalacticraftCore", "item.airVent", 1L),
+                        'O', GT_ModHandler.getModItem("IC2","itemRecipePart",1, 6),
+                        'C', OrePrefixes.circuit.get(Materials.Advanced)});
     }
 
     private void pulverizer() {

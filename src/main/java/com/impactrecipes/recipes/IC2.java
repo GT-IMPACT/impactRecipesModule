@@ -453,6 +453,10 @@ public class IC2 implements Runnable {
                         'G', GT_ModHandler.getModItem("IC2","itemArmorRubBoots",1, GT_Values.W),
                         'B', ToolDictNames.craftingToolSoftHammer});
 
+        // --- Copper Boiler
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemRecipePart",1, 6), tBitMask,
+                new Object[] {"CCC","SwS","CCC",'C', OrePrefixes.itemCasing.get(Materials.Copper),'S', OrePrefixes.screw.get(Materials.Copper)});
+
         // --- Windmeter
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","windmeter",1, 26), tBitMask,
                 new Object[] {"SRd","GIG","PBP",'S', OrePrefixes.screw.get(Materials.StainlessSteel),'G', OrePrefixes.gearGtSmall.get(Materials.StainlessSteel),

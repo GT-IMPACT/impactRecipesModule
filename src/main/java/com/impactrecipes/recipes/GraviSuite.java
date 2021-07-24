@@ -54,6 +54,7 @@ public class GraviSuite implements Runnable {
     private void hand() {
         // --- Super Conductor
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L, 1), tBitMask, new Object[]{"GGG", "SPS", "GGG", 'G', GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L), 'S', OrePrefixes.wireGt02.get(Materials.SuperconductorLuV), 'P', OrePrefixes.plateTriple.get(Materials.Platinum)});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 3L, 1), tBitMask, new Object[]{"GGG", "SPS", "GGG", 'G', GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 1L), 'S', OrePrefixes.wireGt04.get(Materials.SuperconductorZPM), 'P', OrePrefixes.plateQuadruple.get(Materials.YttriumBariumCuprate)});
         // --- Super Conductor Cover
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 2L), tBitMask, new Object[]{"PPP", "III", "PPP", 'I', GT_ModHandler.getModItem("IC2", "itemPartIridium", 1L), 'P', OrePrefixes.plate.get(Materials.NiobiumTitanium)});
         // --- Engine Booster
