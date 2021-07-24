@@ -160,24 +160,27 @@ public class IC2 implements Runnable {
                 false);
         removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemBoat", 1L, 1), true, false,
                 false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemBarrel", 1L, 1), true, false,
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemBarrel", 1L), true, false,
                 false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemScrapbox", 1L, 1), true, false,
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemScrapbox", 1L), true, false,
                 false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemPartCarbonMesh", 1L, 1), true, false,
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemPartCarbonMesh", 1L), true, false,
                 false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemFuelPlantBall", 1L, 1), true, false,
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemFuelPlantBall", 1L), true, false,
                 false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemFluidCell", 1L, 1), true, false,
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemFluidCell", 1L), true, false,
                 false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemToolWrench", 1L, 1), true, false,
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemToolWrench", 1L), true, false,
                 false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockReactorChamber", 1L, 1), true, false,
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockReactorChamber", 1L), true, false,
                 false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockNuke", 1L, 1), true, false,
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockNuke", 1L), true, false,
                 false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemToolbox", 1L, 1), true, false,
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemToolbox", 1L), true, false,
                 false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "upgradeModule", 1L, 4), true, false,
+                false);
+
     }
 
     private void removeCompactGen() {
