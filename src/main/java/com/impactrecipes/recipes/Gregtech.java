@@ -3948,6 +3948,9 @@ public class Gregtech implements Runnable {
     private void centrifuge() {
         GT_Values.RA.addCentrifugeRecipe(ItemList.AdsorptionFilterDirty.get(1L), GT_Values.NI, GT_Values.NF, Materials.Pollution.getFluid(100), ItemList.AdsorptionFilterCasing.get(1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Coal, 8L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DarkAsh, 8L), GT_Values.NI, GT_Values.NI, GT_Values.NI, new int[]{9900, 10000, 10000}, 800, 480);
 
+        // --- Greywacke Dust
+        GT_Values.RA.addCentrifugeRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Greywacke, 8L), GT_Values.NI, GT_Values.NF, GT_Values.NF, GT_OreDictUnificator.get(OrePrefixes.dust, Materials.SiliconDioxide, 4L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.CertusQuartz, 1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Quartzite, 1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.GarnetRed, 1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.GarnetYellow, 1L), GT_Values.NI, new int[]{10000, 10000, 10000, 10000, 10000}, 400, 8);
+
     }
 
     private void canner() {
