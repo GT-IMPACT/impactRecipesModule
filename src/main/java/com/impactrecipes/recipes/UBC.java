@@ -51,19 +51,19 @@ public class UBC implements Runnable {
             GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("UndergroundBiomes", "sedimentaryStoneHalfSlab", 2L, i), tBitMask, new Object[]{"sB", 'B', GT_ModHandler.getModItem("UndergroundBiomes", "sedimentaryStone", 1L, i)});
 
             // --- Buttons
-            for (int j = 0; j < 8; i++) {
+            for (int j = 0; j < 8; j++) {
                 GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("UndergroundBiomes", "button", 8L, j), tBitMask, new Object[]{"sB", 'B', GT_ModHandler.getModItem("UndergroundBiomes", "metamorphicStoneHalfSlab", 1L, i)});
             }
-            for (int j = 8; j < 16; i++) {
+            for (int j = 8; j < 16; j++) {
                 GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("UndergroundBiomes", "button", 8L, j), tBitMask, new Object[]{"sB", 'B', GT_ModHandler.getModItem("UndergroundBiomes", "metamorphicCobblestoneHalfSlab", 1L, i)});
             }
-            for (int j = 24; j < 32; i++) {
+            for (int j = 24; j < 32; j++) {
                 GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("UndergroundBiomes", "button", 8L, j), tBitMask, new Object[]{"sB", 'B', GT_ModHandler.getModItem("UndergroundBiomes", "igneousStoneHalfSlab", 1L, i)});
             }
-            for (int j = 32; j < 40; i++) {
+            for (int j = 32; j < 40; j++) {
                 GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("UndergroundBiomes", "button", 8L, j), tBitMask, new Object[]{"sB", 'B', GT_ModHandler.getModItem("UndergroundBiomes", "igneousCobblestoneHalfSlab", 1L, i)});
             }
-            for (int j = 48; j < 56; i++) {
+            for (int j = 48; j < 56; j++) {
                 GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("UndergroundBiomes", "button", 8L, j), tBitMask, new Object[]{"sB", 'B', GT_ModHandler.getModItem("UndergroundBiomes", "sedimentaryStoneHalfSlab", 1L, i)});
             }
 
@@ -89,23 +89,23 @@ public class UBC implements Runnable {
                     GT_ModHandler.getModItem("UndergroundBiomes", "sedimentaryStoneHalfSlab", 2L, i), GT_Values.NI, 25, 8);
 
             // --- Buttons
-            for (int j = 0; j < 8; i++) {
+            for (int j = 0; j < 8; j++) {
                 GT_Values.RA.addCutterRecipe(GT_ModHandler.getModItem("UndergroundBiomes", "metamorphicStoneHalfSlab", 1L, i),
                         GT_ModHandler.getModItem("UndergroundBiomes", "button", 8L, j), GT_Values.NI, 12, 8);
             }
-            for (int j = 8; j < 16; i++) {
+            for (int j = 8; j < 16; j++) {
                 GT_Values.RA.addCutterRecipe(GT_ModHandler.getModItem("UndergroundBiomes", "metamorphicCobblestoneHalfSlab", 1L, i),
                         GT_ModHandler.getModItem("UndergroundBiomes", "button", 8L, j), GT_Values.NI, 12, 8);
             }
-            for (int j = 24; j < 32; i++) {
+            for (int j = 24; j < 32; j++) {
                 GT_Values.RA.addCutterRecipe(GT_ModHandler.getModItem("UndergroundBiomes", "igneousStoneHalfSlab", 1L, i),
                         GT_ModHandler.getModItem("UndergroundBiomes", "button", 8L, j), GT_Values.NI, 12, 8);
             }
-            for (int j = 32; j < 40; i++) {
+            for (int j = 32; j < 40; j++) {
                 GT_Values.RA.addCutterRecipe(GT_ModHandler.getModItem("UndergroundBiomes", "igneousCobblestoneHalfSlab", 1L, i),
                         GT_ModHandler.getModItem("UndergroundBiomes", "button", 8L, j), GT_Values.NI, 12, 8);
             }
-            for (int j = 48; j < 56; i++) {
+            for (int j = 48; j < 56; j++) {
                 GT_Values.RA.addCutterRecipe(GT_ModHandler.getModItem("UndergroundBiomes", "sedimentaryStoneHalfSlab", 1L, i),
                         GT_ModHandler.getModItem("UndergroundBiomes", "button", 8L, j), GT_Values.NI, 12, 8);
             }
