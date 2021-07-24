@@ -1428,6 +1428,16 @@ public class Gregtech implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.NiobiumTitanium, 1L),
                         GT_Values.NI, 1000, 480, 4500);
         GT_Values.RA.addBlastRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Longasssuperconductornameforlvwire, 1L),
+                GT_Utility.getIntegratedCircuit(1), GT_Values.NF, GT_Values.NF,
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Longasssuperconductornameforlvwire, 1L),
+                GT_Values.NI, 1200, 120, 1200);
+        GT_Values.RA.addBlastRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Longasssuperconductornameforlvwire, 1L),
+                GT_Utility.getIntegratedCircuit(11), Materials.Nitrogen.getGas(1000L), GT_Values.NF,
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Longasssuperconductornameforlvwire, 1L),
+                GT_Values.NI, 800, 120, 1200);
+        GT_Values.RA.addBlastRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Pentacadmiummagnesiumhexaoxid, 1L),
                 GT_Utility.getIntegratedCircuit(1), GT_Values.NF, GT_Values.NF,
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Pentacadmiummagnesiumhexaoxid, 1L),
