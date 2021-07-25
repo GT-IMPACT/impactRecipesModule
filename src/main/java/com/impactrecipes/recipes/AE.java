@@ -272,6 +272,9 @@ public class AE implements Runnable {
         removeRecipeByOutput(
                 GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockWireless", 1L, 0), true, false,
                 false);
+
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("AE2-GT5-P2P", "part", 1L));
     }
 
     private void handRecipe() {
@@ -1459,7 +1462,7 @@ public class AE implements Runnable {
                 }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 32, 0), null, 800,
                 2000000);
 
-        //Enegery Acceptor
+        //Energy Acceptor
         RA.addPrimitiveLineRecipe(new ItemStack[]{
                         GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyCell", 1, 0),
                         GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.EnergeticAlloy, 2),
@@ -1664,69 +1667,80 @@ public class AE implements Runnable {
 
         //P2P Tunnel
         RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Emitter_LV.get(1L), ItemList.Sensor_LV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 8),
+                        ItemList.Emitter_EV.get(1L), ItemList.Sensor_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 8),
                         GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 44),
                         GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 43),
                         GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2, 460), null, 200,
-                120);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Emitter_MV.get(1L), ItemList.Sensor_MV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 4, 460), null, 300,
-                480);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Emitter_HV.get(1L), ItemList.Sensor_HV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 8, 460), null, 400,
-                1920);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Emitter_EV.get(1L), ItemList.Sensor_EV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 16, 460), null, 500,
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2, 460), null, 500,
                 7680);
         RA.addPrimitiveLineRecipe(new ItemStack[]{
                         ItemList.Emitter_IV.get(1L), ItemList.Sensor_IV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 24, 460), null, 600,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 6, 460), null, 600,
                 30720);
         RA.addPrimitiveLineRecipe(new ItemStack[]{
                         ItemList.Emitter_LuV.get(1L), ItemList.Sensor_LuV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 32, 460), null, 700,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 18, 460), null, 700,
                 122880);
         RA.addPrimitiveLineRecipe(new ItemStack[]{
                         ItemList.Emitter_ZPM.get(1L), ItemList.Sensor_ZPM.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 43),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43),
                         GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 48, 460), null, 800,
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 32, 460), null, 800,
                 500000);
         RA.addPrimitiveLineRecipe(new ItemStack[]{
                         ItemList.Emitter_UV.get(1L), ItemList.Sensor_UV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 32)
                 }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 64, 460), null, 900,
                 2000000);
+
+        // --- GT5 P2P Tunnel
+        RA.addPrimitiveLineRecipe(new ItemStack[]{
+                        ItemList.Emitter_IV.get(1L), ItemList.Sensor_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Vanadiumtriindinid, 1),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 1)
+                }, GT_ModHandler.getModItem("AE2-GT5-P2P", "part", 2L), null, 600,
+                7680);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{
+                        ItemList.Emitter_LuV.get(1L), ItemList.Sensor_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Vanadiumtriindinid, 2),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)
+                }, GT_ModHandler.getModItem("AE2-GT5-P2P", "part", 8L), null, 700,
+                30720);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{
+                        ItemList.Emitter_ZPM.get(1L), ItemList.Sensor_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Vanadiumtriindinid, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)
+                }, GT_ModHandler.getModItem("AE2-GT5-P2P", "part", 32L), null, 800,
+                122880);
+        RA.addPrimitiveLineRecipe(new ItemStack[]{
+                        ItemList.Emitter_UV.get(1L), ItemList.Sensor_UV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Vanadiumtriindinid, 8),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 32)
+                }, GT_ModHandler.getModItem("AE2-GT5-P2P", "part", 64L), null, 900,
+                500000);
+
         // --- Wireless Connector
         RA.addPrimitiveLineRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Vanadium, 1), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 56), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockWireless", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.VanadiumSteel, 4)}, GT_ModHandler.getModItem("ae2stuff", "Wireless", 1L, 0), null, 40 * 20, 480);
         //ME Fluid Export Bus
