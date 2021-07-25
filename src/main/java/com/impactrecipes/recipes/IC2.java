@@ -180,7 +180,14 @@ public class IC2 implements Runnable {
                 false);
         removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "upgradeModule", 1L, 4), true, false,
                 false);
-
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockReactorFluidPort", 1L), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockReactorAccessHatch", 1L), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockReactorRedstonePort", 1L), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockreactorvessel", 1L), true, false,
+                false);
     }
 
     private void removeCompactGen() {
