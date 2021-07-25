@@ -306,6 +306,9 @@ public class ImpactCore implements Runnable {
 
         // --- Regulate Digital Chest
         GT_ModHandler.addCraftingRecipe(GT_ItemList.Regulate_Digital_Chest.get(1L), bitsd, new Object[]{"COY", 'C', OrePrefixes.circuit.get(Materials.Advanced), 'O', ItemList.Super_Chest_LV, 'Y', ItemList.Conveyor_Module_HV});
+
+        // --- One Stack Regulate Chest
+        GT_ModHandler.addCraftingRecipe(GT_ItemList.Regulate_One_Stack_Chest.get(1), bitsd, new Object[]{"EHR", " C ", 'C', OrePrefixes.circuit.get(Materials.Basic), 'E', GT_ModHandler.getModItem("minecraft", "chest", 1L), 'R', ItemList.Robot_Arm_LV, 'H', ItemList.Hull_LV});
     }
 
     private void furnace() {
