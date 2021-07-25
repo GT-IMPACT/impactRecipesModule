@@ -3212,6 +3212,12 @@ public class ImpactCore implements Runnable {
             }
         }
 
+        GT_Values.RA
+                .addChemicalBathRecipe(CoreItems2.getRecipe(RefinedReinforcedGlassLense.getMetaID(), 1),
+                        Materials.PulsatingIron.getMolten(72),
+                        new ItemStack(Items.ender_pearl, 1, 0), null, null, null, 1000,
+                        30);
+
     }
 
     private void ciruit() {
