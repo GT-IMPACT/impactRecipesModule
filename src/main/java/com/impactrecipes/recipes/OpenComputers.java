@@ -2262,5 +2262,7 @@ public class OpenComputers implements Runnable {
                 true, false, true);
         removeRecipeByOutput(GT_ModHandler.getModItem("computronics", "computronics.ocParts", 1L, 14),
                 true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("computery", "card", 1L, 1),
+                true, false, true);
     }
 }
