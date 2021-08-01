@@ -188,6 +188,22 @@ public class IC2 implements Runnable {
                 false);
         removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockreactorvessel", 1L), true, false,
                 false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemPartCFPowder", 1L), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemPartCoalBall", 1L), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemDynamiteSticky", 1L), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemPartCoalChunk", 1L), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemMugEmpty", 1L), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemTreetap", 1L), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "upgradeModule", 1L, 5), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockCrop", 1L, 5), true, false,
+                false);
     }
 
     private void removeCompactGen() {
@@ -472,6 +488,23 @@ public class IC2 implements Runnable {
                 new Object[] {"SRd","GIG","PBP",'S', OrePrefixes.screw.get(Materials.StainlessSteel),'G', OrePrefixes.gearGtSmall.get(Materials.StainlessSteel),
                         'P', OrePrefixes.plate.get(Materials.StainlessSteel),'R', OrePrefixes.rotor.get(Materials.Aluminium),
                         'B', "batteryBasic", 'I', GT_ModHandler.getModItem("IC2", "itemRecipePart", 1L, 3)});
+
+        // --- CF Powder
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemPartCFPowder",5), tBitMask,
+                new Object[] {"CCS","YA ",'C', OrePrefixes.dust.get(Materials.Calcite),'S', OrePrefixes.dust.get(Materials.Stone),
+                        'Y', OrePrefixes.dust.get(Materials.Clay),'A', "sand"});
+
+        // --- Stone Mug
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemMugEmpty",1), tBitMask,
+                new Object[] {"ShS"," S ",'S', "stone"});
+
+        // --- Treetap
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemTreetap",1), tBitMask,
+                new Object[] {" S ","PPP","P  ",'S', OrePrefixes.stick.get(Materials.Wood), 'W', OrePrefixes.plank.get(Materials.Wood)});
+
+        // --- Crop Sticks
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","blockCrop",1), tBitMask,
+                new Object[] {"S S","S S",'S', OrePrefixes.stickLong.get(Materials.Wood)});
 
     }
 
@@ -913,6 +946,11 @@ public class IC2 implements Runnable {
                 GT_ModHandler.getModItem("minecraft", "furnace", 1L),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 5),
                 GT_ModHandler.getModItem("IC2", "blockMachine", 1L, 1), 400, 16);
+        // --- Crop Sticks
+        GT_Values.RA.addAssemblerRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Wood, 8),
+                GT_Utility.getIntegratedCircuit(2),
+                GT_ModHandler.getModItem("IC2", "blockCrop", 16L), 150, 24);
 
     }
 
