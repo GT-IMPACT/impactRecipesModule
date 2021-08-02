@@ -500,11 +500,11 @@ public class IC2 implements Runnable {
 
         // --- Treetap
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemTreetap",1), tBitMask,
-                new Object[] {" S ","PPP","P  ",'S', OrePrefixes.stick.get(Materials.Wood), 'W', OrePrefixes.plank.get(Materials.Wood)});
+                new Object[] {" S ","PPP","P  ",'S', OrePrefixes.stick.get(Materials.Wood), 'P', OrePrefixes.plank.get(Materials.Wood)});
 
         // --- Crop Sticks
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","blockCrop",1), tBitMask,
-                new Object[] {"S S","S S",'S', OrePrefixes.stickLong.get(Materials.Wood)});
+                new Object[] {"S S","S S",'S', OrePrefixes.stick.get(Materials.Wood)});
 
     }
 
