@@ -320,10 +320,10 @@ public class IC2 implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemRecipePart",1, 8), tBitMask,
                 new Object[] {"PPP","PRP","PPP",'P', OrePrefixes.plate.get(Materials.Iron), 'R', OrePrefixes.ring.get(Materials.Steel)});
         // --- Steel Rotor Blade
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemRecipePart",1, 9), tBitMask,
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemRecipePart",1, 10), tBitMask,
                 new Object[] {"PPP","PRP","PPP",'P', OrePrefixes.plate.get(Materials.Steel), 'R', OrePrefixes.ring.get(Materials.TungstenSteel)});
         // --- Carbon Rotor Blade
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemRecipePart",1, 10), tBitMask,
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemRecipePart",1, 9), tBitMask,
                 new Object[] {"PPP","PRP","PPP",'P', OrePrefixes.plateAlloy.get(Materials.Carbon), 'R', OrePrefixes.ring.get(Materials.Iridium)});
         // --- Weeding Trowel
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemWeedingTrowel",1), tBitMask,
