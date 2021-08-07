@@ -41,6 +41,7 @@ public class IC2 implements Runnable {
         disassembler();
         bender();
         mixer();
+        alloySmelter();
     }
 
     private void removeIC2() {
@@ -203,6 +204,10 @@ public class IC2 implements Runnable {
         removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "upgradeModule", 1L, 5), true, false,
                 false);
         removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "blockCrop", 1L, 5), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemUran235", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemUran235small", 1L, 0), true, false,
                 false);
     }
 
@@ -1306,6 +1311,13 @@ public class IC2 implements Runnable {
                 GT_Utility.getIntegratedCircuit(1), null, GT_Values.NF, GT_Values.NF,
                 GT_ModHandler.getModItem("IC2", "itemPartCoalBall", 1L),
                 100, 16);
+    }
+
+    public void alloySmelter() {
+        // --- Uranium 235
+        RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("IC2", "itemUran235", 1L),
+                ItemList.Shape_Mold_Nugget.get(0),
+                GT_ModHandler.getModItem("IC2", "itemUran235small", 9L), 100, 120);
     }
 
 }
