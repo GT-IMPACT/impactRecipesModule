@@ -3869,7 +3869,7 @@ public class Gregtech implements Runnable {
                                 GT_OreDictUnificator.get(OrePrefixes.pipeTiny, Materials.DraconiumAwakened, 32),
                                 ItemList.Electric_Pump_UHV.get(1L), ItemList.Sensor_ZPM.get(2L),
                                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Infinite, 1L),
-                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Orichalcum, 64)},
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Oriharukon, 64)},
                         Materials.SuperCoolant.getFluid(12000L), ItemList.Circuit_Board_Crystal.get(32L),
                         1400, 2000000, true);
 
