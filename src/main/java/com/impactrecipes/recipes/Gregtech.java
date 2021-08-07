@@ -17,7 +17,6 @@ import net.minecraftforge.fluids.FluidStack;
 
 import static com.impact.common.item.Core_List_Items.*;
 import static com.impact.loader.ItemRegistery.*;
-import static com.impact.loader.ItemRegistery.UtilBlock;
 import static com.impact.util.Utilits.Blockstack;
 import static com.impact.util.Utilits.Itemstack;
 import static gregtech.api.enums.GT_Values.RA;
@@ -460,32 +459,20 @@ public class Gregtech implements Runnable {
     }
 
     private void sifter() {
-        RA
-                .addSifterRecipe(GT_OreDictUnificator.get(OrePrefixes.crushedPurified, Materials.Tin, 1L),
-                        new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                                GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                                GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                                GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                                GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                                GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                                GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                                GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                                GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L)},
-                        new int[]{5000, 3000, 2000, 1500, 1200, 1000, 900, 500, 250}, 200, 480);
+        // --- Zircon
         RA.addSifterRecipe(
-                GT_OreDictUnificator.get(OrePrefixes.crushedPurified, Materials.Cassiterite, 1L),
-                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dustPure, Materials.Zirconium, 1L)},
-                new int[]{5600, 3300, 2200, 1600, 1400, 1100, 950, 600, 30}, 220, 480);
-        RA
-                .addSifterRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.RareEarth, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.crushedPurified, Materials.CassiteriteSand, 1L),
+                new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.CassiteriteSand, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.CassiteriteSand, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.CassiteriteSand, 1L),
+                        CoreItems.getRecipe(48, 1),
+                        CoreItems.getRecipe(48, 1),
+                        CoreItems.getRecipe(48, 1)},
+                new int[]{6000, 4000, 2000, 5000, 3000, 1000}, 200, 16);
+
+        RA.addSifterRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.RareEarth, 1L),
                         new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Neodymium, 1L),
                                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Yttrium, 1L),
                                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lanthanum, 1L),

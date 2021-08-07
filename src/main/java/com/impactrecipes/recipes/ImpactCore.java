@@ -3176,6 +3176,21 @@ public class ImpactCore implements Runnable {
                 new FluidStack[]{Materials.Neutronium.getPlasma(144L)}, new FluidStack[]{Materials.Neutronium.getMolten(144L)},
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Infinity, 1L)}, 4000, 8000000);
 
+        // --- Zirconium
+        GT_Values.RA.addMultiblockChemicalRecipe(
+                new ItemStack[]{Materials.Carbon.getDust(4), CoreItems.getRecipe(48, 1)},
+                new FluidStack[]{Materials.Chlorine.getGas(6000)},
+                new FluidStack[]{Materials.SiliconTetrachloride.getFluid(1000), Materials.CarbonMonoxide.getGas(4000)},
+                new ItemStack[]{CoreItems.getRecipe(49, 1)}, 300, 256);
+        GT_Values.RA.addChemicalRecipe(
+                CoreItems.getRecipe(49, 1), Materials.Magnesium.getDust(2),
+                null, null,
+                Materials.Zirconium.getDust(1), Materials.Magnesiumchloride.getDust(2), 200, 120);
+        GT_Values.RA.addMultiblockChemicalRecipe(
+                new ItemStack[]{null},
+                new FluidStack[]{Materials.SiliconTetrachloride.getFluid(1000), Materials.Water.getFluid(2000)},
+                new FluidStack[]{Materials.HydrochloricAcid.getFluid(2000)},
+                new ItemStack[]{Materials.SiliconDioxide.getDust(1)}, 200, 120);
     }
 
     private void bath() {
