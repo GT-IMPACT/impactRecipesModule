@@ -362,6 +362,14 @@ public class ImpactCore implements Runnable {
                 GT_ModHandler.getModItem("impact", "impact_lapotronicenergyunit_block", 1, 5),
                 GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
                 ItemList.ZPM2.get(1L), 2400, 7680);
+        RA.addUnboxingRecipe(
+                GT_ModHandler.getModItem("impact", "impact_lapotronicenergyunit_block", 1, 7),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
+                ItemList.MysteriousCrystalOrb.get(1L), 2400, 4096);
+        RA.addUnboxingRecipe(
+                GT_ModHandler.getModItem("impact", "impact_lapotronicenergyunit_block", 1, 8),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
+                ItemList.MysteriousCrystalModule.get(1L), 2400, 7680);
     }
 
     private void pulverizer() {
