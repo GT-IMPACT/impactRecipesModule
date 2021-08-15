@@ -4,8 +4,9 @@ import com.github.technus.tectech.thing.CustomItemList;
 import com.impact.common.item.Core_Items;
 import com.impact.common.item.Core_Items2;
 import com.impact.common.item.WoodBrickFormTool;
+import com.impact.impact;
 import com.impact.loader.ItemRegistery;
-import com.impact.mods.gregtech.GT_ItemList;
+import com.impact.mods.gregtech.*;
 import com.impact.util.Utilits;
 import gregtech.GT_Mod;
 import gregtech.api.GregTech_API;
@@ -68,6 +69,7 @@ public class ImpactCore implements Runnable {
         disassembler();
         cyclon();
         tesseract();
+        drying();
     }
 
     private void hand() {
@@ -1626,6 +1628,14 @@ public class ImpactCore implements Runnable {
                 .addFormingPressRecipe(GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 4L),
                         ItemList.Shape_Mold_Plate.get(0), new ItemStack(Items.leather, 1), 800, 16);
 
+        // --- Graphene Foil
+        GT_Values.RA
+                .addFormingPressRecipe(new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Plastic, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Graphite, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Copper, 1L)
+                }, CoreItems2.getRecipe(192, 1), 200, 480);
+
     }
 
     private void fluidExtractor() {
@@ -3178,10 +3188,10 @@ public class ImpactCore implements Runnable {
 
         // --- Zirconium
         GT_Values.RA.addMultiblockChemicalRecipe(
-                new ItemStack[]{Materials.Carbon.getDust(4), CoreItems.getRecipe(48, 1)},
-                new FluidStack[]{Materials.Chlorine.getGas(6000)},
-                new FluidStack[]{Materials.SiliconTetrachloride.getFluid(1000), Materials.CarbonMonoxide.getGas(4000)},
-                new ItemStack[]{CoreItems.getRecipe(49, 1)}, 300, 256);
+                new ItemStack[]{CoreItems.getRecipe(48, 1)},
+                new FluidStack[]{Materials.Chlorine.getGas(2000)},
+                new FluidStack[]{Materials.Oxygen.getGas(1000)},
+                new ItemStack[]{Materials.SiliconDioxide.getDust(1), CoreItems.getRecipe(49, 1)}, 300, 256);
         GT_Values.RA.addChemicalRecipe(
                 CoreItems.getRecipe(49, 1), Materials.Magnesium.getDust(2),
                 null, null,
@@ -3191,6 +3201,19 @@ public class ImpactCore implements Runnable {
                 new FluidStack[]{Materials.SiliconTetrachloride.getFluid(1000), Materials.Water.getFluid(2000)},
                 new FluidStack[]{Materials.HydrochloricAcid.getFluid(2000)},
                 new ItemStack[]{Materials.SiliconDioxide.getDust(1)}, 200, 120);
+
+        // --- Graphene
+        GT_Values.RA.addMultiblockChemicalRecipe(
+                new ItemStack[]{null},
+                new FluidStack[]{Materials.SulfuricAcid.getFluid(1000), Materials.Ammonia.getGas(2000)},
+                new FluidStack[]{Materials.AmmoniumSulfate.getFluid(3000)},
+                new ItemStack[]{null}, 200, 480);
+        GT_Values.RA.addMultiblockChemicalRecipe(
+                new ItemStack[]{null},
+                new FluidStack[]{Materials.AmmoniumSulfate.getFluid(1000), Materials.SulfuricAcid.getFluid(1000)},
+                new FluidStack[]{Materials.AmmoniumPersulfate.getFluid(1000), Materials.Hydrogen.getGas(1000)},
+                new ItemStack[]{null}, 200, 480);
+
     }
 
     private void bath() {
@@ -3202,7 +3225,7 @@ public class ImpactCore implements Runnable {
                 new FluidStack(FluidRegistry.getFluid("dye.watermixed.dyewhite"), 18),
                 Blockstack(UtilBlock, 1, 2), GT_Values.NI, GT_Values.NI, new int[]{10000}, 64, 2);
 
-//Lens
+        //Lens
         GT_Values.RA.addChemicalBathRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.ReinforcedGlass, 1L),
                 Materials.Chlorine.getGas(100L),
@@ -3243,6 +3266,13 @@ public class ImpactCore implements Runnable {
                         Materials.PulsatingIron.getMolten(72),
                         new ItemStack(Items.ender_pearl, 1, 0), null, null, null, 1000,
                         30);
+
+        // --- Graphene Foil
+        GT_Values.RA
+                .addChemicalBathRecipe(CoreItems2.getRecipe(192, 1),
+                        Materials.AmmoniumPersulfate.getFluid(200),
+                        CoreItems2.getRecipe(193, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Copper, 1L), null, null, 300, 120);
 
     }
 
@@ -4204,4 +4234,10 @@ public class ImpactCore implements Runnable {
         GT_Values.RA.addTesseractRecipe(GT_Values.NI, Materials.HyperFuelII.getFluid(1000L), GT_Values.NF, GT_OreDictUnificator.get(OrePrefixes.gemExquisite, Materials.GarnetYellow, 64L), GT_OreDictUnificator.get(OrePrefixes.gemFlawless, Materials.Amethyst, 64L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadah, 57L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Draconium, 49L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Adamantium, 36L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NetherStar, 20L), new int[]{10000, 10000, 10000, 10000, 10000, 10000}, 400, 8000000);
         GT_Values.RA.addTesseractRecipe(GT_Values.NI, Materials.HyperFuelIII.getFluid(1000L), GT_Values.NF, GT_OreDictUnificator.get(OrePrefixes.gemExquisite, Materials.GarnetRed, 64L), GT_OreDictUnificator.get(OrePrefixes.gemFlawless, Materials.MysteriousCrystal, 64L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Oriharukon, 61L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadria, 53L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.BlackPlutonium, 47L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Americium, 39L), new int[]{10000, 10000, 10000, 10000, 10000, 10000}, 300, 8000000);
     }
+
+    public void drying() {
+        // Graphene
+        impact.I_RA.addDryingOvenRecipe(CoreItems2.getRecipe(193, 1), new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Graphene, 1L)}, 800, 16);
+    }
+
 }
