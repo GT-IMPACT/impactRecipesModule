@@ -4220,6 +4220,235 @@ public class ImpactCore implements Runnable {
                 new ItemStack[]{
                 GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
                 GT_ModHandler.getModItem("GalaxySpace", "item.Tier8Rocket", 1L)}, 2000, 64);
+
+        // --- Field Tier 1
+        RA.addDisassemblerRecipe(Blockstack(FluidTankBlock, 1, 0),
+                new ItemStack[]{
+                        ItemList.Electric_Pump_MV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 4)}, 2000, 120);
+        // --- Field Tier 2
+        RA.addDisassemblerRecipe(Blockstack(FluidTankBlock, 1, 1),
+                new ItemStack[]{
+                        ItemList.Field_Generator_LV.get(1L),
+                        ItemList.Electric_Pump_HV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Titanium, 4)}, 2000, 480);
+        // --- Field Tier 3
+        RA.addDisassemblerRecipe(Blockstack(FluidTankBlock, 1, 2),
+                new ItemStack[]{
+                        ItemList.Field_Generator_MV.get(1L),
+                        ItemList.Electric_Pump_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TungstenSteel, 4)}, 2000, 1920);
+        // --- Field Tier 4
+        RA.addDisassemblerRecipe(Blockstack(FluidTankBlock, 1, 3),
+                new ItemStack[]{
+                        ItemList.Field_Generator_HV.get(1L),
+                        ItemList.Electric_Pump_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Chrome, 4)}, 2000, 7680);
+        // --- Field Tier 5
+        RA.addDisassemblerRecipe(Blockstack(FluidTankBlock, 1, 4),
+                new ItemStack[]{
+                        ItemList.Field_Generator_EV.get(1L),
+                        ItemList.Electric_Pump_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iridium, 4)}, 2000, 30720);
+        // --- Field Tier 6
+        RA.addDisassemblerRecipe(Blockstack(FluidTankBlock, 1, 5),
+                new ItemStack[]{
+                        ItemList.Field_Generator_IV.get(1L),
+                        ItemList.Electric_Pump_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Osmium, 4)}, 2000, 122880);
+        // --- Field Tier 7
+        RA.addDisassemblerRecipe(Blockstack(FluidTankBlock, 1, 6),
+                new ItemStack[]{
+                        ItemList.Field_Generator_LuV.get(1L),
+                        ItemList.Electric_Pump_UV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Tritanium, 4)}, 2000, 500000);
+        // --- Field Tier 8
+        RA.addDisassemblerRecipe(Blockstack(FluidTankBlock, 1, 7),
+                new ItemStack[]{
+                        ItemList.Field_Generator_ZPM.get(1L),
+                        ItemList.Electric_Pump_UHV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Neutronium, 4)}, 4000, 500000);
+
+        // --- Energy Hatches
+        RA.addDisassemblerRecipe(ItemList.Hatch_Energy_ULV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_ULV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt01, Materials.Lead, 1L),
+                        ItemList.Circuit_Parts_Vacuum_Tube.get(1),
+                        ItemList.ULV_Coil.get(2L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Lead, 1L)}, 2000, 6);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Energy_LV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_LV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt01, Materials.Tin, 1L),
+                        GT_ModHandler.getModItem("IC2", "itemPartCircuit", 1L, 0),
+                        ItemList.LV_Coil.get(2L),
+                        ItemList.Electric_Pump_LV.get(1L)}, 2000, 30);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Energy_MV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_MV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt01, Materials.Copper, 1L),
+                        ItemList.Circuit_Good.get(1),
+                        ItemList.MV_Coil.get(2L),
+                        ItemList.Electric_Pump_MV.get(1L)}, 2000, 120);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Energy_HV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_HV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt01, Materials.Gold, 1L),
+                        ItemList.Circuit_Chip_LPIC.get(2L),
+                        ItemList.HV_Coil.get(2L),
+                        ItemList.Electric_Pump_HV.get(1L)}, 2000, 480);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Energy_EV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt01, Materials.Aluminium, 1L),
+                        ItemList.Circuit_Chip_PIC.get(2L),
+                        ItemList.EV_Coil.get(2L),
+                        ItemList.Electric_Pump_EV.get(1L)}, 2000, 1920);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Energy_IV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorIV, 1L),
+                        ItemList.Circuit_Chip_HPIC.get(2L),
+                        ItemList.IV_Coil.get(2L),
+                        ItemList.Electric_Pump_IV.get(1L)}, 2000, 7680);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Energy_LuV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorLuV, 2L),
+                        ItemList.Circuit_Chip_UHPIC.get(2L),
+                        ItemList.Circuit_Master.get(2),
+                        ItemList.LuV_Coil.get(2L),
+                        ItemList.Electric_Pump_LuV.get(1L)}, 4000, 30720);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Energy_ZPM.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorZPM, 2L),
+                        ItemList.Circuit_Chip_NPIC.get(2L),
+                        ItemList.Circuit_Quantummainframe.get(2),
+                        ItemList.ZPM_Coil.get(2L),
+                        ItemList.Electric_Pump_ZPM.get(1L)}, 6000, 122880);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Energy_UV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_UV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorUV, 2L),
+                        ItemList.Circuit_Chip_PPIC.get(2L),
+                        ItemList.Circuit_Crystalmainframe.get(2),
+                        ItemList.UV_Coil.get(2L),
+                        ItemList.Electric_Pump_UV.get(1L)}, 8000, 500000);
+
+        // --- Dynamo Hatches
+        RA.addDisassemblerRecipe(ItemList.Hatch_Dynamo_ULV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_ULV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Lead, 1L),
+                        ItemList.Circuit_Parts_Vacuum_Tube.get(1),
+                        ItemList.ULV_Coil.get(2L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Lead, 1L)}, 2000, 6);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Dynamo_LV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_LV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Tin, 1L),
+                        GT_ModHandler.getModItem("IC2", "itemPartCircuit", 1L, 0),
+                        ItemList.LV_Coil.get(2L),
+                        ItemList.Electric_Pump_LV.get(1L)}, 2000, 30);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Dynamo_MV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_MV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Copper, 1L),
+                        ItemList.Circuit_Good.get(1),
+                        ItemList.MV_Coil.get(2L),
+                        ItemList.Electric_Pump_MV.get(1L)}, 2000, 120);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Dynamo_HV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_HV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Gold, 1L),
+                        ItemList.Circuit_Chip_LPIC.get(2L),
+                        ItemList.HV_Coil.get(2L),
+                        ItemList.Electric_Pump_HV.get(1L)}, 2000, 480);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Dynamo_EV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Aluminium, 1L),
+                        ItemList.Circuit_Chip_PIC.get(2L),
+                        ItemList.EV_Coil.get(2L),
+                        ItemList.Electric_Pump_EV.get(1L)}, 2000, 1920);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Dynamo_IV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Vanadiumtriindinid, 1L),
+                        ItemList.Circuit_Chip_HPIC.get(2L),
+                        ItemList.IV_Coil.get(2L),
+                        ItemList.Electric_Pump_IV.get(1L)}, 2000, 7680);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Dynamo_LuV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Tetraindiumditindibariumtitaniumheptacoppertetrakaidekaoxid, 2L),
+                        ItemList.Circuit_Chip_UHPIC.get(2L),
+                        ItemList.Circuit_Master.get(2),
+                        ItemList.LuV_Coil.get(2L),
+                        ItemList.Electric_Pump_LuV.get(1L)}, 4000, 30720);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Dynamo_ZPM.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Tetranaquadahdiindiumhexaplatiumosminid, 2L),
+                        ItemList.Circuit_Chip_NPIC.get(2L),
+                        ItemList.Circuit_Quantummainframe.get(2),
+                        ItemList.ZPM_Coil.get(2L),
+                        ItemList.Electric_Pump_ZPM.get(1L)}, 6000, 122880);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Dynamo_UV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_UV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.ElectrumFlux, 2L),
+                        ItemList.Circuit_Chip_PPIC.get(2L),
+                        ItemList.Circuit_Crystalmainframe.get(2),
+                        ItemList.UV_Coil.get(2L),
+                        ItemList.Electric_Pump_UV.get(1L)}, 8000, 500000);
+
+        // --- Muffler Hatches
+        RA.addDisassemblerRecipe(ItemList.Hatch_Muffler_HV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_HV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.StainlessSteel, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.StainlessSteel, 1L),
+                        ItemList.Electric_Motor_HV.get(1L)}, 2000, 480);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Muffler_EV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Titanium, 1L),
+                        ItemList.Electric_Motor_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Titanium, 1L)}, 2000, 1920);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Muffler_IV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.TungstenSteel, 1L),
+                        ItemList.Electric_Motor_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.TungstenSteel, 1L)}, 2000, 7680);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Muffler_LuV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Enderium, 1L),
+                        ItemList.Electric_Motor_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Iridium, 1L)}, 2000, 30720);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Muffler_ZPM.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Naquadah, 1L),
+                        ItemList.Electric_Motor_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Osmium, 1L)}, 2000, 122880);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Muffler_UV.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_UV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Duranium, 1L),
+                        ItemList.Electric_Motor_UV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.NaquadahAlloy, 1L)}, 2000, 500000);
+        RA.addDisassemblerRecipe(ItemList.Hatch_Muffler_MAX.get(1L),
+                new ItemStack[]{
+                        ItemList.Hull_MAX.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Infuscolium, 1L),
+                        ItemList.Electric_Motor_UHV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Diamericiumtitanium, 1L)}, 4000, 500000);
+
     }
 
     public void cyclon() {
