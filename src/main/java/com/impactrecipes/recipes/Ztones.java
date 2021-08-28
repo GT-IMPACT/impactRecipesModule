@@ -1,11 +1,13 @@
 package com.impactrecipes.recipes;
 
+import gregtech.api.GregTech_API;
 import gregtech.api.enums.GT_Values;
 import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
 import gregtech.api.util.GT_Utility;
+import net.minecraftforge.oredict.OreDictionary;
 
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
@@ -125,9 +127,11 @@ public class Ztones implements Runnable {
                         GT_Utility.getIntegratedCircuit(1), Materials.Blaze.getMolten(8),
                         GT_ModHandler.getModItem("Ztones", "booster", 1L, 0), 100, 30);
         // --- Aurora Block
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "glass", 4L, 0),
-                GT_ModHandler.getModItem("minecraft", "dye", 1L, 32767),
-                GT_ModHandler.getModItem("Ztones", "auroraBlock", 8L, 0), 160, 4);
+        for (int i = 0; i < OreDictionary.getOres("dye").size(); i++) {
+            GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "glass", 4L, 0),
+                    OreDictionary.getOres("dye").get(i),
+                    GT_ModHandler.getModItem("Ztones", "auroraBlock", 8L, 0), 160, 4);
+        }
         // --- Korp
         GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("Ztones", "stoneTile", 24L, 0),
                 GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Obsidian, 1L),
