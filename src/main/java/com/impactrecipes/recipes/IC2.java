@@ -263,6 +263,12 @@ public class IC2 implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2", "reactorHeatSwitchSpread", 1L, 1), tBitMask, new Object[]{"CSC", "SVS", "CSC", 'C', OrePrefixes.screw.get(Materials.StainlessSteel), 'S', OrePrefixes.plate.get(Materials.Gold), 'V', GT_ModHandler.getModItem("IC2", "reactorHeatSwitchCore", 1L, 1)});
         // --- Advanced Heat Exchanger
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2", "reactorHeatSwitchDiamond", 1L, 1), tBitMask, new Object[]{"LCL", "VDV", "LCL", 'L', OrePrefixes.plate.get(Materials.Lapis), 'D', OrePrefixes.plate.get(Materials.Diamond), 'C', OrePrefixes.circuit.get(Materials.Advanced), 'V', GT_ModHandler.getModItem("IC2", "reactorHeatSwitchSpread", 1L, 1)});
+        // --- Electric Wrench
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemToolWrenchElectric",1, 26),tBitMask,
+                new Object[] {"dRD","RPB","ECS",'R', OrePrefixes.stick.get(Materials.Steel),'D', OrePrefixes.toolHeadWrench.get(Materials.Steel),
+                        'P',ItemList.Electric_Motor_LV,'B', OrePrefixes.battery.get(Materials.Basic),
+                        'E',GT_ModHandler.getModItem("IC2","itemRecipePart",1,3),'C', OrePrefixes.cableGt01.get(Materials.Tin),
+                        'S', OrePrefixes.screw.get(Materials.Steel)});
         // --- Electric Treetap
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemTreetapElectric",1, 26),tBitMask,
                 new Object[] {"dRD","RPB","ECS",'R', OrePrefixes.stickLong.get(Materials.Steel),'D', OrePrefixes.toolHeadDrill.get(Materials.Steel),
