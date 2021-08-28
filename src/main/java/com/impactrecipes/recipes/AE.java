@@ -47,48 +47,24 @@ public class AE implements Runnable {
                 false);
         removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "part.base", 1L, 2), true, false,
                 false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.component", 1L, 0), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.component", 1L, 1), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.component", 1L, 2), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.component", 1L, 3), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.component", 1L, 4), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.component", 1L, 5), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.component", 1L, 6), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.component", 1L, 7), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.component", 1L, 8), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.component", 1L, 9), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.component", 1L, 10), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.casing", 1L), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.fluid", 1L), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 1), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 2), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 3), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 4), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 5), true,
-                false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 6), true,
-                false, false);
+        for (int i = 0; i < 18; i++) {
+            removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.component", 1L, i), true,
+                    false, false);
+        }
+        for (int i = 0; i < 7; i++) {
+            removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.gas", 1L, i), true,
+                    false, false);
+        }
+        for (int i = 0; i < 3; i++) {
+            removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, i), true, false,
+                    false);
+        }
+        for (int i = 0; i < 7; i++) {
+            removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, i), true, false,
+                    false);
+        }
         for (int i = 0; i < 5; i++) {
-            removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.physical", 1L), true,
+            removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.physical", 1L, i), true,
                     false, false);
         }
         removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "certustank", 1L), true,
@@ -110,6 +86,8 @@ public class AE implements Runnable {
         removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "ecbaseblock", 1L, 0), true,
                 false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "storage.fluid.portable", 1L, 0), true,
+                false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("extracells", "vibrantchamberfluid", 1L, 0), true,
                 false, false);
 
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2stuff", "Wireless", 1L, 0), true, false,
