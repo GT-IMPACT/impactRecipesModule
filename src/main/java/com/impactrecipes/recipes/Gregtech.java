@@ -1337,7 +1337,7 @@ public class Gregtech implements Runnable {
                 .addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahAlloy, 1L),
                         GT_Utility.getIntegratedCircuit(11), Materials.Argon.getGas(1000L), GT_Values.NF,
                         GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.NaquadahAlloy, 1L),
-                        GT_Values.NI, 1000, 62880, 7200);
+                        GT_Values.NI, 400, 62880, 7200);
         GT_Values.RA
                 .addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahEnriched, 1L),
                         GT_Utility.getIntegratedCircuit(11), Materials.Argon.getGas(1000L), GT_Values.NF,
@@ -1351,7 +1351,7 @@ public class Gregtech implements Runnable {
                 .addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Osmiridium, 1L),
                         GT_Utility.getIntegratedCircuit(11), Materials.Helium.getGas(1000), GT_Values.NF,
                         GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Osmiridium, 1L), GT_Values.NI,
-                        900, 30720, 4500);
+                        500, 30720, 4500);
         GT_Values.RA
                 .addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.TungstenSteel, 1L),
                         GT_Utility.getIntegratedCircuit(1), GT_Values.NF, GT_Values.NF,
