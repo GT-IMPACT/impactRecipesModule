@@ -511,6 +511,11 @@ public class IC2 implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","blockCrop",1), tBitMask,
                 new Object[] {"S S","S S",'S', OrePrefixes.stick.get(Materials.Wood)});
 
+        // --- EU Reader
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemToolMEter",1), tBitMask,
+                new Object[] {"PMP","SCS",'S', OrePrefixes.stick.get(Materials.Iron),'C', OrePrefixes.springSmall.get(Materials.Copper),
+                        'P', OrePrefixes.plate.get(Materials.Iron), 'M', ItemList.Cover_Screen});
+
     }
 
     private void thermalCentrifuge() {
