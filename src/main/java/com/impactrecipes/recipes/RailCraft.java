@@ -26,6 +26,7 @@ import net.dragon.computery.item.Objects;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 
 import static com.impact.loader.ItemRegistery.UtilBlock;
 import static com.impact.util.Utilits.Blockstack;
@@ -637,7 +638,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', new ItemStack(Blocks.rail)
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.ITEM.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.ITEM.getItem(4), recipe);
 
         // --- Any Detector
         recipe = new Object[]{
@@ -647,7 +648,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', new ItemStack(Items.minecart)
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.ANY.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.ANY.getItem(4), recipe);
         // --- Empty Detector
         recipe = new Object[]{
                 "L L", "PIP", "LPL",
@@ -655,7 +656,7 @@ public class RailCraft implements Runnable {
                 'P', OrePrefixes.plate.get(Materials.RedAlloy),
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate)
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.EMPTY.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.EMPTY.getItem(4), recipe);
         // --- Powered Detector
         recipe = new Object[]{
                 "LTL", "PIP", "LPL",
@@ -664,7 +665,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', GT_ModHandler.getModItem("ProjRed|Integration", "projectred.integration.gate", 1L, 26)
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.POWERED.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.POWERED.getItem(4), recipe);
         // --- Player Detector
         recipe = new Object[]{
                 "LTL", "PIP", "LPL",
@@ -673,7 +674,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', GT_ModHandler.getModItem("malisisdoors", "player_sensor", 1L)
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.PLAYER.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.PLAYER.getItem(4), recipe);
         // --- Explosive Detector
         recipe = new Object[]{
                 "LTL", "PIP", "LPL",
@@ -682,7 +683,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', new ItemStack(Blocks.tnt)
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.EXPLOSIVE.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.EXPLOSIVE.getItem(4), recipe);
         // --- Animal Detector
         recipe = new Object[]{
                 "LTL", "PIP", "LPL",
@@ -691,7 +692,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', new ItemStack(Items.leather)
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.ANIMAL.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.ANIMAL.getItem(4), recipe);
         // --- Tank Detector
         recipe = new Object[]{
                 "LTL", "PIP", "LPL",
@@ -700,7 +701,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', GT_ModHandler.getModItem("extracells", "certustank", 1L)
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.TANK.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.TANK.getItem(4), recipe);
         // --- Advanced Detector
         recipe = new Object[]{
                 "LTL", "PIP", "LPL",
@@ -709,7 +710,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', EnumDetector.ANY.getItem(1)
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.ADVANCED.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.ADVANCED.getItem(4), recipe);
         // --- Energy Detector
         recipe = new Object[]{
                 "LTL", "PIP", "LPL",
@@ -718,7 +719,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', OrePrefixes.cableGt01.get(Materials.Tin)
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.ENERGY.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.ENERGY.getItem(4), recipe);
         // --- Age Detector
         recipe = new Object[]{
                 "LTL", "PIP", "LPL",
@@ -727,7 +728,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', "cropWheat"
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.AGE.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.AGE.getItem(4), recipe);
         // --- Train Detector
         recipe = new Object[]{
                 "LTL", "PIP", "LPL",
@@ -736,7 +737,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', new ItemStack(Items.minecart)
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.TRAIN.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.TRAIN.getItem(4), recipe);
         // --- Sheep Detector
         recipe = new Object[]{
                 "LTL", "PIP", "LPL",
@@ -745,7 +746,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', new ItemStack(Items.shears)
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.SHEEP.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.SHEEP.getItem(4), recipe);
         // --- Villager Detector
         recipe = new Object[]{
                 "LTL", "PIP", "LPL",
@@ -754,7 +755,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', OrePrefixes.plate.get(Materials.Emerald)
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.VILLAGER.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.VILLAGER.getItem(4), recipe);
         // --- Locomotive Detector
         recipe = new Object[]{
                 "LTL", "PIP", "LPL",
@@ -763,7 +764,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', new ItemStack(Items.minecart)
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.LOCOMOTIVE.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.LOCOMOTIVE.getItem(4), recipe);
         // --- Routing Detector
         recipe = new Object[]{
                 "LTL", "PIP", "LPL",
@@ -772,7 +773,7 @@ public class RailCraft implements Runnable {
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', EnumSignal.SWITCH_LEVER.getItem()
         };
-        GT_ModHandler.addCraftingRecipe(EnumDetector.ROUTING.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumDetector.ROUTING.getItem(4), recipe);
         // --- Item Loader
         recipe = new Object[]{
                 "LTL", "PIP", "LCL",
@@ -782,7 +783,7 @@ public class RailCraft implements Runnable {
                 'C', new ItemStack(Blocks.chest),
                 'T', new ItemStack(Blocks.hopper)
         };
-        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.ITEM_LOADER.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.ITEM_LOADER.getItem(2), recipe);
         // --- Item Unloader
         recipe = new Object[]{
                 "LCL", "PIP", "LTL",
@@ -792,7 +793,7 @@ public class RailCraft implements Runnable {
                 'C', new ItemStack(Blocks.chest),
                 'T', new ItemStack(Blocks.hopper)
         };
-        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.ITEM_UNLOADER.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.ITEM_UNLOADER.getItem(2), recipe);
         // --- Advanced Item Loader
         recipe = new Object[]{
                 "LTL", "PIP", "LCL",
@@ -802,7 +803,7 @@ public class RailCraft implements Runnable {
                 'C', new ItemStack(Blocks.chest),
                 'T', new ItemStack(Blocks.hopper)
         };
-        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.ITEM_LOADER_ADVANCED.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.ITEM_LOADER_ADVANCED.getItem(2), recipe);
         // --- Advanced Item Unloader
         recipe = new Object[]{
                 "LCL", "PIP", "LTL",
@@ -812,7 +813,7 @@ public class RailCraft implements Runnable {
                 'C', new ItemStack(Blocks.chest),
                 'T', new ItemStack(Blocks.hopper)
         };
-        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.ITEM_UNLOADER_ADVANCED.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.ITEM_UNLOADER_ADVANCED.getItem(2), recipe);
         // --- Fluid Loader
         recipe = new Object[]{
                 "LTL", "UIM", "LCL",
@@ -823,7 +824,7 @@ public class RailCraft implements Runnable {
                 'U', ItemList.Electric_Pump_LV,
                 'M', ItemList.Electric_Motor_LV
         };
-        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.FLUID_LOADER.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.FLUID_LOADER.getItem(2), recipe);
         // --- Fluid Unloader
         recipe = new Object[]{
                 "LCL", "UIM", "LTL",
@@ -834,7 +835,7 @@ public class RailCraft implements Runnable {
                 'U', ItemList.Electric_Pump_LV,
                 'M', ItemList.Electric_Motor_LV
         };
-        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.FLUID_UNLOADER.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.FLUID_UNLOADER.getItem(2), recipe);
         // --- Energy Loader
         recipe = new Object[]{
                 "LTL", "PIP", "LCL",
@@ -844,7 +845,7 @@ public class RailCraft implements Runnable {
                 'C', ItemList.Battery_RE_MV_Lithium,
                 'T', OrePrefixes.cableGt01.get(Materials.Copper)
         };
-        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.ENERGY_LOADER.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.ENERGY_LOADER.getItem(2), recipe);
         // --- Energy Unloder
         recipe = new Object[]{
                 "LCL", "PIP", "LTL",
@@ -854,7 +855,7 @@ public class RailCraft implements Runnable {
                 'C', ItemList.Battery_RE_MV_Lithium,
                 'T', OrePrefixes.cableGt01.get(Materials.Copper)
         };
-        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.ENERGY_UNLOADER.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumMachineGamma.ENERGY_UNLOADER.getItem(2), recipe);
         // --- Cart Dispenser
         recipe = new Object[]{
                 "DMT", " C ",
@@ -911,7 +912,7 @@ public class RailCraft implements Runnable {
                 'P', new ItemStack(Blocks.sticky_piston),
                 'A', OrePrefixes.plate.get(Materials.Steel)
         };
-        GT_ModHandler.addCraftingRecipe(EnumSignal.SWITCH_LEVER.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumSignal.SWITCH_LEVER.getItem(4), recipe);
         // --- Switch Motor
         recipe = new Object[]{
                 "SRT", "LPC", "AAA",
@@ -923,7 +924,7 @@ public class RailCraft implements Runnable {
                 'C', OrePrefixes.circuit.get(Materials.Basic),
                 'A', OrePrefixes.plate.get(Materials.Steel)
         };
-        GT_ModHandler.addCraftingRecipe(EnumSignal.SWITCH_MOTOR.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumSignal.SWITCH_MOTOR.getItem(4), recipe);
         // --- Signal Block
         recipe = new Object[]{
                 "LCP", "dSW",
@@ -933,7 +934,7 @@ public class RailCraft implements Runnable {
                 'L', RailcraftItem.signalLamp.getStack(),
                 'W', OrePrefixes.screw.get(Materials.Steel)
         };
-        GT_ModHandler.addCraftingRecipe(EnumSignal.BLOCK_SIGNAL.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumSignal.BLOCK_SIGNAL.getItem(4), recipe);
         // --- Distant Block
         recipe = new Object[]{
                 "LCP", "WSd",
@@ -943,7 +944,7 @@ public class RailCraft implements Runnable {
                 'L', RailcraftItem.signalLamp.getStack(),
                 'W', OrePrefixes.screw.get(Materials.Steel)
         };
-        GT_ModHandler.addCraftingRecipe(EnumSignal.DISTANT_SIGNAL.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumSignal.DISTANT_SIGNAL.getItem(4), recipe);
         // --- Dual Head Block Signal
         recipe = new Object[]{
                 "LCW", "PPP", "LCd",
@@ -952,7 +953,7 @@ public class RailCraft implements Runnable {
                 'L', RailcraftItem.signalLamp.getStack(),
                 'W', OrePrefixes.screw.get(Materials.Steel)
         };
-        GT_ModHandler.addCraftingRecipe(EnumSignal.DUAL_HEAD_BLOCK_SIGNAL.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumSignal.DUAL_HEAD_BLOCK_SIGNAL.getItem(4), recipe);
         // --- Dual Head Distant Signal
         recipe = new Object[]{
                 "LCd", "PPP", "LCW",
@@ -961,7 +962,7 @@ public class RailCraft implements Runnable {
                 'L', RailcraftItem.signalLamp.getStack(),
                 'W', OrePrefixes.screw.get(Materials.Steel)
         };
-        GT_ModHandler.addCraftingRecipe(EnumSignal.DUAL_HEAD_DISTANT_SIGNAL.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumSignal.DUAL_HEAD_DISTANT_SIGNAL.getItem(4), recipe);
         // --- Signal Block Relay
         recipe = new Object[]{
                 "  d", "PCP", "PRP",
@@ -969,7 +970,7 @@ public class RailCraft implements Runnable {
                 'C', OrePrefixes.circuit.get(Materials.Basic),
                 'R', OrePrefixes.plate.get(Materials.RedAlloy)
         };
-        GT_ModHandler.addCraftingRecipe(EnumSignal.BOX_BLOCK_RELAY.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumSignal.BOX_BLOCK_RELAY.getItem(4), recipe);
         // --- Signal Controll Box
         recipe = new Object[]{
                 " d ", "PCP", "PRP",
@@ -977,7 +978,7 @@ public class RailCraft implements Runnable {
                 'C', OrePrefixes.circuit.get(Materials.Basic),
                 'R', OrePrefixes.plate.get(Materials.RedAlloy)
         };
-        GT_ModHandler.addCraftingRecipe(EnumSignal.BOX_CONTROLLER.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumSignal.BOX_CONTROLLER.getItem(4), recipe);
         // --- Signal Receiver Box
         recipe = new Object[]{
                 "d  ", "PCP", "PRP",
@@ -985,7 +986,7 @@ public class RailCraft implements Runnable {
                 'C', OrePrefixes.circuit.get(Materials.Basic),
                 'R', OrePrefixes.plate.get(Materials.RedAlloy)
         };
-        GT_ModHandler.addCraftingRecipe(EnumSignal.BOX_RECEIVER.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumSignal.BOX_RECEIVER.getItem(4), recipe);
         // --- Analog Signal Controll Box
         recipe = new Object[]{
                 "  d", "PCP", "PRP",
@@ -993,7 +994,7 @@ public class RailCraft implements Runnable {
                 'C', OrePrefixes.circuit.get(Materials.Basic),
                 'R', GT_ModHandler.getModItem("ProjRed|Integration", "projectred.integration.gate", 1L, 26)
         };
-        GT_ModHandler.addCraftingRecipe(EnumSignal.BOX_ANALOG_CONTROLLER.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumSignal.BOX_ANALOG_CONTROLLER.getItem(4), recipe);
         // --- Signal Capacitor Box
         recipe = new Object[]{
                 " d ", "PCP", "PRP",
@@ -1001,7 +1002,7 @@ public class RailCraft implements Runnable {
                 'C', OrePrefixes.circuit.get(Materials.Basic),
                 'R', GT_ModHandler.getModItem("ProjRed|Integration", "projectred.integration.gate", 1L, 10)
         };
-        GT_ModHandler.addCraftingRecipe(EnumSignal.BOX_CAPACITOR.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumSignal.BOX_CAPACITOR.getItem(4), recipe);
         // --- Signal Sequencer Box
         recipe = new Object[]{
                 "d  ", "PCP", "PRP",
@@ -1009,7 +1010,7 @@ public class RailCraft implements Runnable {
                 'C', OrePrefixes.circuit.get(Materials.Basic),
                 'R', GT_ModHandler.getModItem("ProjRed|Integration", "projectred.integration.gate", 1L, 26)
         };
-        GT_ModHandler.addCraftingRecipe(EnumSignal.BOX_SEQUENCER.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumSignal.BOX_SEQUENCER.getItem(4), recipe);
         // --- Signal Interlock Box
         recipe = new Object[]{
                 "PRP", "PCP", "PRP",
@@ -1017,7 +1018,7 @@ public class RailCraft implements Runnable {
                 'C', OrePrefixes.circuit.get(Materials.Basic),
                 'R', OrePrefixes.plate.get(Materials.RedAlloy)
         };
-        GT_ModHandler.addCraftingRecipe(EnumSignal.BOX_INTERLOCK.getItem(1), recipe);
+        GT_ModHandler.addCraftingRecipe(EnumSignal.BOX_INTERLOCK.getItem(4), recipe);
         // --- Work Cart
         recipe = new Object[]{
                 "hWw", " C ", " d ",
@@ -1251,11 +1252,11 @@ public class RailCraft implements Runnable {
                 'I',
                 GT_ModHandler.getModItem("ProjRed|Illumination", "projectred.illumination.lamp", 1L, 29),
                 'O',
-                GT_ModHandler.getModItem("ProjRed|Illumination", "projectred.illumination.lamp", 1L, 30),
+                GT_ModHandler.getModItem("ProjRed|Illumination", "projectred.illumination.lamp", 1L, 20),
                 'N',
-                GT_ModHandler.getModItem("ProjRed|Illumination", "projectred.illumination.lamp", 1L, 31)
+                GT_ModHandler.getModItem("ProjRed|Illumination", "projectred.illumination.lamp", 1L, 30)
         };
-        GT_ModHandler.addCraftingRecipe(RailcraftItem.signalLamp.getStack(), recipe);
+        GT_ModHandler.addCraftingRecipe(RailcraftItem.signalLamp.getStack(8), recipe);
         // --- Lapotron Loader Upgrade
         recipe = new Object[]{
                 "PCP", "WLW", "PCP",
@@ -1688,6 +1689,14 @@ public class RailCraft implements Runnable {
         GT_Values.RA.addAssemblerRecipe(RailcraftItem.tie.getStack(3, ItemTie.EnumTie.WOOD),
                 GT_OreDictUnificator.get(OrePrefixes.stick, Materials.WroughtIron, 3L),
                 RailcraftItem.rail.getStack(12, ItemRail.EnumRail.WOOD), 400, 4);
+        // --- Signal Lamp
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{OreDictionary.getOres("paneGlass").get(1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 1L),
+                        GT_ModHandler.getModItem("ProjRed|Illumination", "projectred.illumination.lamp", 1L, 29),
+                        GT_ModHandler.getModItem("ProjRed|Illumination", "projectred.illumination.lamp", 1L, 20),
+                        GT_ModHandler.getModItem("ProjRed|Illumination", "projectred.illumination.lamp", 1L, 30),
+                        GT_Utility.getIntegratedCircuit(16)}, null, RailcraftItem.signalLamp.getStack(16), 200, 30);
+
     }
 
     private void benderRecipe() {
