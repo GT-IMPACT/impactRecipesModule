@@ -4449,6 +4449,110 @@ public class ImpactCore implements Runnable {
                         ItemList.Electric_Motor_UHV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Diamericiumtitanium, 1L)}, 4000, 500000);
 
+        // --- Casings
+        RA.addDisassemblerRecipe(GT_ItemList.PBECasing.get(2),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.GumMetal, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Titaniolum, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        RA.addDisassemblerRecipe(GT_ItemList.EngraverCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Zamak, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Duraluminium, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        RA.addDisassemblerRecipe(GT_ItemList.AssemblerCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Inconel690, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Nitinol, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        RA.addDisassemblerRecipe(GT_ItemList.CentrifugeCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Inconel792, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TiBetaC, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        RA.addDisassemblerRecipe(GT_ItemList.ElectrolyzerCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.HastelloyC276, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Zamak, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        RA.addDisassemblerRecipe(GT_ItemList.WireFactoryCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Titaniolum, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Inconel690, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        RA.addDisassemblerRecipe(GT_ItemList.SupplyProductionCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.MaragingSteel250, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Inconel792, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        RA.addDisassemblerRecipe(GT_ItemList.UtilityMachineCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Nitinol, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HastelloyC276, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        RA.addDisassemblerRecipe(GT_ItemList.BrewmenterCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Talonite, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Grisium, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        RA.addDisassemblerRecipe(GT_ItemList.ElectromagneticCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Nitinol, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Inconel690, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        RA.addDisassemblerRecipe(GT_ItemList.ArcCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Nitinol60, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Kovar, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        RA.addDisassemblerRecipe(GT_ItemList.ExtradificationCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.TiBetaC, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Talonite, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        RA.addDisassemblerRecipe(GT_ItemList.MixingCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Titaniolum, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel250, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        RA.addDisassemblerRecipe(GT_ItemList.MacerationCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.HastelloyC276, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Mangalloy, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        RA.addDisassemblerRecipe(GT_ItemList.CuttingCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.MaragingSteel300, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Stellite, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
+        // --- 3D Casing
+        RA.addDisassemblerRecipe(GT_ItemList.DDDPrinterCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.StainlessSteel, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedSteel, 4)},
+                500, 120);
+        // --- Naq Casing
+        RA.addDisassemblerRecipe(GT_ItemList.NqCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.GumMetal, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plateQuadruple, Materials.Naquadah, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Desh, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.TungstenSteel, 6),
+                        GT_OreDictUnificator.get(OrePrefixes.screw, Materials.TungstenSteel, 6),
+                        GT_ModHandler.getIC2Item("advancedCircuit", 2L)},
+                1000, 7680);
+        // --- Cyclone Casing
+        RA.addDisassemblerRecipe(GT_ItemList.CycloneCasing.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Inconel792, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.MaragingSteel300, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlackSteel, 6),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSS, 8)},
+                1000, 7680);
+        // --- Turbine Casing
+        RA.addDisassemblerRecipe(GT_ItemList.Huge_Casing_Turbine.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Titaniolum, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TiBetaC, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
+                1000, 1920);
     }
 
     public void cyclon() {
