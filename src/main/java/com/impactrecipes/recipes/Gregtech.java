@@ -232,6 +232,22 @@ public class Gregtech implements Runnable {
                         'G', OrePrefixes.gearGtSmall.get(Materials.TungstenSteel), 'R', OrePrefixes.ring.get(Materials.TungstenSteel),
                         'I', OrePrefixes.stickLong.get(Materials.TungstenSteel), 'F', OrePrefixes.frameGt.get(Materials.MaragingSteel250),
                         'M', ItemList.Electric_Motor_IV, 'V', OrePrefixes.rotor.get(Materials.HastelloyC276), 'S', ItemList.Component_Filter});
+        //Grate Machine Casing
+        GT_ModHandler.addCraftingRecipe(
+                ItemList.Casing_Grate.get(6L), tBitMask, new Object[]{"PVP", "PFP", "PMP",
+                        'P', CoreItems2.getRecipe(SteelBars.getMetaID(), 1),
+                        'F', OrePrefixes.frameGt.get(Materials.VanadiumSteel),
+                        'M', ItemList.Electric_Motor_HV, 'V', OrePrefixes.rotor.get(Materials.BlackSteel)});
+        GT_ModHandler.addCraftingRecipe(
+                ItemList.Casing_Grate.get(24L), tBitMask, new Object[]{"PVP", "PFP", "PMP",
+                        'P', CoreItems2.getRecipe(SteelBars.getMetaID(), 1),
+                        'F', OrePrefixes.frameGt.get(Materials.Titanium),
+                        'M', ItemList.Electric_Motor_EV, 'V', OrePrefixes.rotor.get(Materials.HSLA)});
+        GT_ModHandler.addCraftingRecipe(
+                ItemList.Casing_Grate.get(64L), tBitMask, new Object[]{"PVP", "PFP", "PMP",
+                        'P', GT_ModHandler.getModItem("EnderIO", "blockDarkIronBars", 1L),
+                        'F', OrePrefixes.frameGt.get(Materials.MaragingSteel250),
+                        'M', ItemList.Electric_Motor_IV, 'V', OrePrefixes.rotor.get(Materials.HastelloyC276)});
 
         // --- Solar Panel
         GT_ModHandler.addCraftingRecipe(ItemList.Cover_SolarPanel.get(1L), tBitMask, new Object[]{"SGS", "CPC", "TRT", 'C', OrePrefixes.circuit.get(Materials.Basic), 'G', GT_ModHandler.getIC2Item("reinforcedGlass", 1L), 'P', OrePrefixes.plateAlloy.get(Materials.Carbon), 'S', ItemList.Circuit_Silicon_Wafer, 'T', OrePrefixes.wireGt01.get(Materials.RedAlloy), 'R', CoreItems2.getRecipe(101, 1)});
@@ -249,6 +265,173 @@ public class Gregtech implements Runnable {
     private void assemblerRecipe() {
         // --- Air Filter
         GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.StainlessSteel, 16L), GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Titanium, 4L), ItemList.AdsorptionFilterCasing.get(1L), 200, 480);
+
+        // --- Assembling Line Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 4L),
+                        ItemList.Robot_Arm_IV.get(2L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenSteel, 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Gearbox_TungstenSteel.get(2L), 50, 16);
+        // --- Processor Machine Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.StainlessSteel, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 4L),
+                        ItemList.Casing_SolidSteel.get(1L),
+                        GT_Utility.getIntegratedCircuit(1)}, null, ItemList.Casing_Processor.get(1L), 50, 16);
+        // --- Assembler Machine Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 6L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 1L),
+                        ItemList.Electric_Motor_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenSteel, 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Assembler.get(2L), 50, 16);
+        // --- Pump Machine Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.StainlessSteel, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2L),
+                        ItemList.Electric_Pump_HV.get(2L),
+                        ItemList.Casing_SolidSteel.get(1L),
+                        GT_Utility.getIntegratedCircuit(1)}, null, ItemList.Casing_Pump.get(1L), 50, 16);
+        // --- Bronze Pipe Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Bronze, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Bronze, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Bronze, 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Pipe_Bronze.get(2L), 50, 16);
+        // --- Steel Pipe Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Steel, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Pipe_Steel.get(2L), 50, 16);
+        // --- Titanium Pipe Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Titanium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Titanium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Titanium, 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Pipe_Titanium.get(2L), 50, 16);
+        // --- TungstenSteel Pipe Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TungstenSteel, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.TungstenSteel, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenSteel, 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Pipe_TungstenSteel.get(2L), 50, 16);
+        // --- PTFE Pipe Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Polytetrafluoroethylene, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Polytetrafluoroethylene, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Polytetrafluoroethylene, 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Pipe_Polytetrafluoroethylene.get(2L), 50, 16);
+        // --- Motor Machine Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.StainlessSteel, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2L),
+                        ItemList.Electric_Motor_HV.get(2L),
+                        ItemList.Casing_SolidSteel.get(1L),
+                        GT_Utility.getIntegratedCircuit(1)}, null, ItemList.Casing_Motor.get(1L), 50, 16);
+        // --- Grate Machine Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("minecraft", "iron_bars", 6L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Steel, 1L),
+                        ItemList.Electric_Motor_MV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1L),
+                        GT_Utility.getIntegratedCircuit(4)}, null, ItemList.Casing_Grate.get(2L), 50, 16);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{CoreItems2.getRecipe(51, 6),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.BlackSteel, 1L),
+                        ItemList.Electric_Motor_HV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 1L),
+                        GT_Utility.getIntegratedCircuit(4)}, null, ItemList.Casing_Grate.get(6L), 50, 16);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{CoreItems2.getRecipe(51, 6),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.HSLA, 1L),
+                        ItemList.Electric_Motor_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Titanium, 1L),
+                        GT_Utility.getIntegratedCircuit(4)}, null, ItemList.Casing_Grate.get(24L), 50, 16);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("EnderIO", "blockDarkIronBars", 6L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.HastelloyC276, 1L),
+                        ItemList.Electric_Motor_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.MaragingSteel250, 1L),
+                        GT_Utility.getIntegratedCircuit(4)}, null, ItemList.Casing_Grate.get(64L), 50, 16);
+        // --- Filter Machine Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("minecraft", "iron_bars", 3L),
+                        ItemList.Component_Filter.get(3L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Steel, 1L),
+                        ItemList.Electric_Motor_MV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1L),
+                        GT_Utility.getIntegratedCircuit(5)}, null, ItemList.Casing_Vent.get(2L), 50, 16);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{CoreItems2.getRecipe(51, 3),
+                        ItemList.Component_Filter.get(2L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.BlackSteel, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.StainlessSteel, 1L),
+                        ItemList.Electric_Motor_HV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 1L),
+                        GT_Utility.getIntegratedCircuit(5)}, null, ItemList.Casing_Vent.get(6L), 50, 16);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{CoreItems2.getRecipe(51, 2),
+                        ItemList.Component_Filter.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.HSLA, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Titanium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Titanium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Titanium, 1L),
+                        ItemList.Electric_Motor_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Titanium, 1L),
+                        GT_Utility.getIntegratedCircuit(5)}, null, ItemList.Casing_Vent.get(24L), 50, 16);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("EnderIO", "blockDarkIronBars", 2L),
+                        ItemList.Component_Filter.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.HastelloyC276, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.TungstenSteel, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.ring, Materials.TungstenSteel, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.TungstenSteel, 1L),
+                        ItemList.Electric_Motor_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.MaragingSteel250, 1L),
+                        GT_Utility.getIntegratedCircuit(5)}, null, ItemList.Casing_Vent.get(64L), 50, 16);
+        // --- Bronze Firebox Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Bronze, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Bronze, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Bronze, 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Firebox_Bronze.get(2L), 50, 16);
+        // --- Steel Firebox Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Steel, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Firebox_Steel.get(2L), 50, 16);
+        // --- Titanium Firebox Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Titanium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Titanium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Titanium, 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Firebox_Titanium.get(2L), 50, 16);
+        // --- TungstenSteel Firebox Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TungstenSteel, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.TungstenSteel, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenSteel, 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Firebox_TungstenSteel.get(2L), 50, 16);
+        // --- Engine Intake Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Titanium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Titanium, 2L),
+                        ItemList.Casing_StableTitanium.get(1L),
+                        GT_Utility.getIntegratedCircuit(1)}, null, ItemList.Casing_Firebox_Titanium.get(2L), 50, 16);
+        // --- Bronze Gear Box Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Bronze, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Bronze, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Bronze, 1L),
+                        GT_Utility.getIntegratedCircuit(2)}, null, ItemList.Casing_Gearbox_Bronze.get(2L), 50, 16);
+        // --- Steel Gear Box Casing
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Steel, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1L),
+                        GT_Utility.getIntegratedCircuit(2)}, null, ItemList.Casing_Gearbox_Steel.get(2L), 50, 16);
 
     }
 
