@@ -166,6 +166,28 @@ public class Vanilla implements Runnable {
         removeRecipeByOutput(getItemStack("minecraft", "dark_oak_stairs", 1, 0), true, false,
                 false);
 
+        removeRecipeByOutput(getItemStack("minecraft", "wooden_sword", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "wooden_shovel", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "wooden_pickaxe", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "wooden_axe", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "wooden_hoe", 1, 0), true, false,
+                false);
+
+        removeRecipeByOutput(getItemStack("minecraft", "stone_sword", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "stone_shovel", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "stone_pickaxe", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "stone_axe", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("minecraft", "stone_hoe", 1, 0), true, false,
+                false);
+
     }
 
     private void handRecipe() {

@@ -30,6 +30,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import static com.impact.loader.ItemRegistery.UtilBlock;
 import static com.impact.util.Utilits.Blockstack;
+import static com.impactrecipes.util.RecipeUtils.getItemStack;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class RailCraft implements Runnable {
@@ -151,6 +152,17 @@ public class RailCraft implements Runnable {
         removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "part.circuit.receiver", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "machine.delta", 1L));
         removeRecipeByOutput(RailcraftItem.rail.getStack(1, ItemRail.EnumRail.WOOD));
+
+        removeRecipeByOutput(getItemStack("Railcraft", "tool.steel.sword", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("Railcraft", "tool.steel.hovel", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("Railcraft", "tool.steel.pickaxe", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("Railcraft", "tool.steel.axe", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("Railcraft", "tool.steel.hoe", 1, 0), true, false,
+                false);
 
         //todo НУЖНО ПРОВЕРИТЬ - НЕ УВЕРЕН ЧТО ПОФИКСИЛ
         removeRecipeByOutput(RailcraftItem.rail.getStack(1, ItemRail.EnumRail.STANDARD));

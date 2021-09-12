@@ -16,6 +16,7 @@ import net.minecraftforge.fluids.FluidStack;
 
 import static com.impact.common.item.Core_List_Items.IceCompressedPlate;
 import static com.impact.common.item.Core_List_Items.TCetiESeaweedExtract;
+import static com.impactrecipes.util.RecipeUtils.getItemStack;
 import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
@@ -195,6 +196,17 @@ public class GalaxySpace implements Runnable {
         removeRecipeByOutput(
                 GT_ModHandler.getModItem("GalaxySpace", "item.oxygentank_t6", 1L, GT_Values.W), true, false,
                 true);
+
+        removeRecipeByOutput(getItemStack("GalaxySpace", "item.cobalt_sword", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("GalaxySpace", "item.cobalt_shovel", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("GalaxySpace", "item.cobalt_pickaxe", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("GalaxySpace", "item.cobalt_axe", 1, 0), true, false,
+                false);
+        removeRecipeByOutput(getItemStack("GalaxySpace", "item.cobalt_hoe", 1, 0), true, false,
+                false);
     }
 
     private void hand() {
