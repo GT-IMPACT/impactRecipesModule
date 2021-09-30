@@ -25,41 +25,30 @@ public class Ztones implements Runnable {
     }
 
     private void removeZtones() {
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "cleanDirt", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "booster", 1L, 0), true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "lampf", 1L, 0), true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "lampt", 1L, 0), true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "lampb", 1L, 0), true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "auroraBlock", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "minicharcoal", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "minicoal", 1L, 0), true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "ofanix", 1L, 0), true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "diamondZane", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "splatAxe", 1L, 0), true, false, false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "terrainEater", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.korpBlock", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.tankBlock", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.solsBlock", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.ztylBlock", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.vectBlock", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.jeltBlock", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.reedBlock", 1L, 0), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.venaBlock", 1L, 0), true, false,
-                false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "cleanDirt", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "booster", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "lampf", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "lampt", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "lampb", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "auroraBlock", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "minicharcoal", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "minicoal", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "ofanix", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "diamondZane", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "splatAxe", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "terrainEater", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.korpBlock", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.tankBlock", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.solsBlock", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.ztylBlock", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.vectBlock", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.jeltBlock", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.reedBlock", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.venaBlock", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.krypBlock", 1L, 0), true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("Ztones", "tile.mintBlock", 1L, 0), true, false, true);
+
     }
 
     private void hand() {
@@ -86,11 +75,16 @@ public class Ztones implements Runnable {
         // --- Reed Block
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.reedBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', OrePrefixes.plate.get(Materials.Wood)});
         // --- Vena Block
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.venaBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', OrePrefixes.plate.get(Materials.Lapis)});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.venaBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', OrePrefixes.plate.get(Materials.Cobalt)});
         // --- Ofanix
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "ofanix", 1L, 0), tBitMask,
                 new Object[]{"hSC", "SGS", "fSs", 'C', GT_ModHandler.getModItem("TConstruct", "CraftingSlab", 1L, 0),
                         'S', OrePrefixes.stick.get(Materials.Iron), 'G', OrePrefixes.gem.get(Materials.Diamond)});
+        // --- Kryp Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.krypBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', GT_ModHandler.getModItem("chisel", "concrete", 1L, 0)});
+        // --- Mint Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.mintBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', OrePrefixes.plate.get(Materials.Rubber)});
+
 
     }
 
@@ -104,7 +98,7 @@ public class Ztones implements Runnable {
     }
 
     private void assembler() {
-// --- Ztones Tile
+        // --- Ztones Tile
         GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "stone_slab", 8L, 0),
                 GT_ModHandler.getModItem("minecraft", "stone", 1L, 0),
                 GT_ModHandler.getModItem("Ztones", "stoneTile", 8L, 0), 160, 4);
@@ -145,7 +139,7 @@ public class Ztones implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Iron, 1L),
                 GT_ModHandler.getModItem("Ztones", "tile.tankBlock", 16L, 0), 100, 8);
         // --- Sync
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("Ztones", "stoneTile", 24L, 0),
+        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("Ztones", "stoneTile", 16L, 0),
                 GT_OreDictUnificator.get(OrePrefixes.gem, Materials.Emerald, 1L),
                 GT_ModHandler.getModItem("Ztones", "tile.syncBlock", 16L, 0), 100, 8);
         // --- Zkul
