@@ -4583,7 +4583,7 @@ public class ImpactCore implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 8)},
                 1000, 1920);
         // --- Vent Casing
-        RA.addDisassemblerRecipe(new ItemStack(InsideBlock, 2, 1),
+        RA.addDisassemblerRecipe(new ItemStack(InsideBlock, 1, 2),
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.StainlessSteel, 2),
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel300, 3),
                         GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedSteel, 4)},
