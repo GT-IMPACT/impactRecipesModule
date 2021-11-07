@@ -61,6 +61,13 @@ dependencies {
     compileOnly fileTree(dir: 'libNotRun/', include:'*.jar')
 }
 
+runClient {
+    jvmArgs "-Xmx4096m", "-Xms1024m"
+    if (project.hasProperty("appArgs")) {
+        args Eval.me(appArgs)
+    }
+}
+
 processResources {
     // this will ensure that this task is redone when the versions change.
     inputs.property "version", project.version
