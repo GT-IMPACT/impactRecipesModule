@@ -419,7 +419,7 @@ public class Gregtech implements Runnable {
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Titanium, 4L),
                         GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Titanium, 2L),
                         ItemList.Casing_StableTitanium.get(1L),
-                        GT_Utility.getIntegratedCircuit(1)}, null, ItemList.Casing_Firebox_Titanium.get(2L), 50, 16);
+                        GT_Utility.getIntegratedCircuit(1)}, null, ItemList.Casing_EngineIntake.get(2L), 50, 16);
         // --- Bronze Gear Box Casing
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Bronze, 4L),
