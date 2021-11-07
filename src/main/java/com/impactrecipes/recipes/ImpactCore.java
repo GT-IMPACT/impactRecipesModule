@@ -1635,6 +1635,18 @@ public class ImpactCore implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Graphite, 1L),
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Copper, 1L)
                 }, CoreItems2.getRecipe(192, 1), 200, 480);
+        GT_Values.RA
+                .addFormingPressRecipe(new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Polytetrafluoroethylene, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Graphite, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Copper, 4L)
+                }, CoreItems2.getRecipe(192, 4), 400, 480);
+        GT_Values.RA
+                .addFormingPressRecipe(new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Polybenzimidazole, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Graphite, 16L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Copper, 16L)
+                }, CoreItems2.getRecipe(192, 16), 800, 480);
 
     }
 
