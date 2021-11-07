@@ -46,10 +46,19 @@ minecraft {
     runDir = "run"
 }
 
-repositories {}
+repositories {
+}
+
+configurations {
+    mods
+    provided
+    embedded
+    compile.extendsFrom provided, embedded
+}
 
 dependencies {
-    compile fileTree(dir: 'lib', include: '*.jar')
+    provided fileTree(dir: 'libRun/', include:'*.jar')
+    compileOnly fileTree(dir: 'libNotRun/', include:'*.jar')
 }
 
 processResources {
