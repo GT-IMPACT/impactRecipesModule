@@ -257,9 +257,9 @@ public class Gregtech implements Runnable {
         GT_ModHandler.addCraftingRecipe(ItemList.Cover_SolarPanel_HV.get(1L), tBitMask, new Object[]{"GRG", "CAC", "GRG", 'C', OrePrefixes.circuit.get(Materials.Data), 'G', ItemList.Cover_SolarPanel_MV, 'R', OrePrefixes.plate.get(Materials.EpoxidFiberReinforced), 'A', CoreItems2.getRecipe(111, 1)});
 
         // --- Air Filter
-        GT_ModHandler.addCraftingRecipe(ItemList.Casing_AirFilter_Vent.get(2L), bits, new Object[]{"PhP", "TFT", "PwP", 'T', CoreItems2.getRecipe(SteelBars.getMetaID(), 1), 'F', OrePrefixes.frameGt.get(Materials.Steel), 'P', OrePrefixes.plate.get(Materials.Steel)});
-        GT_ModHandler.addCraftingRecipe(ItemList.Casing_AirFilter.get(1L), bits, new Object[]{"SSS", "RVR", "MSM", 'V', ItemList.Casing_AirFilter_Vent, 'S',OrePrefixes.stickLong.get(Materials.StainlessSteel), 'R', OrePrefixes.rotor.get(Materials.StainlessSteel), 'M', ItemList.Electric_Motor_HV, 'R', OrePrefixes.screw.get(Materials.StainlessSteel)});
-        GT_ModHandler.addCraftingRecipe(ItemList.Machine_Multi_AirFilter.get(1L), bits, new Object[]{"RPR", "MBM", "CGC", 'B', ItemList.Hull_HV, 'R', OrePrefixes.rotor.get(Materials.StainlessSteel), 'P', ItemList.Electric_Pump_HV, 'M', ItemList.Electric_Motor_HV, 'C', OrePrefixes.cableGt01.get(Materials.Gold), 'G', ItemList.Casing_Turbine1});
+        GT_ModHandler.addCraftingRecipe(ItemList.Casing_AirFilter_Vent.get(2L), tBitMask, new Object[]{"PhP", "TFT", "PwP", 'T', CoreItems2.getRecipe(SteelBars.getMetaID(), 1), 'F', OrePrefixes.frameGt.get(Materials.Steel), 'P', OrePrefixes.plate.get(Materials.Steel)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Casing_AirFilter.get(1L), tBitMask, new Object[]{"SSS", "RVR", "MSM", 'V', ItemList.Casing_AirFilter_Vent, 'S',OrePrefixes.stickLong.get(Materials.StainlessSteel), 'R', OrePrefixes.rotor.get(Materials.StainlessSteel), 'M', ItemList.Electric_Motor_HV, 'R', OrePrefixes.screw.get(Materials.StainlessSteel)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Machine_Multi_AirFilter.get(1L), tBitMask, new Object[]{"RPR", "MBM", "CGC", 'B', ItemList.Hull_HV, 'R', OrePrefixes.rotor.get(Materials.StainlessSteel), 'P', ItemList.Electric_Pump_HV, 'M', ItemList.Electric_Motor_HV, 'C', OrePrefixes.cableGt01.get(Materials.Gold), 'G', ItemList.Casing_Turbine1});
     }
 
     private void assemblerRecipe() {
@@ -419,7 +419,7 @@ public class Gregtech implements Runnable {
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Titanium, 4L),
                         GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Titanium, 2L),
                         ItemList.Casing_StableTitanium.get(1L),
-                        GT_Utility.getIntegratedCircuit(1)}, null, ItemList.Casing_Firebox_Titanium.get(2L), 50, 16);
+                        GT_Utility.getIntegratedCircuit(1)}, null, ItemList.Casing_EngineIntake.get(2L), 50, 16);
         // --- Bronze Gear Box Casing
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Bronze, 4L),
@@ -3193,6 +3193,10 @@ public class Gregtech implements Runnable {
         GT_Values.RA.addCutterRecipe(ItemList.Circuit_Silicon_Ingot.get(1),
                 ItemList.Circuit_Silicon_Wafer.get(16), null, 400, 16);
 
+        // --- ULV Circuit
+        GT_Values.RA.addCutterRecipe(CoreItems2.getRecipe(194, 1),
+                ItemList.NandChip.get(16L), null, 100, 120);
+
     }
 
     private void bath() {
@@ -3345,14 +3349,43 @@ public class Gregtech implements Runnable {
             if (tMat.mStandardMoltenFluid != null && tMat.contains(SubTag.SOLDERING_MATERIAL) &&
                     !(GregTech_API.mUseOnlyGoodSolderingMaterials && !tMat.contains(SubTag.SOLDERING_MATERIAL_GOOD))) {
                 int tMultiplier = tMat.contains(SubTag.SOLDERING_MATERIAL_GOOD) ? 1 : tMat.contains(SubTag.SOLDERING_MATERIAL_BAD) ? 4 : 2;
-// --- GT Circuits
+            // --- GT Circuits
                 // --- ULV
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
-                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2),
-                                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Tin, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.NandChip.get(12L), 450, 30);
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 1),
+                                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 1)},
+                        tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(194, 1), 300, 120);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1L),
+                                ItemList.Circuit_Chip_Simple_SoC.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 1),
+                                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.AnnealedCopper, 1)},
+                        tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(194, 1), 300, 120);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1L),
+                                ItemList.Circuit_Chip_Simple_SoC.get(2L),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedstoneAlloy, 1),
+                                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Gold, 1)},
+                        tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(194, 2), 400, 120);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1L),
+                                ItemList.Circuit_Chip_Simple_SoC.get(4L),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.EnergeticAlloy, 1),
+                                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 1)},
+                        tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(194, 4), 500, 256);
+                GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Fiberglass_Advanced.get(1L),
+                                ItemList.Circuit_Chip_Simple_SoC.get(8L),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.VibrantAlloy, 1),
+                                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Osmium, 1)},
+                        tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(194, 8), 600, 480);
 
                 // --- LV
                 //1

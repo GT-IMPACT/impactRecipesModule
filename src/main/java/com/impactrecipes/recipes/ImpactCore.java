@@ -1635,6 +1635,18 @@ public class ImpactCore implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Graphite, 1L),
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Copper, 1L)
                 }, CoreItems2.getRecipe(192, 1), 200, 480);
+        GT_Values.RA
+                .addFormingPressRecipe(new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Polytetrafluoroethylene, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Graphite, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Copper, 4L)
+                }, CoreItems2.getRecipe(192, 4), 400, 480);
+        GT_Values.RA
+                .addFormingPressRecipe(new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Polybenzimidazole, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Graphite, 16L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Copper, 16L)
+                }, CoreItems2.getRecipe(192, 16), 800, 480);
 
     }
 
@@ -3016,6 +3028,41 @@ public class ImpactCore implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 9L),
                         GT_Utility.getIntegratedCircuit(24)}, Materials.Tin.getMolten(144L),
                 GT_ItemList.Long_Distance_Pipeline_Item_Pipe.get(64L), 600, 24);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{ItemList.Hull_LV.get(1), ItemList.LV_Coil.get(1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Basic, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt04, Materials.Tin, 3L),
+                        GT_Utility.getIntegratedCircuit(2)}, null,
+                GT_ItemList.LDPE_LV.get(2L), 150, 16);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{ItemList.Hull_MV.get(1), ItemList.MV_Coil.get(1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt04, Materials.Copper, 3L),
+                        GT_Utility.getIntegratedCircuit(2)}, null,
+                GT_ItemList.LDPE_MV.get(2L), 150, 64);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{ItemList.Hull_HV.get(1), ItemList.HV_Coil.get(1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt04, Materials.Gold, 3L),
+                        GT_Utility.getIntegratedCircuit(2)}, null,
+                GT_ItemList.LDPE_HV.get(2L), 150, 256);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{ItemList.Hull_EV.get(1), ItemList.EV_Coil.get(1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.BT6, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt04, Materials.Aluminium, 3L),
+                        GT_Utility.getIntegratedCircuit(2)}, null,
+                GT_ItemList.LDPE_EV.get(2L), 150, 1024);
+        GT_Values.RA.addAssemblerRecipe(
+                new ItemStack[]{ItemList.Hull_IV.get(1), ItemList.IV_Coil.get(1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HastelloyC276, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 2L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt04, Materials.Platinum, 3L),
+                        GT_Utility.getIntegratedCircuit(2)}, null,
+                GT_ItemList.LDPE_IV.get(2L), 150, 4096);
 
         // --- Electromagnetic Chamber
         GT_Values.RA.addAssemblerRecipe(
@@ -3573,6 +3620,111 @@ public class ImpactCore implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Steel, 64L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Vanadium, 64L)}, null,
                 new ItemStack(SpaceElevatorBlock, 1, 0), 80 * 20, 1024, false);
+
+        // --- Long Distance Pipe Line Energy
+        //LV
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Tin, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 6L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.Rubber.getMolten(1440L),
+                GT_ItemList.LDPFE_LV.get(32L), 600, 24);
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Tin, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 6L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.StyreneButadieneRubber.getMolten(1080L),
+                GT_ItemList.LDPFE_LV.get(32L), 600, 24);
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Tin, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 6L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.Silicone.getMolten(720L),
+                GT_ItemList.LDPFE_LV.get(32L), 600, 24);
+        //MV
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Birmabright,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Copper, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 6L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.Rubber.getMolten(1440L),
+                GT_ItemList.LDPFE_MV.get(32L), 600, 96);
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Birmabright,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Copper, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 6L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.StyreneButadieneRubber.getMolten(1080L),
+                GT_ItemList.LDPFE_MV.get(32L), 600, 96);
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Birmabright,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Copper, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 6L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.Silicone.getMolten(720L),
+                GT_ItemList.LDPFE_MV.get(32L), 600, 96);
+        //HV
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.StainlessSteel,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Gold, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 6L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.Rubber.getMolten(1440L),
+                GT_ItemList.LDPFE_HV.get(32L), 600, 480);
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.StainlessSteel,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Gold, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 6L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.StyreneButadieneRubber.getMolten(1080L),
+                GT_ItemList.LDPFE_HV.get(32L), 600, 480);
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.StainlessSteel,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Gold, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 6L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.Silicone.getMolten(720L),
+                GT_ItemList.LDPFE_HV.get(32L), 600, 480);
+        //EV
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.BT6,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Aluminium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.BT6, 6L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.Rubber.getMolten(1440L),
+                GT_ItemList.LDPFE_EV.get(32L), 600, 1920);
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.BT6,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Aluminium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.BT6, 6L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.StyreneButadieneRubber.getMolten(1080L),
+                GT_ItemList.LDPFE_EV.get(32L), 600, 1920);
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.BT6,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Aluminium, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.BT6, 6L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.Silicone.getMolten(720L),
+                GT_ItemList.LDPFE_EV.get(32L), 600, 1920);
+        //IV
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.HastelloyC276,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Platinum, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HastelloyC276, 6L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 10L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.Silicone.getMolten(720L),
+                GT_ItemList.LDPFE_IV.get(32L), 600, 7680);
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.HastelloyC276,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Platinum, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HastelloyC276, 6L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.PolyvinylChloride, 10L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 20L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.StyreneButadieneRubber.getMolten(1440L),
+                GT_ItemList.LDPFE_IV.get(32L), 600, 7680);
+        GT_Values.RA.addWireAssemblerRecipe(
+                new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.HastelloyC276,1L),
+                        GT_OreDictUnificator.get(OrePrefixes.cableGt16, Materials.Platinum, 4L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HastelloyC276, 6L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Polydimethylsiloxane, 10L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 20L),
+                        GT_Utility.getIntegratedCircuit(24)}, Materials.StyreneButadieneRubber.getMolten(1440L),
+                GT_ItemList.LDPFE_IV.get(32L), 600, 7680);
     }
 
     private void disassembler() {

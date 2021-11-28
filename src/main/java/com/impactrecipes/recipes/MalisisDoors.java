@@ -355,21 +355,22 @@ public class MalisisDoors implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.ring, Materials.StainlessSteel, 2L),
                         GT_ModHandler.getModItem("malisisdoors", "garage_door", 8L), 180, 16);
         // --- Rusty Ladder
-        GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Iron, 3L),
-                GT_Utility.getIntegratedCircuit(5),
-                GT_ModHandler.getModItem("malisisdoors", "rustyLadder", 2L), 60, 16);
+        GT_Values.RA
+                .addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Iron, 3L),
+                        GT_Utility.getIntegratedCircuit(6),
+                        GT_ModHandler.getModItem("malisisdoors", "rustyLadder", 2L), 60, 16);
         GT_Values.RA
                 .addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Steel, 3L),
-                        GT_Utility.getIntegratedCircuit(5),
-                        GT_ModHandler.getModItem("malisisdoors", "rustyLadder", 2L), 70, 16);
+                        GT_Utility.getIntegratedCircuit(6),
+                        GT_ModHandler.getModItem("malisisdoors", "rustyLadder", 4L), 70, 16);
         GT_Values.RA
                 .addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Aluminium, 3L),
-                        GT_Utility.getIntegratedCircuit(5),
-                        GT_ModHandler.getModItem("malisisdoors", "rustyLadder", 4L), 80, 16);
-        GT_Values.RA.addAssemblerRecipe(
-                GT_OreDictUnificator.get(OrePrefixes.stick, Materials.StainlessSteel, 3L),
-                GT_Utility.getIntegratedCircuit(5),
-                GT_ModHandler.getModItem("malisisdoors", "rustyLadder", 8L), 90, 16);
+                        GT_Utility.getIntegratedCircuit(6),
+                        GT_ModHandler.getModItem("malisisdoors", "rustyLadder", 8L), 80, 16);
+        GT_Values.RA
+                .addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.StainlessSteel, 3L),
+                        GT_Utility.getIntegratedCircuit(6),
+                        GT_ModHandler.getModItem("malisisdoors", "rustyLadder", 16L), 90, 16);
         // --- Carriage Door
         GT_Values.RA
                 .addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.block, Materials.NetherQuartz, 4L),
