@@ -191,6 +191,9 @@ public class RailCraft implements Runnable {
         removeRecipeByOutput(new ItemStack(Objects.nfcTrack, 1, 0));
         removeRecipeByOutput(new ItemStack(Objects.metaItem, 1, 3));
         removeRecipeByOutput(new ItemStack(Objects.ocComponents, 4, 0));
+        removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "part.tie", 1L, 1));
+        removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "part.railbed", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("Railcraft", "part.railbed", 1L, 1));
     }
 
     private void handRecipe() {
@@ -1627,6 +1630,32 @@ public class RailCraft implements Runnable {
                 'G', OrePrefixes.gearGt.get(Materials.WroughtIron)
         };
         GT_ModHandler.addCraftingRecipe(GT_ItemList.Rail_Assembler.get(1L), recipe);
+        // --- Rebar
+        recipe = new Object[]{
+                " h ", "IfI",
+                'I', OrePrefixes.stick.get(Materials.Iron)
+        };
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Railcraft", "part.rebar", 2L), recipe);
+        // --- Stone Tie
+        recipe = new Object[]{
+                " R ", "SSS", " r ",
+                'R', RailcraftItem.rebar.getStack(1),
+                'S', new ItemStack(Blocks.stone_slab)
+        };
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Railcraft", "part.tie", 1L, 1), recipe);
+        // --- Wooden Railbed
+        recipe = new Object[]{
+                "TT", "TT", " r",
+                'T', RailcraftItem.tie.getRecipeObject(ItemTie.EnumTie.WOOD)
+        };
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Railcraft", "part.railbed", 1L), recipe);
+        // --- Stone Railbed
+        recipe = new Object[]{
+                "TT", "TT", " r",
+                'T', RailcraftItem.tie.getRecipeObject(ItemTie.EnumTie.STONE)
+        };
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Railcraft", "part.railbed", 1L, 1), recipe);
+
     }
 
     private void assemblerRecipe() {
