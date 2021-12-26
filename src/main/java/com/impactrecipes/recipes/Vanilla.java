@@ -25,6 +25,7 @@ public class Vanilla implements Runnable {
         handRecipe();
         oreRegisterRecipe();
         assembler();
+		slicer();
     }
 
     private void removeVanila() {
@@ -187,6 +188,8 @@ public class Vanilla implements Runnable {
                 false);
         removeRecipeByOutput(getItemStack("minecraft", "stone_hoe", 1, 0), true, false,
                 false);
+		removeRecipeByOutput(getItemStack("minecraft", "lead", 1, 0), true, false,
+                false);
 
     }
 
@@ -329,6 +332,11 @@ public class Vanilla implements Runnable {
             GT_ModHandler.addCraftingRecipe(stairs2[i], tBitMask, new Object[]{"sP", "PP", 'P', GT_ModHandler.getModItem("minecraft", "wooden_slab", 1L, i)});
             GT_ModHandler.addCraftingRecipe(stairs4[i], tBitMask, new Object[]{"sP", "PP", 'P', GT_ModHandler.getModItem("minecraft", "planks", 1L, i)});
         }
+		
+		// --- Lead
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "lead", 1L), tBitMask, new Object[]{"SSS", "SBS", "SSS", 'S', GT_ModHandler.getModItem("minecraft", "string", 1L), 'B', "slimeball"});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "lead", 1L), tBitMask, new Object[]{"SSS", "SBS", "SSS", 'S', GT_ModHandler.getModItem("minecraft", "string", 1L), 'B', GT_ModHandler.getModItem("IC2", "itemHarz", 1L)});
+        
     }
 
     private void oreRegisterRecipe() {
@@ -472,6 +480,9 @@ public class Vanilla implements Runnable {
                             GT_Utility.getIntegratedCircuit(7)}, null, stairs4[i], 300, 8);
         }
     }
+	
+	private void slicer() {
+		GT_Values.RA.addSlicerRecipe(GT_ModHandler.getModItem("minecraft", "melon_block", 1L), ItemList.Shape_Slicer_Flat.get(0L), GT_ModHandler.getModItem("minecraft", "melon", 8L), 128, 4);
 
-
+	}
 }
