@@ -5765,6 +5765,12 @@ public class ImpactCore implements Runnable {
 						GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.BlueSteel, 4)},
 				500, 120
 		);
+		// --- Nuclear Rod Hatch
+		RA.addDisassemblerRecipe(GT_ItemList.Nuclear_Hatch_Rod.get(1),
+				new ItemStack[]{ItemList.Hull_EV.get(1), ItemList.Electric_Motor_EV.get(1),
+						GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 4L)},
+				480, 1920
+		);
 	}
 	
 	public void cyclon() {
