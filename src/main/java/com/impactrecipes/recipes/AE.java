@@ -1825,6 +1825,7 @@ public class AE implements Runnable {
 
     private void mixerRecipe() {
         RA.addMixerRecipe(CoreItems.getRecipe(38, 1), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Redstone, 1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NetherQuartz, 1L), GT_Values.NI, Materials.Water.getFluid(500L), GT_Values.NF, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2L, 8), 20, 16);
+        RA.addMixerRecipe(CoreItems.getRecipe(38, 1), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Redstone, 1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NetherQuartz, 1L), GT_Values.NI, GT_ModHandler.getDistilledWater(500), GT_Values.NF, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2L, 8), 20, 16);
     }
 
     private void latheRecipe() {
