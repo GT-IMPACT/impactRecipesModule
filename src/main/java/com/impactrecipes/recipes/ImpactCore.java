@@ -65,6 +65,7 @@ public class ImpactCore implements Runnable {
 		cyclon();
 		tesseract();
 		drying();
+		arcFurnace();
 	}
 	
 	private void hand() {
@@ -5780,6 +5781,205 @@ public class ImpactCore implements Runnable {
 	public void drying() {
 		// Graphene
 		impact.I_RA.addDryingOvenRecipe(CoreItems2.getRecipe(193, 1), new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Graphene, 1L)}, 800, 16);
+	}
+	
+	private void arcFurnace() {
+		// --- Heat Proof Machine Casing
+        RA.addArcFurnaceRecipe(ItemList.Casing_HeatProof.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Invar, 4)}, null, 160, 96);
+		// --- Solid Steel Machine Casing
+        RA.addArcFurnaceRecipe(ItemList.Casing_SolidSteel.get(1),
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Steel, 4)}, null, 160, 96);
+		// --- Frost Proof Machine Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_FrostProof.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Aluminium, 4)}, null, 160, 96);
+		// --- Bronze Pipe Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_Pipe_Bronze.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Bronze, 9)}, null, 360, 96);
+		// --- Steel Pipe Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_Pipe_Steel.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Steel, 9)}, null, 360, 96);
+		// --- Titanium Pipe Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_Pipe_Titanium.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Titanium, 9)}, null, 360, 96);
+		// --- TungstenSteel Pipe Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_Pipe_TungstenSteel.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.TungstenSteel, 9)}, null, 360, 96);
+		// --- Radiation Proof Machine Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_RadiationProof.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.TungstenCarbide, 4)}, null, 160, 96);
+		// --- Bronze Firebox Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_Firebox_Bronze.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Bronze, 4)}, null, 160, 96);
+		// --- Steel Firebox Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_Firebox_Steel.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Steel, 4)}, null, 160, 96);
+		// --- Titanium Firebox Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_Firebox_Titanium.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Titanium, 4)}, null, 160, 96);
+		// --- TungstenSteel Firebox Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_Firebox_TungstenSteel.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.TungstenSteel, 4)}, null, 160, 96);
+		// --- Robust Tungstensteel Machine Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_RobustTungstenSteel.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.TungstenSteel, 4)}, null, 160, 96);
+		// --- Clean Stainless Steel Machine Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_CleanStainlessSteel.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.StainlessSteel, 4)}, null, 160, 96);
+		// --- Stable Titanium Machine Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_StableTitanium.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Titanium, 4)}, null, 160, 96);
+		// --- Turbine Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_Turbine.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Magnalium, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.BlueSteel, 1)}, null, 160, 96);
+		// --- Stainless Steel Turbine Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_Turbine1.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.StainlessSteel, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Magnalium, 1)}, null, 160, 96);
+		// --- Titanium Turbine Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_Turbine2.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Titanium, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Magnalium, 1)}, null, 160, 96);
+		// --- Tungstensteel Turbine Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_Turbine3.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.TungstenSteel, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Magnalium, 1)}, null, 160, 96);
+		// --- Mining Osmiridium Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_MiningOsmiridium.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Osmiridium, 4)}, null, 160, 96);
+		// --- Robust Naquadah Alloy Machine Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_RobustNaquadahAlloy.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.NaquadahAlloy, 4)}, null, 160, 96);
+		// --- HSLA Machine Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_HSLA.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSLA, 4)}, null, 160, 96);
+		// --- Robust Neutronium Machine Casing
+		RA.addArcFurnaceRecipe(ItemList.Casing_RobustNeutronium.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Neutronium, 4)}, null, 160, 96);
+
+		// --- Empty Rack Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.Parallel_Hatch_Rack.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.MaragingSteel300, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.StainlessSteel, 1)}, null, 160, 96);
+		// --- PBE Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.PBECasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Titaniolum, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.GumMetal, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Engraver Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.EngraverCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Duranium, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Zamak, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Assembler Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.AssemblerCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Nitinol, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Inconel690, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Centrifuge Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.CentrifugeCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.TiBetaC, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Inconel792, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Electrolyzer Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.ElectrolyzerCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Zamak, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HastelloyC276, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Wire Factory Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.WireFactoryCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Inconel690, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Titaniolum, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Supply Production Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.SupplyProductionCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Inconel792, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.MaragingSteel250, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Utility Machine Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.UtilityMachineCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HastelloyC276, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Nitinol, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Brewmenter Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.BrewmenterCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Grisium, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Talonite, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Arc Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.ArcCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Kovar, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Talonite, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Cutting Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.ArcCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Stellite, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.MaragingSteel300, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Mixing Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.MixingCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.MaragingSteel250, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Titaniolum, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Electromagnetic Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.ElectromagneticCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Inconel690, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Nitinol, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Extradification Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.ExtradificationCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Talonite, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.TiBetaC, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Maceration Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.MacerationCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Mangalloy, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HastelloyC276, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- 3D Printed Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.DDDPrinterCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.VanadiumSteel, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.StainlessSteel, 1)}, null, 160, 96);
+		// --- Cyclone Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.CycloneCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.MaragingSteel300, 6),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Inconel792, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Space Elevator Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.SpaceElevatorCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Vanadium, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSLA, 1)}, null, 160, 96);
+		// --- Huge Turbine Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.Huge_Casing_Turbine.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.TiBetaC, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Titaniolum, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+		// --- Space Satellite Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.Space_Satellite_Casing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSLA, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.StainlessSteel, 1)}, null, 160, 96);
+		// --- Tower Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.Tower_Casing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Ultimet, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.StainlessSteel, 1)}, null, 160, 96);
 	}
 	
 }
