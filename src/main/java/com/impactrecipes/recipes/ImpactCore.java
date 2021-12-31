@@ -68,37 +68,6 @@ public class ImpactCore implements Runnable {
 	}
 	
 	private void hand() {
-		
-		final Object[] mk1_recipe = {
-				"CCC", "PHP", "FBL",
-				'C', OrePrefixes.circuit.get(Materials.Data),
-				'P', ItemList.Electric_Pump_HV.get(1L),
-				'H', ItemList.Hull_HV.get(1L),
-				'F', GT_OreDictUnificator.get(OrePrefixes.pipeSmall, Materials.Titanium, 1),
-				'B', GT_OreDictUnificator.get(OrePrefixes.cableGt02, Materials.Gold, 1),
-				'L', GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Titanium, 1)};
-		GT_ModHandler.addCraftingRecipe(GT_ItemList.SOFC_Low.get(1), mk1_recipe);
-		
-		final Object[] mk2_recipe = {
-				"CCC", "PHP", "FBL",
-				'C', OrePrefixes.circuit.get(Materials.Elite),
-				'P', ItemList.Electric_Pump_EV.get(1L),
-				'H', ItemList.Hull_EV.get(1L),
-				'F', GT_OreDictUnificator.get(OrePrefixes.pipeSmall, Materials.TungstenSteel, 1),
-				'B', GregTech_API.getStackofAmountFromOreDict("wireGt04SuperconductorEV", 1),
-				'L', GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.TungstenSteel, 1)};
-		GT_ModHandler.addCraftingRecipe(GT_ItemList.SOFC_Medium.get(1), mk2_recipe);
-		
-		final Object[] mk3_recipe = {
-				"CCC", "PHP", "FBL",
-				'C', OrePrefixes.circuit.get(Materials.Master),
-				'P', ItemList.Electric_Pump_IV.get(1L),
-				'H', ItemList.Hull_IV.get(1L),
-				'F', GT_OreDictUnificator.get(OrePrefixes.pipeSmall, Materials.Ultimate, 1),
-				'B', GregTech_API.getStackofAmountFromOreDict("wireGt04SuperconductorIV", 1),
-				'L', GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Ultimate, 1)};
-		GT_ModHandler.addCraftingRecipe(GT_ItemList.SOFC_Huge.get(1), mk3_recipe);
-		
 		final Object[] tfft_recipe = {
 				"HFH", "PVP", "CFC",
 				'H', OrePrefixes.pipeMedium.get(Materials.Titanium),
@@ -1468,6 +1437,28 @@ public class ImpactCore implements Runnable {
 				},
 				ItemList.MysteriousCrystalModule.get(1), null, 1600, 4000000
 		);
+
+		// --- Solid-Oxide Generator T1
+		RA.addPrimitiveLineRecipe(new ItemStack[]{
+				ItemList.Hull_HV.get(1L), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2),
+				ItemList.Electric_Pump_HV.get(2L), GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Titanium, 4),
+				GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.HSLA, 4), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.StainlessSteel, 6)
+		}, GT_ItemList.SOFC_Low.get(1), null, 15 * 20, 480);
+
+		// --- Solid-Oxide Generator T2
+		RA.addPrimitiveLineRecipe(new ItemStack[]{
+				ItemList.Hull_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 2),
+				ItemList.Electric_Pump_EV.get(2L), GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.TungstenSteel, 4),
+				GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Zamak, 4), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 6)
+		}, GT_ItemList.SOFC_Medium.get(1), null, 20 * 20, 1920);
+
+		// --- Solid-Oxide Generator T3
+		RA.addPrimitiveLineRecipe(new ItemStack[]{
+				ItemList.Hull_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 2),
+				ItemList.Electric_Pump_IV.get(2L), GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Ultimate, 4),
+				GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.HSSS, 4), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TungstenSteel, 6)
+		}, GT_ItemList.SOFC_Huge.get(1), null, 30 * 20, 7680);
+
 	}
 	
 	private void mixer() {
