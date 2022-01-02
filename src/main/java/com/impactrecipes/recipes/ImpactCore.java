@@ -2835,20 +2835,6 @@ public class ImpactCore implements Runnable {
 				GT_ItemList.Parallel_Hatch_OUT256.get(1), 1200, 500000
 		);
 		
-		// --- Packager Input Bus
-		GT_Values.RA.addAssemblerRecipe(
-				new ItemStack[]{ItemList.Hull_IV.get(1), ItemList.Super_Chest_IV.get(1), ItemList.Conveyor_Module_IV.get(2),
-						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 2L), GT_Utility.getIntegratedCircuit(4)},
-				Materials.Polytetrafluoroethylene.getMolten(1152L),
-				GT_ItemList.Boxinator_Hatch_Input.get(1), 480, 7680
-		);
-		GT_Values.RA.addAssemblerRecipe(
-				new ItemStack[]{ItemList.Hull_IV.get(1), ItemList.Super_Chest_IV.get(1), ItemList.Conveyor_Module_IV.get(2),
-						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 2L), GT_Utility.getIntegratedCircuit(4)},
-				Materials.Polybenzimidazole.getMolten(144L),
-				GT_ItemList.Boxinator_Hatch_Input.get(1), 480, 7680
-		);
-		
 		// --- Computer Rack
 		GT_Values.RA.addAssemblerRecipe(
 				new ItemStack[]{GT_ItemList.Computer_Casing.get(1L), ItemList.Hatch_Input_Bus_IV.get(1),
