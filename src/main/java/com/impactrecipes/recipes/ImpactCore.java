@@ -3948,6 +3948,16 @@ public class ImpactCore implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Pikyonium64B, 4)},
                 Materials.NiobiumTitanium.getMolten(4608),
                 GT_ItemList.Energy_64A_UHV.get(1), 400, 2000000);*/
+
+		for (Materials tMat : Materials.values()) {
+			if (tMat.mStandardMoltenFluid != null && tMat.contains(SubTag.SOLDERING_MATERIAL) && !(GregTech_API.mUseOnlyGoodSolderingMaterials && !tMat.contains(SubTag.SOLDERING_MATERIAL_GOOD))) {
+				int tMultiplier = tMat.contains(SubTag.SOLDERING_MATERIAL_GOOD) ? 1 : tMat.contains(SubTag.SOLDERING_MATERIAL_BAD) ? 4 : 2;
+				// --- Advanced Fluid Detector
+				GT_Values.RA.addAssemblerRecipe(new ItemStack(Blocks.heavy_weighted_pressure_plate, 1, 32767), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 1L), tMat.getMolten(144L * tMultiplier / 2L), GT_ModHandler.getModItem("impact", "impact_cover", 1), 600, 96);
+				// --- Advanced Energy Detector
+				GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getIC2Item("ecMeter", 1L), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 1L), tMat.getMolten(144L * tMultiplier / 2L), GT_ModHandler.getModItem("impact", "impact_cover", 1, 1), 600, 96);
+			}
+		}
 	}
 	
 	private void cutting() {
