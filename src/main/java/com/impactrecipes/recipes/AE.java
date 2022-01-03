@@ -2,6 +2,7 @@ package com.impactrecipes.recipes;
 
 import com.impact.common.item.Core_Items;
 import com.impact.common.item.Core_Items2;
+import com.impact.impact;
 import com.impact.mods.gregtech.GT_ItemList;
 import gregtech.api.enums.*;
 import gregtech.api.interfaces.IOreRecipeRegistrator;
@@ -38,6 +39,7 @@ public class AE implements Runnable {
         mixerRecipe();
         latheRecipe();
         fluidSolidifierRecipe();
+        meSystemProvider();
     }
 
     private void removeAE() {
@@ -249,6 +251,21 @@ public class AE implements Runnable {
                 false, false);
         removeRecipeByOutput(
                 GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockWireless", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.SkyStoneSlabBlock", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.SkyStoneBlockSlabBlock", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.SkyStoneBrickSlabBlock", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.FluixSlabBlock", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.SkyStoneSmallBrickSlabBlock", 1L, 0), true, false,
                 false);
 
         removeRecipeByOutput(
@@ -525,10 +542,20 @@ public class AE implements Runnable {
                         GT_ModHandler.getModItem("appliedenergistics2", "item.ItemBasicStorageCell.1k", 1L, 0),
                         GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockDenseEnergyCell", 1L, 0)});
         // --- Slabs
+        addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.SkyStoneSlabBlock", 2L, 0), tBitMask,
+                new Object[]{"sB", 'B', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSkyStone", 1L, 0)});
+        addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.SkyStoneBlockSlabBlock", 2L, 0), tBitMask,
+                new Object[]{"sB", 'B', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSkyStone", 1L, 1)});
+        addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.SkyStoneBrickSlabBlock", 2L, 0), tBitMask,
+                new Object[]{"sB", 'B', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSkyStone", 1L, 2)});
+        addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.SkyStoneSmallBrickSlabBlock", 2L, 0), tBitMask,
+                new Object[]{"sB", 'B', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSkyStone", 1L, 3)});
+        addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.FluixSlabBlock", 2L, 0), tBitMask,
+                new Object[]{"sB", 'B', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockFluix", 1L, 0)});
         addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.ChiseledQuartzSlabBlock", 2L, 0), tBitMask,
-                new Object[]{"sB", 'B', GT_ModHandler.getModItem("appliedenergistics2", "tile.ChiseledQuartzSlabBlock.double", 1L, 0)});
+                new Object[]{"sB", 'B', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzChiseled", 1L, 0)});
         addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.QuartzPillarSlabBlock", 2L, 0), tBitMask,
-                new Object[]{"sB", 'B', GT_ModHandler.getModItem("appliedenergistics2", "tile.QuartzPillarSlabBlock.double", 1L, 0)});
+                new Object[]{"sB", 'B', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzPillar", 1L, 0)});
         addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.QuartzSlabBlock", 2L, 0), tBitMask,
                 new Object[]{"sB", 'B', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartz", 1L, 0)});
         // --- Spatial storage fix
@@ -1236,10 +1263,28 @@ public class AE implements Runnable {
     }
 
     private void cuttingSawRecipe() {
+        RA.addCutterRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSkyStone", 1L, 0),
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.SkyStoneSlabBlock", 2L, 0), GT_Values.NI, 50, 30);
+        RA.addCutterRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSkyStone", 1L, 1),
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.SkyStoneBlockSlabBlock", 2L, 0), GT_Values.NI, 50, 30);
+        RA.addCutterRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSkyStone", 1L, 2),
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.SkyStoneBrickSlabBlock", 2L, 0), GT_Values.NI, 50, 30);
+        RA.addCutterRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSkyStone", 1L, 3),
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.SkyStoneSmallBrickSlabBlock", 2L, 0), GT_Values.NI, 50, 30);
+        RA.addCutterRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockFluix", 1L, 0),
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.FluixSlabBlock", 2L, 0), GT_Values.NI, 50, 30);
+        RA.addCutterRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzChiseled", 1L, 0),
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.ChiseledQuartzSlabBlock", 2L, 0), GT_Values.NI, 50, 30);
+        RA.addCutterRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzPillar", 1L, 0),
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.QuartzPillarSlabBlock", 2L, 0), GT_Values.NI, 50, 30);
         RA.addCutterRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartz", 1L, 0),
-                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.CertusQuartz, 4L), GT_Values.NI, 800, 30);
-        RA.addCutterRecipe(GT_ModHandler.getModItem("minecraft", "quartz_block", 1L, 0),
-                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 4L), GT_Values.NI, 800, 30);
+                GT_ModHandler.getModItem("appliedenergistics2", "tile.QuartzSlabBlock", 2L, 0), GT_Values.NI, 50, 30);
+
+        RA.addCutterRecipe(GT_ModHandler.getModItem("minecraft", "stone_slab", 1L, 7),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2L), GT_Values.NI, 200, 30);
+        RA.addCutterRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.QuartzSlabBlock", 1L, 0),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.CertusQuartz, 2L), GT_Values.NI, 200, 30);
+
         RA.addCutterRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Iron, 1L),
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 4L, 120), GT_Values.NI, 80, 8);
         RA.addCutterRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Copper, 1L),
@@ -1265,43 +1310,6 @@ public class AE implements Runnable {
     }
 
     private void printerRecipe() {
-        //ME Controller
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyAcceptor", 1, 0),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 24)/*Diamond*/,
-                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 4, 76),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.MaragingSteel300, 4),
-                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Titanium, 8)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockController", 1, 0), null, 30 * 20,
-                1920);
-
-        //ME Chest
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 3),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 380),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 16),
-                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.EnergeticAlloy, 2),
-                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 2),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 22)/*Gold*/,
-                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Vanadium, 12)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockChest", 1, 0), null, 20 * 20,
-                480);
-
-        //ME Drive
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockChest", 1, 0),
-                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.VibrantAlloy, 2),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 24)/*Diamond*/,
-                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 3),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 4),
-                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Vanadium, 9)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockDrive", 1, 0), null, 30 * 20,
-                1920);
-
         //CraftingUnit
         RA.addPrimitiveLineRecipe(new ItemStack[]{
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 1),
@@ -1313,442 +1321,6 @@ public class AE implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 12)
                 }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1, 0), null,
                 30 * 20, 1920);
-
-        //Molecular Assembler
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Machine_MV_Assembler.get(1L),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43)/*Form*/,
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44)/*Ani*/,
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 23)
-/*Processor*/, GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Vanadium, 2),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.VanadiumSteel, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 12, 0)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockMolecularAssembler", 1, 0), null,
-                30 * 20, 1920);
-
-        //ME Quantum Ring
-        RA.addBasicLineRecipe(new ItemStack[]{
-                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyCell", 1, 0),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 24)/*Diamond*/,
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 4, 76),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 4),
-                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel300, 4),
-                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Vanadium, 8)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuantumRing", 1, 0), null,
-                20 * 20, 7680);
-
-        //ME Quantum Link Chamber
-        RA.addBasicLineRecipe(new ItemStack[]{
-                        ItemList.Field_Generator_EV.get(1L),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 7),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 9),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.MaragingSteel300, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 12, 0)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuantumLinkChamber", 1, 0), null,
-                40 * 20, 7680);
-
-        //Spatial Pylon
-        RA.addBasicLineRecipe(new ItemStack[]{
-                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuantumRing", 1, 0),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 7),
-                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Platinum, 4),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 8, 16),
-                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Palladium, 16)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSpatialPylon", 2, 0), null,
-                30 * 20, 7680);
-
-        //Spatial IO Port
-        RA.addBasicLineRecipe(new ItemStack[]{
-                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockIOPort", 1, 0),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 24)/*Diamond*/,
-                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSpatialPylon", 4, 0),
-                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuantumLinkChamber", 4, 0),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 7),
-                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 4),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.NiobiumTitanium, 4),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 8),
-                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Vanadium, 16)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSpatialIOPort", 1, 0), null,
-                40 * 20, 7680);
-
-        //ME Interface
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Robot_Arm_LV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 1),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 43)/*Form*/,
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 44)/*Ani*/,
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 1, 0), null, 100,
-                120);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Robot_Arm_MV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 2),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43)/*Form*/,
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44)/*Ani*/,
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 2, 0), null, 200,
-                480);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Robot_Arm_HV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 3),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 43)/*Form*/,
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 44)/*Ani*/,
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 4, 0), null, 300,
-                1920);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Robot_Arm_EV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43)/*Form*/,
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44)/*Ani*/,
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 8, 0), null, 400,
-                7680);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Robot_Arm_IV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 5),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 43)/*Form*/,
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 44)/*Ani*/,
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 12, 0), null, 500,
-                30720);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Robot_Arm_LuV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 6),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 43)/*Form*/,
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 44)/*Ani*/,
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 16, 0), null, 600,
-                122880);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Robot_Arm_ZPM.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 7),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 43)/*Form*/,
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 44)/*Ani*/,
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 24, 0), null, 700,
-                500000);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Robot_Arm_UV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43)/*Form*/,
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44)/*Ani*/,
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 32, 0), null, 800,
-                2000000);
-
-        //Energy Acceptor
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyCell", 1, 0),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.EnergeticAlloy, 2),
-                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 7)/*crystal*/,
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 24),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4),
-                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 8)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyAcceptor", 1, 0), null, 200,
-                480);
-
-        //New Pattern Terminal
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 52),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 340),
-                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 1),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 24)/*Diamond*/
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 500), null, 400,
-                1920);
-
-        //ME Export Bus
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_LV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 260), null, 200,
-                120);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_MV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2, 260), null, 300,
-                480);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_HV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 4, 260), null, 400,
-                1920);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_EV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 8, 260), null, 500,
-                7680);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_IV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 10, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 12, 260), null, 600,
-                30720);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_LuV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 12, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 16, 260), null, 700,
-                122880);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_ZPM.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 14, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 24, 260), null, 800,
-                500000);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_UV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 16, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 32, 260), null, 900,
-                2000000);
-
-        //ME Import Bus
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_LV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 240), null, 200,
-                120);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_MV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2, 240), null, 300,
-                480);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_HV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 44),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 4, 240), null, 400,
-                1920);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_EV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 8, 240), null, 500,
-                7680);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_IV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 10, 44),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 12, 240), null, 600,
-                30720);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_LuV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 12, 44),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 16, 240), null, 700,
-                122880);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_ZPM.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 14, 44),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 24, 240), null, 800,
-                500000);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Conveyor_Module_UV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 16, 44),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 32, 240), null, 900,
-                2000000);
-
-        //Storage Bus
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Hatch_Input_Bus_LV.get(1L), ItemList.Hatch_Output_Bus_LV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 220), null, 200,
-                120);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Hatch_Input_Bus_MV.get(1L), ItemList.Hatch_Output_Bus_MV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2, 220), null, 300,
-                480);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Hatch_Input_Bus_HV.get(1L), ItemList.Hatch_Output_Bus_HV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 4, 220), null, 400,
-                1920);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Hatch_Input_Bus_EV.get(1L), ItemList.Hatch_Output_Bus_EV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 8, 220), null, 500,
-                7680);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Hatch_Input_Bus_IV.get(1L), ItemList.Hatch_Output_Bus_IV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 12, 220), null, 600,
-                30720);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Hatch_Input_Bus_LuV.get(1L), ItemList.Hatch_Output_Bus_LuV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 16, 220), null, 700,
-                122880);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Hatch_Input_Bus_ZPM.get(1L), ItemList.Hatch_Output_Bus_ZPM.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 24, 220), null, 800,
-                500000);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Hatch_Input_Bus_UV.get(1L), ItemList.Hatch_Output_Bus_UV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 32, 220), null, 900,
-                2000000);
-
-        //P2P Tunnel
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Emitter_EV.get(1L), ItemList.Sensor_EV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2, 460), null, 500,
-                7680);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Emitter_IV.get(1L), ItemList.Sensor_IV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 6, 460), null, 600,
-                30720);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Emitter_LuV.get(1L), ItemList.Sensor_LuV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 18, 460), null, 700,
-                122880);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Emitter_ZPM.get(1L), ItemList.Sensor_ZPM.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 32, 460), null, 800,
-                500000);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Emitter_UV.get(1L), ItemList.Sensor_UV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 32)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 64, 460), null, 900,
-                2000000);
-
-        // --- GT5 P2P Tunnel
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Emitter_IV.get(1L), ItemList.Sensor_IV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Vanadiumtriindinid, 1),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 1)
-                }, GT_ModHandler.getModItem("AE2-GT5-P2P", "part", 2L), null, 600,
-                7680);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Emitter_LuV.get(1L), ItemList.Sensor_LuV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Vanadiumtriindinid, 2),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)
-                }, GT_ModHandler.getModItem("AE2-GT5-P2P", "part", 8L), null, 700,
-                30720);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Emitter_ZPM.get(1L), ItemList.Sensor_ZPM.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Vanadiumtriindinid, 4),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)
-                }, GT_ModHandler.getModItem("AE2-GT5-P2P", "part", 32L), null, 800,
-                122880);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
-                        ItemList.Emitter_UV.get(1L), ItemList.Sensor_UV.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Vanadiumtriindinid, 8),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 32)
-                }, GT_ModHandler.getModItem("AE2-GT5-P2P", "part", 64L), null, 900,
-                500000);
-
-        // --- Wireless Connector
-        RA.addPrimitiveLineRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Vanadium, 1), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 56), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockWireless", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.VanadiumSteel, 4)}, GT_ModHandler.getModItem("ae2stuff", "Wireless", 1L, 0), null, 40 * 20, 480);
-        //ME Fluid Export Bus
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_LV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)}, GT_ModHandler.getModItem("extracells", "part.base", 1, 0), null, 200, 120);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_MV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)}, GT_ModHandler.getModItem("extracells", "part.base", 2, 0), null, 300, 480);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_HV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)}, GT_ModHandler.getModItem("extracells", "part.base", 4, 0), null, 400, 1920);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)}, GT_ModHandler.getModItem("extracells", "part.base", 8, 0), null, 500, 7680);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 10, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)}, GT_ModHandler.getModItem("extracells", "part.base", 12, 0), null, 600, 30720);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_LuV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 12, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)}, GT_ModHandler.getModItem("extracells", "part.base", 16, 0), null, 700, 122880);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_ZPM.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 14, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)}, GT_ModHandler.getModItem("extracells", "part.base", 24, 0), null, 800, 500000);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 16, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)}, GT_ModHandler.getModItem("extracells", "part.base", 32, 0), null, 900, 2000000);
-        //ME Fluid Import Bus
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_LV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)}, GT_ModHandler.getModItem("extracells", "part.base", 1, 1), null, 200, 120);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_MV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)}, GT_ModHandler.getModItem("extracells", "part.base", 2, 1), null, 300, 480);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_HV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)}, GT_ModHandler.getModItem("extracells", "part.base", 4, 1), null, 400, 1920);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)}, GT_ModHandler.getModItem("extracells", "part.base", 8, 1), null, 500, 7680);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 10, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)}, GT_ModHandler.getModItem("extracells", "part.base", 12, 1), null, 600, 30720);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_LuV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 12, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)}, GT_ModHandler.getModItem("extracells", "part.base", 16, 1), null, 700, 122880);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_ZPM.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 14, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)}, GT_ModHandler.getModItem("extracells", "part.base", 24, 1), null, 800, 500000);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Electric_Pump_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 16, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)}, GT_ModHandler.getModItem("extracells", "part.base", 32, 1), null, 900, 2000000);
-        //ME Fluid Storage Bus
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_LV.get(1L), ItemList.Hatch_Output_LV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)}, GT_ModHandler.getModItem("extracells", "part.base", 1, 2), null, 200, 120);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_MV.get(1L), ItemList.Hatch_Output_MV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)}, GT_ModHandler.getModItem("extracells", "part.base", 2, 2), null, 300, 480);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_HV.get(1L), ItemList.Hatch_Output_HV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)}, GT_ModHandler.getModItem("extracells", "part.base", 4, 2), null, 400, 1920);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_EV.get(1L), ItemList.Hatch_Output_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)}, GT_ModHandler.getModItem("extracells", "part.base", 8, 2), null, 500, 7680);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_IV.get(1L), ItemList.Hatch_Output_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)}, GT_ModHandler.getModItem("extracells", "part.base", 12, 2), null, 600, 30720);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_LuV.get(1L), ItemList.Hatch_Output_LuV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)}, GT_ModHandler.getModItem("extracells", "part.base", 16, 2), null, 700, 122880);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_ZPM.get(1L), ItemList.Hatch_Output_ZPM.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)}, GT_ModHandler.getModItem("extracells", "part.base", 24, 2), null, 800, 500000);
-        RA.addPrimitiveLineRecipe(new ItemStack[]{ItemList.Hatch_Input_UV.get(1L), ItemList.Hatch_Output_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)}, GT_ModHandler.getModItem("extracells", "part.base", 32, 2), null, 900, 2000000);
-
     }
 
     private void pulveriserRecipe() {
@@ -1843,5 +1415,479 @@ public class AE implements Runnable {
         RA.addFluidSolidifierRecipe(CoreItems2.getRecipe(153, 1),
                 Materials.BorosilicateGlass.getMolten(144L), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 8L, 140), 120, 120);
 
+    }
+
+    private void meSystemProvider() {
+        //ME Controller
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyAcceptor", 1, 0),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 24)/*Diamond*/,
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 4, 76),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.MaragingSteel300, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Titanium, 8)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockController", 1, 0), 30 * 20,
+                1920, 8000);
+
+        //ME Chest
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 3),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 380),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.EnergeticAlloy, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 2),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 22)/*Gold*/,
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Vanadium, 12)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockChest", 1, 0), 20 * 20,
+                480, 1000);
+
+        //ME Drive
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockChest", 1, 0),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.VibrantAlloy, 2),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 24)/*Diamond*/,
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Vanadium, 9)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockDrive", 1, 0), 30 * 20,
+                1920, 1000);
+
+        //Molecular Assembler
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Machine_MV_Assembler.get(1L),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43)/*Form*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44)/*Ani*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 23)/*Processor*/,
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Vanadium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.VanadiumSteel, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 12, 0)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockMolecularAssembler", 1, 0),
+                30 * 20, 1920, 800);
+
+        //ME Quantum Ring
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyCell", 1, 0),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 24)/*Diamond*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 4, 76),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel300, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Vanadium, 8)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuantumRing", 1, 0),
+                20 * 20, 7680, 2000);
+
+        //ME Quantum Link Chamber
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Field_Generator_EV.get(1L),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 7),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 9),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.MaragingSteel300, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 12, 0)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuantumLinkChamber", 1, 0),
+                40 * 20, 7680, 8000);
+
+        //Spatial Pylon
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuantumRing", 1, 0),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 8),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 7),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Platinum, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 8),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 8, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Palladium, 16)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSpatialPylon", 2, 0),
+                30 * 20, 7680, 500);
+
+        //Spatial IO Port
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockIOPort", 1, 0),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 24)/*Diamond*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSpatialPylon", 4, 0),
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuantumLinkChamber", 4, 0),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 7),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.NiobiumTitanium, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Vanadium, 16)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSpatialIOPort", 1, 0),
+                40 * 20, 7680, 1000);
+
+        //ME Interface
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Robot_Arm_LV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 1),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 43)/*Form*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 44)/*Ani*/,
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 1, 0),
+                100, 120, 50);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Robot_Arm_MV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 2),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43)/*Form*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44)/*Ani*/,
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 2, 0),
+                200, 480, 100);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Robot_Arm_HV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 3),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 43)/*Form*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 44)/*Ani*/,
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 4, 0),
+                300, 1920, 200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Robot_Arm_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43)/*Form*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44)/*Ani*/,
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 8, 0),
+                400, 7680, 400);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Robot_Arm_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 5),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 43)/*Form*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 44)/*Ani*/,
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 12, 0),
+                500, 30720, 600);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Robot_Arm_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 6),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 43)/*Form*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 44)/*Ani*/,
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 16, 0),
+                600, 122880, 800);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Robot_Arm_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 7),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 43)/*Form*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 44)/*Ani*/,
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 24, 0),
+                700, 500000, 1200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Robot_Arm_UV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 8),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43)/*Form*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44)/*Ani*/,
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 32, 0),
+                800, 2000000, 1600);
+
+        //Energy Acceptor
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyCell", 1, 0),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.EnergeticAlloy, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 7)/*crystal*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 24),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 8)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyAcceptor", 1, 0),
+                200, 480, 1000);
+
+        //New Pattern Terminal
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 52),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 340),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 1),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 24)/*Diamond*/
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 500),
+                400, 1920, 400);
+
+        //ME Export Bus
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_LV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 260),
+                200, 120, 50);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_MV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2, 260),
+                300, 480, 100);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_HV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 4, 260),
+                400, 1920, 200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 8, 260),
+                500, 7680, 400);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 10, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 12, 260),
+                600, 30720, 600);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 12, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 16, 260),
+                700, 122880, 800);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 14, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 24, 260),
+                800, 500000, 1200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_UV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 16, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 32, 260),
+                900, 2000000, 1600);
+
+        //ME Import Bus
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_LV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 240),
+                200, 120, 50);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_MV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2, 240),
+                300, 480, 100);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_HV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 44),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 4, 240),
+                400, 1920, 200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 8, 240),
+                500, 7680, 400);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 10, 44),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 12, 240),
+                600, 30720, 600);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 12, 44),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 16, 240),
+                700, 122880, 800);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 14, 44),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 24, 240),
+                800, 500000, 1200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Conveyor_Module_UV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 16, 44),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 32, 240),
+                900, 2000000, 1600);
+
+        //Storage Bus
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Hatch_Input_Bus_LV.get(1L), ItemList.Hatch_Output_Bus_LV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 220),
+                200, 120, 50);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Hatch_Input_Bus_MV.get(1L), ItemList.Hatch_Output_Bus_MV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2, 220),
+                300, 480, 100);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Hatch_Input_Bus_HV.get(1L), ItemList.Hatch_Output_Bus_HV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 4, 220),
+                400, 1920, 200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Hatch_Input_Bus_EV.get(1L), ItemList.Hatch_Output_Bus_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 8, 220),
+                500, 7680, 400);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Hatch_Input_Bus_IV.get(1L), ItemList.Hatch_Output_Bus_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 12, 220),
+                600, 30720, 600);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Hatch_Input_Bus_LuV.get(1L), ItemList.Hatch_Output_Bus_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 16, 220),
+                700, 122880, 800);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Hatch_Input_Bus_ZPM.get(1L), ItemList.Hatch_Output_Bus_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 24, 220),
+                800, 500000, 1200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Hatch_Input_Bus_UV.get(1L), ItemList.Hatch_Output_Bus_UV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 32, 220),
+                900, 2000000, 1600);
+
+        //P2P Tunnel
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Emitter_EV.get(1L), ItemList.Sensor_EV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 8),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2, 460),
+                500, 7680, 400);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Emitter_IV.get(1L), ItemList.Sensor_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 8),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 6, 460),
+                600, 30720, 1200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Emitter_LuV.get(1L), ItemList.Sensor_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 8),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 18, 460),
+                700, 122880, 3600);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Emitter_ZPM.get(1L), ItemList.Sensor_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 8),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 32, 460),
+                800, 500000, 7200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Emitter_UV.get(1L), ItemList.Sensor_UV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 8),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 32)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 64, 460),
+                900, 2000000, 14400);
+
+        // --- GT5 P2P Tunnel
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Emitter_IV.get(1L), ItemList.Sensor_IV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Vanadiumtriindinid, 1),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 1)
+                }, GT_ModHandler.getModItem("AE2-GT5-P2P", "part", 2L),
+                600, 7680, 1000);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Emitter_LuV.get(1L), ItemList.Sensor_LuV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Vanadiumtriindinid, 2),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)
+                }, GT_ModHandler.getModItem("AE2-GT5-P2P", "part", 8L),
+                700, 30720, 4000);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Emitter_ZPM.get(1L), ItemList.Sensor_ZPM.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Vanadiumtriindinid, 4),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)
+                }, GT_ModHandler.getModItem("AE2-GT5-P2P", "part", 32L),
+                800, 122880, 16000);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Emitter_UV.get(1L), ItemList.Sensor_UV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Vanadiumtriindinid, 8),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 32)
+                }, GT_ModHandler.getModItem("AE2-GT5-P2P", "part", 64L),
+                900, 500000, 32000);
+
+        // --- Wireless Connector
+        impact.I_RA.addMESPRecipes(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Vanadium, 1), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 56), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockWireless", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.VanadiumSteel, 4)}, GT_ModHandler.getModItem("ae2stuff", "Wireless", 1L, 0), 40 * 20, 480, 1000);
+        //ME Fluid Export Bus
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_LV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)}, GT_ModHandler.getModItem("extracells", "part.base", 1, 0), 200, 120, 50);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_MV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)}, GT_ModHandler.getModItem("extracells", "part.base", 2, 0), 300, 480, 100);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_HV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)}, GT_ModHandler.getModItem("extracells", "part.base", 4, 0), 400, 1920, 200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)}, GT_ModHandler.getModItem("extracells", "part.base", 8, 0), 500, 7680, 400);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 10, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)}, GT_ModHandler.getModItem("extracells", "part.base", 12, 0), 600, 30720, 600);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_LuV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 12, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)}, GT_ModHandler.getModItem("extracells", "part.base", 16, 0), 700, 122880, 800);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_ZPM.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 14, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)}, GT_ModHandler.getModItem("extracells", "part.base", 24, 0), 800, 500000, 1200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 16, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)}, GT_ModHandler.getModItem("extracells", "part.base", 32, 0), 900, 2000000, 1600);
+        //ME Fluid Import Bus
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_LV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)}, GT_ModHandler.getModItem("extracells", "part.base", 1, 1), 200, 120, 50);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_MV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)}, GT_ModHandler.getModItem("extracells", "part.base", 2, 1), 300, 480, 100);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_HV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)}, GT_ModHandler.getModItem("extracells", "part.base", 4, 1), 400, 1920, 200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)}, GT_ModHandler.getModItem("extracells", "part.base", 8, 1), 500, 7680, 400);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 10, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)}, GT_ModHandler.getModItem("extracells", "part.base", 12, 1), 600, 30720, 600);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_LuV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 12, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)}, GT_ModHandler.getModItem("extracells", "part.base", 16, 1), 700, 122880, 800);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_ZPM.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 14, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)}, GT_ModHandler.getModItem("extracells", "part.base", 24, 1), 800, 500000, 1200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 16, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)}, GT_ModHandler.getModItem("extracells", "part.base", 32, 1), 900, 2000000, 1600);
+        //ME Fluid Storage Bus
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Hatch_Input_LV.get(1L), ItemList.Hatch_Output_LV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)}, GT_ModHandler.getModItem("extracells", "part.base", 1, 2), 200, 120, 50);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Hatch_Input_MV.get(1L), ItemList.Hatch_Output_MV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)}, GT_ModHandler.getModItem("extracells", "part.base", 2, 2), 300, 480, 100);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Hatch_Input_HV.get(1L), ItemList.Hatch_Output_HV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)}, GT_ModHandler.getModItem("extracells", "part.base", 4, 2), 400, 1920, 200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Hatch_Input_EV.get(1L), ItemList.Hatch_Output_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)}, GT_ModHandler.getModItem("extracells", "part.base", 8, 2), 500, 7680, 400);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Hatch_Input_IV.get(1L), ItemList.Hatch_Output_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 5, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)}, GT_ModHandler.getModItem("extracells", "part.base", 12, 2), 600, 30720, 600);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Hatch_Input_LuV.get(1L), ItemList.Hatch_Output_LuV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 6, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)}, GT_ModHandler.getModItem("extracells", "part.base", 16, 2), 700, 122880, 800);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Hatch_Input_ZPM.get(1L), ItemList.Hatch_Output_ZPM.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 7, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)}, GT_ModHandler.getModItem("extracells", "part.base", 24, 2), 800, 500000, 1200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Hatch_Input_UV.get(1L), ItemList.Hatch_Output_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)}, GT_ModHandler.getModItem("extracells", "part.base", 32, 2), 900, 2000000, 1600);
     }
 }
