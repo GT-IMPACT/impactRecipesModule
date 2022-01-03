@@ -1568,6 +1568,11 @@ public class ImpactCore implements Runnable {
 		RA.addLatheRecipe(new ItemStack(Blocks.sandstone), CoreItems2.getRecipe(178, 2), null, 100,
 				16
 		);
+		// --- Flawed Fluix Crystal
+		RA.addLatheRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockFluix", 1L),
+				CoreItems2.getRecipe(195, 1), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3L, 8), 2400,
+				30
+		);
 	}
 	
 	private void implosionCompressor() {
@@ -1686,6 +1691,16 @@ public class ImpactCore implements Runnable {
 		RA.addImplosionRecipe(ItemList.Ingot_IridiumAlloy.get(1L), 8,
 				GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Iridium, 1L),
 				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Titanium, 1L), new int[]{10000, 1500}
+		);
+		// --- Flawless Fluix Crystal
+		RA.addImplosionRecipe(CoreItems2.getRecipe(195, 3), 8,
+				CoreItems2.getRecipe(196, 1),
+				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DarkAshes, 1L), new int[]{10000, 1500}
+		);
+		// --- Matrix Transducer
+		RA.addImplosionRecipe(CoreItems2.getRecipe(196, 9), 8,
+				GT_ModHandler.getModItem("impact", "impact_matrix_transducer", 1L, 0),
+				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DarkAshes, 1L), new int[]{10000, 1500}
 		);
 	}
 	

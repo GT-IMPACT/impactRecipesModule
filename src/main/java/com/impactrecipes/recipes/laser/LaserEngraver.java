@@ -53,6 +53,9 @@ public class LaserEngraver implements IOreRecipeRegistrator {
             case "craftingLensBlue":
                 RA.addLaserEngraverRecipe(GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Steel, 1L), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 13), 6000, 480, false);
                 break;
+            case "craftingLensPurple":
+                RA.addLaserEngraverRecipe(CoreItems2.getRecipe(195, 3), GT_Utility.copyAmount(0L, aStack), CoreItems2.getRecipe(196, 1), 1200, 480, false);
+                break;
         }
     }
 }
