@@ -415,17 +415,6 @@ public class IC2 implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","blockPersonal",1, 2), tBitMask,
                 new Object[] {"SPS","COC","hPd",'C', OrePrefixes.circuit.get(Materials.Basic), 'P', GT_ModHandler.getModItem("IC2","itemBatREDischarged",1),
                         'S', OrePrefixes.screw.get(Materials.Steel), 'O', ItemList.Hull_LV.get(1)});
-        // --- Crop-Matron
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","blockMachine2",1, 2), tBitMask,
-                new Object[] {"RCR","PLO","ICT",'C', OrePrefixes.circuit.get(Materials.Basic), 'R', ItemList.Robot_Arm_LV.get(1),
-                        'P', ItemList.Electric_Pump_LV.get(1), 'L', ItemList.Hull_LV.get(1), 'O', ItemList.Conveyor_Module_LV.get(1),
-                        'T', GT_ModHandler.getModItem("extracells", "certustank", 1L),
-                        'I', GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 1)});
-        // --- Crop Harvester
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","blockMachine3",1, 7), tBitMask,
-                new Object[] {"RCR","PLO","IYI",'C', OrePrefixes.circuit.get(Materials.Basic), 'R', ItemList.Robot_Arm_LV.get(1),
-                        'P', ItemList.Electric_Piston_LV.get(1), 'L', ItemList.Hull_LV.get(1), 'O', ItemList.Sensor_LV.get(1),
-                        'Y', ItemList.Conveyor_Module_LV.get(1), 'I', OrePrefixes.toolHeadSense.get(Materials.Steel)});
         // --- Item Buffer
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","blockMachine3",1, 6), tBitMask,
                 new Object[] {"PPP","CHC","PPP",'P', OrePrefixes.itemCasing.get(Materials.Iron), 'H', ItemList.Hull_LV.get(1),
