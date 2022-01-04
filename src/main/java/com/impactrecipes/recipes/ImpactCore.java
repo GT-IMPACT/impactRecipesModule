@@ -1,5 +1,6 @@
 package com.impactrecipes.recipes;
 
+import com.github.technus.tectech.thing.CustomItemList;
 import com.impact.common.item.Core_Items;
 import com.impact.common.item.Core_Items2;
 import com.impact.common.item.WoodBrickFormTool;
@@ -280,7 +281,7 @@ public class ImpactCore implements Runnable {
 		GT_ModHandler.addCraftingRecipe(GT_ItemList.Regulate_One_Stack_Chest.get(1), bitsd, new Object[]{"EHR", " C ", 'C', OrePrefixes.circuit.get(Materials.Basic), 'E', GT_ModHandler.getModItem("minecraft", "chest", 1L), 'R', ItemList.Robot_Arm_LV, 'H', ItemList.Hull_LV});
 		
 		// --- Lasers
-        /*GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.DynamoTunnel1_IV.get(1L), tBitMask, new Object[]{CustomItemList.eM_dynamoTunnel1_IV.get(1)});
+        GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.DynamoTunnel1_IV.get(1L), tBitMask, new Object[]{CustomItemList.eM_dynamoTunnel1_IV.get(1)});
         GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.DynamoTunnel2_IV.get(1L), tBitMask, new Object[]{CustomItemList.eM_dynamoTunnel2_IV.get(1)});
         GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.DynamoTunnel3_IV.get(1L), tBitMask, new Object[]{CustomItemList.eM_dynamoTunnel3_IV.get(1)});
         GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.DynamoTunnel4_IV.get(1L), tBitMask, new Object[]{CustomItemList.eM_dynamoTunnel4_IV.get(1)});
@@ -374,7 +375,7 @@ public class ImpactCore implements Runnable {
         GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.EnergyTunnel4_UEV.get(1L), tBitMask, new Object[]{CustomItemList.eM_energyTunnel4_UEV.get(1)});
         GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.EnergyTunnel5_UEV.get(1L), tBitMask, new Object[]{CustomItemList.eM_energyTunnel5_UEV.get(1)});
         GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.EnergyTunnel6_UEV.get(1L), tBitMask, new Object[]{CustomItemList.eM_energyTunnel6_UEV.get(1)});
-        GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.EnergyTunnel7_UEV.get(1L), tBitMask, new Object[]{CustomItemList.eM_energyTunnel7_UEV.get(1)});*/
+        GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.EnergyTunnel7_UEV.get(1L), tBitMask, new Object[]{CustomItemList.eM_energyTunnel7_UEV.get(1)});
 
 		// --- Drying Rack
 		GT_ModHandler.addCraftingRecipe(new ItemStack(ItemRegistery.DryingRack, 1, 0), bitsd, new Object[]{"SSS", "CdC", 'S', "slabWood", 'C', OrePrefixes.screw.get(Materials.Wood)});
