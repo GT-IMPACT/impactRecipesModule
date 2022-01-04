@@ -645,15 +645,15 @@ public class Gregtech implements Runnable {
     private void sifter() {
         // --- Zircon
         RA.addSifterRecipe(
-                GT_OreDictUnificator.get(OrePrefixes.crushedPurified, Materials.CassiteriteSand, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.crushedPurified, Materials.Cassiterite, 1L),
                 new ItemStack[]{
-                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.CassiteriteSand, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.CassiteriteSand, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.CassiteriteSand, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Cassiterite, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Cassiterite, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Cassiterite, 1L),
                         CoreItems.getRecipe(48, 1),
                         CoreItems.getRecipe(48, 1),
                         CoreItems.getRecipe(48, 1)},
-                new int[]{6000, 4000, 2000, 5000, 3000, 1000}, 200, 16);
+                new int[]{6000, 3000, 1000, 5000, 3000, 1000}, 200, 16);
 
         RA.addSifterRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.RareEarth, 1L),
