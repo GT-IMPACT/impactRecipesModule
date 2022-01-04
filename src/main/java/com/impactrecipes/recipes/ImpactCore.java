@@ -379,6 +379,15 @@ public class ImpactCore implements Runnable {
 
 		// --- Drying Rack
 		GT_ModHandler.addCraftingRecipe(new ItemStack(ItemRegistery.DryingRack, 1, 0), bitsd, new Object[]{"SSS", "CdC", 'S', "slabWood", 'C', OrePrefixes.screw.get(Materials.Wood)});
+
+		// --- Blank Pattern
+		GT_ModHandler
+				.addCraftingRecipe(CoreItems2.getRecipe(197, 1), tBitMask,
+						new Object[]{"PP", "PP", 'P', new ItemStack(Items.paper)});
+		GT_ModHandler
+				.addCraftingRecipe(CoreItems2.getRecipe(197, 1), tBitMask,
+						new Object[]{"DDD", "DOD", "DDD", 'O', new ItemStack(Items.water_bucket), 'D', OrePrefixes.dust.get(Materials.Wood)});
+
 	}
 	
 	private void furnace() {
