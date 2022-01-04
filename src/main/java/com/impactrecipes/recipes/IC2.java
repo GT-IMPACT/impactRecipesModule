@@ -513,10 +513,6 @@ public class IC2 implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemTreetap",1), tBitMask,
                 new Object[] {" S ","PPP","P  ",'S', OrePrefixes.stick.get(Materials.Wood), 'P', OrePrefixes.plank.get(Materials.Wood)});
 
-        // --- Crop Sticks
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","blockCrop",1), tBitMask,
-                new Object[] {"S S","S S",'S', OrePrefixes.stick.get(Materials.Wood)});
-
         // --- EU Reader
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemToolMEter",1), tBitMask,
                 new Object[] {"PMP","SCS",'S', OrePrefixes.stick.get(Materials.Iron),'C', OrePrefixes.springSmall.get(Materials.Copper),
@@ -962,12 +958,7 @@ public class IC2 implements Runnable {
                 GT_ModHandler.getModItem("minecraft", "furnace", 1L),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 5),
                 GT_ModHandler.getModItem("IC2", "blockMachine", 1L, 1), 400, 16);
-        // --- Crop Sticks
-        GT_Values.RA.addAssemblerRecipe(
-                GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Wood, 8),
-                GT_Utility.getIntegratedCircuit(2),
-                GT_ModHandler.getModItem("IC2", "blockCrop", 16L), 150, 24);
-
+        
     }
 
     private void compactGens() {
