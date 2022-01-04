@@ -1488,6 +1488,20 @@ public class ImpactCore implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSE, 16),
                 GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSE, 16)
         }, GT_ItemList.AdvCrackUnit.get(1L), null, 80 * 20, 30720);
+
+		//Miner Enrichment Unit
+		RA.addBasicLineRecipe(new ItemStack[]{
+				ItemList.Machine_FlotationUnit.get(1L),
+				ItemList.Electric_Pump_IV.get(6L),
+				GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 8),
+				GT_OreDictUnificator.get(OrePrefixes.pipeHuge, Materials.Inconel690, 8),
+				ItemList.Casing_Coil_Nichrome.get(8),
+				GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.HastelloyC276, 12),
+				GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Inconel792, 16),
+				GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.MaragingSteel250, 16),
+				GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 32),
+				GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSE, 32)
+		}, GT_ItemList.Mining_Enrich_HV.get(1L), null, 40 * 20, 7680);
 	}
 	
 	private void mixer() {
