@@ -886,7 +886,7 @@ public class Gregtech implements Runnable {
         }, ItemList.OilDrill3.get(1L), null, 60 * 20, 1920);
 
         //OreDrill1
-        RA.addPrimitiveLineRecipe(new ItemStack[]{
+        /*RA.addPrimitiveLineRecipe(new ItemStack[]{
                 ItemList.Hull_EV.get(1L), ItemList.Electric_Motor_EV.get(2L),
                 ItemList.Conveyor_Module_EV.get(2L),
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2),
@@ -933,7 +933,7 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 16),
                 GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Neutronium, 20),
                 GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Tritanium, 26)
-        }, ItemList.OreDrill5.get(1L), null, 120 * 20, 122880);
+        }, ItemList.OreDrill5.get(1L), null, 120 * 20, 122880);*/
 
         //Oil Cracker
         RA.addPrimitiveLineRecipe(new ItemStack[]{
