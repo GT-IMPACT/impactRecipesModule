@@ -1450,11 +1450,6 @@ public class TConstruct implements Runnable {
     }
 
     private void dryingRackRecipe() {
-        if (Loader.isModLoaded("Backpack")) {
-            DryingRackRecipes
-                    .addDryingRecipe(GT_ModHandler.getModItem("Backpack", "boundLeather", 1L, 0), 4000,
-                            GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L, 0));
-        }
         // --- Coagulated Blood Drop
         DryingRackRecipes
                 .addDryingRecipe(new ItemStack(strangeFood, 1, 1), 6000,

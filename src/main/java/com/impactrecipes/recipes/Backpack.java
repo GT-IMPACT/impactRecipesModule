@@ -1,5 +1,7 @@
 package com.impactrecipes.recipes;
 
+import com.impact.common.te.TE_DryingRack;
+import com.impact.impact;
 import gregtech.api.enums.Dyes;
 import gregtech.api.enums.GT_Values;
 import gregtech.api.enums.Materials;
@@ -21,7 +23,8 @@ public class Backpack implements Runnable {
         removeBackPack();
         hand();
         assembler();
-        bath();
+        dryingRack();
+        dryingOven();
     }
 
     private void removeBackPack() {
@@ -68,12 +71,13 @@ public class Backpack implements Runnable {
                 GT_ModHandler.getModItem("Backpack", "boundLeather", 1L), 100, 16);
     }
 
-    private void bath() {
-        // --- Tanned Leather
-        GT_Values.RA.addChemicalBathRecipe(new ItemStack(Items.leather, 2, 0),
-                Materials.PhosphoricAcid.getFluid(100),
-                GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L, 0), GT_Values.NI, GT_Values.NI,
-                new int[]{10000}, 300, 30);
+    private void dryingRack () {
+        TE_DryingRack.DryingRackRecipes.addDryingRecipe(GT_ModHandler.getModItem("Backpack", "boundLeather", 1L, 0), 4000,
+                GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L, 0));
+    }
 
+    private void dryingOven() {
+        impact.I_RA.addDryingOvenRecipe(GT_ModHandler.getModItem("Backpack", "boundLeather", 1L, 0),
+                new ItemStack[]{GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L, 0)}, 400, 16);
     }
 }

@@ -3,7 +3,9 @@ package com.impactrecipes.recipes;
 import com.impact.common.item.Core_Items;
 import com.impact.common.item.Core_Items2;
 import com.impact.common.item.WoodBrickFormTool;
+import com.impact.common.te.TE_DryingRack;
 import com.impact.impact;
+import com.impact.loader.ItemRegistery;
 import com.impact.mods.gregtech.GT_ItemList;
 import gregtech.api.GregTech_API;
 import gregtech.api.enums.*;
@@ -373,6 +375,9 @@ public class ImpactCore implements Runnable {
         GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.EnergyTunnel5_UEV.get(1L), tBitMask, new Object[]{CustomItemList.eM_energyTunnel5_UEV.get(1)});
         GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.EnergyTunnel6_UEV.get(1L), tBitMask, new Object[]{CustomItemList.eM_energyTunnel6_UEV.get(1)});
         GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.EnergyTunnel7_UEV.get(1L), tBitMask, new Object[]{CustomItemList.eM_energyTunnel7_UEV.get(1)});*/
+
+		// --- Drying Rack
+		GT_ModHandler.addCraftingRecipe(new ItemStack(ItemRegistery.DryingRack, 1, 0), bitsd, new Object[]{"SSS", "CdC", 'S', "slabWood", 'C', OrePrefixes.screw.get(Materials.Wood)});
 	}
 	
 	private void furnace() {
