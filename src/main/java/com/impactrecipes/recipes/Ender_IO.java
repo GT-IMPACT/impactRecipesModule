@@ -154,7 +154,7 @@ public class Ender_IO implements Runnable {
         // --- Inventory Panel
         GT_ModHandler.addCraftingRecipe(new ItemStack(EnderIO.blockInventoryPanel, 1, 0), tBitMask,
                 new Object[]{"PGP", "COR", "PIP", 'O',
-                        GT_ModHandler.getModItem("TConstruct", "CraftingSlab", 1L), 'P',
+                        ItemList.Cover_Crafting, 'P',
                         OrePrefixes.plate.get(Materials.Steel), 'I', OrePrefixes.circuit.get(Materials.Basic),
                         'G', GT_ModHandler.getModItem("minecraft", "glass_pane", 1L), 'C',
                         ItemList.Conveyor_Module_LV, 'R', ItemList.Robot_Arm_LV});

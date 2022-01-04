@@ -203,20 +203,13 @@ public class MalisisDoors implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "trapdoor_dark_oak", 3L), tBitMask, new Object[]{"PSP", "SRS", "PSP", 'S', OrePrefixes.stick.get(Materials.Wood), 'R', OrePrefixes.screw.get(Materials.Steel), 'P', GT_ModHandler.getModItem("minecraft", "wooden_slab", 1L, 5)});
         // --- Wooden Glass Door
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', "paneGlassColorless", 'D', GT_ModHandler.getModItem("minecraft", "wooden_door", 1L)});
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L), 'D', GT_ModHandler.getModItem("minecraft", "wooden_door", 1L)});
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', "paneGlassColorless", 'D', GT_ModHandler.getModItem("malisisdoors", "item.door_acacia", 1L)});
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L), 'D', GT_ModHandler.getModItem("malisisdoors", "item.door_acacia", 1L)});
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', "paneGlassColorless", 'D', GT_ModHandler.getModItem("malisisdoors", "item.door_birch", 1L)});
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L), 'D', GT_ModHandler.getModItem("malisisdoors", "item.door_birch", 1L)});
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', "paneGlassColorless", 'D', GT_ModHandler.getModItem("malisisdoors", "item.door_dark_oak", 1L)});
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L), 'D', GT_ModHandler.getModItem("malisisdoors", "item.door_dark_oak", 1L)});
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', "paneGlassColorless", 'D', GT_ModHandler.getModItem("malisisdoors", "item.door_jungle", 1L)});
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L), 'D', GT_ModHandler.getModItem("malisisdoors", "item.door_jungle", 1L)});
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', "paneGlassColorless", 'D', GT_ModHandler.getModItem("malisisdoors", "item.door_spruce", 1L)});
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L), 'D', GT_ModHandler.getModItem("malisisdoors", "item.door_spruce", 1L)});
         // --- Iron Glass Door
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.iron_sliding_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', "paneGlassColorless", 'D', GT_ModHandler.getModItem("minecraft", "iron_door", 1L)});
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.iron_sliding_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L), 'D', GT_ModHandler.getModItem("minecraft", "iron_door", 1L)});
         // --- Jail Door
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("malisisdoors", "item.jail_door", 1L), tBitMask, new Object[]{" P ", "PDP", " s ", 'P', CoreItems2.getRecipe(SteelBars.getMetaID(), 1), 'D', GT_ModHandler.getModItem("minecraft", "iron_door", 1L)});
         // --- Laboratory Door
@@ -415,53 +408,28 @@ public class MalisisDoors implements Runnable {
         GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "wooden_door", 1L),
                 GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
                 GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), 400, 4);
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "wooden_door", 1L),
-                GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L),
-                GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), 400, 4);
         GT_Values.RA
                 .addAssemblerRecipe(GT_ModHandler.getModItem("malisisdoors", "item.door_acacia", 1L),
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
-                        GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), 400, 4);
-        GT_Values.RA
-                .addAssemblerRecipe(GT_ModHandler.getModItem("malisisdoors", "item.door_acacia", 1L),
-                        GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L),
                         GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), 400, 4);
         GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("malisisdoors", "item.door_birch", 1L),
                 GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
                 GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), 400, 4);
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("malisisdoors", "item.door_birch", 1L),
-                GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L),
-                GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), 400, 4);
         GT_Values.RA
                 .addAssemblerRecipe(GT_ModHandler.getModItem("malisisdoors", "item.door_dark_oak", 1L),
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
-                        GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), 400, 4);
-        GT_Values.RA
-                .addAssemblerRecipe(GT_ModHandler.getModItem("malisisdoors", "item.door_dark_oak", 1L),
-                        GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L),
                         GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), 400, 4);
         GT_Values.RA
                 .addAssemblerRecipe(GT_ModHandler.getModItem("malisisdoors", "item.door_jungle", 1L),
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
                         GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), 400, 4);
         GT_Values.RA
-                .addAssemblerRecipe(GT_ModHandler.getModItem("malisisdoors", "item.door_jungle", 1L),
-                        GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L),
-                        GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), 400, 4);
-        GT_Values.RA
                 .addAssemblerRecipe(GT_ModHandler.getModItem("malisisdoors", "item.door_spruce", 1L),
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
-                        GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), 400, 4);
-        GT_Values.RA
-                .addAssemblerRecipe(GT_ModHandler.getModItem("malisisdoors", "item.door_spruce", 1L),
-                        GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L),
                         GT_ModHandler.getModItem("malisisdoors", "item.wood_sliding_door", 1L), 400, 4);
         // --- Iron Glass Door
         GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "iron_door", 1L),
                 GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
-                GT_ModHandler.getModItem("malisisdoors", "item.iron_sliding_door", 1L), 400, 4);
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "iron_door", 1L),
-                GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L),
                 GT_ModHandler.getModItem("malisisdoors", "item.iron_sliding_door", 1L), 400, 4);
         // --- Jail Door
         GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "iron_door", 1L),

@@ -264,7 +264,7 @@ public class BuildCraft implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler
                         .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsstone", 1L, 0), tBitMask,
                 new Object[]{" f ", "SGS", " s ", 'S',
-                        GT_ModHandler.getModItem("TConstruct", "toolRod", 1L, 1), 'G',
+                        GT_ModHandler.getModItem("ForgeMicroblock", "stoneRod", 1L), 'G',
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1L)});
         // --- Quartz Pipe
         GT_ModHandler.addCraftingRecipe(GT_ModHandler
@@ -357,7 +357,7 @@ public class BuildCraft implements Runnable {
                 100, 16);
         // --- Stone Pipe
         GT_Values.RA.addAssemblerRecipe(
-                new ItemStack[]{GT_ModHandler.getModItem("TConstruct", "toolRod", 4L, 1),
+                new ItemStack[]{GT_ModHandler.getModItem("ForgeMicroblock", "stoneRod", 4L),
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
                         GT_Utility.getIntegratedCircuit(3)}, null,
                 GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsstone", 4L),
@@ -424,7 +424,7 @@ public class BuildCraft implements Runnable {
                                     i + 1), 100, 16);
             // --- Stone Pipe
             GT_Values.RA.addAssemblerRecipe(
-                    new ItemStack[]{GT_ModHandler.getModItem("TConstruct", "toolRod", 4L, 1),
+                    new ItemStack[]{GT_ModHandler.getModItem("ForgeMicroblock", "stoneRod", 4L, 1),
                             new ItemStack(Blocks.stained_glass_pane, 1, i), GT_Utility.getIntegratedCircuit(3)},
                     null, GT_ModHandler
                             .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsstone", 4L, i + 1),

@@ -774,7 +774,7 @@ public class RailCraft implements Runnable {
         // --- Locomotive Detector
         recipe = new Object[]{
                 "LTL", "PIP", "LPL",
-                'L', GT_ModHandler.getModItem("TConstruct", "Smeltery", 1L, 2),
+                'L', "stoneBricks",
                 'P', OrePrefixes.plate.get(Materials.RedAlloy),
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
                 'T', new ItemStack(Items.minecart)

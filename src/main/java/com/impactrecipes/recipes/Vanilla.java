@@ -1,5 +1,6 @@
 package com.impactrecipes.recipes;
 
+import com.impact.common.item.Core_Items2;
 import com.impactrecipes.util.RecipeUtils;
 import gregtech.api.enums.*;
 import gregtech.api.util.GT_ModHandler;
@@ -10,12 +11,14 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
+import static com.impactrecipes.recipes.ImpactCore.CoreItems2;
 import static com.impactrecipes.util.RecipeUtils.*;
 import static gregtech.api.util.GT_ModHandler.removeFurnaceSmelting;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class Vanilla implements Runnable {
 
+    public static final Core_Items2 CoreItems2 = Core_Items2.getInstance();
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
             | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
@@ -336,7 +339,9 @@ public class Vanilla implements Runnable {
 		// --- Lead
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "lead", 1L), tBitMask, new Object[]{"SSS", "SBS", "SSS", 'S', GT_ModHandler.getModItem("minecraft", "string", 1L), 'B', "slimeball"});
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("minecraft", "lead", 1L), tBitMask, new Object[]{"SSS", "SBS", "SSS", 'S', GT_ModHandler.getModItem("minecraft", "string", 1L), 'B', GT_ModHandler.getModItem("IC2", "itemHarz", 1L)});
-        
+        // --- Book
+        GT_ModHandler.addShapelessCraftingRecipe(new ItemStack(Items.book), tBitMask, new Object[]{"platePaper", "platePaper", "platePaper", new ItemStack(Items.string), CoreItems2.getRecipe(197, 1), CoreItems2.getRecipe(197, 1)});
+
     }
 
     private void oreRegisterRecipe() {

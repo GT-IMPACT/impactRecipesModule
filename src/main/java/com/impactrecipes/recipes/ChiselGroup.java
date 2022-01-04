@@ -60,7 +60,6 @@ public class ChiselGroup {
             Carving.chisel.addVariation(name, glaxx, i, 0);
         }
         Carving.chisel.addVariation(name, GameRegistry.findBlock("chisel", "glass2"), 0, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "GlassBlock"), 0, 0);
 
         // --- Marble
         name = "marble";
@@ -133,103 +132,6 @@ public class ChiselGroup {
             name = "limestone";
             Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "sedimentaryStone"), 0, 0);
         }
-
-        // --- Seared Stone TConstruct
-        name = "searedStoneTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "Smeltery"), 4, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "Smeltery"), 6, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "Smeltery"), 11, 0);
-        name = "searedStoneNetherTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SmelteryNether"), 4, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SmelteryNether"), 6, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SmelteryNether"), 11, 0);
-
-        // --- Seared Bricks TConstruct
-        name = "searedBricksTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "Smeltery"), 2, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "Smeltery"), 8, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "Smeltery"), 9, 0);
-        name = "searedBricksNetherTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SmelteryNether"), 2, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SmelteryNether"), 8, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SmelteryNether"), 9, 0);
-
-        // --- SpeedBlock TConstruct
-        name = "speedBlockTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SpeedBlock"), 0, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SpeedBlock"), 1, 0);
-
-        // --- BrownStone TConstruct
-        name = "brownStoneTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SpeedBlock"), 2, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SpeedBlock"), 3, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SpeedBlock"), 4, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SpeedBlock"), 5, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "SpeedBlock"), 6, 0);
-
-        // --- Bricks
-        name = "ironBricksTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 4, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 4, 0);
-        name = "goldBricksTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 5, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 5, 0);
-        name = "lapisBricksTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 6, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 6, 0);
-        name = "diamondBricksTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 7, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 7, 0);
-        name = "redstoneBricksTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 8, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 8, 0);
-        name = "boneBricksTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 9, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 9, 0);
-        name = "greenSlimeBricksTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 10, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 10, 0);
-        name = "blueSlimeBricksTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 11, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 11, 0);
-        name = "obsidianBricksTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrick"), 13, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickfancy"), 13, 0);
-        name = "alumiteBricksTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "MetalBlock"), 8, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 0, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 4, 0);
-        name = "arditeBricksTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "MetalBlock"), 1, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 1, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 5, 0);
-        name = "cobaltBricksTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "MetalBlock"), 0, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 2, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 6, 0);
-        name = "manyullynBricksTCon";
-        Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "MetalBlock"), 2, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 3, 0);
-        Carving.chisel.addVariation(name, GameRegistry.findBlock("TConstruct", "decoration.multibrickmetal"), 7, 0);
 
         // --- GregTech
         name = "steelCasing";

@@ -7,6 +7,8 @@ import gregtech.api.enums.OrePrefixes;
 import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
 import gregtech.api.util.GT_Utility;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
@@ -78,7 +80,7 @@ public class Ztones implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.venaBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', OrePrefixes.plate.get(Materials.Cobalt)});
         // --- Ofanix
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "ofanix", 1L, 0), tBitMask,
-                new Object[]{"hSC", "SGS", "fSs", 'C', GT_ModHandler.getModItem("TConstruct", "CraftingSlab", 1L, 0),
+                new Object[]{"hSC", "SGS", "fSs", 'C', new ItemStack(Blocks.crafting_table),
                         'S', OrePrefixes.stick.get(Materials.Iron), 'G', OrePrefixes.gem.get(Materials.Diamond)});
         // --- Kryp Block
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Ztones", "tile.krypBlock", 8L, 0), tBitMask, new Object[]{"LLL", "LSL", "LLL", 'L', GT_ModHandler.getModItem("Ztones", "stoneTile", 1L, 0), 'S', GT_ModHandler.getModItem("chisel", "concrete", 1L, 0)});

@@ -48,9 +48,9 @@ public class Backpack implements Runnable {
         // --- Big Backpack
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Backpack", "backpack", 1L, 200), tBitMask, new Object[]{"RLR", "LBL", "RLR", 'R', OrePrefixes.ring.get(Materials.Steel), 'L', new ItemStack(Blocks.wool), 'B', GT_ModHandler.getModItem("Backpack", "backpack", 1L, 100)});
         // --- Workbench Backpack
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Backpack", "workbenchbackpack", 1L, 17), tBitMask, new Object[]{"WRW", "LWL", "LBL", 'R', OrePrefixes.ring.get(Materials.Iron), 'L', GT_ModHandler.getModItem("Backpack", "boundLeather", 1L), 'W', new ItemStack(Blocks.wool), 'B', GT_ModHandler.getModItem("TConstruct", "CraftingSlab", 1L)});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Backpack", "workbenchbackpack", 1L, 17), tBitMask, new Object[]{"WRW", "LWL", "LBL", 'R', OrePrefixes.ring.get(Materials.Iron), 'L', GT_ModHandler.getModItem("Backpack", "boundLeather", 1L), 'W', new ItemStack(Blocks.wool), 'B', new ItemStack(Blocks.crafting_table)});
         // --- Workbench Big Backpack
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Backpack", "workbenchbackpack", 1L, 217), tBitMask, new Object[]{"RLR", "LBL", "RCR", 'R', OrePrefixes.ring.get(Materials.Steel), 'L', new ItemStack(Blocks.wool), 'B', GT_ModHandler.getModItem("Backpack", "backpack", 1L, 100), 'C', GT_ModHandler.getModItem("TConstruct", "CraftingSlab", 1L)});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("Backpack", "workbenchbackpack", 1L, 217), tBitMask, new Object[]{"RLR", "LBL", "RCR", 'R', OrePrefixes.ring.get(Materials.Steel), 'L', new ItemStack(Blocks.wool), 'B', GT_ModHandler.getModItem("Backpack", "backpack", 1L, 100), 'C', new ItemStack(Blocks.crafting_table)});
 
         for (int i = 0; i < 16; i++) {
             // --- Small Backpack*

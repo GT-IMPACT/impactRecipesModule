@@ -88,7 +88,7 @@ public class CarpentersBlocks implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersCollapsibleBlock", 1L), tBitMask, new Object[]{"SdS", "WWW", "SBS", 'B', GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersBlock", 1L, 0), 'W', ItemList.Plank_Acacia, 'S', OrePrefixes.screw.get(Materials.Wood)});
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersCollapsibleBlock", 1L), tBitMask, new Object[]{"SdS", "WWW", "SBS", 'B', GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersBlock", 1L, 0), 'W', ItemList.Plank_DarkOak, 'S', OrePrefixes.screw.get(Materials.Wood)});
         // --- Carpenter's Chisel
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("CarpentersBlocks", "itemCarpentersChisel", 1L, 0), tBitMask, new Object[]{"dTs", "SIS", "BIB", 'B', GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersBlock", 1L, 0), 'T', GT_ModHandler.getModItem("TConstruct", "chiselHead", 1L, 2), 'S', OrePrefixes.screw.get(Materials.Iron), 'I', OrePrefixes.stick.get(Materials.Iron)});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("CarpentersBlocks", "itemCarpentersChisel", 1L, 0), tBitMask, new Object[]{"dTs", "SIS", "BIB", 'B', GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersBlock", 1L, 0), 'T', "plateIron", 'S', OrePrefixes.screw.get(Materials.Iron), 'I', OrePrefixes.stick.get(Materials.Iron)});
         // --- Carpenter's Hammer
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("CarpentersBlocks", "itemCarpentersHammer", 1L, 0), tBitMask, new Object[]{"dTs", "SIS", "BIB", 'B', GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersBlock", 1L, 0), 'T', OrePrefixes.toolHeadHammer.get(Materials.Iron), 'S', OrePrefixes.screw.get(Materials.Iron), 'I', OrePrefixes.stick.get(Materials.Iron)});
         // --- Carpenter's Safe
@@ -291,7 +291,7 @@ public class CarpentersBlocks implements Runnable {
         // --- Carpenter's Chisel
         GT_Values.RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem("CarpentersBlocks", "blockCarpentersBlock", 1L, 0),
-                GT_ModHandler.getModItem("TConstruct", "chiselHead", 1L, 2), null,
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 1L), null,
                 GT_ModHandler.getModItem("CarpentersBlocks", "itemCarpentersChisel", 1L, 0), 200, 30);
         // --- Carpenter's Hammer
         GT_Values.RA.addAssemblerRecipe(

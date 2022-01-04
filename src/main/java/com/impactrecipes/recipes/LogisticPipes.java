@@ -135,7 +135,6 @@ public class LogisticPipes implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("LogisticsPipes", "logisticsSolidBlock", 1L, 12), tBitMask, new Object[]{"IMI", "LCL", "IBI", 'I', OrePrefixes.circuit.get(Materials.Good), 'M', ItemList.Cover_Screen, 'L', ItemList.MV_Coil, 'B', ItemList.Battery_RE_MV_Lithium, 'C', ItemList.MACHINE_HULLS[2]});
         // --- Unrouted Transport Pipe
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsBasicTransport", 8L, 0), tBitMask, new Object[]{"SfS", "SGS", "SsS", 'S', OrePrefixes.stick.get(Materials.Birmabright), 'G', GT_ModHandler.getModItem("minecraft", "glass_pane", 1L)});
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsBasicTransport", 8L, 0), tBitMask, new Object[]{"SfS", "SGS", "SsS", 'S', OrePrefixes.stick.get(Materials.Birmabright), 'G', GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L)});
         // --- Logistics Request Table
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeBlockRequestTable", 1L, 0), tBitMask, new Object[]{"IMI", "RCR", "IOI", 'I', OrePrefixes.circuit.get(Materials.Good), 'M', GT_ModHandler.getModItem("EnderIO", "blockInventoryPanel", 1L), 'R', ItemList.Robot_Arm_MV, 'O', ItemList.Conveyor_Module_MV, 'C', GT_ModHandler.getModItem("LogisticsPipes", "logisticsSolidBlock", 1L, 3)});
         // --- Logistics HUD Glasses
@@ -194,9 +193,6 @@ public class LogisticPipes implements Runnable {
     private void assembler() {
 // --- Unrouted Transport Pipe
         GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
-                GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Birmabright, 6L), null,
-                GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsBasicTransport", 8L, 0), 100, 30);
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("TConstruct", "GlassPane", 1L),
                 GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Birmabright, 6L), null,
                 GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsBasicTransport", 8L, 0), 100, 30);
         // --- Basic Logistics Pipe
