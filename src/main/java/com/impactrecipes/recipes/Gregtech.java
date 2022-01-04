@@ -64,6 +64,7 @@ public class Gregtech implements Runnable {
         centrifuge();
         canner();
         distil();
+		wormhole();
     }
 
     private void removeGT_WTF_CHECK_GT_CODE() {
@@ -4193,4 +4194,10 @@ public class Gregtech implements Runnable {
         GT_Values.RA.addDistillationTowerRecipe(Materials.Pollution.getFluid(1300), new FluidStack[]{Materials.CarbonMonoxide.getGas(50L), Materials.CarbonDioxide.getGas(50L), Materials.HydricSulfide.getGas(50L), Materials.SulfuricAcid.getFluid(50L), Materials.NitrogenDioxide.getGas(50L), Materials.Methane.getGas(50L), Materials.Mercury.getFluid(1L)}, GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Ash, 1L), 600, 480);
 
     }
+	
+	private void wormhole() {
+		//Tiny Wormhole
+        GT_Values.RA.addTinyWormHoleRecipe(GT_Values.NI, Materials.EnrichedNaquadria.getFluid(1000L), GT_Values.NF, GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Duranium, 54L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Europium, 45L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 36L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahEnriched, 33L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Trinium, 26L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Californium, 23L), new int[]{10000, 10000, 10000, 10000, 10000, 10000}, 200, 2000000);
+
+	}
 }
