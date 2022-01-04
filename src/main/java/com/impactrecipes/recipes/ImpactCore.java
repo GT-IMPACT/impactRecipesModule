@@ -387,7 +387,7 @@ public class ImpactCore implements Runnable {
 
 		// --- Multiblock Structure Hologram Projector
 		GT_ModHandler.addShapelessCraftingRecipe(GT_ModHandler.getModItem("impactapi", "item.impactapi.constructableTrigger", 1L, 0), GT_ModHandler.RecipeBits.NOT_REMOVABLE, new Object[]{GT_ModHandler.getModItem("tectech", "item.em.constructable", 1L, 0)});
-		GT_ModHandler.addShapelessCraftingRecipe(GT_ModHandler.getModItem("impactapi", "item.impactapi.constructableTrigger", 1L, 0), GT_ModHandler.RecipeBits.NOT_REMOVABLE, new Object[]{"platePpaer", "dyeRed"});
+		GT_ModHandler.addShapelessCraftingRecipe(GT_ModHandler.getModItem("impactapi", "item.impactapi.constructableTrigger", 1L, 0), GT_ModHandler.RecipeBits.NOT_REMOVABLE, new Object[]{"platePaрer", "dyeRed"});
 	}
 	
 	private void furnace() {
