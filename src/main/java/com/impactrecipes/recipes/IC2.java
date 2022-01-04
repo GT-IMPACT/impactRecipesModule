@@ -958,7 +958,7 @@ public class IC2 implements Runnable {
                 GT_ModHandler.getModItem("minecraft", "furnace", 1L),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 5),
                 GT_ModHandler.getModItem("IC2", "blockMachine", 1L, 1), 400, 16);
-        
+
     }
 
     private void compactGens() {

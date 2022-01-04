@@ -1460,6 +1460,19 @@ public class ImpactCore implements Runnable {
 				GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.HSSS, 4), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TungstenSteel, 6)
 		}, GT_ItemList.SOFC_Huge.get(1), null, 30 * 20, 7680);
 
+        //MultiCrackerUnit
+        RA.addBasicLineRecipe(new ItemStack[]{
+                ItemList.Hull_LuV.get(1L),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.MaragingSteel250, 4),
+                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 4),
+                ItemList.Electric_Pump_LuV.get(4L),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Talonite, 8),
+                GT_OreDictUnificator.get(OrePrefixes.pipeHuge, Materials.Polytetrafluoroethylene, 4),
+                GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Tungsten, 8),
+                GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Grisium, 8),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSE, 16),
+                GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSE, 16)
+        }, GT_ItemList.AdvCrackUnit.get(1L), null, 80 * 20, 30720);
 	}
 	
 	private void mixer() {

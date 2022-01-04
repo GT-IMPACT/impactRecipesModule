@@ -1257,8 +1257,7 @@ public class AE implements Runnable {
     }
 
     private void compressorRecipe() {
-        RA
-                .addCompressorRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4L, 7),
+        RA.addCompressorRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4L, 7),
                         GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockFluix", 1L), 200, 8);
     }
 
