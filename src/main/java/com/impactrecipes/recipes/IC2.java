@@ -191,11 +191,7 @@ public class IC2 implements Runnable {
                 false);
         removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemPartCFPowder", 1L), true, false,
                 false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemPartCoalBall", 1L), true, false,
-                false);
         removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemDynamiteSticky", 1L), true, false,
-                false);
-        removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemPartCoalChunk", 1L), true, false,
                 false);
         removeRecipeByOutput(GT_ModHandler.getModItem("IC2", "itemMugEmpty", 1L), true, false,
                 false);
