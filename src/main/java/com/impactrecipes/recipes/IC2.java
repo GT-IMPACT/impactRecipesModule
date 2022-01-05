@@ -507,6 +507,14 @@ public class IC2 implements Runnable {
                 new Object[] {"PMP","SCS",'S', OrePrefixes.stick.get(Materials.Iron),'C', OrePrefixes.springSmall.get(Materials.Copper),
                         'P', OrePrefixes.plate.get(Materials.Iron), 'M', ItemList.Cover_Screen});
 
+        // --- Coal Ball
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemPartCoalBall",1), tBitMask,
+                new Object[] {"CCC","CBC", "CCC", 'C', OrePrefixes.dust.get(Materials.Coal),'B', "itemFlint"});
+
+        // --- Coal Chunk
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemPartCoalChunk",1), tBitMask,
+                new Object[] {"CCC","CBC", "CCC", 'C', GT_ModHandler.getModItem("IC2","itemPartCoalBlock",1),'B', "obsidian"});
+
     }
 
     private void thermalCentrifuge() {
