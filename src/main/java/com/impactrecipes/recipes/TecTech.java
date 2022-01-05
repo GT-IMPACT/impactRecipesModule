@@ -610,14 +610,14 @@ public class TecTech implements Runnable {
                         ItemList.Circuit_Chip_RPico.get(4L),
                         GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Carbon, 12),
                         GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Neutronium, 3),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.PerroxPolymer, 2),
+                        ItemList.Circuit_Chip_QPIC.get(8L),
                         GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Silicon, 8),
                         GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.ElectrumFlux, 8),
-                        GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Superconductor, 16),
-                        ItemList.Circuit_Chip_QPIC.get(8L)
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Superconductor, 16)
                 },
                 new FluidStack[]{
-                        Materials.SolderingAlloy.getMolten(1890)
+                        Materials.SolderingAlloy.getMolten(1890),
+                        Materials.PerroxPolymer.getMolten(2880)
                 },
                 ItemList.Cover_SolarPanel_UHV.get(1), 840, 8000000);
 
@@ -629,14 +629,14 @@ public class TecTech implements Runnable {
                         ItemList.Circuit_Chip_Pico.get(8L),
                         GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Carbon, 16),
                         GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Phoenixite, 4),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.PerroxPolymer, 4),
+                        ItemList.Circuit_Chip_FPIC.get(12L),
                         GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Silicon, 8),
                         GT_OreDictUnificator.get(OrePrefixes.plateQuadruple, Materials.ElectrumFlux, 8),
-                        GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.SuperconductorUEV, 18),
-                        ItemList.Circuit_Chip_FPIC.get(12L)
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt12, Materials.SuperconductorUEV, 18)
                 },
                 new FluidStack[]{
-                        Materials.SolderingAlloy.getMolten(3780)
+                        Materials.SolderingAlloy.getMolten(3780),
+                        Materials.PerroxPolymer.getMolten(5760)
                 },
                 ItemList.Cover_SolarPanel_UEV.get(1), 960, 32000000);
 
