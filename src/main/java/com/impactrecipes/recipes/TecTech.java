@@ -806,27 +806,6 @@ public class TecTech implements Runnable {
                         Materials.Concrete.getMolten(9216L)
                 },
                 CoreItems2.getRecipe(148, 1), 1200, 2000000);
-
-        TT_recipeAdder
-                .addResearchableAssemblylineRecipe(GT_ModHandler.getModItem("SGCraft", "sgIrisUpgrade", 1L),
-                        192000, 512, 2000000, 16, new Object[]{
-                                GT_ModHandler.getModItem("SGCraft", "stargateController", 1L),
-                                ItemList.Teleporter.get(1L),
-                                ItemList.Field_Generator_UEV.get(4L),
-                                ItemList.Sensor_UEV.get(16L),
-                                ItemList.Emitter_UEV.get(16L),
-                                GT_ModHandler.getModItem("SGCraft", "stargateRing", 7L, 1),
-                                GT_ModHandler.getModItem("SGCraft", "stargateRing", 15L),
-                                GT_ModHandler.getModItem("SGCraft", "ic2PowerUnit", 3L),
-                                new Object[]{OrePrefixes.circuit.get(Materials.Quantum), 1}
-                        },
-                        new FluidStack[]{
-                                Materials.Infinity.getMolten(2304L),
-                                Materials.PerroxPolymer.getMolten(9216L),
-                                Materials.Phoenixite.getMolten(9216L),
-                                Materials.Americium.getPlasma(9216L)
-                        },
-                        GT_ModHandler.getModItem("ExtraUtilities", "dark_portal", 1L), 6000, 32000000);
         //}
 
         //Hyper Engine
