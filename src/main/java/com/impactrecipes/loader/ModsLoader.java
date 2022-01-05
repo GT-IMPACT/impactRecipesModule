@@ -23,7 +23,6 @@ public class ModsLoader {
         new RailCraft().run();
         new StevesFactoryManager().run();
         new StorageDrawers().run();
-        new TConstruct().run();
         new TecTech().run();
         new ProjectRed().run();
         new OpenBlocks().run();
@@ -62,7 +61,6 @@ public class ModsLoader {
         registerRecipeClass(RailCraft.class);
         registerRecipeClass(StevesFactoryManager.class);
         registerRecipeClass(StorageDrawers.class);
-        registerRecipeClass(TConstruct.class);
         registerRecipeClass(TecTech.class);
         registerRecipeClass(ProjectRed.class);
         registerRecipeClass(OpenBlocks.class);
