@@ -388,6 +388,8 @@ public class ImpactCore implements Runnable {
 		// --- Multiblock Structure Hologram Projector
 		GT_ModHandler.addShapelessCraftingRecipe(GT_ModHandler.getModItem("impactapi", "item.impactapi.constructableTrigger", 1L, 0), GT_ModHandler.RecipeBits.NOT_REMOVABLE, new Object[]{GT_ModHandler.getModItem("tectech", "item.em.constructable", 1L, 0)});
 		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("impactapi", "item.impactapi.constructableTrigger", 1L, 0), bitsd, new Object[]{" R ", "PPP", 'P', GT_ModHandler.getModItem("minecraft", "paper", 1L, 0), 'R', "dyeRed"});
+
+
 	}
 	
 	private void furnace() {
@@ -3019,12 +3021,6 @@ public class ImpactCore implements Runnable {
 				new ItemStack[]{CoreItems2.getRecipe(78, 1), CoreItems2.getRecipe(82, 1)},
 				new FluidStack(FluidRegistry.getFluid("ic2coolant"), 2000), CoreItems2.getRecipe(80, 1),
 				1000, 480
-		);
-		
-		GT_Values.RA.addAssemblerRecipe(
-				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.gem, Materials.Diamond, 1),
-						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Basic, 2)}, null,
-				CoreItems2.getRecipe(99, 1), 100, 30
 		);
 
 //Solar parts
