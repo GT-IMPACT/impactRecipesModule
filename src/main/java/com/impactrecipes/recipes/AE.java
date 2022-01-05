@@ -1190,6 +1190,11 @@ public class AE implements Runnable {
                         Dyes.VALUES[i].getFluidDye(j, 36L),
                         GT_ModHandler.getModItem("appliedenergistics2", "item.ItemPaintBall", 1L, 15 - i),
                         GT_Values.NI, GT_Values.NI, null, 20, 2);
+                RA.addChemicalBathRecipe(
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 536),
+                        Dyes.VALUES[i].getFluidDye(j, 36L),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 535 - i),
+                        GT_Values.NI, GT_Values.NI, null, 20, 2);
             }
             RA.addChemicalBathRecipe(
                     GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 15 - i),
@@ -1323,6 +1328,7 @@ public class AE implements Runnable {
     }
 
     private void wireAssemblerRecipe() {
+        // --- Covered Smart Cable
         RA.addWireAssemblerRecipe(new ItemStack[]{
                         GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 16),
                         GT_Utility.getIntegratedCircuit(24)},
@@ -1371,11 +1377,38 @@ public class AE implements Runnable {
                         GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 36)},
                 null, GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 56),
                 100, 120, false);
-        // --- Quartz Fiber
-        /*RA.addWiremillRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Quartzite, 8L), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 140), 80, 120);
-        RA.addWiremillRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.NetherQuartz, 4L), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 140), 80, 120);
-        RA.addWiremillRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.CertusQuartz, 2L), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 140), 80, 120);
-        RA.addWiremillRecipe(CoreItems2.getRecipe(153, 1), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 140), 80, 120);*/
+        // --- Covered Dense Cable
+        RA.addWireAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 76),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 2),
+                        GT_Utility.getIntegratedCircuit(24)},
+                Materials.Silicone.getMolten(144), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 536),
+                100, 8, false);
+        RA.addWireAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2L, 76),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.PolyvinylChloride, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)},
+                Materials.StyreneButadieneRubber.getMolten(144), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2L, 536),
+                200, 8, false);
+        RA.addWireAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2L, 76),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.PolyvinylChloride, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)},
+                Materials.Silicone.getMolten(144), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2L, 536),
+                200, 8, false);
+        RA.addWireAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2L, 76),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Polydimethylsiloxane, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)},
+                Materials.StyreneButadieneRubber.getMolten(144), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2L, 536),
+                200, 8, false);
+        RA.addWireAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2L, 76),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Polydimethylsiloxane, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)},
+                Materials.Silicone.getMolten(144), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 2L, 536),
+                200, 8, false);
+
     }
 
     private void unboxingRecipe() {
