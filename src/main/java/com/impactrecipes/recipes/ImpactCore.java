@@ -128,7 +128,7 @@ public class ImpactCore implements Runnable {
 		GT_ModHandler.addCraftingRecipe(GT_ItemList.Generator_Diesel_EV.get(1L), bitsd, new Object[]{"PCP", "EME", "GWG", 'M', ItemList.Hull_EV, 'P', ItemList.Electric_Piston_EV, 'E', ItemList.Electric_Motor_EV, 'C', OrePrefixes.circuit.get(Materials.Data), 'W', OrePrefixes.cableGt01.get(Materials.Aluminium), 'G', OrePrefixes.gearGt.get(Materials.Titanium)});
 		
 		//Portable Tank
-		GT_ModHandler.addCraftingRecipe(GT_ItemList.Portable_Tank_ULV.get(1L), bitsd, new Object[]{"SPS", "PTP", "hPC", 'T', ItemList.Large_Fluid_Cell_Steel.get(1L), 'P', OrePrefixes.plateDouble.get(Materials.Lead), 'S', OrePrefixes.screw.get(Materials.WroughtIron), 'C', ToolDictNames.craftingToolScrewdriver});
+		GT_ModHandler.addCraftingRecipe(GT_ItemList.Portable_Tank_ULV.get(1L), tBitMask, new Object[]{"SPS", "PTP", "hPC", 'T', ItemList.Large_Fluid_Cell_Steel.get(1L), 'P', OrePrefixes.plateDouble.get(Materials.Lead), 'S', OrePrefixes.screw.get(Materials.WroughtIron), 'C', ToolDictNames.craftingToolScrewdriver});
 		
 		//Potin Alloy
 		GT_ModHandler.addShapelessCraftingRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Potin, 9L), GT_ModHandler.RecipeBits.NOT_REMOVABLE, new Object[]{OrePrefixes.dust.get(Materials.Copper), OrePrefixes.dust.get(Materials.Copper), OrePrefixes.dust.get(Materials.Copper), OrePrefixes.dust.get(Materials.Copper), OrePrefixes.dust.get(Materials.Copper), OrePrefixes.dust.get(Materials.Copper), OrePrefixes.dust.get(Materials.Tin), OrePrefixes.dust.get(Materials.Tin), OrePrefixes.dust.get(Materials.Lead)});
@@ -218,17 +218,17 @@ public class ImpactCore implements Runnable {
 		//Sawmill
 		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("impact", "impact_sawmill_block", 5L), tBitMask, new Object[]{"SCS", "BLB", "BdB", 'S', OrePrefixes.screw.get(Materials.WroughtIron), 'B', OrePrefixes.frameGt.get(Materials.Wood), 'L', OrePrefixes.slab.get(Materials.Wood), 'C', GT_ItemList.ULVConveyorModule});
 		GT_ModHandler.addCraftingRecipe(GT_ItemList.SawCase.get(2L), tBitMask, new Object[]{"SrS", "SBS", "SsS", 'S', OrePrefixes.slab.get(Materials.Wood), 'B', OrePrefixes.frameGt.get(Materials.Wood)});
-		GT_ModHandler.addCraftingRecipe(GT_ItemList.SawMill.get(1L), bitsd, new Object[]{"SBd", "MCM", "LWL", 'S', OrePrefixes.screw.get(Materials.WroughtIron), 'B', OrePrefixes.toolHeadBuzzSaw.get(Materials.Iron), 'L', OrePrefixes.circuit.get(Materials.Primitive), 'W', OrePrefixes.wireGt01.get(Materials.Lead), 'M', GT_ItemList.ULVMotor, 'C', GT_ItemList.SawCase});
+		GT_ModHandler.addCraftingRecipe(GT_ItemList.SawMill.get(1L), tBitMask, new Object[]{"SBd", "MCM", "LWL", 'S', OrePrefixes.screw.get(Materials.WroughtIron), 'B', OrePrefixes.toolHeadBuzzSaw.get(Materials.Iron), 'L', OrePrefixes.circuit.get(Materials.Primitive), 'W', OrePrefixes.wireGt01.get(Materials.Lead), 'M', GT_ItemList.ULVMotor, 'C', GT_ItemList.SawCase});
 		
 		//Pyrolyse Oven
-		GT_ModHandler.addCraftingRecipe(GT_ItemList.Pyrolyse.get(1L), bitsd, new Object[]{"PQW", "CHC", "ICW", 'Q', OrePrefixes.pipeNonuple.get(Materials.Bronze), 'C', OrePrefixes.circuit.get(Materials.Basic), 'W', OrePrefixes.wireGt08.get(Materials.Cupronickel), 'P', ItemList.Electric_Pump_LV, 'I', ItemList.Electric_Piston_LV, 'H', ItemList.Hull_LV});
+		GT_ModHandler.addCraftingRecipe(GT_ItemList.Pyrolyse.get(1L), tBitMask, new Object[]{"PQW", "CHC", "ICW", 'Q', OrePrefixes.pipeNonuple.get(Materials.Bronze), 'C', OrePrefixes.circuit.get(Materials.Basic), 'W', OrePrefixes.wireGt08.get(Materials.Cupronickel), 'P', ItemList.Electric_Pump_LV, 'I', ItemList.Electric_Piston_LV, 'H', ItemList.Hull_LV});
 		
 		//WaterPump
 		GT_ModHandler.addCraftingRecipe(GT_ItemList.PrimitiveWaterPumpCase.get(1L), tBitMask, new Object[]{"SWS", "dCr", 'S', OrePrefixes.screw.get(Materials.Iron), 'W', OrePrefixes.plank.get(Materials.Wood), 'C', OrePrefixes.slab.get(Materials.Cobblestone)});
-		GT_ModHandler.addCraftingRecipe(GT_ItemList.BasicWaterPump.get(1L), bitsd, new Object[]{"RPS", "OWd", "CHC", 'O', OrePrefixes.rotor.get(Materials.Iron), 'S', OrePrefixes.screw.get(Materials.Iron), 'R', OrePrefixes.ring.get(Materials.Iron), 'P', OrePrefixes.pipeMedium.get(Materials.Wood), 'H', GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Wood, 1), 'W', OrePrefixes.plank.get(Materials.Wood), 'C', OrePrefixes.slab.get(Materials.Cobblestone)});
-		GT_ModHandler.addCraftingRecipe(GT_ItemList.Hatch_Output_Pump.get(1L), bitsd, new Object[]{"SRd", "WHW", "CRC", 'S', OrePrefixes.screw.get(Materials.Iron), 'R', OrePrefixes.ring.get(Materials.Iron), 'H', GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Wood, 1), 'W', OrePrefixes.plank.get(Materials.Wood), 'C', OrePrefixes.slab.get(Materials.Cobblestone)});
+		GT_ModHandler.addCraftingRecipe(GT_ItemList.BasicWaterPump.get(1L), tBitMask, new Object[]{"RPS", "OWd", "CHC", 'O', OrePrefixes.rotor.get(Materials.Iron), 'S', OrePrefixes.screw.get(Materials.Iron), 'R', OrePrefixes.ring.get(Materials.Iron), 'P', OrePrefixes.pipeMedium.get(Materials.Wood), 'H', GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Wood, 1), 'W', OrePrefixes.plank.get(Materials.Wood), 'C', OrePrefixes.slab.get(Materials.Cobblestone)});
+		GT_ModHandler.addCraftingRecipe(GT_ItemList.Hatch_Output_Pump.get(1L), tBitMask, new Object[]{"SRd", "WHW", "CRC", 'S', OrePrefixes.screw.get(Materials.Iron), 'R', OrePrefixes.ring.get(Materials.Iron), 'H', GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Wood, 1), 'W', OrePrefixes.plank.get(Materials.Wood), 'C', OrePrefixes.slab.get(Materials.Cobblestone)});
 		//WaterDrill
-		GT_ModHandler.addCraftingRecipe(GT_ItemList.WaterDrill.get(1L), bitsd, new Object[]{"BDB", "GPG", "CHC", 'B', GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1), 'D', GT_OreDictUnificator.get(OrePrefixes.toolHeadDrill, Materials.Steel, 1), 'G', GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Steel, 1), 'P', OrePrefixes.pipeHuge.get(Materials.Steel), 'C', OrePrefixes.circuit.get(Materials.Good), 'H', ItemList.Hull_MV});
+		GT_ModHandler.addCraftingRecipe(GT_ItemList.WaterDrill.get(1L), tBitMask, new Object[]{"BDB", "GPG", "CHC", 'B', GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1), 'D', GT_OreDictUnificator.get(OrePrefixes.toolHeadDrill, Materials.Steel, 1), 'G', GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Steel, 1), 'P', OrePrefixes.pipeHuge.get(Materials.Steel), 'C', OrePrefixes.circuit.get(Materials.Good), 'H', ItemList.Hull_MV});
 		
 		//Diodes 2A
 		GT_ModHandler.addCraftingRecipe(GT_ItemList.Diode_2A_ULV.get(1L), 0, new Object[]{"PSP", "WCW", 'P', OrePrefixes.plate.get(Materials.WroughtIron), 'W', OrePrefixes.cableGt02.get(Materials.Lead), 'S', OrePrefixes.wireFine.get(Materials.Lead), 'C', ItemList.Casing_ULV});
@@ -273,10 +273,10 @@ public class ImpactCore implements Runnable {
 		GT_ModHandler.addCraftingRecipe(GT_ItemList.Long_Distance_Pipeline_Item_Pipe.get(32L), tBitMask, new Object[]{"PPP", "IwI", "PPP", 'P', GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1L), 'I', GT_OreDictUnificator.get(OrePrefixes.pipeLarge, Materials.Tin, 1L)});
 		
 		// --- Regulate Digital Chest
-		GT_ModHandler.addCraftingRecipe(GT_ItemList.Regulate_Digital_Chest.get(1L), bitsd, new Object[]{"COY", 'C', OrePrefixes.circuit.get(Materials.Advanced), 'O', ItemList.Super_Chest_LV, 'Y', ItemList.Conveyor_Module_HV});
+		GT_ModHandler.addCraftingRecipe(GT_ItemList.Regulate_Digital_Chest.get(1L), tBitMask, new Object[]{"COY", 'C', OrePrefixes.circuit.get(Materials.Advanced), 'O', ItemList.Super_Chest_LV, 'Y', ItemList.Conveyor_Module_HV});
 		
 		// --- One Stack Regulate Chest
-		GT_ModHandler.addCraftingRecipe(GT_ItemList.Regulate_One_Stack_Chest.get(1), bitsd, new Object[]{"EHR", " C ", 'C', OrePrefixes.circuit.get(Materials.Basic), 'E', GT_ModHandler.getModItem("minecraft", "chest", 1L), 'R', ItemList.Robot_Arm_LV, 'H', ItemList.Hull_LV});
+		GT_ModHandler.addCraftingRecipe(GT_ItemList.Regulate_One_Stack_Chest.get(1), tBitMask, new Object[]{"EHR", " C ", 'C', OrePrefixes.circuit.get(Materials.Basic), 'E', GT_ModHandler.getModItem("minecraft", "chest", 1L), 'R', ItemList.Robot_Arm_LV, 'H', ItemList.Hull_LV});
 		
 		// --- Lasers
         GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.DynamoTunnel1_IV.get(1L), tBitMask, new Object[]{CustomItemList.eM_dynamoTunnel1_IV.get(1)});
@@ -376,7 +376,7 @@ public class ImpactCore implements Runnable {
         GT_ModHandler.addShapelessCraftingRecipe(GT_ItemList.EnergyTunnel7_UEV.get(1L), tBitMask, new Object[]{CustomItemList.eM_energyTunnel7_UEV.get(1)});
 
 		// --- Drying Rack
-		GT_ModHandler.addCraftingRecipe(new ItemStack(ItemRegistery.DryingRack, 1, 0), bitsd, new Object[]{"SSS", "CsC", 'S', "slabWood", 'C', OrePrefixes.bolt.get(Materials.Wood)});
+		GT_ModHandler.addCraftingRecipe(new ItemStack(ItemRegistery.DryingRack, 1, 0), tBitMask, new Object[]{"SSS", "CsC", 'S', "slabWood", 'C', OrePrefixes.bolt.get(Materials.Wood)});
 
 		// --- Blank Pattern
 		GT_ModHandler
@@ -388,104 +388,104 @@ public class ImpactCore implements Runnable {
 
 		// --- Multiblock Structure Hologram Projector
 		GT_ModHandler.addShapelessCraftingRecipe(GT_ModHandler.getModItem("impactapi", "item.impactapi.constructableTrigger", 1L, 0), GT_ModHandler.RecipeBits.NOT_REMOVABLE, new Object[]{GT_ModHandler.getModItem("tectech", "item.em.constructable", 1L, 0)});
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("impactapi", "item.impactapi.constructableTrigger", 1L, 0), bitsd, new Object[]{"RY", "YR", 'R', "dyeRed", 'Y', "dyeYellow"});
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("impactapi", "item.impactapi.constructableTrigger", 1L, 0), tBitMask, new Object[]{"RY", "YR", 'R', "dyeRed", 'Y', "dyeYellow"});
 
 		// --- Matrix Particles Reflector
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("impact", "impact_matrix_system", 2L, 0), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("impact", "impact_matrix_system", 2L, 0), tBitMask,
 				new Object[]{"PFP", "FBF", "PFP", 'P', "plateDoubleSilver", 'F', "foilAluminium", 'B', "frameGtHSLA"});
 
 		// --- The Mill Wood Plank
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("impact", "gt.blockCase3", 4L, 2), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("impact", "gt.blockCase3", 4L, 2), tBitMask,
 				new Object[]{"PFP", "FBF", "PFP", 'P', "plankWood", 'F', "boltWood", 'B', ToolDictNames.craftingToolSoftHammer});
 
         // --- The Mill
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14074), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14074), tBitMask,
 				new Object[]{"PLP", "CGC", "PBP", 'P', GT_ModHandler.getModItem("impact", "gt.blockCase3", 1L, 2),
 						'L', GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L, 0),
 						'C', "cobblestone", 'G', "gearWood", 'B', ToolDictNames.craftingToolSoftHammer});
 
 		// --- Volumetric Configurator
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14604), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14604), tBitMask,
 				new Object[]{" C ", "hHw", " G ", 'C', "craftingChest", 'G', "gearGtSmallSteel", 'H', ItemList.Hull_LV});
 
         // --- Coal Miner
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14071), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14071), tBitMask,
 				new Object[]{"SBS", "GFG", "hLd", 'B', GT_ModHandler.getModItem("IC2", "itemRecipePart", 1L, 6),
 						'F', GT_ModHandler.getModItem("IC2", "blockMachine", 1L, 1),
 						'S', "screwIron", 'G', "gearGtSmallIron", 'L', "stickLongIron"});
 
 		// --- Mining Hatch
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14747), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14747), tBitMask,
 				new Object[]{"SCd", "GFG", "hRS", 'S', "screwIron", 'C', "craftingChest", 'G', "gearIron", 'F', "frameGtIron",
 						'R', "ringIron"});
 
 		// --- Iron Drill Head
-		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 0), bitsd,
+		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 0), tBitMask,
 				new Object[]{" P ", "PFP", "PhP", 'P', "plateDoubleIron", 'F', "frameGtIron"});
 		// --- Steel Drill Head
-		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 1), bitsd,
+		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 1), tBitMask,
 				new Object[]{" P ", "PFP", "PhP", 'P', "plateDoubleSteel", 'F', "frameGtSteel"});
 		// --- Stainless Steel Drill Head
-		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 2), bitsd,
+		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 2), tBitMask,
 				new Object[]{" P ", "PFP", "PhP", 'P', "plateTripleStainlessSteel", 'F', "frameGtStainlessSteel"});
 		// --- Titanium Drill Head
-		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 3), bitsd,
+		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 3), tBitMask,
 				new Object[]{" P ", "PFP", "PhP", 'P', "plateQuadrupleTitanium", 'F', "frameGtTitanium"});
 		// --- Tungsten Steel Drill Head
-		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 4), bitsd,
+		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 4), tBitMask,
 				new Object[]{" P ", "PFP", "PhP", 'P', "plateQuadrupleTungstenSteel", 'F', "frameGtTungstenSteel"});
 		// --- Inconel-690 Drill Head
-		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 5), bitsd,
+		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 5), tBitMask,
 				new Object[]{" P ", "PFP", "PhP", 'P', "plateQuintupleInconel-690", 'F', "frameGtInconel-690"});
 		// --- Iridium Drill Head
-		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 6), bitsd,
+		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 6), tBitMask,
 				new Object[]{" P ", "PFP", "PhP", 'P', "plateDenseIridium", 'F', "frameGtIridium"});
 		// --- Neutronium Drill Head
-		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 7), bitsd,
+		GT_ModHandler.addCraftingRecipe(new ItemStack(DrillHeads.getInstance(), 1, 7), tBitMask,
 				new Object[]{" P ", "PFP", "PhP", 'P', "plateDenseNeutronium", 'F', "frameGtNeutronium"});
 
 		// --- Ore and Oil Prospector LV
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14751), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14751), tBitMask,
 				new Object[]{"PPP", "CHC", "SOS", 'H', ItemList.Hull_LV, 'S', ItemList.Sensor_LV, 'P', "plateDoubleSteel",
 						'C', "circuitBasic", 'O', "cableGt02Tin"});
 		// --- Ore and Oil Prospector MV
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14752), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14752), tBitMask,
 				new Object[]{"PPP", "CHC", "SOS", 'H', ItemList.Hull_MV, 'S', ItemList.Sensor_MV, 'P', "plateDoubleBlackSteel",
 						'C', "circuitGood", 'O', "cableGt02Copper"});
 		// --- Ore and Oil Prospector HV
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14753), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14753), tBitMask,
 				new Object[]{"PPP", "CHC", "SOS", 'H', ItemList.Hull_HV, 'S', ItemList.Sensor_HV, 'P', "plateTripleStainlessSteel",
 						'C', "circuitAdvanced", 'O', "cableGt04Gold"});
 		// --- Ore and Oil Prospector EV
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14754), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14754), tBitMask,
 				new Object[]{"PPP", "CHC", "SOS", 'H', ItemList.Hull_EV, 'S', ItemList.Sensor_EV, 'P', "plateQuadrupleVanadiumSteel",
 						'C', "circuitData", 'O', "cableGt04Aluminium"});
 		// --- Ore and Oil Prospector IV
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14755), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14755), tBitMask,
 				new Object[]{"PPP", "CHC", "SOS", 'H', ItemList.Hull_IV, 'S', ItemList.Sensor_IV, 'P', "plateQuintupleTungstenSteel",
 						'C', "circuitElite", 'O', "cableGt08Platinum"});
 
 		// --- Ore Finder
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.metaitem.04", 1L, 32008), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.metaitem.04", 1L, 32008), tBitMask,
 				new Object[]{"F  ", " B ", "  S", 'F', "itemFlint", 'B', "boltIron", 'S', "stickLongWood"});
 
 		// --- Mask L
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("impact", "mask_of_vision", 1L), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("impact", "mask_of_vision", 1L), tBitMask,
 				new Object[]{" D ", "PGP", "PSP", 'D', "dyeLightBlue", 'P', "plateRubber", 'S', CoreItems2.getRecipe(51, 1),
 				'G', GT_ModHandler.getModItem("IC2", "blockAlloyGlass", 1L)});
 
 		// --- Aerostat
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.metaitem.04", 1L, 32006), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.metaitem.04", 1L, 32006), tBitMask,
 				new Object[]{"GGG", "GAG", "SBS", 'S', "wireFineSteel", 'A', ToolDictNames.craftingToolWireCutter,
 						'B', GT_ModHandler.getModItem("minecraft", "boat", 1L),
 						'G', GT_ModHandler.getModItem("GalacticraftCore", "item.canvas", 1L)});
 
 		// --- Aerostate Platform Casing
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("impact", "gt.blockCase3", 4L, 1), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("impact", "gt.blockCase3", 4L, 1), tBitMask,
 				new Object[]{"SSS", "PBP", "PsP", 'S', "slabWood", 'B', "frameGtWood", 'P', "plankWood"});
 
 		// --- Aerostate
-		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14064), bitsd,
+		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14064), tBitMask,
 				new Object[]{"sSP", "RFR", "WWW", 'S', "slabWood", 'P', "pipeSmallSteel", 'F', "frameGtWood", 'R', "plateRubber", 'W', "plankWood"});
 	}
 	
