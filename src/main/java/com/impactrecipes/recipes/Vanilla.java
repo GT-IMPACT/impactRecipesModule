@@ -343,7 +343,7 @@ public class Vanilla implements Runnable {
         GT_ModHandler.addShapelessCraftingRecipe(new ItemStack(Items.book), tBitMask, new Object[]{"platePaper", "platePaper", "platePaper", new ItemStack(Items.string), CoreItems2.getRecipe(197, 1), CoreItems2.getRecipe(197, 1)});
 
 		// --- Alternative recipe of Flint
-        GT_ModHandler.addShapelessCraftingRecipe(new ItemStack(Items.flint), tBitMask, new Object[]{"gravel", "gravel", "gravel"});
+        GT_ModHandler.addShapelessCraftingRecipe(new ItemStack(Items.flint), tBitMask, new Object[]{GT_ModHandler.getModItem("minecraft", "gravel", 1L), GT_ModHandler.getModItem("minecraft", "gravel", 1L), GT_ModHandler.getModItem("minecraft", "gravel", 1L)});
 
     }
 
