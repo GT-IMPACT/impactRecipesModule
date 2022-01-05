@@ -65,6 +65,7 @@ public class Gregtech implements Runnable {
         canner();
         distil();
 		wormhole();
+        implosionCompressor();
     }
 
     private void removeGT_WTF_CHECK_GT_CODE() {
@@ -4200,4 +4201,12 @@ public class Gregtech implements Runnable {
         GT_Values.RA.addTinyWormHoleRecipe(GT_Values.NI, Materials.EnrichedNaquadria.getFluid(1000L), GT_Values.NF, GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Duranium, 54L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Europium, 45L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 36L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahEnriched, 33L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Trinium, 26L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Californium, 23L), new int[]{10000, 10000, 10000, 10000, 10000, 10000}, 200, 2000000);
 
 	}
+
+    private void implosionCompressor() {
+        // --- Amethyst
+        RA.addImplosionRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Amethyst, 4L), 24,
+                GT_OreDictUnificator.get(OrePrefixes.gem, Materials.Amethyst, 3L),
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DarkAshes, 2L), new int[]{10000, 10000}
+        );
+    }
 }
