@@ -574,7 +574,7 @@ public class TecTech implements Runnable {
                                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.EnrichedMysteriousCrystal, 32),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Superconductor, 16)
                         }, new FluidStack[]{
-                                Materials.EnrichedNaquadria.getMolten(2592),
+                                Materials.EnrichedNaquadria.getFluid(2592),
                                 Materials.Neutronium.getMolten(2592),
                                 new FluidStack(FluidRegistry.getFluid("ic2coolant"), 4000),
                                 Materials.Osmiridium.getMolten(1296)
