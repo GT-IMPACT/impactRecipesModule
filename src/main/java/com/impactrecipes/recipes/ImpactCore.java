@@ -403,6 +403,11 @@ public class ImpactCore implements Runnable {
 				new Object[]{"PLP", "CGC", "PBP", 'P', GT_ModHandler.getModItem("impact", "gt.blockCase3", 1L, 2),
 						'L', GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L, 0),
 						'C', "cobblestone", 'G', "gearWood", 'B', ToolDictNames.craftingToolSoftHammer});
+		
+		// --- The Mill Rotor
+		GT_ModHandler.addCraftingRecipe(new ItemStack(ItemRegistery.TheWind, 1, 0), tBitMask,
+				new Object[]{"SLS", "LGL", "SLS", 'L', GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L, 0),
+						'S', "stickWood", 'G', "gearWood"});			
 
 		// --- Volumetric Configurator
 		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14604), tBitMask,
