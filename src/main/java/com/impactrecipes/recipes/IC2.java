@@ -513,7 +513,7 @@ public class IC2 implements Runnable {
 
         // --- Coal Chunk
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemPartCoalChunk",1), tBitMask,
-                new Object[] {"CCC","CBC", "CCC", 'C', GT_ModHandler.getModItem("IC2","itemPartCoalBlock",1),'B', "obsidian"});
+                new Object[] {"CCC","CBC", "CCC", 'C', GT_ModHandler.getModItem("IC2","itemPartCoalBlock",1),'B', "blockIron"});
 
     }
 
