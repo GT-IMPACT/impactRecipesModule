@@ -277,6 +277,27 @@ public class BuildCraft implements Runnable {
                 tBitMask,
                 new Object[]{" f ", "SGS", " s ", 'S', CoreItems2.getRecipe(SandstoneRod.getMetaID(), 1),
                         'G', GT_ModHandler.getModItem("minecraft", "glass_pane", 1L)});
+        // --- Iron Pipe
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler
+                        .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsiron", 1L, 0), tBitMask,
+                new Object[]{" f ", "SGS", " s ", 'S', OrePrefixes.stick.get(Materials.Iron), 'G',
+                        GT_ModHandler.getModItem("minecraft", "glass_pane", 1L)});
+        // --- Gold Pipe
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler
+                        .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsgold", 1L, 0), tBitMask,
+                new Object[]{" f ", "SGS", " s ", 'S', OrePrefixes.stick.get(Materials.Gold), 'G',
+                        GT_ModHandler.getModItem("minecraft", "glass_pane", 1L)});
+        // --- Clay Pipe
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler
+                        .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsclay", 1L, 0), tBitMask,
+                new Object[]{"CPG", 'C', OrePrefixes.dust.get(Materials.Calcite), 'P',
+                        GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemssandstone", 1L, 0),
+                        'G', OrePrefixes.dust.get(Materials.Gypsum)});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler
+                        .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsclay", 1L, 0), tBitMask,
+                new Object[]{"GPC", 'C', OrePrefixes.dust.get(Materials.Calcite), 'P',
+                        GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemssandstone", 1L, 0),
+                        'G', OrePrefixes.dust.get(Materials.Gypsum)});
         // --- Void Pipe
         GT_ModHandler.addCraftingRecipe(GT_ModHandler
                         .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsvoid", 1L, 0), tBitMask,
@@ -321,6 +342,30 @@ public class BuildCraft implements Runnable {
                     tBitMask,
                     new Object[]{" f ", "SGS", " s ", 'S', CoreItems2.getRecipe(SandstoneRod.getMetaID(), 1),
                             'G', new ItemStack(Blocks.stained_glass_pane, 1, i)});
+            // --- Clay Pipe (Colorfull)
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler
+                            .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsclay", 1L, i + 1), tBitMask,
+                    new Object[]{"CPG", 'C', OrePrefixes.dust.get(Materials.Calcite), 'P',
+                            GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemssandstone", 1L, i + 1),
+                            'G', OrePrefixes.dust.get(Materials.Gypsum)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler
+                            .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsclay", 1L, i + 1), tBitMask,
+                    new Object[]{"GPC", 'C', OrePrefixes.dust.get(Materials.Calcite), 'P',
+                            GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemssandstone", 1L, i + 1),
+                            'G', OrePrefixes.dust.get(Materials.Gypsum)});
+            // --- Iron Pipe (Colorfull)
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler
+                            .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsiron", 1L, i + 1),
+                    tBitMask,
+                    new Object[]{" f ", "SGS", " s ", 'S', OrePrefixes.stick.get(Materials.Iron), 'G',
+                            new ItemStack(Blocks.stained_glass_pane, 1, i)});
+            // --- Gold Pipe (Colorfull)
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler
+                            .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsgold", 1L, i + 1),
+                    tBitMask,
+                    new Object[]{" f ", "SGS", " s ", 'S', OrePrefixes.stick.get(Materials.Gold), 'G',
+                            new ItemStack(Blocks.stained_glass_pane, 1, i)});
+
             // --- Void Pipe
             GT_ModHandler.addCraftingRecipe(GT_ModHandler
                             .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsvoid", 1L, i + 1),
@@ -431,7 +476,7 @@ public class BuildCraft implements Runnable {
                     100, 16);
             // --- Quartz Pipe
             GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
-                            GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.NetherQuartz, 2L),
+                            GT_OreDictUnificator.get(OrePrefixes.stick, Materials.NetherQuartz, 4L),
                             new ItemStack(Blocks.stained_glass_pane, 1, i), GT_Utility.getIntegratedCircuit(3)}, null,
                     GT_ModHandler
                             .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsquartz", 4L, i + 1),
