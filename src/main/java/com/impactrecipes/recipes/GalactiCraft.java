@@ -228,6 +228,26 @@ public class GalactiCraft implements Runnable {
                 true);
         removeRecipeByOutput(GT_ModHandler.getModItem("GalacticraftMars", "item.titanium_boots", 1L, 0),
                 true, false, true);
+
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalacticraftCore", "item.steel_pickaxe", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalacticraftCore", "item.steel_axe", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalacticraftCore", "item.steel_hoe", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalacticraftCore", "item.steel_shovel", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalacticraftCore", "item.steel_sword", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalacticraftCore", "item.steel_helmet", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalacticraftCore", "item.steel_chestplate", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalacticraftCore", "item.steel_leggings", 1L, 0),
+                true, false, true);
+        removeRecipeByOutput(GT_ModHandler.getModItem("GalacticraftCore", "item.steel_boots", 1L, 0),
+                true, false, true);
+
         removeRecipeByOutput(GT_ModHandler.getModItem("GalacticraftMars", "tile.mars", 1L, 8), true,
                 false, true);
         removeRecipeByOutput(GT_ModHandler.getModItem("GalacticraftMars", "item.null", 1L, 1), true,

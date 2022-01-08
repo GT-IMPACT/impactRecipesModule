@@ -269,6 +269,49 @@ public class AE implements Runnable {
                 false);
 
         removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolCertusQuartzAxe", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolCertusQuartzHoe", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolCertusQuartzSpade", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolCertusQuartzPickaxe", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolCertusQuartzSword", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolCertusQuartzCuttingKnife", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolCertusQuartzWrench", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolNetherQuartzAxe", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolNetherQuartzHoe", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolNetherQuartzSpade", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolNetherQuartzPickaxe", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolNetherQuartzSword", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolNetherQuartzCuttingKnife", 1L, 0), true, false,
+                false);
+        removeRecipeByOutput(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ToolNetherQuartzWrench", 1L, 0), true, false,
+                false);
+
+        removeRecipeByOutput(
                 GT_ModHandler.getModItem("AE2-GT5-P2P", "part", 1L));
     }
 
@@ -653,6 +696,13 @@ public class AE implements Runnable {
                         'A', GT_ModHandler.getModItem("extracells", "storage.component", 1L, 4),
                         'B', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockChest", 1L),
                         'I', GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyCell", 1L)});
+
+        // --- Certus Quartz Wrench
+        addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ToolCertusQuartzWrench", 1L, 0), tBitMask,
+                new Object[]{"QwQ", "QQQ", " Q ", 'Q', "gemCertusQuartz"});
+        // --- Nether Quartz Wrench
+        addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ToolNetherQuartzWrench", 1L, 0), tBitMask,
+                new Object[]{"QwQ", "QQQ", " Q ", 'Q', "gemNetherQuartz"});
     }
 
     private void alloySmelterRecipe() {
