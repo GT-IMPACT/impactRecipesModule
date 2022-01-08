@@ -13,6 +13,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import static com.impactrecipes.recipes.ImpactCore.CoreItems2;
 import static com.impactrecipes.util.RecipeUtils.*;
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeFurnaceSmelting;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
@@ -29,6 +30,7 @@ public class Vanilla implements Runnable {
         oreRegisterRecipe();
         assembler();
 		slicer();
+        autoclave();
     }
 
     private void removeVanila() {
@@ -493,4 +495,10 @@ public class Vanilla implements Runnable {
 		GT_Values.RA.addSlicerRecipe(GT_ModHandler.getModItem("minecraft", "melon_block", 1L), ItemList.Shape_Slicer_Flat.get(0L), GT_ModHandler.getModItem("minecraft", "melon", 8L), 128, 4);
 
 	}
+
+    private void autoclave() {
+        RA.addAutoclaveRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Clay, 1), Materials.Water.getFluid(250L),
+                new ItemStack(Items.clay_ball), 10000,
+                20, 2);
+    }
 }

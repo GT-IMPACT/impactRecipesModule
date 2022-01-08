@@ -216,6 +216,12 @@ public class Gregtech implements Runnable {
                 new Object[]{"stone", ToolDictNames.craftingToolMortar
                 });
 
+        //Brick Dust
+        GT_ModHandler.addShapelessCraftingRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Brick, 1L),
+                new Object[]{new ItemStack(Blocks.brick_block), ToolDictNames.craftingToolMortar
+                });
+
         //Filter Casing
         GT_ModHandler.addCraftingRecipe(
                 ItemList.Casing_Vent.get(6L), tBitMask, new Object[]{"PPP", "SFS", "MIV",
