@@ -492,6 +492,16 @@ public class ImpactCore implements Runnable {
 		// --- Aerostate
 		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14064), tBitMask,
 				new Object[]{"sSP", "RFR", "WWW", 'S', "slabWood", 'P', "pipeSmallSteel", 'F', "frameGtWood", 'R', "plateRubber", 'W', "plankWood"});
+
+		// --- Data Reader
+		GT_ModHandler.addCraftingRecipe(GT_ItemList.Machine_DataReader.get(1L), tBitMask,
+				new Object[]{"BdB","GES","PwP",
+						'B', OrePrefixes.screw.get(Materials.Iridium),
+						'P', OrePrefixes.plate.get(Materials.Iridium),
+						'G', ItemList.Cover_Screen,
+						'S', OrePrefixes.circuit.get(Materials.Elite),
+						'E', ItemList.Hull_IV});
+
 	}
 	
 	private void furnace() {
