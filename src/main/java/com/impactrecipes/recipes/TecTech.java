@@ -857,5 +857,21 @@ public class TecTech implements Runnable {
                 },
                 ItemList.Teleporter.get(1L), 300 * 20, 8000000);
 
+        //Debug maintenance hatch
+        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Hatch_AutoMaintenance.get(1L),
+                2764800, 128, 500000, 6, new Object[]{
+                        ItemList.Hatch_AutoMaintenance.get(1L),
+                        ItemList.Robot_Arm_UV.get(1L),
+                        ItemList.Electric_Pump_UV.get(1L),
+                        ItemList.Conveyor_Module_UV.get(1L),
+                        new Object[]{OrePrefixes.circuit.get(Materials.Superconductor), 4L},
+                        ItemList.Energy_LapotronicOrb2.get(1L),
+                        ItemList.Duct_Tape.get(64L),
+                        ItemList.Duct_Tape.get(64L),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Americium, 64L),
+                }, new FluidStack[]{
+                        Materials.Lubricant.getFluid(256000),
+                        Materials.SolderingAlloy.getMolten(1296L),
+                }, GT_ItemList.Maintenance.get(1), 6000, 500000);
     }
 }
