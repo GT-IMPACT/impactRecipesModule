@@ -82,6 +82,7 @@ checkPropertyExists("containsMixinsAndOrCoreModOnly")
 checkPropertyExists("usesShadowedDependencies")
 checkPropertyExists("developmentEnvironmentUserName")
 
+modId = modId.replaceAll("\\|", "")
 
 String javaSourceDir = "src/main/java/"
 
