@@ -15,19 +15,19 @@ import java.util.List;
 
 @Mod(
         name = "Impact | Recipes Module",
-        version = ImpactRecipesModule.VERSION,
+        version = "MC1710",
         modid = ImpactRecipesModule.MODID,
         dependencies = "required-after:Forge; after:impact; after:IC2; after:gregtech; after:tectech; after:EnderIO;"
 )
 public class ImpactRecipesModule {
 
     public static final String MODID = "Impact|RecipesModule";
-    public static final String VERSION = "0.0.1";
+    public static final String VERSION = "MC1710";
     public static final String ASSET_PREFIX = "Impact|RecipesModule".toLowerCase();
     public static final String TEXTURE_PATH = "Impact".toLowerCase();
     public static List<Runnable> sPostInitRecipes = new ArrayList<>();
 
-    @Mod.Instance("Impact|RecipesModule")
+    @Mod.Instance(MODID)
     public static ImpactRecipesModule instance;
 
     public ImpactRecipesModule() {
