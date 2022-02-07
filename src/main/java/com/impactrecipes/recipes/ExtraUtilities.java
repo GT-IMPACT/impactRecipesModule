@@ -1,5 +1,6 @@
 package com.impactrecipes.recipes;
 
+import com.impact.mods.gregtech.GT_ItemList;
 import gregtech.api.enums.GT_Values;
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
@@ -121,7 +122,7 @@ public class ExtraUtilities implements Runnable {
     private void printer3d() {
         //Ender Quarry
         GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
-                ItemList.Machine_IV_Miner.get(1L), ItemList.Field_Generator_LuV.get(1L),
+                GT_ItemList.AdvancedMiner.get(1L), ItemList.Field_Generator_LuV.get(1L),
                 ItemList.Electric_Motor_LuV.get(3L),
                 GT_ModHandler.getModItem("ExtraUtilities", "enderThermicPump", 1, 0),
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 4),
