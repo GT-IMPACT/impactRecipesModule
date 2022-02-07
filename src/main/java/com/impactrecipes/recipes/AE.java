@@ -1370,6 +1370,18 @@ public class AE implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 12)
                 }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1, 0), null,
                 30 * 20, 1920);
+				
+		//Energy Acceptor
+        RA.addPrimitiveLineRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyCell", 1, 0),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.EnergeticAlloy, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 7)/*crystal*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 24),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 8)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyAcceptor", 1, 0),
+                200, 480);
     }
 
     private void pulveriserRecipe() {
@@ -1657,18 +1669,6 @@ public class AE implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4)
                 }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 32, 0),
                 800, 2000000, 1600);
-
-        //Energy Acceptor
-        impact.I_RA.addMESPRecipes(new ItemStack[]{
-                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyCell", 1, 0),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.EnergeticAlloy, 2),
-                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 7)/*crystal*/,
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 24),
-                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4),
-                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 8)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyAcceptor", 1, 0),
-                200, 480, 1000);
 
         //New Pattern Terminal
         impact.I_RA.addMESPRecipes(new ItemStack[]{
