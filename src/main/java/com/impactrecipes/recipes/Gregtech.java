@@ -1242,13 +1242,13 @@ public class Gregtech implements Runnable {
 
     private void fusion() {
         RA.addFusionReactorRecipe(Materials.Tartarite.getFluid(16), Materials.Europium.getMolten(16),
-                Materials.DraconiumPlasma.getFluid(16), 32, 32768, 300000000);
+                Materials.DraconiumPlasma.getFluid(16), 32, 30000, 300000000);
         RA.addFusionReactorRecipe(Materials.EnrichedTartarite.getFluid(16),
                 Materials.Neutronium.getMolten(16), Materials.DraconiumAwakenedPlasma.getFluid(16), 64,
-                262144, 1000000000);
+                250000, 1000000000);
         RA.addFusionReactorRecipe(Materials.InfinityCatalyst.getMolten(16),
                 Materials.Phoenixite.getMolten(16), Materials.Neutronium.getPlasma(16), 64,
-                800000, 2000000000);
+                500000, 2000000000);
     }
 
     private void freezSolidifier() {
