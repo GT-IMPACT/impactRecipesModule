@@ -1380,7 +1380,7 @@ public class AE implements Runnable {
                         GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 24),
                         GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4),
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 8)
-                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyAcceptor", 1, 0),
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyAcceptor", 1, 0), null,
                 200, 480);
     }
 
