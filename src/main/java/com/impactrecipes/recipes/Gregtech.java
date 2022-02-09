@@ -403,25 +403,25 @@ public class Gregtech implements Runnable {
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Bronze, 4L),
                         GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Bronze, 4L),
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Bronze, 1L),
-                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Firebox_Bronze.get(2L), 50, 16);
+                        GT_Utility.getIntegratedCircuit(10)}, null, ItemList.Casing_Firebox_Bronze.get(2L), 50, 16);
         // --- Steel Firebox Casing
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 4L),
                         GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Steel, 4L),
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1L),
-                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Firebox_Steel.get(2L), 50, 16);
+                        GT_Utility.getIntegratedCircuit(10)}, null, ItemList.Casing_Firebox_Steel.get(2L), 50, 16);
         // --- Titanium Firebox Casing
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Titanium, 4L),
                         GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Titanium, 4L),
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Titanium, 1L),
-                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Firebox_Titanium.get(2L), 50, 16);
+                        GT_Utility.getIntegratedCircuit(10)}, null, ItemList.Casing_Firebox_Titanium.get(2L), 50, 16);
         // --- TungstenSteel Firebox Casing
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TungstenSteel, 4L),
                         GT_OreDictUnificator.get(OrePrefixes.stick, Materials.TungstenSteel, 4L),
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenSteel, 1L),
-                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Casing_Firebox_TungstenSteel.get(2L), 50, 16);
+                        GT_Utility.getIntegratedCircuit(10)}, null, ItemList.Casing_Firebox_TungstenSteel.get(2L), 50, 16);
         // --- Engine Intake Casing
         GT_Values.RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Titanium, 4L),
