@@ -602,7 +602,7 @@ public class ImpactCore implements Runnable {
 						GT_OreDictUnificator.get(OrePrefixes.dust, Materials.BandedIron, 1)},
 				new int[]{10000, 1200}, 400, 64
 		);
-		//GT_Values.RA.addPulveriserRecipe(GT_ModHandler.getModItem("GalaxySpace", "phobosblocks", 1L, 2), new ItemStack[]{GregTech_API.getStackofAmountFromOreDict("dustPhobos", 1), GT_OreDictUnificator.get(OrePrefixes.dustSmall, Materials.BandedIron, 1)}, new int[]{10000, 5000}, 400, 64);
+		//GT_Values.RA.addPulveriserRecipe(GT_ModHandler.getModItem("GalaxySpace", "phobosblocks", 1L, 2), new ItemStack[]{GregTech_API.getStackofAmountFromOreDict("dustPhobos", 1), GT_OreDictUnificator.get(OrePrefixes.dustSmall, Materials.BandedIron, 1)}, new int[]{10000, 5000}, 400, 60);
 		RA.addPulveriserRecipe(
 				GT_ModHandler.getModItem("Impact|GalacticModule", "deimosblocks", 1L, 0),
 				new ItemStack[]{GregTech_API.getStackofAmountFromOreDict("dustDeimos", 1),
@@ -1017,7 +1017,7 @@ public class ImpactCore implements Runnable {
 				GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.TungstenSteel, 32),
 				GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSE, 64),
 				GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSG, 64)
-		}, GT_ItemList.LapPowerStation.get(1L), null, 200 * 20, 4096);
+		}, GT_ItemList.LapPowerStation.get(1L), null, 200 * 20, 4092);
 		
 		//LapotronicCapacitorIV
 		RA.addBasicLineRecipe(new ItemStack[]{
@@ -3039,7 +3039,7 @@ public class ImpactCore implements Runnable {
 		);
 		GT_Values.RA.addAssemblerRecipe(new ItemStack[]{CoreItems2.getRecipe(54, 2),
 				GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TungstenSteel, 3L),
-				GT_Utility.getIntegratedCircuit(2)}, GT_Values.NF, CoreItems2.getRecipe(55, 1), 200, 256);
+				GT_Utility.getIntegratedCircuit(2)}, GT_Values.NF, CoreItems2.getRecipe(55, 1), 200, 250);
 		GT_Values.RA.addAssemblerRecipe(new ItemStack[]{CoreItems2.getRecipe(54, 3),
 				GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TungstenSteel, 6L),
 				GT_Utility.getIntegratedCircuit(3)}, GT_Values.NF, CoreItems2.getRecipe(56, 1), 300, 480);
@@ -3052,7 +3052,7 @@ public class ImpactCore implements Runnable {
 		GT_Values.RA.addAssemblerRecipe(new ItemStack[]{CoreItems2.getRecipe(56, 2),
 				GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TungstenSteel, 6L),
 				GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.ElectrumFlux, 1L),
-				GT_Utility.getIntegratedCircuit(2)}, GT_Values.NF, CoreItems2.getRecipe(57, 1), 200, 1024);
+				GT_Utility.getIntegratedCircuit(2)}, GT_Values.NF, CoreItems2.getRecipe(57, 1), 200, 1020);
 		
 		//Bars
 		GT_Values.RA

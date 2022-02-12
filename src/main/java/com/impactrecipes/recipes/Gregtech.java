@@ -522,7 +522,7 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Tritanium, 1L), 736, 7860);
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Americium, 1L),
-                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Americium, 1L), 592, 4096);
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Americium, 1L), 592, 4092);
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Platinum, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Platinum, 1L), 466, 480);
@@ -579,7 +579,7 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1L), 194, 480);
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.NiobiumTitanium, 1L),
-                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.NiobiumTitanium, 1L), 152, 4096);
+                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.NiobiumTitanium, 1L), 152, 4092);
         RA.addVacuumFreezerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Nichrome, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Nichrome, 1L), 108, 480);
@@ -1001,7 +1001,7 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 4),
                 GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Steel, 8),
                 ItemList.Casing_ExplosionHazard.get(1L)
-        }, ItemList.Machine_Multi_ImplosionCompressor.get(1L), null, 30 * 20, 256);
+        }, ItemList.Machine_Multi_ImplosionCompressor.get(1L), null, 30 * 20, 250);
 
         //Vacuum Freezer
         RA.addPrimitiveLineRecipe(new ItemStack[]{
@@ -1010,7 +1010,7 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 4),
                 GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Aluminium, 8),
                 ItemList.Casing_FrostHazard.get(1L)
-        }, ItemList.Machine_Multi_VacuumFreezer.get(1L), null, 30 * 20, 256);
+        }, ItemList.Machine_Multi_VacuumFreezer.get(1L), null, 30 * 20, 250);
 
         //Titanium
         RA.addPrimitiveLineRecipe(new ItemStack[]{
@@ -1395,7 +1395,7 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Iridium, 2),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Niobium, 7),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Nickel, 13),
-                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Aluminium, 17), null, null, 600, 1024);
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Aluminium, 17), null, null, 600, 1020);
         GT_Values.RA
                 .addElectrolyzerRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Mithril, 5),
                         null, null, null, GT_OreDictUnificator.get(OrePrefixes.dust, Materials.CertusQuartz, 2),
@@ -3386,7 +3386,7 @@ public class Gregtech implements Runnable {
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.EnergeticAlloy, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 1)},
                         tMat.getMolten(144L * tMultiplier / 2L),
-                        CoreItems2.getRecipe(194, 4), 500, 256);
+                        CoreItems2.getRecipe(194, 4), 500, 250);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Fiberglass_Advanced.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(8L),

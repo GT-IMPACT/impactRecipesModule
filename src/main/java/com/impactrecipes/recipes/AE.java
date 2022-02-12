@@ -912,7 +912,7 @@ public class AE implements Runnable {
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 39),
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 32),
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemSpatialStorageCell.2Cubed", 1L),
-                200, 4096);
+                200, 4092);
         RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 39),
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 33),
@@ -922,7 +922,7 @@ public class AE implements Runnable {
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 39),
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 34),
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemSpatialStorageCell.128Cubed", 1L),
-                400, 16384);
+                400, 16324);
         // --- CoCraftingUnit
         RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0),
@@ -1056,14 +1056,14 @@ public class AE implements Runnable {
                 500000);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 22), GT_ItemList.GoldCoreChip.get(1L), GT_ItemList.LogicProcessorItemGoldCore.get(1L), 100, 480);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.DiamondCoreChip.get(1L), GT_ItemList.EngineeringProcessorItemDiamondCore.get(1L), 100, 1920);
-        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.EmeraldAdvancedCoreChip.get(1L), GT_ItemList.EngineeringProcessorItemEmeraldCore.get(1L), 100, 4096);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.EmeraldAdvancedCoreChip.get(1L), GT_ItemList.EngineeringProcessorItemEmeraldCore.get(1L), 100, 4092);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.EmeraldHighAdvancedCoreChip.get(1L), GT_ItemList.EngineeringProcessorItemAdvEmeraldCore.get(1L), 100, 30720);
 
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.GoldFluidCoreChip.get(1L), GT_ItemList.EngineeringProcessorFluidGoldCore.get(1L), 100, 480);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.DiamondFluidCoreChip.get(1L), GT_ItemList.EngineeringProcessorFluidDiamondCore.get(1L), 100, 1920);
-        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.EmeraldAdvancedFluidCoreChip.get(1L), GT_ItemList.EngineeringProcessorFluidEmeraldCore.get(1L), 100, 4096);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.EmeraldAdvancedFluidCoreChip.get(1L), GT_ItemList.EngineeringProcessorFluidEmeraldCore.get(1L), 100, 4092);
 
-        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.PulsatingSpatialCoreChip.get(1L), GT_ItemList.EngineeringProcessorSpatialPulsatingCore.get(1L), 100, 4096);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24), GT_ItemList.PulsatingSpatialCoreChip.get(1L), GT_ItemList.EngineeringProcessorSpatialPulsatingCore.get(1L), 100, 4092);
 
         // --- Storage Cell Component - 256K
         RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 4), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4L, 38), ItemList.Circuit_Chip_NAND.get(4), GT_ItemList.EngineeringProcessorItemEmeraldCore.get(1L), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem("extracells", "storage.component", 1L, 0), 200, 7680);
@@ -1137,16 +1137,16 @@ public class AE implements Runnable {
         RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 1), GT_ModHandler.getModItem("extracells", "storage.component", 2L, 9), ItemList.Circuit_Chip_SoC4.get(1), ItemList.Circuit_Parts_Crystal_Chip_Master.get(1L), GT_Utility.getIntegratedCircuit(2)}, Materials.Phoenixite.getMolten(36), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 10), 30, 2000000);
 
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L), GT_ModHandler.getModItem("extracells", "storage.component", 1L), GT_ModHandler.getModItem("extracells", "storage.physical", 1L), 100, 7680);
-        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.physical", 1L, 1), 100, 16384);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.physical", 1L, 1), 100, 16324);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 2), GT_ModHandler.getModItem("extracells", "storage.physical", 1L, 2), 100, 30720);
-        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 3), GT_ModHandler.getModItem("extracells", "storage.physical", 1L, 3), 100, 65536);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 3), GT_ModHandler.getModItem("extracells", "storage.physical", 1L, 3), 100, 65524);
 
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 4), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L), 100, 120);
-        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 5), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 1), 100, 256);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 5), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 1), 100, 250);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 6), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 2), 100, 480);
-        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 7), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 3), 100, 1024);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 7), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 3), 100, 1020);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 8), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 4), 100, 7680);
-        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 9), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 5), 100, 16384);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 9), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 5), 100, 16324);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 10), GT_ModHandler.getModItem("extracells", "storage.fluid", 1L, 6), 100, 30720);
 
         // --- Magnet
@@ -1477,11 +1477,11 @@ public class AE implements Runnable {
         RA.addUnboxingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 0), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 35), 50, 16);
         RA.addUnboxingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 1), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 36), 50, 30);
         RA.addUnboxingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 2), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 37), 50, 48);
-        RA.addUnboxingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 3), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 38), 50, 64);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 3), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 38), 50, 60);
         RA.addUnboxingRecipe(GT_ModHandler.getModItem("extracells", "craftingstorage", 1L, 0), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 0), 50, 96);
         RA.addUnboxingRecipe(GT_ModHandler.getModItem("extracells", "craftingstorage", 1L, 1), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 1), 50, 120);
         RA.addUnboxingRecipe(GT_ModHandler.getModItem("extracells", "craftingstorage", 1L, 2), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 2), 50, 192);
-        RA.addUnboxingRecipe(GT_ModHandler.getModItem("extracells", "craftingstorage", 1L, 3), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 3), 50, 256);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem("extracells", "craftingstorage", 1L, 3), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem("extracells", "storage.component", 1L, 3), 50, 250);
     }
 
     private void mixerRecipe() {
