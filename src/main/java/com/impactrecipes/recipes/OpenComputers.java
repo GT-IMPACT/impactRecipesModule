@@ -403,13 +403,6 @@ public class OpenComputers implements Runnable {
                                 ItemList.Cover_ItemDetector, 'H', ItemList.Casing_MV, 'P',
                                 OrePrefixes.plate.get(Materials.Aluminium)});
 
-        // --- P2P
-        GT_ModHandler.addShapelessCraftingRecipe(
-                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 468),
-                GT_ModHandler.RecipeBits.NOT_REMOVABLE,
-                new Object[]{GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 460),
-                        GT_ModHandler.getModItem("OpenComputers", "cable", 1L, 0)});
-
         // --- Grog
         GT_Values.RA.addChemicalRecipe(Materials.Acetone.getCells(1), Materials.Sugar.getDust(1),
                 Materials.SulfuricAcid.getFluid(1000), null,

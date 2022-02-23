@@ -703,6 +703,32 @@ public class AE implements Runnable {
         // --- Nether Quartz Wrench
         addCraftingRecipe(GT_ModHandler.getModItem("appliedenergistics2", "item.ToolNetherQuartzWrench", 1L, 0), tBitMask,
                 new Object[]{"QwQ", "QQQ", " Q ", 'Q', "gemNetherQuartz"});
+
+        // --- P2P Tunnels
+        addCraftingRecipe(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 470),
+                tBitMask,
+                new Object[]{"d  ", " O ", "   ", 'O', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 460)});
+        addCraftingRecipe(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 462),
+                tBitMask,
+                new Object[]{" d ", " O ", "   ", 'O', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 460)});
+        addCraftingRecipe(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 467),
+                tBitMask,
+                new Object[]{"  d", " O ", "   ", 'O', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 460)});
+        addCraftingRecipe(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 463),
+                tBitMask,
+                new Object[]{"   ", " Od", "   ", 'O', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 460)});
+        addCraftingRecipe(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 461),
+                tBitMask,
+                new Object[]{"   ", " O ", "  d", 'O', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 460)});
+        addCraftingRecipe(
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 468),
+                tBitMask,
+                new Object[]{"   ", " O ", " d ", 'O', GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 460)});
     }
 
     private void alloySmelterRecipe() {
