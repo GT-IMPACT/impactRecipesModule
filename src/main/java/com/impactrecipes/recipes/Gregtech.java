@@ -2927,7 +2927,12 @@ public class Gregtech implements Runnable {
         GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockInterface", 1L, 0),
                 ItemList.Hatch_Output_Bus_HV.get(1L), ItemList.Hatch_Output_Bus_ME.get(1L), 200, 480);
 
-
+		//Radiation Proof Casing
+		GT_Values.RA.addAssemblerRecipe(
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Lead, 6L), 
+						GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenCarbide, 1L), GT_Utility.getIntegratedCircuit(1)}, 
+						Materials.Concrete.getMolten(576L), 
+				ItemList.Casing_RadiationProof.get(2L), 600, 120);
 
 
         ItemStack[] inHatches = {GT_ItemList.Hatch_Input_UEV.get(1), GT_ItemList.Hatch_Input_UIV.get(1),
