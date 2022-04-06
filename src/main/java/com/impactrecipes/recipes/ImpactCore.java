@@ -70,6 +70,7 @@ public class ImpactCore implements Runnable {
 		tesseract();
 		drying();
 		arcFurnace();
+		forgeHammer();
 	}
 	
 	private void hand() {
@@ -6145,6 +6146,12 @@ public class ImpactCore implements Runnable {
 		RA.addArcFurnaceRecipe(GT_ItemList.Tower_Casing.get(1),
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Ultimet, 3),
 						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.StainlessSteel, 1)}, null, 160, 96);
+	}
+
+	private void forgeHammer() {
+		// --- Clear Glass Dust
+		GT_Values.RA.addForgeHammerRecipe(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock2", 1L, 0),
+				CoreItems.getRecipe(33, 1), 50, 8);
 	}
 	
 }
