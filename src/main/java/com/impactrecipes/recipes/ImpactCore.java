@@ -5929,6 +5929,13 @@ public class ImpactCore implements Runnable {
 						GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Lead, 4L)},
 				480, 1920
 		);
+		// --- Lab-Safe Low Gravity Casing
+		RA.addDisassemblerRecipe(GT_ItemList.SpaceElevatorCasing.get(1L),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Zirconium, 2),
+						GT_OreDictUnificator.get(OrePrefixes.plate, Materials.BlueSteel, 3),
+						GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedSteel, 4)},
+				500, 120
+		);
 	}
 	
 	public void cyclon() {
@@ -6146,6 +6153,11 @@ public class ImpactCore implements Runnable {
 		RA.addArcFurnaceRecipe(GT_ItemList.Tower_Casing.get(1),
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Ultimet, 3),
 						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.StainlessSteel, 1)}, null, 160, 96);
+		// --- Lab-Safe Low Gravity Casing
+		RA.addArcFurnaceRecipe(GT_ItemList.LabSafeLGCasing.get(1),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.BlueSteel, 3),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Zirconium, 1)}, null, 160, 96);
+
 	}
 
 	private void forgeHammer() {
