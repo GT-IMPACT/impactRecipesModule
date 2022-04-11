@@ -5980,7 +5980,9 @@ public class ImpactCore implements Runnable {
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.TungstenSteel, 9)}, null, 360, 96);
 		// --- Radiation Proof Machine Casing
 		RA.addArcFurnaceRecipe(ItemList.Casing_RadiationProof.get(1),
-				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.TungstenCarbide, 4)}, null, 160, 96);
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Lead, 27),
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.TungstenCarbide, 1),
+						GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Stone, 1)}, null, 360, 96);
 		// --- Bronze Firebox Casing
 		RA.addArcFurnaceRecipe(ItemList.Casing_Firebox_Bronze.get(1),
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Bronze, 4)}, null, 160, 96);
