@@ -1581,6 +1581,36 @@ public class AE implements Runnable {
                         GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 12, 0)
                 }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockMolecularAssembler", 1, 0),
                 30 * 20, 1920, 800);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Machine_HV_Assembler.get(1L),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 43)/*Form*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 44)/*Ani*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 4, 23)/*Processor*/,
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.HSSG, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.VanadiumSteel, 8),
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 24, 0)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockMolecularAssembler", 4, 0),
+                60 * 20, 7680, 3200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Machine_EV_Assembler.get(1L),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 43)/*Form*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 44)/*Ani*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 8, 23)/*Processor*/,
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.YttriumBariumCuprate, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.VanadiumSteel, 16),
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 36, 0)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockMolecularAssembler", 16, 0),
+                120 * 20, 30720, 12800);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                        ItemList.Machine_IV_Assembler.get(1L),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 16, 43)/*Form*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 16, 44)/*Ani*/,
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 16, 23)/*Processor*/,
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Osmiridium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.VanadiumSteel, 32),
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 48, 0)
+                }, GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockMolecularAssembler", 64, 0),
+                240 * 20, 122880, 57600);
 
         //ME Quantum Ring
         impact.I_RA.addMESPRecipes(new ItemStack[]{
