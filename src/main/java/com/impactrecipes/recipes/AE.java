@@ -1298,6 +1298,16 @@ public class AE implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quartzite, 1),
                         GT_Utility.getIntegratedCircuit(10)}, null,
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 380), 200, 96);
+        // --- Illuminated Panel
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Glowstone, 1),
+                        GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 1),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 1),
+                        GT_Utility.getIntegratedCircuit(10)}, null,
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 180), 200, 96);
+
     }
 
     private void autoclaveRecipe() {
