@@ -1216,6 +1216,88 @@ public class AE implements Runnable {
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockEnergyCell", 1L),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 1),
                 GT_ModHandler.getModItem("extracells", "part.base", 1L, 8), 300, 120);
+
+        // --- ME Storage Housing
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("minecraft", "glass_pane", 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.CertusQuartz, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quartzite, 2),
+                        GT_Utility.getIntegratedCircuit(10)}, null,
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 39), 200, 96);
+        // --- Fluid Storage Housing
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("minecraft", "glass_pane", 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.CertusQuartz, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.NetherQuartz, 2),
+                        GT_Utility.getIntegratedCircuit(10)}, null,
+                GT_ModHandler.getModItem("extracells", "storage.casing", 1L, 1), 200, 96);
+        // --- Advanced Storage Housing
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 39),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.ReinforcedGlass, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HastelloyC276, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iridium, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2),
+                        GT_Utility.getIntegratedCircuit(10)}, null,
+                GT_ModHandler.getModItem("extracells", "storage.casing", 1), 200, 96);
+
+        // --- ME Conversion Monitor
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 400),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 43),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 44),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2),
+                        GT_Utility.getIntegratedCircuit(10)}, null,
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 420), 200, 96);
+        // --- ME Crafting Terminal
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 380),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24),
+                        ItemList.Cover_Crafting.get(1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2),
+                        GT_Utility.getIntegratedCircuit(10)}, null,
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 360), 200, 96);
+        // --- ME Interface Terminal
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 380),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 440),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2),
+                        GT_Utility.getIntegratedCircuit(10)}, null,
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 480), 200, 96);
+        // --- ME Pattern Terminal
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 380),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 52),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2),
+                        GT_Utility.getIntegratedCircuit(10)}, null,
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 340), 200, 96);
+        // --- ME Storage Monitor
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 180),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 280),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2),
+                        GT_Utility.getIntegratedCircuit(10)}, null,
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 400), 200, 96);
+        // --- ME Terminal
+        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 180),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.CertusQuartz, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.stick, Materials.NetherQuartz, 4),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quartzite, 1),
+                        GT_Utility.getIntegratedCircuit(10)}, null,
+                GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 380), 200, 96);
     }
 
     private void autoclaveRecipe() {
