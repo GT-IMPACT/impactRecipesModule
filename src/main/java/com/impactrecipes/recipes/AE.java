@@ -1303,8 +1303,8 @@ public class AE implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Glowstone, 1),
                         GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuartzGlass", 1L),
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 1),
-                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 8),
-                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 1),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 2L, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2),
                         GT_Utility.getIntegratedCircuit(10)}, null,
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 180), 200, 96);
 
