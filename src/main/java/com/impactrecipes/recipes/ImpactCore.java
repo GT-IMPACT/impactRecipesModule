@@ -5449,7 +5449,7 @@ public class ImpactCore implements Runnable {
 				new ItemStack[]{ItemList.Hull_HV.get(1L),
 						ItemList.Electric_Motor_HV.get(2L),
 						ItemList.Electric_Pump_HV.get(2L),
-						GT_ModHandler.getModItem("IC2", "itemPartCircuit", 2L),
+						GT_ModHandler.getModItem("IC2", "itemPartCircuitAdv", 2L),
 						GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Titanium, 2),
 						GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Titanium, 4),
 						GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 10)
@@ -5462,7 +5462,7 @@ public class ImpactCore implements Runnable {
 						ItemList.Electric_Motor_EV.get(2L),
 						ItemList.Electric_Pump_EV.get(2L),
 						GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.TungstenSteel, 4),
-						ItemList.Circuit_Master.get(4L),
+						ItemList.Circuit_Data.get(4L),
 						GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenSteel, 12),
 						GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TungstenSteel, 16)
 				}, 600 * 20, 1920
