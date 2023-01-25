@@ -2501,6 +2501,52 @@ public class ImpactCore implements Runnable {
 	}
 	
 	private void assembler() {
+		//LaserCore MK1	
+		final ItemStack[] LaserCore1 = {
+                GT_OreDictUnificator.get(OrePrefixes.gemExquisite, Materials.Diamond, 1),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenSteel, 1),
+                GregTech_API.getStackofAmountFromOreDict("plateYSZ", 4),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silver, 16),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HastelloyC276, 16)			
+        };
+		GT_Values.RA.addAssemblerRecipe(
+                LaserCore1,
+                null,
+                CoreItems2.getRecipe(198, 1),
+                20 * 20, 7680
+        );
+
+		//LaserCore MK2
+		final ItemStack[] LaserCore2 = {
+                GT_OreDictUnificator.get(OrePrefixes.gemExquisite, Materials.Ruby, 1),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Osmiridium, 1),
+                GregTech_API.getStackofAmountFromOreDict("plateGDC", 4),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Trinium, 16),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Lafium, 16)			
+        };
+		GT_Values.RA.addAssemblerRecipe(
+                LaserCore2,
+                null,
+                CoreItems2.getRecipe(199, 1),
+                20 * 30, 122800
+        );
+
+		//LaserCore MK3
+		final ItemStack[] LaserCore3 = {
+                GT_OreDictUnificator.get(OrePrefixes.gemExquisite, Materials.MysteriousCrystal, 1),
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.NaquadahAlloy, 1),
+                GregTech_API.getStackofAmountFromOreDict("plateLSCF", 4),
+                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Adamantium, 16),
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quantum, 16)			
+        };
+		GT_Values.RA.addAssemblerRecipe(
+                LaserCore3,
+                null,
+                CoreItems2.getRecipe(200, 1),
+                20 * 40, 2000000
+        );
+
+		//YSZ Unit	
 		final ItemStack[] yszUnit = {
 				GT_Utility.getIntegratedCircuit(6),
 				GregTech_API.getStackofAmountFromOreDict("plateYSZ", 6),
