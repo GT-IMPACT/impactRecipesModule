@@ -1076,14 +1076,14 @@ public class ImpactCore implements Runnable {
 		}, new ItemStack(lscLapotronicEnergyUnit, 1, 4), null, 160 * 20, 500000);
 		
 		//LapotronicCapacitorUHV
-		RA.addBasicLineRecipe(new ItemStack[]{
+		/*RA.addBasicLineRecipe(new ItemStack[]{
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
 				ItemList.ZPM2.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 8),
 				ItemList.Circuit_Chip_PPIC.get(12L),
 				GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Europium, 32),
 				GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Pikyonium64B, 64),
 				GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Neutronium, 64)
-		}, new ItemStack(lscLapotronicEnergyUnit, 1, 5), null, 180 * 20, 2000000);
+		}, new ItemStack(lscLapotronicEnergyUnit, 1, 5), null, 180 * 20, 2000000);*/
 		
 		//Mysterious Crystal Orb Capacitor
 		RA.addBasicLineRecipe(new ItemStack[]{
