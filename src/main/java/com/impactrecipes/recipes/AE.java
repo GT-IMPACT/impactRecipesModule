@@ -381,7 +381,6 @@ public class AE implements Runnable {
                 new Object[]{"FEF", "PMP", "PAP", 'P', OrePrefixes.plate.get(Materials.HastelloyN), 'A', GT_ModHandler.getModItem(AE2, "tile.BlockDenseEnergyCell", 1L), 'F', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 41), 'M', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), 'E', GT_ModHandler.getModItem("extracells", "part.base", 1L, 3)}
         );
         // --- ME Fluid Interface
-        addCraftingRecipe(GT_ModHandler.getModItem("extracells", "ecbaseblock", 1L), tBitMask, new Object[]{"POP", "FIF", "POP", 'P', OrePrefixes.plate.get(Materials.Lapis), 'F', GT_ModHandler.getModItem("extracells", "storage.component", 1L, 4), 'I', GT_ModHandler.getModItem(AE2, "tile.BlockInterface", 1L), 'O', GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 16)});
         addShapelessCraftingRecipe(GT_ModHandler.getModItem("extracells", "part.base", 1L, 9), tBitMask, new Object[]{GT_ModHandler.getModItem("extracells", "ecbaseblock", 1L)});
         addShapelessCraftingRecipe(GT_ModHandler.getModItem("extracells", "ecbaseblock", 1L), tBitMask,
                 new Object[]{GT_ModHandler.getModItem("extracells", "part.base", 1L, 9)}
@@ -409,29 +408,28 @@ public class AE implements Runnable {
                 0, new Object[]{GT_ModHandler.getModItem("extracells", "part.base", 1, 1)}
         );
     
-        //AE2FR Part Fluid Import
-        addShapelessCraftingRecipe(GT_ModHandler.getModItem("extracells", "part.base", 1, 1),
-                0, new Object[]{GT_ModHandler.getModItem("ae2fc", "part_fluid_import", 1)}
-        );
         //EC2 Part Fluid Export
         addShapelessCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "part_fluid_export", 1),
                 0, new Object[]{GT_ModHandler.getModItem("extracells", "part.base", 1, 0)}
         );
     
-        //AE2FR Part Fluid Export
-        addShapelessCraftingRecipe(GT_ModHandler.getModItem("extracells", "part.base", 1, 0),
-                0, new Object[]{GT_ModHandler.getModItem("ae2fc", "part_fluid_export", 1)}
-        );
-        
         //AE2FR Fluid Interface
         addShapelessCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "part_fluid_interface", 1),
                 0, new Object[]{GT_ModHandler.getModItem("ae2fc", "fluid_interface", 1)}
+        );
+        addShapelessCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "part_fluid_interface", 1),
+                0, new Object[]{GT_ModHandler.getModItem("extracells", "part.base", 1, 9)}
         );
     
         //AE2FR Fluid Interface
         addShapelessCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "fluid_interface", 1),
                 0, new Object[]{GT_ModHandler.getModItem("ae2fc", "part_fluid_interface", 1)}
         );
+        addShapelessCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "fluid_interface", 1),
+                0, new Object[]{GT_ModHandler.getModItem("extracells", "ecbaseblock", 1)}
+        );
+
+
     }
 
     private void alloySmelterRecipe() {
@@ -810,55 +808,53 @@ public class AE implements Runnable {
     private void meSystemProvider() {
         //Fluid Descretizer
         impact.I_RA.addMESPRecipes(new ItemStack[]{
-                GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.MaragingSteel300, 4),
-                GT_ModHandler.getModItem(AE2, "tile.BlockController", 1, 0),
-                GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 2, 24) /*Diamond*/,
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 1),
                 ItemList.Electric_Pump_EV.get(1),
-        }, GT_ModHandler.getModItem("ae2fc", "fluid_discretizer", 1L), 30 * 20, 1920, 8000);
+                GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2, 220),
+				GT_ItemList.EngineeringProcessorFluidDiamondCore.get(2),
+				GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel300, 4)
+        }, GT_ModHandler.getModItem("ae2fc", "fluid_discretizer", 1L), 40 * 20, 7680, 1000);
     
         //Fluid Pattern Encoder
         impact.I_RA.addMESPRecipes(new ItemStack[]{
-                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel300, 4),
-                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Lapis, 2),
+                GT_ModHandler.getModItem(ae2stuff, "Encoder", 1),
                 ItemList.Machine_HV_Assembler.get(1),
-                GT_ModHandler.getModItem(AE2, "tile.BlockCellWorkbench", 1),
-                GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1, 24) /*Diamond*/,
-        }, GT_ModHandler.getModItem("ae2fc", "fluid_pattern_encoder", 1L), 30 * 20, 1920, 8000);
+                GT_ItemList.EngineeringProcessorFluidDiamondCore.get(2),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Lapis, 2),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel300, 4)
+        }, GT_ModHandler.getModItem("ae2fc", "fluid_pattern_encoder", 1L), 40 * 20, 7680, 2000);
     
         //ME Fluid Packet Decoder
         impact.I_RA.addMESPRecipes(new ItemStack[]{
-                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel300, 4),
-                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Lapis, 2),
-                ItemList.Machine_HV_Disassembler.get(1),
                 GT_ModHandler.getModItem(AE2, "tile.BlockCellWorkbench", 1),
-                GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1, 24) /*Diamond*/,
-        }, GT_ModHandler.getModItem("ae2fc", "fluid_packet_decoder", 1L), 30 * 20, 1920, 8000);
+                ItemList.Machine_HV_Disassembler.get(1),
+                GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 2, 24) /*Diamond*/,
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Lapis, 2),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel300, 4)
+        }, GT_ModHandler.getModItem("ae2fc", "fluid_packet_decoder", 1L), 40 * 20, 7680, 1000);
     
         //ME Dual Interface
-        impact.I_RA.addMESPRecipes(new ItemStack[]{
-                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel300, 4),
-                GT_ModHandler.getModItem(AE2, "tile.BlockInterface", 1),
-                GT_ItemList.EngineeringProcessorFluidDiamondCore.get(2),
-                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Lapis, 2),
-        }, GT_ModHandler.getModItem("ae2fc", "fluid_interface", 1L), 30 * 20, 1920, 8000);
-    
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_HV.get(1L), GT_ItemList.EngineeringProcessorFluidGoldCore.get(2), GT_ModHandler.getModItem(AE2, "tile.BlockInterface", 1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel300, 4)}, GT_ModHandler.getModItem("ae2fc", "fluid_interface", 1, 0), 100, 1920, 500);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_EV.get(1L), GT_ItemList.EngineeringProcessorFluidDiamondCore.get(2), GT_ModHandler.getModItem(AE2, "tile.BlockInterface", 2), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.MaragingSteel300, 4)}, GT_ModHandler.getModItem("ae2fc", "fluid_interface", 2, 0), 200, 7680, 1000);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_IV.get(1L), GT_ItemList.EngineeringProcessorFluidEmeraldCore.get(2), GT_ModHandler.getModItem(AE2, "tile.BlockInterface", 4), GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.MaragingSteel300, 4)}, GT_ModHandler.getModItem("ae2fc", "fluid_interface", 4, 0), 300, 30720, 2000);
+
         //Ingredient Buffer
         impact.I_RA.addMESPRecipes(new ItemStack[]{
-                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel300, 4),
-                GT_ItemList.EngineeringProcessorFluidDiamondCore.get(1),
-                ItemList.Electric_Pump_EV.get(2),
-                GT_ModHandler.getModItem(AE2, "tile.BlockCellWorkbench", 1),
-                GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1, 23) /*Quartz*/,
-        }, GT_ModHandler.getModItem("ae2fc", "ingredient_buffer", 1L), 30 * 20, 1920, 8000);
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 1),
+				GT_ModHandler.getModItem(AE2, "tile.BlockCellWorkbench", 1),
+				ItemList.Electric_Pump_EV.get(2),
+                GT_ItemList.EngineeringProcessorFluidDiamondCore.get(2),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel300, 4)
+        }, GT_ModHandler.getModItem("ae2fc", "ingredient_buffer", 1L), 30 * 20, 1920, 1000);
     
         //Large Ingredient Buffer
         impact.I_RA.addMESPRecipes(new ItemStack[]{
-                GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.MaragingSteel300, 4),
-                GT_ItemList.EngineeringProcessorFluidDiamondCore.get(1),
-                ItemList.Electric_Pump_IV.get(2),
-                GT_ModHandler.getModItem(AE2, "tile.BlockCellWorkbench", 1),
-                GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1, 23) /*Quartz*/,
-        }, GT_ModHandler.getModItem("ae2fc", "large_ingredient_buffer", 1L), 30 * 20, 1920, 8000);
+                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenSteel, 1),
+				GT_ModHandler.getModItem("ae2fc", "ingredient_buffer", 1L),
+				ItemList.Electric_Pump_IV.get(2),
+                GT_ItemList.EngineeringProcessorFluidEmeraldCore.get(2),
+                GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.MaragingSteel300, 4)
+        }, GT_ModHandler.getModItem("ae2fc", "large_ingredient_buffer", 1L), 60 * 20, 7680, 4000);
     
         //OC Pattern Editor
         impact.I_RA.addMESPRecipes(new ItemStack[]{
@@ -872,21 +868,21 @@ public class AE implements Runnable {
     
         //ME Fluid Pattern Terminal
         impact.I_RA.addMESPRecipes(new ItemStack[]{
-                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel300, 4),
-                GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1, 340),
-                ItemList.Electric_Pump_EV.get(1),
-                GT_ItemList.EngineeringProcessorFluidDiamondCore.get(1),
-                GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1, 23) /*Quartz*/,
-        }, GT_ModHandler.getModItem("ae2fc", "part_fluid_pattern_terminal", 1L), 30 * 20, 1920, 8000);
+				GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1, 340),
+				GT_ItemList.EngineeringProcessorFluidDiamondCore.get(1),
+				GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1, 23),
+				ItemList.Electric_Pump_EV.get(2),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.MaragingSteel300, 4)
+        }, GT_ModHandler.getModItem("ae2fc", "part_fluid_pattern_terminal", 1L), 20 * 20, 1920, 400);
     
         //ME Fluid Processing Pattern Terminal
         impact.I_RA.addMESPRecipes(new ItemStack[]{
-                GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.MaragingSteel300, 4),
                 GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1, 500),
-                ItemList.Electric_Pump_EV.get(1),
-                GT_ItemList.EngineeringProcessorFluidDiamondCore.get(1),
-                GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1, 23) /*Quartz*/,
-        }, GT_ModHandler.getModItem("ae2fc", "part_fluid_pattern_terminal_ex", 1L), 30 * 20, 1920, 8000);
+				GT_ItemList.EngineeringProcessorFluidEmeraldCore.get(1),
+				GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1, 23),
+				ItemList.Electric_Pump_IV.get(2),
+                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.MaragingSteel300, 4)
+        }, GT_ModHandler.getModItem("ae2fc", "part_fluid_pattern_terminal_ex", 1L), 40 * 20, 7680, 800);
     
         //ME Controller
         impact.I_RA.addMESPRecipes(new ItemStack[]{GT_ModHandler.getModItem(AE2, "tile.BlockEnergyAcceptor", 1, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 2, 24)/*Diamond*/, GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2), GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 4, 76), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.MaragingSteel300, 4), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Titanium, 8)}, GT_ModHandler.getModItem(AE2, "tile.BlockController", 1, 0), 30 * 20, 1920, 8000);
@@ -968,23 +964,23 @@ public class AE implements Runnable {
         // --- Wireless Connector
         impact.I_RA.addMESPRecipes(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Vanadium, 1), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 56), GT_ModHandler.getModItem(AE2, "tile.BlockWireless", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.VanadiumSteel, 4)}, GT_ModHandler.getModItem("ae2stuff", "Wireless", 1L, 0), 40 * 20, 480, 1000);
         //ME Fluid Export Bus
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_LV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 2, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)}, GT_ModHandler.getModItem("extracells", "part.base", 1, 0), 200, 120, 50);
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_MV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 4, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)}, GT_ModHandler.getModItem("extracells", "part.base", 2, 0), 300, 480, 100);
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_HV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 6, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)}, GT_ModHandler.getModItem("extracells", "part.base", 4, 0), 400, 1920, 200);
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 8, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)}, GT_ModHandler.getModItem("extracells", "part.base", 8, 0), 500, 7680, 400);
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 10, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)}, GT_ModHandler.getModItem("extracells", "part.base", 12, 0), 600, 30720, 600);
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_LuV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 12, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)}, GT_ModHandler.getModItem("extracells", "part.base", 16, 0), 700, 122880, 800);
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_ZPM.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 14, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)}, GT_ModHandler.getModItem("extracells", "part.base", 24, 0), 800, 500000, 1200);
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 16, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)}, GT_ModHandler.getModItem("extracells", "part.base", 32, 0), 900, 2000000, 1600);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_LV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 2, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_export", 1, 0), 200, 120, 50);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_MV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 4, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_export", 2, 0), 300, 480, 100);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_HV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 6, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_export", 4, 0), 400, 1920, 200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 8, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_export", 8, 0), 500, 7680, 400);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 10, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_export", 12, 0), 600, 30720, 600);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_LuV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 12, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_export", 16, 0), 700, 122880, 800);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_ZPM.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 14, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_export", 24, 0), 800, 500000, 1200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 16, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_export", 32, 0), 900, 2000000, 1600);
         //ME Fluid Import Bus
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_LV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 2, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)}, GT_ModHandler.getModItem("extracells", "part.base", 1, 1), 200, 120, 50);
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_MV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 4, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)}, GT_ModHandler.getModItem("extracells", "part.base", 2, 1), 300, 480, 100);
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_HV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 6, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)}, GT_ModHandler.getModItem("extracells", "part.base", 4, 1), 400, 1920, 200);
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 8, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)}, GT_ModHandler.getModItem("extracells", "part.base", 8, 1), 500, 7680, 400);
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 10, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)}, GT_ModHandler.getModItem("extracells", "part.base", 12, 1), 600, 30720, 600);
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_LuV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 12, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)}, GT_ModHandler.getModItem("extracells", "part.base", 16, 1), 700, 122880, 800);
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_ZPM.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 14, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)}, GT_ModHandler.getModItem("extracells", "part.base", 24, 1), 800, 500000, 1200);
-        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 16, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)}, GT_ModHandler.getModItem("extracells", "part.base", 32, 1), 900, 2000000, 1600);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_LV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 2, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_import", 1, 1), 200, 120, 50);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_MV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 4, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_import", 2, 1), 300, 480, 100);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_HV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 6, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 6)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_import", 4, 1), 400, 1920, 200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_EV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSSG, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 8, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 8)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_import", 8, 1), 500, 7680, 400);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_IV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyC276, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 10, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 12)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_import", 12, 1), 600, 30720, 600);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_LuV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HastelloyN, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 12, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 16)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_import", 16, 1), 700, 122880, 800);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_ZPM.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lafium, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 14, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 20)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_import", 24, 1), 800, 500000, 1200);
+        impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Electric_Pump_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.CinobiteA243, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 16, 44), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 24)}, GT_ModHandler.getModItem("ae2fc", "part_fluid_import", 32, 1), 900, 2000000, 1600);
         //ME Fluid Storage Bus
         impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Hatch_Input_LV.get(1L), ItemList.Hatch_Output_LV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1, 44), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 2)}, GT_ModHandler.getModItem("extracells", "part.base", 1, 2), 200, 120, 50);
         impact.I_RA.addMESPRecipes(new ItemStack[]{ItemList.Hatch_Input_MV.get(1L), ItemList.Hatch_Output_MV.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.BlueSteel, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 2, 44), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 2, 43), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Vanadium, 4)}, GT_ModHandler.getModItem("extracells", "part.base", 2, 2), 300, 480, 100);
