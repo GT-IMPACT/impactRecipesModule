@@ -728,6 +728,12 @@ public class OpenComputers implements Runnable {
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Electrum, 8),
                                 GT_Utility.getIntegratedCircuit(1)}, tMat.getMolten(144L * tMultiplier / 2L),
                         CoreItems2.getRecipe(157, 1), 400, 64);
+						GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1L),
+                                ItemList.Circuit_Chip_ILC.get(2L), ItemList.Circuit_Parts_TransistorASMD.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Electrum, 8),
+                                GT_Utility.getIntegratedCircuit(1)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(157, 1), 400, 64);
                 //CU
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1L),
@@ -738,6 +744,12 @@ public class OpenComputers implements Runnable {
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1L),
                                 ItemList.Circuit_Chip_CPU.get(2L), ItemList.Circuit_Parts_TransistorSMD.get(4L),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Gold, 8),
+                                GT_Utility.getIntegratedCircuit(1)}, tMat.getMolten(144L * tMultiplier / 2L),
+                        CoreItems2.getRecipe(158, 1), 200, 30);
+				GT_Values.RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1L),
+                                ItemList.Circuit_Chip_CPU.get(2L), ItemList.Circuit_Parts_TransistorASMD.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Gold, 8),
                                 GT_Utility.getIntegratedCircuit(1)}, tMat.getMolten(144L * tMultiplier / 2L),
                         CoreItems2.getRecipe(158, 1), 200, 30);
