@@ -817,7 +817,7 @@ public class AE implements Runnable {
     
         //Fluid Pattern Encoder
         impact.I_RA.addMESPRecipes(new ItemStack[]{
-                GT_ModHandler.getModItem(ae2stuff, "Encoder", 1),
+                GT_ModHandler.getModItem("ae2stuff", "Encoder", 1),
                 ItemList.Machine_HV_Assembler.get(1),
                 GT_ItemList.EngineeringProcessorFluidDiamondCore.get(2),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Lapis, 2),
