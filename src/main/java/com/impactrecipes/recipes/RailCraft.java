@@ -1286,7 +1286,7 @@ public class RailCraft implements Runnable {
         recipe = new Object[]{
                 "GPG", "PBP", "GPG",
                 'B', OrePrefixes.block.get(Materials.Iron),
-                'G', OrePrefixes.gear.get(Materials.Iron),
+                'G', OrePrefixes.gearGt.get(Materials.Iron),
                 'P', OrePrefixes.plate.get(Materials.Iron)
         };
         GT_ModHandler
@@ -1295,7 +1295,7 @@ public class RailCraft implements Runnable {
         recipe = new Object[]{
                 "GPG", "PBP", "GPG",
                 'B', OrePrefixes.block.get(Materials.Steel),
-                'G', OrePrefixes.gear.get(Materials.Steel),
+                'G', OrePrefixes.gearGt.get(Materials.Steel),
                 'P', OrePrefixes.plate.get(Materials.Steel)
         };
         GT_ModHandler

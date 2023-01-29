@@ -233,7 +233,7 @@ public class BuildCraft implements Runnable {
                 .addCraftingRecipe(GT_ModHandler.getModItem("BuildCraft|Core", "engineBlock", 1L, 0),
                         tBitMask,
                         new Object[]{"PPP", "SIS", "GHG", 'P', OrePrefixes.plank.get(Materials.Wood), 'S',
-                                OrePrefixes.spring.get(Materials.Iron), 'G', OrePrefixes.gear.get(Materials.Iron),
+                                OrePrefixes.spring.get(Materials.Iron), 'G', OrePrefixes.gearGt.get(Materials.Iron),
                                 'I', new ItemStack(Blocks.piston), 'H', ItemList.Hull_Bronze});
         // --- Auto Workbench
         GT_ModHandler.addCraftingRecipe(

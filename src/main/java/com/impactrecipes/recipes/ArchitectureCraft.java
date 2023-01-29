@@ -35,7 +35,7 @@ public class ArchitectureCraft implements Runnable {
         // --- Architecs Saw Bench
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("ArchitectureCraft", "sawbench", 1L), tBitMask, new Object[]{"SPS", "BAB", "sLh", 'S', OrePrefixes.screw.get(Materials.Steel), 'P', GT_ModHandler.getModItem("minecraft", "heavy_weighted_pressure_plate", 1L), 'B', new ItemStack(Blocks.fence), 'A', GT_ModHandler.getModItem("ArchitectureCraft", "sawblade", 1L), 'L', GT_ModHandler.getModItem("ArchitectureCraft", "largePulley", 1L)});
         // --- Large Pulley
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("ArchitectureCraft", "largePulley", 1L), tBitMask, new Object[]{"SdS", "GWG", "ShS", 'S', OrePrefixes.screw.get(Materials.Steel), 'G', OrePrefixes.gearGtSmall.get(Materials.Iron), 'W', OrePrefixes.gear.get(Materials.Wood)});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("ArchitectureCraft", "largePulley", 1L), tBitMask, new Object[]{"SdS", "GWG", "ShS", 'S', OrePrefixes.screw.get(Materials.Steel), 'G', OrePrefixes.gearGtSmall.get(Materials.Iron), 'W', OrePrefixes.gearGt.get(Materials.Wood)});
         // --- Architecs Hammer
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("ArchitectureCraft", "hammer", 1L), tBitMask, new Object[]{"PPI", "fSI", " Sh", 'S', OrePrefixes.stick.get(Materials.Wood), 'P', OrePrefixes.plate.get(Materials.Steel), 'I', OrePrefixes.ingot.get(Materials.Iron)});
         // --- Architecs Chisel

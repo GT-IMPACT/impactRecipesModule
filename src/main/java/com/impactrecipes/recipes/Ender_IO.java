@@ -161,13 +161,13 @@ public class Ender_IO implements Runnable {
         // --- Remote Awareness Upgrade
         GT_ModHandler.addCraftingRecipe(new ItemStack(EnderIO.itemFunctionUpgrade, 1, 0), tBitMask,
                 new Object[]{"SES", "PDP", "hGd", 'P', OrePrefixes.plate.get(Materials.Silicon), 'S',
-                        OrePrefixes.screw.get(Materials.Steel), 'G', OrePrefixes.gear.get(Materials.Steel), 'E',
+                        OrePrefixes.screw.get(Materials.Steel), 'G', OrePrefixes.gearGt.get(Materials.Steel), 'E',
                         OrePrefixes.gearGtSmall.get(Materials.Steel), 'D',
                         OrePrefixes.gem.get(Materials.Diamond)});
         // --- YetaWrench
         GT_ModHandler.addCraftingRecipe(new ItemStack(EnderIO.itemYetaWench, 1, 0), tBitMask,
                 new Object[]{"IhI", "IGI", " I ", 'I', OrePrefixes.ingot.get(Materials.Steel), 'G',
-                        OrePrefixes.gear.get(Materials.Steel)});
+                        OrePrefixes.gearGt.get(Materials.Steel)});
         // --- Travel Anchor
         GT_ModHandler.addCraftingRecipe(new ItemStack(EnderIO.blockTravelPlatform, 1, 0), tBitMask,
                 new Object[]{"PGP", "COC", "PFP", 'O', new ItemStack(EnderIO.itemMachinePart, 1, 0), 'P',
