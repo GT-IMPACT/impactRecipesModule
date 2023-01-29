@@ -140,15 +140,6 @@ public class ExtraUtilities implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Enderium, 8),
                 GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.HastelloyC276, 8)
         }, GT_ModHandler.getModItem("ExtraUtilities", "endMarker", 1, 0), null, 50 * 20, 7680);
-
-        //Last Millennium
-        GT_Values.RA.addPrimitiveLineRecipe(new ItemStack[]{
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSpatialIOPort", 1, 0),
-                GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSpatialPylon", 4, 0),
-                GT_ModHandler.getModItem("EnderIO", "blockTelePad", 9, 0),
-                GT_OreDictUnificator.get(OrePrefixes.plateQuadruple, Materials.Vanadium, 10)
-        }, GT_ModHandler.getModItem("ExtraUtilities", "dark_portal", 1, 2), null, 40 * 20, 1920);
-
     }
 
     private void alloySmalter() {
