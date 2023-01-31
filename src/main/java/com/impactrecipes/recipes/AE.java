@@ -166,6 +166,8 @@ public class AE implements Runnable {
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockEnergyCell", 1L, 0), true, false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockDenseEnergyCell", 1L, 0), true, false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 1), true, false, false);
+		removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 2), true, false, false);
+		removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 3), true, false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), true, false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 0), true, false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 1), true, false, false);
@@ -202,6 +204,7 @@ public class AE implements Runnable {
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "ingredient_buffer", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "large_ingredient_buffer", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "oc_pattern_editor", 1L));
+		removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "level_maintainer", 1L));
     
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "part_fluid_pattern_terminal", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "part_fluid_pattern_terminal_ex", 1L));
@@ -482,6 +485,7 @@ public class AE implements Runnable {
         // --- Storage Cells
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_OreDictUnificator.get(OrePrefixes.gem, Materials.CertusQuartz, 1), GT_ModHandler.getModItem(AE2, "item.ItemViewCell", 1L), 100, 120);
     
+		RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_ModHandler.getModItem("ExtraUtilities", "trashcan", 1L), GT_ModHandler.getModItem("extracells", "physical.void", 1L), 100, 120);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 35), GT_ModHandler.getModItem(AE2, "item.ItemBasicStorageCell.1k", 1L), 100, 120);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 36), GT_ModHandler.getModItem(AE2, "item.ItemBasicStorageCell.4k", 1L), 100, 256);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 37), GT_ModHandler.getModItem(AE2, "item.ItemBasicStorageCell.16k", 1L), 100, 480);
@@ -492,6 +496,8 @@ public class AE implements Runnable {
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 34), GT_ModHandler.getModItem(AE2, "item.ItemSpatialStorageCell.128Cubed", 1L), 400, 16324);
         // --- CoCraftingUnit
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2), Materials.SolderingAlloy.getMolten(2304), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 1), 800, 1024);
+		RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 4), Materials.SolderingAlloy.getMolten(4608), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 2), 1000, 16324);
+		RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 8), Materials.SolderingAlloy.getMolten(9216), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 3), 1200, 262144);
     
         // --- Crafting Monitor
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 400), Materials.SolderingAlloy.getMolten(576), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingMonitor", 1L, 0), 200, 480);
@@ -685,14 +691,19 @@ public class AE implements Runnable {
                 RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 36), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 35 - i), GT_Values.NI, GT_Values.NI, null, 20, 2);
                 RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 56), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 55 - i), GT_Values.NI, GT_Values.NI, null, 20, 2);
                 RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 76), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 75 - i), GT_Values.NI, GT_Values.NI, null, 20, 2);
+				RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 576), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 575 - i), GT_Values.NI, GT_Values.NI, null, 20, 2);
                 RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 6), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem(AE2, "item.ItemPaintBall", 1L, 15 - i), GT_Values.NI, GT_Values.NI, null, 20, 2);
                 RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 536), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 535 - i), GT_Values.NI, GT_Values.NI, null, 20, 2);
+				RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 556), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 555 - i), GT_Values.NI, GT_Values.NI, null, 20, 2);
             }
             RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 15 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 16), GT_Values.NI, GT_Values.NI, null, 20, 2);
             RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 35 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 36), GT_Values.NI, GT_Values.NI, null, 20, 2);
             RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 55 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 56), GT_Values.NI, GT_Values.NI, null, 20, 2);
             RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 75 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 76), GT_Values.NI, GT_Values.NI, null, 20, 2);
+			RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 575 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 576), GT_Values.NI, GT_Values.NI, null, 20, 2);
             RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemPaintBall", 1L, 15 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 6), GT_Values.NI, GT_Values.NI, null, 20, 2);
+			RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 535 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 536), GT_Values.NI, GT_Values.NI, null, 20, 2);
+			RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 555 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 556), GT_Values.NI, GT_Values.NI, null, 20, 2);
         }
     }
 
@@ -765,7 +776,9 @@ public class AE implements Runnable {
         RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 4L, 16), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.PolyvinylChloride, 1L)}, Materials.Silicone.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 4L, 36), 100, 8, false);
         // --- Dense Cable
         RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 4L, 56), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Vanadium, 2L), GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.EnergeticAlloy, 2L)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 76), 200, 480, false);
-        // --- Smart Cable
+        // --- Backbone Cable
+        RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 4L, 76), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Palladium, 2L), GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.VibrantAlloy, 2L)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 576), 300, 1920, false);
+		// --- Smart Cable
         RA.addWireAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicon, 2L), GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 1L), GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Electrum, 1L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 36)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 56), 100, 120, false);
         // --- Covered Dense Cable
         RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 76), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 2), GT_Utility.getIntegratedCircuit(24)}, Materials.Silicone.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 536), 100, 8, false);
@@ -773,7 +786,12 @@ public class AE implements Runnable {
         RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 76), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.PolyvinylChloride, 1), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)}, Materials.Silicone.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 536), 200, 8, false);
         RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 76), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Polydimethylsiloxane, 1), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)}, Materials.StyreneButadieneRubber.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 536), 200, 8, false);
         RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 76), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Polydimethylsiloxane, 1), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)}, Materials.Silicone.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 536), 200, 8, false);
-    
+		// --- Covered Backbone Cable
+        RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 576), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 2), GT_Utility.getIntegratedCircuit(24)}, Materials.Silicone.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 556), 100, 8, false);
+        RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 576), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.PolyvinylChloride, 1), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)}, Materials.StyreneButadieneRubber.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 556), 200, 8, false);
+        RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 576), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.PolyvinylChloride, 1), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)}, Materials.Silicone.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 556), 200, 8, false);
+        RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 576), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Polydimethylsiloxane, 1), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)}, Materials.StyreneButadieneRubber.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 556), 200, 8, false);
+        RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 576), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Polydimethylsiloxane, 1), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)}, Materials.Silicone.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 556), 200, 8, false);
     }
 
     private void unboxingRecipe() {
@@ -883,6 +901,33 @@ public class AE implements Runnable {
 				ItemList.Electric_Pump_IV.get(2),
                 GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.MaragingSteel300, 4)
         }, GT_ModHandler.getModItem("ae2fc", "part_fluid_pattern_terminal_ex", 1L), 40 * 20, 7680, 800);
+		
+		//ME Level Maintainer
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1, 1),
+				GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1, 44),
+                GT_ItemList.EngineeringProcessorFluidDiamondCore.get(1),
+				GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 2, 53),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Vanadium, 4)
+        }, GT_ModHandler.getModItem("ae2fc", "level_maintainer", 1L), 30 * 20, 1920, 800);
+		
+		//ME Quantum Storage
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                GT_ModHandler.getModItem("extracells", "storage.casing", 1),
+				GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 4),
+                GT_ModHandler.getModItem("extracells", "storage.component", 8, 3),
+                GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Neutronium, 8)
+        }, GT_ModHandler.getModItem("extracells", "storage.physical.advanced.quantum", 1L), 120 * 20, 500000, 8000);
+		
+		//ME Digital Singularity
+        impact.I_RA.addMESPRecipes(new ItemStack[]{
+                GT_ModHandler.getModItem("extracells", "storage.casing", 1),
+				GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Quantum, 8),
+                GT_ModHandler.getModItem("extracells", "storage.component", 16, 3),
+				ItemList.Quantum_Chest_IV.get(16),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Infinity, 16)
+        }, GT_ModHandler.getModItem("extracells", "storage.physical.advanced.singularity", 1L), 360 * 20, 8000000, 8000);
+		
     
         //ME Controller
         impact.I_RA.addMESPRecipes(new ItemStack[]{GT_ModHandler.getModItem(AE2, "tile.BlockEnergyAcceptor", 1, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 2, 24)/*Diamond*/, GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2), GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 4), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 4, 76), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.MaragingSteel300, 4), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Titanium, 8)}, GT_ModHandler.getModItem(AE2, "tile.BlockController", 1, 0), 30 * 20, 1920, 8000);
