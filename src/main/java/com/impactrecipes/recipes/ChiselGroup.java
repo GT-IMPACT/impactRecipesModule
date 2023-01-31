@@ -50,7 +50,7 @@ public class ChiselGroup {
         Carving.chisel.removeGroup(name);
         Carving.chisel.addGroup(new CarvingUtils.SimpleCarvingGroup(name));
         Carving.chisel.addVariation(name, Blocks.glass, 0, 0);
-        for (int i = 1; i < 16; i++) {
+        for (int i = 0; i < 16; i++) {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("chisel", "glass"), i, 0);
         }
         for (int i = 0; i < 16; i++) {
