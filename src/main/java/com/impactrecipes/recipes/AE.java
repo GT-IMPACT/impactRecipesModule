@@ -485,7 +485,7 @@ public class AE implements Runnable {
         // --- Storage Cells
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_OreDictUnificator.get(OrePrefixes.gem, Materials.CertusQuartz, 1), GT_ModHandler.getModItem(AE2, "item.ItemViewCell", 1L), 100, 120);
     
-		RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_ModHandler.getModItem("ExtraUtilities", "trashcan", 1L), GT_ModHandler.getModItem("extracells", "physical.void", 1L), 100, 120);
+		RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_ModHandler.getModItem("ExtraUtilities", "trashcan", 1L), GT_ModHandler.getModItem("extracells", "storage.physical.void", 1L), 100, 120);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 35), GT_ModHandler.getModItem(AE2, "item.ItemBasicStorageCell.1k", 1L), 100, 120);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 36), GT_ModHandler.getModItem(AE2, "item.ItemBasicStorageCell.4k", 1L), 100, 256);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 37), GT_ModHandler.getModItem(AE2, "item.ItemBasicStorageCell.16k", 1L), 100, 480);
