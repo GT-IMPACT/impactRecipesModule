@@ -1,8 +1,6 @@
 // Add your dependencies here
 
 dependencies {
-    provided("com.github.GT-IMPACT:Impact-Core:master-SNAPSHOT")
-    provided('com.github.GT-IMPACT:GT5.09OFFBEAT:master-SNAPSHOT')
-    provided fileTree(dir: 'libRun/', include:'*.jar')
-    compileOnly fileTree(dir: 'libNotRun/', include:'*.jar')
+    implementation fileTree(dir: 'libRun/', include: '*.jar')
+    compileOnly fileTree(dir: 'libNotRun/', include: '*.jar')
 }
