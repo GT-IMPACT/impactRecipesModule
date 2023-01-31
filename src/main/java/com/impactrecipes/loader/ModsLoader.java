@@ -3,6 +3,7 @@ package com.impactrecipes.loader;
 import com.impactrecipes.recipes.*;
 import com.impactrecipes.recipes.laser.LaserEngraver;
 
+import static com.impactrecipes.RecipeKotlinKt.recipesInit;
 import static com.impactrecipes.util.RecipeUtils.registerRecipeClass;
 
 /**
@@ -87,5 +88,7 @@ public class ModsLoader {
         registerRecipeClass(CatWalks.class);
         registerRecipeClass(UBC.class);
         registerRecipeClass(ChiselRecipes.class);
+    
+        recipesInit();
     }
 }

@@ -433,30 +433,6 @@ public class ImpactCore implements Runnable {
 		drill = DrillHeads.create(new ItemStack(DrillHeads.getInstance(), 1, 1));
 		GT_ModHandler.addCraftingRecipe(drill, tBitMask,
 				new Object[]{" P ", "PFP", "PhP", 'P', "plateDoubleSteel", 'F', "frameGtSteel"});
-		// --- Stainless Steel Drill Head
-		drill = DrillHeads.create(new ItemStack(DrillHeads.getInstance(), 1, 2));
-		GT_ModHandler.addCraftingRecipe(drill, tBitMask,
-				new Object[]{" P ", "PFP", "PhP", 'P', "plateTripleStainlessSteel", 'F', "frameGtStainlessSteel"});
-		// --- Titanium Drill Head
-		drill = DrillHeads.create(new ItemStack(DrillHeads.getInstance(), 1, 3));
-		GT_ModHandler.addCraftingRecipe(drill, tBitMask,
-				new Object[]{" P ", "PFP", "PhP", 'P', "plateQuadrupleTitanium", 'F', "frameGtTitanium"});
-		// --- Tungsten Steel Drill Head
-		drill = DrillHeads.create(new ItemStack(DrillHeads.getInstance(), 1, 4));
-		GT_ModHandler.addCraftingRecipe(drill, tBitMask,
-				new Object[]{" P ", "PFP", "PhP", 'P', "plateQuadrupleTungstenSteel", 'F', "frameGtTungstenSteel"});
-		// --- Inconel-690 Drill Head
-		drill = DrillHeads.create(new ItemStack(DrillHeads.getInstance(), 1, 5));
-		GT_ModHandler.addCraftingRecipe(drill, tBitMask,
-				new Object[]{" P ", "PFP", "PhP", 'P', "plateQuintupleInconel-690", 'F', "frameGtInconel-690"});
-		// --- Iridium Drill Head
-		drill = DrillHeads.create(new ItemStack(DrillHeads.getInstance(), 1, 6));
-		GT_ModHandler.addCraftingRecipe(drill, tBitMask,
-				new Object[]{" P ", "PFP", "PhP", 'P', "plateDenseIridium", 'F', "frameGtIridium"});
-		// --- Neutronium Drill Head
-		drill = DrillHeads.create(new ItemStack(DrillHeads.getInstance(), 1, 7));
-		GT_ModHandler.addCraftingRecipe(drill, tBitMask,
-				new Object[]{" P ", "PFP", "PhP", 'P', "plateDenseNeutronium", 'F', "frameGtNeutronium"});
 
 		// --- Ore and Oil Prospector LV
 		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14751), tBitMask,

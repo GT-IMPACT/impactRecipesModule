@@ -11,7 +11,6 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
-import static com.impactrecipes.recipes.ImpactCore.CoreItems2;
 import static com.impactrecipes.util.RecipeUtils.*;
 import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeFurnaceSmelting;
