@@ -164,7 +164,6 @@ public class RailCraft implements Runnable {
         removeRecipeByOutput(getItemStack("Railcraft", "tool.steel.hoe", 1, 0), true, false,
                 false);
 
-        //todo НУЖНО ПРОВЕРИТЬ - НЕ УВЕРЕН ЧТО ПОФИКСИЛ
         removeRecipeByOutput(RailcraftItem.rail.getStack(1, ItemRail.EnumRail.STANDARD));
         removeRecipeByOutput(RailcraftItem.rail.getStack(1, ItemRail.EnumRail.ADVANCED));
         removeRecipeByOutput(RailcraftItem.rail.getStack(1, ItemRail.EnumRail.ELECTRIC));
