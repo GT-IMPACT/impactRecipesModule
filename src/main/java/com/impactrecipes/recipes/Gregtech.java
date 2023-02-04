@@ -2950,9 +2950,9 @@ public class Gregtech implements Runnable {
                 GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1, 120),
                 GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1, 121),
                 GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1, 122),};
-        ItemStack[] hulls = {ItemList.Hull_UEV.get(1), ItemList.Hull_UIV.get(1),
-                ItemList.Hull_UMV.get(1), ItemList.Hull_UXV.get(1), ItemList.Hull_OPV.get(1),
-                ItemList.Hull_MAXV.get(1),};
+        ItemStack[] hulls = {ItemList.Casing_UEV.get(1), ItemList.Casing_UIV.get(1),
+                ItemList.Casing_UMV.get(1), ItemList.Casing_UXV.get(1), ItemList.Casing_OPV.get(1),
+                ItemList.Casing_MAXV.get(1),};
         for (int i = 0; i < 6; i++) {
             flInputs[i] = new ItemStack[]{hulls[i].copy(), tanks[i].copy(),
                     GT_Utility.getIntegratedCircuit(1)};
