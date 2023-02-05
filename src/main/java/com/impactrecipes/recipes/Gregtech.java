@@ -66,6 +66,7 @@ public class Gregtech implements Runnable {
         distil();
 		wormhole();
         implosionCompressor();
+        fluidExtractor();
     }
 
     private void removeGT_WTF_CHECK_GT_CODE() {
@@ -4223,5 +4224,12 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.gem, Materials.Amethyst, 3L),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DarkAshes, 2L), new int[]{10000, 10000}
         );
+    }
+
+    private void fluidExtractor() {
+        // --- Tar from Coal Coke
+        RA.addFluidExtractionRecipe(GT_OreDictUnificator.get(OrePrefixes.gem, Materials.CokeCoal, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Ash, 1L),
+                Materials.Tar.getFluid(100L), 2000, 30, 16);
     }
 }
