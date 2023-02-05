@@ -999,7 +999,7 @@ public class ImpactCore implements Runnable {
 		//LapotronicCapacitorIV
 		RA.addBasicLineRecipe(new ItemStack[]{
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.Energy_LapotronicOrb.get(1L),
+				ItemList.Energy_LapotronicOrb.get(4L),
 				GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8),
 				ItemList.Circuit_Chip_PIC.get(12L),
 				GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.TungstenSteel, 32),
@@ -1010,7 +1010,7 @@ public class ImpactCore implements Runnable {
 		//Energium Orb Capacitor
 		RA.addBasicLineRecipe(new ItemStack[]{
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.EnergyCrystal_IV.get(1L),
+				ItemList.EnergyCrystal_IV.get(4L),
 				GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8),
 				ItemList.Circuit_Chip_PIC.get(12L),
 				GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.TungstenSteel, 32),
@@ -1021,7 +1021,7 @@ public class ImpactCore implements Runnable {
 		//LapotronicCapacitorLuV
 		RA.addBasicLineRecipe(new ItemStack[]{
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.Energy_LapotronicOrb2.get(1L),
+				ItemList.Energy_LapotronicOrb2.get(4L),
 				GT_OreDictUnificator.get(OrePrefixes.foil, Materials.NiobiumTitanium, 8),
 				ItemList.Circuit_Chip_HPIC.get(12L),
 				GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.YttriumBariumCuprate, 32),
@@ -1032,7 +1032,7 @@ public class ImpactCore implements Runnable {
 		//LapotronicCapacitorZPM
 		RA.addBasicLineRecipe(new ItemStack[]{
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.Energy_Module.get(1L),
+				ItemList.Energy_Module.get(4L),
 				GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Osmiridium, 8),
 				ItemList.Circuit_Chip_UHPIC.get(12L),
 				GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Naquadah, 32),
@@ -1043,7 +1043,7 @@ public class ImpactCore implements Runnable {
 		//LapotronicCapacitorUV
 		RA.addBasicLineRecipe(new ItemStack[]{
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.Energy_Cluster.get(1L),
+				ItemList.Energy_Cluster.get(4L),
 				GT_OreDictUnificator.get(OrePrefixes.foil, Materials.NaquadahAlloy, 8),
 				ItemList.Circuit_Chip_NPIC.get(12L),
 				GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Duranium, 32),
@@ -1064,7 +1064,7 @@ public class ImpactCore implements Runnable {
 		//Mysterious Crystal Orb Capacitor
 		RA.addBasicLineRecipe(new ItemStack[]{
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.MysteriousCrystalOrb.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 8),
+				ItemList.MysteriousCrystalOrb.get(4L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 8),
 				ItemList.Circuit_Chip_PPIC.get(12L),
 				GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Europium, 32),
 				GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Pikyonium64B, 64),
@@ -1074,7 +1074,7 @@ public class ImpactCore implements Runnable {
 		//Mysterious Crystal Module Capacitor
 		RA.addBasicLineRecipe(new ItemStack[]{
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.MysteriousCrystalModule.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 8),
+				ItemList.MysteriousCrystalModule.get(4L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 8),
 				ItemList.Circuit_Chip_QPIC.get(12L),
 				GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Draconium, 32),
 				GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quantum, 64),
@@ -5042,7 +5042,7 @@ public class ImpactCore implements Runnable {
 		RA.addDisassemblerRecipe(
 				new ItemStack(lscLapotronicEnergyUnit, 1, 1),
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-						ItemList.Energy_LapotronicOrb.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8),
+						ItemList.Energy_LapotronicOrb.get(4L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8),
 						ItemList.Circuit_Chip_PIC.get(12L),
 						GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.TungstenSteel, 32),
 						GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HastelloyC276, 64),
@@ -5053,7 +5053,7 @@ public class ImpactCore implements Runnable {
 		RA.addDisassemblerRecipe(
 				new ItemStack(lscLapotronicEnergyUnit, 1, 6),
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-						ItemList.EnergyCrystal_IV.get(1L),
+						ItemList.EnergyCrystal_IV.get(4L),
 						GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Platinum, 8),
 						ItemList.Circuit_Chip_PIC.get(12L),
 						GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.TungstenSteel, 32),
@@ -5065,7 +5065,7 @@ public class ImpactCore implements Runnable {
 		RA.addDisassemblerRecipe(
 				new ItemStack(lscLapotronicEnergyUnit, 1, 2),
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-						ItemList.Energy_LapotronicOrb2.get(1L),
+						ItemList.Energy_LapotronicOrb2.get(4L),
 						GT_OreDictUnificator.get(OrePrefixes.foil, Materials.NiobiumTitanium, 8),
 						ItemList.Circuit_Chip_HPIC.get(12L),
 						GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.YttriumBariumCuprate, 32),
@@ -5077,7 +5077,7 @@ public class ImpactCore implements Runnable {
 		RA.addDisassemblerRecipe(
 				new ItemStack(lscLapotronicEnergyUnit, 1, 3),
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-						ItemList.Energy_Module.get(1L),
+						ItemList.Energy_Module.get(4L),
 						GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Osmiridium, 8),
 						ItemList.Circuit_Chip_UHPIC.get(12L),
 						GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Naquadah, 32),
@@ -5088,7 +5088,7 @@ public class ImpactCore implements Runnable {
 		//LapotronicCapacitorUV
 		RA.addBasicLineRecipe(new ItemStack[]{
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.Energy_Cluster.get(1L),
+				ItemList.Energy_Cluster.get(4L),
 				GT_OreDictUnificator.get(OrePrefixes.foil, Materials.NaquadahAlloy, 8),
 				ItemList.Circuit_Chip_NPIC.get(12L),
 				GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Duranium, 32),
@@ -5097,21 +5097,21 @@ public class ImpactCore implements Runnable {
 		}, new ItemStack(lscLapotronicEnergyUnit, 1, 4), null, 1600 * 20, 500000);
 		
 		//LapotronicCapacitorUHV
-		RA.addDisassemblerRecipe(
-				new ItemStack(lscLapotronicEnergyUnit, 1, 5),
-				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-						ItemList.ZPM2.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 8),
-						ItemList.Circuit_Chip_PPIC.get(12L),
-						GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Europium, 32),
-						GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Pikyonium64B, 64),
-						GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Neutronium, 64)}, 1800 * 20, 500000
-		);
+		//RA.addDisassemblerRecipe(
+		//		new ItemStack(lscLapotronicEnergyUnit, 1, 5),
+		//		new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
+		//				ItemList.ZPM2.get(4L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 8),
+		//				ItemList.Circuit_Chip_PPIC.get(12L),
+		//				GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Europium, 32),
+		//				GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Pikyonium64B, 64),
+		//				GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Neutronium, 64)}, 1800 * 20, 500000
+		//);
 		
 		//Mysterious Crystal Orb Capacitor
 		RA.addDisassemblerRecipe(
 				new ItemStack(lscLapotronicEnergyUnit, 1, 7),
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-						ItemList.MysteriousCrystalOrb.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 8),
+						ItemList.MysteriousCrystalOrb.get(4L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Americium, 8),
 						ItemList.Circuit_Chip_PPIC.get(12L),
 						GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Europium, 32),
 						GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Pikyonium64B, 64),
@@ -5122,7 +5122,7 @@ public class ImpactCore implements Runnable {
 		RA.addDisassemblerRecipe(
 				new ItemStack(lscLapotronicEnergyUnit, 1, 8),
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-						ItemList.MysteriousCrystalModule.get(1L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Neutronium, 8),
+						ItemList.MysteriousCrystalModule.get(4L), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Neutronium, 8),
 						ItemList.Circuit_Chip_QPIC.get(12L),
 						GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Draconium, 32),
 						GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quantum, 64),
