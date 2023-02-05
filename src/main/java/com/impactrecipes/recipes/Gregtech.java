@@ -4210,6 +4210,17 @@ public class Gregtech implements Runnable {
     private void distil() {
         GT_Values.RA.addDistillationTowerRecipe(Materials.Pollution.getFluid(1300), new FluidStack[]{Materials.CarbonMonoxide.getGas(50L), Materials.CarbonDioxide.getGas(50L), Materials.HydricSulfide.getGas(50L), Materials.SulfuricAcid.getFluid(50L), Materials.NitrogenDioxide.getGas(50L), Materials.Methane.getGas(50L), Materials.Mercury.getFluid(1L)}, GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Ash, 1L), 600, 480);
 
+        // --- Oils
+        GT_Values.RA.addUniversalDistillationRecipe(Materials.OilLight.getFluid(150), new FluidStack[]{Materials.SulfuricHeavyFuel.getFluid(10), Materials.SulfuricLightFuel.getFluid(20), Materials.SulfuricNaphtha.getFluid(30), Materials.SulfuricGas.getGas(240)}, CoreItems2.getRecipe(202, 1), 20, 96);
+        GT_Values.RA.addUniversalDistillationRecipe(Materials.OilMedium.getFluid(100), new FluidStack[]{Materials.SulfuricHeavyFuel.getFluid(15), Materials.SulfuricLightFuel.getFluid(50), Materials.SulfuricNaphtha.getFluid(20), Materials.SulfuricGas.getGas(60)}, CoreItems2.getRecipe(202, 1), 20, 96);
+        GT_Values.RA.addUniversalDistillationRecipe(Materials.Oil.getFluid(50L), new FluidStack[]{Materials.SulfuricHeavyFuel.getFluid(15), Materials.SulfuricLightFuel.getFluid(50), Materials.SulfuricNaphtha.getFluid(20), Materials.SulfuricGas.getGas(60)}, CoreItems2.getRecipe(202, 1), 20, 96);
+        GT_Values.RA.addUniversalDistillationRecipe(Materials.OilHeavy.getFluid(100), new FluidStack[]{Materials.SulfuricHeavyFuel.getFluid(250), Materials.SulfuricLightFuel.getFluid(45), Materials.SulfuricNaphtha.getFluid(15), Materials.SulfuricGas.getGas(60)}, CoreItems2.getRecipe(202, 2), 20, 288);
+        GT_Values.RA.addUniversalDistillationRecipe(new FluidStack(ItemList.sOilExtraHeavy, 100), new FluidStack[]{Materials.SulfuricHeavyFuel.getFluid(750), Materials.SulfuricTar.getFluid(200), Materials.SulfuricLightFuel.getFluid(90), Materials.SulfuricNaphtha.getFluid(60), Materials.SulfuricGas.getGas(360)}, CoreItems2.getRecipe(202, 4), 20, 430);
+
+        if (GregTech_API.sSpecialFile.get("general", "EnableLagencyOilGalactiCraft", false) && FluidRegistry.getFluid("oilgc") != null) {
+            GT_Values.RA.addUniversalDistillationRecipe(new FluidStack(FluidRegistry.getFluid("oilgc"), 50), new FluidStack[]{Materials.SulfuricHeavyFuel.getFluid(15), Materials.SulfuricLightFuel.getFluid(50), Materials.SulfuricNaphtha.getFluid(20), Materials.SulfuricGas.getGas(60)}, CoreItems2.getRecipe(202, 1), 20, 96);
+        }
+
     }
 	
 	private void wormhole() {

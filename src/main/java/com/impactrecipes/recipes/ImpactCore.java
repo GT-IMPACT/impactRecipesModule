@@ -2015,6 +2015,11 @@ public class ImpactCore implements Runnable {
 		RA.addFluidExtractionRecipe(CoreItems.getRecipe(33, 1), null, Materials.Glass.getMolten(144),
 				10000, 50, 30
 		);
+
+		// --- Tar from Petrocoke
+		RA.addFluidExtractionRecipe(CoreItems2.getRecipe(203, 1),
+				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Ash, 1L),
+				Materials.Tar.getFluid(100L), 2000, 30, 16);
 	}
 	
 	private void woodFarm() {
@@ -2450,6 +2455,14 @@ public class ImpactCore implements Runnable {
 						GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Draconium, 1L), GT_Values.NI,
 						GT_Values.NI, GT_Values.NI, new int[]{10000, 10000, 5000}, 400, 1920
 				);
+
+		// --- Petcoke Dust to Ash
+		GT_Values.RA.addCentrifugeRecipe(CoreItems2.getRecipe(202, 1),
+				GT_Values.NI, GT_Values.NF, GT_Values.NF,
+				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DarkAsh, 1L),
+				GT_Values.NI, GT_Values.NI, GT_Values.NI, GT_Values.NI, GT_Values.NI,
+				new int[]{1000}, 200, 5
+		);
 	}
 	
 	private void alloySmelter() {
@@ -4299,7 +4312,11 @@ public class ImpactCore implements Runnable {
 		
 		GT_Values.RA
 				.addCompressorRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Thorium, 1L), Itemstack(Core_Items2.getInstance(), 1, 187), 400, 120);
-		
+
+		// --- Petcoke Dust -> Petcoke
+		GT_Values.RA
+				.addCompressorRecipe(CoreItems2.getRecipe(202, 9), CoreItems2.getRecipe(203, 1), 300, 2);
+
 	}
 	
 	private void chemical() {
@@ -4392,7 +4409,7 @@ public class ImpactCore implements Runnable {
 				new FluidStack[]{Materials.AmmoniumPersulfate.getFluid(1000), Materials.Hydrogen.getGas(1000)},
 				new ItemStack[]{null}, 200, 480
 		);
-		
+
 	}
 	
 	private void bath() {
