@@ -936,19 +936,20 @@ public class AE implements Runnable {
 		//ME Quantum Storage
         impact.I_RA.addMESPRecipes(new ItemStack[]{
                 GT_ModHandler.getModItem("extracells", "storage.casing", 1),
+                ItemList.Quantum_Chest_HV.get(4),
 				GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 4),
                 GT_ModHandler.getModItem("extracells", "storage.component", 8, 3),
                 GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Neutronium, 8)
-        }, GT_ModHandler.getModItem("extracells", "storage.physical.advanced.quantum", 1L), 120 * 20, 500000, 8000);
+        }, GT_ModHandler.getModItem("extracells", "storage.physical.advanced.quantum", 1L), 120 * 20, 500000, 20000);
 		
 		//ME Digital Singularity
         impact.I_RA.addMESPRecipes(new ItemStack[]{
                 GT_ModHandler.getModItem("extracells", "storage.casing", 1),
-				GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Quantum, 8),
-                GT_ModHandler.getModItem("extracells", "storage.component", 16, 3),
-				ItemList.Quantum_Chest_IV.get(16),
-                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Infinity, 16)
-        }, GT_ModHandler.getModItem("extracells", "storage.physical.advanced.singularity", 1L), 360 * 20, 8000000, 8000);
+                ItemList.Quantum_Chest_IV.get(4),
+				GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Nano, 4),
+                GT_ModHandler.getModItem("extracells", "storage.component", 8, 3),
+                GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.InfinityCatalyst, 8)
+        }, GT_ModHandler.getModItem("extracells", "storage.physical.advanced.singularity", 1L), 360 * 20, 8000000, 80000);
 		
     
         //ME Controller
