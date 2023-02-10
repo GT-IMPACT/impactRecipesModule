@@ -3363,46 +3363,42 @@ public class Gregtech implements Runnable {
     }
 
     private void ciruit() {
-        for (Materials tMat : Materials.values()) {
-            if (tMat.mStandardMoltenFluid != null && tMat.contains(SubTag.SOLDERING_MATERIAL) &&
-                    !(GregTech_API.mUseOnlyGoodSolderingMaterials && !tMat.contains(SubTag.SOLDERING_MATERIAL_GOOD))) {
-                int tMultiplier = tMat.contains(SubTag.SOLDERING_MATERIAL_GOOD) ? 1 : tMat.contains(SubTag.SOLDERING_MATERIAL_BAD) ? 4 : 2;
-            // --- GT Circuits
+             // --- GT Circuits
                 // --- ULV
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 1)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         CoreItems2.getRecipe(194, 1), 300, 120);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.AnnealedCopper, 1)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         CoreItems2.getRecipe(194, 1), 300, 120);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(2L),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedstoneAlloy, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Gold, 1)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         CoreItems2.getRecipe(194, 2), 400, 120);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(4L),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.EnergeticAlloy, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 1)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         CoreItems2.getRecipe(194, 4), 500, 250);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Fiberglass_Advanced.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(8L),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.VibrantAlloy, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Osmium, 1)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         CoreItems2.getRecipe(194, 8), 600, 480);
 
                 // --- LV
@@ -3411,25 +3407,25 @@ public class Gregtech implements Runnable {
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1),
                                 ItemList.Circuit_Parts_Resistor.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.RedAlloy, 2),
-                                ItemList.Circuit_Parts_Vacuum_Tube.get(2)}, tMat.getMolten(144L * tMultiplier / 2L),
+                                ItemList.Circuit_Parts_Vacuum_Tube.get(2)}, Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("IC2", "itemPartCircuit", 2L, 0), 200, 16);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1),
                                 ItemList.Circuit_Parts_ResistorSMD.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.RedAlloy, 2),
-                                ItemList.Circuit_Parts_Vacuum_Tube.get(2)}, tMat.getMolten(144L * tMultiplier / 2L),
+                                ItemList.Circuit_Parts_Vacuum_Tube.get(2)}, Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("IC2", "itemPartCircuit", 2L, 0), 200, 16);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1),
                                 ItemList.Circuit_Parts_Resistor.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.RedAlloy, 2),
-                                ItemList.NandChip.get(2)}, tMat.getMolten(144L * tMultiplier / 2L),
+                                ItemList.NandChip.get(2)}, Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("IC2", "itemPartCircuit", 2L, 0), 200, 16);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1),
                                 ItemList.Circuit_Parts_ResistorSMD.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.RedAlloy, 2),
-                                ItemList.NandChip.get(2)}, tMat.getMolten(144L * tMultiplier / 2L),
+                                ItemList.NandChip.get(2)}, Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("IC2", "itemPartCircuit", 2L, 0), 200, 16);
                 //2
                 GT_Values.RA.addCircuitAssemblerRecipe(
@@ -3438,42 +3434,42 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_Diode.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Tin, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Basic.get(3), 200, 16);
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Basic.get(3), 200, 16);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1),
                                 ItemList.Circuit_Chip_ILC.get(1), ItemList.Circuit_Parts_ResistorSMD.get(2),
                                 ItemList.Circuit_Parts_Diode.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Tin, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Basic.get(3), 200, 16);
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Basic.get(3), 200, 16);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1),
                                 ItemList.Circuit_Chip_ILC.get(1), ItemList.Circuit_Parts_ResistorSMD.get(2),
                                 ItemList.Circuit_Parts_DiodeSMD.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Tin, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Basic.get(3), 200, 16);
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Basic.get(3), 200, 16);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1),
                                 ItemList.Circuit_Chip_ILC.get(1), ItemList.Circuit_Parts_Resistor.get(2),
                                 ItemList.Circuit_Parts_DiodeSMD.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Tin, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Basic.get(3), 200, 16);
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Basic.get(3), 200, 16);
                 //3
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
                                 ItemList.Circuit_Chip_CPU.get(1), ItemList.Circuit_Parts_Resistor.get(2),
                                 ItemList.Circuit_Parts_Capacitor.get(2), ItemList.Circuit_Parts_Transistor.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Microprocessor.get(4), 200,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Microprocessor.get(4), 200,
                         60, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
                                 ItemList.Circuit_Chip_CPU.get(1), ItemList.Circuit_Parts_ResistorSMD.get(2),
                                 ItemList.Circuit_Parts_Capacitor.get(2), ItemList.Circuit_Parts_Transistor.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Microprocessor.get(4), 200,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Microprocessor.get(4), 200,
                         60, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
@@ -3481,7 +3477,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorSMD.get(2),
                                 ItemList.Circuit_Parts_Transistor.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Microprocessor.get(4), 200,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Microprocessor.get(4), 200,
                         60, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
@@ -3489,7 +3485,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_Capacitor.get(2),
                                 ItemList.Circuit_Parts_TransistorSMD.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Microprocessor.get(4), 200,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Microprocessor.get(4), 200,
                         60, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
@@ -3497,7 +3493,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorSMD.get(2),
                                 ItemList.Circuit_Parts_Transistor.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Microprocessor.get(4), 200,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Microprocessor.get(4), 200,
                         60, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
@@ -3505,7 +3501,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_Capacitor.get(2),
                                 ItemList.Circuit_Parts_TransistorSMD.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Microprocessor.get(4), 200,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Microprocessor.get(4), 200,
                         60, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
@@ -3513,7 +3509,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorSMD.get(2),
                                 ItemList.Circuit_Parts_TransistorSMD.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Microprocessor.get(4), 200,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Microprocessor.get(4), 200,
                         60, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
@@ -3521,7 +3517,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorSMD.get(2),
                                 ItemList.Circuit_Parts_TransistorSMD.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Microprocessor.get(4), 200,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Microprocessor.get(4), 200,
                         60, true);
 
                 GT_Values.RA.addCircuitAssemblerRecipe(
@@ -3529,7 +3525,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_SoC.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Tin, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Microprocessor.get(6), 50,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Microprocessor.get(6), 50,
                         600, true);
 
                 // --- MV
@@ -3539,13 +3535,13 @@ public class Gregtech implements Runnable {
                                 GT_ModHandler.getModItem("IC2", "itemPartCircuit", 2L, 0),
                                 ItemList.Circuit_Parts_Diode.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Copper, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Good.get(2), 300, 30);
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Good.get(2), 300, 30);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1),
                                 GT_ModHandler.getModItem("IC2", "itemPartCircuit", 2L, 0),
                                 ItemList.Circuit_Parts_DiodeSMD.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Copper, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Good.get(2), 300, 30);
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Good.get(2), 300, 30);
                 //2
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1),
@@ -3553,7 +3549,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_Diode.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Gold, 4),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Silver, 4)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Integrated_Good.get(3), 400,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Integrated_Good.get(3), 400,
                         24);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1),
@@ -3561,7 +3557,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_Diode.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Gold, 4),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Silver, 4)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Integrated_Good.get(3), 400,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Integrated_Good.get(3), 400,
                         24);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1),
@@ -3569,7 +3565,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_DiodeSMD.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Gold, 4),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Silver, 4)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Integrated_Good.get(3), 400,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Integrated_Good.get(3), 400,
                         24);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1),
@@ -3577,7 +3573,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_DiodeSMD.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Gold, 4),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Silver, 4)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Integrated_Good.get(3), 400,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Integrated_Good.get(3), 400,
                         24);
                 //3
                 GT_Values.RA.addCircuitAssemblerRecipe(
@@ -3585,14 +3581,14 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_CPU.get(1), ItemList.Circuit_Parts_Resistor.get(4),
                                 ItemList.Circuit_Parts_Capacitor.get(4), ItemList.Circuit_Parts_Transistor.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 4)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Processor.get(4), 200, 60,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Processor.get(4), 200, 60,
                         true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
                                 ItemList.Circuit_Chip_CPU.get(1), ItemList.Circuit_Parts_ResistorSMD.get(4),
                                 ItemList.Circuit_Parts_Capacitor.get(4), ItemList.Circuit_Parts_Transistor.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 4)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Processor.get(4), 200, 60,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Processor.get(4), 200, 60,
                         true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
@@ -3600,7 +3596,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorSMD.get(4),
                                 ItemList.Circuit_Parts_Transistor.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 4)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Processor.get(4), 200, 60,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Processor.get(4), 200, 60,
                         true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
@@ -3608,7 +3604,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_Capacitor.get(4),
                                 ItemList.Circuit_Parts_TransistorSMD.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 4)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Processor.get(4), 200, 60,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Processor.get(4), 200, 60,
                         true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
@@ -3616,7 +3612,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorSMD.get(4),
                                 ItemList.Circuit_Parts_Transistor.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 4)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Processor.get(4), 200, 60,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Processor.get(4), 200, 60,
                         true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
@@ -3624,7 +3620,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_Capacitor.get(4),
                                 ItemList.Circuit_Parts_TransistorSMD.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 4)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Processor.get(4), 200, 60,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Processor.get(4), 200, 60,
                         true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
@@ -3632,7 +3628,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorSMD.get(4),
                                 ItemList.Circuit_Parts_TransistorSMD.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 4)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Processor.get(4), 200, 60,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Processor.get(4), 200, 60,
                         true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
@@ -3640,7 +3636,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorSMD.get(4),
                                 ItemList.Circuit_Parts_TransistorSMD.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 4)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Processor.get(4), 200, 60,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Processor.get(4), 200, 60,
                         true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1L),
@@ -3648,7 +3644,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorASMD.get(1L),
                                 ItemList.Circuit_Parts_TransistorASMD.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 4)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Processor.get(4L), 100, 60,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Processor.get(4L), 100, 60,
                         true);
 
                 GT_Values.RA.addCircuitAssemblerRecipe(
@@ -3656,7 +3652,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_SoC.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 4),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.AnnealedCopper, 4)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Processor.get(6), 50, 2400,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Processor.get(6), 50, 2400,
                         true);
 
                 // --- HV
@@ -3667,7 +3663,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_Transistor.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Electrum, 8),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.AnnealedCopper, 8)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getIC2Item("advancedCircuit", 1L), 800, 30, false);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Integrated_Good.get(1),
@@ -3675,7 +3671,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_TransistorSMD.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Electrum, 8),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.AnnealedCopper, 8)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getIC2Item("advancedCircuit", 1L), 800, 30, false);
                 //2
                 GT_Values.RA.addCircuitAssemblerRecipe(
@@ -3683,13 +3679,13 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Processor.get(2), ItemList.Circuit_Parts_Coil.get(4),
                                 ItemList.Circuit_Parts_Capacitor.get(8), ItemList.Circuit_Chip_Ram.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 8)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Computer.get(2), 400, 120, true);
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Computer.get(2), 400, 120, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
                                 ItemList.Circuit_Processor.get(2), ItemList.Circuit_Parts_Coil.get(4),
                                 ItemList.Circuit_Parts_CapacitorSMD.get(8), ItemList.Circuit_Chip_Ram.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 8)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Computer.get(2), 400, 96, true);
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Computer.get(2), 400, 96, true);
                 //3
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1),
@@ -3697,7 +3693,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorSMD.get(8),
                                 ItemList.Circuit_Parts_TransistorSMD.get(8),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Electrum, 8)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Nanoprocessor.get(3), 200,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Nanoprocessor.get(3), 200,
                         600, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1),
@@ -3705,7 +3701,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorASMD.get(2L),
                                 ItemList.Circuit_Parts_TransistorASMD.get(2L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Electrum, 8)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Nanoprocessor.get(3), 100,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Nanoprocessor.get(3), 100,
                         600, true);
 
                 GT_Values.RA.addCircuitAssemblerRecipe(
@@ -3713,7 +3709,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_SoC2.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Electrum, 8),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Platinum, 8)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Nanoprocessor.get(4), 50,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Nanoprocessor.get(4), 50,
                         9600, true);
 
                 // --- EV
@@ -3724,28 +3720,28 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_Ram.get(8),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Electrum, 16),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Platinum, 16)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Data.get(1), 400, 120, true);
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Data.get(1), 400, 120, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
                                 ItemList.Circuit_Advanced.get(2), ItemList.Circuit_Parts_DiodeSMD.get(4),
                                 ItemList.Circuit_Chip_Ram.get(8),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Electrum, 16),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Platinum, 16)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Data.get(1), 400, 120, true);
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Data.get(1), 400, 120, true);
                 //2
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1),
                                 ItemList.Circuit_Nanoprocessor.get(2), ItemList.Circuit_Parts_Coil.get(8),
                                 ItemList.Circuit_Parts_CapacitorSMD.get(8), ItemList.Circuit_Chip_Ram.get(8),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Electrum, 16)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Nanocomputer.get(1), 400, 600,
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Nanocomputer.get(1), 400, 600,
                         true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1L),
                                 ItemList.Circuit_Nanoprocessor.get(2L), ItemList.Circuit_Parts_Coil.get(8L),
                                 ItemList.Circuit_Parts_CapacitorASMD.get(2L), ItemList.Circuit_Chip_Ram.get(8L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Electrum, 16)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Nanocomputer.get(1L), 200, 600,
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Nanocomputer.get(1L), 200, 600,
                         true);
 
                 //3
@@ -3755,7 +3751,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorSMD.get(12),
                                 ItemList.Circuit_Parts_TransistorSMD.get(12),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 12)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Quantumprocessor.get(2), 200,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Quantumprocessor.get(2), 200,
                         2400, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Fiberglass_Advanced.get(1L),
@@ -3763,7 +3759,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorASMD.get(3L),
                                 ItemList.Circuit_Parts_TransistorASMD.get(3L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 16)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Quantumprocessor.get(2L), 100,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Quantumprocessor.get(2L), 100,
                         2400, true);
 
                 GT_Values.RA.addCircuitAssemblerRecipe(
@@ -3771,7 +3767,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_SoC3.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 16),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.NiobiumTitanium, 8)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Quantumprocessor.get(3), 50,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Quantumprocessor.get(3), 50,
                         38400, true);
 
                 // --- IV
@@ -3781,19 +3777,19 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Data.get(2), ItemList.Circuit_Parts_Coil.get(12),
                                 ItemList.Circuit_Parts_Capacitor.get(24), ItemList.Circuit_Chip_Ram.get(16),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.AnnealedCopper, 24)},
-                        tMat.getMolten(144L * tMultiplier * 2), ItemList.Circuit_Elite.get(1), 1600, 480, true);
+                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Elite.get(1), 1600, 480, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Aluminium, 2),
                                 ItemList.Circuit_Data.get(2), ItemList.Circuit_Parts_Coil.get(12),
                                 ItemList.Circuit_Parts_CapacitorSMD.get(16), ItemList.Circuit_Chip_Ram.get(16),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.AnnealedCopper, 16)},
-                        tMat.getMolten(144L * tMultiplier * 2), ItemList.Circuit_Elite.get(1), 1600, 480, true);
+                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Elite.get(1), 1600, 480, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Aluminium, 2),
                                 ItemList.Circuit_Data.get(2), ItemList.Circuit_Parts_Coil.get(12L),
                                 ItemList.Circuit_Parts_CapacitorASMD.get(4L), ItemList.Circuit_Chip_Ram.get(16L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.AnnealedCopper, 16)},
-                        tMat.getMolten(144L * tMultiplier * 2), ItemList.Circuit_Elite.get(1L), 800, 480, true);
+                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Elite.get(1L), 800, 480, true);
 
                 //2
                 GT_Values.RA.addCircuitAssemblerRecipe(
@@ -3801,14 +3797,14 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Nanocomputer.get(2), ItemList.Circuit_Parts_DiodeSMD.get(8),
                                 ItemList.Circuit_Chip_NOR.get(4), ItemList.Circuit_Chip_Ram.get(16),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Electrum, 16)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Elitenanocomputer.get(1), 400, 600,
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Elitenanocomputer.get(1), 400, 600,
                         true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1L),
                                 ItemList.Circuit_Nanocomputer.get(2L), ItemList.Circuit_Parts_DiodeASMD.get(2L),
                                 ItemList.Circuit_Chip_NOR.get(4L), ItemList.Circuit_Chip_Ram.get(16L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Electrum, 16)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Elitenanocomputer.get(1L), 200,
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Elitenanocomputer.get(1L), 200,
                         600, true);
 
                 //3
@@ -3817,14 +3813,14 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Quantumprocessor.get(2), ItemList.Circuit_Parts_Coil.get(12),
                                 ItemList.Circuit_Parts_CapacitorSMD.get(16), ItemList.Circuit_Chip_Ram.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 16)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Quantumcomputer.get(2), 400, 2400,
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Quantumcomputer.get(2), 400, 2400,
                         true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Fiberglass_Advanced.get(1L),
                                 ItemList.Circuit_Quantumprocessor.get(2L), ItemList.Circuit_Parts_Coil.get(12L),
                                 ItemList.Circuit_Parts_CapacitorASMD.get(4L), ItemList.Circuit_Chip_Ram.get(4L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 24)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Quantumcomputer.get(2L), 200, 2400,
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Quantumcomputer.get(2L), 200, 2400,
                         true);
 
                 GT_Values.RA.addCircuitAssemblerSpaceRecipe(
@@ -3832,7 +3828,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_SoC4.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 16),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.YttriumBariumCuprate, 8)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Quantumcomputer.get(2), 50, 38400,
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Quantumcomputer.get(2), 50, 38400,
                         true);
                 //4
                 GT_Values.RA.addCircuitAssemblerSpaceRecipe(
@@ -3841,7 +3837,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorASMD.get(6),
                                 ItemList.Circuit_Parts_TransistorASMD.get(6),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 8)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Crystalprocessor.get(2L), 100,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Crystalprocessor.get(2L), 100,
                         9600, true);
 
                 GT_Values.RA.addCircuitAssemblerSpaceRecipe(
@@ -3849,7 +3845,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_CrystalSoC.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 8),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.YttriumBariumCuprate, 8)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Crystalprocessor.get(3), 50,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Crystalprocessor.get(3), 50,
                         153600, true);
 
                 // --- LuV
@@ -3859,14 +3855,14 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Elitenanocomputer.get(2), ItemList.Circuit_Parts_Coil.get(16),
                                 ItemList.Circuit_Parts_CapacitorSMD.get(32), ItemList.Circuit_Chip_Ram.get(16),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.AnnealedCopper, 32)},
-                        tMat.getMolten(144L * tMultiplier * 2), ItemList.Circuit_Master.get(1), 1600, 1920,
+                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Master.get(1), 1600, 1920,
                         true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Aluminium, 2),
                                 ItemList.Circuit_Elitenanocomputer.get(2L), ItemList.Circuit_Parts_Coil.get(16L),
                                 ItemList.Circuit_Parts_CapacitorASMD.get(8L), ItemList.Circuit_Chip_Ram.get(16L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.AnnealedCopper, 32)},
-                        tMat.getMolten(144L * tMultiplier * 2), ItemList.Circuit_Master.get(1L), 800, 1920,
+                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Master.get(1L), 800, 1920,
                         true);
 
                 GT_Values.RA.addCircuitAssemblerSpaceRecipe(
@@ -3874,7 +3870,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_SoC4.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.AnnealedCopper, 32),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.YttriumBariumCuprate, 8)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Master.get(1), 50, 500000,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Master.get(1), 50, 500000,
                         true);
                 //2
                 GT_Values.RA.addCircuitAssemblerRecipe(
@@ -3882,14 +3878,14 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Quantumcomputer.get(2), ItemList.Circuit_Parts_DiodeSMD.get(8),
                                 ItemList.Circuit_Chip_NOR.get(4), ItemList.Circuit_Chip_Ram.get(16),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 32)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Masterquantumcomputer.get(1), 400,
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Masterquantumcomputer.get(1), 400,
                         2400, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Fiberglass_Advanced.get(1L),
                                 ItemList.Circuit_Quantumcomputer.get(2L), ItemList.Circuit_Parts_DiodeASMD.get(2L),
                                 ItemList.Circuit_Chip_NOR.get(4L), ItemList.Circuit_Chip_Ram.get(16L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 48)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Masterquantumcomputer.get(1L), 200,
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Masterquantumcomputer.get(1L), 200,
                         2400, true);
 
                 //3
@@ -3898,7 +3894,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Crystalprocessor.get(2L), ItemList.Circuit_Parts_Coil.get(24),
                                 ItemList.Circuit_Parts_CapacitorASMD.get(8L), ItemList.Circuit_Chip_Ram.get(24),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 16)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Crystalcomputer.get(2L), 200, 9600,
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Crystalcomputer.get(2L), 200, 9600,
                         true);
 
                 GT_Values.RA.addCircuitAssemblerSpaceRecipe(
@@ -3906,7 +3902,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_SoC4.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 16),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.YttriumBariumCuprate, 8)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Crystalcomputer.get(2), 50,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Crystalcomputer.get(2), 50,
                         153600, true);
                 //4
                 GT_Values.RA.addCircuitAssemblerSpaceRecipe(
@@ -3915,7 +3911,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorASMD.get(8L),
                                 ItemList.Circuit_Parts_TransistorASMD.get(8L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.YttriumBariumCuprate, 8)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Neuroprocessor.get(2L), 200,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Neuroprocessor.get(2L), 200,
                         38400, true);
 
                 GT_Values.RA.addCircuitAssemblerSpaceRecipe(
@@ -3923,7 +3919,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_CrystalSoC2.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.YttriumBariumCuprate, 8),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Naquadah, 8)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Neuroprocessor.get(3), 50,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Neuroprocessor.get(3), 50,
                         614400, true);
 
                 // --- ZPM
@@ -3933,14 +3929,14 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Masterquantumcomputer.get(2), ItemList.Circuit_Parts_Coil.get(24),
                                 ItemList.Circuit_Parts_CapacitorSMD.get(48), ItemList.Circuit_Chip_Ram.get(24),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.AnnealedCopper, 48)},
-                        tMat.getMolten(144L * tMultiplier * 2), ItemList.Circuit_Quantummainframe.get(1), 1600,
+                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Quantummainframe.get(1), 1600,
                         7680, true);
                 GT_Values.RA.addCircuitAssemblerSpaceRecipe(
                         new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Aluminium, 2),
                                 ItemList.Circuit_Masterquantumcomputer.get(2L), ItemList.Circuit_Parts_Coil.get(24),
                                 ItemList.Circuit_Parts_CapacitorASMD.get(12L), ItemList.Circuit_Chip_Ram.get(24),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.AnnealedCopper, 48)},
-                        tMat.getMolten(144L * tMultiplier * 2), ItemList.Circuit_Quantummainframe.get(1L), 800,
+                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Quantummainframe.get(1L), 800,
                         7680, true);
 
                 GT_Values.RA.addCircuitAssemblerSpaceRecipe(
@@ -3948,7 +3944,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_CrystalSoC.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Platinum, 32),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Europium, 16)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Quantummainframe.get(1), 50,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Quantummainframe.get(1), 50,
                         2000000, true);
                 //2
                 GT_Values.RA.addCircuitAssemblerSpaceRecipe(
@@ -3956,7 +3952,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Crystalcomputer.get(2), ItemList.Circuit_Chip_Ram.get(4),
                                 ItemList.Circuit_Chip_NOR.get(32), ItemList.Circuit_Chip_NAND.get(64),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 32)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Ultimatecrystalcomputer.get(1),
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Ultimatecrystalcomputer.get(1),
                         400, 9600, true);
                 //3
                 GT_Values.RA.addCircuitAssemblerSpaceRecipe(
@@ -3964,7 +3960,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Neuroprocessor.get(2L), ItemList.Circuit_Parts_Coil.get(32L),
                                 ItemList.Circuit_Parts_CapacitorASMD.get(12L), ItemList.Circuit_Chip_Ram.get(24L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.YttriumBariumCuprate, 16)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Wetwarecomputer.get(2L), 300,
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Wetwarecomputer.get(2L), 300,
                         38400, true);
 
                 //4
@@ -3974,7 +3970,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorASMD.get(12L),
                                 ItemList.Circuit_Parts_TransistorASMD.get(12L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 16)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Bioprocessor.get(2L), 300,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Bioprocessor.get(2L), 300,
                         153600, true);
 
                 GT_Values.RA.addCircuitAssemblerSpaceRecipe(
@@ -3982,7 +3978,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_MCrystalCPU.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 16),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.ElectrumFlux, 16)},
-                        tMat.getMolten(144L * tMultiplier / 2L), ItemList.Circuit_Bioprocessor.get(3), 150,
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Bioprocessor.get(3), 150,
                         2457600, true);
 
                 // --- UV
@@ -3993,7 +3989,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_Coil.get(32L), ItemList.Circuit_Parts_CapacitorASMD.get(16L),
                                 ItemList.Circuit_Chip_Ram.get(32L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorLuV, 8)},
-                        tMat.getMolten(144L * tMultiplier * 2), ItemList.Circuit_Crystalmainframe.get(1L), 800,
+                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Crystalmainframe.get(1L), 800,
                         30720, true);
 
                 GT_Values.RA.addCircuitAssemblerSpaceRecipe(
@@ -4001,7 +3997,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_CrystalSoC.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorLuV, 8),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Americium, 32)},
-                        tMat.getMolten(144L * tMultiplier * 2), ItemList.Circuit_Crystalmainframe.get(1), 50,
+                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Crystalmainframe.get(1), 50,
                         8000000, true);
                 //2
                 GT_Values.RA.addCircuitAssemblerSpaceRecipe(
@@ -4009,7 +4005,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Wetwarecomputer.get(2L), ItemList.Circuit_Parts_DiodeASMD.get(8L),
                                 ItemList.Circuit_Chip_NOR.get(16L), ItemList.Circuit_Chip_Ram.get(64L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.YttriumBariumCuprate, 24)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Wetwaresupercomputer.get(1L), 600,
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Wetwaresupercomputer.get(1L), 600,
                         38400, true);
 
                 //3
@@ -4018,7 +4014,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Bioprocessor.get(2L), ItemList.Circuit_Parts_Coil.get(48L),
                                 ItemList.Circuit_Parts_CapacitorASMD.get(16L), ItemList.Circuit_Chip_Ram.get(32L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 24)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Circuit_Biowarecomputer.get(2L), 400,
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Biowarecomputer.get(2L), 400,
                         153600, true);
 
                 // --- UHV
@@ -4028,7 +4024,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_MCrystalCPU.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorZPM, 16),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Neutronium, 64)},
-                        tMat.getMolten(144L * tMultiplier * 2), ItemList.Circuit_Wetwaremainframe.get(1), 50,
+                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Wetwaremainframe.get(1), 50,
                         32000000, true);
 
                 GT_Values.RA.addCircuitAssemblerRecipe(
@@ -4037,13 +4033,13 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_Ram.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 16),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Plastic, 4)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Tool_DataStick.get(1), 400, 90, true);
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Tool_DataStick.get(1), 400, 90, true);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Epoxy_Advanced.get(1),
                                 ItemList.Circuit_Nanoprocessor.get(2), ItemList.Circuit_Chip_Ram.get(4),
                                 ItemList.Circuit_Chip_NOR.get(32), ItemList.Circuit_Chip_NAND.get(64),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 32)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Tool_DataOrb.get(1), 400, 1200, true);
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Tool_DataOrb.get(1), 400, 1200, true);
 
                 //Energy Flow Circuit
                 GT_Values.RA.addCircuitAssemblerRecipe(
@@ -4052,7 +4048,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_UHPIC.get(4L), ItemList.Circuit_Chip_QuantumCPU.get(2L),
                                 ItemList.Circuit_Chip_NanoCPU.get(2L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorZPM, 16)},
-                        tMat.getMolten(576L * tMultiplier / 2L), ItemList.Circuit_HighEnergyFlow.get(1L), 2400,
+                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_HighEnergyFlow.get(1L), 2400,
                         7680, true);
 
                 //Lapoorbs
@@ -4063,7 +4059,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_NanoCPU.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 16),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Platinum, 8)},
-                        tMat.getMolten(144L * tMultiplier), ItemList.Energy_LapotronicOrb.get(1), 512, 1024,
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Energy_LapotronicOrb.get(1), 512, 1024,
                         true);
                 //Wetware Board
                 GT_Values.RA.addCircuitAssemblerRecipe(
@@ -4101,7 +4097,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_Ram.get(4),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 16),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Europium, 4)},
-                        tMat.getMolten(144L * tMultiplier),
+                        Materials.SolderingAlloy.getMolten(144L),
                         CoreItems2.getRecipe(179, 1), 400, 2560, true);
                 // --- Genetic Template
                 GT_Values.RA.addCircuitAssemblerRecipe(
@@ -4110,11 +4106,8 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Chip_NOR.get(32),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Platinum, 32),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Europium, 8)},
-                        tMat.getMolten(144L * tMultiplier),
+                        Materials.SolderingAlloy.getMolten(144L),
                         CoreItems2.getRecipe(180, 1), 500, 7680, true);
-
-            }
-        }
     }
 
     private void assemblyLine() {
