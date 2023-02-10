@@ -4226,15 +4226,10 @@ public class ImpactCore implements Runnable {
 				Materials.NiobiumTitanium.getMolten(9216),
 				GT_ItemList.EnergyMulti64_UEV.get(1), 3200, 8000000);
 
-		for (Materials tMat : Materials.values()) {
-			if (tMat.mStandardMoltenFluid != null && tMat.contains(SubTag.SOLDERING_MATERIAL) && !(GregTech_API.mUseOnlyGoodSolderingMaterials && !tMat.contains(SubTag.SOLDERING_MATERIAL_GOOD))) {
-				int tMultiplier = tMat.contains(SubTag.SOLDERING_MATERIAL_GOOD) ? 1 : tMat.contains(SubTag.SOLDERING_MATERIAL_BAD) ? 4 : 2;
 				// --- Advanced Fluid Detector
-				GT_Values.RA.addAssemblerRecipe(new ItemStack(Blocks.heavy_weighted_pressure_plate, 1, 32767), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 1L), tMat.getMolten(144L * tMultiplier / 2L), GT_ModHandler.getModItem("impact", "impact_cover", 1), 600, 96);
+				GT_Values.RA.addAssemblerRecipe(new ItemStack(Blocks.heavy_weighted_pressure_plate, 1, 32767), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 1L), Materials.SolderingAlloy.getMolten(72L), GT_ModHandler.getModItem("impact", "impact_cover", 1), 600, 96);
 				// --- Advanced Energy Detector
-				GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getIC2Item("ecMeter", 1L), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 1L), tMat.getMolten(144L * tMultiplier / 2L), GT_ModHandler.getModItem("impact", "impact_cover", 1, 1), 600, 96);
-			}
-		}
+				GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getIC2Item("ecMeter", 1L), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 1L), Materials.SolderingAlloy.getMolten(72L), GT_ModHandler.getModItem("impact", "impact_cover", 1, 1), 600, 96);
 	}
 	
 	private void cutting() {
@@ -4481,97 +4476,93 @@ public class ImpactCore implements Runnable {
 	}
 	
 	private void ciruit() {
-		for (Materials tMat : Materials.values()) {
-			if (tMat.mStandardMoltenFluid != null && tMat.contains(SubTag.SOLDERING_MATERIAL) &&
-					!(GregTech_API.mUseOnlyGoodSolderingMaterials && !tMat.contains(SubTag.SOLDERING_MATERIAL_GOOD))) {
-				int tMultiplier = tMat.contains(SubTag.SOLDERING_MATERIAL_GOOD) ? 1 : tMat.contains(SubTag.SOLDERING_MATERIAL_BAD) ? 4 : 2;
 				
 				//Rocket Circuits
 				GT_Values.RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1L),
 								GT_ModHandler.getModItem("GalacticraftCore", "item.heavyPlating", 1L, 0),
-								GT_ItemList.spacebox1.get(1)}, tMat.getMolten(288L * tMultiplier / 2L),
+								GT_ItemList.spacebox1.get(1)}, Materials.SolderingAlloy.getMolten(144L),
 						CoreItems2.getRecipe(0, 1), 1000, 256
 				);
 				GT_Values.RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 1L),
 								GT_ModHandler.getModItem("GalacticraftMars", "item.null", 1L, 3),
-								GT_ItemList.spacebox2.get(1)}, tMat.getMolten(576L * tMultiplier / 2L),
+								GT_ItemList.spacebox2.get(1)}, Materials.SolderingAlloy.getMolten(288L),
 						CoreItems2.getRecipe(1, 1), 1600, 480
 				);
 				GT_Values.RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 1L),
 								GT_ModHandler.getModItem("GalacticraftMars", "item.itemBasicAsteroids", 1L, 0),
-								GT_ItemList.spacebox3.get(2)}, tMat.getMolten(1152L * tMultiplier / 2L),
+								GT_ItemList.spacebox3.get(2)}, Materials.SolderingAlloy.getMolten(576L),
 						CoreItems2.getRecipe(2, 1), 2200, 1920
 				);
 				GT_Values.RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 1L),
 								CoreItems2.getRecipe(11, 1), GT_ItemList.spacebox4.get(2)},
-						tMat.getMolten(2304L * tMultiplier / 2L), CoreItems2.getRecipe(3, 1), 2800, 4096
+						Materials.SolderingAlloy.getMolten(1152L), CoreItems2.getRecipe(3, 1), 2800, 4096
 				);
 				GT_Values.RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 1L),
 								CoreItems2.getRecipe(12, 1), GT_ItemList.spacebox5.get(4)},
-						tMat.getMolten(4608L * tMultiplier / 2L), CoreItems2.getRecipe(4, 1), 3400, 16384
+						Materials.SolderingAlloy.getMolten(2304L), CoreItems2.getRecipe(4, 1), 3400, 16384
 				);
 				GT_Values.RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 1L),
 								CoreItems2.getRecipe(13, 1), GT_ItemList.spacebox6.get(4)},
-						tMat.getMolten(9216L * tMultiplier / 2L), CoreItems2.getRecipe(5, 1), 4000, 65536
+						Materials.SolderingAlloy.getMolten(4608L), CoreItems2.getRecipe(5, 1), 4000, 65536
 				);
 				GT_Values.RA.addCircuitAssemblerRecipe(new ItemStack[]{
 								GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 1L),
 								CoreItems2.getRecipe(14, 1), GT_ItemList.spacebox7.get(8)},
-						tMat.getMolten(18432L * tMultiplier / 2L), CoreItems2.getRecipe(6, 1), 4600, 262144
+						Materials.SolderingAlloy.getMolten(9216L), CoreItems2.getRecipe(6, 1), 4600, 262144
 				);
 				GT_Values.RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Infinite, 1L),
 								CoreItems2.getRecipe(15, 1), GT_ItemList.spacebox8.get(8)},
-						tMat.getMolten(36864L * tMultiplier / 2L), CoreItems2.getRecipe(7, 1), 5200, 1048576
+						Materials.SolderingAlloy.getMolten(18432L), CoreItems2.getRecipe(7, 1), 5200, 1048576
 				);
 				
 				//Farm Circuits
 				GT_Values.RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1L),
 								GT_ModHandler.getModItem("minecraft", "sapling", 64L, 0)},
-						tMat.getMolten(144L * tMultiplier / 2L), CoreItems2.getRecipe(OakScheme.getMetaID(), 1),
+						Materials.SolderingAlloy.getMolten(72L), CoreItems2.getRecipe(OakScheme.getMetaID(), 1),
 						200, 30
 				);
 				GT_Values.RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1L),
 								GT_ModHandler.getModItem("minecraft", "sapling", 64L, 1)},
-						tMat.getMolten(144L * tMultiplier / 2L),
+						Materials.SolderingAlloy.getMolten(72L),
 						CoreItems2.getRecipe(SpruceScheme.getMetaID(), 1), 200, 30
 				);
 				GT_Values.RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1L),
 								GT_ModHandler.getModItem("minecraft", "sapling", 64L, 2)},
-						tMat.getMolten(144L * tMultiplier / 2L),
+						Materials.SolderingAlloy.getMolten(72L),
 						CoreItems2.getRecipe(BirchScheme.getMetaID(), 1), 200, 30
 				);
 				GT_Values.RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1L),
 								GT_ModHandler.getModItem("minecraft", "sapling", 64L, 3)},
-						tMat.getMolten(144L * tMultiplier / 2L),
+						Materials.SolderingAlloy.getMolten(72L),
 						CoreItems2.getRecipe(JungleScheme.getMetaID(), 1), 200, 30
 				);
 				GT_Values.RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1L),
 								GT_ModHandler.getModItem("minecraft", "sapling", 64L, 4)},
-						tMat.getMolten(144L * tMultiplier / 2L),
+						Materials.SolderingAlloy.getMolten(72L),
 						CoreItems2.getRecipe(AcaciaScheme.getMetaID(), 1), 200, 30
 				);
 				GT_Values.RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1L),
 								GT_ModHandler.getModItem("minecraft", "sapling", 64L, 5)},
-						tMat.getMolten(144L * tMultiplier / 2L),
+						Materials.SolderingAlloy.getMolten(72L),
 						CoreItems2.getRecipe(DarkOakScheme.getMetaID(), 1), 200, 30
 				);
 				GT_Values.RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1L),
 								GT_ModHandler.getModItem("IC2", "blockRubSapling", 64L, 0)},
-						tMat.getMolten(144L * tMultiplier / 2L),
+						Materials.SolderingAlloy.getMolten(72L),
 						CoreItems2.getRecipe(RubberScheme.getMetaID(), 1), 200, 30
 				);
 				GT_Values.RA.addCircuitAssemblerRecipe(
@@ -4581,11 +4572,9 @@ public class ImpactCore implements Runnable {
 								GT_OreDictUnificator.get(OrePrefixes.dust, Materials.AlienOrganic, 64L),
 								GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Phoenixite, 64L),
 								GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CosmicNeutronium, 64L)},
-						tMat.getMolten(1152L * tMultiplier / 2L),
+						Materials.SolderingAlloy.getMolten(576L),
 						CoreItems2.getRecipe(BarnardaCScheme.getMetaID(), 1), 1000, 8000000
 				);
-			}
-		}
 	}
 	
 	private void assemblyLine() {

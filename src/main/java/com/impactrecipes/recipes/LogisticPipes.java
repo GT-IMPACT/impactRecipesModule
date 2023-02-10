@@ -373,97 +373,90 @@ public class LogisticPipes implements Runnable {
     }
 
     private void ciruit() {
-        for (Materials tMat : Materials.values()) {
-            if (tMat.mStandardMoltenFluid != null && tMat.contains(SubTag.SOLDERING_MATERIAL) &&
-                    !(GregTech_API.mUseOnlyGoodSolderingMaterials && !tMat.contains(SubTag.SOLDERING_MATERIAL_GOOD))) {
-                int tMultiplier = tMat.contains(SubTag.SOLDERING_MATERIAL_GOOD) ? 1 : tMat.contains(SubTag.SOLDERING_MATERIAL_BAD) ? 4 : 2;
                 //LP Upgrades
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Tin, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, 6), 120, 30);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Iron, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, 7), 120, 30);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Electrum, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, 20), 120, 30);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, 16), 120, 30);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Gold, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, 21), 120, 30);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.RedAlloy, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Electrum, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, 23), 120, 30);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Gold, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Electrum, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, 24), 120, 30);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Lapis, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, 25), 120, 30);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.AnnealedCopper, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, 30), 120, 30);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Bronze, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, 41), 120, 30);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silver, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, 42), 120, 30);
                 GT_Values.RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.RedAlloy, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Silver, 2)},
-                        tMat.getMolten(144L * tMultiplier / 2L),
+                        Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, 26), 120, 30);
-
-            }
-        }
     }
 }

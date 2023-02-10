@@ -216,15 +216,10 @@ public class ProjectRed implements Runnable {
     }
 
     private void circuitAssemblerRecipe() {
-        for (Materials tMat : Materials.values()) {
-            if (tMat.mStandardMoltenFluid != null && tMat.contains(SubTag.SOLDERING_MATERIAL) && !(GregTech_API.mUseOnlyGoodSolderingMaterials && !tMat.contains(SubTag.SOLDERING_MATERIAL_GOOD))) {
-                int tMultiplier = tMat.contains(SubTag.SOLDERING_MATERIAL_GOOD) ? 1 : tMat.contains(SubTag.SOLDERING_MATERIAL_BAD) ? 4 : 2;
                 //ICChip
-                RA.addCircuitAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Board_Coated.get(1), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Copper, 6)}, tMat.getMolten(144L * tMultiplier / 2L), GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.fabrication.icchip", 1L, 0), 200, 16);
-                RA.addCircuitAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Board_Phenolic.get(1), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Gold, 6)}, tMat.getMolten(144L * tMultiplier / 2L), GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.fabrication.icchip", 2L, 0), 200, 30);
-                RA.addCircuitAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Board_Plastic.get(1), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Electrum, 6)}, tMat.getMolten(144L * tMultiplier / 2L), GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.fabrication.icchip", 4L, 0), 200, 48);
-            }
-        }
+                RA.addCircuitAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Board_Coated.get(1), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Copper, 6)}, Materials.SolderingAlloy.getMolten(72L), GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.fabrication.icchip", 1L, 0), 200, 16);
+                RA.addCircuitAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Board_Phenolic.get(1), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Gold, 6)}, Materials.SolderingAlloy.getMolten(72L), GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.fabrication.icchip", 2L, 0), 200, 30);
+                RA.addCircuitAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Board_Plastic.get(1), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Electrum, 6)}, Materials.SolderingAlloy.getMolten(72L), GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.fabrication.icchip", 4L, 0), 200, 48);
     }
 
     private void chemicalBathRecipe() {
