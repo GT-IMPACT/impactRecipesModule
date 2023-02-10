@@ -13,6 +13,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
 import static com.impact.common.item.Core_List_Items.*;
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.GregTech_API.getStackofAmountFromOreDict;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
@@ -387,56 +388,56 @@ public class BuildCraft implements Runnable {
 
     private void assemblerRecipe() {
         // --- Wooden Pipe
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Wood, 2L),
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
                         GT_Utility.getIntegratedCircuit(3)}, null,
                 GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemswood", 4L),
                 100, 16);
         // --- Cobblestone Pipe
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{CoreItems2.getRecipe(CobblestoneRod.getMetaID(), 4),
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
                         GT_Utility.getIntegratedCircuit(3)}, null, GT_ModHandler
                         .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemscobblestone", 4L),
                 100, 16);
         // --- Stone Pipe
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_ModHandler.getModItem("ForgeMicroblock", "stoneRod", 4L),
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
                         GT_Utility.getIntegratedCircuit(3)}, null,
                 GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsstone", 4L),
                 100, 16);
         // --- Quartz Pipe
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.NetherQuartz, 2L),
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
                         GT_Utility.getIntegratedCircuit(3)}, null,
                 GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsquartz", 4L),
                 100, 16);
         // --- Sandstone Pipe
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{CoreItems2.getRecipe(SandstoneRod.getMetaID(), 4),
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
                         GT_Utility.getIntegratedCircuit(3)}, null, GT_ModHandler
                         .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemssandstone", 4L), 100,
                 16);
         // --- Iron Pipe
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Iron, 2L),
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
                         GT_Utility.getIntegratedCircuit(3)}, null,
                 GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsiron", 4L),
                 100, 24);
         // --- Gold Pipe
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Gold, 2L),
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
                         GT_Utility.getIntegratedCircuit(3)}, null,
                 GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsgold", 4L),
                 100, 48);
         // --- Diamond Pipe
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Diamond, 4L),
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 2L),
                         GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Basic, 1L),
@@ -444,7 +445,7 @@ public class BuildCraft implements Runnable {
                         .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsdiamond", 8L), 200,
                 64);
         // --- Emerald Pipe
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Emerald, 4L),
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 2L),
                         GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1L),
@@ -454,56 +455,56 @@ public class BuildCraft implements Runnable {
 
         for (int i = 0; i < 16; i++) {
             // --- Wooden Pipe
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Wood, 2L),
                             new ItemStack(Blocks.stained_glass_pane, 1, i), GT_Utility.getIntegratedCircuit(3)},
                     null, GT_ModHandler
                             .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemswood", 4L, i + 1),
                     100, 16);
             // --- Cobblestone Pipe
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{CoreItems2.getRecipe(CobblestoneRod.getMetaID(), 4),
                             new ItemStack(Blocks.stained_glass_pane, 1, i), GT_Utility.getIntegratedCircuit(3)},
                     null, GT_ModHandler
                             .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemscobblestone", 4L,
                                     i + 1), 100, 16);
             // --- Stone Pipe
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("ForgeMicroblock", "stoneRod", 4L, 1),
                             new ItemStack(Blocks.stained_glass_pane, 1, i), GT_Utility.getIntegratedCircuit(3)},
                     null, GT_ModHandler
                             .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsstone", 4L, i + 1),
                     100, 16);
             // --- Quartz Pipe
-            GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+            RA.addAssemblerRecipe(new ItemStack[]{
                             GT_OreDictUnificator.get(OrePrefixes.stick, Materials.NetherQuartz, 4L),
                             new ItemStack(Blocks.stained_glass_pane, 1, i), GT_Utility.getIntegratedCircuit(3)}, null,
                     GT_ModHandler
                             .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsquartz", 4L, i + 1),
                     100, 16);
             // --- Sandstone Pipe
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{CoreItems2.getRecipe(SandstoneRod.getMetaID(), 4),
                             new ItemStack(Blocks.stained_glass_pane, 1, i), GT_Utility.getIntegratedCircuit(3)},
                     null, GT_ModHandler
                             .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemssandstone", 4L,
                                     i + 1), 100, 16);
             // --- Iron Pipe
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Iron, 2L),
                             new ItemStack(Blocks.stained_glass_pane, 1, i), GT_Utility.getIntegratedCircuit(3)},
                     null, GT_ModHandler
                             .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsiron", 4L, i + 1),
                     100, 24);
             // --- Gold Pipe
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Gold, 2L),
                             new ItemStack(Blocks.stained_glass_pane, 1, i), GT_Utility.getIntegratedCircuit(3)},
                     null, GT_ModHandler
                             .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsgold", 4L, i + 1),
                     100, 48);
             // --- Diamond Pipe
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Diamond, 4L),
                             new ItemStack(Blocks.stained_glass_pane, 2, i),
                             GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Basic, 1L),
@@ -511,7 +512,7 @@ public class BuildCraft implements Runnable {
                             .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsdiamond", 8L,
                                     i + 1), 200, 64);
             // --- Emerald Pipe
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Emerald, 4L),
                             new ItemStack(Blocks.stained_glass_pane, 2, i),
                             GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1L),

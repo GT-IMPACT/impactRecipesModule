@@ -14,6 +14,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import crazypants.enderio.EnderIO;
 
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class Ender_IO implements Runnable {
@@ -298,93 +299,93 @@ public class Ender_IO implements Runnable {
 
     private void alloySmelterRecipe() {
         // --- Fused Quartz
-        GT_Values.RA.addAlloySmelterRecipe(new ItemStack(Items.quartz, 4),
+        RA.addAlloySmelterRecipe(new ItemStack(Items.quartz, 4),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Glass, 1L),
                 new ItemStack(EnderIO.blockFusedQuartz, 1, 0), 200, 8);
     }
 
     private void assemblerRecipe() {
         // --- Item Conduit
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Conveyor_Module_LV.get(1),
+        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Conveyor_Module_LV.get(1),
                         GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Electrum, 4L),
                         new ItemStack(EnderIO.itemMaterial, 4, 1), GT_Utility.getIntegratedCircuit(1)}, null,
                 new ItemStack(EnderIO.itemItemConduit, 4, 0), 120, 16);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Conveyor_Module_MV.get(1),
+        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Conveyor_Module_MV.get(1),
                         GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Platinum, 4L),
                         new ItemStack(EnderIO.itemMaterial, 16, 1), GT_Utility.getIntegratedCircuit(1)}, null,
                 new ItemStack(EnderIO.itemItemConduit, 16, 0), 160, 48);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Conveyor_Module_HV.get(1),
+        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Conveyor_Module_HV.get(1),
                         GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Osmium, 4L),
                         new ItemStack(EnderIO.itemMaterial, 64, 1), GT_Utility.getIntegratedCircuit(1)}, null,
                 new ItemStack(EnderIO.itemItemConduit, 64, 0), 200, 120);
         // --- Fluid Conduit
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Electric_Pump_LV.get(1),
+        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Electric_Pump_LV.get(1),
                         GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Steel, 4L),
                         new ItemStack(EnderIO.itemMaterial, 4, 1), GT_Utility.getIntegratedCircuit(1)}, null,
                 new ItemStack(EnderIO.itemLiquidConduit, 4, 0), 120, 16);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Electric_Pump_MV.get(1),
+        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Electric_Pump_MV.get(1),
                         GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.StainlessSteel, 4L),
                         new ItemStack(EnderIO.itemMaterial, 4, 1), GT_Utility.getIntegratedCircuit(1)}, null,
                 new ItemStack(EnderIO.itemLiquidConduit, 4, 1), 160, 48);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Electric_Pump_HV.get(1),
+        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Electric_Pump_HV.get(1),
                         GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Titanium, 4L),
                         new ItemStack(EnderIO.itemMaterial, 4, 1), GT_Utility.getIntegratedCircuit(1)}, null,
                 new ItemStack(EnderIO.itemLiquidConduit, 4, 2), 200, 120);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Electric_Pump_EV.get(1),
+        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Electric_Pump_EV.get(1),
                         GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.TungstenSteel, 4L),
                         new ItemStack(EnderIO.itemMaterial, 16, 1), GT_Utility.getIntegratedCircuit(1)}, null,
                 new ItemStack(EnderIO.itemLiquidConduit, 16, 2), 300, 480);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{ItemList.Electric_Pump_IV.get(1),
+        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Electric_Pump_IV.get(1),
                         GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.NiobiumTitanium, 4L),
                         new ItemStack(EnderIO.itemMaterial, 64, 1), GT_Utility.getIntegratedCircuit(1)}, null,
                 new ItemStack(EnderIO.itemLiquidConduit, 64, 2), 400, 1920);
         // --- Item Filter
-        GT_Values.RA.addAssemblerRecipe(ItemList.Conveyor_Module_LV.get(1),
+        RA.addAssemblerRecipe(ItemList.Conveyor_Module_LV.get(1),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1L),
                 new ItemStack(EnderIO.itemBasicFilterUpgrade, 1, 0), 100, 16);
         // --- Advanced Item Filter
-        GT_Values.RA.addAssemblerRecipe(ItemList.Conveyor_Module_MV.get(1),
+        RA.addAssemblerRecipe(ItemList.Conveyor_Module_MV.get(1),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.ElectricalSteel, 1L),
                 new ItemStack(EnderIO.itemBasicFilterUpgrade, 1, 1), 100, 64);
         // --- Big Item Filter
-        GT_Values.RA.addAssemblerRecipe(ItemList.Conveyor_Module_HV.get(1),
+        RA.addAssemblerRecipe(ItemList.Conveyor_Module_HV.get(1),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.DarkSteel, 1L),
                 new ItemStack(EnderIO.itemBigFilterUpgrade, 1, 0), 200, 256);
         // --- Big Advanced Item Filter
-        GT_Values.RA.addAssemblerRecipe(ItemList.Conveyor_Module_EV.get(1),
+        RA.addAssemblerRecipe(ItemList.Conveyor_Module_EV.get(1),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HSLA, 1L),
                 new ItemStack(EnderIO.itemBigFilterUpgrade, 1, 1), 300, 480);
         // --- Mod Filter
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(EnderIO.itemBasicFilterUpgrade, 1, 0),
+        RA.addAssemblerRecipe(new ItemStack(EnderIO.itemBasicFilterUpgrade, 1, 0),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.DarkSteel, 1L),
                 new ItemStack(EnderIO.itemModItemFilter, 1, 0), 200, 120);
         // --- Chargeable Item Filter
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(EnderIO.itemConduitProbe, 1, 0),
+        RA.addAssemblerRecipe(new ItemStack(EnderIO.itemConduitProbe, 1, 0),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.ElectricalSteel, 1L),
                 new ItemStack(EnderIO.itemPowerItemFilter, 1, 0), 200, 64);
         // --- Network Conduit (OC)
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("OpenComputers", "cable", 1L),
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("OpenComputers", "cable", 1L),
                 new ItemStack(EnderIO.itemMaterial, 1, 1), new ItemStack(EnderIO.itemOCConduit, 1, 0), 120,
                 16);
         // --- Capacitor
-        GT_Values.RA.addAssemblerRecipe(ItemList.Battery_Hull_LV.get(1),
+        RA.addAssemblerRecipe(ItemList.Battery_Hull_LV.get(1),
                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Plastic, 4L),
                 Materials.Redstone.getMolten(576), new ItemStack(EnderIO.itemBasicCapacitor, 1, 0), 200,
                 30);
         // --- Capacitor 2
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(EnderIO.itemBasicCapacitor, 2, 0),
+        RA.addAssemblerRecipe(new ItemStack(EnderIO.itemBasicCapacitor, 2, 0),
                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.EnergeticAlloy, 4L),
                 Materials.Glowstone.getMolten(576), new ItemStack(EnderIO.itemBasicCapacitor, 1, 1), 300,
                 120);
         // --- Capacitor 3
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(EnderIO.itemBasicCapacitor, 2, 1),
+        RA.addAssemblerRecipe(new ItemStack(EnderIO.itemBasicCapacitor, 2, 1),
                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.VibrantAlloy, 4L),
                 Materials.ConductiveIron.getMolten(576), new ItemStack(EnderIO.itemBasicCapacitor, 1, 2),
                 400, 480);
         // --- Redstone Conduit
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(EnderIO.itemRedstoneConduit, 1, 2),
+        RA.addAssemblerRecipe(new ItemStack(EnderIO.itemRedstoneConduit, 1, 2),
                 new ItemStack(Blocks.lever, 1), new ItemStack(EnderIO.itemRedstoneConduit, 1, 1), 50, 60);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(EnderIO.itemRedstoneConduit, 1, 0),
+        RA.addAssemblerRecipe(new ItemStack(EnderIO.itemRedstoneConduit, 1, 0),
                 new ItemStack(EnderIO.itemMaterial, 1, 1), new ItemStack(EnderIO.itemRedstoneConduit, 1, 2),
                 50, 30);
         GT_Values.RA
@@ -397,16 +398,16 @@ public class Ender_IO implements Runnable {
                         new ItemStack(EnderIO.itemMaterial, 1, 1), Materials.ConductiveIron.getMolten(144),
                         new ItemStack(EnderIO.itemPowerConduit, 1, 0), 50, 30);
         // --- ME Conduit
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 16),
                 new ItemStack(EnderIO.itemMaterial, 4, 1), new ItemStack(EnderIO.itemMEConduit, 1, 0), 50,
                 120);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1, 76),
                 new ItemStack(EnderIO.itemMaterial, 4, 1), new ItemStack(EnderIO.itemMEConduit, 1, 1), 100,
                 480);
         // --- Speed Upgrade
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(EnderIO.itemExtractSpeedUpgrade, 1, 0),
+        RA.addAssemblerRecipe(new ItemStack(EnderIO.itemExtractSpeedUpgrade, 1, 0),
                 GT_Utility.getIntegratedCircuit(1), new ItemStack(EnderIO.itemExtractSpeedUpgrade, 1, 1),
                 50, 30);
         // --- Dark Pressure Plate
@@ -420,64 +421,64 @@ public class Ender_IO implements Runnable {
                         GT_Utility.getIntegratedCircuit(3), new ItemStack(EnderIO.blockDarkIronBars, 4, 0), 400,
                         48);
         // --- Powered Light Inverted
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(EnderIO.blockElectricLight, 1, 0),
+        RA.addAssemblerRecipe(new ItemStack(EnderIO.blockElectricLight, 1, 0),
                 GT_ModHandler.getModItem("minecraft", "redstone_torch", 1L),
                 new ItemStack(EnderIO.blockElectricLight, 1, 1), 40, 64);
         // --- Light Inverted
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(EnderIO.blockElectricLight, 1, 2),
+        RA.addAssemblerRecipe(new ItemStack(EnderIO.blockElectricLight, 1, 2),
                 GT_ModHandler.getModItem("minecraft", "redstone_torch", 1L),
                 new ItemStack(EnderIO.blockElectricLight, 1, 3), 40, 16);
         // --- Wireless Powered Light
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{new ItemStack(EnderIO.blockElectricLight, 4, 0),
+        RA.addAssemblerRecipe(new ItemStack[]{new ItemStack(EnderIO.blockElectricLight, 4, 0),
                         GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Copper, 1L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Aluminium, 4L)}, null,
                 new ItemStack(EnderIO.blockElectricLight, 4, 4), 100, 120);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{new ItemStack(EnderIO.blockElectricLight, 16, 0),
                         GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Electrum, 1L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4L)}, null,
                 new ItemStack(EnderIO.blockElectricLight, 16, 4), 150, 480);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{new ItemStack(EnderIO.blockElectricLight, 64, 0),
                         GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Platinum, 1L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.TungstenSteel, 4L)}, null,
                 new ItemStack(EnderIO.blockElectricLight, 64, 4), 200, 1920);
         // --- Wireless Powered Light Inverted
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(EnderIO.blockElectricLight, 1, 4),
+        RA.addAssemblerRecipe(new ItemStack(EnderIO.blockElectricLight, 1, 4),
                 GT_ModHandler.getModItem("minecraft", "redstone_torch", 1L),
                 new ItemStack(EnderIO.blockElectricLight, 1, 5), 40, 64);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{new ItemStack(EnderIO.blockElectricLight, 4, 1),
+        RA.addAssemblerRecipe(new ItemStack[]{new ItemStack(EnderIO.blockElectricLight, 4, 1),
                         GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Copper, 1L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Aluminium, 4L)}, null,
                 new ItemStack(EnderIO.blockElectricLight, 4, 5), 100, 120);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{new ItemStack(EnderIO.blockElectricLight, 16, 1),
                         GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Electrum, 1L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.HSLA, 4L)}, null,
                 new ItemStack(EnderIO.blockElectricLight, 16, 5), 150, 480);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{new ItemStack(EnderIO.blockElectricLight, 64, 1),
                         GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Platinum, 1L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.TungstenSteel, 4L)}, null,
                 new ItemStack(EnderIO.blockElectricLight, 64, 5), 200, 1920);
         // --- Light
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+        RA.addAssemblerRecipe(new ItemStack[]{
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.ElectricalSteel, 1L),
                         GT_ModHandler.getModItem("GalacticraftCore", "tile.arclamp", 1L),
                         new ItemStack(EnderIO.blockFusedQuartz, 4, 0)}, null,
                 new ItemStack(EnderIO.blockElectricLight, 16, 2), 200, 64);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Desh, 1L),
                         GT_ModHandler.getModItem("GalacticraftCore", "tile.arclamp", 1L),
                         new ItemStack(EnderIO.blockFusedQuartz, 16, 0)}, null,
                 new ItemStack(EnderIO.blockElectricLight, 64, 2), 300, 256);
         // --- Powered Light
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+        RA.addAssemblerRecipe(new ItemStack[]{
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.ElectricalSteel, 1L),
                         GT_ModHandler.getModItem("GregsLighting", "ic2ElectricFloodlight", 1L),
                         new ItemStack(EnderIO.blockFusedQuartz, 4, 0)}, null,
                 new ItemStack(EnderIO.blockElectricLight, 16, 0), 200, 64);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Desh, 1L),
                         GT_ModHandler.getModItem("GregsLighting", "ic2ElectricFloodlight", 1L),
                         new ItemStack(EnderIO.blockFusedQuartz, 16, 0)}, null,
@@ -485,10 +486,10 @@ public class Ender_IO implements Runnable {
     }
 
     private void chemicalBathRecipe() {
-        GT_Values.RA.addChemicalBathRecipe(new ItemStack(EnderIO.blockFusedQuartz, 1, 0),
+        RA.addChemicalBathRecipe(new ItemStack(EnderIO.blockFusedQuartz, 1, 0),
                 Materials.Glowstone.getMolten(576L), new ItemStack(EnderIO.blockFusedQuartz, 1, 2),
                 GT_Values.NI, GT_Values.NI, null, 100, 8);
-        GT_Values.RA.addChemicalBathRecipe(new ItemStack(EnderIO.blockFusedQuartz, 1, 1),
+        RA.addChemicalBathRecipe(new ItemStack(EnderIO.blockFusedQuartz, 1, 1),
                 Materials.Glowstone.getMolten(576L), new ItemStack(EnderIO.blockFusedQuartz, 1, 3),
                 GT_Values.NI, GT_Values.NI, null, 100, 4);
         GT_Values.RA
@@ -498,20 +499,20 @@ public class Ender_IO implements Runnable {
     }
 
     private void fluidSolidifierRecipe() {
-        GT_Values.RA.addFluidSolidifierRecipe(ItemList.Shape_Mold_Ball.get(0L),
+        RA.addFluidSolidifierRecipe(ItemList.Shape_Mold_Ball.get(0L),
                 Materials.Concrete.getMolten(36L), new ItemStack(EnderIO.itemMaterial, 1, 1), 20, 4);
     }
 
     private void printerRecipe() {
         // --- Telepad
-        GT_Values.RA.addPrimitiveLineRecipe(new ItemStack[]{
+        RA.addPrimitiveLineRecipe(new ItemStack[]{
                 GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.StainlessSteel, 1),
                 new ItemStack(EnderIO.itemBasicCapacitor, 1, 2), ItemList.Field_Generator_MV.get(1L),
                 ItemList.Sensor_HV.get(2L), new ItemStack(EnderIO.blockFusedQuartz, 4, 0),
                 GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.DarkSteel, 8)
         }, new ItemStack(EnderIO.blockTelePad, 9, 0), null, 20 * 20, 480);
         // --- Transceiver
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                 GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockQuantumLinkChamber", 1L, 0),
                 GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Enderium, 1),
                 ItemList.Field_Generator_LuV.get(1L), new ItemStack(EnderIO.itemBasicCapacitor, 4, 2),

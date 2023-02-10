@@ -10,6 +10,7 @@ import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
 import net.minecraft.item.ItemStack;
 
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class StarGate implements Runnable {
@@ -40,7 +41,7 @@ public class StarGate implements Runnable {
 
     private void  printer3d() {
         //Stargate Base
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                 GT_OreDictUnificator.get(OrePrefixes.block, Materials.NaquadahAlloy, 6),
                 GT_ModHandler.getModItem("SGCraft", "stargateRing", 4L, 0),
                 GT_ModHandler.getModItem("SGCraft", "stargateRing", 1L, 1), ItemList.Emitter_UV.get(1L),
@@ -49,7 +50,7 @@ public class StarGate implements Runnable {
         }, GT_ModHandler.getModItem("SGCraft", "stargateBase", 1L, 0), null, 100 * 20, 500000);
 
         //Stargate Ring Block
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                 GT_OreDictUnificator.get(OrePrefixes.block, Materials.NaquadahAlloy, 8),
                 CoreItems2.getRecipe(147, 8), CoreItems2.getRecipe(148, 6), CoreItems2.getRecipe(149, 3),
                 ItemList.Field_Generator_UV.get(1L),
@@ -57,7 +58,7 @@ public class StarGate implements Runnable {
         }, GT_ModHandler.getModItem("SGCraft", "stargateRing", 1L, 0), null, 50 * 20, 500000);
 
         //Stargate Chevron Block
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                 GT_OreDictUnificator.get(OrePrefixes.block, Materials.NaquadahAlloy, 8),
                 ItemList.Sensor_UV.get(4L),
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Nano, 4),
@@ -67,7 +68,7 @@ public class StarGate implements Runnable {
         }, GT_ModHandler.getModItem("SGCraft", "stargateRing", 1L, 1), null, 50 * 20, 500000);
 
         //IC2 Stargate Power Unit
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                 GT_OreDictUnificator.get(OrePrefixes.block, Materials.NaquadahAlloy, 12),
                 ItemList.Casing_Coil_Superconductor.get(10L),
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Nano, 4),
@@ -77,7 +78,7 @@ public class StarGate implements Runnable {
         }, GT_ModHandler.getModItem("SGCraft", "ic2PowerUnit", 1L, 0), null, 100 * 20, 500000);
 
         //OC Stargate Interface
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                 GT_OreDictUnificator.get(OrePrefixes.block, Materials.NaquadahAlloy, 12),
                 ItemList.Casing_Coil_Superconductor.get(10L),
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Nano, 4),
@@ -91,7 +92,7 @@ public class StarGate implements Runnable {
 
     private void assembler() {
         // --- Stargate Controller
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.block, Materials.NaquadahAlloy, 24L),
                         ItemList.Sensor_UV.get(4L),
                         GT_ModHandler.getModItem("EnderIO", "blockDarkSteelPressurePlate", 12L),
@@ -99,22 +100,22 @@ public class StarGate implements Runnable {
                         GT_ModHandler.getModItem("SGCraft", "sgControllerCrystal", 1L, 0)}, null,
                 GT_ModHandler.getModItem("SGCraft", "stargateController", 1L, 0), 1000, 500000);
         // --- Stargate Shevron Upgrade
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{CoreItems2.getRecipe(147, 8), CoreItems2.getRecipe(149, 3),
                         ItemList.Electric_Piston_UV.get(6L), ItemList.Field_Generator_UV.get(4L),
                         ItemList.Sensor_UV.get(1L)}, null,
                 GT_ModHandler.getModItem("SGCraft", "sgChevronUpgrade", 1L, 0), 1000, 500000);
         // --- Stargate Iris Upgrade
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("SGCraft", "sgIrisBlade", 20L, 0),
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("SGCraft", "sgIrisBlade", 20L, 0),
                 ItemList.Casing_Coil_Superconductor.get(4L),
                 GT_ModHandler.getModItem("SGCraft", "sgIrisUpgrade", 1L, 0), 1000, 500000);
         // --- Stargate Iris Blade
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.block, Materials.Titanium, 32L),
                         ItemList.Electric_Piston_UV.get(1L), ItemList.Casing_Coil_Superconductor.get(1L)}, null,
                 GT_ModHandler.getModItem("SGCraft", "sgIrisBlade", 1L, 0), 1000, 500000);
         // --- Ridiculously Large Capacitor
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{CoreItems2.getRecipe(148, 12), ItemList.Field_Generator_UV.get(5L),
                         ItemList.ZPM2.get(1L)}, null,
                 GT_ModHandler.getModItem("SGCraft", "ic2Capacitor", 1L, 0), 1000, 500000);
@@ -125,7 +126,7 @@ public class StarGate implements Runnable {
         GT_Values.RA
                 .addAutoclaveSpaceRecipe(CoreItems.getRecipe(36, 64), Materials.Silver.getPlasma(8000L),
                         GT_ModHandler.getModItem("SGCraft", "sgCoreCrystal", 1L), 10000, 3600, 131000, true);
-        GT_Values.RA.addAutoclaveSpaceRecipe(
+        RA.addAutoclaveSpaceRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DraconiumAwakened, 64L),
                 Materials.Silver.getPlasma(8000L),
                 GT_ModHandler.getModItem("SGCraft", "sgControllerCrystal", 1L), 10000, 3600, 131000, true);

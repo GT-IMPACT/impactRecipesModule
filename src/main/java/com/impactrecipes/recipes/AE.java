@@ -639,11 +639,11 @@ public class AE implements Runnable {
         RA.addAssemblerRecipe(CoreItems2.getRecipe(201, 1), GT_ModHandler.getModItem("ae2fc", "fluid_part", 1L, 6), GT_ModHandler.getModItem("ae2fc", "fluid_storage4096", 1L), 100, 30720);
 
         // --- Magnet
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.block, Materials.NeodymiumMagnetic, 2L), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 28), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.HastelloyN, 8), GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Inconel792, 24)}, null,
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.block, Materials.NeodymiumMagnetic, 2L), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 28), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.HastelloyN, 8), GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Inconel792, 24)}, null,
                 GT_ModHandler.getModItem("ae2wct", "magnetCard", 1L, 0), 1000, 1920
         );
         // --- Booster
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 64L, 42), ItemList.Field_Generator_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.CinobiteA243, 16), GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Quantium, 24), GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Osmium, 64)}, null,
+        RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 64L, 42), ItemList.Field_Generator_UV.get(1L), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.CinobiteA243, 16), GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Quantium, 24), GT_OreDictUnificator.get(OrePrefixes.screw, Materials.Osmium, 64)}, null,
                 GT_ModHandler.getModItem("ae2wct", "infinityBoosterCard", 1L, 0), 4000, 122880
         );
 
@@ -663,9 +663,9 @@ public class AE implements Runnable {
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockEnergyCell", 1L), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 1), GT_ModHandler.getModItem("extracells", "part.base", 1L, 8), 300, 120);
 
         // --- ME Storage Housing
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem("minecraft", "glass_pane", 1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.CertusQuartz, 1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 2), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quartzite, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), 200, 96);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem("minecraft", "glass_pane", 1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.CertusQuartz, 1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 2), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quartzite, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), 200, 96);
         // --- Fluid Storage Housing
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+        RA.addAssemblerRecipe(new ItemStack[]{
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1),
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.CertusQuartz, 1),
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 1),
@@ -674,24 +674,24 @@ public class AE implements Runnable {
                         GT_Utility.getIntegratedCircuit(10)}, null,
                 CoreItems2.getRecipe(201, 1), 200, 96);
         // --- Advanced Storage Housing
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.ReinforcedGlass, 1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HastelloyC276, 1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iridium, 2), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null,
+        RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.ReinforcedGlass, 1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HastelloyC276, 1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iridium, 2), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null,
                 GT_ModHandler.getModItem("extracells", "storage.casing", 1), 200, 96
         );
 
         // --- ME Conversion Monitor
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 400), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 43), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 44), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 420), 200, 96);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 400), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 43), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 44), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 420), 200, 96);
         // --- ME Crafting Terminal
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 380), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), ItemList.Cover_Crafting.get(1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 360), 200, 96);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 380), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), ItemList.Cover_Crafting.get(1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 360), 200, 96);
         // --- ME Interface Terminal
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 380), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 440), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 480), 200, 96);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 380), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 440), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 480), 200, 96);
         // --- ME Pattern Terminal
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 380), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 52), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 340), 200, 96);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 380), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 52), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 340), 200, 96);
         // --- ME Storage Monitor
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 180), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 280), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 3), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 400), 200, 96);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 180), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 280), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 3), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 400), 200, 96);
         // --- ME Terminal
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 180), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.CertusQuartz, 1), GT_OreDictUnificator.get(OrePrefixes.stick, Materials.NetherQuartz, 4), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quartzite, 1), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 380), 200, 96);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 180), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.CertusQuartz, 1), GT_OreDictUnificator.get(OrePrefixes.stick, Materials.NetherQuartz, 4), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quartzite, 1), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 380), 200, 96);
         // --- Illuminated Panel
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Glowstone, 1), GT_ModHandler.getModItem(AE2, "tile.BlockQuartzGlass", 1L), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 1), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 2L, 8), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 180), 200, 96);
+        RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Glowstone, 1), GT_ModHandler.getModItem(AE2, "tile.BlockQuartzGlass", 1L), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.VanadiumSteel, 1), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 2L, 8), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 180), 200, 96);
 
     }
 
@@ -833,7 +833,7 @@ public class AE implements Runnable {
     }
 
     private void latheRecipe() {
-        GT_Values.RA.addLatheRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 1), CoreItems2.getRecipe(153, 1), CoreItems.getRecipe(38, 1), new int[]{10000, 5000}, 480, 16);
+        RA.addLatheRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 1), CoreItems2.getRecipe(153, 1), CoreItems.getRecipe(38, 1), new int[]{10000, 5000}, 480, 16);
     }
 
     private void fluidSolidifierRecipe() {

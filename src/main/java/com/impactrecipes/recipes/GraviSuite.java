@@ -12,6 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class GraviSuite implements Runnable {
@@ -90,7 +91,7 @@ public class GraviSuite implements Runnable {
     }
 
     private void printer3d() {
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                         GT_ModHandler.getIC2Item("quantumBodyarmor", 1L, GT_Values.W), ItemList.Transformer_ZPM_LuV.get(1L),
                         GT_ModHandler.getModItem("GraviSuite", "ultimateLappack", 1, GT_Values.W),
                         GT_ModHandler.getModItem("GraviSuite", "itemSimpleItem", 6, 1),
@@ -105,7 +106,7 @@ public class GraviSuite implements Runnable {
                 30720);
 
         //K2P4
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                         GT_ModHandler.getModItem("GraviSuite", "graviChestPlate", 1, GT_Values.W),
                         ItemList.Transformer_UV_ZPM.get(1L),
                         GT_ModHandler.getModItem("GraviSuite", "epicLappack", 1, GT_Values.W),
@@ -122,7 +123,7 @@ public class GraviSuite implements Runnable {
 
     private void assemblyLine() {
         // --- Relocator
-        GT_Values.RA.addAssemblylineRecipe(ItemList.Casing_Coil_Superconductor.get(1L), 288000, new Object[]{
+        RA.addAssemblylineRecipe(ItemList.Casing_Coil_Superconductor.get(1L), 288000, new Object[]{
                 ItemList.Casing_Coil_Superconductor.get(1L),
                 GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockSpatialIOPort", 1),
                 ItemList.Field_Generator_IV.get(4L),

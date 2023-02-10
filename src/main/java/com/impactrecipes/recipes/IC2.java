@@ -519,7 +519,7 @@ public class IC2 implements Runnable {
 
     private void thermalCentrifuge() {
         // --- U Fuel
-        GT_Values.RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorUraniumSimpledepleted", 1L),
+        RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorUraniumSimpledepleted", 1L),
                 new ItemStack[]{
                         GT_ModHandler.getModItem("IC2", "itemUran238", 4L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 1L),
@@ -527,7 +527,7 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium235, 1L)
                 },
                 new int[]{10000,10000,1000,1000},200,500);
-        GT_Values.RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorUraniumDualdepleted", 1L),
+        RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorUraniumDualdepleted", 1L),
                 new ItemStack[]{
                         GT_ModHandler.getModItem("IC2", "itemUran238", 8L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 3L),
@@ -535,7 +535,7 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium235, 2L)
                 },
                 new int[]{10000,10000,1000,1000},200,500);
-        GT_Values.RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorUraniumQuaddepleted", 1L),
+        RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorUraniumQuaddepleted", 1L),
                 new ItemStack[]{
                         GT_ModHandler.getModItem("IC2", "itemUran238", 16L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 7L),
@@ -545,7 +545,7 @@ public class IC2 implements Runnable {
                 new int[]{10000,10000,1000,1000},200,500);
 
         // --- MOX Fuel
-        GT_Values.RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorMOXSimpledepleted", 1L),
+        RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorMOXSimpledepleted", 1L),
                 new ItemStack[]{
                         GT_ModHandler.getModItem("IC2", "itemPlutonium", 2L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 1L),
@@ -555,7 +555,7 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 1L)
                 },
                 new int[]{10000,10000,9500,2000,1000,1000,500},200,500);
-        GT_Values.RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorMOXDualdepleted", 1L),
+        RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorMOXDualdepleted", 1L),
                 new ItemStack[]{
                         GT_ModHandler.getModItem("IC2", "itemPlutonium", 4L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 3L),
@@ -565,7 +565,7 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 2L)
                 },
                 new int[]{10000,10000,9500,2000,1000,1000,500},200,500);
-        GT_Values.RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorMOXQuaddepleted", 1L),
+        RA.addThermalCentrifugeRecipe(GT_ModHandler.getModItem("IC2", "reactorMOXQuaddepleted", 1L),
                 new ItemStack[]{
                         GT_ModHandler.getModItem("IC2", "itemPlutonium", 8L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 7L),
@@ -577,7 +577,7 @@ public class IC2 implements Runnable {
                 new int[]{10000,10000,9500,2000,1000,1000,500},200,500);
 
         // --- Nq Fuel
-        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_Naquadah_1.get(1),
+        RA.addThermalCentrifugeRecipe(ItemList.Depleted_Naquadah_1.get(1),
                 new ItemStack[]{
                         Itemstack(Core_Items2.getInstance(), 4, 183),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.TungstenSteel, 9L),
@@ -585,7 +585,7 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 1L)
                 },
                 new int[]{10000,10000,1000,1000},500,2000);
-        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_Naquadah_2.get(1),
+        RA.addThermalCentrifugeRecipe(ItemList.Depleted_Naquadah_2.get(1),
                 new ItemStack[]{
                         Itemstack(Core_Items2.getInstance(), 8, 183),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.TungstenSteel, 20L),
@@ -593,7 +593,7 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 2L)
                 },
                 new int[]{10000,10000,1000,1000},500,2000);
-        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_Naquadah_4.get(1),
+        RA.addThermalCentrifugeRecipe(ItemList.Depleted_Naquadah_4.get(1),
                 new ItemStack[]{
                         Itemstack(Core_Items2.getInstance(), 16, 183),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.TungstenSteel, 42L),
@@ -603,7 +603,7 @@ public class IC2 implements Runnable {
                 new int[]{10000,10000,1000,1000},500,2000);
 
         // --- Nq+ Fuel
-        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_MNq_1.get(1),
+        RA.addThermalCentrifugeRecipe(ItemList.Depleted_MNq_1.get(1),
                 new ItemStack[]{
                         Itemstack(Core_Items2.getInstance(), 2, 185),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.TungstenSteel, 9L),
@@ -613,7 +613,7 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadria, 2L)
                 },
                 new int[]{10000,10000,9500,2000,1000,1000,500},500,2000);
-        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_MNq_2.get(1),
+        RA.addThermalCentrifugeRecipe(ItemList.Depleted_MNq_2.get(1),
                 new ItemStack[]{
                         Itemstack(Core_Items2.getInstance(), 4, 185),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.TungstenSteel, 20L),
@@ -623,7 +623,7 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadria, 4L)
                 },
                 new int[]{10000,10000,9500,2000,1000,1000,500},500,2000);
-        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_MNq_4.get(1),
+        RA.addThermalCentrifugeRecipe(ItemList.Depleted_MNq_4.get(1),
                 new ItemStack[]{
                         Itemstack(Core_Items2.getInstance(), 8, 185),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.TungstenSteel, 42L),
@@ -635,7 +635,7 @@ public class IC2 implements Runnable {
                 new int[]{10000,10000,9500,2000,1000,1000,500},500,2000);
 
         // --- Th Fuel
-        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_Thorium_1.get(1),
+        RA.addThermalCentrifugeRecipe(ItemList.Depleted_Thorium_1.get(1),
                 new ItemStack[]{
                         GT_ModHandler.getModItem("IC2", "itemUran238", 2L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium, 1L),
@@ -645,7 +645,7 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lutetium, 1L)
                 },
                 new int[]{10000,10000,10000,10000,5000,5000},200,500);
-        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_Thorium_2.get(1),
+        RA.addThermalCentrifugeRecipe(ItemList.Depleted_Thorium_2.get(1),
                 new ItemStack[]{
                         GT_ModHandler.getModItem("IC2", "itemUran238", 4L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium, 2L),
@@ -655,7 +655,7 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lutetium, 2L)
                 },
                 new int[]{10000,10000,10000,10000,5000,5000},200,500);
-        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_Thorium_4.get(1),
+        RA.addThermalCentrifugeRecipe(ItemList.Depleted_Thorium_4.get(1),
                 new ItemStack[]{
                         GT_ModHandler.getModItem("IC2", "itemUran238", 8L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Uranium, 4L),
@@ -667,7 +667,7 @@ public class IC2 implements Runnable {
                 new int[]{10000,10000,10000,10000,5000,5000},200,500);
 
         // --- MOX Th Fuel
-        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_MThCell_1.get(1),
+        RA.addThermalCentrifugeRecipe(ItemList.Depleted_MThCell_1.get(1),
                 new ItemStack[]{
                         GT_ModHandler.getModItem("IC2", "itemPlutonium", 2L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 1L),
@@ -677,7 +677,7 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 1L)
                 },
                 new int[]{10000,10000,10000,8000,5000,100},200,500);
-        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_MThCell_2.get(1),
+        RA.addThermalCentrifugeRecipe(ItemList.Depleted_MThCell_2.get(1),
                 new ItemStack[]{
                         GT_ModHandler.getModItem("IC2", "itemPlutonium", 4L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 3L),
@@ -687,7 +687,7 @@ public class IC2 implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plutonium241, 2L)
                 },
                 new int[]{10000,10000,10000,8000,5000,100},200,500);
-        GT_Values.RA.addThermalCentrifugeRecipe(ItemList.Depleted_MThCell_4.get(1),
+        RA.addThermalCentrifugeRecipe(ItemList.Depleted_MThCell_4.get(1),
                 new ItemStack[]{
                         GT_ModHandler.getModItem("IC2", "itemPlutonium", 8L),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Zirconium, 7L),
@@ -702,7 +702,7 @@ public class IC2 implements Runnable {
 
     private void printer3d() {
         //Kinetic Generator
-        GT_Values.RA.addPrimitiveLineRecipe(new ItemStack[]{
+        RA.addPrimitiveLineRecipe(new ItemStack[]{
                 ItemList.Hatch_Dynamo_HV.get(1L),
                 GT_OreDictUnificator.get(OrePrefixes.cableGt02, Materials.Aluminium, 2),
                 GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Titanium, 2),
@@ -712,7 +712,7 @@ public class IC2 implements Runnable {
         }, GT_ModHandler.getModItem("IC2", "blockGenerator", 1L, 9), null, 10 * 20, 480);
 
         //Kinetic Wind Generator
-        GT_Values.RA.addPrimitiveLineRecipe(new ItemStack[]{
+        RA.addPrimitiveLineRecipe(new ItemStack[]{
                 ItemList.Casing_Gearbox_Steel.get(1L),
                 GT_OreDictUnificator.get(OrePrefixes.cableGt02, Materials.Aluminium, 2),
                 GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Titanium, 2),
@@ -723,7 +723,7 @@ public class IC2 implements Runnable {
         }, GT_ModHandler.getModItem("IC2", "blockKineticGenerator", 1L, 0), null, 10 * 20, 480);
 
         //Kinetic Water Generator
-        GT_Values.RA.addPrimitiveLineRecipe(new ItemStack[]{
+        RA.addPrimitiveLineRecipe(new ItemStack[]{
                 ItemList.Casing_Gearbox_Steel.get(1L),
                 GT_OreDictUnificator.get(OrePrefixes.cableGt02, Materials.Aluminium, 2),
                 GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Titanium, 2),
@@ -734,25 +734,25 @@ public class IC2 implements Runnable {
     }
 
     private void packager() {
-        GT_Values.RA.
+        RA.
                 addBoxingRecipe(CoreItems.getRecipe(29, 4), ItemList.Schematic_Dust.get(0L),
                         GT_ModHandler.getModItem("IC2", "itemFertilizer", 1L), 100, 4);
-        GT_Values.RA.
+        RA.
                 addBoxingRecipe(CoreItems.getRecipe(30, 9), ItemList.Schematic_Dust.get(0L),
                         GT_ModHandler.getModItem("IC2", "itemFertilizer", 1L), 100, 4);
 
     }
 
     private void formingPress() {
-        GT_Values.RA.addFormingPressRecipe(
+        RA.addFormingPressRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Advanced, 4L),
                 GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Lead, 1L),
                 GT_ModHandler.getModItem("IC2", "reactorPlating", 1L, 0), 200, 256);
-        GT_Values.RA.addFormingPressRecipe(
+        RA.addFormingPressRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Copper, 1L),
                 GT_ModHandler.getModItem("IC2", "reactorPlating", 1L, 0),
                 GT_ModHandler.getModItem("IC2", "reactorPlatingHeat", 1L, 0), 220, 480);
-        GT_Values.RA.addFormingPressRecipe(
+        RA.addFormingPressRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Advanced, 8L),
                 GT_ModHandler.getModItem("IC2", "reactorPlating", 1L, 0),
                 GT_ModHandler.getModItem("IC2", "reactorPlatingExplosive", 1L, 0), 220, 480);
@@ -760,204 +760,204 @@ public class IC2 implements Runnable {
     }
 
     private void fluidCanner() {
-        GT_Values.RA.addFluidCannerRecipe(CoreItems2.getRecipe(143, 1),
+        RA.addFluidCannerRecipe(CoreItems2.getRecipe(143, 1),
                 GT_ModHandler.getModItem("IC2", "reactorCoolantSimple", 1L, 1),
                 new FluidStack(FluidRegistry.getFluid("ic2coolant"), 1000), GT_Values.NF);
-        GT_Values.RA.addFluidCannerRecipe(CoreItems2.getRecipe(144, 1),
+        RA.addFluidCannerRecipe(CoreItems2.getRecipe(144, 1),
                 GT_ModHandler.getModItem("IC2", "reactorCoolantTriple", 1L, 1),
                 new FluidStack(FluidRegistry.getFluid("ic2coolant"), 3000), GT_Values.NF);
-        GT_Values.RA.addFluidCannerRecipe(CoreItems2.getRecipe(145, 1),
+        RA.addFluidCannerRecipe(CoreItems2.getRecipe(145, 1),
                 GT_ModHandler.getModItem("IC2", "reactorCoolantSix", 1L, 1),
                 new FluidStack(FluidRegistry.getFluid("ic2coolant"), 6000), GT_Values.NF);
     }
 
     private void extruder() {
-        GT_Values.RA.addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.block, Materials.Iron, 1),
+        RA.addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.block, Materials.Iron, 1),
                 ItemList.Shape_Extruder_Shaft.get(0L),
                 GT_ModHandler.getIC2Item("itemRecipePart", 1L, 11), 2000, 120);
-        GT_Values.RA.addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.block, Materials.Steel, 1),
+        RA.addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.block, Materials.Steel, 1),
                 ItemList.Shape_Extruder_Shaft.get(0L),
                 GT_ModHandler.getIC2Item("itemRecipePart", 1L, 12), 2000, 480);
-        GT_Values.RA.addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Zirconium, 1),
+        RA.addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Zirconium, 1),
                 ItemList.Shape_Extruder_Cell.get(0L),
                 GT_ModHandler.getIC2Item("fuelRod", 1), 200, 120);
     }
 
     private void assembler() {
         //Quantum Armor Parts
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getIC2Item("nanoBoots", 1L, GT_Values.W),
+        RA.addAssemblerRecipe(GT_ModHandler.getIC2Item("nanoBoots", 1L, GT_Values.W),
                 CoreItems2.getRecipe(52, 4), CoreItems2.getRecipe(41, 1), 1200, 1920);
-        GT_Values.RA.addAssemblerRecipe(Loader.isModLoaded("GraviSuite") ? GT_ModHandler
+        RA.addAssemblerRecipe(Loader.isModLoaded("GraviSuite") ? GT_ModHandler
                         .getModItem("GraviSuite", "advNanoChestPlate", 1, GT_Values.W)
                         : GT_ModHandler.getIC2Item("nanoBodyarmor", 1L, GT_Values.W), CoreItems2.getRecipe(52, 8),
                 CoreItems2.getRecipe(42, 1), 1200, 1920);
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getIC2Item("nanoHelmet", 1L, GT_Values.W),
+        RA.addAssemblerRecipe(GT_ModHandler.getIC2Item("nanoHelmet", 1L, GT_Values.W),
                 CoreItems2.getRecipe(52, 5), CoreItems2.getRecipe(43, 1), 1200, 1920);
-        GT_Values.RA.addAssemblerRecipe(CoreItems2.getRecipe(43, 1),
+        RA.addAssemblerRecipe(CoreItems2.getRecipe(43, 1),
                 GT_OreDictUnificator.get(OrePrefixes.lens, Materials.ReinforcedGlass, 8L),
                 CoreItems2.getRecipe(44, 1), 1200, 1920);
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getIC2Item("nanoLeggings", 1L, GT_Values.W),
+        RA.addAssemblerRecipe(GT_ModHandler.getIC2Item("nanoLeggings", 1L, GT_Values.W),
                 CoreItems2.getRecipe(52, 7), CoreItems2.getRecipe(45, 1), 1200, 1920);
 
         //Nano Armor
-        GT_Values.RA.addAssemblerRecipe(CoreItems2.getRecipe(137, 1), CoreItems2.getRecipe(100, 1),
+        RA.addAssemblerRecipe(CoreItems2.getRecipe(137, 1), CoreItems2.getRecipe(100, 1),
                 GT_ModHandler.getIC2Item("nanoHelmet", 1L, 27), 400, 120);
-        GT_Values.RA.addAssemblerRecipe(CoreItems2.getRecipe(138, 1), CoreItems2.getRecipe(100, 1),
+        RA.addAssemblerRecipe(CoreItems2.getRecipe(138, 1), CoreItems2.getRecipe(100, 1),
                 GT_ModHandler.getIC2Item("nanoBodyarmor", 1L, 27), 400, 120);
-        GT_Values.RA.addAssemblerRecipe(CoreItems2.getRecipe(139, 1), CoreItems2.getRecipe(100, 1),
+        RA.addAssemblerRecipe(CoreItems2.getRecipe(139, 1), CoreItems2.getRecipe(100, 1),
                 GT_ModHandler.getIC2Item("nanoLeggings", 1L, 27), 400, 120);
-        GT_Values.RA.addAssemblerRecipe(CoreItems2.getRecipe(140, 1), CoreItems2.getRecipe(100, 1),
+        RA.addAssemblerRecipe(CoreItems2.getRecipe(140, 1), CoreItems2.getRecipe(100, 1),
                 GT_ModHandler.getIC2Item("nanoBoots", 1L, 27), 400, 120);
 
         // --- Charging Lapotron Crystal
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 1),
                         ItemList.Circuit_Parts_Crystal_Chip_Master.get(12),
                         GT_ModHandler.getModItem("IC2", "reactorHeatSwitchDiamond", 1L, 1)},
                 Materials.SolderingAlloy.getMolten(1440L),
                 GT_ModHandler.getModItem("IC2", "itemBatChargeLamaCrystal", 1L, 0), 200, 1920);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Tin, 4),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Graphite, 4),
                         GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Steel, 1),
                         GT_Utility.getIntegratedCircuit(1)}, null,
                 GT_ModHandler.getModItem("IC2", "reactorReflector", 1L, 1), 100, 16);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TinAlloy, 6),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Graphite, 2),
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Beryllium, 1),
                         GT_Utility.getIntegratedCircuit(1)}, null,
                 GT_ModHandler.getModItem("IC2", "reactorReflector", 1L, 1), 100, 16);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Tin, 16),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Graphite, 16),
                         GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Carbon, 6),
                         GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Steel, 4),
                         GT_Utility.getIntegratedCircuit(2)}, null, CoreItems2.getRecipe(141, 1), 120, 256);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.TinAlloy, 24),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Graphite, 8),
                         GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Carbon, 6),
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Beryllium, 4),
                         GT_Utility.getIntegratedCircuit(2)}, null, CoreItems2.getRecipe(141, 1), 120, 256);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{CoreItems2.getRecipe(NeutronReflectorSmallParts.getMetaID(), 1),
                         GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Beryllium, 2),
                         GT_Utility.getIntegratedCircuit(1)}, null,
                 GT_ModHandler.getModItem("IC2", "reactorReflectorThick", 1L, 1), 600, 64);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{CoreItems2.getRecipe(NeutronReflectorSmallParts.getMetaID(), 1),
                         GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TungstenCarbide, 1),
                         GT_Utility.getIntegratedCircuit(1)}, null,
                 GT_ModHandler.getModItem("IC2", "reactorReflectorThick", 1L, 1), 600, 64);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Californium, 1),
                         CoreItems2.getRecipe(NeutronReflectorSmallParts.getMetaID(), 8),
                         GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Beryllium, 16),
                         GT_Utility.getIntegratedCircuit(2)}, null,
                 CoreItems2.getRecipe(NeutronReflectorParts.getMetaID(), 1), 400, 256);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Californium, 1),
                         CoreItems2.getRecipe(NeutronReflectorSmallParts.getMetaID(), 8),
                         GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TungstenCarbide, 8),
                         GT_Utility.getIntegratedCircuit(2)}, null,
                 CoreItems2.getRecipe(NeutronReflectorParts.getMetaID(), 1), 400, 256);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{CoreItems2.getRecipe(NeutronReflectorParts.getMetaID(), 1),
                         GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Iridium, 1)}, null,
                 ItemList.Neutron_Reflector.get(1), 1200, 256);
         // --- Mox Nuclear Fuel
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem("IC2", "itemUran238", 6L),
                 GT_ModHandler.getModItem("IC2", "itemPlutonium", 3L),
                 new FluidStack(FluidRegistry.getFluid("ic2coolant"), 1000),
                 GT_ModHandler.getModItem("IC2", "itemMOX", 1L), 400, 256);
         // --- Enriched Uranium Nuclear Fuel
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem("IC2", "itemUran238", 6L),
                 GT_ModHandler.getModItem("IC2", "itemUran235small", 3L),
                 new FluidStack(FluidRegistry.getFluid("ic2coolant"), 1000),
                 GT_ModHandler.getModItem("IC2", "itemUran", 1L), 400, 120);
         // --- Wood Scaffold
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plank, Materials.Wood, 1),
                         GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2),
                         GT_Utility.getIntegratedCircuit(12)}, null,
                 GT_ModHandler.getModItem("IC2", "blockScaffold", 1L), 20, 4);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.WoodSealed, 1),
                         GT_OreDictUnificator.get(OrePrefixes.stick, Materials.WoodSealed, 2),
                         GT_Utility.getIntegratedCircuit(12)}, null,
                 GT_ModHandler.getModItem("IC2", "blockScaffold", 2L), 20, 4);
         // --- Iron Scaffold
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 1),
                         GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Iron, 2),
                         GT_Utility.getIntegratedCircuit(12)}, null,
                 GT_ModHandler.getModItem("IC2", "blockIronScaffold", 1L), 20, 4);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1),
                         GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Steel, 2),
                         GT_Utility.getIntegratedCircuit(12)}, null,
                 GT_ModHandler.getModItem("IC2", "blockIronScaffold", 2L), 20, 4);
         // --- Coil
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.SteelMagnetic, 1),
                         GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Copper, 16),
                         GT_Utility.getIntegratedCircuit(3)}, null,
                 GT_ModHandler.getModItem("IC2", "itemRecipePart", 1L), 200, 30);
         // --- Rubber Boat
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem("IC2", "itemBoat", 1L, 2),
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Rubber, 1),
                 GT_ModHandler.getModItem("IC2", "itemBoat", 1L, 1), 20, 30);
         // --- Weeding Trowel
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Steel, 2),
                         GT_Utility.getIntegratedCircuit(5), Materials.Rubber.getMolten(144L),
                 GT_ModHandler.getModItem("IC2", "itemWeedingTrowel", 1L), 400, 30);
         // --- Cropnalyzer
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 ItemList.Cover_Screen.get(1), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1),
                 Materials.Redstone.getMolten(576L),
                 GT_ModHandler.getModItem("IC2", "itemCropnalyzer", 1L, 1), 1200, 16);
         // --- Reinforced Door
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem("IC2", "itemPartAlloy", 6L),
                 GT_Utility.getIntegratedCircuit(6), Materials.Lead.getMolten(16),
                 GT_ModHandler.getModItem("IC2", "itemDoorAlloy", 1L), 600, 30);
         // --- Ejector Upgrade
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Basic, 1),
                 ItemList.Electric_Piston_LV.get(1), Materials.Copper.getMolten(144),
                 GT_ModHandler.getModItem("IC2", "upgradeModule", 1L, 3), 1200, 16);
         // --- Fluid Ejector Upgrade
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem("IC2", "upgradeModule", 1L, 3),
                 ItemList.Electric_Pump_LV.get(1), Materials.Copper.getMolten(144),
                 GT_ModHandler.getModItem("IC2", "upgradeModule", 1L, 4), 1200, 16);
         // --- Redstone Signal Inverter Upgrade
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Basic, 1),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.RedAlloy, 1), Materials.Copper.getMolten(144),
                 GT_ModHandler.getModItem("IC2", "upgradeModule", 1L, 5), 1200, 16);
         // --- Luminator
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.cell, Materials.Mercury, 1),
                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Copper, 8), Materials.Glass.getMolten(1152),
                 GT_ModHandler.getModItem("IC2", "blockLuminatorDark", 8L), 600, 30);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.cell, Materials.Helium, 1),
                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Copper, 16), Materials.Glass.getMolten(1152),
                 GT_ModHandler.getModItem("IC2", "blockLuminatorDark", 16L), 400, 64);
         // --- Iron Furnace
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem("minecraft", "furnace", 1L),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 5),
                 GT_ModHandler.getModItem("IC2", "blockMachine", 1L, 1), 400, 16);
 
         // --- Crop Sticks
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Wood, 8),
                 GT_Utility.getIntegratedCircuit(2),
                 GT_ModHandler.getModItem("IC2", "blockCrop", 16L), 150, 24);
@@ -971,7 +971,7 @@ public class IC2 implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("compactkineticgenerators", "IridiumBlade", 1L, 0), tBitMask, new Object[]{"PPP", "PRP", "PPP", 'R', OrePrefixes.ring.get(Materials.Lafium), 'P', GT_ModHandler.getModItem("IC2", "itemPartIridium", 1L, 0)});
 
         //Wind Generator
-        GT_Values.RA.addPrimitiveLineRecipe(new ItemStack[]{
+        RA.addPrimitiveLineRecipe(new ItemStack[]{
                         ItemList.Hull_EV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.cableGt02, Materials.Tungsten, 2),
                         GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Desh, 2),
@@ -982,7 +982,7 @@ public class IC2 implements Runnable {
                 }, GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 0), null, 20 * 20,
                 1024);
 
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                         ItemList.Hull_IV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.cableGt04, Materials.HSSG, 2),
                         GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Trinium, 2),
@@ -993,7 +993,7 @@ public class IC2 implements Runnable {
                 }, GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 1), null, 30 * 20,
                 4096);
 
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                         ItemList.Hull_LuV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.cableGt08, Materials.VanadiumGallium, 2),
                         GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Draconium, 2),
@@ -1004,7 +1004,7 @@ public class IC2 implements Runnable {
                 }, GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 2), null, 40 * 20,
                 16384);
 
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                         ItemList.Hull_ZPM.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.cableGt12, Materials.Duranium, 2),
                         GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Oriharukon, 2),
@@ -1016,7 +1016,7 @@ public class IC2 implements Runnable {
                 65536);
 
         //Water Generator
-        GT_Values.RA.addPrimitiveLineRecipe(new ItemStack[]{
+        RA.addPrimitiveLineRecipe(new ItemStack[]{
                         ItemList.Hull_EV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.cableGt02, Materials.Tungsten, 2),
                         GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Desh, 2),
@@ -1027,7 +1027,7 @@ public class IC2 implements Runnable {
                 }, GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 4), null, 20 * 20,
                 1024);
 
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                         ItemList.Hull_IV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.cableGt04, Materials.HSSG, 2),
                         GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Trinium, 2),
@@ -1038,7 +1038,7 @@ public class IC2 implements Runnable {
                 }, GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 5), null, 30 * 20,
                 4096);
 
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                         ItemList.Hull_LuV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.cableGt08, Materials.VanadiumGallium, 2),
                         GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Draconium, 2),
@@ -1049,7 +1049,7 @@ public class IC2 implements Runnable {
                 }, GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 6), null, 40 * 20,
                 16384);
 
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                         ItemList.Hull_ZPM.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.cableGt12, Materials.Duranium, 2),
                         GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Oriharukon, 2),
@@ -1061,7 +1061,7 @@ public class IC2 implements Runnable {
                 65536);
 
         //Kinetic Generator
-        GT_Values.RA.addPrimitiveLineRecipe(new ItemStack[]{
+        RA.addPrimitiveLineRecipe(new ItemStack[]{
                         ItemList.Hatch_Dynamo_EV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.cableGt02, Materials.Tungsten, 2),
                         GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Desh, 2),
@@ -1071,7 +1071,7 @@ public class IC2 implements Runnable {
                 }, GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 8), null, 20 * 20,
                 1024);
 
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                         ItemList.Hatch_Dynamo_IV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.cableGt04, Materials.HSSG, 2),
                         GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Trinium, 2),
@@ -1082,7 +1082,7 @@ public class IC2 implements Runnable {
                 }, GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 9), null, 30 * 20,
                 4096);
 
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                         ItemList.Hatch_Dynamo_LuV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.cableGt08, Materials.VanadiumGallium, 2),
                         GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Draconium, 2),
@@ -1093,7 +1093,7 @@ public class IC2 implements Runnable {
                 }, GT_ModHandler.getModItem("compactkineticgenerators", "BlockCkg", 1L, 10), null, 40 * 20,
                 16384);
 
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                         ItemList.Hatch_Dynamo_ZPM.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.cableGt12, Materials.Duranium, 2),
                         GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Oriharukon, 2),

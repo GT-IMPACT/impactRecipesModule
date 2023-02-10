@@ -12,6 +12,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class Backpack implements Runnable {
@@ -65,7 +66,7 @@ public class Backpack implements Runnable {
     }
 
     private void assembler() {
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{new ItemStack(Items.leather, 2), new ItemStack(Items.string, 3),
                         GT_Utility.getIntegratedCircuit(1)}, null,
                 GT_ModHandler.getModItem("Backpack", "boundLeather", 1L), 100, 16);

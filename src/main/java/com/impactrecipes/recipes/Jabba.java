@@ -12,6 +12,7 @@ import mcp.mobius.betterbarrels.BetterBarrels;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class Jabba implements Runnable {
@@ -166,55 +167,55 @@ public class Jabba implements Runnable {
                                 GT_Utility.getIntegratedCircuit(2)}, null,
                         new ItemStack(BetterBarrels.blockBarrel, 16, 0), 100, 24);
         // --- Storage Upgrade
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.blockBarrel, 1, 0),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.blockBarrel, 1, 0),
                 new ItemStack(Blocks.piston), new ItemStack(BetterBarrels.itemUpgradeCore, 1, 0), 600, 16);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.blockBarrel, 2, 0),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.blockBarrel, 2, 0),
                 GT_ItemList.ULVPiston.get(1L), new ItemStack(BetterBarrels.itemUpgradeCore, 2, 0), 400, 20);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.blockBarrel, 4, 0),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.blockBarrel, 4, 0),
                 ItemList.Electric_Piston_LV.get(1L), new ItemStack(BetterBarrels.itemUpgradeCore, 4, 0),
                 200, 24);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.blockBarrel, 8, 0),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.blockBarrel, 8, 0),
                 ItemList.Electric_Piston_MV.get(1L), new ItemStack(BetterBarrels.itemUpgradeCore, 8, 0),
                 100, 28);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.blockBarrel, 16, 0),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.blockBarrel, 16, 0),
                 ItemList.Electric_Piston_HV.get(1L), new ItemStack(BetterBarrels.itemUpgradeCore, 16, 0),
                 50, 30);
         // --- Storage Upgrade 3x
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 3, 0),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 3, 0),
                 GT_Utility.getIntegratedCircuit(3), new ItemStack(BetterBarrels.itemUpgradeCore, 1, 4), 600,
                 24);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 1, 0),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 1, 0),
                 GT_ItemList.ULVPiston.get(1L), new ItemStack(BetterBarrels.itemUpgradeCore, 1, 4), 300, 24);
         // --- Storage Upgrade 9x
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 3, 4),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 3, 4),
                 GT_Utility.getIntegratedCircuit(3), new ItemStack(BetterBarrels.itemUpgradeCore, 1, 5), 600,
                 30);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 1, 0),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 1, 0),
                 ItemList.Electric_Piston_LV.get(1L), new ItemStack(BetterBarrels.itemUpgradeCore, 1, 5),
                 300, 30);
         // --- Storage Upgrade 27x
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 3, 5),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 3, 5),
                 GT_Utility.getIntegratedCircuit(3), new ItemStack(BetterBarrels.itemUpgradeCore, 1, 6), 600,
                 64);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 1, 0),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 1, 0),
                 ItemList.Electric_Piston_MV.get(1L), new ItemStack(BetterBarrels.itemUpgradeCore, 1, 6),
                 300, 64);
         // --- Storage Upgrade 81x
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 3, 6),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 3, 6),
                 GT_Utility.getIntegratedCircuit(3), new ItemStack(BetterBarrels.itemUpgradeCore, 1, 8), 600,
                 96);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 1, 0),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 1, 0),
                 ItemList.Electric_Piston_HV.get(1L), new ItemStack(BetterBarrels.itemUpgradeCore, 1, 8),
                 300, 96);
         // --- Storage Upgrade 243x
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 3, 8),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 3, 8),
                 GT_Utility.getIntegratedCircuit(3), new ItemStack(BetterBarrels.itemUpgradeCore, 1, 9), 600,
                 120);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 1, 0),
+        RA.addAssemblerRecipe(new ItemStack(BetterBarrels.itemUpgradeCore, 1, 0),
                 ItemList.Electric_Piston_EV.get(1L), new ItemStack(BetterBarrels.itemUpgradeCore, 1, 9),
                 300, 120);
         // --- Void Upgrade
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{new ItemStack(BetterBarrels.itemUpgradeCore, 1, 0),
                         GT_ModHandler.getModItem("ExtraUtilities", "trashcan", 1),
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1)},

@@ -380,86 +380,86 @@ public class Vanilla implements Runnable {
 
     private void assembler() {
         // --- Oak Door
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "planks", 6L),
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "planks", 6L),
                 GT_Utility.getIntegratedCircuit(6), Materials.Iron.getMolten(16),
                 GT_ModHandler.getModItem("minecraft", "wooden_door", 1L), 400, 4);
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "planks", 6L),
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "planks", 6L),
                 GT_Utility.getIntegratedCircuit(6), Materials.Copper.getMolten(16),
                 GT_ModHandler.getModItem("minecraft", "wooden_door", 1L), 400, 4);
         // --- Iron Door
-        GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 6L),
+        RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 6L),
                 GT_Utility.getIntegratedCircuit(6), Materials.Steel.getMolten(16),
                 GT_ModHandler.getModItem("minecraft", "iron_door", 1L), 400, 8);
         // --- Traped Door Oak
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_ModHandler.getModItem("minecraft", "wooden_slab", 4L),
                         GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 4L),
                         GT_Utility.getIntegratedCircuit(1)}, null,
                 GT_ModHandler.getModItem("minecraft", "trapdoor", 2L), 600, 4);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_ModHandler.getModItem("minecraft", "wooden_slab", 4L),
                         GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 4L),
                         GT_Utility.getIntegratedCircuit(2)}, Materials.Iron.getMolten(16),
                 GT_ModHandler.getModItem("minecraft", "trapdoor", 4L), 600, 4);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_ModHandler.getModItem("minecraft", "wooden_slab", 4L),
                         GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 4L),
                         GT_Utility.getIntegratedCircuit(3)}, Materials.Steel.getMolten(16),
                 GT_ModHandler.getModItem("minecraft", "trapdoor", 6L), 600, 4);
         // --- Fence Gate Oak
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_ModHandler.getModItem("minecraft", "planks", 3L),
                         GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
                         GT_Utility.getIntegratedCircuit(2)}, null,
                 GT_ModHandler.getModItem("minecraft", "fence_gate", 1L), 300, 8);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_ModHandler.getModItem("minecraft", "planks", 3L),
                         GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
                         GT_Utility.getIntegratedCircuit(3)}, Materials.Iron.getMolten(16),
                 GT_ModHandler.getModItem("minecraft", "fence_gate", 2L), 300, 8);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_ModHandler.getModItem("minecraft", "planks", 3L),
                         GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
                         GT_Utility.getIntegratedCircuit(3)}, Materials.Steel.getMolten(16),
                 GT_ModHandler.getModItem("minecraft", "fence_gate", 4L), 300, 8);
         // --- Wooden Pressure Plate
-        GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.slab, Materials.Wood, 2L),
+        RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.slab, Materials.Wood, 2L),
                 GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Iron, 1L),
                 GT_ModHandler.getModItem("minecraft", "wooden_pressure_plate", 2L), 100, 8);
         // --- Pressure Plate
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "stone_slab", 2L),
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "stone_slab", 2L),
                 GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Iron, 1L),
                 GT_ModHandler.getModItem("minecraft", "stone_pressure_plate", 2L), 100, 8);
         // --- Ladder
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 3L),
                         GT_Utility.getIntegratedCircuit(5)}, null,
                 GT_ModHandler.getModItem("minecraft", "ladder", 2L), 400, 4);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 3L),
                         GT_Utility.getIntegratedCircuit(6)}, Materials.Iron.getMolten(16),
                 GT_ModHandler.getModItem("minecraft", "ladder", 4L), 300, 8);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 3L),
                         GT_Utility.getIntegratedCircuit(7)}, Materials.Steel.getMolten(16),
                 GT_ModHandler.getModItem("minecraft", "ladder", 8L), 200, 16);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 3L),
                         GT_Utility.getIntegratedCircuit(7)}, Materials.Aluminium.getMolten(16),
                 GT_ModHandler.getModItem("minecraft", "ladder", 32L), 100, 30);
         // --- Fence
         for (int i = 0; i < 6; i++) {
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("minecraft", "planks", 2L, i),
                             GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
                             GT_Utility.getIntegratedCircuit(10)}, null,
                     GT_ModHandler.getModItem("minecraft", "fence", 1L), 300, 8);
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("minecraft", "planks", 2L, i),
                             GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
                             GT_Utility.getIntegratedCircuit(11)}, Materials.Iron.getMolten(16),
                     GT_ModHandler.getModItem("minecraft", "fence", 2L), 300, 8);
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("minecraft", "planks", 2L, i),
                             GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
                             GT_Utility.getIntegratedCircuit(11)}, Materials.Steel.getMolten(16),
@@ -468,7 +468,7 @@ public class Vanilla implements Runnable {
         // --- Carpet
         for (int i = 0; i < 16; i++) {
             for (int j = 0; j < Dyes.VALUES[i].getSizeOfFluidList(); j++) {
-                GT_Values.RA.addAssemblerRecipe(new ItemStack(Items.string, 3),
+                RA.addAssemblerRecipe(new ItemStack(Items.string, 3),
                         ItemList.Circuit_Integrated.getWithDamage(0L, 3L),
                         Dyes.VALUES[i].getFluidDye(j, 24L), new ItemStack(Blocks.carpet, 2, 15 - i), 128, 5);
             }
@@ -481,17 +481,17 @@ public class Vanilla implements Runnable {
                 GT_ModHandler.getModItem("minecraft", "birch_stairs", 4L), GT_ModHandler.getModItem("minecraft", "jungle_stairs", 4L),
                 GT_ModHandler.getModItem("minecraft", "acacia_stairs", 4L), GT_ModHandler.getModItem("minecraft", "dark_oak_stairs", 4L)};
         for (int i = 0; i < 6; i++) {
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("minecraft", "wooden_slab", 3L, i),
                             GT_Utility.getIntegratedCircuit(7)}, null, stairs2[i], 300, 8);
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("minecraft", "planks", 3L, i),
                             GT_Utility.getIntegratedCircuit(7)}, null, stairs4[i], 300, 8);
         }
     }
 	
 	private void slicer() {
-		GT_Values.RA.addSlicerRecipe(GT_ModHandler.getModItem("minecraft", "melon_block", 1L), ItemList.Shape_Slicer_Flat.get(0L), GT_ModHandler.getModItem("minecraft", "melon", 8L), 128, 4);
+		RA.addSlicerRecipe(GT_ModHandler.getModItem("minecraft", "melon_block", 1L), ItemList.Shape_Slicer_Flat.get(0L), GT_ModHandler.getModItem("minecraft", "melon", 8L), 128, 4);
 
 	}
 

@@ -13,6 +13,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class Gendustry implements Runnable {
@@ -158,7 +159,7 @@ public class Gendustry implements Runnable {
 
     private void printer3d() {
         // --- Mutagen Producer
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                 ItemList.Hull_LuV.get(1), GT_ModHandler.getModItem("gendustry", "GeneticsProcessor", 2L, 0),
                 GT_ModHandler.getModItem("gendustry", "BeeReceptacle", 2L, 0),
                 GT_ModHandler.getModItem("gendustry", "PowerModule", 2L, 0),
@@ -171,7 +172,7 @@ public class Gendustry implements Runnable {
         }, GT_ModHandler.getModItem("gendustry", "MutagenProducer", 1L, 0), null, 100 * 20, 65576);
 
         // --- Mutatron
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                 ItemList.Hull_LuV.get(1), GT_ModHandler.getModItem("gendustry", "GeneticsProcessor", 2L, 0),
                 GT_ModHandler.getModItem("gendustry", "BeeReceptacle", 2L, 0),
                 GT_ModHandler.getModItem("gendustry", "PowerModule", 2L, 0),
@@ -183,7 +184,7 @@ public class Gendustry implements Runnable {
         }, GT_ModHandler.getModItem("gendustry", "Mutatron", 1L, 0), null, 100 * 20, 65576);
 
         // --- Advanced Mutatron
-        GT_Values.RA.addBasicLineRecipe(new ItemStack[]{
+        RA.addBasicLineRecipe(new ItemStack[]{
                 ItemList.Hull_ZPM.get(1), GT_ModHandler.getModItem("gendustry", "GeneticsProcessor", 4L, 0),
                 GT_ModHandler.getModItem("gendustry", "BeeReceptacle", 4L, 0),
                 GT_ModHandler.getModItem("gendustry", "PowerModule", 4L, 0),
@@ -195,7 +196,7 @@ public class Gendustry implements Runnable {
         }, GT_ModHandler.getModItem("gendustry", "MutatronAdv", 1L, 0), null, 200 * 20, 500000);
 
         // --- Industrial Apiary
-        GT_Values.RA.addPrimitiveLineRecipe(new ItemStack[]{
+        RA.addPrimitiveLineRecipe(new ItemStack[]{
                 GT_ModHandler.getModItem("Forestry", "apiculture", 1L, 0),
                 GT_ModHandler.getModItem("Forestry", "alveary", 2L, 2),
                 GT_ModHandler.getModItem("Forestry", "alveary", 2L, 3),
@@ -209,36 +210,36 @@ public class Gendustry implements Runnable {
     }
 
     private void assembler() {
-        GT_Values.RA.addAssemblerRecipe(CoreItems2.getRecipe(146, 1),
+        RA.addAssemblerRecipe(CoreItems2.getRecipe(146, 1),
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 1),
                 Materials.Mutagen.getFluid(100L), GT_ModHandler.getModItem("gendustry", "UpgradeFrame", 1L),
                 400, 7680);
         // --- Genetics Processor
-        GT_Values.RA.addAssemblerRecipe(GT_ItemList.GeneticCircuit.get(1),
+        RA.addAssemblerRecipe(GT_ItemList.GeneticCircuit.get(1),
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 1),
                 Materials.Mutagen.getFluid(500L),
                 GT_ModHandler.getModItem("gendustry", "GeneticsProcessor", 1L), 400, 7680);
         // --- Environmental Processor
-        GT_Values.RA.addAssemblerRecipe(GT_ItemList.EnvironmentalCircuit.get(1),
+        RA.addAssemblerRecipe(GT_ItemList.EnvironmentalCircuit.get(1),
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 1),
                 Materials.Bacteria.getFluid(500L),
                 GT_ModHandler.getModItem("gendustry", "EnvProcessor", 1L), 400, 7680);
         // --- Genetics Labware
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.StainlessSteel, 1),
                         GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Diamond, 2),
                         new ItemStack(Items.glass_bottle, 4)}, null,
                 GT_ModHandler.getModItem("gendustry", "Labware", 1L), 200, 1920, true);
         // --- Item Ejector Cover
-        GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HSSG, 1),
+        RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HSSG, 1),
                 GT_ModHandler.getModItem("IC2", "upgradeModule", 1L, 3),
                 GT_ModHandler.getModItem("gendustry", "EjectCover", 1L), 200, 7680);
         // --- Item Import Cover
-        GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HSSG, 1),
+        RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HSSG, 1),
                 GT_ModHandler.getModItem("IC2", "upgradeModule", 1L, 6),
                 GT_ModHandler.getModItem("gendustry", "ImportCover", 1L), 200, 7680);
         // --- Item Sensor Cover
-        GT_Values.RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HSSG, 1),
+        RA.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HSSG, 1),
                 GT_ModHandler.getModItem("IC2", "upgradeModule", 1L, 5),
                 GT_ModHandler.getModItem("gendustry", "ErrorSensorCover", 1L), 200, 7680);
 

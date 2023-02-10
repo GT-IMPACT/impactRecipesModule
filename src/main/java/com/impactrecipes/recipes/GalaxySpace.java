@@ -638,29 +638,29 @@ public class GalaxySpace implements Runnable {
     private void assembler() {
         // ---  T1 Rocket + chest
         // ---  T4 Rocket + chest
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier4Rocket", 1L),
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier4Rocket", 1L),
                 GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
                 GT_ModHandler.getModItem("GalaxySpace", "item.Tier4Rocket", 1L, 3), 200, 60);
         // ---  T5 Rocket + chest
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier5Rocket", 1L),
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier5Rocket", 1L),
                 GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
                 GT_ModHandler.getModItem("GalaxySpace", "item.Tier5Rocket", 1L, 3), 200, 60);
         // ---  T6 Rocket + chest
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier6Rocket", 1L),
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier6Rocket", 1L),
                 GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
                 GT_ModHandler.getModItem("GalaxySpace", "item.Tier6Rocket", 1L, 3), 200, 60);
         // ---  T7 Rocket + chest
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier7Rocket", 1L),
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier7Rocket", 1L),
                 GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
                 GT_ModHandler.getModItem("GalaxySpace", "item.Tier7Rocket", 1L, 3), 200, 60);
         // ---  T8 Rocket + chest
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier8Rocket", 1L),
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.Tier8Rocket", 1L),
                 GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
                 GT_ModHandler.getModItem("GalaxySpace", "item.Tier8Rocket", 1L, 3), 200, 60);
 
 
         // --- Thermal Cloth Tier 2
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.foil, Materials.MeteoricSteel, 4),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Titanium, 4),
                         GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Tungsten, 4),
@@ -688,29 +688,29 @@ public class GalaxySpace implements Runnable {
                         GT_Utility.getIntegratedCircuit(4),
                         GT_ModHandler.getModItem("GalaxySpace", "item.ThermalPaddingT2", 1L, 3), 1200, 7680);
         // --- Space Suit Jetpack
-        //GT_Values.RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "item.spacesuit_plate", 1L), GT_ModHandler.getModItem("IC2", "itemArmorJetpackElectric", 1L, GT_Values.W), GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 4L, 2)}, Materials.Platinum.getMolten(1440), GT_ModHandler.getModItem("GalaxySpace", "item.spacesuit_jetplate", 1L), 600, 1920);
+        //RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "item.spacesuit_plate", 1L), GT_ModHandler.getModItem("IC2", "itemArmorJetpackElectric", 1L, GT_Values.W), GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 4L, 2)}, Materials.Platinum.getMolten(1440), GT_ModHandler.getModItem("GalaxySpace", "item.spacesuit_jetplate", 1L), 600, 1920);
         // --- Space Suit Gravity Boots
-        //GT_Values.RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "item.spacesuit_boots", 1L), GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 2L, 4), GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 4L, 2)}, Materials.Platinum.getMolten(1440), GT_ModHandler.getModItem("GalaxySpace", "item.spacesuit_gravityboots", 1L), 600, 1920);
+        //RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "item.spacesuit_boots", 1L), GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 2L, 4), GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 4L, 2)}, Materials.Platinum.getMolten(1440), GT_ModHandler.getModItem("GalaxySpace", "item.spacesuit_gravityboots", 1L), 600, 1920);
         // --- Space Suit Sensor Glasses
-        //GT_Values.RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "item.spacesuit_helmet", 1L), GT_ModHandler.getModItem("GalacticraftCore", "item.sensorGlasses", 1L), GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 4L, 2)}, Materials.Platinum.getMolten(1440), GT_ModHandler.getModItem("GalaxySpace", "item.spacesuit_helmetglasses", 1L), 600, 1920);
+        //RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "item.spacesuit_helmet", 1L), GT_ModHandler.getModItem("GalacticraftCore", "item.sensorGlasses", 1L), GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 4L, 2)}, Materials.Platinum.getMolten(1440), GT_ModHandler.getModItem("GalaxySpace", "item.spacesuit_helmetglasses", 1L), 600, 1920);
         // --- Future Glass
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "glass", 1L),
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "glass", 1L),
                 GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Desh, 8),
                 GT_ModHandler.getModItem("GalaxySpace", "futureglass", 1L), 200, 480);
         // --- Blank Fuel Tank
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_ModHandler.getModItem("GalacticraftCore", "item.basicItem", 6L, 9),
                         GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Steel, 2),
                         GT_Utility.getIntegratedCircuit(2)}, null,
                 GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 1L, 0), 50, 16);
         // --- Small Fuel Canister
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 1L, 0),
                         GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 2L, 4),
                         GT_Utility.getIntegratedCircuit(1)}, Materials.HSLA.getMolten(72),
                 GT_ModHandler.getModItem("GalaxySpace", "item.Modules", 1L, 3), 100, 60);
         // --- EPOT
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem("GalaxySpace", "item.oxygentank_t4", 1L, 10800),
                 GT_ModHandler.getModItem("GalacticraftCore", "item.oxygenConcentrator", 1L, 0),
                 GT_ModHandler.getModItem("GalaxySpace", "item.oxygentank_epp_t1", 1L, 10800), 600, 4092);
@@ -718,7 +718,7 @@ public class GalaxySpace implements Runnable {
     }
 
     private void autoclave() {
-        GT_Values.RA.addAutoclaveSpaceRecipe(
+        RA.addAutoclaveSpaceRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.MysteriousCrystal, 9L),
                 Materials.EnrichedBacterialSludge.getFluid(1000L),
                 GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 1L, 10), 10000, 2000, 7680,
@@ -736,14 +736,14 @@ public class GalaxySpace implements Runnable {
     }
 
     private void chemical() {
-        GT_Values.RA.addChemicalRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 4L, 10),
+        RA.addChemicalRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 4L, 10),
                 Materials.Osmiridium.getDust(2), Materials.GrowthMediumSterilized.getFluid(1000L),
                 Materials.BacterialSludge.getFluid(1000L), ItemList.Circuit_Chip_Stemcell.get(64L),
                 GT_Values.NI, 600, 30720);
     }
 
     private void assemblyLine() {
-        GT_Values.RA.addAssemblylineRecipe(CoreItems2.getRecipe(3, 1), 144000, new Object[]{
+        RA.addAssemblylineRecipe(CoreItems2.getRecipe(3, 1), 144000, new Object[]{
                         CoreItems2.getRecipe(21, 1),
                         GT_ModHandler.getModItem("GalacticraftMars", "item.itemBasicAsteroids", 4L, 0),
                         CoreItems2.getRecipe(11, 14),
@@ -759,7 +759,7 @@ public class GalaxySpace implements Runnable {
                 },
                 GT_ModHandler.getModItem("GalaxySpace", "item.Tier4Rocket", 1L, 0), 3000, 16324);
 
-        GT_Values.RA.addAssemblylineRecipe(CoreItems2.getRecipe(4, 1), 288000, new Object[]{
+        RA.addAssemblylineRecipe(CoreItems2.getRecipe(4, 1), 288000, new Object[]{
                         CoreItems2.getRecipe(22, 1),
                         CoreItems2.getRecipe(11, 6),
                         CoreItems2.getRecipe(12, 16),
@@ -776,7 +776,7 @@ public class GalaxySpace implements Runnable {
                 },
                 GT_ModHandler.getModItem("GalaxySpace", "item.Tier5Rocket", 1L, 0), 4000, 65524);
 
-        GT_Values.RA.addAssemblylineRecipe(CoreItems2.getRecipe(5, 1), 432000, new Object[]{
+        RA.addAssemblylineRecipe(CoreItems2.getRecipe(5, 1), 432000, new Object[]{
                         CoreItems2.getRecipe(23, 1),
                         CoreItems2.getRecipe(12, 8),
                         CoreItems2.getRecipe(13, 18),
@@ -793,7 +793,7 @@ public class GalaxySpace implements Runnable {
                 },
                 GT_ModHandler.getModItem("GalaxySpace", "item.Tier6Rocket", 1L, 0), 5000, 262132);
 
-        GT_Values.RA.addAssemblylineRecipe(CoreItems2.getRecipe(6, 1), 576000, new Object[]{
+        RA.addAssemblylineRecipe(CoreItems2.getRecipe(6, 1), 576000, new Object[]{
                         CoreItems2.getRecipe(24, 1),
                         CoreItems2.getRecipe(13, 10),
                         CoreItems2.getRecipe(14, 20),
@@ -810,7 +810,7 @@ public class GalaxySpace implements Runnable {
                 },
                 GT_ModHandler.getModItem("GalaxySpace", "item.Tier7Rocket", 1L, 0), 6000, 1000000);
 
-        GT_Values.RA.addAssemblylineRecipe(CoreItems2.getRecipe(7, 1), 1152000, new Object[]{
+        RA.addAssemblylineRecipe(CoreItems2.getRecipe(7, 1), 1152000, new Object[]{
                         CoreItems2.getRecipe(25, 1),
                         CoreItems2.getRecipe(14, 12),
                         CoreItems2.getRecipe(15, 24),

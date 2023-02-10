@@ -14,6 +14,8 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
+import static gregtech.api.enums.GT_Values.RA;
+
 public class StorageDrawers implements Runnable {
 
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED
@@ -192,87 +194,87 @@ public class StorageDrawers implements Runnable {
 
         for (int i = 0; i < 6; i++) {
             // --- Drawers 1
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{new ItemStack(ModBlocks.trim, 1, i), new ItemStack(Blocks.chest, 1),
                             GT_Utility.getIntegratedCircuit(1)}, null,
                     new ItemStack(ModBlocks.fullDrawers1, 1, i), 100, 8);
             // --- Drawers 1x2
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{new ItemStack(ModBlocks.trim, 1, i), new ItemStack(Blocks.chest, 2),
                             GT_Utility.getIntegratedCircuit(2)}, null,
                     new ItemStack(ModBlocks.fullDrawers2, 2, i), 100, 8);
             // --- Drawers 2x2
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{new ItemStack(ModBlocks.trim, 1, i), new ItemStack(Blocks.chest, 4),
                             GT_Utility.getIntegratedCircuit(4)}, null,
                     new ItemStack(ModBlocks.fullDrawers4, 4, i), 100, 8);
             // --- Compact Drawers 1x2
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{new ItemStack(ModBlocks.trim, 1, i), new ItemStack(Blocks.chest, 2),
                             GT_Utility.getIntegratedCircuit(3)}, null,
                     new ItemStack(ModBlocks.halfDrawers2, 2, i), 100, 8);
             // --- Compact Drawers 2x2
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{new ItemStack(ModBlocks.trim, 1, i), new ItemStack(Blocks.chest, 4),
                             GT_Utility.getIntegratedCircuit(6)}, null,
                     new ItemStack(ModBlocks.halfDrawers4, 4, i), 100, 8);
             // --- Drawers Trim
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Wood, 1),
                             GT_ModHandler.getModItem("minecraft", "wooden_slab", 1L, i),
                             GT_Utility.getIntegratedCircuit(1)}, null, new ItemStack(ModBlocks.trim, 1, i), 100,
                     8);
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Iron, 1),
                             GT_ModHandler.getModItem("minecraft", "wooden_slab", 2L, i),
                             GT_Utility.getIntegratedCircuit(1)}, null, new ItemStack(ModBlocks.trim, 2, i), 100,
                     10);
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Bronze, 1),
                             GT_ModHandler.getModItem("minecraft", "wooden_slab", 2L, i),
                             GT_Utility.getIntegratedCircuit(1)}, null, new ItemStack(ModBlocks.trim, 2, i), 100,
                     10);
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1),
                             GT_ModHandler.getModItem("minecraft", "wooden_slab", 4L, i),
                             GT_Utility.getIntegratedCircuit(1)}, null, new ItemStack(ModBlocks.trim, 4, i), 100,
                     12);
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Aluminium, 1),
                             GT_ModHandler.getModItem("minecraft", "wooden_slab", 8L, i),
                             GT_Utility.getIntegratedCircuit(1)}, null, new ItemStack(ModBlocks.trim, 8, i), 100,
                     16);
-            GT_Values.RA.addAssemblerRecipe(new ItemStack[]{
+            RA.addAssemblerRecipe(new ItemStack[]{
                     GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.StainlessSteel, 1),
                     GT_ModHandler.getModItem("minecraft", "wooden_slab", 16L, i),
                     GT_Utility.getIntegratedCircuit(1)}, null, new ItemStack(ModBlocks.trim, 16, i), 100, 24);
         }
         // --- Upgrade Template
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(ModBlocks.trim, 1, GT_Values.W),
+        RA.addAssemblerRecipe(new ItemStack(ModBlocks.trim, 1, GT_Values.W),
                 new ItemStack(Blocks.piston), new ItemStack(ModItems.upgradeTemplate, 1, 0), 600, 16);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(ModBlocks.trim, 2, GT_Values.W),
+        RA.addAssemblerRecipe(new ItemStack(ModBlocks.trim, 2, GT_Values.W),
                 GT_ItemList.ULVPiston.get(1L), new ItemStack(ModItems.upgradeTemplate, 2, 0), 400, 20);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(ModBlocks.trim, 4, GT_Values.W),
+        RA.addAssemblerRecipe(new ItemStack(ModBlocks.trim, 4, GT_Values.W),
                 ItemList.Electric_Piston_LV.get(1L), new ItemStack(ModItems.upgradeTemplate, 4, 0), 200,
                 24);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(ModBlocks.trim, 8, GT_Values.W),
+        RA.addAssemblerRecipe(new ItemStack(ModBlocks.trim, 8, GT_Values.W),
                 ItemList.Electric_Piston_MV.get(1L), new ItemStack(ModItems.upgradeTemplate, 8, 0), 100,
                 28);
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(ModBlocks.trim, 16, GT_Values.W),
+        RA.addAssemblerRecipe(new ItemStack(ModBlocks.trim, 16, GT_Values.W),
                 ItemList.Electric_Piston_HV.get(1L), new ItemStack(ModItems.upgradeTemplate, 16, 0), 50,
                 30);
         // --- Concealment Key
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(ModItems.upgradeTemplate, 1, 0),
+        RA.addAssemblerRecipe(new ItemStack(ModItems.upgradeTemplate, 1, 0),
                 GT_OreDictUnificator.get(OrePrefixes.gem, Materials.Diamond, 1),
                 new ItemStack(ModItems.shroudKey, 1, 0), 100, 30);
         // --- Storage Personal Key
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(ModItems.upgradeTemplate, 1, 0),
+        RA.addAssemblerRecipe(new ItemStack(ModItems.upgradeTemplate, 1, 0),
                 new ItemStack(Items.name_tag), new ItemStack(ModItems.personalKey), 100, 30);
         // --- Storage Personal Key
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(Items.paper), GT_Utility.getIntegratedCircuit(1),
+        RA.addAssemblerRecipe(new ItemStack(Items.paper), GT_Utility.getIntegratedCircuit(1),
                 Materials.Glue.getFluid(144L), new ItemStack(ModItems.tape), 200, 30);
         // --- Void Upgrade
-        GT_Values.RA.addAssemblerRecipe(new ItemStack[]{new ItemStack(ModItems.upgradeTemplate, 1, 0),
+        RA.addAssemblerRecipe(new ItemStack[]{new ItemStack(ModItems.upgradeTemplate, 1, 0),
                         GT_ModHandler.getModItem("ExtraUtilities", "trashcan", 1),
                         GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 1)},
                 Materials.Redstone.getMolten(144), new ItemStack(ModItems.upgradeVoid, 1, 0), 400, 30);

@@ -13,6 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class Forestry implements Runnable {
@@ -115,79 +116,79 @@ public class Forestry implements Runnable {
     }
 
     private void alloySmelter() {
-        GT_Values.RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("Forestry", "beeswax", 9L),
+        RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("Forestry", "beeswax", 9L),
                 ItemList.Shape_Mold_Block.get(0), GT_ModHandler.getModItem("Forestry", "waxCast", 1L),
                 200, 16);
-        GT_Values.RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("Forestry", "refractoryWax", 9L),
+        RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("Forestry", "refractoryWax", 9L),
                 ItemList.Shape_Mold_Block.get(0), GT_ModHandler.getModItem("Forestry", "waxCast", 1L),
                 200, 16);
     }
 
     private void assembler() {
         if (Loader.isModLoaded("Natura")) {
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("Natura", "Natura.fence", 1L),
                             ItemList.Plank_Oak.get(1L)}, Materials.Redstone.getMolten(72L),
                     CoreItems2.getRecipe(53, 1), 100, 30, false);
         }
 
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_ModHandler.getModItem("Forestry", "fences", 1L),
                         ItemList.Plank_Oak.get(1L)}, Materials.Redstone.getMolten(72L),
                 CoreItems2.getRecipe(53, 1), 100, 30, false);
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{GT_ModHandler.getModItem("Forestry", "fencesFireproof", 1L),
                         ItemList.Plank_Oak.get(1L)}, Materials.Redstone.getMolten(72L),
                 CoreItems2.getRecipe(53, 1), 100, 30, false);
 
         // --- Fences & Stairs
         for (int i = 0; i < 29; i++) {
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planks", 2L, i),
                             GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
                             GT_Utility.getIntegratedCircuit(10)}, null,
                     GT_ModHandler.getModItem("Forestry", "fences", 1L, i), 300, 8);
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planks", 2L, i),
                             GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
                             GT_Utility.getIntegratedCircuit(11)}, Materials.Iron.getMolten(16),
                     GT_ModHandler.getModItem("Forestry", "fences", 2L, i), 300, 8);
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planks", 2L, i),
                             GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
                             GT_Utility.getIntegratedCircuit(11)}, Materials.Steel.getMolten(16),
                     GT_ModHandler.getModItem("Forestry", "fences", 4L, i), 300, 8);
 
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planksFireproof", 2L, i),
                             GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
                             GT_Utility.getIntegratedCircuit(10)}, null,
                     GT_ModHandler.getModItem("Forestry", "fencesFireproof", 1L, i), 300, 8);
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planksFireproof", 2L, i),
                             GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
                             GT_Utility.getIntegratedCircuit(11)}, Materials.Iron.getMolten(16),
                     GT_ModHandler.getModItem("Forestry", "fencesFireproof", 2L, i), 300, 8);
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planksFireproof", 2L, i),
                             GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Wood, 2L),
                             GT_Utility.getIntegratedCircuit(11)}, Materials.Steel.getMolten(16),
                     GT_ModHandler.getModItem("Forestry", "fencesFireproof", 4L, i), 300, 8);
 
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("Forestry", "slabs", 3L, i),
                             GT_Utility.getIntegratedCircuit(7)}, null,
                     GT_ModHandler.getModItem("Forestry", "stairs", 2L, i), 300, 8);
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planks", 3L, i),
                             GT_Utility.getIntegratedCircuit(7)}, null,
                     GT_ModHandler.getModItem("Forestry", "stairs", 4L, i), 300, 8);
 
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("Forestry", "slabsFireproof", 3L, i),
                             GT_Utility.getIntegratedCircuit(7)}, null,
                     GT_ModHandler.getModItem("Forestry", "stairsFireproof", 2L, i), 300, 8);
-            GT_Values.RA.addAssemblerRecipe(
+            RA.addAssemblerRecipe(
                     new ItemStack[]{GT_ModHandler.getModItem("Forestry", "planksFireproof", 3L, i),
                             GT_Utility.getIntegratedCircuit(7)}, null,
                     GT_ModHandler.getModItem("Forestry", "stairsFireproof", 4L, i), 300, 8);
@@ -197,7 +198,7 @@ public class Forestry implements Runnable {
     private void ciruit() {
                 //ALL Circuits
                 //Forestry Chipsets
-                GT_Values.RA.addCircuitAssemblerRecipe(
+                RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Primitive, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Tin, 2),
@@ -205,7 +206,7 @@ public class Forestry implements Runnable {
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Tin, 1),
                                 GT_Utility.getIntegratedCircuit(1)}, Materials.SolderingAlloy.getMolten(576L),
                         GT_ModHandler.getModItem("Forestry", "chipsets", 1L, 0), 200, 30);
-                GT_Values.RA.addCircuitAssemblerRecipe(
+                RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Basic, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Bronze, 2),
@@ -213,7 +214,7 @@ public class Forestry implements Runnable {
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Bronze, 1),
                                 GT_Utility.getIntegratedCircuit(1)}, Materials.SolderingAlloy.getMolten(576L),
                         GT_ModHandler.getModItem("Forestry", "chipsets", 1L, 1), 200, 30);
-                GT_Values.RA.addCircuitAssemblerRecipe(
+                RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 2),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 2),
@@ -221,7 +222,7 @@ public class Forestry implements Runnable {
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Steel, 1),
                                 GT_Utility.getIntegratedCircuit(1)}, Materials.SolderingAlloy.getMolten(576L),
                         GT_ModHandler.getModItem("Forestry", "chipsets", 1L, 2), 200, 30);
-                GT_Values.RA.addCircuitAssemblerRecipe(
+                RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1L),
                                 ItemList.Circuit_Integrated_Good.get(2L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Electrum, 2),

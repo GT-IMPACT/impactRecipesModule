@@ -31,6 +31,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import static com.impact.loader.ItemRegistery.UtilBlock;
 import static com.impact.util.Utilits.Blockstack;
 import static com.impactrecipes.util.RecipeUtils.getItemStack;
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class RailCraft implements Runnable {
@@ -1659,15 +1660,15 @@ public class RailCraft implements Runnable {
 
     private void assemblerRecipe() {
         // --- BatBox Cart
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(Items.minecart, 1),
+        RA.addAssemblerRecipe(new ItemStack(Items.minecart, 1),
                 GT_ModHandler.getModItem("IC2", "blockElectric", 1L, 0),
                 EnumCart.ENERGY_BATBOX.getCartItem(), 100, 16);
         // --- CESU Cart
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(Items.minecart, 1),
+        RA.addAssemblerRecipe(new ItemStack(Items.minecart, 1),
                 GT_ModHandler.getModItem("IC2", "blockElectric", 1L, 7), EnumCart.ENERGY_CESU.getCartItem(),
                 100, 16);
         // --- MFE Cart
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(Items.minecart, 1),
+        RA.addAssemblerRecipe(new ItemStack(Items.minecart, 1),
                 GT_ModHandler.getModItem("IC2", "blockElectric", 1L, 1), EnumCart.ENERGY_MFE.getCartItem(),
                 100, 16);
         // --- Work Cart
@@ -1675,7 +1676,7 @@ public class RailCraft implements Runnable {
                 .addAssemblerRecipe(new ItemStack(Items.minecart, 1), new ItemStack(Blocks.crafting_table),
                         EnumCart.WORK.getCartItem(), 100, 16);
         // --- Tank Cart
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(Items.minecart, 1),
+        RA.addAssemblerRecipe(new ItemStack(Items.minecart, 1),
                 GT_ModHandler.getModItem("extracells", "certustank", 1L), EnumCart.TANK.getCartItem(), 100,
                 16);
         // --- Wheels
@@ -1688,30 +1689,30 @@ public class RailCraft implements Runnable {
                 .addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.BlueSteel, 3L),
                         new ItemStack(Objects.metaItem, 2, 0), new ItemStack(Objects.metaItem, 1, 1), 300, 2);
         // --- Wooden Railbed
-        GT_Values.RA.addAssemblerRecipe(RailcraftItem.tie.getStack(4, ItemTie.EnumTie.WOOD),
+        RA.addAssemblerRecipe(RailcraftItem.tie.getStack(4, ItemTie.EnumTie.WOOD),
                 ItemList.Circuit_Integrated.getWithDamage(0L, 4),
                 RailcraftItem.railbed.getStack(1, ItemRailbed.EnumRailbed.WOOD), 100, 2);
         // --- Stone Railbed
-        GT_Values.RA.addAssemblerRecipe(RailcraftItem.tie.getStack(4, ItemTie.EnumTie.STONE),
+        RA.addAssemblerRecipe(RailcraftItem.tie.getStack(4, ItemTie.EnumTie.STONE),
                 ItemList.Circuit_Integrated.getWithDamage(0L, 4),
                 RailcraftItem.railbed.getStack(1, ItemRailbed.EnumRailbed.STONE), 100, 4);
         // --- Concrete Railbed
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{CoreItems2.getRecipe(164, 4), Blockstack(UtilBlock, 1, 0),
                         GT_Utility.getIntegratedCircuit(4)}, null, CoreItems2.getRecipe(165, 1), 200, 8);
         // --- Electric Meter
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("IC2", "itemToolMEter", 1L),
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("IC2", "itemToolMEter", 1L),
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Basic, 1L),
                 ItemElectricMeter.getItem(), 300, 30);
         // --- Signal Tuner
-        GT_Values.RA.addAssemblerRecipe(GT_ModHandler.getModItem("IC2", "itemFreq", 1L),
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("IC2", "itemFreq", 1L),
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Basic, 1L),
                 ItemSignalTuner.getItem(), 300, 30);
         // --- Signal Block Surveyor
-        GT_Values.RA.addAssemblerRecipe(ItemSignalTuner.getItem(), new ItemStack(Items.compass),
+        RA.addAssemblerRecipe(ItemSignalTuner.getItem(), new ItemStack(Items.compass),
                 ItemSignalBlockSurveyor.getItem(), 300, 30);
         // --- Electric Shunting Wire
-        GT_Values.RA.addWireAssemblerRecipe(
+        RA.addWireAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Copper, 1L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Lead, 2L)}, null,
                 GT_ModHandler.getModItem("Railcraft", "machine.delta", 4L), 100, 8);
@@ -1723,14 +1724,14 @@ public class RailCraft implements Runnable {
                 .addAssemblerRecipe(new ItemStack(Blocks.stone_slab, 3, 7), RailcraftItem.rebar.getStack(1),
                         RailcraftItem.tie.getStack(1, ItemTie.EnumTie.STONE), 128, 8);
         // --- Wooden Rail
-        GT_Values.RA.addAssemblerRecipe(RailcraftItem.tie.getStack(3, ItemTie.EnumTie.WOOD),
+        RA.addAssemblerRecipe(RailcraftItem.tie.getStack(3, ItemTie.EnumTie.WOOD),
                 GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Iron, 3L),
                 RailcraftItem.rail.getStack(12, ItemRail.EnumRail.WOOD), 400, 4);
-        GT_Values.RA.addAssemblerRecipe(RailcraftItem.tie.getStack(3, ItemTie.EnumTie.WOOD),
+        RA.addAssemblerRecipe(RailcraftItem.tie.getStack(3, ItemTie.EnumTie.WOOD),
                 GT_OreDictUnificator.get(OrePrefixes.stick, Materials.WroughtIron, 3L),
                 RailcraftItem.rail.getStack(12, ItemRail.EnumRail.WOOD), 400, 4);
         // --- Signal Lamp
-        GT_Values.RA.addAssemblerRecipe(
+        RA.addAssemblerRecipe(
                 new ItemStack[]{OreDictionary.getOres("paneGlass").get(1), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 1L),
                         GT_ModHandler.getModItem("ProjRed|Illumination", "projectred.illumination.lamp", 1L, 29),
                         GT_ModHandler.getModItem("ProjRed|Illumination", "projectred.illumination.lamp", 1L, 20),
@@ -1744,14 +1745,14 @@ public class RailCraft implements Runnable {
         GT_Values.RA
                 .addBenderRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Aluminium, 12L),
                         RailcraftItem.rebar.getStack(4), 200, 15);
-        GT_Values.RA.addBenderRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Iron, 12L),
+        RA.addBenderRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Iron, 12L),
                 RailcraftItem.rebar.getStack(8), 400, 15);
         GT_Values.RA
                 .addBenderRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.WroughtIron, 12L),
                         RailcraftItem.rebar.getStack(10), 400, 15);
-        GT_Values.RA.addBenderRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Bronze, 12L),
+        RA.addBenderRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Bronze, 12L),
                 RailcraftItem.rebar.getStack(8), 400, 15);
-        GT_Values.RA.addBenderRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Steel, 12L),
+        RA.addBenderRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Steel, 12L),
                 RailcraftItem.rebar.getStack(16), 800, 15);
         GT_Values.RA
                 .addBenderRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.StainlessSteel, 12L),
@@ -1762,13 +1763,13 @@ public class RailCraft implements Runnable {
         GT_Values.RA
                 .addBenderRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.TungstenSteel, 12L),
                         RailcraftItem.rebar.getStack(48), 2400, 15);
-        GT_Values.RA.addBenderRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Iridium, 8L),
+        RA.addBenderRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Iridium, 8L),
                 RailcraftItem.rebar.getStack(64), 2400, 15);
     }
 
     private void chemicalBathRecipe() {
         // --- Wooden Tie
-        GT_Values.RA.addChemicalBathRecipe(
+        RA.addChemicalBathRecipe(
                 GT_ModHandler.getModItem("minecraft", "wooden_slab", 1L, GT_Values.W),
                 Materials.Creosote.getFluid(500), RailcraftItem.tie.getStack(1, ItemTie.EnumTie.WOOD),
                 GT_Values.NI, GT_Values.NI, new int[]{10000}, 160, 5);
@@ -1787,14 +1788,14 @@ public class RailCraft implements Runnable {
                         : tMat.contains(SubTag.SOLDERING_MATERIAL_BAD) ? 4 : 2;
 
                 // --- Configuration Circuit
-                GT_Values.RA.addCircuitAssemblerRecipe(
+                RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.RedAlloy, 1),
                                 ItemList.Circuit_Parts_Resistor.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Tin, 2)},
                         tMat.getMolten(144L * tMultiplier / 2L), new ItemStack(Objects.metaItem, 1, 3), 200,
                         16);
-                GT_Values.RA.addCircuitAssemblerRecipe(
+                RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.RedAlloy, 1),
                                 ItemList.Circuit_Parts_ResistorSMD.get(2),
@@ -1802,7 +1803,7 @@ public class RailCraft implements Runnable {
                         tMat.getMolten(144L * tMultiplier / 2L), new ItemStack(Objects.metaItem, 1, 3), 200,
                         16);
                 // --- Locomotive Card
-                GT_Values.RA.addCircuitAssemblerRecipe(
+                RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{GT_ModHandler.getModItem("OpenComputers", "item", 1L, 104),
                                 ItemList.Sensor_LV.get(1), GT_ModHandler.getModItem("OpenComputers", "item", 2, 11),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Electrum, 8L),
@@ -1818,7 +1819,7 @@ public class RailCraft implements Runnable {
                 .addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Aluminium, 3L),
                         CoreItems2.getRecipe(166, 0),
                         RailcraftItem.rail.getStack(2, ItemRail.EnumRail.STANDARD), 100, 24);
-        GT_Values.RA.addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Iron, 3L),
+        RA.addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Iron, 3L),
                 CoreItems2.getRecipe(166, 0), RailcraftItem.rail.getStack(4, ItemRail.EnumRail.STANDARD),
                 120, 24);
         GT_Values.RA
@@ -1829,10 +1830,10 @@ public class RailCraft implements Runnable {
                 .addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Bronze, 3L),
                         CoreItems2.getRecipe(166, 0),
                         RailcraftItem.rail.getStack(3, ItemRail.EnumRail.STANDARD), 110, 24);
-        GT_Values.RA.addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Steel, 3L),
+        RA.addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Steel, 3L),
                 CoreItems2.getRecipe(166, 0), RailcraftItem.rail.getStack(8, ItemRail.EnumRail.STANDARD),
                 160, 24);
-        GT_Values.RA.addExtruderRecipe(
+        RA.addExtruderRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.StainlessSteel, 3L),
                 CoreItems2.getRecipe(166, 0), RailcraftItem.rail.getStack(12, ItemRail.EnumRail.STANDARD),
                 200, 24);
@@ -1849,16 +1850,16 @@ public class RailCraft implements Runnable {
                         CoreItems2.getRecipe(166, 0),
                         RailcraftItem.rail.getStack(24, ItemRail.EnumRail.STANDARD), 320, 24);
         // --- Advanced Rail
-        GT_Values.RA.addExtruderRecipe(CoreItems2.getRecipe(167, 3), CoreItems2.getRecipe(166, 0),
+        RA.addExtruderRecipe(CoreItems2.getRecipe(167, 3), CoreItems2.getRecipe(166, 0),
                 RailcraftItem.rail.getStack(6, ItemRail.EnumRail.ADVANCED), 100, 24);
         // --- Electric Rail
-        GT_Values.RA.addExtruderRecipe(CoreItems2.getRecipe(168, 3), CoreItems2.getRecipe(166, 0),
+        RA.addExtruderRecipe(CoreItems2.getRecipe(168, 3), CoreItems2.getRecipe(166, 0),
                 RailcraftItem.rail.getStack(6, ItemRail.EnumRail.ELECTRIC), 100, 24);
         // --- Reinforced Rail
-        GT_Values.RA.addExtruderRecipe(CoreItems2.getRecipe(169, 3), CoreItems2.getRecipe(166, 0),
+        RA.addExtruderRecipe(CoreItems2.getRecipe(169, 3), CoreItems2.getRecipe(166, 0),
                 RailcraftItem.rail.getStack(6, ItemRail.EnumRail.REINFORCED), 100, 24);
         // --- H.S. Rail
-        GT_Values.RA.addExtruderRecipe(CoreItems2.getRecipe(170, 3), CoreItems2.getRecipe(166, 0),
+        RA.addExtruderRecipe(CoreItems2.getRecipe(170, 3), CoreItems2.getRecipe(166, 0),
                 RailcraftItem.rail.getStack(6, ItemRail.EnumRail.SPEED), 100, 24);
     }
 

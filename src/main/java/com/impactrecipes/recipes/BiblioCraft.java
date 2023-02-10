@@ -6,6 +6,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class BiblioCraft implements Runnable {
@@ -157,17 +158,17 @@ public class BiblioCraft implements Runnable {
 
     private void cuttingSaw() {
         // --- Frame Sheet
-        GT_Values.RA.addCutterRecipe(ItemList.Plank_Oak.get(1L),
+        RA.addCutterRecipe(ItemList.Plank_Oak.get(1L),
                 GT_ModHandler.getModItem("BiblioCraft", "item.FramingSheet", 4L, 0), GT_Values.NI, 50, 4);
-        GT_Values.RA.addCutterRecipe(ItemList.Plank_Spruce.get(1L),
+        RA.addCutterRecipe(ItemList.Plank_Spruce.get(1L),
                 GT_ModHandler.getModItem("BiblioCraft", "item.FramingSheet", 4L, 0), GT_Values.NI, 50, 4);
-        GT_Values.RA.addCutterRecipe(ItemList.Plank_Birch.get(1L),
+        RA.addCutterRecipe(ItemList.Plank_Birch.get(1L),
                 GT_ModHandler.getModItem("BiblioCraft", "item.FramingSheet", 4L, 0), GT_Values.NI, 50, 4);
-        GT_Values.RA.addCutterRecipe(ItemList.Plank_Jungle.get(1L),
+        RA.addCutterRecipe(ItemList.Plank_Jungle.get(1L),
                 GT_ModHandler.getModItem("BiblioCraft", "item.FramingSheet", 4L, 0), GT_Values.NI, 50, 4);
-        GT_Values.RA.addCutterRecipe(ItemList.Plank_Acacia.get(1L),
+        RA.addCutterRecipe(ItemList.Plank_Acacia.get(1L),
                 GT_ModHandler.getModItem("BiblioCraft", "item.FramingSheet", 4L, 0), GT_Values.NI, 50, 4);
-        GT_Values.RA.addCutterRecipe(ItemList.Plank_DarkOak.get(1L),
+        RA.addCutterRecipe(ItemList.Plank_DarkOak.get(1L),
                 GT_ModHandler.getModItem("BiblioCraft", "item.FramingSheet", 4L, 0), GT_Values.NI, 50, 4);
         // --- Frame Board
         GT_Values.RA
