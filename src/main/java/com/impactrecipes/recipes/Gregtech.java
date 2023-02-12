@@ -894,56 +894,6 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TungstenSteel, 16)
         }, ItemList.OilDrill3.get(1L), null, 60 * 20, 1920);
 
-        //OreDrill1
-        /*RA.addPrimitiveLineRecipe(new ItemStack[]{
-                ItemList.Hull_EV.get(1L), ItemList.Electric_Motor_EV.get(2L),
-                ItemList.Conveyor_Module_EV.get(2L),
-                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2),
-                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Steel, 2),
-                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Titanium, 4),
-                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Steel, 12)
-        }, ItemList.OreDrill1.get(1L), null, 40 * 20, 480);
-
-        //OreDrill2
-        RA.addBasicLineRecipe(new ItemStack[]{
-                ItemList.Hull_IV.get(1L), ItemList.Electric_Motor_IV.get(2L),
-                ItemList.Conveyor_Module_IV.get(2L),
-                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Desh, 4),
-                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 8),
-                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.TungstenSteel, 12),
-                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Titanium, 16)
-        }, ItemList.OreDrill2.get(1L), null, 60 * 20, 1920);
-
-        //OreDrill3
-        RA.addBasicLineRecipe(new ItemStack[]{
-                ItemList.Hull_LuV.get(1L), ItemList.Electric_Motor_LuV.get(2L),
-                ItemList.Conveyor_Module_LuV.get(2L),
-                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Trinium, 8),
-                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 8),
-                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Osmiridium, 12),
-                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.TungstenSteel, 20)
-        }, ItemList.OreDrill3.get(1L), null, 80 * 20, 7680);
-
-        //OreDrill4
-        RA.addBasicLineRecipe(new ItemStack[]{
-                ItemList.Hull_ZPM.get(1L), ItemList.Electric_Motor_ZPM.get(4L),
-                ItemList.Conveyor_Module_ZPM.get(4L),
-                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Oriharukon, 12),
-                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 12),
-                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 16),
-                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Osmiridium, 24)
-        }, ItemList.OreDrill4.get(1L), null, 100 * 20, 30720);
-
-        //OreDrill5
-        RA.addBasicLineRecipe(new ItemStack[]{
-                ItemList.Hull_UV.get(1L), ItemList.Electric_Motor_UV.get(6L),
-                ItemList.Conveyor_Module_UV.get(6L),
-                GT_OreDictUnificator.get(OrePrefixes.gearGt, Materials.Adamantium, 16),
-                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 16),
-                GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Neutronium, 20),
-                GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Tritanium, 26)
-        }, ItemList.OreDrill5.get(1L), null, 120 * 20, 122880);*/
-
         //Oil Cracker
         RA.addPrimitiveLineRecipe(new ItemStack[]{
                 ItemList.Hull_HV.get(1L),
@@ -1583,7 +1533,7 @@ public class Gregtech implements Runnable {
                         800, 480, 1700);
         GT_Values.RA
                 .addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.StainlessSteel, 1L),
-                        GT_Utility.getIntegratedCircuit(11), Materials.Oxygen.getGas(1000L), GT_Values.NF,
+                        GT_Utility.getIntegratedCircuit(11), Materials.Nitrogen.getGas(1000L), GT_Values.NF,
                         GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.StainlessSteel, 1L), GT_Values.NI,
                         400, 480, 1700);
         RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Aluminium, 1L),
