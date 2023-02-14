@@ -19,7 +19,8 @@ import static com.impact.common.item.Core_List_Items.*;
 import static com.impact.loader.ItemRegistery.*;
 import static com.impact.util.Utilits.Blockstack;
 import static com.impact.util.Utilits.Itemstack;
-import static gregtech.api.enums.RA;
+
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.RecipeBits.DELETE_ALL_OTHER_RECIPES;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 

@@ -26,7 +26,7 @@ import static com.impact.loader.ItemRegistery.*;
 import static com.impact.mods.gregtech.GT_ItemList.Casing_Farm;
 import static com.impact.util.Utilits.Blockstack;
 import static com.impact.util.Utilits.Itemstack;
-import static gregtech.api.enums.RA;
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.RecipeBits.DELETE_ALL_OTHER_RECIPES;
 
 public class ImpactCore implements Runnable {
