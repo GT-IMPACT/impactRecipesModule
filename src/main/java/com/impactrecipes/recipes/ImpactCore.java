@@ -3579,35 +3579,29 @@ public class ImpactCore implements Runnable {
 						GT_Utility.getIntegratedCircuit(1)}, GT_Values.NF, CoreItems2.getRecipe(143, 1), 100,
 				30
 		);
-		RA
-				.addAssemblerRecipe(CoreItems2.getRecipe(143, 3), GT_Utility.getIntegratedCircuit(3),
-						CoreItems2.getRecipe(144, 1), 300, 60
-				);
-		RA
-				.addAssemblerRecipe(CoreItems2.getRecipe(144, 2), GT_Utility.getIntegratedCircuit(2),
-						CoreItems2.getRecipe(145, 1), 600, 90
-				);
+		RA.addAssemblerRecipe(
+				CoreItems2.getRecipe(143, 3), GT_Utility.getIntegratedCircuit(3),
+				CoreItems2.getRecipe(144, 1), 300, 60);
+		RA.addAssemblerRecipe(
+				CoreItems2.getRecipe(144, 2), GT_Utility.getIntegratedCircuit(2),
+				CoreItems2.getRecipe(145, 1), 600, 90);
 		
-		RA
-				.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Carbon, 5),
-						GT_Utility.getIntegratedCircuit(5), CoreItems2.getRecipe(136, 1), 500, 120
-				);
-		RA
-				.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Carbon, 8),
-						GT_Utility.getIntegratedCircuit(8), CoreItems2.getRecipe(138, 1), 800, 120
-				);
-		RA
-				.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Carbon, 7),
-						GT_Utility.getIntegratedCircuit(7), CoreItems2.getRecipe(139, 1), 700, 120
-				);
-		RA
-				.addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Carbon, 4),
-						GT_Utility.getIntegratedCircuit(4), CoreItems2.getRecipe(140, 1), 400, 120
-				);
-		RA.addAssemblerRecipe(CoreItems2.getRecipe(136, 1),
+		RA.addAssemblerRecipe(
+				GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Carbon, 5),
+				GT_Utility.getIntegratedCircuit(5), CoreItems2.getRecipe(136, 1), 500, 120);
+		RA.addAssemblerRecipe(
+				GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Carbon, 8),
+				GT_Utility.getIntegratedCircuit(8), CoreItems2.getRecipe(138, 1), 800, 120);
+		RA.addAssemblerRecipe(
+				GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Carbon, 7),
+				GT_Utility.getIntegratedCircuit(7), CoreItems2.getRecipe(139, 1), 700, 120);
+		RA.addAssemblerRecipe(
+				GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Carbon, 4),
+				GT_Utility.getIntegratedCircuit(4), CoreItems2.getRecipe(140, 1), 400, 120);
+		RA.addAssemblerRecipe(
+				CoreItems2.getRecipe(136, 1),
 				GT_ModHandler.getModItem("IC2", "itemNightvisionGoggles", 1L, GT_Values.W),
-				CoreItems2.getRecipe(137, 1), 600, 256
-		);
+				CoreItems2.getRecipe(137, 1), 600, 256);
 		
 		// --- Long Distance Pipeline
 		RA.addAssemblerRecipe(
@@ -4458,20 +4452,18 @@ public class ImpactCore implements Runnable {
 			}
 		}
 		
-		RA
-				.addChemicalBathRecipe(CoreItems2.getRecipe(RefinedReinforcedGlassLense.getMetaID(), 1),
-						Materials.PulsatingIron.getMolten(72),
-						new ItemStack(Items.ender_pearl, 1, 0), null, null, null, 1000,
-						30
-				);
+		RA.addChemicalBathRecipe(
+				CoreItems2.getRecipe(RefinedReinforcedGlassLense.getMetaID(), 1),
+				Materials.PulsatingIron.getMolten(72),
+				new ItemStack(Items.ender_pearl, 1, 0), null, null, null, 1000,
+				30);
 		
 		// --- Graphene Foil
-		RA
-				.addChemicalBathRecipe(CoreItems2.getRecipe(192, 1),
-						Materials.AmmoniumPersulfate.getFluid(200),
-						CoreItems2.getRecipe(193, 1),
-						GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Copper, 1L), null, null, 300, 120
-				);
+		RA.addChemicalBathRecipe(
+				CoreItems2.getRecipe(192, 1),
+				Materials.AmmoniumPersulfate.getFluid(200),
+				CoreItems2.getRecipe(193, 1),
+				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Copper, 1L), null, null, 300, 120);
 		
 	}
 	
