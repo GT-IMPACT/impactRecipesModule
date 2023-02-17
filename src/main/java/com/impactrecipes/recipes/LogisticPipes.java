@@ -1,5 +1,6 @@
 package com.impactrecipes.recipes;
 
+import com.impact.common.item.Core_Items2;
 import com.impact.mods.gregtech.GT_ItemList;
 import gregtech.api.GregTech_API;
 import gregtech.api.enums.*;
@@ -13,6 +14,7 @@ import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class LogisticPipes implements Runnable {
 
+    public static final Core_Items2 CoreItems2 = Core_Items2.getInstance();
     private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED | GT_ModHandler.RecipeBits.NOT_REMOVABLE;
 
     @Override
@@ -119,6 +121,11 @@ public class LogisticPipes implements Runnable {
                 true, false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.PipeFluidSupplierMk2", 1L, 0),
                 true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.ItemPipeSignCreator", 1L, 0),
+                true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem("LogisticsPipes", "item.itemDisk", 1L, 0),
+                true, false, false);
+
     }
 
     private void hand() {
@@ -188,11 +195,13 @@ public class LogisticPipes implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("LogisticsPipes", "item.itemModule", 1L, 502), tBitMask, new Object[]{" C ", "BMB", "FIF", 'C', GT_ItemList.RedstoneRedChipset, 'B', OrePrefixes.bolt.get(Materials.RedAlloy), 'F', OrePrefixes.foil.get(Materials.Gold), 'I', OrePrefixes.circuit.get(Materials.Basic), 'M', GT_ModHandler.getModItem("LogisticsPipes", "item.itemModule", 1L)});
         // --- Logistics Item Card
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("LogisticsPipes", "item.logisticsItemCard", 1L), tBitMask, new Object[]{" C ", "BMB", "FIF", 'C', GT_ModHandler.getModItem("ExtraUtilities", "chestMini", 1L), 'B', OrePrefixes.bolt.get(Materials.RedAlloy), 'F', OrePrefixes.foil.get(Materials.Gold), 'I', OrePrefixes.circuit.get(Materials.Basic), 'M', GT_ModHandler.getModItem("LogisticsPipes", "item.itemModule", 1L)});
+        // --- Logistics Disc
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("LogisticsPipes", "item.itemDisk", 1L), tBitMask, new Object[]{"PPP", "PDP", "PCP", 'C', OrePrefixes.plate.get(Materials.Carbon), 'C', OrePrefixes.circuit.get(Materials.Basic), 'D', GT_ModHandler.getModItem("OpenComputers", "item", 1L, 19)});
 
     }
 
     private void assembler() {
-// --- Unrouted Transport Pipe
+        // --- Unrouted Transport Pipe
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "glass_pane", 1L),
                 GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Birmabright, 6L), null,
                 GT_ModHandler.getModItem("LogisticsPipes", "item.PipeItemsBasicTransport", 8L, 0), 100, 30);
@@ -331,10 +340,20 @@ public class LogisticPipes implements Runnable {
                 120, 120);
         // --- Blank Module
         RA.addAssemblerRecipe(
-                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Paper, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Gold, 2L),
-                        GT_Utility.getIntegratedCircuit(1)}, null,
-                GT_ModHandler.getModItem("LogisticsPipes", "item.itemModule", 1L, 0), 80, 30);
+                new ItemStack[]{ItemList.Circuit_Board_Coated.get(1),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Basic, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Gold, 4L)}, null,
+                GT_ModHandler.getModItem("LogisticsPipes", "item.itemModule", 4L, 0), 80, 10);
+        RA.addAssemblerRecipe(
+                new ItemStack[]{ItemList.Circuit_Board_Phenolic.get(1),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Electrum, 4L)}, null,
+                GT_ModHandler.getModItem("LogisticsPipes", "item.itemModule", 16L, 0), 100, 20);
+        RA.addAssemblerRecipe(
+                new ItemStack[]{ItemList.Circuit_Board_Plastic.get(1),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.EnergeticAlloy, 4L)}, null,
+                GT_ModHandler.getModItem("LogisticsPipes", "item.itemModule", 64L, 0), 120, 30);
         // --- Advanced Extractor Module
         GT_Values.RA
                 .addAssemblerRecipe(GT_ModHandler.getModItem("LogisticsPipes", "item.itemModule", 1L, 3),
@@ -370,6 +389,13 @@ public class LogisticPipes implements Runnable {
                 .addAssemblerRecipe(GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, 30),
                         GT_OreDictUnificator.get(OrePrefixes.wireGt08, Materials.Aluminium, 2L),
                         GT_ModHandler.getModItem("LogisticsPipes", "item.itemUpgrade", 1L, 36), 160, 120);
+        // --- Crafting Sign Creator
+        RA.addAssemblerRecipe(
+                new ItemStack[]{
+                        CoreItems2.getRecipe(182, 1),
+                        GT_ModHandler.getModItem("OpenComputers", "keyboard", 1L),
+                        GT_ModHandler.getModItem("minecraft", "sign", 16L)}, null,
+                        GT_ModHandler.getModItem("LogisticsPipes", "item.ItemPipeSignCreator", 1L), 600, 120);
 
     }
 
