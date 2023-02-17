@@ -149,5 +149,11 @@ public class UBC implements Runnable {
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.dust, Materials.SiliconDioxide, 1),
                         GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DarkAsh, 1)},
                 new int[]{5000, 100}, 400, 2);
+        // --- Fossil
+        for (int i = 0; i < 8; i++) {
+            RA.addPulveriserRecipe(GT_ModHandler.getModItem("UndergroundBiomes", "fossilPiece", 1L, i),
+                    new ItemStack[]{GT_ModHandler.getModItem("minecraft", "dye", 4L, 15)},
+                    new int[]{10000}, 300, 2);
+        }
     }
 }
