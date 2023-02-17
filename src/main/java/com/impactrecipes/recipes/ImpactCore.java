@@ -488,6 +488,10 @@ public class ImpactCore implements Runnable {
 						'S', OrePrefixes.circuit.get(Materials.Elite),
 						'E', ItemList.Hull_IV});
 
+		// --- Mud Ball
+		GT_ModHandler.addShapelessCraftingRecipe(CoreItems2.getRecipe(202, 2), tBitMask,
+						new Object[]{new ItemStack(Blocks.dirt), new ItemStack(Items.water_bucket)});
+
 	}
 	
 	private void furnace() {
@@ -1694,6 +1698,11 @@ public class ImpactCore implements Runnable {
 				GT_Utility.getIntegratedCircuit(2), null, null, Itemstack(Core_Items.getInstance(), 38, 44),
 				400, 96
 		);
+		// --- Mud Ball
+		RA.addMixerRecipe(new ItemStack(Blocks.dirt), GT_Utility.getIntegratedCircuit(4), null,
+				null, null, null, Materials.Water.getFluid(1000L), null,
+				CoreItems2.getRecipe(202, 4), 50, 7
+		);
 	}
 	
 	private void lathe() {
@@ -2136,6 +2145,7 @@ public class ImpactCore implements Runnable {
 	private void extractor() {
 		RA.addExtractorRecipe(CoreItems2.getRecipe(151, 64), CoreItems.getRecipe(35, 1), 400, 262144);
 		RA.addExtractorRecipe(ItemList.Casing_CokeOvenBrick.get(1L), CoreItems2.getRecipe(65, 4), 300, 2);
+		RA.addExtractorRecipe(CoreItems2.getRecipe(202, 1), new ItemStack(Items.clay_ball), 200, 2);
 	}
 	
 	private void ebf() {
