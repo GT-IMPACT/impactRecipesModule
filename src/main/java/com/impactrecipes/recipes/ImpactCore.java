@@ -2018,8 +2018,8 @@ public class ImpactCore implements Runnable {
 		);
 
 		// --- Tar from Petrocoke
-		RA.addFluidExtractionRecipe(CoreItems2.getRecipe(203, 1),
-				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Ash, 1L),
+		RA.addFluidExtractionRecipe(CoreItems2.getRecipe(201, 1),
+				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DarkAshes, 1L),
 				Materials.Tar.getFluid(100L), 2000, 30, 16);
 	}
 	
@@ -2458,7 +2458,7 @@ public class ImpactCore implements Runnable {
 				);
 
 		// --- Petcoke Dust to Ash
-		RA.addCentrifugeRecipe(CoreItems2.getRecipe(202, 1),
+		RA.addCentrifugeRecipe(CoreItems.getRecipe(50, 1),
 				GT_Values.NI, GT_Values.NF, GT_Values.NF,
 				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DarkAsh, 1L),
 				GT_Values.NI, GT_Values.NI, GT_Values.NI, GT_Values.NI, GT_Values.NI,
@@ -4305,7 +4305,7 @@ public class ImpactCore implements Runnable {
 
 		// --- Petcoke Dust -> Petcoke
 		RA
-				.addCompressorRecipe(CoreItems2.getRecipe(202, 9), CoreItems2.getRecipe(203, 1), 300, 2);
+				.addCompressorRecipe(CoreItems.getRecipe(50, 9), CoreItems2.getRecipe(201, 1), 300, 2);
 
 	}
 	
