@@ -2944,32 +2944,6 @@ public class ImpactCore implements Runnable {
 				GT_ItemList.Portable_Tank_UV.get(1L), 900, 500000
 		);
 		
-		//Hand Pump
-        /*RA.addAssemblerRecipe(new ItemStack[]{GT_ItemList.ULVPump.get(1),
-                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Copper, 1),
-                        ItemList.Cell_Empty.get(1L), GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Iron, 1),
-                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Iron, 1),
-                        ItemList.Circuit_Integrated.getWithDamage(0L, 1L)}, GT_Values.NF,
-                simpleMetaStack(ItemRegistery.GTPump, 1000, 1), 100, 6);
-        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Electric_Pump_LV.get(1),
-                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Bronze, 1),
-                        ItemList.Large_Fluid_Cell_Steel.get(1L), ItemList.Battery_RE_LV_Lithium.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.cableGt01, Materials.Tin, 1),
-                        ItemList.Circuit_Integrated.getWithDamage(0L, 1L)}, GT_Values.NF,
-                simpleMetaStack(ItemRegistery.GTPump, 1001, 1), 120, 20);
-        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Electric_Pump_MV.get(1),
-                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Steel, 1),
-                        ItemList.Large_Fluid_Cell_Aluminium.get(1L), ItemList.Battery_RE_MV_Lithium.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.cableGt01, Materials.Copper, 1),
-                        ItemList.Circuit_Integrated.getWithDamage(0L, 1L)}, GT_Values.NF,
-                simpleMetaStack(ItemRegistery.GTPump, 1002, 1), 140, 48);
-        RA.addAssemblerRecipe(new ItemStack[]{ItemList.Electric_Pump_HV.get(1),
-                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.StainlessSteel, 1),
-                        ItemList.Large_Fluid_Cell_StainlessSteel.get(1L), ItemList.Battery_RE_HV_Lithium.get(1L),
-                        GT_OreDictUnificator.get(OrePrefixes.cableGt01, Materials.Electrum, 1),
-                        ItemList.Circuit_Integrated.getWithDamage(0L, 1L)}, GT_Values.NF,
-                simpleMetaStack(ItemRegistery.GTPump, 1003, 1), 160, 96);*/
-		
 		//Sawmill
 		RA.addAssemblerRecipe(
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.slab, Materials.Wood, 6L),
