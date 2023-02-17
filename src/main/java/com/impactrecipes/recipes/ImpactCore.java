@@ -36,6 +36,7 @@ public class ImpactCore implements Runnable {
 	private static final long bits = GT_ModHandler.RecipeBits.NOT_REMOVABLE | GT_ModHandler.RecipeBits.REVERSIBLE | GT_ModHandler.RecipeBits.DISMANTLEABLE | GT_ModHandler.RecipeBits.BUFFERED;
 	private static final long bits2 = GT_ModHandler.RecipeBits.NOT_REMOVABLE | GT_ModHandler.RecipeBits.REVERSIBLE | GT_ModHandler.RecipeBits.DISMANTLEABLE | GT_ModHandler.RecipeBits.BUFFERED | DELETE_ALL_OTHER_RECIPES;
 	private static final long tBitMask = GT_ModHandler.RecipeBits.BUFFERED | GT_ModHandler.RecipeBits.NOT_REMOVABLE/* | GT_ModHandler.RecipeBits.REVERSIBLE*/;
+	private static final String AE2 = "appliedenergistics2";
 	private final static long bitsd = GT_ModHandler.RecipeBits.DISMANTLEABLE | bits;
 	final WoodBrickFormTool WoodForm = WoodBrickFormTool.getInstance(); //вуд форма
 	
@@ -912,7 +913,7 @@ public class ImpactCore implements Runnable {
 		//UpgradeCasingT1
 		RA.addBasicLineRecipe(new ItemStack[]{
 				ItemList.Hull_IV.get(1L),
-				GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1, 3),
+				GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1, 3),
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.GumMetal, 4),
 				GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Nitinol, 16),
 				ItemList.Electric_Motor_IV.get(4L), ItemList.Electric_Piston_IV.get(4L),
@@ -924,7 +925,7 @@ public class ImpactCore implements Runnable {
 		}, GT_ItemList.UpgradeCasingT1.get(1L), null, 80 * 20, 7680);
 		
 		RA.addPrimitiveLineRecipe(new ItemStack[]{
-				GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 500),
+				GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 500),
 				ItemList.Cover_ItemDetector.get(8L),
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Nitinol, 8),
 				ItemList.Robot_Arm_IV.get(8L), GT_ItemList.DDDPrinterCasing3x3.get(9),
@@ -1130,7 +1131,7 @@ public class ImpactCore implements Runnable {
 		//3DPrinter 4x4
 		RA.addPrimitiveLineRecipe(new ItemStack[]{
 				ItemList.Machine_IV_Printer.get(1L),
-				GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 500),
+				GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 500),
 				ItemList.Conveyor_Module_IV.get(4L),
 				GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Inconel690, 4),
 				GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 6),
@@ -1157,7 +1158,7 @@ public class ImpactCore implements Runnable {
 				GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 4),
 				Itemstack(Core_Items2.getInstance(), 1, 182),
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.StainlessSteel, 4),
-				GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingUnit", 4L, 1),
+				GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 4L, 1),
 				GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.VanadiumSteel, 4),
 				GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedSteel, 8),
 				GT_OreDictUnificator.get(OrePrefixes.screw, Materials.BlueSteel, 8)
@@ -1703,8 +1704,8 @@ public class ImpactCore implements Runnable {
 				16
 		);
 		// --- Flawed Fluix Crystal
-		RA.addLatheRecipe(GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockFluix", 1L),
-				CoreItems2.getRecipe(195, 1), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 3L, 8), 2400,
+		RA.addLatheRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockFluix", 1L),
+				CoreItems2.getRecipe(195, 1), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 3L, 8), 2400,
 				30
 		);
 		// --- Stone Rod
@@ -2770,7 +2771,7 @@ public class ImpactCore implements Runnable {
 				GT_ItemList.DDDPrinterCasing.get(2), 100, 120
 		);
 		RA.addAssemblerRecipe(new ItemStack[]{
-						GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiPart", 1L, 340),
+						GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 340),
 						ItemList.Cover_ItemDetector.get(4L),
 						GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.VanadiumSteel, 4),
 						ItemList.Robot_Arm_HV.get(4L),
@@ -2991,56 +2992,56 @@ public class ImpactCore implements Runnable {
 		}, null, GT_ItemList.Communication_Hatch_Receiver.get(1L), 40 * 20, 480);
 		//Parallel Hatch 4P IN
 		RA.addAssemblerRecipe(
-				new ItemStack[]{ItemList.Hull_IV.get(1), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 1),
+				new ItemStack[]{ItemList.Hull_IV.get(1), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 1),
 						ItemList.Sensor_IV.get(1), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 4L),
 						GT_Utility.getIntegratedCircuit(1)}, null,
 				GT_ItemList.Parallel_Hatch_IN4.get(1), 600, 7680
 		);
 		//Parallel Hatch 4P OUT
 		RA.addAssemblerRecipe(
-				new ItemStack[]{ItemList.Hull_IV.get(1), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 1),
+				new ItemStack[]{ItemList.Hull_IV.get(1), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 1),
 						ItemList.Emitter_IV.get(1), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 4L),
 						GT_Utility.getIntegratedCircuit(1)}, null,
 				GT_ItemList.Parallel_Hatch_OUT4.get(1), 600, 7680
 		);
 		//Parallel Hatch 16P IN
 		RA.addAssemblerRecipe(
-				new ItemStack[]{ItemList.Hull_LuV.get(1), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 2),
+				new ItemStack[]{ItemList.Hull_LuV.get(1), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 2),
 						ItemList.Sensor_LuV.get(1), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 4L),
 						GT_Utility.getIntegratedCircuit(1)}, null,
 				GT_ItemList.Parallel_Hatch_IN16.get(1), 800, 30720
 		);
 		//Parallel Hatch 16P OUT
 		RA.addAssemblerRecipe(
-				new ItemStack[]{ItemList.Hull_LuV.get(1), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 2),
+				new ItemStack[]{ItemList.Hull_LuV.get(1), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 2),
 						ItemList.Emitter_LuV.get(1), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 4L),
 						GT_Utility.getIntegratedCircuit(1)}, null,
 				GT_ItemList.Parallel_Hatch_OUT16.get(1), 800, 30720
 		);
 		//Parallel Hatch 64P IN
 		RA.addAssemblerRecipe(
-				new ItemStack[]{ItemList.Hull_ZPM.get(1), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 3),
+				new ItemStack[]{ItemList.Hull_ZPM.get(1), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 3),
 						ItemList.Sensor_ZPM.get(1), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 4L),
 						GT_Utility.getIntegratedCircuit(1)}, null,
 				GT_ItemList.Parallel_Hatch_IN64.get(1), 1000, 122880
 		);
 		//Parallel Hatch 64P OUT
 		RA.addAssemblerRecipe(
-				new ItemStack[]{ItemList.Hull_ZPM.get(1), GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 3),
+				new ItemStack[]{ItemList.Hull_ZPM.get(1), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 3),
 						ItemList.Emitter_ZPM.get(1), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 4L),
 						GT_Utility.getIntegratedCircuit(1)}, null,
 				GT_ItemList.Parallel_Hatch_OUT64.get(1), 1000, 122880
 		);
 		//Parallel Hatch 256P IN
 		RA.addAssemblerRecipe(
-				new ItemStack[]{ItemList.Hull_UV.get(1), GT_ModHandler.getModItem("extracells", "craftingstorage", 1L),
+				new ItemStack[]{ItemList.Hull_UV.get(1), GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1L),
 						ItemList.Sensor_UV.get(1), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 4L),
 						GT_Utility.getIntegratedCircuit(1)}, null,
 				GT_ItemList.Parallel_Hatch_IN256.get(1), 1200, 500000
 		);
 		//Parallel Hatch 256P OUT
 		RA.addAssemblerRecipe(
-				new ItemStack[]{ItemList.Hull_UV.get(1), GT_ModHandler.getModItem("extracells", "craftingstorage", 1L),
+				new ItemStack[]{ItemList.Hull_UV.get(1), GT_ModHandler.getModItem(AE2, "BlockAdvancedCraftingStorage", 1L),
 						ItemList.Emitter_UV.get(1), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 4L),
 						GT_Utility.getIntegratedCircuit(1)}, null,
 				GT_ItemList.Parallel_Hatch_OUT256.get(1), 1200, 500000
@@ -4573,7 +4574,7 @@ public class ImpactCore implements Runnable {
 		//UpgradeCasingT2
 		RA.addAssemblylineRecipe(GT_ItemList.UpgradeCasingT1.get(1L), 144000, new Object[]{
 						ItemList.Hull_LuV.get(1L),
-						GT_ModHandler.getModItem("extracells", "craftingstorage", 1, 0),
+						GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1, 0),
 						GT_ItemList.UpgradeCasingT1.get(4L),
 						GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.HastelloyN, 16),
 						ItemList.Electric_Motor_LuV.get(4L),
@@ -4596,7 +4597,7 @@ public class ImpactCore implements Runnable {
 		//UpgradeCasingT3
 		RA.addAssemblylineRecipe(GT_ItemList.UpgradeCasingT2.get(1L), 288000, new Object[]{
 						ItemList.Hull_ZPM.get(1L),
-						GT_ModHandler.getModItem("extracells", "craftingstorage", 1, 1),
+						GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1, 1),
 						GT_ItemList.UpgradeCasingT2.get(4L),
 						GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Lafium, 16),
 						ItemList.Electric_Motor_ZPM.get(4L),
@@ -4619,7 +4620,7 @@ public class ImpactCore implements Runnable {
 		//UpgradeCasingT4
 		RA.addAssemblylineRecipe(GT_ItemList.UpgradeCasingT3.get(1L), 576000, new Object[]{
 						ItemList.Hull_UV.get(1L),
-						GT_ModHandler.getModItem("extracells", "craftingstorage", 1, 2),
+						GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1, 2),
 						GT_ItemList.UpgradeCasingT3.get(4L),
 						GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.CinobiteA243, 16),
 						ItemList.Electric_Motor_UV.get(4L),
@@ -4755,9 +4756,9 @@ public class ImpactCore implements Runnable {
 		
 		//Parallel Supercomputer
 		RA.addAssemblylineRecipe(
-				GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockController", 1), 172000,
+				GT_ModHandler.getModItem(AE2, "tile.BlockController", 1), 172000,
 				new Object[]{
-						GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockController", 1),
+						GT_ModHandler.getModItem(AE2, "tile.BlockController", 1),
 						new Object[]{OrePrefixes.circuit.get(Materials.Elite), 4},
 						ItemList.Tool_DataOrb.get(1L),
 						Itemstack(Core_Items2.getInstance(), 1, 182),
@@ -4910,42 +4911,42 @@ public class ImpactCore implements Runnable {
 		//Parallel Hatch 4P IN
 		RA.addDisassemblerRecipe(
 				GT_ItemList.Parallel_Hatch_IN4.get(1), new ItemStack[]{ItemList.Hull_IV.get(1),
-						GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 1),
+						GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 1),
 						ItemList.Sensor_IV.get(1), ItemList.Circuit_Elite.get(4)}, 6000, 7680);
 		//Parallel Hatch 4P OUT
 		RA.addDisassemblerRecipe(
 				GT_ItemList.Parallel_Hatch_OUT4.get(1), new ItemStack[]{ItemList.Hull_IV.get(1),
-						GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 1),
+						GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 1),
 						ItemList.Emitter_IV.get(1), ItemList.Circuit_Elite.get(4)}, 6000, 7680);
 		//Parallel Hatch 16P IN
 		RA.addDisassemblerRecipe(
 				GT_ItemList.Parallel_Hatch_IN16.get(1), new ItemStack[]{ItemList.Hull_LuV.get(1),
-						GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 2),
+						GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 2),
 						ItemList.Sensor_LuV.get(1), ItemList.Circuit_Master.get(4)}, 8000, 30720);
 		//Parallel Hatch 16P OUT
 		RA.addDisassemblerRecipe(
 				GT_ItemList.Parallel_Hatch_OUT16.get(1), new ItemStack[]{ItemList.Hull_LuV.get(1),
-						GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 2),
+						GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 2),
 						ItemList.Emitter_LuV.get(1), ItemList.Circuit_Master.get(4)}, 8000, 30720);
 		//Parallel Hatch 64P IN
 		RA.addDisassemblerRecipe(
 				GT_ItemList.Parallel_Hatch_IN64.get(1), new ItemStack[]{ItemList.Hull_ZPM.get(1),
-						GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 3),
+						GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 3),
 						ItemList.Sensor_ZPM.get(1), ItemList.Circuit_Quantummainframe.get(4)}, 10000, 122880);
 		//Parallel Hatch 64P OUT
 		RA.addDisassemblerRecipe(
 				GT_ItemList.Parallel_Hatch_OUT64.get(1), new ItemStack[]{ItemList.Hull_ZPM.get(1),
-						GT_ModHandler.getModItem("appliedenergistics2", "tile.BlockCraftingStorage", 1L, 3),
+						GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 3),
 						ItemList.Emitter_ZPM.get(1), ItemList.Circuit_Quantummainframe.get(4)}, 10000, 122880);
 		//Parallel Hatch 256P IN
 		RA.addDisassemblerRecipe(
 				GT_ItemList.Parallel_Hatch_IN256.get(1), new ItemStack[]{ItemList.Hull_UV.get(1),
-						GT_ModHandler.getModItem("extracells", "craftingstorage", 1L),
+						GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1L),
 						ItemList.Sensor_UV.get(1), ItemList.Circuit_Crystalmainframe.get(4L)}, 12000, 500000);
 		//Parallel Hatch 256P OUT
 		RA.addDisassemblerRecipe(
 				GT_ItemList.Parallel_Hatch_OUT256.get(1), new ItemStack[]{ItemList.Hull_UV.get(1),
-						GT_ModHandler.getModItem("extracells", "craftingstorage", 1L),
+						GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1L),
 						ItemList.Emitter_UV.get(1), ItemList.Circuit_Crystalmainframe.get(4L)}, 12000, 500000);
 		
 		//SolarPanel
