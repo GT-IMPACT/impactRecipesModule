@@ -39,6 +39,12 @@ public class ChiselRecipes implements Runnable {
         removeRecipeByOutput(GT_ModHandler.getModItem("chisel", "fantasyblock", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("chisel", "tyrian", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("chisel", "road_line", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("chisel", "technical", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("chisel", "hexPlating", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("chisel", "holystone", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("chisel", "laboratoryblock", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("chisel", "rebel", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("chisel", "voidstone", 1L));
     }
 
     private void handRecipe() {
@@ -64,6 +70,19 @@ public class ChiselRecipes implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("chisel", "tyrian", 8L), tBitMask, new Object[]{"SSS", "SFS", "SSS", 'S', "stone", 'F', "frameGtIron"});
         // --- Road Line
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("chisel", "road_line", 2L), tBitMask, new Object[]{"Cs", 'C', GT_ModHandler.getModItem("minecraft", "carpet", 1L)});
+        // --- Technical Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("chisel", "technical", 32L), tBitMask, new Object[]{"SFS", "FSF", "SFS", 'S', "stone", 'F', "frameGtIron"});
+        // --- Hex Plating Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("chisel", "hexPlating", 8L), tBitMask, new Object[]{"SSS", "SFS", "SSS", 'S', "stone", 'F', "frameGtCarbon"});
+        // --- Holystone Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("chisel", "holystone", 8L), tBitMask, new Object[]{"SSS", "SDS", "SSS", 'S', "stone", 'D', "dustGlass"});
+        // --- Laboratory Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("chisel", "laboratoryblock", 8L), tBitMask, new Object[]{"SSS", "SGS", "SSS", 'S', "stone", 'G', "craftingQuartz"});
+        // --- Rebellious Block
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("chisel", "rebel", 8L), tBitMask, new Object[]{"SSS", "SFS", "SSS", 'S', "stone", 'F', "frameGtWroughtIron"});
+        // --- Voidstone
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("chisel", "voidstone", 8L), tBitMask, new Object[]{"SSS", "SDS", "SSS", 'S', "stone", 'D', "dustObsidian"});
+
     }
 
     private void cutting() {
