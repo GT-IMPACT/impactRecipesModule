@@ -94,6 +94,10 @@ public class ExtraUtilities implements Runnable {
                 true, false, true);
         removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "decorativeBlock1", 1, 8),
                 true, false, true);
+		for (int i = 0; i < 16; i++) {
+            removeRecipeByOutput(GT_ModHandler.getModItem("ExtraUtilities", "greenscreen", 1, i),
+                true, false, true);
+        }
 
     }
 
@@ -117,6 +121,8 @@ public class ExtraUtilities implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("ExtraUtilities", "angelBlock", 1L), tBitMask, new Object[]{"FPF", "FOF", "FPF", 'O', OrePrefixes.stone.get(Materials.Obsidian), 'F', GT_ModHandler.getModItem("minecraft", "feather", 1L), 'P', OrePrefixes.plate.get(Materials.Gold)});
         // --- Golden Bag
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("ExtraUtilities", "golden_bag", 1L), tBitMask, new Object[]{"FDF", "PBP", "hPf", 'F', OrePrefixes.foil.get(Materials.Gold), 'D', OrePrefixes.gemExquisite.get(Materials.Diamond), 'B', GT_ModHandler.getModItem("Backpack", "backpack", 1L), 'P', OrePrefixes.plate.get(Materials.Gold)});
+        // --- Drum
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("ExtraUtilities", "drum", 1L), tBitMask, new Object[]{"PRP", "PCP", "PRP", 'R', OrePrefixes.ring.get(Materials.Steel), 'C', ItemList.Casing_Tank_0.get(1), 'P', OrePrefixes.plateDouble.get(Materials.Steel)});
 
     }
 

@@ -132,6 +132,12 @@ public class ChiselGroup {
             name = "limestone";
             Carving.chisel.addVariation(name, GameRegistry.findBlock("UndergroundBiomes", "sedimentaryStone"), 0, 0);
         }
+		
+		// --- Extra Utilities
+		name = "antiblock";
+		for (int i = 0; i < 16; i++) {
+            Carving.chisel.addVariation(name, GameRegistry.findBlock("ExtraUtilities", "greenscreen"), i, 0);
+        }
 
         // --- GregTech
         name = "steelCasing";
