@@ -8,8 +8,10 @@ import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
 import gregtech.api.util.GT_Utility;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
+import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
 public class ChiselRecipes implements Runnable {
@@ -21,6 +23,7 @@ public class ChiselRecipes implements Runnable {
     public void run() {
         remove();
         handRecipe();
+        alloySmelter();
         cutting();
     }
 
@@ -83,6 +86,15 @@ public class ChiselRecipes implements Runnable {
         // --- Voidstone
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("chisel", "voidstone", 8L), tBitMask, new Object[]{"SSS", "SDS", "SSS", 'S', "stone", 'D', "dustObsidian"});
 
+    }
+
+    private void alloySmelter() {
+        // --- Anti Block
+        GT_Values.RA.addAlloySmelterRecipe(new ItemStack(Blocks.stone, 8), new ItemStack(Items.glowstone_dust, 1),
+                GT_ModHandler.getModItem("chisel", "antiBlock", 16L, 15), 100, 8);
+        GT_Values.RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockconcretes", 8L, 8),
+                new ItemStack(Items.glowstone_dust, 1),
+                GT_ModHandler.getModItem("chisel", "antiBlock", 32L, 15), 100, 8);
     }
 
     private void cutting() {
