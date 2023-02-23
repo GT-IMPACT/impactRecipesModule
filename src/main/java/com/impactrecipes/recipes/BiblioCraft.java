@@ -152,8 +152,9 @@ public class BiblioCraft implements Runnable {
         // --- Tape Maesure
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("BiblioCraft", "item.tapeMeasure", 1L, 0), tBitMask, new Object[]{"TTT", "SSS", 'T', GT_ModHandler.getModItem("BiblioCraft", "item.tape", 1L, 0), 'S', OrePrefixes.stick.get(Materials.Iron)});
         // --- Clipboard
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("BiblioCraft", "item.BiblioClipboard", 1L, 0), tBitMask, new Object[]{"ERE", "dGs", "PPP", 'E', OrePrefixes.screw.get(Materials.Iron), 'R', OrePrefixes.springSmall.get(Materials.Iron), 'G', GT_ModHandler.getModItem("gregtech", "gt.metaitem.01", 1L, 17809), 'P', GT_ModHandler.getModItem("minecraft", "paper", 1L, 0)});
-
+        for (int i = 0; i < 6; i++) {
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("BiblioCraft", "item.BiblioClipboard", 1L, 0), tBitMask, new Object[]{"ERE", "dGs", "PPP", 'E', OrePrefixes.screw.get(Materials.Iron), 'R', OrePrefixes.springSmall.get(Materials.Iron), 'G', GT_ModHandler.getModItem("minecraft", "wooden_slab", 1L, i), 'P', GT_ModHandler.getModItem("minecraft", "paper", 1L, 0)});
+        }
     }
 
     private void cuttingSaw() {
