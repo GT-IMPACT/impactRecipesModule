@@ -175,6 +175,10 @@ public class AE implements Runnable {
 		removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 2), true, false, false);
 		removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 3), true, false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingUnit", 1L, 0), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingUnit", 1L, 1), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingUnit", 1L, 2), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingUnit", 1L, 3), true, false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 0), true, false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 1), true, false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 2), true, false, false);
@@ -584,10 +588,14 @@ public class AE implements Runnable {
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 33), GT_ModHandler.getModItem(AE2, "item.ItemSpatialStorageCell.16Cubed", 1L), 300, 7680);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 34), GT_ModHandler.getModItem(AE2, "item.ItemSpatialStorageCell.128Cubed", 1L), 400, 16324);
         // --- CoCraftingUnit
-        RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 2), Materials.SolderingAlloy.getMolten(2304), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 1), 800, 1024);
-		RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 4), Materials.SolderingAlloy.getMolten(4608), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 2), 1000, 16324);
-		RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 8), Materials.SolderingAlloy.getMolten(9216), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 3), 1200, 262144);
-    
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), CoreItems2.getRecipe(203, 1), Materials.SolderingAlloy.getMolten(576), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 1), 800, 1020);
+		RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), CoreItems2.getRecipe(204, 1), Materials.SolderingAlloy.getMolten(1152), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 2), 1000, 4090);
+		RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), CoreItems2.getRecipe(205, 1), Materials.SolderingAlloy.getMolten(2304), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 3), 1200, 16350);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), CoreItems2.getRecipe(206, 1), Materials.SolderingAlloy.getMolten(4608), GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingUnit", 1L, 0), 1400, 60570);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), CoreItems2.getRecipe(207, 1), Materials.SolderingAlloy.getMolten(9216), GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingUnit", 1L, 1), 1600, 240630);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), CoreItems2.getRecipe(208, 1), Materials.SolderingAlloy.getMolten(18432), GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingUnit", 1L, 2), 1800, 1034200);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), CoreItems2.getRecipe(209, 1), Materials.SolderingAlloy.getMolten(36864), GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingUnit", 1L, 3), 2000, 4156390);
+
         // --- Crafting Monitor
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 400), Materials.SolderingAlloy.getMolten(576), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingMonitor", 1L, 0), 200, 480);
         // --- CraftingStorages
@@ -947,7 +955,7 @@ public class AE implements Runnable {
     }
 
     private void unboxingRecipe() {
-        RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 0), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 35), 50, 16);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 0), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 35), 50, 15);
         RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 1), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 36), 50, 30);
         RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 2), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 37), 50, 48);
         RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingStorage", 1L, 3), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 38), 50, 60);
@@ -955,6 +963,15 @@ public class AE implements Runnable {
         RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1L, 1), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 58), 50, 120);
         RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1L, 2), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 59), 50, 192);
         RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1L, 3), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 60), 50, 250);
+
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 1), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), CoreItems2.getRecipe(203, 1), 50, 15);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 2), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), CoreItems2.getRecipe(204, 1), 50, 30);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 3), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), CoreItems2.getRecipe(205, 1), 50, 48);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), CoreItems2.getRecipe(206, 1), 50, 60);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingUnit", 1L, 1), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), CoreItems2.getRecipe(207, 1), 50, 96);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingUnit", 1L, 2), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), CoreItems2.getRecipe(208, 1), 50, 120);
+        RA.addUnboxingRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingUnit", 1L, 3), GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), CoreItems2.getRecipe(209, 1), 50, 192);
+
     }
 
     private void mixerRecipe() {
