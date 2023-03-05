@@ -12,8 +12,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
-import static com.impact.loader.ItemRegistery.IGlassBlock;
-import static com.impact.util.Utilits.Blockstack;
 import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
 
