@@ -2904,7 +2904,7 @@ public class Gregtech implements Runnable {
 
         //Maintenance Hatch
         RA
-                .addAssemblerRecipe(ItemList.Hull_LV.get(1), ItemList.Duct_Tape.get(4), GT_Values.NF,
+                .addAssemblerRecipe(ItemList.Casing_LV.get(1), ItemList.Duct_Tape.get(4), GT_Values.NF,
                         ItemList.Hatch_Maintenance.get(1L), 40 * 20, 30);
 
         //Quadruple Input Hatch
