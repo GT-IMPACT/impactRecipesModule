@@ -135,7 +135,7 @@ public class ChiselGroup {
 
         if (Loader.isModLoaded("ExtraUtilities")) {
             // --- Extra Utilities
-            name = "antiblock";
+            name = "antiBlock";
             for (int i = 0; i < 16; i++) {
                 Carving.chisel.addVariation(name, GameRegistry.findBlock("ExtraUtilities", "greenscreen"), i, 0);
             }
