@@ -117,7 +117,7 @@ public class StarGate implements Runnable {
         // --- Ridiculously Large Capacitor
         RA.addAssemblerRecipe(
                 new ItemStack[]{CoreItems2.getRecipe(148, 12), ItemList.Field_Generator_UV.get(5L),
-                        ItemList.ZPM2.get(1L)}, null,
+                        ItemList.ZPM3.get(1L)}, null,
                 GT_ModHandler.getModItem("SGCraft", "ic2Capacitor", 1L, 0), 1000, 500000);
 
     }
