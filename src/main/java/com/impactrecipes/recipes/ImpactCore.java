@@ -517,7 +517,7 @@ public class ImpactCore implements Runnable {
 				ItemList.Cover_SolarPanel_EV.get(1L), ItemList.Robot_Arm_EV.get(1L), 1600, 64
 		);
 		RA.addUnboxingRecipe(GT_ItemList.Solar_IV.get(1),
-				ItemList.Cover_SolarPanel_IV.get(1L), ItemList.Robot_Arm_IV.get(1L), 1800, 256
+				ItemList.Cover_SolarPanel_IV.get(1L), ItemList.Robot_Arm_IV.get(1L), 1800, 250
 		);
 		RA.addUnboxingRecipe(GT_ItemList.Solar_LuV.get(1),
 				ItemList.Cover_SolarPanel_LuV.get(1L), ItemList.Robot_Arm_LuV.get(1L), 2000, 1024
@@ -542,7 +542,7 @@ public class ImpactCore implements Runnable {
 		RA.addUnboxingRecipe(
 				GT_ModHandler.getModItem("impact", "impact_lapotronicenergyunit_block", 1, 2),
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.Energy_LapotronicOrb2.get(1L), 1800, 256
+				ItemList.Energy_LapotronicOrb2.get(1L), 1800, 250
 		);
 		RA.addUnboxingRecipe(
 				GT_ModHandler.getModItem("impact", "impact_lapotronicenergyunit_block", 1, 3),
@@ -1755,7 +1755,7 @@ public class ImpactCore implements Runnable {
 		);
 		// --- Stone Rod
 		RA.addLatheRecipe(new ItemStack(Blocks.stone),
-				GT_ModHandler.getModItem("ForgeMicroblock", "stoneRod", 2L), null, 100, 16);
+				GT_ModHandler.getModItem("ForgeMicroblock", "stoneRod", 2L), null, 100, 12);
 	}
 	
 	private void implosionCompressor() {
@@ -2065,7 +2065,7 @@ public class ImpactCore implements Runnable {
 		// --- Tar from Petrocoke
 		RA.addFluidExtractionRecipe(CoreItems2.getRecipe(201, 1),
 				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DarkAshes, 1L),
-				Materials.Tar.getFluid(100L), 2000, 30, 16);
+				Materials.Tar.getFluid(100L), 2000, 30, 12);
 	}
 	
 	private void woodFarm() {
@@ -2283,7 +2283,7 @@ public class ImpactCore implements Runnable {
 				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Ruby, 1L),
 				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Gold, 1L),
 				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Iridium, 1L),
-				new int[]{1200, 600, 300, 80, 50, 20}, 1000, 256
+				new int[]{1200, 600, 300, 80, 50, 20}, 1000, 250
 		);
 		RA.addCentrifugeRecipe(GregTech_API.getStackofAmountFromOreDict("dustVenus", 1), GT_Values.NI,
 				GT_Values.NF, Materials.CarbonDioxide.getGas(500L),
@@ -2293,7 +2293,7 @@ public class ImpactCore implements Runnable {
 				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Amethyst, 1L),
 				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.GarnetRed, 1L),
 				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Mytryl, 1L),
-				new int[]{1200, 600, 300, 80, 50, 20}, 1000, 256
+				new int[]{1200, 600, 300, 80, 50, 20}, 1000, 250
 		);
 		RA.addCentrifugeRecipe(GregTech_API.getStackofAmountFromOreDict("dustMercuryP", 1),
 				GT_Values.NI, GT_Values.NF, Materials.Helium_3.getGas(50L),
@@ -2303,7 +2303,7 @@ public class ImpactCore implements Runnable {
 				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Titanium, 1L),
 				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Ruby, 1L),
 				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Diamond, 1L),
-				new int[]{1200, 600, 300, 80, 50, 20}, 1000, 256
+				new int[]{1200, 600, 300, 80, 50, 20}, 1000, 250
 		);
 		RA.addCentrifugeRecipe(GregTech_API.getStackofAmountFromOreDict("dustIceEnceladus", 1),
 				GT_Values.NI, GT_Values.NF, Materials.Oxygen.getGas(150L),
@@ -2526,7 +2526,7 @@ public class ImpactCore implements Runnable {
 						CoreItems2.getRecipe(65, 3), 390, 3
 				);
 		RA.addAlloySmelterRecipe(GT_ModHandler.getModItem("IC2", "itemPartIridium", 2L),
-				ItemList.Shape_Mold_Casing.get(0), CoreItems2.getRecipe(52, 3), 1200, 256
+				ItemList.Shape_Mold_Casing.get(0), CoreItems2.getRecipe(52, 3), 1200, 250
 		);
 		RA.addAlloySmelterRecipe(new ItemStack(Items.clay_ball, 1, 0),
 				ItemList.Shape_Mold_Ingot.get(0), new ItemStack(Items.brick, 1, 0), 130, 3
@@ -2984,7 +2984,7 @@ public class ImpactCore implements Runnable {
 		RA.addAssemblerRecipe(
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.slab, Materials.Wood, 6L),
 						GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Wood, 1L),
-						GT_Utility.getIntegratedCircuit(2)}, null, GT_ItemList.SawCase.get(2L), 50, 16);
+						GT_Utility.getIntegratedCircuit(2)}, null, GT_ItemList.SawCase.get(2L), 50, 12);
 		RA.addAssemblerRecipe(new ItemStack[]{GT_ItemList.ULVConveyorModule.get(1),
 						GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Wood, 4L),
 						GT_Utility.getIntegratedCircuit(1)}, null,
@@ -3317,14 +3317,14 @@ public class ImpactCore implements Runnable {
 		RA.addAssemblerRecipe(
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.compressed, Materials.Steel, 1),
 						CoreItems2.getRecipe(175, 1), CoreItems2.getRecipe(176, 1)},
-				Materials.StainlessSteel.getMolten(72), CoreItems2.getRecipe(97, 1), 200, 256
+				Materials.StainlessSteel.getMolten(72), CoreItems2.getRecipe(97, 1), 200, 250
 		);
 		RA.addAssemblerRecipe(
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.compressed, Materials.Bronze, 1),
 						GT_OreDictUnificator.get(OrePrefixes.compressed, Materials.Aluminium, 1),
 						GT_OreDictUnificator.get(OrePrefixes.compressed, Materials.Steel, 1),
 						GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSLA, 8)},
-				Materials.StainlessSteel.getMolten(288), ItemList.Ingot_Heavy1.get(1L), 200, 256
+				Materials.StainlessSteel.getMolten(288), ItemList.Ingot_Heavy1.get(1L), 200, 250
 		);
 		RA.addAssemblerRecipe(
 				new ItemStack[]{GT_ModHandler.getModItem("GalacticraftCore", "item.heavyPlating", 1L),
@@ -3374,7 +3374,7 @@ public class ImpactCore implements Runnable {
 						GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Iridium, 1),
 						GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Advanced, 4),
 						GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Diamond, 2)},
-				Materials.Titanium.getMolten(144), ItemList.Ingot_IridiumAlloy.get(1L), 200, 256
+				Materials.Titanium.getMolten(144), ItemList.Ingot_IridiumAlloy.get(1L), 200, 250
 		);
 		RA.addAssemblerRecipe(
 				new ItemStack[]{GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 2),
@@ -3391,7 +3391,7 @@ public class ImpactCore implements Runnable {
 				Materials.HSLA.getMolten(288), GT_ItemList.spacebox1.get(1L), 1200, 64
 		);
 		RA.addAssemblerRecipe(new ItemStack[]{GT_ItemList.packMoon.get(64L)},
-				Materials.BT6.getMolten(288), GT_ItemList.spacebox2.get(1L), 1200, 256
+				Materials.BT6.getMolten(288), GT_ItemList.spacebox2.get(1L), 1200, 250
 		);
 		RA.addAssemblerRecipe(
 				new ItemStack[]{GT_ItemList.packMars.get(64L), GT_ItemList.packDeimos.get(64L),
@@ -3622,7 +3622,7 @@ public class ImpactCore implements Runnable {
 		RA.addAssemblerRecipe(
 				CoreItems2.getRecipe(136, 1),
 				GT_ModHandler.getModItem("IC2", "itemNightvisionGoggles", 1L, GT_Values.W),
-				CoreItems2.getRecipe(137, 1), 600, 256);
+				CoreItems2.getRecipe(137, 1), 600, 250);
 		
 		// --- Long Distance Pipeline
 		RA.addAssemblerRecipe(
@@ -3673,7 +3673,7 @@ public class ImpactCore implements Runnable {
 						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2L),
 						GT_OreDictUnificator.get(OrePrefixes.cableGt04, Materials.Gold, 3L),
 						GT_Utility.getIntegratedCircuit(2)}, null,
-				GT_ItemList.LDPE_HV.get(2L), 150, 256
+				GT_ItemList.LDPE_HV.get(2L), 150, 250
 		);
 		RA.addAssemblerRecipe(
 				new ItemStack[]{ItemList.Hull_EV.get(1), ItemList.EV_Coil.get(1),
@@ -3736,7 +3736,7 @@ public class ImpactCore implements Runnable {
 				CoreItems2.getRecipe(187, 6),
 				GT_ModHandler.getModItem("IC2", "itemPlutonium", 3L),
 				new FluidStack(FluidRegistry.getFluid("ic2coolant"), 1000),
-				CoreItems2.getRecipe(189, 1), 400, 256
+				CoreItems2.getRecipe(189, 1), 400, 250
 		);
 		
 		// --- Input Item/Fluid Bus
@@ -4392,7 +4392,7 @@ public class ImpactCore implements Runnable {
 				new ItemStack[]{CoreItems.getRecipe(48, 1)},
 				new FluidStack[]{Materials.Chlorine.getGas(2000)},
 				new FluidStack[]{Materials.Oxygen.getGas(1000)},
-				new ItemStack[]{Materials.SiliconDioxide.getDust(1), CoreItems.getRecipe(49, 1)}, 300, 256
+				new ItemStack[]{Materials.SiliconDioxide.getDust(1), CoreItems.getRecipe(49, 1)}, 300, 250
 		);
 		RA.addChemicalRecipe(
 				CoreItems.getRecipe(49, 1), Materials.Magnesium.getDust(2),
@@ -4495,7 +4495,7 @@ public class ImpactCore implements Runnable {
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1L),
 								GT_ModHandler.getModItem("GalacticraftCore", "item.heavyPlating", 1L, 0),
 								GT_ItemList.spacebox1.get(1)}, Materials.SolderingAlloy.getMolten(144L),
-						CoreItems2.getRecipe(0, 1), 1000, 256
+						CoreItems2.getRecipe(0, 1), 1000, 250
 				);
 				RA.addCircuitAssemblerRecipe(
 						new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 1L),
@@ -5651,7 +5651,7 @@ public class ImpactCore implements Runnable {
 						GT_ModHandler.getModItem("IC2", "itemPartCircuit", 4L),
 						GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Steel, 8),
 						ItemList.Casing_ExplosionHazard.get(1L)
-				}, 300 * 20, 256
+				}, 300 * 20, 250
 		);
 		
 		//Vacuum Freezer
@@ -5662,7 +5662,7 @@ public class ImpactCore implements Runnable {
 						ItemList.Circuit_Data.get(4L),
 						GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Aluminium, 8),
 						ItemList.Casing_FrostHazard.get(1L)
-				}, 300 * 20, 256
+				}, 300 * 20, 250
 		);
 		
 		//Titanium
@@ -6238,7 +6238,7 @@ public class ImpactCore implements Runnable {
 	
 	public void drying() {
 		// Graphene
-		impact.I_RA.addDryingOvenRecipe(CoreItems2.getRecipe(193, 1), new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Graphene, 1L)}, 800, 16);
+		impact.I_RA.addDryingOvenRecipe(CoreItems2.getRecipe(193, 1), new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Graphene, 1L)}, 800, 12);
 	}
 	
 	private void arcFurnace() {

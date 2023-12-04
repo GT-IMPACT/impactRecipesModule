@@ -145,7 +145,7 @@ public class ProjectRed implements Runnable {
 
     private void assemblerRecipe() {
         // --- Conductive Plate
-        RA.addAssemblerRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 0), GT_Utility.getIntegratedCircuit(1), Materials.Redstone.getMolten(144), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 1), 200, 16);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 0), GT_Utility.getIntegratedCircuit(1), Materials.Redstone.getMolten(144), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 1), 200, 12);
         // --- Wired Plate
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.RedAlloy, 1), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 2), 300, 30);
         // --- Anode
@@ -155,7 +155,7 @@ public class ProjectRed implements Runnable {
         // --- Pointer
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 5), GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Ruby, 1), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 6), 500, 30);
         // --- Platformed Plate
-        RA.addAssemblerRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 4L, 2), GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Plastic, 4), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 9), 300, 64);
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 4L, 2), GT_OreDictUnificator.get(OrePrefixes.stick, Materials.Plastic, 4), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 9), 300, 60);
         // --- Bundled Plate
         for (int i = 17; i < 34; i++) {
             RA.addAssemblerRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 0), GT_ModHandler.getModItem("ProjRed|Transmission", "projectred.transmission.wire", 1L, i), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 3), 400, 30);
@@ -184,11 +184,11 @@ public class ProjectRed implements Runnable {
         // --- Receiver Dish
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("WR-CBE|Core", "stoneBowl", 1L, 0),
                 GT_ModHandler.getModItem("WR-CBE|Core", "wirelessTransceiver", 1L, 0),
-                GT_ModHandler.getModItem("WR-CBE|Core", "recieverDish", 1L, 0), 600, 256);
+                GT_ModHandler.getModItem("WR-CBE|Core", "recieverDish", 1L, 0), 600, 250);
         // --- Blaze Receiver Dish
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("WR-CBE|Core", "stoneBowl", 1L, 0),
                 GT_ModHandler.getModItem("WR-CBE|Core", "blazeTransceiver", 1L, 0),
-                GT_ModHandler.getModItem("WR-CBE|Core", "blazeRecieverDish", 1L, 0), 600, 256);
+                GT_ModHandler.getModItem("WR-CBE|Core", "blazeRecieverDish", 1L, 0), 600, 250);
         // --- Triangulatior
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("minecraft", "compass", 1L, 0),
                 GT_ModHandler.getModItem("WR-CBE|Core", "wirelessTransceiver", 1L, 0),
@@ -199,7 +199,7 @@ public class ProjectRed implements Runnable {
                 .addAssemblerRecipe(GT_ModHandler.getModItem("WR-CBE|Addons", "triangulator", 1L, 0),
                         GT_ModHandler.getModItem("minecraft", "paper", 8L, 0),
                         Materials.Redstone.getMolten(144),
-                        GT_ModHandler.getModItem("WR-CBE|Addons", "map", 1L, 0), 300, 64);
+                        GT_ModHandler.getModItem("WR-CBE|Addons", "map", 1L, 0), 300, 60);
         // --- Tracker
         GT_Values.RA
                 .addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Obsidian, 3L),
@@ -217,7 +217,7 @@ public class ProjectRed implements Runnable {
 
     private void circuitAssemblerRecipe() {
                 //ICChip
-                RA.addCircuitAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Board_Coated.get(1), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Copper, 6)}, Materials.SolderingAlloy.getMolten(72L), GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.fabrication.icchip", 1L, 0), 200, 16);
+                RA.addCircuitAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Board_Coated.get(1), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Copper, 6)}, Materials.SolderingAlloy.getMolten(72L), GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.fabrication.icchip", 1L, 0), 200, 12);
                 RA.addCircuitAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Board_Phenolic.get(1), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Gold, 6)}, Materials.SolderingAlloy.getMolten(72L), GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.fabrication.icchip", 2L, 0), 200, 30);
                 RA.addCircuitAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Board_Plastic.get(1), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Electrum, 6)}, Materials.SolderingAlloy.getMolten(72L), GT_ModHandler.getModItem("ProjRed|Fabrication", "projectred.fabrication.icchip", 4L, 0), 200, 48);
     }

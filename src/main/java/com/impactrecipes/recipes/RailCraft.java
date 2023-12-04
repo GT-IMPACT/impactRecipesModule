@@ -1662,23 +1662,23 @@ public class RailCraft implements Runnable {
         // --- BatBox Cart
         RA.addAssemblerRecipe(new ItemStack(Items.minecart, 1),
                 GT_ModHandler.getModItem("IC2", "blockElectric", 1L, 0),
-                EnumCart.ENERGY_BATBOX.getCartItem(), 100, 16);
+                EnumCart.ENERGY_BATBOX.getCartItem(), 100, 12);
         // --- CESU Cart
         RA.addAssemblerRecipe(new ItemStack(Items.minecart, 1),
                 GT_ModHandler.getModItem("IC2", "blockElectric", 1L, 7), EnumCart.ENERGY_CESU.getCartItem(),
-                100, 16);
+                100, 12);
         // --- MFE Cart
         RA.addAssemblerRecipe(new ItemStack(Items.minecart, 1),
                 GT_ModHandler.getModItem("IC2", "blockElectric", 1L, 1), EnumCart.ENERGY_MFE.getCartItem(),
-                100, 16);
+                100, 12);
         // --- Work Cart
         GT_Values.RA
                 .addAssemblerRecipe(new ItemStack(Items.minecart, 1), new ItemStack(Blocks.crafting_table),
-                        EnumCart.WORK.getCartItem(), 100, 16);
+                        EnumCart.WORK.getCartItem(), 100, 12);
         // --- Tank Cart
         RA.addAssemblerRecipe(new ItemStack(Items.minecart, 1),
                 GT_ModHandler.getModItem("extracells", "certustank", 1L), EnumCart.TANK.getCartItem(), 100,
-                16);
+                12);
         // --- Wheels
         GT_Values.RA
                 .addAssemblerRecipe(GT_OreDictUnificator.get(OrePrefixes.stick, Materials.BlueSteel, 1L),
@@ -1794,14 +1794,14 @@ public class RailCraft implements Runnable {
                                 ItemList.Circuit_Parts_Resistor.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Tin, 2)},
                         tMat.getMolten(144L * tMultiplier / 2L), new ItemStack(Objects.metaItem, 1, 3), 200,
-                        16);
+                        12);
                 RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Phenolic_Good.get(1),
                                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.RedAlloy, 1),
                                 ItemList.Circuit_Parts_ResistorSMD.get(2),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Tin, 2)},
                         tMat.getMolten(144L * tMultiplier / 2L), new ItemStack(Objects.metaItem, 1, 3), 200,
-                        16);
+                        12);
                 // --- Locomotive Card
                 RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{GT_ModHandler.getModItem("OpenComputers", "item", 1L, 104),
@@ -2371,7 +2371,7 @@ public class RailCraft implements Runnable {
                 new ItemStack[]{GT_Utility.getIntegratedCircuit(7), CoreItems2.getRecipe(165, 1),
                         RailcraftItem.rail.getStack(6, ItemRail.EnumRail.STANDARD), new ItemStack(Blocks.fence),
                         GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Steel, 2L)},
-                EnumTrack.GATED.getItem(16), 400, 16);
+                EnumTrack.GATED.getItem(16), 400, 12);
         // --- Suspended Rail
         impact.I_RA.addTrackAssemblerRecipe(new ItemStack[]{GT_Utility.getIntegratedCircuit(7),
                         RailcraftItem.tie.getStack(3, ItemTie.EnumTie.WOOD),

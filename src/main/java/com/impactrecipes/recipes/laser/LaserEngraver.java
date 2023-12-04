@@ -27,7 +27,7 @@ public class LaserEngraver implements IOreRecipeRegistrator {
         switch (aOreDictName) {
             case "craftingLensRed":
                 RA.addLaserEngraverRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Redstone, 1L), GT_Utility.copyAmount(0L, aStack), GT_ItemList.RedstoneRedChipset.get(1L), 50, 120, false);
-                RA.addLaserEngraverRecipe(ItemList.EnergyCrystal.get(1L), GT_Utility.copyAmount(0L, aStack), GT_ItemList.EngravedEnergyChip.get(1L), 600, 4096, true);
+                RA.addLaserEngraverRecipe(ItemList.EnergyCrystal.get(1L), GT_Utility.copyAmount(0L, aStack), GT_ItemList.EngravedEnergyChip.get(1L), 600, 4100, true);
                 RA.addLaserEngraverRecipe(CoreItems2.getRecipe(154, 1), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("OpenComputers", "item", 16L, 24), 600, 120, false);
                 RA.addLaserEngraverRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 5), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 6), 500, 30, false);
 
@@ -35,7 +35,7 @@ public class LaserEngraver implements IOreRecipeRegistrator {
             case "craftingLensGreen":
                 RA.addLaserEngraverRecipe(ItemList.LapotronCrystal.get(1L), GT_Utility.copyAmount(0L, aStack), CoreItems2.getRecipe(46, 1), 600, 480, true);
                 RA.addLaserEngraverRecipe(ItemList.EnergyCrystal.get(1L), GT_Utility.copyAmount(0L, aStack), CoreItems2.getRecipe(100, 1), 300, 120, false);
-                RA.addLaserEngraverRecipe(CoreItems2.getRecipe(155, 1), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("OpenComputers", "item", 9L, 25), 600, 256, false);
+                RA.addLaserEngraverRecipe(CoreItems2.getRecipe(155, 1), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("OpenComputers", "item", 9L, 25), 600, 250, false);
                 RA.addLaserEngraverRecipe(GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Steel, 1L), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 15), 6000, 480, false);
 
                 break;

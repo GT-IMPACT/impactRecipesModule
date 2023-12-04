@@ -402,7 +402,7 @@ public class LogisticPipes implements Runnable {
         RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 203),
                         GT_ItemList.RedstoneDiamondChipset.get(1),
-                        GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 207), 180, 256);
+                        GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 207), 180, 250);
         // --- IC2 LV Power Supplier Upgrade
         RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 30),

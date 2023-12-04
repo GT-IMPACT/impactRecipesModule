@@ -346,11 +346,11 @@ public class Ender_IO implements Runnable {
         // --- Advanced Item Filter
         RA.addAssemblerRecipe(ItemList.Conveyor_Module_MV.get(1),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.ElectricalSteel, 1L),
-                new ItemStack(EnderIO.itemBasicFilterUpgrade, 1, 1), 100, 64);
+                new ItemStack(EnderIO.itemBasicFilterUpgrade, 1, 1), 100, 60);
         // --- Big Item Filter
         RA.addAssemblerRecipe(ItemList.Conveyor_Module_HV.get(1),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.DarkSteel, 1L),
-                new ItemStack(EnderIO.itemBigFilterUpgrade, 1, 0), 200, 256);
+                new ItemStack(EnderIO.itemBigFilterUpgrade, 1, 0), 200, 250);
         // --- Big Advanced Item Filter
         RA.addAssemblerRecipe(ItemList.Conveyor_Module_EV.get(1),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.HSLA, 1L),
@@ -362,7 +362,7 @@ public class Ender_IO implements Runnable {
         // --- Chargeable Item Filter
         RA.addAssemblerRecipe(new ItemStack(EnderIO.itemConduitProbe, 1, 0),
                 GT_OreDictUnificator.get(OrePrefixes.plate, Materials.ElectricalSteel, 1L),
-                new ItemStack(EnderIO.itemPowerItemFilter, 1, 0), 200, 64);
+                new ItemStack(EnderIO.itemPowerItemFilter, 1, 0), 200, 60);
         // --- Network Conduit (OC)
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("OpenComputers", "cable", 1L),
                 new ItemStack(EnderIO.itemMaterial, 1, 1), new ItemStack(EnderIO.itemOCConduit, 1, 0), 120,
@@ -423,7 +423,7 @@ public class Ender_IO implements Runnable {
         // --- Powered Light Inverted
         RA.addAssemblerRecipe(new ItemStack(EnderIO.blockElectricLight, 1, 0),
                 GT_ModHandler.getModItem("minecraft", "redstone_torch", 1L),
-                new ItemStack(EnderIO.blockElectricLight, 1, 1), 40, 64);
+                new ItemStack(EnderIO.blockElectricLight, 1, 1), 40, 60);
         // --- Light Inverted
         RA.addAssemblerRecipe(new ItemStack(EnderIO.blockElectricLight, 1, 2),
                 GT_ModHandler.getModItem("minecraft", "redstone_torch", 1L),
@@ -446,7 +446,7 @@ public class Ender_IO implements Runnable {
         // --- Wireless Powered Light Inverted
         RA.addAssemblerRecipe(new ItemStack(EnderIO.blockElectricLight, 1, 4),
                 GT_ModHandler.getModItem("minecraft", "redstone_torch", 1L),
-                new ItemStack(EnderIO.blockElectricLight, 1, 5), 40, 64);
+                new ItemStack(EnderIO.blockElectricLight, 1, 5), 40, 60);
         RA.addAssemblerRecipe(new ItemStack[]{new ItemStack(EnderIO.blockElectricLight, 4, 1),
                         GT_OreDictUnificator.get(OrePrefixes.spring, Materials.Copper, 1L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Aluminium, 4L)}, null,
@@ -466,23 +466,23 @@ public class Ender_IO implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.ElectricalSteel, 1L),
                         GT_ModHandler.getModItem("GalacticraftCore", "tile.arclamp", 1L),
                         new ItemStack(EnderIO.blockFusedQuartz, 4, 0)}, null,
-                new ItemStack(EnderIO.blockElectricLight, 16, 2), 200, 64);
+                new ItemStack(EnderIO.blockElectricLight, 16, 2), 200, 60);
         RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Desh, 1L),
                         GT_ModHandler.getModItem("GalacticraftCore", "tile.arclamp", 1L),
                         new ItemStack(EnderIO.blockFusedQuartz, 16, 0)}, null,
-                new ItemStack(EnderIO.blockElectricLight, 64, 2), 300, 256);
+                new ItemStack(EnderIO.blockElectricLight, 64, 2), 300, 250);
         // --- Powered Light
         RA.addAssemblerRecipe(new ItemStack[]{
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.ElectricalSteel, 1L),
                         GT_ModHandler.getModItem("GregsLighting", "ic2ElectricFloodlight", 1L),
                         new ItemStack(EnderIO.blockFusedQuartz, 4, 0)}, null,
-                new ItemStack(EnderIO.blockElectricLight, 16, 0), 200, 64);
+                new ItemStack(EnderIO.blockElectricLight, 16, 0), 200, 60);
         RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Desh, 1L),
                         GT_ModHandler.getModItem("GregsLighting", "ic2ElectricFloodlight", 1L),
                         new ItemStack(EnderIO.blockFusedQuartz, 16, 0)}, null,
-                new ItemStack(EnderIO.blockElectricLight, 64, 0), 300, 256);
+                new ItemStack(EnderIO.blockElectricLight, 64, 0), 300, 250);
     }
 
     private void chemicalBathRecipe() {

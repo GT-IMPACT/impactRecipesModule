@@ -630,7 +630,7 @@ public class GalactiCraft implements Runnable {
         GT_Values.RA
                 .addArcFurnaceRecipe(GT_ModHandler.getModItem("GalacticraftCore", "item.oxygenTankLightFull", 1L, GT_Values.W),
                         new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Aluminium, 21),
-                                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Steel, 9)}, null, 600, 64);
+                                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Steel, 9)}, null, 600, 60);
         GT_Values.RA
                 .addArcFurnaceRecipe(GT_ModHandler.getModItem("GalacticraftCore", "item.oxygenTankMedFull", 1L, GT_Values.W),
                         new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.MeteoricIron, 21),
@@ -638,7 +638,7 @@ public class GalactiCraft implements Runnable {
         GT_Values.RA
                 .addArcFurnaceRecipe(GT_ModHandler.getModItem("GalacticraftCore", "item.oxygenTankHeavyFull", 1L, GT_Values.W),
                         new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Desh, 21),
-                                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.StainlessSteel, 9)}, null, 700, 256);
+                                GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.StainlessSteel, 9)}, null, 700, 250);
         GT_Values.RA
                 .addArcFurnaceRecipe(GT_ModHandler.getModItem("GalacticraftCore", "item.oxygenTankt4", 1L, GT_Values.W),
                         new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Naquadah, 21),
@@ -654,17 +654,17 @@ public class GalactiCraft implements Runnable {
         GT_Values.RA
                 .addAssemblerRecipe(GT_ModHandler.getModItem("GalacticraftCore", "item.spaceship", 1L),
                         GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
-                        GT_ModHandler.getModItem("GalacticraftCore", "item.spaceship", 1L, 3), 200, 64);
+                        GT_ModHandler.getModItem("GalacticraftCore", "item.spaceship", 1L, 3), 200, 60);
         // ---  T2 Rocket + chest
         GT_Values.RA
                 .addAssemblerRecipe(GT_ModHandler.getModItem("GalacticraftMars", "item.spaceshipTier2", 1L),
                         GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
-                        GT_ModHandler.getModItem("GalacticraftMars", "item.spaceshipTier2", 1L, 3), 200, 64);
+                        GT_ModHandler.getModItem("GalacticraftMars", "item.spaceshipTier2", 1L, 3), 200, 60);
         // ---  T3 Rocket + chest
         RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem("GalacticraftMars", "item.itemTier3Rocket", 1L),
                 GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),
-                GT_ModHandler.getModItem("GalacticraftMars", "item.itemTier3Rocket", 1L, 3), 200, 64);
+                GT_ModHandler.getModItem("GalacticraftMars", "item.itemTier3Rocket", 1L, 3), 200, 60);
 
         // --- Oxygen Mask
         RA.addAssemblerRecipe(GT_ModHandler.getModItem("IC2", "itemArmorHazmatHelmet", 1L),
@@ -687,13 +687,13 @@ public class GalactiCraft implements Runnable {
                 new ItemStack[]{GT_ModHandler.getModItem("GalacticraftCore", "item.basicItem", 8L, 9),
                         GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Steel, 4),
                         GT_Utility.getIntegratedCircuit(1)}, null,
-                GT_ModHandler.getModItem("GalacticraftCore", "item.oilCanisterPartial", 1L, 1001), 200, 64);
+                GT_ModHandler.getModItem("GalacticraftCore", "item.oilCanisterPartial", 1L, 1001), 200, 60);
         // --- Canister T2
         RA.addAssemblerRecipe(new ItemStack[]{
                         GT_ModHandler.getModItem("GalacticraftMars", "item.itemBasicAsteroids", 8L, 6),
                         GT_OreDictUnificator.get(OrePrefixes.ring, Materials.Titanium, 4),
                         GT_Utility.getIntegratedCircuit(1)}, null,
-                GT_ModHandler.getModItem("GalacticraftMars", "item.LOX2", 1L, 8001), 300, 256);
+                GT_ModHandler.getModItem("GalacticraftMars", "item.LOX2", 1L, 8001), 300, 250);
         // --- Canister T3
         RA.addAssemblerRecipe(new ItemStack[]{
                         GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.TungstenSteel, 8),
@@ -731,13 +731,13 @@ public class GalactiCraft implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 1),
                         GT_OreDictUnificator.get(OrePrefixes.lens, Materials.ReinforcedGlass, 1),
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.DarkSteel, 4)}, null,
-                GT_ModHandler.getModItem("GalacticraftCore", "tile.arclamp", 4L), 200, 64);
+                GT_ModHandler.getModItem("GalacticraftCore", "tile.arclamp", 4L), 200, 60);
         RA.addAssemblerRecipe(new ItemStack[]{
                         ItemList.Emitter_EV.get(1),
                         GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 1),
                         GT_OreDictUnificator.get(OrePrefixes.lens, Materials.Diamond, 1),
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Vanadium, 8)}, null,
-                GT_ModHandler.getModItem("GalacticraftCore", "tile.arclamp", 16L), 300, 256);
+                GT_ModHandler.getModItem("GalacticraftCore", "tile.arclamp", 16L), 300, 250);
         RA.addAssemblerRecipe(new ItemStack[]{
                         ItemList.Emitter_IV.get(1),
                         GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 1),
