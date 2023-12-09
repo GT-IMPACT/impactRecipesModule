@@ -404,12 +404,12 @@ public class ImpactCore implements Runnable {
 		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14074), tBitMask,
 				new Object[]{"PLP", "CGC", "PBP", 'P', GT_ModHandler.getModItem("impact", "gt.blockCase3", 1L, 2),
 						'L', GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L, 0),
-						'C', "cobblestone", 'G', "gearWood", 'B', ToolDictNames.craftingToolSoftHammer});
+						'C', "cobblestone", 'G', "gearGtWood", 'B', ToolDictNames.craftingToolSoftHammer});
 		
 		// --- The Mill Rotor
 		GT_ModHandler.addCraftingRecipe(new ItemStack(ItemRegistery.TheWind, 1, 0), tBitMask,
 				new Object[]{"SLS", "LGL", "SLS", 'L', GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L, 0),
-						'S', "stickWood", 'G', "gearWood"});			
+						'S', "stickWood", 'G', "gearGtWood"});			
 
 		// --- Volumetric Configurator
 		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14604), tBitMask,
@@ -423,7 +423,7 @@ public class ImpactCore implements Runnable {
 
 		// --- Mining Hatch
 		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14747), tBitMask,
-				new Object[]{"SCd", "GFG", "hRS", 'S', "screwIron", 'C', "craftingChest", 'G', "gearIron", 'F', "frameGtIron",
+				new Object[]{"SCd", "GFG", "hRS", 'S', "screwIron", 'C', "craftingChest", 'G', "gearGtIron", 'F', "frameGtIron",
 						'R', "ringIron"});
 
 		// --- Iron Drill Head
