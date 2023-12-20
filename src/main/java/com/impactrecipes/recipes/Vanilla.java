@@ -376,6 +376,8 @@ public class Vanilla implements Runnable {
         for (int i = 0; i < 6; i++) {
             OreDictionary.registerOre("plankWood", new ItemStack(Blocks.planks, i));
         }
+        // --- Slimeball
+        OreDictionary.registerOre("slimeball", GT_ModHandler.getModItem("IC2", "itemHarz", 1L));
     }
 
     private void assembler() {

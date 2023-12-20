@@ -208,13 +208,21 @@ public class AE implements Runnable {
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1L, 1), true, false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1L, 2), true, false, false);
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1L, 3), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockSingularityCraftingStorage", 1L, 0), true, false, false);
+        removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingMonitor", 1L, 0), true, false, false);
 
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "item.ToolCertusQuartzAxe", 1L, 0), true, false, false);
+
+        removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "item.ToolWirelessTerminal", 1L, 0), true, false, false);
 
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 57));
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 58));
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 59));
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 60));
+
+        removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 62));
+        removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 63));
+        removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 64));
 
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "item.ItemExtremeStorageCell.Quantum", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem(AE2, "item.ItemVoidStorageCell", 1L));
@@ -234,6 +242,7 @@ public class AE implements Runnable {
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "part_fluid_pattern_terminal", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "part_fluid_pattern_terminal_ex", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "part_fluid_conversion_monitor", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "part_fluid_storage_monitor", 1L));
 
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "part_fluid_import", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "part_fluid_export", 1L));
@@ -286,6 +295,8 @@ public class AE implements Runnable {
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "wireless_fluid_pattern_terminal", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "wireless_interface_terminal", 1L));
         removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "wireless_fluid_terminal", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "part_level_terminal", 1L));
+        removeRecipeByOutput(GT_ModHandler.getModItem("ae2fc", "wireless_level_terminal", 1L));
 
     }
 
@@ -381,6 +392,13 @@ public class AE implements Runnable {
         addCraftingRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 42), tBitMask, new Object[]{"DGE", "PPP", 'P', OrePrefixes.plate.get(Materials.VanadiumSteel), 'E', OrePrefixes.plate.get(Materials.EnderPearl), 'G', OrePrefixes.gem.get(Materials.CertusQuartz), 'D', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 8)});
         // --- OreDict Filter Card
         addShapelessCraftingRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 55), tBitMask, new Object[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 28), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 23), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 23), GT_ModHandler.getModItem("EnderIO", "itemBasicFilterUpgrade", 1L, 1)});
+        // --- Patter Refiller Card
+        addShapelessCraftingRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 62), tBitMask, new Object[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 25), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 23), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 23), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 52)});
+        // --- Advanced Blocking Card
+        addShapelessCraftingRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 63), tBitMask, new Object[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 28), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 23), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 23), ItemList.Electric_Piston_HV.get(1)});
+        // --- Sticky Card
+        addShapelessCraftingRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 64), tBitMask, new Object[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 25), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 23), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 23), "slimeball"});
+
         // --- ME Annihilation Plane
         addCraftingRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 300), tBitMask, new Object[]{"DDD", "PAP", 'P', OrePrefixes.plate.get(Materials.VanadiumSteel), 'D', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 8), 'A', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 44)});
         // --- ME Formation Plane
@@ -451,6 +469,10 @@ public class AE implements Runnable {
         addCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "wireless_fluid_terminal", 1L), tBitMask,
                 new Object[]{"FEF", "PMP", "PAP", 'P', OrePrefixes.plate.get(Materials.HastelloyN), 'A', GT_ModHandler.getModItem(AE2, "tile.BlockDenseEnergyCell", 1L), 'F', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 41), 'M', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), 'E', GT_ModHandler.getModItem("ae2fc", "part_fluid_terminal", 1)}
         );
+
+        // --- Level Terminal
+        addCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "part_level_terminal", 1L, 0), tBitMask, new Object[]{"dTh", "SOS", "PCP", 'S', OrePrefixes.screw.get(Materials.CertusQuartz), 'P', OrePrefixes.plate.get(Materials.NetherQuartz), 'T', GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 380), 'O', GT_ModHandler.getModItem("ae2fc", "level_maintainer", 1L, 0), 'C', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24)});
+
         // --- ME Fluid Interface
         addShapelessCraftingRecipe(GT_ModHandler.getModItem("extracells", "part.base", 1L, 9), tBitMask, new Object[]{GT_ModHandler.getModItem("extracells", "ecbaseblock", 1L)});
         addShapelessCraftingRecipe(GT_ModHandler.getModItem("extracells", "ecbaseblock", 1L), tBitMask,
@@ -476,6 +498,9 @@ public class AE implements Runnable {
 
         // --- ME Fluid Auto Filler
         addCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "fluid_auto_filler", 1L), tBitMask, new Object[]{"PMP", "CIC", "PRP", 'P', "plateLapis", 'M', GT_ModHandler.getModItem("ae2fc", "part_fluid_terminal", 1L), 'C', GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 16), 'R', GT_ModHandler.getModItem("ae2fc", "part_fluid_level_emitter", 1L), 'I', GT_ModHandler.getModItem("ae2fc", "fluid_interface", 1L)});
+
+        // --- Wireless Level Terminal
+        addCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "wireless_level_terminal", 1L, 0), tBitMask, new Object[]{"WTW", "PCP", "PEP", 'P', OrePrefixes.plate.get(Materials.VanadiumSteel), 'T', GT_ModHandler.getModItem("ae2fc", "part_level_terminal", 1L, 0), 'W', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 41), 'C', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), 'E', GT_ModHandler.getModItem(AE2, "tile.BlockDenseEnergyCell", 1L, 0)});
 
         //EC2 Part Fluid Import
         addShapelessCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "part_fluid_import", 1),
@@ -607,7 +632,8 @@ public class AE implements Runnable {
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 58), Materials.SolderingAlloy.getMolten(18432), GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1L, 1), 1200, 60570);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 59), Materials.SolderingAlloy.getMolten(36864), GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1L, 2), 1200, 240630);
         RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 60), Materials.SolderingAlloy.getMolten(36864), GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1L, 3), 1200, 1034200);
-    
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem(AE2, "tile.BlockCraftingUnit", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemExtremeStorageCell.Singularity", 1L, 0), Materials.SolderingAlloy.getMolten(73728), GT_ModHandler.getModItem(AE2, "tile.BlockSingularityCraftingStorage", 1L, 0), 6400, 4136800);
+
         // --- Annihilation Core
         RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 1), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 12), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.VanadiumSteel, 2), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 22), GT_Utility.getIntegratedCircuit(1)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 44), 200, 7680);
         RA.addAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.stick, Materials.NetherQuartz, 1), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 12), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Iridium, 1), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 22), GT_Utility.getIntegratedCircuit(2)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 2L, 44), 100, 30720);
@@ -831,6 +857,12 @@ public class AE implements Runnable {
 
         // --- ME Fluid Conversion Monitor
         RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 420), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Lapis, 3)}, null, GT_ModHandler.getModItem("ae2fc", "part_fluid_conversion_monitor", 1), 300, 120);
+
+        // --- ME Fluid Storage Monitor
+        RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 400), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Lapis, 3)}, null, GT_ModHandler.getModItem("ae2fc", "part_fluid_storage_monitor", 1), 300, 120);
+
+        // --- ME Level Terminal
+        RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 380), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), GT_ModHandler.getModItem("ae2fc", "level_maintainer", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem("ae2fc", "part_level_terminal", 1L, 0), 200, 96);
 
     }
 
