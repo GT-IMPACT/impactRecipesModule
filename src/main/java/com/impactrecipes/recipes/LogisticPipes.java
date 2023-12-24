@@ -26,6 +26,7 @@ public class LogisticPipes implements Runnable {
         assembler();
         ciruit();
         chemicalBathRecipe();
+        formingPress();
     }
 
     private void removeLP() {
@@ -174,28 +175,16 @@ public class LogisticPipes implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 5), tBitMask, new Object[]{" C ", "BMB", "FIF", 'C', GT_ItemList.RedstoneGoldChipset, 'B', OrePrefixes.bolt.get(Materials.Silver), 'F', OrePrefixes.foil.get(Materials.Gold), 'I', OrePrefixes.circuit.get(Materials.Basic), 'M', GT_ModHandler.getModItem(LP, "item.itemModule", 1L)});
         // --- Terminus Module
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 6), tBitMask, new Object[]{" C ", "BMB", "FIF", 'C', GT_ItemList.RedstoneRedChipset, 'B', OrePrefixes.bolt.get(Materials.RedAlloy), 'F', OrePrefixes.foil.get(Materials.Iron), 'I', OrePrefixes.circuit.get(Materials.Basic), 'M', GT_ModHandler.getModItem(LP, "item.itemModule", 1L)});
-        // --- Extractor Module MK2
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 103), tBitMask, new Object[]{" C ", "BMB", "FIF", 'C', GT_ItemList.RedstoneGoldChipset, 'B', OrePrefixes.bolt.get(Materials.RedAlloy), 'F', OrePrefixes.foil.get(Materials.Electrum), 'I', OrePrefixes.circuit.get(Materials.Good), 'M', GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 3)});
-        // --- Extractor Module MK3
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 203), tBitMask, new Object[]{" C ", "BMB", "FIF", 'C', GT_ItemList.RedstoneDiamondChipset, 'B', OrePrefixes.bolt.get(Materials.RedAlloy), 'F', OrePrefixes.foil.get(Materials.Birmabright), 'I', OrePrefixes.circuit.get(Materials.Advanced), 'M', GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 103)});
         // --- Provider Module
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 500), tBitMask, new Object[]{" C ", "BMB", "FIF", 'C', GT_ItemList.RedstoneGoldChipset, 'B', OrePrefixes.bolt.get(Materials.RedAlloy), 'F', OrePrefixes.foil.get(Materials.Silver), 'I', OrePrefixes.circuit.get(Materials.Basic), 'M', GT_ModHandler.getModItem(LP, "item.itemModule", 1L)});
-        // --- Provider Module MK2
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 501), tBitMask, new Object[]{" C ", "BMB", "FIF", 'C', GT_ItemList.RedstoneGoldChipset, 'B', OrePrefixes.bolt.get(Materials.RedAlloy), 'F', OrePrefixes.foil.get(Materials.Silver), 'I', OrePrefixes.circuit.get(Materials.Good), 'M', GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 500)});
         // --- Electric Manager Module
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 300), tBitMask, new Object[]{"WCA", "BMB", "FIF", 'C', GT_ItemList.RedstoneIronChipset, 'B', OrePrefixes.bolt.get(Materials.Electrum), 'F', OrePrefixes.foil.get(Materials.Silver), 'I', OrePrefixes.circuit.get(Materials.Good), 'M', GT_ModHandler.getModItem(LP, "item.itemModule", 1L), 'W', OrePrefixes.wireGt02.get(Materials.Copper), 'A', ItemList.Battery_RE_LV_Lithium});
         // --- Electric Buffer Module
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 301), tBitMask, new Object[]{"ACA", "BMB", "FIF", 'C', GT_ItemList.RedstoneIronChipset, 'B', OrePrefixes.bolt.get(Materials.Electrum), 'F', OrePrefixes.foil.get(Materials.Silver), 'I', OrePrefixes.circuit.get(Materials.Good), 'M', GT_ModHandler.getModItem(LP, "item.itemModule", 1L), 'A', ItemList.Battery_RE_MV_Lithium});
-        // --- Mod Based ItemSink Module
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 12), tBitMask, new Object[]{" C ", "BMB", "FIF", 'C', GT_ItemList.RedstoneGoldChipset, 'B', OrePrefixes.bolt.get(Materials.Electrum), 'F', OrePrefixes.foil.get(Materials.Steel), 'I', OrePrefixes.circuit.get(Materials.Basic), 'M', GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 1)});
         // --- OreDict ItemSink Module
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 13), tBitMask, new Object[]{" C ", "BMB", "FIF", 'C', GT_ItemList.RedstoneGoldChipset, 'B', OrePrefixes.bolt.get(Materials.Gold), 'F', OrePrefixes.foil.get(Materials.AnnealedCopper), 'I', OrePrefixes.circuit.get(Materials.Basic), 'M', GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 12)});
         // --- Crafting Module
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 600), tBitMask, new Object[]{" C ", "BMB", "FIF", 'C', GT_ItemList.RedstoneIronChipset, 'B', OrePrefixes.bolt.get(Materials.Iron), 'F', OrePrefixes.foil.get(Materials.Gold), 'I', OrePrefixes.circuit.get(Materials.Basic), 'M', GT_ModHandler.getModItem(LP, "item.itemModule", 1L)});
-        // --- Crafting Module MK2
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 601), tBitMask, new Object[]{" C ", "BMB", "FIF", 'C', GT_ItemList.RedstoneGoldChipset, 'B', OrePrefixes.bolt.get(Materials.Steel), 'F', OrePrefixes.foil.get(Materials.Gold), 'I', OrePrefixes.circuit.get(Materials.Good), 'M', GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 600)});
-        // --- Crafting Module MK3
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 602), tBitMask, new Object[]{" C ", "BMB", "FIF", 'C', GT_ItemList.RedstoneDiamondChipset, 'B', OrePrefixes.bolt.get(Materials.Aluminium), 'F', OrePrefixes.foil.get(Materials.Gold), 'I', OrePrefixes.circuit.get(Materials.Advanced), 'M', GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 601)});
         // --- Active Supplier Module
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 502), tBitMask, new Object[]{" C ", "BMB", "FIF", 'C', GT_ItemList.RedstoneRedChipset, 'B', OrePrefixes.bolt.get(Materials.RedAlloy), 'F', OrePrefixes.foil.get(Materials.Gold), 'I', OrePrefixes.circuit.get(Materials.Basic), 'M', GT_ModHandler.getModItem(LP, "item.itemModule", 1L)});
         // --- Logistics Item Card
@@ -222,12 +211,12 @@ public class LogisticPipes implements Runnable {
                 GT_ModHandler.getModItem(LP, "item.PipeItemsBasicTransport", 1L, 0),
                 GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Electrum, 1L),
                 GT_Utility.getIntegratedCircuit(1)}, null,
-                GT_ModHandler.getModItem(LP, "item.PipeItemsBasicLogistics", 1L, 0), 100, 120);
+                GT_ModHandler.getModItem(LP, "item.PipeItemsBasicLogistics", 1L, 0), 100, 30);
         RA.addAssemblerRecipe(new ItemStack[]{
                 GT_ModHandler.getModItem(LP, "item.PipeItemsBasicTransport", 4L, 0),
                 GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Aluminium, 1L),
                 GT_Utility.getIntegratedCircuit(1)}, null,
-                GT_ModHandler.getModItem(LP, "item.PipeItemsBasicLogistics", 4L, 0), 120, 120);
+                GT_ModHandler.getModItem(LP, "item.PipeItemsBasicLogistics", 4L, 0), 120, 60);
         RA.addAssemblerRecipe(new ItemStack[]{
                 GT_ModHandler.getModItem(LP, "item.PipeItemsBasicTransport", 16L, 0),
                 GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.PolyvinylChloride, 1L),
@@ -237,7 +226,7 @@ public class LogisticPipes implements Runnable {
                 GT_ModHandler.getModItem(LP, "item.PipeItemsBasicTransport", 64L, 0),
                 GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Platinum, 1L),
                 GT_Utility.getIntegratedCircuit(1)}, null,
-                GT_ModHandler.getModItem(LP, "item.PipeItemsBasicLogistics", 64L, 0), 160, 120);
+                GT_ModHandler.getModItem(LP, "item.PipeItemsBasicLogistics", 64L, 0), 160, 180);
         // --- Logistics Chassis Mk1
         RA.addAssemblerRecipe(new ItemStack[]{
                         GT_ModHandler.getModItem(LP, "item.PipeItemsBasicLogistics", 4L, 0),
@@ -393,16 +382,6 @@ public class LogisticPipes implements Runnable {
                 GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 3),
                         GT_ItemList.RedstoneGoldChipset.get(1),
                         GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 7), 140, 120);
-        // --- Advanced Extractor Module MK2
-        RA.addAssemblerRecipe(
-                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 103),
-                        GT_ItemList.RedstoneGoldChipset.get(1),
-                        GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 107), 160, 120);
-        // --- Advanced Extractor Module MK3
-        RA.addAssemblerRecipe(
-                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 203),
-                        GT_ItemList.RedstoneDiamondChipset.get(1),
-                        GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 207), 180, 250);
         // --- IC2 LV Power Supplier Upgrade
         RA.addAssemblerRecipe(
                 GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 30),
@@ -430,6 +409,32 @@ public class LogisticPipes implements Runnable {
                         GT_ModHandler.getModItem("OpenComputers", "keyboard", 1L),
                         GT_ModHandler.getModItem("minecraft", "sign", 16L)}, null,
                         GT_ModHandler.getModItem(LP, "item.ItemPipeSignCreator", 1L), 600, 120);
+
+        // --- Upgrade Chip
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ItemList.RedstoneGoldChipset.get(4),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedSteel, 16L),
+                        GT_Utility.getIntegratedCircuit(18)}, Materials.SolderingAlloy.getMolten(72),
+                GT_ModHandler.getModItem(LP, "item.logisticsParts", 4L, 5), 200, 120);
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ItemList.RedstoneDiamondChipset.get(4),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.BlueSteel, 16L),
+                        GT_Utility.getIntegratedCircuit(18)}, Materials.SolderingAlloy.getMolten(72),
+                GT_ModHandler.getModItem(LP, "item.logisticsParts", 4L, 6), 200, 480);
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem(LP, "item.logisticsParts", 4L, 5),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 22),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedSteel, 32L),
+                        GT_Utility.getIntegratedCircuit(18)}, Materials.SolderingAlloy.getMolten(144),
+                GT_ModHandler.getModItem(LP, "item.logisticsParts", 4L, 7), 400, 120);
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem(LP, "item.logisticsParts", 4L, 6),
+                        GT_ModHandler.getModItem("appliedenergistics2", "item.ItemMultiMaterial", 1L, 24),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.BlueSteel, 32L),
+                        GT_Utility.getIntegratedCircuit(18)}, Materials.SolderingAlloy.getMolten(144),
+                GT_ModHandler.getModItem(LP, "item.logisticsParts", 4L, 8), 400, 480);
 
     }
 
@@ -528,5 +533,50 @@ public class LogisticPipes implements Runnable {
                 }
             RA.addChemicalBathRecipe(GT_ModHandler.getModItem(LP, "item.remoteOrdererItem", 1L, 1 + i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(LP, "item.remoteOrdererItem", 1L, 0), GT_Values.NI, GT_Values.NI, null, 20, 2);
         }
+    }
+
+    private void formingPress() {
+        // --- Extractor M2
+        RA.addFormingPressRecipe(
+                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 3),
+                GT_ModHandler.getModItem(LP, "item.logisticsParts", 1L, 5),
+                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 103), 300, 30);
+        // --- Advanced Extractor Module MK2
+        RA.addFormingPressRecipe(
+                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 7),
+                GT_ModHandler.getModItem(LP, "item.logisticsParts", 1L, 5),
+                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 107), 300, 30);
+        // --- Extractor M3
+        RA.addFormingPressRecipe(
+                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 3),
+                GT_ModHandler.getModItem(LP, "item.logisticsParts", 1L, 6),
+                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 203), 300, 30);
+        // --- Advanced Extractor Module MK3
+        RA.addFormingPressRecipe(
+                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 7),
+                GT_ModHandler.getModItem(LP, "item.logisticsParts", 1L, 6),
+                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 207), 300, 30);
+        // --- Provider Module MK2
+        RA.addFormingPressRecipe(
+                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 500),
+                GT_ModHandler.getModItem(LP, "item.logisticsParts", 1L, 6),
+                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 501), 300, 30);
+        // --- Mod Based ItemSink Module
+        RA.addFormingPressRecipe(
+                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 1),
+                GT_ModHandler.getModItem(LP, "item.logisticsParts", 1L, 5),
+                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 12), 300, 30);
+        // --- Crafting Module MK2
+        RA.addFormingPressRecipe(
+                GT_ModHandler.getModItem(LP, "item.itemModule", 2L, 600),
+                GT_ModHandler.getModItem(LP, "item.logisticsParts", 1L, 7),
+                GT_ModHandler.getModItem(LP, "item.itemModule", 2L, 601), 300, 120);
+        // --- Crafting Module MK3
+        RA.addFormingPressRecipe(
+                GT_ModHandler.getModItem(LP, "item.itemModule", 2L, 601),
+                GT_ModHandler.getModItem(LP, "item.logisticsParts", 1L, 8),
+                GT_ModHandler.getModItem(LP, "item.itemModule", 2L, 602), 300, 480);
+
+
     }
 }
