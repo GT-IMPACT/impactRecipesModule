@@ -417,13 +417,13 @@ public class ImpactCore implements Runnable {
 
         // --- Coal Miner
 		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14071), tBitMask,
-				new Object[]{"SBS", "GFG", "hLd", 'B', GT_ModHandler.getModItem("IC2", "itemRecipePart", 1L, 6),
-						'F', GT_ModHandler.getModItem("IC2", "blockMachine", 1L, 1),
-						'S', "screwIron", 'G', "gearGtSmallIron", 'L', "stickLongIron"});
+				new Object[]{"SBS", "PFP", "hGd", 'B', GT_ModHandler.getModItem("IC2", "itemRecipePart", 1L, 6),
+						'F', OreDictNames.craftingFurnace,
+						'S', "screwIron", 'G', "gearGtSmallIron", 'P', "plateIron"});
 
 		// --- Mining Hatch
 		GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14747), tBitMask,
-				new Object[]{"SCd", "GFG", "hRS", 'S', "screwIron", 'C', "craftingChest", 'G', "gearGtIron", 'F', "frameGtIron",
+				new Object[]{"SCd", "GFG", "hRS", 'S', "screwIron", 'C', "craftingChest", 'G', "gearGtSmallIron", 'F', "frameGtIron",
 						'R', "ringIron"});
 
 		// --- Iron Drill Head
