@@ -766,7 +766,7 @@ public class AE implements Runnable {
         );
 
         // --- ME Fluid Pattern
-        RA.addAssemblerRecipe(CoreItems2.getRecipe(201, 1),
+        RA.addAssemblerRecipe(GT_ModHandler.getModItem("ae2fc", "fluid_storage_housing", 1L),
                 GT_ModHandler.getModItem("minecraft", "bucket", 1L),
                 GT_ModHandler.getModItem("extracells", "pattern.fluid", 1L), 100, 120);
         // --- ME Fluid Level Emitter
