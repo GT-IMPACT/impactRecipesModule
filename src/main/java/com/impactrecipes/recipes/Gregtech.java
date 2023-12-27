@@ -1496,16 +1496,31 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahAlloy, 1L),
                 GT_Utility.getIntegratedCircuit(11), Materials.Argon.getGas(1000L), GT_Values.NF,
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.NaquadahAlloy, 1L),
-                GT_Values.NI, 400, 62880, 7200);
+                GT_Values.NI, 400, 48760, 7200);
+        RA.addBlastRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahAlloy, 1L),
+                GT_Utility.getIntegratedCircuit(10), Materials.Radon.getGas(4000L), GT_Values.NF,
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.NaquadahAlloy, 1L),
+                GT_Values.NI, 1600, 122880, 7200);
         RA.addBlastRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahEnriched, 1L),
                 GT_Utility.getIntegratedCircuit(11), Materials.Argon.getGas(1000L), GT_Values.NF,
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.NaquadahEnriched, 1L),
-                GT_Values.NI, 500, 7680, 7000);
+                GT_Values.NI, 500, 3840, 7000);
+        RA.addBlastRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.NaquadahEnriched, 1L),
+                GT_Utility.getIntegratedCircuit(10), Materials.Radon.getGas(4000L), GT_Values.NF,
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.NaquadahEnriched, 1L),
+                GT_Values.NI, 2000, 7680, 7000);
         RA.addBlastRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadria, 1L),
                 GT_Utility.getIntegratedCircuit(11), Materials.Argon.getGas(1000L), GT_Values.NF,
                 GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Naquadria, 1L), GT_Values.NI, 500,
+                64700, 9000);
+        RA.addBlastRecipe(
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadria, 1L),
+                GT_Utility.getIntegratedCircuit(10), Materials.Radon.getGas(4000L), GT_Values.NF,
+                GT_OreDictUnificator.get(OrePrefixes.ingotHot, Materials.Naquadria, 1L), GT_Values.NI, 2000,
                 122880, 9000);
         RA.addBlastRecipe(
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Osmiridium, 1L),
