@@ -520,13 +520,19 @@ public class ImpactCore implements Runnable {
 				ItemList.Cover_SolarPanel_IV.get(1L), ItemList.Robot_Arm_IV.get(1L), 1800, 250
 		);
 		RA.addUnboxingRecipe(GT_ItemList.Solar_LuV.get(1),
-				ItemList.Cover_SolarPanel_LuV.get(1L), ItemList.Robot_Arm_LuV.get(1L), 2000, 1024
+				ItemList.Cover_SolarPanel_LuV.get(1L), ItemList.Robot_Arm_LuV.get(1L), 2000, 1020
 		);
 		RA.addUnboxingRecipe(GT_ItemList.Solar_ZPM.get(1),
 				ItemList.Cover_SolarPanel_ZPM.get(1L), ItemList.Robot_Arm_ZPM.get(1L), 2200, 4096
 		);
 		RA.addUnboxingRecipe(GT_ItemList.Solar_UV.get(1),
 				ItemList.Cover_SolarPanel_UV.get(1L), ItemList.Robot_Arm_UV.get(1L), 2400, 7680
+		);
+		RA.addUnboxingRecipe(GT_ItemList.Solar_UHV.get(1),
+				ItemList.Cover_SolarPanel_UHV.get(1L), ItemList.Robot_Arm_UHV.get(1L), 2600, 16340
+		);
+		RA.addUnboxingRecipe(GT_ItemList.Solar_UEV.get(1),
+				ItemList.Cover_SolarPanel_UEV.get(1L), ItemList.Robot_Arm_UEV.get(1L), 2800, 30000
 		);
 		
 		RA.addUnboxingRecipe(
@@ -2861,7 +2867,7 @@ public class ImpactCore implements Runnable {
 		);
 		RA.addAssemblerRecipe(
 				new ItemStack[]{ItemList.Cover_SolarPanel_LV.get(1L), ItemList.Robot_Arm_LV.get(1L),
-						ItemList.Large_Fluid_Cell_Aluminium.get(1L), ItemList.Sensor_MV.get(1L),
+						ItemList.Large_Fluid_Cell_Aluminium.get(1L), ItemList.Sensor_LV.get(1L),
 						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Good, 4),
 						GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Silicon, 6),
 						ItemList.Battery_Buffer_2by2_LV.get(1L)}, Materials.SolderingAlloy.getMolten(288),
@@ -2869,7 +2875,7 @@ public class ImpactCore implements Runnable {
 		);
 		RA.addAssemblerRecipe(
 				new ItemStack[]{ItemList.Cover_SolarPanel_MV.get(1L), ItemList.Robot_Arm_MV.get(1L),
-						ItemList.Large_Fluid_Cell_StainlessSteel.get(1L), ItemList.Sensor_HV.get(1L),
+						ItemList.Large_Fluid_Cell_StainlessSteel.get(1L), ItemList.Sensor_MV.get(1L),
 						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 6),
 						GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Silicon, 6),
 						ItemList.Battery_Buffer_2by2_MV.get(1L)}, Materials.SolderingAlloy.getMolten(576),
@@ -2877,7 +2883,7 @@ public class ImpactCore implements Runnable {
 		);
 		RA.addAssemblerRecipe(
 				new ItemStack[]{ItemList.Cover_SolarPanel_HV.get(1L), ItemList.Robot_Arm_HV.get(1L),
-						ItemList.Large_Fluid_Cell_Titanium.get(1L), ItemList.Sensor_EV.get(1L),
+						ItemList.Large_Fluid_Cell_Titanium.get(1L), ItemList.Sensor_HV.get(1L),
 						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 8),
 						GT_OreDictUnificator.get(OrePrefixes.plate, Materials.GalliumArsenide, 8),
 						ItemList.Battery_Buffer_2by2_HV.get(1L)}, Materials.SolderingAlloy.getMolten(1152),
@@ -2885,7 +2891,7 @@ public class ImpactCore implements Runnable {
 		);
 		RA.addAssemblerRecipe(
 				new ItemStack[]{ItemList.Cover_SolarPanel_EV.get(1L), ItemList.Robot_Arm_EV.get(1L),
-						ItemList.Large_Fluid_Cell_TungstenSteel.get(1L), ItemList.Sensor_IV.get(1L),
+						ItemList.Large_Fluid_Cell_TungstenSteel.get(1L), ItemList.Sensor_EV.get(1L),
 						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Elite, 10),
 						GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.GalliumArsenide, 8),
 						ItemList.Battery_Buffer_2by2_EV.get(1L)}, Materials.SolderingAlloy.getMolten(2304),
@@ -2893,7 +2899,7 @@ public class ImpactCore implements Runnable {
 		);
 		RA.addAssemblerRecipe(
 				new ItemStack[]{ItemList.Cover_SolarPanel_IV.get(1L), ItemList.Robot_Arm_IV.get(1L),
-						ItemList.Large_Fluid_Cell_Chrome.get(1L), ItemList.Sensor_LuV.get(1L),
+						ItemList.Large_Fluid_Cell_Chrome.get(1L), ItemList.Sensor_IV.get(1L),
 						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Master, 12),
 						GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.GalliumArsenide, 8),
 						ItemList.Battery_Buffer_2by2_IV.get(1L)}, Materials.SolderingAlloy.getMolten(4608),
@@ -2901,7 +2907,7 @@ public class ImpactCore implements Runnable {
 		);
 		RA.addAssemblerRecipe(
 				new ItemStack[]{ItemList.Cover_SolarPanel_LuV.get(1L), ItemList.Robot_Arm_LuV.get(1L),
-						ItemList.Large_Fluid_Cell_Iridium.get(1L), ItemList.Sensor_ZPM.get(1L),
+						ItemList.Large_Fluid_Cell_Iridium.get(1L), ItemList.Sensor_LuV.get(1L),
 						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Ultimate, 14),
 						GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Sunnarium, 10),
 						ItemList.Battery_Buffer_2by2_LuV.get(1L)}, Materials.SolderingAlloy.getMolten(9216),
@@ -2909,7 +2915,7 @@ public class ImpactCore implements Runnable {
 		);
 		RA.addAssemblerRecipe(
 				new ItemStack[]{ItemList.Cover_SolarPanel_ZPM.get(1L), ItemList.Robot_Arm_ZPM.get(1L),
-						ItemList.Large_Fluid_Cell_Osmium.get(1L), ItemList.Sensor_UV.get(1L),
+						ItemList.Large_Fluid_Cell_Osmium.get(1L), ItemList.Sensor_ZPM.get(1L),
 						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 16),
 						GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Sunnarium, 10),
 						ItemList.Battery_Buffer_2by2_ZPM.get(1L)}, Materials.SolderingAlloy.getMolten(18432),
@@ -2917,11 +2923,27 @@ public class ImpactCore implements Runnable {
 		);
 		RA.addAssemblerRecipe(
 				new ItemStack[]{ItemList.Cover_SolarPanel_UV.get(1L), ItemList.Robot_Arm_UV.get(1L),
-						ItemList.Large_Fluid_Cell_Neutronium.get(1L), ItemList.Sensor_UHV.get(1L),
+						ItemList.Large_Fluid_Cell_Neutronium.get(1L), ItemList.Sensor_UV.get(1L),
 						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Infinite, 18),
 						GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Sunnarium, 10),
 						ItemList.Battery_Buffer_2by2_UV.get(1L)}, Materials.SolderingAlloy.getMolten(36864),
                 GT_ItemList.Solar_UV.get(1), 900, 2000000
+		);
+		RA.addAssemblerRecipe(
+				new ItemStack[]{ItemList.Cover_SolarPanel_UHV.get(1L), ItemList.Robot_Arm_UHV.get(1L),
+						Blockstack(FluidTankBlock, 1, 4), ItemList.Sensor_UHV.get(1L),
+						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Bio, 20),
+						GT_OreDictUnificator.get(OrePrefixes.plateQuadruple, Materials.Sunnarium, 10),
+						ItemList.Battery_Buffer_2by2_MAX.get(1L)}, Materials.SolderingAlloy.getMolten(73728),
+				GT_ItemList.Solar_UHV.get(1), 1000, 8000000
+		);
+		RA.addAssemblerRecipe(
+				new ItemStack[]{ItemList.Cover_SolarPanel_UEV.get(1L), ItemList.Robot_Arm_UEV.get(1L),
+						Blockstack(FluidTankBlock, 1, 5), ItemList.Sensor_UEV.get(1L),
+						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Nano, 22),
+						GT_OreDictUnificator.get(OrePrefixes.plateQuintuple, Materials.Sunnarium, 10),
+						ItemList.Battery_Buffer_2by2_UEV.get(1L)}, Materials.SolderingAlloy.getMolten(147456),
+				GT_ItemList.Solar_UEV.get(1), 1100, 32000000
 		);
 		
 		//Portable Tank
@@ -5071,14 +5093,14 @@ public class ImpactCore implements Runnable {
 		RA.addDisassemblerRecipe(
                 GT_ItemList.Solar_LV.get(1),
 				new ItemStack[]{ItemList.Cover_SolarPanel_LV.get(1L), ItemList.Robot_Arm_LV.get(1L),
-						ItemList.Large_Fluid_Cell_Aluminium.get(1L), ItemList.Sensor_MV.get(1L),
+						ItemList.Large_Fluid_Cell_Aluminium.get(1L), ItemList.Sensor_LV.get(1L),
 						ItemList.Circuit_Good.get(4), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Silicon, 6),
 						ItemList.Battery_Buffer_2by2_LV.get(1L)}, 2000, 120
 		);
 		RA.addDisassemblerRecipe(
                 GT_ItemList.Solar_MV.get(1),
 				new ItemStack[]{ItemList.Cover_SolarPanel_MV.get(1L), ItemList.Robot_Arm_MV.get(1L),
-						ItemList.Large_Fluid_Cell_StainlessSteel.get(1L), ItemList.Sensor_HV.get(1L),
+						ItemList.Large_Fluid_Cell_StainlessSteel.get(1L), ItemList.Sensor_MV.get(1L),
 						GT_ModHandler.getModItem("IC2", "itemPartCircuitAdv", 6L),
 						GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Silicon, 6),
 						ItemList.Battery_Buffer_2by2_MV.get(1L)}, 3000, 480
@@ -5086,21 +5108,21 @@ public class ImpactCore implements Runnable {
 		RA.addDisassemblerRecipe(
                 GT_ItemList.Solar_HV.get(1),
 				new ItemStack[]{ItemList.Cover_SolarPanel_HV.get(1L), ItemList.Robot_Arm_HV.get(1L),
-						ItemList.Large_Fluid_Cell_Titanium.get(1L), ItemList.Sensor_EV.get(1L),
+						ItemList.Large_Fluid_Cell_Titanium.get(1L), ItemList.Sensor_HV.get(1L),
 						ItemList.Circuit_Data.get(8), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.GalliumArsenide, 8),
 						ItemList.Battery_Buffer_2by2_HV.get(1L)}, 4000, 1920
 		);
 		RA.addDisassemblerRecipe(
                 GT_ItemList.Solar_EV.get(1),
 				new ItemStack[]{ItemList.Cover_SolarPanel_EV.get(1L), ItemList.Robot_Arm_EV.get(1L),
-						ItemList.Large_Fluid_Cell_TungstenSteel.get(1L), ItemList.Sensor_IV.get(1L),
+						ItemList.Large_Fluid_Cell_TungstenSteel.get(1L), ItemList.Sensor_EV.get(1L),
 						ItemList.Circuit_Elite.get(10), GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.GalliumArsenide, 8),
 						ItemList.Battery_Buffer_2by2_EV.get(1L)}, 5000, 7680
 		);
 		RA.addDisassemblerRecipe(
                 GT_ItemList.Solar_IV.get(1),
 				new ItemStack[]{ItemList.Cover_SolarPanel_IV.get(1L), ItemList.Robot_Arm_IV.get(1L),
-						ItemList.Large_Fluid_Cell_Chrome.get(1L), ItemList.Sensor_LuV.get(1L),
+						ItemList.Large_Fluid_Cell_Chrome.get(1L), ItemList.Sensor_IV.get(1L),
 						ItemList.Circuit_Master.get(12),
 						GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.GalliumArsenide, 8),
 						ItemList.Battery_Buffer_2by2_IV.get(1L)}, 6000, 30720
@@ -5108,7 +5130,7 @@ public class ImpactCore implements Runnable {
 		RA.addDisassemblerRecipe(
                 GT_ItemList.Solar_LuV.get(1),
 				new ItemStack[]{ItemList.Cover_SolarPanel_LuV.get(1L), ItemList.Robot_Arm_LuV.get(1L),
-						ItemList.Large_Fluid_Cell_Iridium.get(1L), ItemList.Sensor_ZPM.get(1L),
+						ItemList.Large_Fluid_Cell_Iridium.get(1L), ItemList.Sensor_LuV.get(1L),
 						ItemList.Circuit_Quantummainframe.get(14),
 						GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Sunnarium, 10),
 						ItemList.Battery_Buffer_2by2_LuV.get(1L)}, 7000, 122880
@@ -5116,7 +5138,7 @@ public class ImpactCore implements Runnable {
 		RA.addDisassemblerRecipe(
                 GT_ItemList.Solar_ZPM.get(1),
 				new ItemStack[]{ItemList.Cover_SolarPanel_ZPM.get(1L), ItemList.Robot_Arm_ZPM.get(1L),
-						ItemList.Large_Fluid_Cell_Osmium.get(1L), ItemList.Sensor_UV.get(1L),
+						ItemList.Large_Fluid_Cell_Osmium.get(1L), ItemList.Sensor_ZPM.get(1L),
 						ItemList.Circuit_Crystalmainframe.get(16L),
 						GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Sunnarium, 10),
 						ItemList.Battery_Buffer_2by2_ZPM.get(1L)}, 8000, 500000
@@ -5124,10 +5146,26 @@ public class ImpactCore implements Runnable {
 		RA.addDisassemblerRecipe(
                 GT_ItemList.Solar_UV.get(1),
 				new ItemStack[]{ItemList.Cover_SolarPanel_UV.get(1L), ItemList.Robot_Arm_UV.get(1L),
-						ItemList.Large_Fluid_Cell_Neutronium.get(1L), ItemList.Sensor_UHV.get(1L),
+						ItemList.Large_Fluid_Cell_Neutronium.get(1L), ItemList.Sensor_UV.get(1L),
 						ItemList.Circuit_Wetwaremainframe.get(18),
 						GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Sunnarium, 10),
 						ItemList.Battery_Buffer_2by2_UV.get(1L)}, 10000, 500000
+		);
+		RA.addDisassemblerRecipe(
+				GT_ItemList.Solar_UHV.get(1),
+				new ItemStack[]{ItemList.Cover_SolarPanel_UHV.get(1L), ItemList.Robot_Arm_UHV.get(1L),
+						Blockstack(FluidTankBlock, 1, 4), ItemList.Sensor_UHV.get(1L),
+						ItemList.Circuit_Biomainframe.get(20),
+						GT_OreDictUnificator.get(OrePrefixes.plateQuadruple, Materials.Sunnarium, 10),
+						ItemList.Battery_Buffer_2by2_MAX.get(1L)}, 12000, 500000
+		);
+		RA.addDisassemblerRecipe(
+				GT_ItemList.Solar_UEV.get(1),
+				new ItemStack[]{ItemList.Cover_SolarPanel_UEV.get(1L), ItemList.Robot_Arm_UEV.get(1L),
+						Blockstack(FluidTankBlock, 1, 5), ItemList.Sensor_UEV.get(1L),
+						ItemList.Circuit_Nano.get(22),
+						GT_OreDictUnificator.get(OrePrefixes.plateQuintuple, Materials.Sunnarium, 10),
+						ItemList.Battery_Buffer_2by2_UEV.get(1L)}, 14000, 500000
 		);
 		
 		//LapotronicCapacitorIV
