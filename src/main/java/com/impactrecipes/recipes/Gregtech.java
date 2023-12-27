@@ -1190,6 +1190,12 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.cell, Materials.Empty, 1L),
                 24 * 20, 2
         );
+		
+		// --- Dark Ash
+		RA.addMixerRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Carbon, 1L),
+                GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Ash, 1L), GT_Utility.getIntegratedCircuit(1), GT_Values.NI, GT_Values.NF,
+                GT_Values.NF, GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DarkAsh, 1L), 200, 7);
+
     }
 
     private void fusion() {
