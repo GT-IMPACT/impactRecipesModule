@@ -6368,10 +6368,9 @@ public class ImpactCore implements Runnable {
 						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
 		// --- Engraver Casing
 		RA.addArcFurnaceRecipe(GT_ItemList.EngraverCasing.get(1),
-				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Duranium, 3),
+				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Duraluminium, 3),
 						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Zamak, 1),
-						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1),
-						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSE, 1)}, null, 240, 96);
+						GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.HSSG, 1)}, null, 240, 96);
 		// --- Assembler Casing
 		RA.addArcFurnaceRecipe(GT_ItemList.AssemblerCasing.get(1),
 				new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Nitinol, 3),
