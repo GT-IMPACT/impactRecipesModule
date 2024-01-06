@@ -30,6 +30,7 @@ public class LaserEngraver implements IOreRecipeRegistrator {
                 RA.addLaserEngraverRecipe(ItemList.EnergyCrystal.get(1L), GT_Utility.copyAmount(0L, aStack), GT_ItemList.EngravedEnergyChip.get(1L), 600, 4100, true);
                 RA.addLaserEngraverRecipe(CoreItems2.getRecipe(154, 1), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("OpenComputers", "item", 16L, 24), 600, 120, false);
                 RA.addLaserEngraverRecipe(GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 5), GT_Utility.copyAmount(0L, aStack), GT_ModHandler.getModItem("ProjRed|Core", "projectred.core.part", 1L, 6), 500, 30, false);
+                RA.addLaserEngraverRecipe(GT_ModHandler.getModItem("SGCraft", "sgControllerCrystal", 1L), GT_Utility.copyAmount(0L, aStack), ItemList.Circuit_Parts_SGController.get(3L), 1000, 30000000, true);
 
                 break;
             case "craftingLensGreen":

@@ -68,6 +68,7 @@ public class Gregtech implements Runnable {
 		wormhole();
         implosionCompressor();
         fluidExtractor();
+        chemical();
     }
 
     private void removeGT_WTF_CHECK_GT_CODE() {
@@ -1328,6 +1329,10 @@ public class Gregtech implements Runnable {
                 Materials.SodiumPotassium.getFluid(3000L), GT_Values.NF);
         RA.addFluidCannerRecipe(CoreItems2.getRecipe(145, 1), ItemList.Reactor_Coolant_NaK_6.get(1L),
                 Materials.SodiumPotassium.getFluid(6000L), GT_Values.NF);
+
+        RA.addFluidCannerRecipe(ItemList.NaquaBoardEmpty.get(1L),
+                ItemList.NaquaBoardFull.get(1L), Materials.FluidNaquadahFuel.getFluid(2000L),
+                GT_Values.NF);
     }
 
     private void electrolyzer() {
@@ -4103,6 +4108,17 @@ public class Gregtech implements Runnable {
                         Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Biowarecomputer.get(2L), 400,
                         2457600, true);
 
+                //4
+                RA.addCircuitAssemblerSpaceRecipe(
+                        new ItemStack[]{ItemList.NaquaBoardFull.get(1L),
+                                ItemList.Circuit_Chip_MCrystalCPU.get(1L),
+                                ItemList.Circuit_Parts_CapacitorXSMD.get(16L),
+                                ItemList.Circuit_Parts_DiodeXSMD.get(16L),
+                                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Naquadah, 24),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CinobiteA243, 16)},
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Naquaprocessor.get(2L), 400,
+                614400, true);
+
                 // --- UHV
                 //1
                 RA.addCircuitAssemblerSpaceRecipe(
@@ -4112,6 +4128,27 @@ public class Gregtech implements Runnable {
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Neutronium, 64)},
                         Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Wetwaremainframe.get(1), 50,
                         32000000, true);
+
+                //4
+                RA.addCircuitAssemblerSpaceRecipe(
+                         new ItemStack[]{ItemList.Circuit_Chip_BarnardaCPU.get(1L),
+                                 ItemList.Circuit_Chip_SoC5.get(1L), ItemList.Circuit_Chip_NanoCPU.get(2L),
+                                 ItemList.Circuit_Parts_CapacitorXSMD.get(8L),
+                                 ItemList.Circuit_Parts_TransistorXSMD.get(8L),
+                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.BlackPlutonium, 16)},
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Xenoprocessor.get(2L), 400,
+                        8000000, true);
+
+                // --- UEV
+                //4
+                RA.addCircuitAssemblerSpaceRecipe(
+                        new ItemStack[]{ItemList.Circuit_Chip_SGCPU.get(1L),
+                                ItemList.Circuit_Parts_SGController.get(1L), ItemList.Circuit_Chip_SoC6.get(8L),
+                                ItemList.Circuit_Parts_CapacitorXSMD.get(16L),
+                                ItemList.Circuit_Parts_TransistorXSMD.get(16L),
+                                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.DraconiumAwakened, 16)},
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Cosmicprocessor.get(2L), 600,
+                        30000000, true);
 
                 RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Plastic_Advanced.get(1),
@@ -4170,8 +4207,8 @@ public class Gregtech implements Runnable {
                 //Crystal Board
                 RA.addCircuitAssemblerRecipe(new ItemStack[]{ItemList.Circuit_Board_Bio.get(32L),
                                 GT_OreDictUnificator.get(OrePrefixes.pipeTiny, Materials.DraconiumAwakened, 32),
-                                ItemList.Electric_Pump_UHV.get(1L), ItemList.Sensor_ZPM.get(2L),
-                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Infinite, 1L),
+                                ItemList.Electric_Pump_UEV.get(1L), ItemList.Sensor_UEV.get(2L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Nano, 1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Oriharukon, 64)},
                         Materials.FermentedAlienBiomass.getFluid(16000L), ItemList.Circuit_Board_Crystal.get(32L),
                         1400, 2000000, true);
@@ -4321,5 +4358,10 @@ public class Gregtech implements Runnable {
         RA.addFluidExtractionRecipe(GT_OreDictUnificator.get(OrePrefixes.gem, Materials.CokeCoal, 1L),
                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Ash, 1L),
                 Materials.Tar.getFluid(100L), 2000, 30, 12);
+    }
+
+    private void chemical() {
+        RA.addChemicalRecipe(ItemList.Circuit_Chip_Biocell.get(32), CoreItems.getRecipe(35, 1), Materials.EnrichedBacterialSludge.getFluid(10000L), Materials.BacterialSludge.getFluid(10000L), ItemList.Circuit_Chip_Barnardacell.get(32), GT_Values.NI,1600, 2000000);
+
     }
 }

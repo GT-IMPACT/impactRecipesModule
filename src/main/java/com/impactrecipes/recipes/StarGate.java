@@ -46,7 +46,7 @@ public class StarGate implements Runnable {
                 GT_ModHandler.getModItem("SGCraft", "stargateRing", 4L, 0),
                 GT_ModHandler.getModItem("SGCraft", "stargateRing", 1L, 1), ItemList.Emitter_UV.get(1L),
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Quantum, 1),
-                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quantum, 32)
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Infinity, 32)
         }, GT_ModHandler.getModItem("SGCraft", "stargateBase", 1L, 0), null, 100 * 20, 32000000);
 
         //Stargate Ring Block
@@ -54,7 +54,7 @@ public class StarGate implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.block, Materials.NaquadahAlloy, 8),
                 CoreItems2.getRecipe(147, 8), CoreItems2.getRecipe(148, 6), CoreItems2.getRecipe(149, 3),
                 ItemList.Field_Generator_UEV.get(1L),
-                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quantum, 16)
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Infinity, 16)
         }, GT_ModHandler.getModItem("SGCraft", "stargateRing", 1L, 0), null, 50 * 20, 32000000);
 
         //Stargate Chevron Block
@@ -64,7 +64,7 @@ public class StarGate implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Nano, 4),
                 GT_ModHandler.getModItem("SGCraft", "sgChevronUpgrade", 1L),
                 GT_ModHandler.getModItem("SGCraft", "stargateRing", 1L),
-                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quantum, 16)
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Infinity, 16)
         }, GT_ModHandler.getModItem("SGCraft", "stargateRing", 1L, 1), null, 50 * 20, 32000000);
 
         //IC2 Stargate Power Unit
@@ -74,7 +74,7 @@ public class StarGate implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Piko, 4),
                 GT_ModHandler.getModItem("SGCraft", "ic2Capacitor", 4L),
                 GT_ModHandler.getModItem("SGCraft", "stargateRing", 1L, 0),
-                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quantum, 32)
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Infinity, 32)
         }, GT_ModHandler.getModItem("SGCraft", "ic2PowerUnit", 1L, 0), null, 100 * 20, 32000000);
 
         //OC Stargate Interface

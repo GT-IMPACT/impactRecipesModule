@@ -4,6 +4,7 @@ import com.github.technus.tectech.recipe.TT_recipeAdder;
 import com.github.technus.tectech.thing.CustomItemList;
 import com.impact.common.item.Core_Items2;
 import com.impact.mods.gregtech.GT_ItemList;
+import gregtech.api.GregTech_API;
 import gregtech.api.enums.*;
 import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
@@ -374,14 +375,25 @@ public class TecTech implements Runnable {
 
         //UHV Circuit
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Wetwaresupercomputer.get(1L),
-                24000, 64, 50000, 4, new ItemStack[]{
+                24000, 64, 50000, 4, new Object[]{
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 2),
                         ItemList.Circuit_Wetwaresupercomputer.get(2L),
                         ItemList.ZPM_Coil.get(16L),
-                        ItemList.Circuit_Parts_CapacitorASMD.get(32L),
-                        ItemList.Circuit_Parts_ResistorASMD.get(32L),
-                        ItemList.Circuit_Parts_TransistorASMD.get(32L),
-                        ItemList.Circuit_Parts_DiodeASMD.get(32L),
+                        new ItemStack[]{ItemList.Circuit_Parts_CapacitorASMD.get(32, new Object() {
+                        }), ItemList.Circuit_Parts_CapacitorXSMD.get(8, new Object() {
+                        })},
+                        new ItemStack[]{ItemList.Circuit_Parts_ResistorASMD.get(32, new Object() {
+                        }), ItemList.Circuit_Parts_ResistorXSMD.get(8, new Object() {
+                        })},
+                        new ItemStack[]{ItemList.Circuit_Parts_TransistorASMD.get(32, new Object() {
+                        }), ItemList.Circuit_Parts_TransistorXSMD.get(8, new Object() {
+                        })},
+                        new ItemStack[]{ItemList.Circuit_Parts_DiodeASMD.get(32, new Object() {
+                        }), ItemList.Circuit_Parts_DiodeXSMD.get(8, new Object() {
+                        })},
+                        new ItemStack[]{ItemList.Circuit_Parts_InductorASMD.get(32, new Object() {
+                        }), ItemList.Circuit_Parts_InductorXSMD.get(8, new Object() {
+                        })},
                         ItemList.Circuit_Chip_Ram.get(48L),
                         GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorZPM, 64L),
                         GT_OreDictUnificator.get(OrePrefixes.foil, (Materials.Silicone), 64L),
@@ -394,13 +406,24 @@ public class TecTech implements Runnable {
 
         //Bio Chips
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Biowarecomputer.get(1L),
-                48000, 128, 500000, 8, new ItemStack[]{
+                48000, 128, 500000, 8, new Object[]{
                         ItemList.Circuit_Board_Bio_Ultra.get(2L),
                         ItemList.Circuit_Biowarecomputer.get(2L),
-                        ItemList.Circuit_Parts_TransistorASMD.get(16L),
-                        ItemList.Circuit_Parts_ResistorASMD.get(16L),
-                        ItemList.Circuit_Parts_CapacitorASMD.get(16L),
-                        ItemList.Circuit_Parts_DiodeASMD.get(48L),
+                        new ItemStack[]{ItemList.Circuit_Parts_TransistorASMD.get(16, new Object() {
+                        }), ItemList.Circuit_Parts_TransistorXSMD.get(4, new Object() {
+                        })},
+                        new ItemStack[]{ItemList.Circuit_Parts_ResistorASMD.get(16, new Object() {
+                        }), ItemList.Circuit_Parts_ResistorXSMD.get(4, new Object() {
+                        })},
+                        new ItemStack[]{ItemList.Circuit_Parts_CapacitorASMD.get(16, new Object() {
+                        }), ItemList.Circuit_Parts_CapacitorXSMD.get(4, new Object() {
+                        })},
+                        new ItemStack[]{ItemList.Circuit_Parts_DiodeASMD.get(16, new Object() {
+                        }), ItemList.Circuit_Parts_DiodeXSMD.get(4, new Object() {
+                        })},
+                        new ItemStack[]{ItemList.Circuit_Parts_InductorASMD.get(16, new Object() {
+                        }), ItemList.Circuit_Parts_InductorXSMD.get(4, new Object() {
+                        })},
                         ItemList.Circuit_Chip_NOR.get(32L),
                         ItemList.Circuit_Chip_Ram.get(64L),
                         GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 32L),
@@ -413,14 +436,25 @@ public class TecTech implements Runnable {
                 ItemList.Circuit_Biowaresupercomputer.get(1L), 4000, 500000);
 
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Biowaresupercomputer.get(1L),
-                96000, 256, 1000000, 16, new ItemStack[]{
+                96000, 256, 1000000, 16, new Object[]{
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 4L),
                         ItemList.Circuit_Biowaresupercomputer.get(2L),
                         ItemList.UV_Coil.get(16L),
-                        ItemList.Circuit_Parts_CapacitorASMD.get(64L),
-                        ItemList.Circuit_Parts_ResistorASMD.get(64L),
-                        ItemList.Circuit_Parts_TransistorASMD.get(64L),
-                        ItemList.Circuit_Parts_DiodeASMD.get(64L),
+                        new ItemStack[]{ItemList.Circuit_Parts_CapacitorASMD.get(64, new Object() {
+                        }), ItemList.Circuit_Parts_CapacitorXSMD.get(16, new Object() {
+                        })},
+                        new ItemStack[]{ItemList.Circuit_Parts_ResistorASMD.get(64, new Object() {
+                        }), ItemList.Circuit_Parts_ResistorXSMD.get(16, new Object() {
+                        })},
+                        new ItemStack[]{ItemList.Circuit_Parts_TransistorASMD.get(64, new Object() {
+                        }), ItemList.Circuit_Parts_TransistorXSMD.get(16, new Object() {
+                        })},
+                        new ItemStack[]{ItemList.Circuit_Parts_DiodeASMD.get(64, new Object() {
+                        }), ItemList.Circuit_Parts_DiodeXSMD.get(16, new Object() {
+                        })},
+                        new ItemStack[]{ItemList.Circuit_Parts_InductorASMD.get(64, new Object() {
+                        }), ItemList.Circuit_Parts_InductorXSMD.get(16, new Object() {
+                        })},
                         ItemList.Circuit_Chip_Ram.get(64L),
                         GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Superconductor, 64),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64),
@@ -432,68 +466,253 @@ public class TecTech implements Runnable {
                 },
                 ItemList.Circuit_Biomainframe.get(1L), 6000, 2000000);
 
-        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Biomainframe.get(1L),
-                192000, 512, 2000000, 32, new ItemStack[]{
-                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 8),
-                        ItemList.Circuit_Biomainframe.get(2L),
-                        ItemList.Circuit_Parts_CapacitorASMD.get(64L),
-                        ItemList.Circuit_Parts_ResistorASMD.get(64L),
-                        ItemList.Circuit_Parts_TransistorASMD.get(64L),
-                        ItemList.Circuit_Parts_DiodeASMD.get(64L),
-                        ItemList.Circuit_Chip_Ram.get(64L),
-                        ItemList.Circuit_Chip_NPIC.get(64L),
-                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Diamericiumtitanium, 64),
-                        GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.Superconductor, 64),
+
+        // --- Portable Naquadah Reactor
+        TT_recipeAdder.addResearchableAssemblylineRecipe(
+                ItemList.Circuit_Biomainframe.get(1L), 48000, 64, 800000, 8,
+                new ItemStack[]{
+                        ItemList.Field_Generator_UHV.get(1L),
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Energy, 2L),
+                        CoreItems2.getRecipe(163, 6),
+                        GT_ModHandler.getModItem("IC2", "blockAlloyGlass", 8L, 0),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Superconductor, 6),
+                        GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.Neutronium, 6),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.ElectrumFlux, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.NaquadahAlloy, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSG, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.screw, Materials.HSSE, 16),
+                },
+                new FluidStack[]{
+                        Materials.SolderingAlloy.getMolten(1152L),
+                        Materials.SuperCoolant.getFluid(10000),
+                },
+                ItemList.NaquaBoardEmpty.get(32), 300, 2000000);
+
+        // --- Naqua
+        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Naquaprocessor.get(1L),
+                384000, 512, 4000000, 32, new Object[]{
+                        //GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 8),
+                        ItemList.Circuit_Naquaprocessor.get(2L),
+                        ItemList.Circuit_Parts_InductorXSMD.get(16L),
+                        ItemList.Circuit_Parts_CapacitorXSMD.get(16L),
+                        ItemList.Circuit_Parts_ResistorXSMD.get(24L),
+                        ItemList.Circuit_Chip_NOR.get(32L),
+                        ItemList.Circuit_Chip_SoC2.get(64L),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Naquadah, 24),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64)
+                }, new FluidStack[]{
+                        Materials.SolderingAlloy.getMolten(2880L),
+                        Materials.Naquadria.getMolten(2880L),
+                        Materials.SuperCoolant.getFluid(20000),
+                        Materials.HyperFuelI.getFluid(1000)
+                },
+                ItemList.Circuit_Naquacomputer.get(1L), 4000, 2000000);
+        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Naquacomputer.get(1L),
+                384000, 512, 4000000, 32, new Object[]{
+                        //GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 8),
+                        ItemList.Circuit_Naquacomputer.get(2L),
+                        ItemList.Circuit_Parts_CapacitorXSMD.get(24L),
+                        ItemList.Circuit_Parts_ResistorXSMD.get(24L),
+                        ItemList.Circuit_Parts_TransistorXSMD.get(24L),
+                        ItemList.Circuit_Parts_DiodeXSMD.get(24L),
+                        ItemList.Circuit_Chip_NOR.get(64L),
+                        ItemList.Circuit_Chip_SoC2.get(64L),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Naquadah, 32),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64),
                         GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Polybenzimidazole, 64)
                 }, new FluidStack[]{
-                        Materials.SolderingAlloy.getMolten(4032L),
-                        Materials.Naquadria.getMolten(4032L),
-                        new FluidStack(FluidRegistry.getFluid("ic2coolant"), 20000),
+                        Materials.SolderingAlloy.getMolten(2880L),
+                        Materials.Naquadria.getMolten(2880L),
+                        Materials.SuperCoolant.getFluid(20000),
+                        Materials.HyperFuelI.getFluid(1000)
+                },
+                ItemList.Circuit_Naquasupercomputer.get(1L), 4000, 2000000);
+        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Naquasupercomputer.get(1L),
+                768000, 1024, 8000000, 64, new Object[]{
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 8),
+                        ItemList.Circuit_Naquasupercomputer.get(2L),
+                        ItemList.Circuit_Parts_CapacitorXSMD.get(32L),
+                        ItemList.Circuit_Parts_ResistorXSMD.get(32L),
+                        ItemList.Circuit_Parts_TransistorXSMD.get(32L),
+                        ItemList.Circuit_Parts_DiodeXSMD.get(32L),
+                        ItemList.Circuit_Parts_InductorXSMD.get(32L),
+                        ItemList.Circuit_Chip_Ram.get(64L),
+                        ItemList.Circuit_Chip_NPIC.get(64L),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Neutronium, 64),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorUV, 64),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Polybenzimidazole, 64)
+                }, new FluidStack[]{
+                        Materials.SolderingAlloy.getMolten(5760L),
+                        Materials.Naquadria.getMolten(5760L),
+                        Materials.SuperCoolant.getFluid(40000),
                         Materials.HyperFuelI.getFluid(2000)
                 },
                 ItemList.Circuit_Nano.get(1L), 8000, 8000000);
 
-        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Chip_Pico.get(1L),
-                384000, 1024, 4000000, 64, new ItemStack[]{
-                        ItemList.Circuit_Board_Bio_Ultra.get(1L),
-                        ItemList.Circuit_Chip_Pico.get(4L),
-                        ItemList.Circuit_Nano.get(2L),
-                        ItemList.Circuit_Parts_TransistorASMD.get(64L),
-                        ItemList.Circuit_Parts_ResistorASMD.get(64L),
-                        ItemList.Circuit_Parts_CapacitorASMD.get(64L),
-                        ItemList.Circuit_Parts_DiodeASMD.get(64L),
-                        ItemList.Circuit_Chip_PPIC.get(64L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.NiobiumTitanium, 16),
-                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Osmium, 32),
-                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Neutronium, 16),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Lanthanum, 64)
+        // --- Barnarda Processing Unit
+        TT_recipeAdder.addResearchableAssemblylineRecipe(
+                ItemList.Circuit_Nano.get(1L), 64000, 64, 1000000, 8,
+                new ItemStack[]{
+                        ItemList.Circuit_Chip_BioCPU.get(1L),
+                        ItemList.Circuit_Chip_Barnardacell.get(16L),
+                        ItemList.Circuit_Parts_Reinforced_Glass_Tube.get(16L),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeTiny, Materials.Polybenzimidazole, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Draconium, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CinobiteA243, 32),
                 }, new FluidStack[]{
-                        Materials.SolderingAlloy.getMolten(4032L),
-                        Materials.Osmium.getMolten(1152L),
+                        Materials.BioMediumSterilized.getFluid(1000),
+                        Materials.Radon.getGas(1000L),
+                        new FluidStack(FluidRegistry.getFluid("ic2coolant"), 2000),
+                }, ItemList.Circuit_Chip_BarnardaCPU.get(1L), 800, 2000000);
+
+        // --- Xeno
+        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Xenoprocessor.get(1L),
+                96000, 256, 1000000, 16, new ItemStack[]{
+                        ItemList.Circuit_Board_Crystal_Extreme.get(2L),
+                        ItemList.Circuit_Xenoprocessor.get(2L),
+                        ItemList.Circuit_Parts_InductorXSMD.get(12),
+                        ItemList.Circuit_Parts_CapacitorXSMD.get(12),
+                        ItemList.Circuit_Parts_ResistorXSMD.get(12),
+                        ItemList.Circuit_Chip_PPIC.get(16),
+                        ItemList.Circuit_Chip_SoC5.get(16),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Draconium, 32),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64),
+                }, new FluidStack[]{
+                        Materials.SolderingAlloy.getMolten(1440L),
+                        Materials.BlackPlutonium.getMolten(720L),
+                        Materials.SuperCoolant.getFluid(10000),
+                        Materials.HyperFuelII.getFluid(500)
+                },
+                ItemList.Circuit_Xenocomputer.get(1L), 5000, 8000000);
+
+        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Xenocomputer.get(1L),
+                192000, 512, 2000000, 32, new ItemStack[]{
+                        ItemList.Circuit_Board_Crystal_Extreme.get(2L),
+                        ItemList.Circuit_Xenocomputer.get(2L),
+                        ItemList.Circuit_Parts_CapacitorXSMD.get(24),
+                        ItemList.Circuit_Parts_ResistorXSMD.get(24),
+                        ItemList.Circuit_Parts_TransistorXSMD.get(24),
+                        ItemList.Circuit_Parts_DiodeXSMD.get(24),
+                        ItemList.Circuit_Chip_PPIC.get(32),
+                        ItemList.Circuit_Chip_SoC5.get(32),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Draconium, 32),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PerroxPolymer, 64)
+                }, new FluidStack[]{
+                        Materials.SolderingAlloy.getMolten(2880L),
+                        Materials.BlackPlutonium.getMolten(1440L),
+                        Materials.SuperCoolant.getFluid(20000),
+                        Materials.HyperFuelII.getFluid(1000)
+                },
+                ItemList.Circuit_Xenosupercomputer.get(1L), 5000, 8000000);
+        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Xenosupercomputer.get(1L),
+                384000, 1024, 4000000, 64, new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials. CosmicNeutronium, 8),
+                        //ItemList.Circuit_Board_Bio_Ultra.get(1L),
+                        ItemList.Circuit_Xenosupercomputer.get(2L),
+                        ItemList.Circuit_Parts_CapacitorXSMD.get(48L),
+                        ItemList.Circuit_Parts_ResistorXSMD.get(48L),
+                        ItemList.Circuit_Parts_TransistorXSMD.get(48L),
+                        ItemList.Circuit_Parts_DiodeXSMD.get(48L),
+                        ItemList.Circuit_Parts_InductorXSMD.get(48L),
+                        ItemList.Circuit_Chip_PPIC.get(64L),
+                        ItemList.Circuit_Chip_SoC5.get(64L),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Quantium, 64),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.Superconductor, 64),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PerroxPolymer, 64)
+                }, new FluidStack[]{
+                        Materials.SolderingAlloy.getMolten(11520L),
+                        Materials.BlackPlutonium.getMolten(5760L),
+                        Materials.SuperCoolant.getFluid(80000),
                         Materials.HyperFuelII.getFluid(4000)
                 },
-                ItemList.Circuit_Piko.get(1L), 10000, 8000000);
+                ItemList.Circuit_Piko.get(1L), 10000, 32000000);
 
-        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Piko.get(1L),
-                720000, 2048, 8000000, 128, new ItemStack[]{
-                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Neutronium, 16),
-                        ItemList.Circuit_Piko.get(8L),
-                        ItemList.Circuit_Parts_CapacitorASMD.get(64L),
-                        ItemList.Circuit_Parts_DiodeASMD.get(64L),
-                        ItemList.Circuit_Parts_TransistorASMD.get(64L),
-                        ItemList.Circuit_Parts_ResistorASMD.get(64L),
-                        ItemList.Circuit_Chip_QPIC.get(64L),
-                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.NiobiumTitanium, 64),
-                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Indium, 64),
-                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Neutronium, 8),
-                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Lanthanum, 64)
+        // --- Chevron Processing Unit
+        TT_recipeAdder.addResearchableAssemblylineRecipe(
+                ItemList.Circuit_Piko.get(1L), 128000, 128, 8000000, 32,
+                new ItemStack[]{
+                        CoreItems2.getRecipe(147, 1),
+                        CoreItems2.getRecipe(149, 3),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Quantum, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Phoenixite, 8),
+                        ItemList.Circuit_Chip_SoC6.get(16),
+                        ItemList.Circuit_Chip_NanoCPU.get(16),
+                        ItemList.Circuit_Chip_Ram.get(16),
+                        ItemList.Circuit_Chip_NOR.get(16),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64),
+                        GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Lafium, 32),
                 }, new FluidStack[]{
-                        Materials.SolderingAlloy.getMolten(4032L),
-                        Materials.Osmium.getMolten(2304L),
+                        Materials.SolderingAlloy.getMolten(5760L),
+                        Materials.SuperCoolant.getFluid(10000),
+                }, ItemList.Circuit_Chip_SGCPU.get(16L), 800, 8000000);
+
+        // --- Cosmic
+        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Cosmicprocessor.get(1L),
+                360000, 1024, 8000000, 64, new ItemStack[]{
+                        CoreItems2.getRecipe(148, 2),
+                        ItemList.Circuit_Cosmicprocessor.get(2L),
+                        ItemList.Circuit_Parts_InductorXSMD.get(32),
+                        ItemList.Circuit_Parts_CapacitorXSMD.get(32),
+                        ItemList.Circuit_Parts_ResistorXSMD.get(32),
+                        ItemList.Circuit_Chip_QPIC.get(16),
+                        ItemList.Circuit_Chip_SoC6.get(16),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.DraconiumAwakened, 16),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PerroxPolymer, 64)
+                }, new FluidStack[]{
+                        Materials.SolderingAlloy.getMolten(5760L),
+                        Materials.InfinityCatalyst.getMolten(1440L),
+                        Materials.SuperCoolant.getFluid(30000),
+                        Materials.HyperFuelIII.getFluid(2000)
+                },
+                ItemList.Circuit_Cosmiccomputer.get(1L), 8000, 8000000);
+        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Cosmiccomputer.get(1L),
+                720000, 2048, 16000000, 96, new ItemStack[]{
+                        CoreItems2.getRecipe(148, 4),
+                        ItemList.Circuit_Cosmiccomputer.get(2L),
+                        ItemList.Circuit_Parts_CapacitorXSMD.get(48),
+                        ItemList.Circuit_Parts_ResistorXSMD.get(48),
+                        ItemList.Circuit_Parts_TransistorXSMD.get(48),
+                        ItemList.Circuit_Parts_DiodeXSMD.get(48),
+                        ItemList.Circuit_Chip_QPIC.get(32),
+                        ItemList.Circuit_Chip_SoC6.get(32),
+                        GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.DraconiumAwakened, 32),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PerroxPolymer, 64)
+                }, new FluidStack[]{
+                        Materials.SolderingAlloy.getMolten(11520L),
+                        Materials.InfinityCatalyst.getMolten(2880L),
+                        Materials.SuperCoolant.getFluid(60000),
+                        Materials.HyperFuelIII.getFluid(4000)
+                },
+                ItemList.Circuit_Cosmicsupercomputer.get(1L), 10000, 30000000);
+        TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Cosmicsupercomputer.get(1L),
+                1440000, 4096, 30000000, 128, new ItemStack[]{
+                        CoreItems2.getRecipe(148, 8),
+                        ItemList.Circuit_Cosmicsupercomputer.get(2L),
+                        ItemList.Circuit_Parts_CapacitorXSMD.get(64L),
+                        ItemList.Circuit_Parts_ResistorXSMD.get(64L),
+                        ItemList.Circuit_Parts_TransistorXSMD.get(64L),
+                        ItemList.Circuit_Parts_DiodeXSMD.get(64L),
+                        ItemList.Circuit_Parts_InductorXSMD.get(64L),
+                        ItemList.Circuit_Chip_QPIC.get(64L),
+                        ItemList.Circuit_Chip_SoC6.get(64L),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.BlackPlutonium, 64),
+                        GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorUEV, 64),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicone, 64),
+                        GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PerroxPolymer, 64)
+                }, new FluidStack[]{
+                        Materials.SolderingAlloy.getMolten(23040L),
+                        Materials.InfinityCatalyst.getMolten(5760L),
+                        Materials.SuperCoolant.getFluid(120000),
                         Materials.HyperFuelIII.getFluid(8000)
                 },
-                ItemList.Circuit_Quantum.get(1L), 20000, 32000000);
+                ItemList.Circuit_Quantum.get(1L), 12000, 134000000);
+
 
         //Batteries
 
@@ -507,7 +726,9 @@ public class TecTech implements Runnable {
                                 ItemList.Field_Generator_UV.get(2),
                                 ItemList.Circuit_Wafer_HPIC.get(64),
                                 ItemList.Circuit_Wafer_HPIC.get(64),
-                                ItemList.Circuit_Parts_DiodeASMD.get(64),
+                                new ItemStack[]{ItemList.Circuit_Parts_DiodeASMD.get(64, new Object() {
+                                }), ItemList.Circuit_Parts_DiodeXSMD.get(16, new Object() {
+                                })},
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.Superconductor, 32),
                         }, new FluidStack[]{
                                 Materials.SolderingAlloy.getMolten(2880),
@@ -525,7 +746,7 @@ public class TecTech implements Runnable {
                         ItemList.Circuit_Wafer_UHPIC.get(64),
                         ItemList.Circuit_Wafer_UHPIC.get(64),
                         ItemList.Circuit_Wafer_SoC2.get(32),
-                        ItemList.Circuit_Parts_DiodeASMD.get(64),
+                        ItemList.Circuit_Parts_DiodeXSMD.get(32),
                         GT_OreDictUnificator.get(OrePrefixes.wireGt02, Materials.SuperconductorUEV, 64),
                 }, new FluidStack[]{
                         Materials.SolderingAlloy.getMolten(4032),
@@ -832,14 +1053,14 @@ public class TecTech implements Runnable {
         //Teleporter
         TT_recipeAdder.addResearchableAssemblylineRecipe(
                 GT_ModHandler.getModItem("SGCraft", "stargateController", 1L),
-                192000, 512, 2000000, 16, new Object[]{
+                512000, 2048, 30000000, 256, new Object[]{
                         ItemList.Hull_UEV.get(1),
                         GT_ModHandler.getModItem("SGCraft", "stargateBase", 1L),
                         GT_ModHandler.getModItem("SGCraft", "stargateRing", 8L),
                         GT_ModHandler.getModItem("SGCraft", "stargateRing", 4L, 1),
                         GT_ModHandler.getModItem("SGCraft", "ic2PowerUnit", 1L),
                         GT_OreDictUnificator.get(OrePrefixes.wireGt16, Materials.SuperconductorUEV, 16),
-                        new Object[]{OrePrefixes.circuit.get(Materials.Nano), 8L},
+                        new Object[]{OrePrefixes.circuit.get(Materials.Quantum), 8L},
                         ItemList.Sensor_UEV.get(16),
                         ItemList.Emitter_UEV.get(16),
                         ItemList.Field_Generator_UEV.get(4),
@@ -850,16 +1071,16 @@ public class TecTech implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.BlackPlutonium, 64)
                 },
                 new FluidStack[]{
-                        Materials.InfinityCatalyst.getMolten(2304L),
+                        Materials.Infinity.getMolten(2304L),
                         Materials.PerroxPolymer.getMolten(9216L),
                         Materials.Phoenixite.getMolten(9216L),
                         Materials.Americium.getPlasma(9216L)
                 },
-                ItemList.Teleporter.get(1L), 300 * 20, 8000000);
+                ItemList.Teleporter.get(1L), 300 * 20, 576000000);
 
         //Debug maintenance hatch
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Hatch_AutoMaintenance.get(1L),
-                2764800, 128, 500000, 6, new Object[]{
+                24000, 64, 500000, 6, new Object[]{
                         ItemList.Hatch_AutoMaintenance.get(1L),
                         ItemList.Robot_Arm_UV.get(1L),
                         ItemList.Electric_Pump_UV.get(1L),
