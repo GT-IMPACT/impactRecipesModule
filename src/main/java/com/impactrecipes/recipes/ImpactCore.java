@@ -3380,7 +3380,7 @@ public class ImpactCore implements Runnable {
 				Materials.Osmium.getMolten(288), CoreItems2.getRecipe(18, 1), 700, 262144
 		);
 		RA.addAssemblerRecipe(
-				new ItemStack[]{CoreItems2.getRecipe(13, 1), CoreItems2.getRecipe(79, 1),
+				new ItemStack[]{CoreItems2.getRecipe(13, 1), CoreItems2.getRecipe(210, 1),
 						CoreItems2.getRecipe(95, 1),
 						GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Pikyonium64B, 14)},
 				Materials.Neutronium.getMolten(288), CoreItems2.getRecipe(19, 1), 800, 1048576
@@ -3407,6 +3407,11 @@ public class ImpactCore implements Runnable {
 				new ItemStack[]{CoreItems2.getRecipe(88, 1), CoreItems2.getRecipe(173, 1),
 						CoreItems2.getRecipe(87, 1)}, Materials.Tritanium.getMolten(288L),
 				CoreItems2.getRecipe(89, 1), 1200, 7680
+		);
+		RA.addAssemblerRecipe(
+				new ItemStack[]{CoreItems2.getRecipe(89, 1), CoreItems2.getRecipe(79, 1),
+						CoreItems2.getRecipe(211, 1)}, Materials.Infuscolium.getMolten(288L),
+				CoreItems2.getRecipe(210, 1), 1400, 30720
 		);
 		
 		RA.addAssemblerRecipe(new ItemStack[]{GT_ItemList.packEarth.get(64L)},
