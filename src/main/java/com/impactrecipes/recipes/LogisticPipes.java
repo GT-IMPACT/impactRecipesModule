@@ -7,6 +7,7 @@ import gregtech.api.enums.*;
 import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
 import gregtech.api.util.GT_Utility;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
 import static gregtech.api.enums.GT_Values.RA;
@@ -192,6 +193,47 @@ public class LogisticPipes implements Runnable {
         // --- Logistics Disc
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemDisk", 1L), tBitMask, new Object[]{"PPP", "PDP", "PCP", 'P', OrePrefixes.plate.get(Materials.Carbon), 'C', OrePrefixes.circuit.get(Materials.Basic), 'D', GT_ModHandler.getModItem("OpenComputers", "item", 1L, 19)});
 
+        for (int i = 0; i <= 5; i++) {
+            // --- Sneaky Upgrade
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 0),
+                    new Object[]{"T  ", " B ", "   ", 'T', "craftingToolScrewdriver",
+                    'B', GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 1),
+                    new Object[]{" T ", " B ", "   ", 'T', "craftingToolScrewdriver",
+                            'B', GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 2),
+                    new Object[]{"  T", " B ", "   ", 'T', "craftingToolScrewdriver",
+                            'B', GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 3),
+                    new Object[]{"   ", " BT", "   ", 'T', "craftingToolScrewdriver",
+                            'B', GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 4),
+                    new Object[]{"   ", " B ", "  T", 'T', "craftingToolScrewdriver",
+                            'B', GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 5),
+                    new Object[]{"   ", " B ", " T ", 'T', "craftingToolScrewdriver",
+                            'B', GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, i)});
+
+            // --- Disconnection Upgrade
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 10),
+                    new Object[]{"T  ", " B ", "   ", 'T', "craftingToolScrewdriver",
+                            'B', GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 10+i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 11),
+                    new Object[]{" T ", " B ", "   ", 'T', "craftingToolScrewdriver",
+                            'B', GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 10+i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 12),
+                    new Object[]{"  T", " B ", "   ", 'T', "craftingToolScrewdriver",
+                            'B', GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 10+i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 13),
+                    new Object[]{"   ", " BT", "   ", 'T', "craftingToolScrewdriver",
+                            'B', GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 10+i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 14),
+                    new Object[]{"   ", " B ", "  T", 'T', "craftingToolScrewdriver",
+                            'B', GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 10+i)});
+            GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 15),
+                    new Object[]{"   ", " B ", " T ", 'T', "craftingToolScrewdriver",
+                            'B', GT_ModHandler.getModItem(LP, "item.itemUpgrade", 1L, 10+i)});
+        }
     }
 
     private void assembler() {
@@ -361,6 +403,81 @@ public class LogisticPipes implements Runnable {
                         ItemList.Conveyor_Module_MV.get(1), GT_Utility.getIntegratedCircuit(1)}, null,
                 GT_ModHandler.getModItem(LP, "item.PipeItemsRemoteOrdererLogistics", 4L, 0),
                 120, 120);
+
+        // --- Logistics Fluid Basic Pipe
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem(LP, "item.PipeItemsBasicTransport", 8L, 0),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Steel, 1L), ItemList.Electric_Pump_LV.get(1),
+                        GT_Utility.getIntegratedCircuit(1)}, null,
+                GT_ModHandler.getModItem(LP, "item.PipeFluidBasic", 8L, 0), 160,
+                30);
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem(LP, "item.PipeItemsBasicTransport", 16L, 0),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.StainlessSteel, 1L), ItemList.Electric_Pump_MV.get(1),
+                        GT_Utility.getIntegratedCircuit(1)}, null,
+                GT_ModHandler.getModItem(LP, "item.PipeFluidBasic", 16L, 0), 180,
+                120);
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem(LP, "item.PipeItemsBasicTransport", 32L, 0),
+                        GT_OreDictUnificator.get(OrePrefixes.pipeMedium, Materials.Titanium, 1L), ItemList.Electric_Pump_HV.get(1),
+                        GT_Utility.getIntegratedCircuit(1)}, null,
+                GT_ModHandler.getModItem(LP, "item.PipeFluidBasic", 32L, 0), 200,
+                480);
+        // --- Logistics Fluid Request Pipe
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem(LP, "item.PipeFluidBasic", 1L, 0),
+                        GT_ModHandler.getModItem(LP, "item.PipeItemsRequestLogistics", 1L, 0),
+                        ItemList.Large_Fluid_Cell_Steel.get(1),
+                        GT_Utility.getIntegratedCircuit(1)}, null,
+                GT_ModHandler.getModItem(LP, "item.PipeFluidRequestLogistics", 1L, 0), 100,
+                120);
+        // --- Logistics Fluid Satellite Pipe
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem(LP, "item.PipeFluidBasic", 1L, 0),
+                        GT_ModHandler.getModItem(LP, "item.PipeItemsSatelliteLogistics", 1L, 0),
+                        ItemList.Large_Fluid_Cell_Steel.get(1),
+                        GT_Utility.getIntegratedCircuit(1)}, null,
+                GT_ModHandler.getModItem(LP, "item.PipeFluidSatellite", 1L, 0), 100,
+                120);
+        // --- Logistics Fluid Provider Pipe
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem(LP, "item.PipeFluidBasic", 4L, 0),
+                        GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 500),
+                        ItemList.Large_Fluid_Cell_Steel.get(1),
+                        GT_Utility.getIntegratedCircuit(1)}, null,
+                GT_ModHandler.getModItem(LP, "item.PipeFluidProvider", 4L, 0), 120,
+                120);
+        // --- Logistics Fluid Supplier Pipe
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem(LP, "item.PipeFluidBasic", 4L, 0),
+                        GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 502),
+                        ItemList.Large_Fluid_Cell_Steel.get(1),
+                        GT_Utility.getIntegratedCircuit(1)}, null,
+                GT_ModHandler.getModItem(LP, "item.PipeFluidSupplierMk2", 4L, 0), 120,
+                120);
+        // --- Logistics Fluid Extractor Pipe
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem(LP, "item.PipeFluidBasic", 4L, 0),
+                        GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 3),
+                        ItemList.Large_Fluid_Cell_Steel.get(1),
+                        GT_Utility.getIntegratedCircuit(1)}, null,
+                GT_ModHandler.getModItem(LP, "item.PipeFluidExtractor", 4L, 0), 120,
+                120);
+        // --- Logistics Fluid Insertion Pipe
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem(LP, "item.PipeFluidBasic", 4L, 0),
+                        ItemList.Electric_Pump_MV.get(1), ItemList.Large_Fluid_Cell_Steel.get(1),
+                        GT_Utility.getIntegratedCircuit(1)}, null,
+                GT_ModHandler.getModItem(LP, "item.PipeFluidInsertion", 4L, 0), 120,
+                120);
+        // --- Logistics Fluid Container Supplier
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem(LP, "item.PipeFluidBasic", 4L, 0),
+                        ItemList.Robot_Arm_LV.get(1), ItemList.Large_Fluid_Cell_Steel.get(1),
+                        GT_Utility.getIntegratedCircuit(1)}, null,
+                GT_ModHandler.getModItem(LP, "item.PipeItemsFluidSupplier", 4L, 0), 100,
+                120);
+
         // --- Blank Module
         RA.addAssemblerRecipe(
                 new ItemStack[]{ItemList.Circuit_Board_Coated.get(1),
@@ -442,88 +559,215 @@ public class LogisticPipes implements Runnable {
                 //LP Upgrades
                 RA.addCircuitAssemblerRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Primitive, 1),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Tin, 4),
+                                GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Copper, 4)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                        GT_ModHandler.getModItem(LP, "item.logisticsParts", 4L, 4), 120, 30);
+
+                //LP Upgrades
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Tin, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2)},
                         Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 6), 120, 30);
                 RA.addCircuitAssemblerRecipe(
-                        new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Iron, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2)},
                         Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 7), 120, 30);
                 RA.addCircuitAssemblerRecipe(
-                        new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Electrum, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2)},
                         Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 20), 120, 30);
                 RA.addCircuitAssemblerRecipe(
-                        new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2)},
                         Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 16), 120, 30);
                 RA.addCircuitAssemblerRecipe(
-                        new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Gold, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2)},
                         Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 21), 120, 30);
                 RA.addCircuitAssemblerRecipe(
-                        new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.RedAlloy, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Electrum, 2)},
                         Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 23), 120, 30);
                 RA.addCircuitAssemblerRecipe(
-                        new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Gold, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Electrum, 2)},
                         Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 24), 120, 30);
                 RA.addCircuitAssemblerRecipe(
-                        new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Lapis, 2)},
                         Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 25), 120, 30);
                 RA.addCircuitAssemblerRecipe(
-                        new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.AnnealedCopper, 2)},
                         Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 30), 120, 30);
                 RA.addCircuitAssemblerRecipe(
-                        new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Bronze, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2)},
                         Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 41), 120, 30);
                 RA.addCircuitAssemblerRecipe(
-                        new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silver, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2)},
                         Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 42), 120, 30);
                 RA.addCircuitAssemblerRecipe(
-                        new ItemStack[]{ItemList.Circuit_Board_Coated_Basic.get(1L),
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
                                 ItemList.Circuit_Chip_Simple_SoC.get(1L),
                                 GT_OreDictUnificator.get(OrePrefixes.foil, Materials.RedAlloy, 1),
                                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Silver, 2)},
                         Materials.SolderingAlloy.getMolten(72L),
                         GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 26), 120, 30);
+
+                // --- Sneaky Updrade
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
+                                ItemList.Robot_Arm_LV.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Bronze, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2),
+                                GT_Utility.getIntegratedCircuit(1)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                        GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 0), 120, 30);
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
+                                ItemList.Robot_Arm_LV.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Bronze, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2),
+                                GT_Utility.getIntegratedCircuit(2)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                        GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 1), 120, 30);
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
+                                ItemList.Robot_Arm_LV.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Bronze, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2),
+                                GT_Utility.getIntegratedCircuit(3)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                        GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 2), 120, 30);
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
+                                ItemList.Robot_Arm_LV.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Bronze, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2),
+                                GT_Utility.getIntegratedCircuit(4)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                        GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 3), 120, 30);
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
+                                ItemList.Robot_Arm_LV.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Bronze, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2),
+                                GT_Utility.getIntegratedCircuit(5)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                        GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 4), 120, 30);
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
+                                ItemList.Robot_Arm_LV.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Bronze, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2),
+                                GT_Utility.getIntegratedCircuit(6)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                        GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 5), 120, 30);
+                // --- Disconnection Upgrade
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
+                                ItemList.Robot_Arm_LV.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2),
+                                GT_Utility.getIntegratedCircuit(1)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                        GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 10), 120, 30);
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
+                                ItemList.Robot_Arm_LV.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2),
+                                GT_Utility.getIntegratedCircuit(2)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                        GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 11), 120, 30);
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
+                                ItemList.Robot_Arm_LV.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2),
+                                GT_Utility.getIntegratedCircuit(3)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                        GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 12), 120, 30);
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
+                                ItemList.Robot_Arm_LV.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2),
+                                GT_Utility.getIntegratedCircuit(4)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                        GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 13), 120, 30);
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
+                                ItemList.Robot_Arm_LV.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2),
+                                GT_Utility.getIntegratedCircuit(5)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                        GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 14), 120, 30);
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 2L, 4),
+                                ItemList.Robot_Arm_LV.get(1L),
+                                GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Steel, 2),
+                                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedAlloy, 2),
+                                GT_Utility.getIntegratedCircuit(6)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                        GT_ModHandler.getModItem(LP, "item.itemUpgrade", 2L, 15), 120, 30);
+
+                // --- Fluid Crafting Upgrade
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 4L, 4),
+                                GT_ModHandler.getModItem(LP, "item.itemModule", 1L, 600),
+                                ItemList.Large_Fluid_Cell_Steel.get(1L),
+                                GT_Utility.getIntegratedCircuit(1)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                GT_ModHandler.getModItem(LP, "item.itemUpgrade", 4L, 22), 120, 30);
+
+                // --- Module Upgrade
+                RA.addCircuitAssemblerRecipe(
+                        new ItemStack[]{GT_ModHandler.getModItem(LP, "item.logisticsParts", 4L, 4),
+                                GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Primitive, 1),
+                                GT_ModHandler.getModItem("minecraft", "chest", 1L, 0),
+                                GT_Utility.getIntegratedCircuit(1)},
+                        Materials.SolderingAlloy.getMolten(72L),
+                        GT_ModHandler.getModItem(LP, "item.itemUpgrade", 4L, 44), 120, 30);
+
     }
 
     private void chemicalBathRecipe() {
