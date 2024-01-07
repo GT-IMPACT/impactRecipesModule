@@ -85,7 +85,7 @@ public class StarGate implements Runnable {
                 GT_ModHandler.getModItem("OpenComputers", "item", 16L, 102),
                 GT_ModHandler.getModItem("OpenComputers", "case3", 1L),
                 GT_ModHandler.getModItem("SGCraft", "stargateRing", 1L, 0),
-                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Quantum, 32)
+                GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Infinity, 32)
         }, GT_ModHandler.getModItem("SGCraft", "ocInterface", 1L, 0), null, 100 * 20, 32000000);
 
     }
