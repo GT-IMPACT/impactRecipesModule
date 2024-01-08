@@ -3,6 +3,7 @@ package com.impactrecipes.recipes;
 import com.cricketcraft.chisel.api.carving.CarvingUtils;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import team.chisel.carving.Carving;
 
@@ -137,7 +138,8 @@ public class ChiselGroup {
             // --- Extra Utilities
             name = "antiBlock";
             for (int i = 0; i < 16; i++) {
-                Carving.chisel.addVariation(name, GameRegistry.findBlock("ExtraUtilities", "greenscreen"), i, 0);
+                Block find = GameRegistry.findBlock("ExtraUtilities", "greenscreen");
+                if (find != null) Carving.chisel.addVariation(name, find, i, 0);
             }
         }
 
