@@ -1,6 +1,0 @@
-// Add your dependencies here
-
-dependencies {
-    implementation fileTree(dir: 'libRun/', include: '*.jar')
-    compileOnly fileTree(dir: 'libNotRun/', include: '*.jar')
-}
