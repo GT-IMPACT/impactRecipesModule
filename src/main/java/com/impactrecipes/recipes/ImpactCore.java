@@ -3790,7 +3790,7 @@ public class ImpactCore implements Runnable {
 
 		RA.addAssemblerRecipe(
 				new ItemStack[]{ItemList.Hatch_Input_Bus_LuV.get(1),
-						ItemList.Large_Fluid_Cell_Chrome.get(1),
+						ItemList.Large_Fluid_Cell_TungstenSteel.get(1),
 						GT_Utility.getIntegratedCircuit(1)}, null,
 				GT_ItemList.BusHatch_Input_LuV.get(1L), 480, 30720
 		);
