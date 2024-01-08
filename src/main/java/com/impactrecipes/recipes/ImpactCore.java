@@ -3771,7 +3771,28 @@ public class ImpactCore implements Runnable {
 				new ItemStack[]{ItemList.Hatch_Input_Bus_HV.get(1),
 						ItemList.Large_Fluid_Cell_Aluminium.get(1),
 						GT_Utility.getIntegratedCircuit(1)}, null,
-				GT_ItemList.BusHatch_Input.get(1L), 480, 480
+				GT_ItemList.BusHatch_Input_HV.get(1L), 480, 480
+		);
+
+		RA.addAssemblerRecipe(
+				new ItemStack[]{ItemList.Hatch_Input_Bus_EV.get(1),
+						ItemList.Large_Fluid_Cell_StainlessSteel.get(1),
+						GT_Utility.getIntegratedCircuit(1)}, null,
+				GT_ItemList.BusHatch_Input_EV.get(1L), 480, 1920
+		);
+
+		RA.addAssemblerRecipe(
+				new ItemStack[]{ItemList.Hatch_Input_Bus_IV.get(1),
+						ItemList.Large_Fluid_Cell_Titanium.get(1),
+						GT_Utility.getIntegratedCircuit(1)}, null,
+				GT_ItemList.BusHatch_Input_IV.get(1L), 480, 7680
+		);
+
+		RA.addAssemblerRecipe(
+				new ItemStack[]{ItemList.Hatch_Input_Bus_LuV.get(1),
+						ItemList.Large_Fluid_Cell_Chrome.get(1),
+						GT_Utility.getIntegratedCircuit(1)}, null,
+				GT_ItemList.BusHatch_Input_LuV.get(1L), 480, 30720
 		);
 
 		//Laser Dynamo IV-UV 256/t
