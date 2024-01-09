@@ -5,6 +5,7 @@ import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import team.chisel.carving.Carving;
 
 import static com.riciJak.Ztones.init.ModBlocks.*;
@@ -55,7 +56,8 @@ public class ChiselGroup {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("chisel", "glass"), i, 0);
         }
         for (int i = 0; i < 16; i++) {
-            Carving.chisel.addVariation(name, GameRegistry.findBlock("Impact|Architecture", "i_glass"), i, 0);
+            Block find = GameRegistry.findBlock("Impact|Architecture", "i_glass");
+            if (find != null) Carving.chisel.addVariation(name, find, i, 0);
         }
         for (int i = 0; i < 16; i++) {
             Carving.chisel.addVariation(name, glaxx, i, 0);
@@ -155,7 +157,8 @@ public class ChiselGroup {
         name = "concrete";
         Carving.chisel.addVariation(name, GameRegistry.findBlock("impact", "impact_util"), 2, 0);
         for (int i = 0; i < 16; i++) {
-            Carving.chisel.addVariation(name, GameRegistry.findBlock("Impact|Architecture", "i_concrete_block"), i, 0);
+            Block find = GameRegistry.findBlock("Impact|Architecture", "i_concrete_block");
+            if (find != null) Carving.chisel.addVariation(name, find, i, 0);
         }
         for (int i = 0; i < 16; i++) {
             Carving.chisel.addVariation(name, GameRegistry.findBlock("gregtech", "gt.blockconcretes"), i, 0);

@@ -23,7 +23,6 @@ dependencies {
     }
     api("space.impact:impact_vw:1.3.4:dev") {
         exclude("io.github.legacymoddingmc")
-        exclude("net.industrial-craft")
         isChanging = true
     }
 
