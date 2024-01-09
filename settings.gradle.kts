@@ -31,4 +31,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "VirtualWorld"
+rootProject.name = "RecipeModule"
