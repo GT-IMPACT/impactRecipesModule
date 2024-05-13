@@ -176,6 +176,13 @@ public class Ender_IO implements Runnable {
                         OrePrefixes.circuit.get(Materials.Basic), 'G',
                         GT_ModHandler.getModItem("OpenBlocks", "elevator", 1L), 'F',
                         ItemList.Field_Generator_LV});
+        // --- Vacuum Chest						
+        GT_ModHandler.addCraftingRecipe(new ItemStack(EnderIO.blockVacuumChest, 1, 0), tBitMask,
+                new Object[]{"PGP", "COC", "PFP", 'O', new ItemStack(EnderIO.itemMachinePart, 1, 0), 'P',
+                        OrePrefixes.plate.get(Materials.ElectricalSteel), 'C',
+                        OrePrefixes.circuit.get(Materials.Advanced), 'G',
+                        GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 4), 'F',
+                        ItemList.Field_Generator_HV});        
         // --- Painter
         GT_ModHandler.addCraftingRecipe(new ItemStack(EnderIO.blockPainter, 1, 0),
                 new Object[]{"PRP", "CMC", "LRL", 'R', OrePrefixes.rotor.get(Materials.Steel), 'P',
