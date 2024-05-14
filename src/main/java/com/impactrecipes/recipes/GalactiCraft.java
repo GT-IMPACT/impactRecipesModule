@@ -651,6 +651,30 @@ public class GalactiCraft implements Runnable {
     }
 
     private void assembler() {
+        // --- Nose Cone
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 1),
+                        ItemList.Sensor_HV.get(1),
+                        GT_ModHandler.getModItem("GalacticraftCore", "item.heavyPlating", 3L),
+                        GT_Utility.getIntegratedCircuit(10)}, Materials.StainlessSteel.getMolten(36),
+                GT_ModHandler.getModItem("GalacticraftCore", "item.noseCone", 1L), 50, 18);
+
+        // --- Fins 1
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("GalaxySpace", "item.CompressedPlates", 1L, 4),
+                        GT_ModHandler.getModItem("GalacticraftCore", "item.basicItem", 2L, 9),
+                        GT_ModHandler.getModItem("GalacticraftCore", "item.heavyPlating", 4L),
+                        GT_Utility.getIntegratedCircuit(1)}, Materials.StainlessSteel.getMolten(36),
+                GT_ModHandler.getModItem("GalacticraftCore", "item.rocketFins", 1L), 50, 18);
+
+        // --- Fins 2
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("GalacticraftMars", "item.null", 3L, 3),
+                        GT_ModHandler.getModItem("GalacticraftMars", "item.itemBasicAsteroids", 4L),
+                        GT_Utility.getIntegratedCircuit(1)}, Materials.TungstenSteel.getMolten(36),
+                GT_ModHandler.getModItem("GalacticraftMars", "item.itemBasicAsteroids", 1L, 2), 50, 18);
+
+        // ---  T1 Rocket + chest
         GT_Values.RA
                 .addAssemblerRecipe(GT_ModHandler.getModItem("GalacticraftCore", "item.spaceship", 1L),
                         GT_ModHandler.getModItem("chestup", "Blockchestup", 1L, 2),

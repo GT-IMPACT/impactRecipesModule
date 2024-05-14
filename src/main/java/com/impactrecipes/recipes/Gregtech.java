@@ -444,6 +444,13 @@ public class Gregtech implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1L),
                         GT_Utility.getIntegratedCircuit(2)}, null, ItemList.Casing_Gearbox_Steel.get(2L), 50, 12);
 
+        // --- Air Filter
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Steel, 4L),
+                        CoreItems2.getRecipe(51, 1),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1L),
+                        GT_Utility.getIntegratedCircuit(10)}, null, ItemList.Casing_AirFilter_Vent.get(2L), 50, 12);
+
     }
 
     private void wireAssemblerRecipe() {

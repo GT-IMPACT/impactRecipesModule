@@ -2923,7 +2923,8 @@ public class ImpactCore implements Runnable {
 				GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.StainlessSteel, 4),
 				GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 4),
 				GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedSteel, 8),
-				GT_OreDictUnificator.get(OrePrefixes.screw, Materials.BlueSteel, 8)
+				GT_OreDictUnificator.get(OrePrefixes.screw, Materials.BlueSteel, 8),
+				GT_Utility.getIntegratedCircuit(1)
 		}, null, GT_ItemList.Communication_Hatch_Transmitter.get(1L), 40 * 20, 480);
 		//Communication Receiver Hatch
 		RA.addAssemblerRecipe(new ItemStack[]{
@@ -2933,7 +2934,8 @@ public class ImpactCore implements Runnable {
 				GT_OreDictUnificator.get(OrePrefixes.stickLong, Materials.StainlessSteel, 4),
 				GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 4),
 				GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.RedSteel, 8),
-				GT_OreDictUnificator.get(OrePrefixes.screw, Materials.BlueSteel, 8)
+				GT_OreDictUnificator.get(OrePrefixes.screw, Materials.BlueSteel, 8),
+				GT_Utility.getIntegratedCircuit(1)
 		}, null, GT_ItemList.Communication_Hatch_Receiver.get(1L), 40 * 20, 480);
 		//Parallel Hatch 4P IN
 		RA.addAssemblerRecipe(
@@ -4192,10 +4194,42 @@ public class ImpactCore implements Runnable {
 				Materials.NiobiumTitanium.getMolten(9216),
 				GT_ItemList.EnergyMulti64_UEV.get(1), 3200, 8000000);
 
-				// --- Advanced Fluid Detector
-				RA.addAssemblerRecipe(new ItemStack(Blocks.heavy_weighted_pressure_plate, 1, 32767), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 1L), Materials.SolderingAlloy.getMolten(72L), GT_ModHandler.getModItem("impact", "impact_cover", 1), 600, 96);
-				// --- Advanced Energy Detector
-				RA.addAssemblerRecipe(GT_ModHandler.getIC2Item("ecMeter", 1L), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 1L), Materials.SolderingAlloy.getMolten(72L), GT_ModHandler.getModItem("impact", "impact_cover", 1, 1), 600, 96);
+		// --- Advanced Fluid Detector
+		RA.addAssemblerRecipe(new ItemStack(Blocks.heavy_weighted_pressure_plate, 1, 32767), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 1L), Materials.SolderingAlloy.getMolten(72L), GT_ModHandler.getModItem("impact", "impact_cover", 1), 600, 96);
+		// --- Advanced Energy Detector
+		RA.addAssemblerRecipe(GT_ModHandler.getIC2Item("ecMeter", 1L), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Birmabright, 1L), Materials.SolderingAlloy.getMolten(72L), GT_ModHandler.getModItem("impact", "impact_cover", 1, 1), 600, 96);
+
+		// --- Medium Fuel Canister
+		RA.addAssemblerRecipe(new ItemStack[]{
+						GT_ModHandler.getModItem("GalaxySpace", "item.Modules", 1L, 3),
+						CoreItems2.getRecipe(90, 1),
+						CoreItems2.getRecipe(96, 1)},
+				Materials.HastelloyC276.getMolten(72),
+				CoreItems2.getRecipe(MediumFuelCanister.getMetaID(), 1), 50, 12);
+		// --- Large Fuel Canister
+		RA.addAssemblerRecipe(new ItemStack[]{
+						CoreItems2.getRecipe(133, 1),
+						CoreItems2.getRecipe(92, 1),
+						CoreItems2.getRecipe(91, 1)},
+				Materials.Lafium.getMolten(72),
+				CoreItems2.getRecipe(LargeFuelCanister.getMetaID(), 1), 50, 12);
+		// --- Extra Large Fuel Canister
+		RA.addAssemblerRecipe(new ItemStack[]{
+						CoreItems2.getRecipe(134, 1),
+						CoreItems2.getRecipe(95, 1),
+						CoreItems2.getRecipe(94, 1)},
+				Materials.Neutronium.getMolten(72),
+				CoreItems2.getRecipe(ExtraLargeFuelCanister.getMetaID(), 1), 50, 12);
+
+		// --- Mining Hatch
+		RA.addAssemblerRecipe(new ItemStack[]{
+						GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Iron, 1),
+						GT_ModHandler.getModItem("minecraft", "chest", 1L),
+						GT_OreDictUnificator.get(OrePrefixes.gearGtSmall, Materials.Iron, 2),
+						GT_Utility.getIntegratedCircuit(3)},
+				Materials.Iron.getMolten(72),
+				GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14747), 50, 12);
+
 	}
 	
 	private void cutting() {

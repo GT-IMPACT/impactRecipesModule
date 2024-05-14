@@ -962,6 +962,13 @@ public class IC2 implements Runnable {
                 GT_Utility.getIntegratedCircuit(2),
                 GT_ModHandler.getModItem("IC2", "blockCrop", 16L), 150, 24);
 
+        // --- Heat Vent
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("minecraft", "iron_bars", 4),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Aluminium, 4),
+                        GT_Utility.getIntegratedCircuit(4)}, null,
+                GT_ModHandler.getModItem("IC2", "reactorVent", 1L, 1), 50, 12);
+
     }
 
     private void compactGens() {
