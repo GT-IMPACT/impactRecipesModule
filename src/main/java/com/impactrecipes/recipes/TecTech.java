@@ -529,7 +529,7 @@ public class TecTech implements Runnable {
                 ItemList.Circuit_Naquasupercomputer.get(1L), 4000, 2000000);
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Naquasupercomputer.get(1L),
                 768000, 1024, 8000000, 64, new Object[]{
-                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Phoenixite, 8),
                         ItemList.Circuit_Naquasupercomputer.get(2L),
                         ItemList.Circuit_Parts_CapacitorXSMD.get(32L),
                         ItemList.Circuit_Parts_ResistorXSMD.get(32L),
@@ -609,7 +609,7 @@ public class TecTech implements Runnable {
                 ItemList.Circuit_Xenosupercomputer.get(1L), 5000, 8000000);
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Xenosupercomputer.get(1L),
                 384000, 1024, 4000000, 64, new ItemStack[]{
-                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials. CosmicNeutronium, 8),
+                        GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials. DraconiumAwakened, 8),
                         //ItemList.Circuit_Board_Bio_Ultra.get(1L),
                         ItemList.Circuit_Xenosupercomputer.get(2L),
                         ItemList.Circuit_Parts_CapacitorXSMD.get(48L),
