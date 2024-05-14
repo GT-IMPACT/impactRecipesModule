@@ -810,14 +810,14 @@ public class TecTech implements Runnable {
                                 new Object[]{OrePrefixes.circuit.get(Materials.Bio), 8},
                                 new Object[]{OrePrefixes.circuit.get(Materials.Infinite), 16},
                                 new Object[]{OrePrefixes.circuit.get(Materials.Superconductor), 32},
-                                GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Neutronium, 4L),
+                                GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Phoenixite, 4L),
                                 ItemList.Field_Generator_UHV.get(2L),
-                                ItemList.Circuit_Wafer_QPIC.get(64L),
-                                ItemList.Circuit_Wafer_QPIC.get(64L),
+                                ItemList.Circuit_Wafer_FPIC.get(64L),
+                                ItemList.Circuit_Wafer_FPIC.get(64L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.SuperconductorUEV, 32),
                         }, new FluidStack[]{
                                 Materials.SolderingAlloy.getMolten(5760),
-                                Materials.Phoenixite.getMolten(2304L)
+                                Materials.DraconiumAwakened.getMolten(2304L)
                         },
                         ItemList.FusionComputer_UEV.get(1L), 1600, 1000000);
 
