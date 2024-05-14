@@ -413,7 +413,7 @@ public class GalactiCraft implements Runnable {
         // --- Telemetry Unit
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalacticraftCore", "tile.telemetry", 1L), tBitMask, new Object[]{"MPE", "WPW", "PCP", 'P', GT_ModHandler.getModItem("GalacticraftCore", "item.basicItem", 1L, 7), 'W', OrePrefixes.circuit.get(Materials.Advanced), 'C', GT_ModHandler.getModItem("GalacticraftCore", "item.basicItem", 1L, 6), 'M', GT_ModHandler.getModItem("GalacticraftCore", "item.basicItem", 1L, 19), 'E', ItemList.Emitter_HV});
         // --- Canvas
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalacticraftCore", "item.canvas", 1L), tBitMask, new Object[]{"LWS", "WSW", "SWL", 'S', OrePrefixes.stick.get(Materials.Plastic), 'W', "blockWool", 'P', GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L)});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalacticraftCore", "item.canvas", 1L), tBitMask, new Object[]{"LWS", "WSW", "SWL", 'S', OrePrefixes.stick.get(Materials.Wood), 'W', "blockWool", 'L', GT_ModHandler.getModItem("Backpack", "tannedLeather", 1L)});
         // --- Oxygen Gear
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalacticraftCore", "item.oxygenGear", 1L), tBitMask, new Object[]{"PPP", "ECE", "PIP", 'P', GT_ModHandler.getModItem("GalacticraftCore", "tile.oxygenPipe", 1L), 'C', GT_ModHandler.getModItem("GalacticraftCore", "item.oxygenConcentrator", 1L), 'E', ItemList.Electric_Pump_HV, 'I', ItemList.Electric_Piston_HV});
         // --- Sensor Glasses
