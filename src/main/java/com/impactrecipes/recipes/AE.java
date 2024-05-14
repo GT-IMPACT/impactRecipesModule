@@ -427,8 +427,6 @@ public class AE implements Runnable {
         addCraftingRecipe(GT_ModHandler.getModItem(AE2, "item.ToolColorApplicator", 1L, 0), tBitMask, new Object[]{"WAW", "TES", " I ", 'W', OrePrefixes.wireGt01.get(Materials.Aluminium), 'I', OrePrefixes.stick.get(Materials.Aluminium), 'S', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 23), 'T', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 35), 'A', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 43), 'E', GT_ModHandler.getModItem(AE2, "tile.BlockEnergyCell", 1L, 0)});
         // --- Biometric Card
         addCraftingRecipe(GT_ModHandler.getModItem(AE2, "item.ToolBiometricCard", 1L, 0), tBitMask, new Object[]{"CPP", "GAG", 'P', OrePrefixes.plate.get(Materials.VanadiumSteel), 'G', OrePrefixes.plate.get(Materials.Gold), 'A', OrePrefixes.plate.get(Materials.RedAlloy), 'C', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24)});
-        // --- Portable Cell
-        addShapelessCraftingRecipe(GT_ModHandler.getModItem(AE2, "item.ToolPortableCell", 1L, 0), tBitMask, new Object[]{GT_ModHandler.getModItem(AE2, "tile.BlockChest", 1L, 0), GT_ModHandler.getModItem(AE2, "item.ItemBasicStorageCell.1k", 1L, 0), GT_ModHandler.getModItem(AE2, "tile.BlockDenseEnergyCell", 1L, 0)});
         // --- Slabs
         addCraftingRecipe(GT_ModHandler.getModItem(AE2, "tile.SkyStoneSlabBlock", 2L, 0), tBitMask, new Object[]{"sB", 'B', GT_ModHandler.getModItem(AE2, "tile.BlockSkyStone", 1L, 0)});
         addCraftingRecipe(GT_ModHandler.getModItem(AE2, "tile.SkyStoneBlockSlabBlock", 2L, 0), tBitMask, new Object[]{"sB", 'B', GT_ModHandler.getModItem(AE2, "tile.BlockSkyStone", 1L, 1)});
@@ -478,8 +476,10 @@ public class AE implements Runnable {
         addShapelessCraftingRecipe(GT_ModHandler.getModItem("extracells", "ecbaseblock", 1L), tBitMask,
                 new Object[]{GT_ModHandler.getModItem("extracells", "part.base", 1L, 9)}
         );
+        // --- Portable Cell
+        addCraftingRecipe(GT_ModHandler.getModItem(AE2, "item.ToolPortableCell", 1L), tBitMask, new Object[]{" A ", "SBS", "dIw", 'S', OrePrefixes.screw.get(Materials.VanadiumSteel), 'A', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 35), 'B', GT_ModHandler.getModItem(AE2, "tile.BlockChest", 1L), 'I', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39)});
         // --- ME Block Container
-        addCraftingRecipe(GT_ModHandler.getModItem(AE2, "item.ItemExtremeStorageCell.Container", 1L), tBitMask, new Object[]{" A ", "SBS", "dIw", 'S', OrePrefixes.screw.get(Materials.VanadiumSteel), 'A', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 35), 'B', GT_ModHandler.getModItem(AE2, "tile.BlockChest", 1L), 'I', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 39)});
+        addCraftingRecipe(GT_ModHandler.getModItem(AE2, "item.ItemExtremeStorageCell.Container", 1L), tBitMask, new Object[]{" A ", "SBS", "dIw", 'S', OrePrefixes.screw.get(Materials.VanadiumSteel), 'A', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 35), 'B', GT_ModHandler.getModItem(AE2, "tile.BlockChest", 1L), 'I', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 61)});
         // --- ME Portable Fluid Storage
         addCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "portable_fluid_cell", 1L), tBitMask, new Object[]{" A ", "SBS", "dIw", 'S', OrePrefixes.screw.get(Materials.VanadiumSteel), 'A', GT_ModHandler.getModItem("ae2fc", "fluid_part", 1L, 0), 'B', GT_ModHandler.getModItem(AE2, "tile.BlockChest", 1L), 'I', GT_ModHandler.getModItem(AE2, "tile.BlockEnergyCell", 1L)});
 
