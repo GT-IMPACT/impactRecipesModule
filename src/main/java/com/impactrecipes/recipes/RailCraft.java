@@ -1771,7 +1771,7 @@ public class RailCraft implements Runnable {
         // --- Wooden Tie
         RA.addChemicalBathRecipe(
                 GT_ModHandler.getModItem("minecraft", "wooden_slab", 1L, GT_Values.W),
-                Materials.Creosote.getFluid(500), RailcraftItem.tie.getStack(1, ItemTie.EnumTie.WOOD),
+                Materials.Creosote.getFluid(10), RailcraftItem.tie.getStack(1, ItemTie.EnumTie.WOOD),
                 GT_Values.NI, GT_Values.NI, new int[]{10000}, 160, 5);
         // --- Concrete Tie
         GT_Values.RA
