@@ -1,11 +1,9 @@
 package com.impactrecipes.recipes;
 
+import com.impact.common.item.Core_Items;
 import com.impact.common.item.Core_Items2;
 import com.impact.mods.gregtech.GT_ItemList;
-import gregtech.api.enums.GT_Values;
-import gregtech.api.enums.ItemList;
-import gregtech.api.enums.Materials;
-import gregtech.api.enums.OrePrefixes;
+import gregtech.api.enums.*;
 import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
 import gregtech.api.util.GT_Utility;
@@ -13,6 +11,8 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
 import static com.impact.common.item.Core_List_Items.*;
+import static com.impact.util.Utilits.Itemstack;
+import static com.impactrecipes.util.RecipeUtils.ordictItemStack;
 import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.GregTech_API.getStackofAmountFromOreDict;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
@@ -28,6 +28,7 @@ public class BuildCraft implements Runnable {
         removeBuildCraft();
         handRecipe();
         assemblerRecipe();
+        cuttingRecipe();
     }
 
     private void removeBuildCraft() {
@@ -169,6 +170,8 @@ public class BuildCraft implements Runnable {
         removeRecipeByOutput(GT_ModHandler
                 .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipestructurecobblestone", 1L,
                         GT_Values.W));
+        removeRecipeByOutput(GT_ModHandler.getModItem("BuildCraft|Transport", "pipePlug", 1L, 0));
+
     }
 
     private void handRecipe() {
@@ -312,6 +315,16 @@ public class BuildCraft implements Runnable {
                         GT_ModHandler.getModItem("minecraft", "glass_pane", 1L), 'O',
                         GT_ModHandler.getModItem("ExtraUtilities", "trashcan", 1L)});
 
+        // --- Cobblestone Structure Pipe
+        GT_ModHandler.addShapelessCraftingRecipe(
+                GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipestructurecobblestone", 1L, 0),
+                tBitMask, new Object[]{
+                        GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemscobblestone", 1L),
+                        "cobblestone"});
+        // --- Pipe Plug
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("BuildCraft|Transport", "pipePlug", 4L),
+                new Object[]{"TB", 'T', "craftingToolSaw", 'B', GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipestructurecobblestone", 1L, 0)});
+
         for (int i = 0; i < 16; i++) {
             // --- Wooden Pipe (Colorfull)
             GT_ModHandler.addCraftingRecipe(GT_ModHandler
@@ -382,6 +395,12 @@ public class BuildCraft implements Runnable {
                             new ItemStack(Blocks.stained_glass_pane, 1, i), 'O',
                             GT_ModHandler.getModItem("ExtraUtilities", "trashcan", 1L)});
 
+            // --- Cobblestone Structure Pipe
+            GT_ModHandler.addShapelessCraftingRecipe(
+                    GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipestructurecobblestone", 1L, 0),
+                    tBitMask, new Object[]{
+                            GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemscobblestone", 1L, i + 1),
+                            "cobblestone"});
         }
 
     }
@@ -452,6 +471,13 @@ public class BuildCraft implements Runnable {
                         GT_Utility.getIntegratedCircuit(3)}, null, GT_ModHandler
                         .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsemerald", 8L), 200,
                 64);
+        // --- Cobblestone Structure Pipe
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemscobblestone", 1L, 0),
+                        GT_ModHandler.getModItem("minecraft", "cobblestone", 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, GT_ModHandler
+                        .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipestructurecobblestone", 1L),
+                25, 16);
 
         for (int i = 0; i < 16; i++) {
             // --- Wooden Pipe
@@ -519,6 +545,20 @@ public class BuildCraft implements Runnable {
                             GT_Utility.getIntegratedCircuit(3)}, null, GT_ModHandler
                             .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemsemerald", 8L,
                                     i + 1), 200, 64);
+            // --- Cobblestone Structure Pipe
+            RA.addAssemblerRecipe(
+                    new ItemStack[]{GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipeitemscobblestone", 1L, i+1),
+                            GT_ModHandler.getModItem("minecraft", "cobblestone", 1L),
+                            GT_Utility.getIntegratedCircuit(3)}, null, GT_ModHandler
+                            .getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipestructurecobblestone", 1L),
+                    25, 16);
         }
+    }
+
+    private void cuttingRecipe() {
+        // --- Pipe Plug
+        RA.addCutterRecipe(GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipestructurecobblestone", 1L),
+                GT_ModHandler.getModItem("BuildCraft|Transport", "pipePlug", 6L), null, 100, 30, true
+        );
     }
 }
