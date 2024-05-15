@@ -748,7 +748,7 @@ public class Gregtech implements Runnable {
                                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Strontium, 1L),
                                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Samarium, 1L),
                                 GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Gadolinium, 1L)},
-                        new int[]{600, 600, 600, 600, 600, 600, 400, 200, 100}, 600, 480);
+                        new int[]{600, 600, 600, 600, 600, 600, 400, 200, 100}, 160, 480);
 
     }
 
