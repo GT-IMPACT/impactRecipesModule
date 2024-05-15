@@ -864,6 +864,14 @@ public class AE implements Runnable {
         // --- ME Level Terminal
         RA.addAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 380), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), GT_ModHandler.getModItem("ae2fc", "level_maintainer", 1L, 0), GT_OreDictUnificator.get(OrePrefixes.plate, Materials.NetherQuartz, 2), GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.CertusQuartz, 2), GT_Utility.getIntegratedCircuit(10)}, null, GT_ModHandler.getModItem("ae2fc", "part_level_terminal", 1L, 0), 200, 96);
 
+        // --- Wireless Access Point
+        RA.addAssemblerRecipe(new ItemStack[]{
+                GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 41),
+                GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 23),
+                GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 16),
+                GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Vanadium, 2),
+                GT_Utility.getIntegratedCircuit(10)}, Materials.Titanium.getMolten(36),
+                GT_ModHandler.getModItem(AE2, "tile.BlockWireless", 1L, 0), 50, 12);
     }
 
     private void autoclaveRecipe() {
