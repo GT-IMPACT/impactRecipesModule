@@ -451,6 +451,71 @@ public class Gregtech implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Steel, 1L),
                         GT_Utility.getIntegratedCircuit(10)}, null, ItemList.Casing_AirFilter_Vent.get(2L), 50, 12);
 
+        // --- Covers
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Aluminium, 2L),
+                        new ItemStack(Blocks.iron_bars, 2),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Cover_Drain.get(1L), 800, 12);
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 2L),
+                        new ItemStack(Blocks.iron_bars, 2),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Cover_Drain.get(1L), 800, 12);
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.WroughtIron, 2L),
+                        new ItemStack(Blocks.iron_bars, 2),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Cover_Drain.get(1L), 800, 12);
+
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Aluminium, 1L),
+                        new ItemStack(Blocks.crafting_table, 1),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Cover_Crafting.get(1L), 800, 12);
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 1L),
+                        new ItemStack(Blocks.crafting_table, 1),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Cover_Crafting.get(1L), 800, 12);
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.WroughtIron, 1L),
+                        new ItemStack(Blocks.crafting_table, 1),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Cover_Crafting.get(1L), 800, 12);
+
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Aluminium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plastic, 2L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Upgrade_Muffler.get(1L), 800, 12);
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Aluminium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Wood, 2L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Upgrade_Muffler.get(1L), 800, 12);
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plastic, 2L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Upgrade_Muffler.get(1L), 800, 12);
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Wood, 2L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Upgrade_Muffler.get(1L), 800, 12);
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.WroughtIron, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Plastic, 2L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Upgrade_Muffler.get(1L), 800, 12);
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.WroughtIron, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Wood, 2L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Upgrade_Muffler.get(1L), 800, 12);
+
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Aluminium, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iridium, 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Upgrade_Lock.get(1L), 6400, 12);
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iron, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iridium, 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Upgrade_Lock.get(1L), 6400, 12);
+        RA.addAssemblerRecipe(
+                new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.WroughtIron, 1L),
+                        GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Iridium, 1L),
+                        GT_Utility.getIntegratedCircuit(3)}, null, ItemList.Upgrade_Lock.get(1L), 6400, 12);
+
     }
 
     private void wireAssemblerRecipe() {
