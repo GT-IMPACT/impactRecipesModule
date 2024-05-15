@@ -242,9 +242,10 @@ public class BuildCraft implements Runnable {
         // --- Auto Workbench
         GT_ModHandler.addCraftingRecipe(
                 GT_ModHandler.getModItem("BuildCraft|Factory", "autoWorkbenchBlock", 1L, 0), tBitMask,
-                new Object[]{"PGP", "GCG", "PMP", 'P', OrePrefixes.itemCasing.get(Materials.Iron), 'G',
+                new Object[]{"PHP", "GCG", "PMP", 'P', OrePrefixes.itemCasing.get(Materials.Iron), 'G',
                         OrePrefixes.gearGtSmall.get(Materials.Iron), 'M', GT_ItemList.ULVMotor, 'C',
-                        GT_ModHandler.getModItem("Forestry", "factory2", 1L, 2)});
+                        GT_ModHandler.getModItem("minecraft", "crafting_table", 1L),
+                        'H', GT_ModHandler.getModItem("minecraft", "chest", 1L)});
         // --- Flood Gate
         GT_ModHandler
                 .addCraftingRecipe(GT_ModHandler.getModItem("BuildCraft|Factory", "floodGateBlock", 1L, 0),
