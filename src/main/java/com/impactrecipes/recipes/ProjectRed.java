@@ -213,6 +213,13 @@ public class ProjectRed implements Runnable {
                         Materials.Obsidian.getMolten(1296),
                         GT_ModHandler.getModItem("WR-CBE|Addons", "rep", 1L, 0), 600, 120);
 
+        // --- Stone Bowl
+        GT_Values.RA
+                .addAssemblerRecipe(new ItemStack(Blocks.stone, 7),
+                        GT_Utility.getIntegratedCircuit(7),
+                        null,
+                        GT_ModHandler.getModItem("WR-CBE|Core", "stoneBowl", 1L, 0), 50, 12);
+
     }
 
     private void circuitAssemblerRecipe() {
