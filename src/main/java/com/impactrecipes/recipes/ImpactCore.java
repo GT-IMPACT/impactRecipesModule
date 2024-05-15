@@ -4230,6 +4230,78 @@ public class ImpactCore implements Runnable {
 				Materials.Iron.getMolten(72),
 				GT_ModHandler.getModItem("gregtech", "gt.blockmachines", 1L, 14747), 50, 12);
 
+		// --- Nose Cone T4
+		RA.addAssemblerRecipe(new ItemStack[]{
+						GT_ModHandler.getModItem("GalacticraftMars", "item.heavyNoseCone", 1L),
+						CoreItems2.getRecipe(11, 1),
+						CoreItems2.getRecipe(80, 3),
+						GT_Utility.getIntegratedCircuit(10)}, Materials.Osmiridium.getMolten(36),
+				CoreItems2.getRecipe(HeavyDutyNoseConeTier4.getMetaID(), 1), 50, 12);
+		// --- Nose Cone T5
+		RA.addAssemblerRecipe(new ItemStack[]{
+						CoreItems2.getRecipe(21, 1),
+						CoreItems2.getRecipe(12, 1),
+						GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.NaquadahAlloy, 3),
+						GT_Utility.getIntegratedCircuit(10)}, Materials.Duranium.getMolten(36),
+				CoreItems2.getRecipe(HeavyDutyNoseConeTier5.getMetaID(), 1), 50, 12);
+		// --- Nose Cone T6
+		RA.addAssemblerRecipe(new ItemStack[]{
+						CoreItems2.getRecipe(22, 1),
+						CoreItems2.getRecipe(13, 1),
+						CoreItems2.getRecipe(83, 3),
+						GT_Utility.getIntegratedCircuit(10)}, Materials.Tritanium.getMolten(36),
+				CoreItems2.getRecipe(HeavyDutyNoseConeTier6.getMetaID(), 1), 50, 12);
+		// --- Nose Cone T7
+		RA.addAssemblerRecipe(new ItemStack[]{
+						CoreItems2.getRecipe(23, 1),
+						CoreItems2.getRecipe(14, 1),
+						CoreItems2.getRecipe(85, 3),
+						GT_Utility.getIntegratedCircuit(10)}, Materials.Neutronium.getMolten(36),
+				CoreItems2.getRecipe(HeavyDutyNoseConeTier7.getMetaID(), 1), 50, 12);
+		// --- Nose Cone T8
+		RA.addAssemblerRecipe(new ItemStack[]{
+						CoreItems2.getRecipe(24, 1),
+						CoreItems2.getRecipe(15, 1),
+						CoreItems2.getRecipe(77, 3),
+						GT_Utility.getIntegratedCircuit(10)}, Materials.Phoenixite.getMolten(36),
+				CoreItems2.getRecipe(HeavyDutyNoseConeTier8.getMetaID(), 1), 50, 12);
+
+		// --- Fins T4
+		RA.addAssemblerRecipe(new ItemStack[]{
+						CoreItems2.getRecipe(92, 1),
+						CoreItems2.getRecipe(11, 2),
+						GT_ModHandler.getModItem("GalacticraftMars", "item.itemBasicAsteroids", 4L),
+						GT_Utility.getIntegratedCircuit(1)}, null,
+				CoreItems2.getRecipe(HeavyDutyRocketFinsTier4.getMetaID(), 1), 50, 12);
+		// --- Fins T5
+		RA.addAssemblerRecipe(new ItemStack[]{
+						CoreItems2.getRecipe(91, 1),
+						CoreItems2.getRecipe(12, 2),
+						CoreItems2.getRecipe(11, 2),
+						GT_Utility.getIntegratedCircuit(1)}, null,
+				CoreItems2.getRecipe(HeavyDutyRocketFinsTier5.getMetaID(), 1), 50, 12);
+		// --- Fins T6
+		RA.addAssemblerRecipe(new ItemStack[]{
+						CoreItems2.getRecipe(94, 1),
+						CoreItems2.getRecipe(13, 2),
+						CoreItems2.getRecipe(12, 2),
+						GT_Utility.getIntegratedCircuit(1)}, null,
+				CoreItems2.getRecipe(HeavyDutyRocketFinsTier6.getMetaID(), 1), 50, 12);
+		// --- Fins T7
+		RA.addAssemblerRecipe(new ItemStack[]{
+						CoreItems2.getRecipe(95, 1),
+						CoreItems2.getRecipe(14, 2),
+						CoreItems2.getRecipe(13, 2),
+						GT_Utility.getIntegratedCircuit(1)}, null,
+				CoreItems2.getRecipe(HeavyDutyRocketFinsTier7.getMetaID(), 1), 50, 12);
+		// --- Fins T8
+		RA.addAssemblerRecipe(new ItemStack[]{
+						GT_OreDictUnificator.get(OrePrefixes.plateTriple, Materials.Adamantium, 1),
+						CoreItems2.getRecipe(15, 2),
+						CoreItems2.getRecipe(14, 2),
+						GT_Utility.getIntegratedCircuit(1)}, null,
+				CoreItems2.getRecipe(HeavyDutyRocketFinsTier8.getMetaID(), 1), 50, 12);
+
 	}
 	
 	private void cutting() {

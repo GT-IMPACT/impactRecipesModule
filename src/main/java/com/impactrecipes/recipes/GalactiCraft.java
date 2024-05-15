@@ -657,7 +657,15 @@ public class GalactiCraft implements Runnable {
                         ItemList.Sensor_HV.get(1),
                         GT_ModHandler.getModItem("GalacticraftCore", "item.heavyPlating", 3L),
                         GT_Utility.getIntegratedCircuit(10)}, Materials.StainlessSteel.getMolten(36),
-                GT_ModHandler.getModItem("GalacticraftCore", "item.noseCone", 1L), 50, 18);
+                GT_ModHandler.getModItem("GalacticraftCore", "item.noseCone", 1L), 50, 12);
+
+        // --- Heavy Nose Cone
+        RA.addAssemblerRecipe(new ItemStack[]{
+                        GT_ModHandler.getModItem("GalacticraftCore", "item.noseCone", 1L),
+                        GT_ModHandler.getModItem("GalacticraftMars", "item.itemBasicAsteroids", 1L),
+                        GT_ModHandler.getModItem("GalacticraftMars", "item.null", 3L, 5),
+                        GT_Utility.getIntegratedCircuit(10)}, Materials.Titanium.getMolten(36),
+                GT_ModHandler.getModItem("GalacticraftMars", "item.heavyNoseCone", 1L), 50, 12);
 
         // --- Fins 1
         RA.addAssemblerRecipe(new ItemStack[]{
