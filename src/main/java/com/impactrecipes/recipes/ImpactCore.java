@@ -876,7 +876,7 @@ public class ImpactCore implements Runnable {
 		RA.addBasicLineRecipe(new ItemStack[]{
 						ItemList.Hull_LuV.get(1L),
 						GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1, 0),
-						GT_ItemList.UpgradeCasingT1.get(4L),
+						GT_ItemList.UpgradeCasingT1.get(2L),
 						GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.HastelloyN, 16),
 						ItemList.Electric_Motor_LuV.get(4L),
 						ItemList.Electric_Piston_LuV.get(4L),
@@ -907,7 +907,7 @@ public class ImpactCore implements Runnable {
 		RA.addBasicLineRecipe(new ItemStack[]{
 						ItemList.Hull_ZPM.get(1L),
 						GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1, 1),
-						GT_ItemList.UpgradeCasingT2.get(4L),
+						GT_ItemList.UpgradeCasingT2.get(2L),
 						GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.Lafium, 16),
 						ItemList.Electric_Motor_ZPM.get(4L),
 						ItemList.Electric_Piston_ZPM.get(4L),
@@ -938,7 +938,7 @@ public class ImpactCore implements Runnable {
 		RA.addBasicLineRecipe(new ItemStack[]{
 						ItemList.Hull_UV.get(1L),
 						GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1, 2),
-						GT_ItemList.UpgradeCasingT3.get(4L),
+						GT_ItemList.UpgradeCasingT3.get(2L),
 						GT_OreDictUnificator.get(OrePrefixes.plateDouble, Materials.CinobiteA243, 16),
 						ItemList.Electric_Motor_UV.get(4L),
 						ItemList.Electric_Piston_UV.get(4L),
