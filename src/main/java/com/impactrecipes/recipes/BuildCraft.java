@@ -559,7 +559,7 @@ public class BuildCraft implements Runnable {
     private void cuttingRecipe() {
         // --- Pipe Plug
         RA.addCutterRecipe(GT_ModHandler.getModItem("BuildCraft|Transport", "item.buildcraftPipe.pipestructurecobblestone", 1L),
-                GT_ModHandler.getModItem("BuildCraft|Transport", "pipePlug", 6L), null, 100, 30, true
+                GT_ModHandler.getModItem("BuildCraft|Transport", "pipePlug", 6L), null, 100, 30, false
         );
     }
 }
