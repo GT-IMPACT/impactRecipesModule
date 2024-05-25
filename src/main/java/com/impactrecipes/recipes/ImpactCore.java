@@ -5936,7 +5936,7 @@ public class ImpactCore implements Runnable {
 				new ItemStack[]{
 						ItemList.Hull_ULV.get(1L),
 						GT_OreDictUnificator.get(OrePrefixes.cableGt01, Materials.Lead, 1L),
-						ItemList.Circuit_Parts_Vacuum_Tube.get(1),
+						ItemList.Circuit_Parts_Vacuum_Tube.get(2),
 						ItemList.ULV_Coil.get(2L),
 						GT_OreDictUnificator.get(OrePrefixes.rotor, Materials.Lead, 1L)}, 2000, 6
 		);
@@ -5944,7 +5944,7 @@ public class ImpactCore implements Runnable {
 				new ItemStack[]{
 						ItemList.Hull_LV.get(1L),
 						GT_OreDictUnificator.get(OrePrefixes.cableGt01, Materials.Tin, 1L),
-						GT_ModHandler.getModItem("IC2", "itemPartCircuit", 1L, 0),
+						GT_ModHandler.getModItem("IC2", "itemPartCircuit", 2L, 0),
 						ItemList.LV_Coil.get(2L),
 						ItemList.Electric_Pump_LV.get(1L)}, 2000, 30
 		);
@@ -5952,7 +5952,7 @@ public class ImpactCore implements Runnable {
 				new ItemStack[]{
 						ItemList.Hull_MV.get(1L),
 						GT_OreDictUnificator.get(OrePrefixes.cableGt01, Materials.Copper, 1L),
-						ItemList.Circuit_Good.get(1),
+						ItemList.Circuit_Good.get(2),
 						ItemList.MV_Coil.get(2L),
 						ItemList.Electric_Pump_MV.get(1L)}, 2000, 120
 		);
