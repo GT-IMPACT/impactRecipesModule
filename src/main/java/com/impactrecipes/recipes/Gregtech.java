@@ -1026,7 +1026,7 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 4),
                 GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Steel, 8),
                 ItemList.Casing_ExplosionHazard.get(1L)
-        }, ItemList.Machine_Multi_ImplosionCompressor.get(1L), null, 30 * 20, 250);
+        }, ItemList.Machine_Multi_ImplosionCompressor.get(1L), null, 30 * 20, 480);
 
         //Vacuum Freezer
         RA.addPrimitiveLineRecipe(new ItemStack[]{
@@ -1035,7 +1035,7 @@ public class Gregtech implements Runnable {
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Data, 4),
                 GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Aluminium, 8),
                 ItemList.Casing_FrostHazard.get(1L)
-        }, ItemList.Machine_Multi_VacuumFreezer.get(1L), null, 30 * 20, 250);
+        }, ItemList.Machine_Multi_VacuumFreezer.get(1L), null, 30 * 20, 480);
 
         //Titanium
         RA.addPrimitiveLineRecipe(new ItemStack[]{
