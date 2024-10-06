@@ -302,7 +302,7 @@ public class Gregtech implements Runnable {
                         GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Advanced, 2L),
                         ItemList.Electric_Pump_HV.get(2L),
                         ItemList.Casing_SolidSteel.get(1L),
-                        GT_Utility.getIntegratedCircuit(1)}, null, ItemList.Casing_Pump.get(1L), 50, 12);
+                        GT_Utility.getIntegratedCircuit(2)}, null, ItemList.Casing_Pump.get(1L), 50, 12);
         // --- Bronze Pipe Casing
         RA.addAssemblerRecipe(
                 new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Bronze, 4L),
