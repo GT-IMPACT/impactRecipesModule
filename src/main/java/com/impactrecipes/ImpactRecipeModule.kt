@@ -1,7 +1,12 @@
+import com.impactrecipes.DebugCommand
 import com.impactrecipes.MODID
 import com.impactrecipes.loader.ModsLoader
 import cpw.mods.fml.common.Mod
-import cpw.mods.fml.common.event.*
+import cpw.mods.fml.common.event.FMLInitializationEvent
+import cpw.mods.fml.common.event.FMLPostInitializationEvent
+import cpw.mods.fml.common.event.FMLPreInitializationEvent
+import cpw.mods.fml.relauncher.Side
+import net.minecraftforge.client.ClientCommandHandler
 
 @Mod(
     name = "Impact | Recipes Module",
@@ -25,6 +30,7 @@ object ImpactRecipeModule {
 
     @Mod.EventHandler
     fun postInit(event: FMLPostInitializationEvent) {
+        ClientCommandHandler.instance.registerCommand(DebugCommand())
         ModsLoader.loader()
     }
 }
