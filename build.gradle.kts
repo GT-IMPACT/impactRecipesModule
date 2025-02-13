@@ -34,8 +34,7 @@ dependencies {
     api("space.impact:Forgelin:2.0.3")
     api("space.impact:gregtech-impact:5.09.35.25:dev")
     api("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
-    api("space.impact:Impact-core:1.1.0.21:dev")
-    api("space.impact:VirtualWorld:1.4.2:dev")
+    api("space.impact:Impact-core:1.1.0.24:dev")
     api("com.github.GTNewHorizons:Applied-Energistics-2-Unofficial:rv3-beta-307-GTNH:dev")
 
     implementation(fileTree(mapOf("dir" to "libRun/", "include" to listOf("*.jar"))))

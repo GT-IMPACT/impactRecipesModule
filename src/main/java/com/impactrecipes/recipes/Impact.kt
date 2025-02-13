@@ -1,6 +1,7 @@
 package com.impactrecipes.recipes
 
 import com.impact.common.item.DrillHeads
+import com.impact.mods.gregtech.GT_ItemList
 import com.impactrecipes.util.get
 import com.impactrecipes.util.toEuPercent
 import gregtech.api.enums.GT_Values.RA
@@ -41,9 +42,8 @@ object Impact {
     }
 
     private fun prospectors() {
-        var scannerTool = GT_ModHandler.getModItem("impact_vw", "virtual_ore_scanner", 1L, 0)
         GT_ModHandler.addCraftingRecipe(
-            scannerTool,
+            GT_ItemList.HandProspectorEV.get(1),
             GT_ModHandler.RecipeBits.DISMANTLEABLE or GT_ModHandler.RecipeBits.DO_NOT_CHECK_FOR_COLLISIONS or GT_ModHandler.RecipeBits.BUFFERED,
             arrayOf<Any?>(
                 "EHR", "CSC", "PBP",
@@ -57,9 +57,8 @@ object Impact {
             )
         )
 
-        scannerTool = GT_ModHandler.getModItem("impact_vw", "virtual_ore_scanner", 1L, 1)
         GT_ModHandler.addCraftingRecipe(
-            scannerTool,
+            GT_ItemList.HandProspectorIV.get(1),
             GT_ModHandler.RecipeBits.DISMANTLEABLE or GT_ModHandler.RecipeBits.DO_NOT_CHECK_FOR_COLLISIONS or GT_ModHandler.RecipeBits.BUFFERED,
             arrayOf<Any?>(
                 "EHR", "CSC", "PBP",
@@ -73,9 +72,8 @@ object Impact {
             )
         )
 
-        scannerTool = GT_ModHandler.getModItem("impact_vw", "virtual_ore_scanner", 1L, 2)
         GT_ModHandler.addCraftingRecipe(
-            scannerTool,
+            GT_ItemList.HandProspectorLuV.get(1),
             GT_ModHandler.RecipeBits.DISMANTLEABLE or GT_ModHandler.RecipeBits.DO_NOT_CHECK_FOR_COLLISIONS or GT_ModHandler.RecipeBits.BUFFERED,
             arrayOf<Any?>(
                 "EHR", "CSC", "PBP",
@@ -89,9 +87,8 @@ object Impact {
             )
         )
 
-        scannerTool = GT_ModHandler.getModItem("impact_vw", "virtual_ore_scanner", 1L, 3)
         GT_ModHandler.addCraftingRecipe(
-            scannerTool,
+            GT_ItemList.HandProspectorZPM.get(1),
             GT_ModHandler.RecipeBits.DISMANTLEABLE or GT_ModHandler.RecipeBits.DO_NOT_CHECK_FOR_COLLISIONS or GT_ModHandler.RecipeBits.BUFFERED,
             arrayOf<Any?>(
                 "EHR", "CSC", "PBP",
