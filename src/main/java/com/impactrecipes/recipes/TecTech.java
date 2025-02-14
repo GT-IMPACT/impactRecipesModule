@@ -1076,7 +1076,7 @@ public class TecTech implements Runnable {
                         Materials.Phoenixite.getMolten(9216L),
                         Materials.Americium.getPlasma(9216L)
                 },
-                ItemList.Teleporter.get(1L), 300 * 20, 576000000);
+                ItemList.Teleporter.get(1L), 300 * 20, 512000000);
 
         //Debug maintenance hatch
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Hatch_AutoMaintenance.get(1L),
