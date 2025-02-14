@@ -44,7 +44,7 @@ public class StarGate implements Runnable {
         RA.addBasicLineRecipe(new ItemStack[]{
                 GT_OreDictUnificator.get(OrePrefixes.block, Materials.NaquadahAlloy, 6),
                 GT_ModHandler.getModItem("SGCraft", "stargateRing", 4L, 0),
-                GT_ModHandler.getModItem("SGCraft", "stargateRing", 1L, 1), ItemList.Emitter_UV.get(1L),
+                GT_ModHandler.getModItem("SGCraft", "stargateRing", 1L, 1), ItemList.Emitter_UEV.get(1L),
                 GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Quantum, 1),
                 GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.Infinity, 32)
         }, GT_ModHandler.getModItem("SGCraft", "stargateBase", 1L, 0), null, 100 * 20, 32000000);
