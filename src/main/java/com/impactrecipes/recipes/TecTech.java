@@ -822,9 +822,9 @@ public class TecTech implements Runnable {
                         ItemList.FusionComputer_UEV.get(1L), 1600, 1000000);
 
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Cover_SolarPanel_UV.get(1L),
-                96000, 128, 500000, 16, new ItemStack[]{
+                96000, 128, 500000, 16, new new Object[]{
                         ItemList.Cover_SolarPanel_UV.get(2L),
-                        ItemList.Circuit_Nano.get(8L),
+                        new Object[]{OrePrefixes.circuit.get(Materials.Nano), 8},
                         GT_OreDictUnificator.get(OrePrefixes.plateQuintuple, Materials.Sunnarium, 8),
                         ItemList.Circuit_Silicon_Wafer10.get(4L),
                         ItemList.Circuit_Silicon_Wafer6.get(4L),
@@ -843,9 +843,9 @@ public class TecTech implements Runnable {
                 ItemList.Cover_SolarPanel_UHV.get(1), 840, 8000000);
 
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Cover_SolarPanel_UHV.get(1L),
-                192000, 512, 2000000, 32, new ItemStack[]{
+                192000, 512, 2000000, 32, new Object[]{
                         ItemList.Cover_SolarPanel_UHV.get(1L),
-                        ItemList.Circuit_Piko.get(8L),
+                        new Object[]{OrePrefixes.circuit.get(Materials.Piko), 8},
                         GT_OreDictUnificator.get(OrePrefixes.plateDense, Materials.Sunnarium, 8),
                         ItemList.Circuit_Chip_Pico.get(8L),
                         GT_OreDictUnificator.get(OrePrefixes.plateAlloy, Materials.Carbon, 16),
