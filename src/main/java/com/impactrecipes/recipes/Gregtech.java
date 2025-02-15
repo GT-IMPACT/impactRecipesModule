@@ -4004,8 +4004,8 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Crystalprocessor.get(2L), ItemList.Circuit_Parts_InductorXSMD.get(2),
                                 ItemList.Circuit_Parts_CapacitorXSMD.get(2L), ItemList.Circuit_Chip_Ram.get(24),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 16)},
-                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Crystalcomputer.get(2L), 200,
-                        38400, true);
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Crystalcomputer.get(2L), 100,
+                        9600, true);
 
                 RA.addCircuitAssemblerSpaceRecipe(
                         new ItemStack[]{ItemList.Circuit_Board_Multifiberglass_Elite.get(1),
@@ -4029,8 +4029,8 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorXSMD.get(2L),
                                 ItemList.Circuit_Parts_TransistorXSMD.get(2L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.YttriumBariumCuprate, 8)},
-                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Neuroprocessor.get(2L), 200,
-                        153600, true);
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Neuroprocessor.get(2L), 100,
+                        38400, true);
 
                 RA.addCircuitAssemblerSpaceRecipe(
                         new ItemStack[]{ItemList.Circuit_Chip_NeuroCPU.get(1),
@@ -4061,8 +4061,8 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Masterquantumcomputer.get(2L), ItemList.Circuit_Parts_InductorXSMD.get(2),
                                 ItemList.Circuit_Parts_CapacitorXSMD.get(3L), ItemList.Circuit_Chip_Ram.get(24),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.AnnealedCopper, 48)},
-                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Quantummainframe.get(1L), 800,
-                        38400, true);
+                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Quantummainframe.get(1L), 400,
+                        7680, true);
 
                 RA.addCircuitAssemblerSpaceRecipe(
                         new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Trinium, 2),
@@ -4093,7 +4093,7 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_CapacitorXSMD.get(3L), ItemList.Circuit_Chip_Ram.get(24L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.YttriumBariumCuprate, 16)},
                          Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Wetwarecomputer.get(2L), 150,
-                        153600, true);
+                        38400, true);
 
                 //4
                 RA.addCircuitAssemblerSpaceRecipe(
@@ -4110,8 +4110,8 @@ public class Gregtech implements Runnable {
                                  ItemList.Circuit_Parts_CapacitorXSMD.get(3L),
                                  ItemList.Circuit_Parts_TransistorXSMD.get(3L),
                                  GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 16)},
-                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Bioprocessor.get(2L), 300,
-                        2457600, true);
+                        Materials.SolderingAlloy.getMolten(72L), ItemList.Circuit_Bioprocessor.get(2L), 150,
+                        153600, true);
 
                 RA.addCircuitAssemblerSpaceRecipe(
                         new ItemStack[]{ItemList.Circuit_Chip_BioCPU.get(1L),
@@ -4137,8 +4137,8 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Parts_InductorXSMD.get(2L), ItemList.Circuit_Parts_CapacitorXSMD.get(4L),
                                 ItemList.Circuit_Chip_Ram.get(32L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorLuV, 8)},
-                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Crystalmainframe.get(1L), 800,
-                        153600, true);
+                        Materials.SolderingAlloy.getMolten(288L), ItemList.Circuit_Crystalmainframe.get(1L), 400,
+                        30720, true);
 
                 RA.addCircuitAssemblerSpaceRecipe(
                         new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Oriharukon, 2),
@@ -4160,8 +4160,8 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Wetwarecomputer.get(2L), ItemList.Circuit_Parts_DiodeXSMD.get(2L),
                                 ItemList.Circuit_Chip_NOR.get(16L), ItemList.Circuit_Chip_Ram.get(64L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.YttriumBariumCuprate, 24)},
-                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Wetwaresupercomputer.get(1L), 600,
-                        153600, true);
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Wetwaresupercomputer.get(1L), 300,
+                        38400, true);
 
                 //3
                 RA.addCircuitAssemblerSpaceRecipe(
@@ -4176,8 +4176,8 @@ public class Gregtech implements Runnable {
                                 ItemList.Circuit_Bioprocessor.get(2L), ItemList.Circuit_Parts_InductorXSMD.get(3L),
                                 ItemList.Circuit_Parts_CapacitorXSMD.get(4L), ItemList.Circuit_Chip_Ram.get(32L),
                                 GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 24)},
-                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Biowarecomputer.get(2L), 400,
-                        2457600, true);
+                        Materials.SolderingAlloy.getMolten(144L), ItemList.Circuit_Biowarecomputer.get(2L), 200,
+                        153600, true);
 
                 //4
                 RA.addCircuitAssemblerSpaceRecipe(
