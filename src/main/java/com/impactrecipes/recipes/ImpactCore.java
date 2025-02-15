@@ -897,12 +897,12 @@ public class ImpactCore implements Runnable {
 						ItemList.Electric_Piston_UV.get(1L),
 						ItemList.Conveyor_Module_UV.get(1L),
 						ItemList.Robot_Arm_UV.get(1L),
-						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Infinite, 8),
+						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Infinite, 2),
 						GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.SuperconductorUV, 8),
 						GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Chrome, 16),
 						GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSE, 32)
 				},
-				GT_ItemList.UpgradeCasingT2.get(1L), null,200 * 20, 2000000);
+				GT_ItemList.UpgradeCasingT2.get(1L), null,90 * 20, 2000000);
 		//UpgradeCasingT3
 		RA.addBasicLineRecipe(new ItemStack[]{
 						ItemList.Hull_ZPM.get(1L),
@@ -928,12 +928,12 @@ public class ImpactCore implements Runnable {
 						ItemList.Electric_Piston_UHV.get(1L),
 						ItemList.Conveyor_Module_UHV.get(1L),
 						ItemList.Robot_Arm_UHV.get(1L),
-						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Bio, 8),
+						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Bio, 2),
 						GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.Superconductor, 8),
 						GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Iridium, 16),
 						GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSE, 48)
 				},
-				GT_ItemList.UpgradeCasingT3.get(1L), null,250 * 20, 8000000);
+				GT_ItemList.UpgradeCasingT3.get(1L), null,120 * 20, 8000000);
 		//UpgradeCasingT4
 		RA.addBasicLineRecipe(new ItemStack[]{
 						ItemList.Hull_UV.get(1L),
@@ -959,12 +959,12 @@ public class ImpactCore implements Runnable {
 						ItemList.Electric_Piston_UEV.get(1L),
 						ItemList.Conveyor_Module_UEV.get(1L),
 						ItemList.Robot_Arm_UEV.get(1L),
-						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Nano, 8),
+						GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Nano, 2),
 						GT_OreDictUnificator.get(OrePrefixes.wireGt04, Materials.SuperconductorUEV, 8),
 						GT_OreDictUnificator.get(OrePrefixes.itemCasing, Materials.Osmium, 16),
 						GT_OreDictUnificator.get(OrePrefixes.bolt, Materials.HSSE, 64)
 				},
-				GT_ItemList.UpgradeCasingT4.get(1L), null,300 * 20, 32000000);
+				GT_ItemList.UpgradeCasingT4.get(1L), null,150 * 20, 32000000);
 
 
 		RA.addPrimitiveLineRecipe(new ItemStack[]{
