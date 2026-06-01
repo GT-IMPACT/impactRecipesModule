@@ -25,19 +25,29 @@ repositories {
     maven("https://maven.accident.space/repository/maven-public/") {
         mavenContent {
             includeGroup("space.impact")
+            includeGroup("com.github.GTNewHorizons")
+            includeGroup("com.github.Azanor")
             includeGroupByRegex("space\\.impact\\..+")
+        }
+        credentials {
+            username = System.getenv("MAVEN_USER") ?: "NONE"
+            password = System.getenv("MAVEN_PASSWORD") ?: "NONE"
         }
     }
 }
 
 dependencies {
-    api("space.impact:Forgelin:2.0.3")
-    api("space.impact:gregtech-impact:5.09.35.25:dev")
-    api("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
-    api("space.impact:Impact-core:1.1.0.24:dev")
-    api("com.github.GTNewHorizons:Applied-Energistics-2-Unofficial:rv3-beta-307-GTNH:dev")
+    // impact
+    implementation("space.impact:Forgelin:2.1.1")
+    implementation("space.impact:gregtech-impact:5.09.35.32:dev") { isTransitive = false }
+    implementation("space.impact:Impact-Core:1.1.0.27:dev")
+
+    // maven impact
+    implementation("com.github.GTNewHorizons:EnderCore:0.2.7:dev")
+
+    // other
+    implementation("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev")
 
     implementation(fileTree(mapOf("dir" to "libRun/", "include" to listOf("*.jar"))))
     compileOnly(fileTree(mapOf("dir" to "libNotRun", "include" to listOf("*.jar"))))
-
 }

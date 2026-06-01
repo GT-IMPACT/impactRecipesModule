@@ -822,7 +822,7 @@ public class TecTech implements Runnable {
                         ItemList.FusionComputer_UEV.get(1L), 1600, 1000000);
 
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Cover_SolarPanel_UV.get(1L),
-                96000, 128, 500000, 16, new new Object[]{
+                96000, 128, 500000, 16, new Object[]{
                         ItemList.Cover_SolarPanel_UV.get(2L),
                         new Object[]{OrePrefixes.circuit.get(Materials.Nano), 8},
                         GT_OreDictUnificator.get(OrePrefixes.plateQuintuple, Materials.Sunnarium, 8),
