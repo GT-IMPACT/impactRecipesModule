@@ -6,25 +6,27 @@ import com.impactrecipes.recipes.laser.LaserEngraver;
 import static com.impactrecipes.RecipeKotlinKt.recipesInit;
 import static com.impactrecipes.util.RecipeUtils.registerRecipeClass;
 
+import cpw.mods.fml.common.Loader;
+
 /**
  * Класс для регистрации всех классов с рецептами
  */
 public class ModsLoader {
 
     public static void loader() {
-        ChiselGroup.run();
+        if (Loader.isModLoaded("chisel")) ChiselGroup.run();
 
         new LaserEngraver();
         new Vanilla().run();
         new Gregtech().run();
         new AE().run();
         new BuildCraft().run();
-        new Jabba().run();
-        new OpenComputers().run();
-        new RailCraft().run();
-        new StevesFactoryManager().run();
-        new StorageDrawers().run();
-        new TecTech().run();
+        if (Loader.isModLoaded("JABBA")) new Jabba().run();
+        if (Loader.isModLoaded("OpenComputers")) new OpenComputers().run();
+        if (Loader.isModLoaded("Railcraft")) new RailCraft().run();
+        if (Loader.isModLoaded("StevesFactoryManager")) new StevesFactoryManager().run();
+        if (Loader.isModLoaded("StorageDrawers")) new StorageDrawers().run();
+        if (Loader.isModLoaded("tectech")) new TecTech().run();
         new ProjectRed().run();
         new OpenBlocks().run();
         new ImpactCore().run();
@@ -46,7 +48,7 @@ public class ModsLoader {
         new ArchitectureCraft().run();
         new CarpentersBlocks().run();
         new NuclearControl().run();
-        new Ender_IO().run();
+        if (Loader.isModLoaded("EnderIO")) new Ender_IO().run();
         new CatWalks().run();
         new UBC().run();
         new ChiselRecipes().run();
