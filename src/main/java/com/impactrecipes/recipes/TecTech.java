@@ -490,7 +490,7 @@ public class TecTech implements Runnable {
 
         // --- Naqua
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Naquaprocessor.get(1L),
-                384000, 512, 4000000, 32, new Object[]{
+                96000, 256, 1000000, 16, new Object[]{
                         //GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 8),
                         ItemList.Circuit_Naquaprocessor.get(2L),
                         ItemList.Circuit_Parts_InductorXSMD.get(16L),
@@ -508,7 +508,7 @@ public class TecTech implements Runnable {
                 },
                 ItemList.Circuit_Naquacomputer.get(1L), 4000, 2000000);
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Naquacomputer.get(1L),
-                384000, 512, 4000000, 32, new Object[]{
+                192000, 512, 2000000, 32, new Object[]{
                         //GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 8),
                         ItemList.Circuit_Naquacomputer.get(2L),
                         ItemList.Circuit_Parts_CapacitorXSMD.get(24L),
@@ -528,7 +528,7 @@ public class TecTech implements Runnable {
                 },
                 ItemList.Circuit_Naquasupercomputer.get(1L), 4000, 2000000);
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Naquasupercomputer.get(1L),
-                768000, 1024, 8000000, 64, new Object[]{
+                384000, 1024, 2000000, 64, new Object[]{
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Phoenixite, 8),
                         ItemList.Circuit_Naquasupercomputer.get(2L),
                         ItemList.Circuit_Parts_CapacitorXSMD.get(32L),
@@ -569,7 +569,7 @@ public class TecTech implements Runnable {
 
         // --- Xeno
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Xenoprocessor.get(1L),
-                96000, 256, 1000000, 16, new ItemStack[]{
+                384000, 512, 2000000, 64, new ItemStack[]{
                         ItemList.Circuit_Board_Crystal_Extreme.get(2L),
                         ItemList.Circuit_Xenoprocessor.get(2L),
                         ItemList.Circuit_Parts_InductorXSMD.get(12),
@@ -588,7 +588,7 @@ public class TecTech implements Runnable {
                 ItemList.Circuit_Xenocomputer.get(1L), 5000, 8000000);
 
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Xenocomputer.get(1L),
-                192000, 512, 2000000, 32, new ItemStack[]{
+                512000, 1024, 4000000, 64, new ItemStack[]{
                         ItemList.Circuit_Board_Crystal_Extreme.get(2L),
                         ItemList.Circuit_Xenocomputer.get(2L),
                         ItemList.Circuit_Parts_CapacitorXSMD.get(24),
@@ -608,7 +608,7 @@ public class TecTech implements Runnable {
                 },
                 ItemList.Circuit_Xenosupercomputer.get(1L), 5000, 8000000);
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Xenosupercomputer.get(1L),
-                384000, 1024, 4000000, 64, new ItemStack[]{
+                768000, 1024, 8000000, 64, new ItemStack[]{
                         GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials. DraconiumAwakened, 8),
                         //ItemList.Circuit_Board_Bio_Ultra.get(1L),
                         ItemList.Circuit_Xenosupercomputer.get(2L),
@@ -652,7 +652,7 @@ public class TecTech implements Runnable {
 
         // --- Cosmic
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Cosmicprocessor.get(1L),
-                360000, 1024, 8000000, 64, new ItemStack[]{
+                768000, 1024, 8000000, 64, new ItemStack[]{
                         CoreItems2.getRecipe(148, 2),
                         ItemList.Circuit_Cosmicprocessor.get(2L),
                         ItemList.Circuit_Parts_InductorXSMD.get(32),
@@ -671,7 +671,7 @@ public class TecTech implements Runnable {
                 },
                 ItemList.Circuit_Cosmiccomputer.get(1L), 8000, 8000000);
         TT_recipeAdder.addResearchableAssemblylineRecipe(ItemList.Circuit_Cosmiccomputer.get(1L),
-                720000, 2048, 16000000, 96, new ItemStack[]{
+                1024000, 2048, 16000000, 96, new ItemStack[]{
                         CoreItems2.getRecipe(148, 4),
                         ItemList.Circuit_Cosmiccomputer.get(2L),
                         ItemList.Circuit_Parts_CapacitorXSMD.get(48),
