@@ -469,7 +469,7 @@ public class TecTech implements Runnable {
 
         // --- Portable Naquadah Reactor
         TT_recipeAdder.addResearchableAssemblylineRecipe(
-                ItemList.Circuit_Biomainframe.get(1L), 48000, 64, 800000, 8,
+                ItemList.Circuit_Biomainframe.get(1L), 48000, 128, 1000000, 8,
                 new ItemStack[]{
                         ItemList.Field_Generator_UHV.get(1L),
                         GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Energy, 2L),
@@ -552,7 +552,7 @@ public class TecTech implements Runnable {
 
         // --- Barnarda Processing Unit
         TT_recipeAdder.addResearchableAssemblylineRecipe(
-                ItemList.Circuit_Nano.get(1L), 64000, 64, 1000000, 8,
+                ItemList.Circuit_Nano.get(1L), 192000, 256, 2000000, 32,
                 new ItemStack[]{
                         ItemList.Circuit_Chip_BioCPU.get(1L),
                         ItemList.Circuit_Chip_Barnardacell.get(16L),
@@ -633,7 +633,7 @@ public class TecTech implements Runnable {
 
         // --- Chevron Processing Unit
         TT_recipeAdder.addResearchableAssemblylineRecipe(
-                ItemList.Circuit_Piko.get(1L), 128000, 128, 8000000, 32,
+                ItemList.Circuit_Piko.get(1L), 512000, 512, 8000000, 32,
                 new ItemStack[]{
                         CoreItems2.getRecipe(147, 1),
                         CoreItems2.getRecipe(149, 3),
