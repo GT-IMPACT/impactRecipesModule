@@ -102,7 +102,7 @@ public class StarGate implements Runnable {
         // --- Stargate Shevron Upgrade
         RA.addAssemblerRecipe(
                 new ItemStack[]{CoreItems2.getRecipe(147, 8), CoreItems2.getRecipe(149, 3),
-                        ItemList.Electric_Piston_UEV.get(6L), ItemList.Field_Generator_UEV.get(4L),
+                        ItemList.Electric_Piston_UEV.get(6L), ItemList.Field_Generator_UEV.get(1L),
                         ItemList.Sensor_UEV.get(1L)}, null,
                 GT_ModHandler.getModItem("SGCraft", "sgChevronUpgrade", 1L, 0), 1000, 32000000);
         // --- Stargate Iris Upgrade
@@ -116,7 +116,7 @@ public class StarGate implements Runnable {
                 GT_ModHandler.getModItem("SGCraft", "sgIrisBlade", 1L, 0), 1000, 32000000);
         // --- Ridiculously Large Capacitor
         RA.addAssemblerRecipe(
-                new ItemStack[]{CoreItems2.getRecipe(148, 12), ItemList.Field_Generator_UEV.get(5L),
+                new ItemStack[]{CoreItems2.getRecipe(148, 12), ItemList.Field_Generator_UEV.get(1L),
                         ItemList.ZPM3.get(1L)}, null,
                 GT_ModHandler.getModItem("SGCraft", "ic2Capacitor", 1L, 0), 1000, 32000000);
 
