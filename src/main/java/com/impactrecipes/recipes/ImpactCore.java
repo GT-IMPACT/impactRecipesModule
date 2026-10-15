@@ -3082,7 +3082,7 @@ public class ImpactCore implements Runnable {
 		);
 		//Parallel Hatch 256P OUT
 		RA.addAssemblerRecipe(
-				new ItemStack[]{ItemList.Hull_UV.get(1), GT_ModHandler.getModItem(AE2, "BlockAdvancedCraftingStorage", 1L),
+				new ItemStack[]{ItemList.Hull_UV.get(1), GT_ModHandler.getModItem(AE2, "tile.BlockAdvancedCraftingStorage", 1L),
 						ItemList.Emitter_UV.get(1), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Superconductor, 4L),
 						GT_Utility.getIntegratedCircuit(1)}, null,
 				GT_ItemList.Parallel_Hatch_OUT256.get(1), 1200, 500000
