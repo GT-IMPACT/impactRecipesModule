@@ -441,42 +441,42 @@ public class ImpactCore implements Runnable {
 		RA.addUnboxingRecipe(
 				GT_ModHandler.getModItem("impact", "impact_lapotronicenergyunit_block", 1, 1),
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.Energy_LapotronicOrb.get(1L), 1600, 64
+				ItemList.Energy_LapotronicOrb.get(4L), 1600, 64
 		);
 		RA.addUnboxingRecipe(
 				GT_ModHandler.getModItem("impact", "impact_lapotronicenergyunit_block", 1, 6),
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.EnergyCrystal_IV.get(1L), 1600, 64
+				ItemList.EnergyCrystal_IV.get(4L), 1600, 64
 		);
 		RA.addUnboxingRecipe(
 				GT_ModHandler.getModItem("impact", "impact_lapotronicenergyunit_block", 1, 2),
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.Energy_LapotronicOrb2.get(1L), 1800, 250
+				ItemList.Energy_LapotronicOrb2.get(4L), 1800, 250
 		);
 		RA.addUnboxingRecipe(
 				GT_ModHandler.getModItem("impact", "impact_lapotronicenergyunit_block", 1, 3),
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.Energy_Module.get(1L), 2000, 1024
+				ItemList.Energy_Module.get(4L), 2000, 1024
 		);
 		RA.addUnboxingRecipe(
 				GT_ModHandler.getModItem("impact", "impact_lapotronicenergyunit_block", 1, 4),
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.Energy_Cluster.get(1L), 2200, 4096
+				ItemList.Energy_Cluster.get(4L), 2200, 4096
 		);
 		RA.addUnboxingRecipe(
 				GT_ModHandler.getModItem("impact", "impact_lapotronicenergyunit_block", 1, 5),
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.ZPM2.get(1L), 2400, 7680
+				ItemList.ZPM2.get(4L), 2400, 7680
 		);
 		RA.addUnboxingRecipe(
 				GT_ModHandler.getModItem("impact", "impact_lapotronicenergyunit_block", 1, 7),
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.MysteriousCrystalOrb.get(1L), 2400, 4096
+				ItemList.MysteriousCrystalOrb.get(4L), 2400, 4096
 		);
 		RA.addUnboxingRecipe(
 				GT_ModHandler.getModItem("impact", "impact_lapotronicenergyunit_block", 1, 8),
 				GT_OreDictUnificator.get(OrePrefixes.frameGt, Materials.Inconel792, 1),
-				ItemList.MysteriousCrystalModule.get(1L), 2400, 7680
+				ItemList.MysteriousCrystalModule.get(4L), 2400, 7680
 		);
 
 		RA.addUnboxingRecipe(
