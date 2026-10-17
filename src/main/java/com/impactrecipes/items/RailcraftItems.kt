@@ -58,11 +58,11 @@ public enum class RailcraftItems(
     ),
     PartCircuitSignal(
         registryName = "part.circuit.signal",
-        meta = 0,
+        meta = 2,
     ),
     PartCircuitReceiver(
         registryName = "part.circuit.receiver",
-        meta = 0,
+        meta = 1,
     ),
     StoneTie(
         registryName = "part.tie",
