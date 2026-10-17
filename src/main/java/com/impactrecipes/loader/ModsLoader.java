@@ -2,6 +2,7 @@ package com.impactrecipes.loader;
 
 import com.impactrecipes.recipes.*;
 import com.impactrecipes.recipes.architecturecraft.ArchitectureCraftRegistrar;
+import com.impactrecipes.recipes.gregtech.GregTechRegistrar;
 import com.impactrecipes.recipes.laser.LaserEngraver;
 
 import static com.impactrecipes.RecipeKotlinKt.recipesInit;
@@ -19,7 +20,7 @@ public class ModsLoader {
 
         new LaserEngraver();
         new Vanilla().run();
-        new Gregtech().run();
+        RecipeRegistrars.register(new GregTechRegistrar());
         new AE().run();
         new BuildCraft().run();
         if (Loader.isModLoaded("JABBA")) new Jabba().run();
@@ -57,7 +58,6 @@ public class ModsLoader {
 
         registerRecipeClass(LaserEngraver.class);
         registerRecipeClass(Vanilla.class);
-        registerRecipeClass(Gregtech.class);
         registerRecipeClass(AE.class);
         registerRecipeClass(BuildCraft.class);
         registerRecipeClass(Jabba.class);
