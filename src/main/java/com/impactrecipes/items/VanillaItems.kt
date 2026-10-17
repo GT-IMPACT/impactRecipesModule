@@ -338,6 +338,14 @@ public enum class VanillaItems(
 
     // Blocks
 
+    LightWeightedPressurePlate(
+        registryName = "light_weighted_pressure_plate",
+        meta = 0,
+    ),
+    Furnace(
+        registryName = "furnace",
+        meta = 0,
+    ),
     TrappedChest(
         registryName = "trapped_chest",
         meta = 0,

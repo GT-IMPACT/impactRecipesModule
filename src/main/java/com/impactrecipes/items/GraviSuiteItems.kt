@@ -102,6 +102,13 @@ public enum class GraviSuiteItems(
     Superconductor(
         registryName = "itemSimpleItem",
         meta = 1,
+    ),
+
+    // Blocks
+
+    AdvNanoChestPlate(
+        registryName = "advNanoChestPlate",
+        meta = 0,
     );
 
     public override val modId: String = "GraviSuite"

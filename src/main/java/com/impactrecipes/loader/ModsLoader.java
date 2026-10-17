@@ -18,6 +18,7 @@ import com.impactrecipes.recipes.galaxyspace.GalaxySpaceRegistrar;
 import com.impactrecipes.recipes.galacticraft.GalacticraftRegistrar;
 import com.impactrecipes.recipes.tectech.TecTechRegistrar;
 import com.impactrecipes.recipes.vanilla.VanillaRegistrar;
+import com.impactrecipes.recipes.ic2.IC2Registrar;
 import com.impactrecipes.recipes.malisisdoors.MalisisDoorsRegistrar;
 import com.impactrecipes.recipes.logisticspipes.LogisticsPipesRegistrar;
 import com.impactrecipes.recipes.buildcraft.BuildCraftRegistrar;
@@ -66,7 +67,7 @@ public class ModsLoader {
         new ImpactCore().run();
         RecipeRegistrars.register(new GalaxySpaceRegistrar());
         RecipeRegistrars.register(new GalacticraftRegistrar());
-        new IC2().run();
+        RecipeRegistrars.register(new IC2Registrar());
         RecipeRegistrars.register(new ExtraUtilitiesRegistrar());
         RecipeRegistrars.register(new GraviSuiteRegistrar());
         RecipeRegistrars.register(new StargateRegistrar());
@@ -92,7 +93,6 @@ public class ModsLoader {
         registerRecipeClass(OpenComputers.class);
         registerRecipeClass(RailCraft.class);
         registerRecipeClass(ImpactCore.class);
-        registerRecipeClass(IC2.class);
     
         recipesInit();
     }

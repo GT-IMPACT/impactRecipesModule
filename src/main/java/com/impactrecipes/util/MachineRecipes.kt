@@ -1251,6 +1251,78 @@ public object MachineRecipes {
         }
     }
 
+    @JvmStatic
+    public fun thermalCentrifuge(
+        input: ItemStack?,
+        outputs: Array<out ItemStack?>?,
+        chances: IntArray?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "thermalCentrifuge") {
+            RA.addThermalCentrifugeRecipe(
+                input,
+                outputs,
+                chances,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun boxing(
+        input: ItemStack?,
+        schematic: ItemStack?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "boxing") {
+            RA.addBoxingRecipe(
+                input,
+                schematic,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun disassembler(
+        input: ItemStack?,
+        outputs: Array<out ItemStack?>?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "disassembler") {
+            RA.addDisassemblerRecipe(
+                input,
+                outputs,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun bender(
+        input: ItemStack?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "bender") {
+            RA.addBenderRecipe(
+                input,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
     private fun registerOperation(
         id: String,
         action: () -> Boolean,

@@ -15,6 +15,20 @@ public enum class ImpactItems(
 
     // Items
 
+    Naquadah(item = Core_List_Items.Naquadah),
+    NaquadahE(item = Core_List_Items.NaquadahE),
+    DustSmallFertilizer(item = Core_List_Items.DustSmallFertilizer),
+    DustTinyFertilizer(item = Core_List_Items.DustTinyFertilizer),
+    QuantumPartBoots(item = Core_List_Items.QuantumPartBoots),
+    QuantumPartChestplate(item = Core_List_Items.QuantumPartChestplate),
+    QuantumPartHelmetEmpty(item = Core_List_Items.QuantumPartHelmetEmpty),
+    QuantumPartHelmet(item = Core_List_Items.QuantumPartHelmet),
+    QuantumPartLeggings(item = Core_List_Items.QuantumPartLeggings),
+    CarbonPartHelmetNightVision(item = Core_List_Items.CarbonPartHelmetNightVision),
+    CarbonPartChestplate(item = Core_List_Items.CarbonPartChestplate),
+    CarbonPartLeggings(item = Core_List_Items.CarbonPartLeggings),
+    CarbonPartBoots(item = Core_List_Items.CarbonPartBoots),
+    NeutronReflectorSmallParts(item = Core_List_Items.NeutronReflectorSmallParts),
     BlankPattern(item = Core_List_Items.BlankPattern),
     NaqChamberPart(item = Core_List_Items.NaqChamberPart),
     OrbCasingI(item = Core_List_Items.OrbCasingI),
