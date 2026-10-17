@@ -19,7 +19,14 @@ internal class ArchitectureCraftRecipes {
     }
 
     private fun removeOriginalRecipes() {
-        for (item in ArchitectureCraftItems.entries) {
+        val originalOutputs = arrayOf(
+            ArchitectureCraftItems.SawBench,
+            ArchitectureCraftItems.SawBlade,
+            ArchitectureCraftItems.LargePulley,
+            ArchitectureCraftItems.Hammer,
+            ArchitectureCraftItems.Chisel,
+        )
+        for (item in originalOutputs) {
             removeCraftingRecipesByOutput(
                 output = item.get(),
                 ignoreNbt = true,
