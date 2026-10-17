@@ -2,6 +2,7 @@ package com.impactrecipes.loader;
 
 import com.impactrecipes.recipes.*;
 import com.impactrecipes.recipes.architecturecraft.ArchitectureCraftRegistrar;
+import com.impactrecipes.recipes.chickenchunks.ChickenChunksRegistrar;
 import com.impactrecipes.recipes.gregtech.GregTechRegistrar;
 import com.impactrecipes.recipes.laser.LaserEngraver;
 
@@ -46,7 +47,7 @@ public class ModsLoader {
         new MalisisDoors().run();
         new Backpack().run();
         new BiblioCraft().run();
-        new ChickenChunks().run();
+        RecipeRegistrars.register(new ChickenChunksRegistrar());
         RecipeRegistrars.register(new ArchitectureCraftRegistrar());
         new CarpentersBlocks().run();
         new NuclearControl().run();
@@ -83,7 +84,6 @@ public class ModsLoader {
         registerRecipeClass(MalisisDoors.class);
         registerRecipeClass(Backpack.class);
         registerRecipeClass(BiblioCraft.class);
-        registerRecipeClass(ChickenChunks.class);
         registerRecipeClass(CarpentersBlocks.class);
         registerRecipeClass(NuclearControl.class);
         registerRecipeClass(Ender_IO.class);
