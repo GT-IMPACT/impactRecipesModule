@@ -30,7 +30,6 @@ public class GalaxySpace implements Runnable {
     public void run() {
         removeGalaxySpace();
         hand();
-        sifter();
         pulverizer();
         fluidCanner();
         centrifuge();
@@ -257,20 +256,6 @@ public class GalaxySpace implements Runnable {
         // --- Module "Stabilization"
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("GalaxySpace", "item.BasicItems", 1L, 15), tBitMask, new Object[]{"SCS", "PIP", "RFR", 'S', OrePrefixes.stick.get(Materials.VanadiumSteel), 'P', OrePrefixes.plate.get(Materials.VanadiumSteel), 'R', OrePrefixes.ring.get(Materials.VanadiumSteel), 'I', OrePrefixes.circuit.get(Materials.Advanced), 'F', ItemList.Field_Generator_MV, 'C', ItemList.Electric_Pump_HV});
 
-    }
-
-    private void sifter() {
-        RA.addSifterRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardaCdirt", 1L),
-                new ItemStack[]{GT_ModHandler.getModItem("minecraft", "sand", 1L),
-                        GT_ModHandler.getModItem("GalaxySpace", "barnardaCdandelions", 1L, 0),
-                        GT_ModHandler.getModItem("GalaxySpace", "barnardaCdandelions", 1L, 1),
-                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Gallium, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Yttrium, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Niobium, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Neutronium, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.InfinityCatalyst, 1L),
-                        GT_OreDictUnificator.get(OrePrefixes.dust, Materials.DraconiumAwakened, 1L)},
-                new int[]{5000, 2000, 2000, 600, 500, 400, 100, 30, 30}, 20, 2000000);
     }
 
     private void pulverizer() {
