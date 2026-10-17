@@ -39,8 +39,11 @@ repositories {
 dependencies {
     // impact
     implementation("space.impact:Forgelin:2.1.1")
-    implementation("space.impact:gregtech-impact:5.09.35.32:dev") { isTransitive = false }
-    implementation("space.impact:Impact-Core:1.1.0.27:dev")
+    implementation("space.impact:gregtech-impact:5.09.35.42:dev") { isTransitive = false }
+    implementation("space.impact:Impact-Core:1.1.0.27:dev") {
+        exclude(group = "space.impact", module = "VirtualWorld")
+    }
+    implementation("space.impact:VirtualWorld:2.0.4:dev") { isTransitive = false }
 
     // maven impact
     implementation("com.github.GTNewHorizons:EnderCore:0.2.7:dev")
