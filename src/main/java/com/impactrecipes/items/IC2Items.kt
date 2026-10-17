@@ -9,6 +9,9 @@ public enum class IC2Items(
 
     // Items
 
+    AdvancedAlloy(apiName = "advancedAlloy"),
+    HazmatHelmet(apiName = "hazmatHelmet"),
+    CopperBoiler(apiName = "copperboiler"),
     IridiumPlate(apiName = "iridiumPlate"),
     AdvancedHeatVent(apiName = "reactorVentDiamond"),
     OverclockerUpgrade(apiName = "overclockerUpgrade"),
@@ -36,6 +39,7 @@ public enum class IC2Items(
 
     // Blocks
 
+    RubberTrampoline(apiName = "rubberTrampoline"),
     PersonalSafe(apiName = "personalSafe"),
     ReinforcedGlass(apiName = "reinforcedGlass"),
     MachineCasing(apiName = "machine"),

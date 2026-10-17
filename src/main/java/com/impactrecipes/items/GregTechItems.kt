@@ -12,6 +12,15 @@ public enum class GregTechItems(
 
     // Items
 
+    LargeFluidCellAluminium(item = ItemList.Large_Fluid_Cell_Aluminium),
+    LargeFluidCellStainlessSteel(item = ItemList.Large_Fluid_Cell_StainlessSteel),
+    AutomationChestBufferHV(item = ItemList.Automation_ChestBuffer_HV),
+    CasingGearboxTitanium(item = ItemList.Casing_Gearbox_Titanium),
+    ShapeExtruderPipeSmall(item = ItemList.Shape_Extruder_Pipe_Small),
+    ShapeExtruderCell(item = ItemList.Shape_Extruder_Cell),
+    ShapeExtruderBolt(item = ItemList.Shape_Extruder_Bolt),
+    IngotHeavy1(item = ItemList.Ingot_Heavy1),
+    IngotHeavy2(item = ItemList.Ingot_Heavy2),
     MachineLVAssembler(item = ItemList.Machine_LV_Assembler),
     Dye00(item = ItemList.Color_00),
     Dye01(item = ItemList.Color_01),

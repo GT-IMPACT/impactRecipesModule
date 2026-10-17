@@ -7,6 +7,22 @@ public enum class VanillaItems(
 
     // Items
 
+    Apple(
+        registryName = "apple",
+        meta = 0,
+    ),
+    Carrot(
+        registryName = "carrot",
+        meta = 0,
+    ),
+    Melon(
+        registryName = "melon",
+        meta = 0,
+    ),
+    Potato(
+        registryName = "potato",
+        meta = 0,
+    ),
     Quartz(
         registryName = "quartz",
         meta = 0,

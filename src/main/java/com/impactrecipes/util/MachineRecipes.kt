@@ -1116,6 +1116,42 @@ public object MachineRecipes {
         }
     }
 
+    @JvmStatic
+    public fun extruder(
+        input: ItemStack?,
+        mold: ItemStack?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "extruder") {
+            RA.addExtruderRecipe(
+                input,
+                mold,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun extractor(
+        input: ItemStack?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "extractor") {
+            RA.addExtractorRecipe(
+                input,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
     private fun registerOperation(
         id: String,
         action: () -> Boolean,

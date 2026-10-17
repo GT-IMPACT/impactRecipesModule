@@ -15,6 +15,12 @@ public enum class ImpactItems(
 
     // Items
 
+    NaquadahCompressedPlate(item = Core_List_Items.NaquadahCompressedPlate),
+    PortableTankHV(item = GT_ItemList.Portable_Tank_HV),
+    SchematicsTier1(item = Core_List_Items.SchematicsTier1),
+    SchematicsTier2(item = Core_List_Items.SchematicsTier2),
+    SchematicsTier3(item = Core_List_Items.SchematicsTier3),
+    RawSDHCAlloy(item = Core_List_Items.RawSDHCAlloy),
     CobblestoneRod(item = Core_List_Items.CobblestoneRod),
     SandstoneRod(item = Core_List_Items.SandstoneRod),
     RedstoneIronChipset(item = GT_ItemList.RedstoneIronChipset),
