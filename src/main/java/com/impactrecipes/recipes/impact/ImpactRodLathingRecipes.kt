@@ -1,7 +1,6 @@
 package com.impactrecipes.recipes.impact
 
 import com.impactrecipes.items.AE2Items
-import com.impactrecipes.items.ForgeMicroblockItems
 import com.impactrecipes.items.ImpactItems
 import com.impactrecipes.items.VanillaItems
 import com.impactrecipes.util.MachineRecipes
@@ -31,14 +30,6 @@ internal class ImpactRodLathingRecipes {
             secondaryOutput = AE2Items.FluixDust.get(amount = 3),
             ticks = 2400,
             eu = 30,
-        )
-
-        MachineRecipes.lathe(
-            input = VanillaItems.Stone.get(),
-            output = ForgeMicroblockItems.StoneRod.get(amount = 2),
-            secondaryOutput = null,
-            ticks = 100,
-            eu = 12,
         )
     }
 }

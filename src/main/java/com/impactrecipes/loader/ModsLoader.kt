@@ -15,6 +15,7 @@ import com.impactrecipes.recipes.chisel.ChiselRegistrar
 import com.impactrecipes.recipes.enderio.EnderIORegistrar
 import com.impactrecipes.recipes.extrautilities.ExtraUtilitiesRegistrar
 import com.impactrecipes.recipes.forestry.ForestryRegistrar
+import com.impactrecipes.recipes.forgemicroblock.ForgeMicroblockRegistrar
 import com.impactrecipes.recipes.galacticraft.GalacticraftRegistrar
 import com.impactrecipes.recipes.galaxyspace.GalaxySpaceRegistrar
 import com.impactrecipes.recipes.gendustry.GendustryRegistrar
@@ -57,6 +58,7 @@ public object ModsLoader {
             ProjectRedRegistrar(),
             OpenBlocksRegistrar(),
             ImpactRegistrar(),
+            ForgeMicroblockRegistrar(),
             GalaxySpaceRegistrar(),
             GalacticraftRegistrar(),
             IC2Registrar(),
