@@ -6,6 +6,7 @@ import com.impactrecipes.recipes.architecturecraft.ArchitectureCraftRegistrar;
 import com.impactrecipes.recipes.backpack.BackpackRegistrar;
 import com.impactrecipes.recipes.chickenchunks.ChickenChunksRegistrar;
 import com.impactrecipes.recipes.chestup.ChestUpRegistrar;
+import com.impactrecipes.recipes.catwalks.CatwalksRegistrar;
 import com.impactrecipes.recipes.gregtech.GregTechRegistrar;
 import com.impactrecipes.recipes.impact.ImpactRegistrar;
 import com.impactrecipes.recipes.opencomputers.OpenComputersRegistrar;
@@ -65,7 +66,7 @@ public class ModsLoader {
         new CarpentersBlocks().run();
         RecipeRegistrars.register(new NuclearControlRegistrar());
         if (Loader.isModLoaded("EnderIO")) new Ender_IO().run();
-        new CatWalks().run();
+        RecipeRegistrars.register(new CatwalksRegistrar());
         RecipeRegistrars.register(new UndergroundBiomesRegistrar());
         new ChiselRecipes().run();
 
@@ -93,7 +94,6 @@ public class ModsLoader {
         registerRecipeClass(BiblioCraft.class);
         registerRecipeClass(CarpentersBlocks.class);
         registerRecipeClass(Ender_IO.class);
-        registerRecipeClass(CatWalks.class);
         registerRecipeClass(ChiselRecipes.class);
     
         recipesInit();

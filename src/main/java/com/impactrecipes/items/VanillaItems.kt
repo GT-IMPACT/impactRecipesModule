@@ -7,6 +7,10 @@ public enum class VanillaItems(
 
     // Items
 
+    FlintAndSteel(
+        registryName = "flint_and_steel",
+        meta = 0,
+    ),
     BoneMeal(
         registryName = "dye",
         meta = 15,
@@ -22,6 +26,10 @@ public enum class VanillaItems(
 
     // Blocks
 
+    Ladder(
+        registryName = "ladder",
+        meta = 0,
+    ),
     Cobblestone(
         registryName = "cobblestone",
         meta = 0,
