@@ -26,6 +26,10 @@ public enum class OpenComputersItems(
 
     // Blocks
 
+    Cable(
+        registryName = "cable",
+        meta = 0,
+    ),
     Item19(
         registryName = "item",
         meta = 19,

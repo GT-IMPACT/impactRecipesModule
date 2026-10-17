@@ -7,6 +7,14 @@ public enum class AE2Items(
 
     // Items
 
+    ItemItemMultiPart16(
+        registryName = "item.ItemMultiPart",
+        meta = 16,
+    ),
+    ItemItemMultiPart76(
+        registryName = "item.ItemMultiPart",
+        meta = 76,
+    ),
     PrintedCalculationCircuit(
         registryName = "item.ItemMultiMaterial",
         meta = 13,

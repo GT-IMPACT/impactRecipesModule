@@ -7,6 +7,10 @@ public enum class VanillaItems(
 
     // Items
 
+    Quartz(
+        registryName = "quartz",
+        meta = 0,
+    ),
     IronDoor(
         registryName = "iron_door",
         meta = 0,

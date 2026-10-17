@@ -18,6 +18,10 @@ public enum class GalacticraftCoreItems(
 
     // Blocks
 
+    TileArclamp(
+        registryName = "tile.arclamp",
+        meta = 0,
+    ),
     TileOxygenPipe(
         registryName = "tile.oxygenPipe",
         meta = 0,

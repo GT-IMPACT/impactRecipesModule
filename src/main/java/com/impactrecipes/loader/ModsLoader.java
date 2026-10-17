@@ -18,6 +18,7 @@ import com.impactrecipes.recipes.galaxyspace.GalaxySpaceRegistrar;
 import com.impactrecipes.recipes.malisisdoors.MalisisDoorsRegistrar;
 import com.impactrecipes.recipes.logisticspipes.LogisticsPipesRegistrar;
 import com.impactrecipes.recipes.buildcraft.BuildCraftRegistrar;
+import com.impactrecipes.recipes.enderio.EnderIORegistrar;
 import com.impactrecipes.recipes.extrautilities.ExtraUtilitiesRegistrar;
 import com.impactrecipes.recipes.jabba.JabbaRegistrar;
 import com.impactrecipes.recipes.storagedrawers.StorageDrawersRegistrar;
@@ -79,7 +80,7 @@ public class ModsLoader {
         RecipeRegistrars.register(new ArchitectureCraftRegistrar());
         RecipeRegistrars.register(new CarpentersBlocksRegistrar());
         RecipeRegistrars.register(new NuclearControlRegistrar());
-        if (Loader.isModLoaded("EnderIO")) new Ender_IO().run();
+        RecipeRegistrars.register(new EnderIORegistrar());
         RecipeRegistrars.register(new CatwalksRegistrar());
         RecipeRegistrars.register(new UndergroundBiomesRegistrar());
         RecipeRegistrars.register(new ChiselRegistrar());
@@ -94,7 +95,6 @@ public class ModsLoader {
         registerRecipeClass(ImpactCore.class);
         registerRecipeClass(GalactiCraft.class);
         registerRecipeClass(IC2.class);
-        registerRecipeClass(Ender_IO.class);
     
         recipesInit();
     }

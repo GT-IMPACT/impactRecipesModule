@@ -12,6 +12,8 @@ public enum class GregTechItems(
 
     // Items
 
+    BatteryREHVLithium(item = ItemList.Battery_RE_HV_Lithium),
+    BatteryHullLV(item = ItemList.Battery_Hull_LV),
     HullBronze(item = ItemList.Hull_Bronze),
     MVCoil(item = ItemList.MV_Coil),
     BatteryREMVLithium(item = ItemList.Battery_RE_MV_Lithium),

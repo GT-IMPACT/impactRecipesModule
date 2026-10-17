@@ -7,6 +7,10 @@ public enum class GregsLightingItems(
 
     // Blocks
 
+    Ic2ElectricFloodlight(
+        registryName = "ic2ElectricFloodlight",
+        meta = 0,
+    ),
     GlowstoneBulb(
         registryName = "glowstoneBulb",
         meta = 0,
