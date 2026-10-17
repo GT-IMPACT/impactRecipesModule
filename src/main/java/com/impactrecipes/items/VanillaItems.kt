@@ -338,6 +338,14 @@ public enum class VanillaItems(
 
     // Blocks
 
+    BlockOfQuartz(
+        registryName = "quartz_block",
+        meta = 0,
+    ),
+    RedSand(
+        registryName = "sand",
+        meta = 1,
+    ),
     LightWeightedPressurePlate(
         registryName = "light_weighted_pressure_plate",
         meta = 0,

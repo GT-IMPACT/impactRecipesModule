@@ -139,6 +139,7 @@ public enum class IC2Items(
 
     // Blocks
 
+    IndustrialTnt(apiName = "industrialTnt"),
     Generator(apiName = "generator"),
     GeothermalGenerator(apiName = "geothermalGenerator"),
     WaterMill(apiName = "waterMill"),

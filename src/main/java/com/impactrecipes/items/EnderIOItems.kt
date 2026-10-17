@@ -214,6 +214,14 @@ public enum class EnderIOItems(
 
     // Blocks
 
+    YetaWrench(
+        registryName = "itemYetaWrench",
+        meta = 0,
+    ),
+    AdvancedItemFilter(
+        registryName = "itemBasicFilterUpgrade",
+        meta = 1,
+    ),
     BlockInventoryPanel(
         block = EnderIO.blockInventoryPanel,
         meta = 0,

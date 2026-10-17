@@ -12,6 +12,18 @@ public enum class AE2StuffItems(
 
     // Blocks
 
+    PatternEncoder(
+        registryName = "Encoder",
+        meta = 0,
+    ),
+    Grower(
+        registryName = "Grower",
+        meta = 0,
+    ),
+    Inscriber(
+        registryName = "Inscriber",
+        meta = 0,
+    ),
     WirelessConnector(registryName = "Wireless");
 
     public override val modId: String = "ae2stuff"

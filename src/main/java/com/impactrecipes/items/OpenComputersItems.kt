@@ -26,6 +26,14 @@ public enum class OpenComputersItems(
 
     // Blocks
 
+    HologramProjectorTier2(
+        registryName = "hologram2",
+        meta = 0,
+    ),
+    Charger(
+        registryName = "charger",
+        meta = 0,
+    ),
     Cable(
         registryName = "cable",
         meta = 0,

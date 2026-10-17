@@ -1323,6 +1323,46 @@ public object MachineRecipes {
         }
     }
 
+    @JvmStatic
+    public fun unboxing(
+        input: ItemStack?,
+        output: ItemStack?,
+        secondaryOutput: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "unboxing") {
+            RA.addUnboxingRecipe(
+                input,
+                output,
+                secondaryOutput,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun lathe(
+        input: ItemStack?,
+        output: ItemStack?,
+        secondaryOutput: ItemStack?,
+        chances: IntArray?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "lathe") {
+            RA.addLatheRecipe(
+                input,
+                output,
+                secondaryOutput,
+                chances,
+                ticks,
+                eu,
+            )
+        }
+    }
+
     private fun registerOperation(
         id: String,
         action: () -> Boolean,

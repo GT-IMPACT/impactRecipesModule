@@ -52,7 +52,6 @@ public class ModsLoader {
         RecipeRegistrars.register(new VanillaRegistrar());
         RecipeRegistrars.register(new GregTechRegistrar());
         RecipeRegistrars.register(new AE2Registrar());
-        new AE().run();
         RecipeRegistrars.register(new BuildCraftRegistrar());
         RecipeRegistrars.register(new JabbaRegistrar());
         RecipeRegistrars.register(new OpenComputersRegistrar());
@@ -89,7 +88,6 @@ public class ModsLoader {
         RecipeRegistrars.register(new ChiselRegistrar());
 
 
-        registerRecipeClass(AE.class);
         registerRecipeClass(OpenComputers.class);
         registerRecipeClass(RailCraft.class);
         registerRecipeClass(ImpactCore.class);
