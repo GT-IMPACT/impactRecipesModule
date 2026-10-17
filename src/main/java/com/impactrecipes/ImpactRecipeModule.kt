@@ -1,11 +1,11 @@
 import com.impactrecipes.DebugCommand
 import com.impactrecipes.MODID
 import com.impactrecipes.loader.ModsLoader
+import com.impactrecipes.util.RecipeDebugConfig
 import cpw.mods.fml.common.Mod
 import cpw.mods.fml.common.event.FMLInitializationEvent
 import cpw.mods.fml.common.event.FMLPostInitializationEvent
 import cpw.mods.fml.common.event.FMLPreInitializationEvent
-import cpw.mods.fml.relauncher.Side
 import net.minecraftforge.client.ClientCommandHandler
 
 @Mod(
@@ -13,23 +13,27 @@ import net.minecraftforge.client.ClientCommandHandler
     version = "MC1710",
     modid = MODID,
     modLanguageAdapter = "net.shadowfacts.forgelin.KotlinAdapter",
-    dependencies = "required-after:forgelin; required-after:Forge; after:impact; after:IC2; after:gregtech; after:tectech; after:EnderIO;"
+    dependencies = "required-after:forgelin; required-after:Forge; after:impact; " +
+        "after:appliedenergistics2; after:ae2fc; after:IC2; after:gregtech; after:tectech; after:EnderIO;",
 )
-object ImpactRecipeModule {
+public object ImpactRecipeModule {
 
     @Mod.InstanceFactory
-    fun instance() = ImpactRecipeModule
-
-    @Mod.EventHandler
-    fun preInit(event: FMLPreInitializationEvent) {
+    public fun instance(): ImpactRecipeModule {
+        return ImpactRecipeModule
     }
 
     @Mod.EventHandler
-    fun init(event: FMLInitializationEvent) {
+    public fun preInit(event: FMLPreInitializationEvent): Unit {
+        RecipeDebugConfig.load(configDirectory = event.modConfigurationDirectory)
     }
 
     @Mod.EventHandler
-    fun postInit(event: FMLPostInitializationEvent) {
+    public fun init(event: FMLInitializationEvent): Unit {
+    }
+
+    @Mod.EventHandler
+    public fun postInit(event: FMLPostInitializationEvent): Unit {
         ClientCommandHandler.instance.registerCommand(DebugCommand())
         ModsLoader.loader()
     }
