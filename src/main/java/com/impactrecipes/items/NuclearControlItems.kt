@@ -37,7 +37,39 @@ public enum class NuclearControlItems(
         meta = 1,
     ),
 
+    Thermometer(registryName = "ItemToolThermometer"),
+    DigitalThermometer(registryName = "ItemToolDigitalThermometer"),
+    TimeCard(registryName = "ItemTimeCard"),
+    TextCard(registryName = "ItemTextCard"),
+    PortableInformationPanel(registryName = "remoteMonitor"),
+
     // Blocks
+
+    ThermalMonitor(registryName = "blockNuclearControlMain"),
+    IndustrialAlarm(
+        registryName = "blockNuclearControlMain",
+        meta = 1,
+    ),
+    HowlerAlarm(
+        registryName = "blockNuclearControlMain",
+        meta = 2,
+    ),
+    RemoteThermalMonitor(
+        registryName = "blockNuclearControlMain",
+        meta = 3,
+    ),
+    EnergyCounter(
+        registryName = "blockNuclearControlMain",
+        meta = 6,
+    ),
+    AverageCounter(
+        registryName = "blockNuclearControlMain",
+        meta = 7,
+    ),
+    RangeTrigger(
+        registryName = "blockNuclearControlMain",
+        meta = 8,
+    ),
 
     WhiteLamp(
         registryName = "blockNuclearControlLight",

@@ -12,7 +12,13 @@ public class NuclearControlRegistrar : IRecipeRegistrar {
         }
 
     public override fun register() {
+        NuclearControlRecipeRemovals().register()
         NuclearControlSensorRecipes().register()
+        NuclearControlDeviceCraftingRecipes().register()
+        NuclearControlPanelCraftingRecipes().register()
+        NuclearControlThermometerCraftingRecipes().register()
         NuclearControlPanelRecipes().register()
+        NuclearControlSensorAssemblyRecipes().register()
+        NuclearControlCardAndUpgradeAssemblyRecipes().register()
     }
 }
