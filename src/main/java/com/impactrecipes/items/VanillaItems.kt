@@ -7,6 +7,22 @@ public enum class VanillaItems(
 
     // Items
 
+    WaterBucket(
+        registryName = "water_bucket",
+        meta = 0,
+    ),
+    Snowball(
+        registryName = "snowball",
+        meta = 0,
+    ),
+    Sugar(
+        registryName = "sugar",
+        meta = 0,
+    ),
+    GlassBottle(
+        registryName = "glass_bottle",
+        meta = 0,
+    ),
     Sign(
         registryName = "sign",
         meta = 0,
@@ -74,6 +90,30 @@ public enum class VanillaItems(
 
     // Blocks
 
+    Grass(
+        registryName = "grass",
+        meta = 0,
+    ),
+    RedFlower(
+        registryName = "red_flower",
+        meta = 0,
+    ),
+    YellowFlower(
+        registryName = "yellow_flower",
+        meta = 0,
+    ),
+    Cactus(
+        registryName = "cactus",
+        meta = 0,
+    ),
+    Vine(
+        registryName = "vine",
+        meta = 0,
+    ),
+    RedstoneTorch(
+        registryName = "redstone_torch",
+        meta = 0,
+    ),
     StoneSlab(
         registryName = "stone_slab",
         meta = 0,

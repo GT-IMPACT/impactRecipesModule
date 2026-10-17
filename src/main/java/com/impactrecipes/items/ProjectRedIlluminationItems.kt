@@ -7,6 +7,10 @@ public enum class ProjectRedIlluminationItems(
 
     // Blocks
 
+    ProjectredIlluminationLamp27(
+        registryName = "projectred.illumination.lamp",
+        meta = 27,
+    ),
     ProjectredIlluminationLamp16(
         registryName = "projectred.illumination.lamp",
         meta = 16,

@@ -12,6 +12,11 @@ public enum class GregTechItems(
 
     // Items
 
+    ElectricPistonLuV(item = ItemList.Electric_Piston_LuV),
+    RobotArmLuV(item = ItemList.Robot_Arm_LuV),
+    BatteryRELVLithium(item = ItemList.Battery_RE_LV_Lithium),
+    LuVCoil(item = ItemList.LuV_Coil),
+    RobotArmZPM(item = ItemList.Robot_Arm_ZPM),
     PlankOak(item = ItemList.Plank_Oak),
     PlankSpruce(item = ItemList.Plank_Spruce),
     PlankBirch(item = ItemList.Plank_Birch),

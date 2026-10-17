@@ -15,6 +15,10 @@ public enum class ImpactItems(
 
     // Items
 
+    IridiumAlloyItemCasing(item = Core_List_Items.IridiumAlloyItemCasing),
+    IndustryFrame(item = Core_List_Items.IndustryFrame),
+    GeneticCircuit(item = GT_ItemList.GeneticCircuit),
+    EnvironmentalCircuit(item = GT_ItemList.EnvironmentalCircuit),
     ClearGlassDust(item = Core_List_Items.ClearGlassDust),
     ChargedQuartzDust(item = Core_List_Items.ChargedQuartzDust),
     LargeScreen(item = Core_List_Items.LargeScreen),

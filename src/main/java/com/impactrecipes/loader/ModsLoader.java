@@ -11,6 +11,7 @@ import com.impactrecipes.recipes.chisel.ChiselRegistrar;
 import com.impactrecipes.recipes.catwalks.CatwalksRegistrar;
 import com.impactrecipes.recipes.carpentersblocks.CarpentersBlocksRegistrar;
 import com.impactrecipes.recipes.gregtech.GregTechRegistrar;
+import com.impactrecipes.recipes.gendustry.GendustryRegistrar;
 import com.impactrecipes.recipes.impact.ImpactRegistrar;
 import com.impactrecipes.recipes.opencomputers.OpenComputersRegistrar;
 import com.impactrecipes.recipes.projectred.ProjectRedRegistrar;
@@ -57,7 +58,7 @@ public class ModsLoader {
         new ExtraUtilities().run();
         new GraviSuite().run();
         RecipeRegistrars.register(new StargateRegistrar());
-        new Gendustry().run();
+        RecipeRegistrars.register(new GendustryRegistrar());
         RecipeRegistrars.register(new ZtonesRegistrar());
         new Forestry().run();
         RecipeRegistrars.register(new ChestUpRegistrar());
@@ -90,7 +91,6 @@ public class ModsLoader {
         registerRecipeClass(IC2.class);
         registerRecipeClass(ExtraUtilities.class);
         registerRecipeClass(GraviSuite.class);
-        registerRecipeClass(Gendustry.class);
         registerRecipeClass(Forestry.class);
         registerRecipeClass(LogisticPipes.class);
         registerRecipeClass(MalisisDoors.class);

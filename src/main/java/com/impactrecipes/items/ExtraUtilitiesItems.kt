@@ -7,6 +7,10 @@ public enum class ExtraUtilitiesItems(
 
     // Blocks
 
+    DecorativeBlock27(
+        registryName = "decorativeBlock2",
+        meta = 7,
+    ),
     BlockUpdateDetector(
         registryName = "budoff",
         meta = 3,
