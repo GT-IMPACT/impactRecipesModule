@@ -204,12 +204,8 @@ internal class MalisisDeviceAssemblyRecipes {
         )
 
         MachineRecipes.assembler(
-            input = RecipeItems.ore(
-                prefix = OrePrefixes.block,
-                material = Materials.NetherQuartz,
-                count = 4,
-            ),
-            secondaryInput = VanillaItems.Door.get(),
+            input = VanillaItems.BlockOfQuartz.get(amount = 4),
+            secondaryInput = VanillaItems.WoodenDoor.get(),
             output = MalisisDoorsItems.CarriageDoor.get(),
             ticks = 200,
             eu = 30,

@@ -682,10 +682,6 @@ public enum class VanillaItems(
         registryName = "carpet",
         meta = 15,
     ),
-    Door(
-        registryName = "door",
-        meta = 0,
-    ),
     RedstoneBlock(
         registryName = "redstone_block",
         meta = 0,
