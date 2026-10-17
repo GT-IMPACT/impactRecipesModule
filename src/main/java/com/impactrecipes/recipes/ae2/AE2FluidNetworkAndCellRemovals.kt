@@ -7,13 +7,6 @@ internal class AE2FluidNetworkAndCellRemovals {
 
     internal fun register() {
         CraftingRecipes.removeCraftingRecipesByOutput(
-            output = AE2FCItems.FluidDiscretizer.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
             output = AE2FCItems.FluidPatternEncoder.get(),
             ignoreNbt = true,
             keepShapeless = false,
@@ -64,34 +57,6 @@ internal class AE2FluidNetworkAndCellRemovals {
 
         CraftingRecipes.removeCraftingRecipesByOutput(
             output = AE2FCItems.MELevelMaintainer.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
-            output = AE2FCItems.PartFluidPatternTerminal.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
-            output = AE2FCItems.PartFluidPatternTerminalEx.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
-            output = AE2FCItems.PartFluidConversionMonitor.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
-            output = AE2FCItems.PartFluidStorageMonitor.get(),
             ignoreNbt = true,
             keepShapeless = false,
             nativeOnly = false,

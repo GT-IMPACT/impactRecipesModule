@@ -7,22 +7,6 @@ public enum class AE2FCItems(
 
     // Items
 
-    PartFluidPatternTerminal(
-        registryName = "part_fluid_pattern_terminal",
-        meta = 0,
-    ),
-    PartFluidPatternTerminalEx(
-        registryName = "part_fluid_pattern_terminal_ex",
-        meta = 0,
-    ),
-    PartFluidConversionMonitor(
-        registryName = "part_fluid_conversion_monitor",
-        meta = 0,
-    ),
-    PartFluidStorageMonitor(
-        registryName = "part_fluid_storage_monitor",
-        meta = 0,
-    ),
     MEFluidImportBus(
         registryName = "part_fluid_import",
         meta = 0,
@@ -123,10 +107,6 @@ public enum class AE2FCItems(
         registryName = "portable_fluid_cell",
         meta = 0,
     ),
-    PartFluidTerminal(
-        registryName = "part_fluid_terminal",
-        meta = 0,
-    ),
     MEAdvancedFluidStorageHousing(
         registryName = "fluid_storage_housing",
         meta = 1,
@@ -139,10 +119,6 @@ public enum class AE2FCItems(
         registryName = "fluid_storage_housing",
         meta = 3,
     ),
-    PartFluidLevelEmitter(
-        registryName = "part_fluid_level_emitter",
-        meta = 0,
-    ),
     MEFluidQuantumStorageCell(
         registryName = "fluid_storage.quantum",
         meta = 0,
@@ -153,10 +129,6 @@ public enum class AE2FCItems(
     ),
     WirelessInterfaceTerminal(
         registryName = "wireless_interface_terminal",
-        meta = 0,
-    ),
-    WirelessFluidTerminal(
-        registryName = "wireless_fluid_terminal",
         meta = 0,
     ),
     WirelessLevelTerminal(
@@ -180,10 +152,6 @@ public enum class AE2FCItems(
 
     // Blocks
 
-    FluidDiscretizer(
-        registryName = "fluid_discretizer",
-        meta = 0,
-    ),
     FluidPatternEncoder(
         registryName = "fluid_pattern_encoder",
         meta = 0,

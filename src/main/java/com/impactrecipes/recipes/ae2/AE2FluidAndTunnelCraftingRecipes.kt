@@ -13,26 +13,6 @@ internal class AE2FluidAndTunnelCraftingRecipes {
 
     internal fun register() {
         CraftingRecipes.shapedWithFlags(
-            output = AE2FCItems.PartFluidTerminal.get(),
-            flags = craftingFlags,
-            recipe = arrayOf<Any?>(
-                "PAP",
-                "FTY",
-                "PAP",
-                'P',
-                OrePrefixes.plate.get(Materials.Lapis),
-                'A',
-                AE2Items.ItemItemMultiPart16.get(),
-                'F',
-                AE2Items.FormationCore.get(),
-                'Y',
-                AE2Items.AnnihilationCore.get(),
-                'T',
-                AE2Items.METerminal.get(),
-            ),
-        )
-
-        CraftingRecipes.shapedWithFlags(
             output = AE2FCItems.LevelTerminal.get(),
             flags = craftingFlags,
             recipe = arrayOf<Any?>(

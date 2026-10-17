@@ -67,18 +67,6 @@ internal class AE2AddonComponentAssemblyRecipes {
         )
 
         MachineRecipes.assembler(
-            input = AE2Items.LevelEmitter.get(),
-            secondaryInput = RecipeItems.ore(
-                prefix = OrePrefixes.plate,
-                material = Materials.Lapis,
-                count = 1,
-            ),
-            output = AE2FCItems.PartFluidLevelEmitter.get(),
-            ticks = 100,
-            eu = 120,
-        )
-
-        MachineRecipes.assembler(
             inputs = arrayOf(
                 VanillaItems.GlassPane.get(),
                 RecipeItems.ore(

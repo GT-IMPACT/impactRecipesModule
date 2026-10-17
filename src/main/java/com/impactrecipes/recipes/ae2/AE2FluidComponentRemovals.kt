@@ -84,13 +84,6 @@ internal class AE2FluidComponentRemovals {
         )
 
         CraftingRecipes.removeCraftingRecipesByOutput(
-            output = AE2FCItems.PartFluidTerminal.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
             output = AE2FCItems.FluidStorageHousing.get(),
             ignoreNbt = true,
             keepShapeless = false,
@@ -119,20 +112,6 @@ internal class AE2FluidComponentRemovals {
         )
 
         CraftingRecipes.removeCraftingRecipesByOutput(
-            output = AE2FCItems.PartFluidTerminal.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
-            output = AE2FCItems.PartFluidLevelEmitter.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
             output = AE2FCItems.MEFluidQuantumStorageCell.get(),
             ignoreNbt = true,
             keepShapeless = false,
@@ -155,13 +134,6 @@ internal class AE2FluidComponentRemovals {
 
         CraftingRecipes.removeCraftingRecipesByOutput(
             output = AE2FCItems.WirelessInterfaceTerminal.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
-            output = AE2FCItems.WirelessFluidTerminal.get(),
             ignoreNbt = true,
             keepShapeless = false,
             nativeOnly = false,

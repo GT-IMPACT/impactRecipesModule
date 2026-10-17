@@ -187,52 +187,11 @@ internal class AE2TerminalAssemblyRecipes {
         MachineRecipes.assembler(
             inputs = arrayOf(
                 AE2Items.WirelessTerminal.get(),
-                AE2FCItems.PartFluidPatternTerminal.get(),
-            ),
-            fluid = null,
-            output = AE2FCItems.WirelessPatternTerminal.get(),
-            ticks = 600,
-            eu = 120,
-        )
-
-        MachineRecipes.assembler(
-            inputs = arrayOf(
-                AE2Items.WirelessTerminal.get(),
                 AE2Items.MEInterfaceTerminal.get(),
             ),
             fluid = null,
             output = AE2FCItems.WirelessInterfaceTerminal.get(),
             ticks = 600,
-            eu = 120,
-        )
-
-        MachineRecipes.assembler(
-            inputs = arrayOf(
-                AE2Items.MEConversionMonitor.get(),
-                RecipeItems.ore(
-                    prefix = OrePrefixes.plate,
-                    material = Materials.Lapis,
-                    count = 3,
-                ),
-            ),
-            fluid = null,
-            output = AE2FCItems.PartFluidConversionMonitor.get(),
-            ticks = 300,
-            eu = 120,
-        )
-
-        MachineRecipes.assembler(
-            inputs = arrayOf(
-                AE2Items.StorageMonitor.get(),
-                RecipeItems.ore(
-                    prefix = OrePrefixes.plate,
-                    material = Materials.Lapis,
-                    count = 3,
-                ),
-            ),
-            fluid = null,
-            output = AE2FCItems.PartFluidStorageMonitor.get(),
-            ticks = 300,
             eu = 120,
         )
 

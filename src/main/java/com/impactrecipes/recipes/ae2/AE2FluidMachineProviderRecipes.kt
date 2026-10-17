@@ -15,28 +15,6 @@ internal class AE2FluidMachineProviderRecipes {
     internal fun register() {
         MachineRecipes.meSystemProvider(
             inputs = arrayOf(
-                RecipeItems.ore(
-                    prefix = OrePrefixes.frameGt,
-                    material = Materials.VanadiumSteel,
-                    count = 1,
-                ),
-                GregTechItems.ElectricPumpEV.get(),
-                AE2Items.StorageBus.get(amount = 2),
-                ImpactItems.EngineeringProcessorFluidDiamondCore.get(amount = 2),
-                RecipeItems.ore(
-                    prefix = OrePrefixes.plate,
-                    material = Materials.MaragingSteel300,
-                    count = 4,
-                ),
-            ),
-            output = AE2FCItems.FluidDiscretizer.get(),
-            ticks = 40 * 20,
-            eu = 7680,
-            particles = 1000,
-        )
-
-        MachineRecipes.meSystemProvider(
-            inputs = arrayOf(
                 AE2StuffItems.PatternEncoder.get(),
                 GregTechItems.MachineHVAssembler.get(),
                 ImpactItems.EngineeringProcessorFluidDiamondCore.get(amount = 2),
@@ -210,42 +188,6 @@ internal class AE2FluidMachineProviderRecipes {
             ticks = 30 * 20,
             eu = 1920,
             particles = 8000,
-        )
-
-        MachineRecipes.meSystemProvider(
-            inputs = arrayOf(
-                AE2Items.MEPatternTerminal.get(),
-                ImpactItems.EngineeringProcessorFluidDiamondCore.get(),
-                AE2Items.CalculationProcessor.get(),
-                GregTechItems.ElectricPumpEV.get(amount = 2),
-                RecipeItems.ore(
-                    prefix = OrePrefixes.plate,
-                    material = Materials.MaragingSteel300,
-                    count = 4,
-                ),
-            ),
-            output = AE2FCItems.PartFluidPatternTerminal.get(),
-            ticks = 20 * 20,
-            eu = 1920,
-            particles = 400,
-        )
-
-        MachineRecipes.meSystemProvider(
-            inputs = arrayOf(
-                AE2Items.MEProcessingPatternTerminal.get(),
-                ImpactItems.EngineeringProcessorFluidEmeraldCore.get(),
-                AE2Items.CalculationProcessor.get(),
-                GregTechItems.ElectricPumpIV.get(amount = 2),
-                RecipeItems.ore(
-                    prefix = OrePrefixes.plateDouble,
-                    material = Materials.MaragingSteel300,
-                    count = 4,
-                ),
-            ),
-            output = AE2FCItems.PartFluidPatternTerminalEx.get(),
-            ticks = 40 * 20,
-            eu = 7680,
-            particles = 800,
         )
 
         MachineRecipes.meSystemProvider(
