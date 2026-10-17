@@ -18,6 +18,8 @@
 eclipse/
 out/
 build/
+qa/
+tools/
 idea/
 .idea/
 .gradle/
