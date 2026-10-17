@@ -1,6 +1,7 @@
 package com.impactrecipes.loader;
 
 import com.impactrecipes.recipes.*;
+import com.impactrecipes.recipes.architecturecraft.ArchitectureCraftRegistrar;
 import com.impactrecipes.recipes.laser.LaserEngraver;
 
 import static com.impactrecipes.RecipeKotlinKt.recipesInit;
@@ -45,7 +46,7 @@ public class ModsLoader {
         new Backpack().run();
         new BiblioCraft().run();
         new ChickenChunks().run();
-        new ArchitectureCraft().run();
+        RecipeRegistrars.register(new ArchitectureCraftRegistrar());
         new CarpentersBlocks().run();
         new NuclearControl().run();
         if (Loader.isModLoaded("EnderIO")) new Ender_IO().run();
@@ -83,7 +84,6 @@ public class ModsLoader {
         registerRecipeClass(Backpack.class);
         registerRecipeClass(BiblioCraft.class);
         registerRecipeClass(ChickenChunks.class);
-        registerRecipeClass(ArchitectureCraft.class);
         registerRecipeClass(CarpentersBlocks.class);
         registerRecipeClass(NuclearControl.class);
         registerRecipeClass(Ender_IO.class);
