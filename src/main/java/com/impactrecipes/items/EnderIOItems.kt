@@ -1,17 +1,9 @@
 package com.impactrecipes.items
 
-import crazypants.enderio.EnderIO
-import crazypants.enderio.item.darksteel.DarkSteelItems
-import com.impactrecipes.util.RecipeItems
-import net.minecraft.block.Block
-import net.minecraft.item.Item
-import net.minecraft.item.ItemStack
-
 public enum class EnderIOItems(
-    private val item: Item?,
-    private val registryName: String?,
-    private val meta: Int,
-) : IModItem {
+    public override val registryName: String,
+    public override val meta: Int = 0,
+) : IRegistryModItem {
 
     // Items
 
@@ -32,183 +24,183 @@ public enum class EnderIOItems(
         meta = 0,
     ),
     FunctionUpgrade(
-        item = EnderIO.itemFunctionUpgrade,
+        registryName = "itemFunctionUpgrade",
         meta = 0,
     ),
     ItemConduit(
-        item = EnderIO.itemItemConduit,
+        registryName = "itemItemConduit",
         meta = 0,
     ),
     LiquidConduit(
-        item = EnderIO.itemLiquidConduit,
+        registryName = "itemLiquidConduit",
         meta = 0,
     ),
     YetaWench(
-        item = EnderIO.itemYetaWench,
+        registryName = "itemYetaWrench",
         meta = 0,
     ),
     BigFilterUpgrade(
-        item = EnderIO.itemBigFilterUpgrade,
+        registryName = "itemBigFilterUpgrade",
         meta = 0,
     ),
     BigFilterUpgrade1(
-        item = EnderIO.itemBigFilterUpgrade,
+        registryName = "itemBigFilterUpgrade",
         meta = 1,
     ),
     PowerItemFilter(
-        item = EnderIO.itemPowerItemFilter,
+        registryName = "itemPowerItemFilter",
         meta = 0,
     ),
     OCConduit(
-        item = EnderIO.itemOCConduit,
+        registryName = "itemOCConduit",
         meta = 0,
     ),
     TravelStaff16(
-        item = EnderIO.itemTravelStaff,
+        registryName = "itemTravelStaff",
         meta = 16,
     ),
     Material2(
-        item = EnderIO.itemMaterial,
+        registryName = "itemMaterial",
         meta = 2,
     ),
     EnderFood(
-        item = EnderIO.itemEnderFood,
+        registryName = "itemEnderFood",
         meta = 0,
     ),
     CoordSelector(
-        item = EnderIO.itemCoordSelector,
+        registryName = "itemCoordSelector",
         meta = 0,
     ),
     BasicCapacitor(
-        item = EnderIO.itemBasicCapacitor,
+        registryName = "itemBasicCapacitor",
         meta = 0,
     ),
     BasicCapacitor1(
-        item = EnderIO.itemBasicCapacitor,
+        registryName = "itemBasicCapacitor",
         meta = 1,
     ),
     BasicCapacitor2(
-        item = EnderIO.itemBasicCapacitor,
+        registryName = "itemBasicCapacitor",
         meta = 2,
     ),
     ConduitProbe(
-        item = EnderIO.itemConduitProbe,
+        registryName = "itemConduitProbe",
         meta = 0,
     ),
     XpTransfer(
-        item = EnderIO.itemXpTransfer,
+        registryName = "itemXpTransfer",
         meta = 0,
     ),
     SoulVessel(
-        item = EnderIO.itemSoulVessel,
+        registryName = "itemSoulVessel",
         meta = 0,
     ),
     BasicFilterUpgrade(
-        item = EnderIO.itemBasicFilterUpgrade,
+        registryName = "itemBasicFilterUpgrade",
         meta = 0,
     ),
     BasicFilterUpgrade1(
-        item = EnderIO.itemBasicFilterUpgrade,
+        registryName = "itemBasicFilterUpgrade",
         meta = 1,
     ),
     ModItemFilter(
-        item = EnderIO.itemModItemFilter,
+        registryName = "itemModItemFilter",
         meta = 0,
     ),
     RedstoneConduit(
-        item = EnderIO.itemRedstoneConduit,
+        registryName = "itemRedstoneConduit",
         meta = 0,
     ),
     RedstoneConduit1(
-        item = EnderIO.itemRedstoneConduit,
+        registryName = "itemRedstoneConduit",
         meta = 1,
     ),
     RedstoneConduit2(
-        item = EnderIO.itemRedstoneConduit,
+        registryName = "itemRedstoneConduit",
         meta = 2,
     ),
     PowerConduit(
-        item = EnderIO.itemPowerConduit,
+        registryName = "itemPowerConduit",
         meta = 0,
     ),
     PowerConduit1(
-        item = EnderIO.itemPowerConduit,
+        registryName = "itemPowerConduit",
         meta = 1,
     ),
     PowerConduit2(
-        item = EnderIO.itemPowerConduit,
+        registryName = "itemPowerConduit",
         meta = 2,
     ),
     LiquidConduit1(
-        item = EnderIO.itemLiquidConduit,
+        registryName = "itemLiquidConduit",
         meta = 1,
     ),
     LiquidConduit2(
-        item = EnderIO.itemLiquidConduit,
+        registryName = "itemLiquidConduit",
         meta = 2,
     ),
     MEConduit(
-        item = EnderIO.itemMEConduit,
+        registryName = "itemMEConduit",
         meta = 0,
     ),
     MEConduit1(
-        item = EnderIO.itemMEConduit,
+        registryName = "itemMEConduit",
         meta = 1,
     ),
     MachinePart1(
-        item = EnderIO.itemMachinePart,
+        registryName = "itemMachinePart",
         meta = 1,
     ),
     Material7(
-        item = EnderIO.itemMaterial,
+        registryName = "itemMaterial",
         meta = 7,
     ),
     MachinePart(
-        item = EnderIO.itemMachinePart,
+        registryName = "itemMachinePart",
         meta = 0,
     ),
     Material6(
-        item = EnderIO.itemMaterial,
+        registryName = "itemMaterial",
         meta = 6,
     ),
     Material5(
-        item = EnderIO.itemMaterial,
+        registryName = "itemMaterial",
         meta = 5,
     ),
     PowderIngot(
-        item = EnderIO.itemPowderIngot,
+        registryName = "itemPowderIngot",
         meta = 0,
     ),
     Material3(
-        item = EnderIO.itemMaterial,
+        registryName = "itemMaterial",
         meta = 3,
     ),
     Material4(
-        item = EnderIO.itemMaterial,
+        registryName = "itemMaterial",
         meta = 4,
     ),
     ExtractSpeedUpgrade(
-        item = EnderIO.itemExtractSpeedUpgrade,
+        registryName = "itemExtractSpeedUpgrade",
         meta = 0,
     ),
     ExtractSpeedUpgrade1(
-        item = EnderIO.itemExtractSpeedUpgrade,
+        registryName = "itemExtractSpeedUpgrade",
         meta = 1,
     ),
     Material1(
-        item = EnderIO.itemMaterial,
+        registryName = "itemMaterial",
         meta = 1,
     ),
     GliderWing(
-        item = DarkSteelItems.itemGliderWing,
+        registryName = "itemGliderWing",
         meta = 0,
     ),
     GliderWing1(
-        item = DarkSteelItems.itemGliderWing,
+        registryName = "itemGliderWing",
         meta = 1,
     ),
     Magnet16(
-        item = DarkSteelItems.itemMagnet,
+        registryName = "itemMagnet",
         meta = 16,
     ),
     YetaWrench(
@@ -231,273 +223,229 @@ public enum class EnderIOItems(
         meta = 1,
     ),
     BlockInventoryPanel(
-        block = EnderIO.blockInventoryPanel,
+        registryName = "blockInventoryPanel",
         meta = 0,
     ),
     TravelPlatform(
-        block = EnderIO.blockTravelPlatform,
+        registryName = "blockTravelAnchor",
         meta = 0,
     ),
     TelePad(
-        block = EnderIO.blockTelePad,
+        registryName = "blockTelePad",
         meta = 0,
     ),
     Transceiver(
-        block = EnderIO.blockTransceiver,
+        registryName = "blockTransceiver",
         meta = 0,
     ),
     KillerJoe(
-        block = EnderIO.blockKillerJoe,
+        registryName = "blockKillerJoe",
         meta = 0,
     ),
     EnderRail(
-        block = EnderIO.blockEnderRail,
+        registryName = "blockEnderRail",
         meta = 0,
     ),
     EnderIo(
-        block = EnderIO.blockEnderIo,
+        registryName = "blockEnderIo",
         meta = 0,
     ),
     AlloySmelter(
-        block = EnderIO.blockAlloySmelter,
+        registryName = "blockAlloySmelter",
         meta = 0,
     ),
     Crusher(
-        block = EnderIO.blockCrusher,
+        registryName = "blockSagMill",
         meta = 0,
     ),
     PowerMonitor(
-        block = EnderIO.blockPowerMonitor,
+        registryName = "blockPowerMonitor",
         meta = 0,
     ),
     Vat(
-        block = EnderIO.blockVat,
+        registryName = "blockVat",
         meta = 0,
     ),
     WirelessCharger(
-        block = EnderIO.blockWirelessCharger,
+        registryName = "blockWirelessCharger",
         meta = 0,
     ),
     ZombieGenerator(
-        block = EnderIO.blockZombieGenerator,
+        registryName = "blockZombieGenerator",
         meta = 0,
     ),
     SolarPanel(
-        block = EnderIO.blockSolarPanel,
+        registryName = "blockSolarPanel",
         meta = 0,
     ),
     SolarPanel1(
-        block = EnderIO.blockSolarPanel,
+        registryName = "blockSolarPanel",
         meta = 1,
     ),
     SolarPanel2(
-        block = EnderIO.blockSolarPanel,
+        registryName = "blockSolarPanel",
         meta = 2,
     ),
     SpawnGuard(
-        block = EnderIO.blockSpawnGuard,
+        registryName = "blockSpawnGuard",
         meta = 0,
     ),
     WeatherObelisk(
-        block = EnderIO.blockWeatherObelisk,
+        registryName = "blockWeatherObelisk",
         meta = 0,
     ),
     Buffer(
-        block = EnderIO.blockBuffer,
+        registryName = "blockBuffer",
         meta = 0,
     ),
     Buffer1(
-        block = EnderIO.blockBuffer,
+        registryName = "blockBuffer",
         meta = 1,
     ),
     Buffer2(
-        block = EnderIO.blockBuffer,
+        registryName = "blockBuffer",
         meta = 2,
     ),
     Buffer3(
-        block = EnderIO.blockBuffer,
+        registryName = "blockBuffer",
         meta = 3,
     ),
     ReinforcedObsidian(
-        block = EnderIO.blockReinforcedObsidian,
+        registryName = "blockReinforcedObsidian",
         meta = 0,
     ),
     Enchanter(
-        block = EnderIO.blockEnchanter,
+        registryName = "blockEnchanter",
         meta = 0,
     ),
     BlockDarkIronBars(
-        block = EnderIO.blockDarkIronBars,
+        registryName = "blockDarkIronBars",
         meta = 0,
     ),
     DarkSteelPressurePlate(
-        block = EnderIO.blockDarkSteelPressurePlate,
+        registryName = "blockDarkSteelPressurePlate",
         meta = 0,
     ),
     VacuumChest(
-        block = EnderIO.blockVacuumChest,
+        registryName = "blockVacuumChest",
         meta = 0,
     ),
     CapBank1(
-        block = EnderIO.blockCapBank,
+        registryName = "blockCapBank",
         meta = 1,
     ),
     CapBank2(
-        block = EnderIO.blockCapBank,
+        registryName = "blockCapBank",
         meta = 2,
     ),
     CapBank3(
-        block = EnderIO.blockCapBank,
+        registryName = "blockCapBank",
         meta = 3,
     ),
     Painter(
-        block = EnderIO.blockPainter,
+        registryName = "blockPainter",
         meta = 0,
     ),
     Crafter(
-        block = EnderIO.blockCrafter,
+        registryName = "blockCrafter",
         meta = 0,
     ),
     FarmStation(
-        block = EnderIO.blockFarmStation,
+        registryName = "blockFarmStation",
         meta = 0,
     ),
     CombustionGenerator(
-        block = EnderIO.blockCombustionGenerator,
+        registryName = "blockCombustionGenerator",
         meta = 0,
     ),
     StirlingGenerator(
-        block = EnderIO.blockStirlingGenerator,
+        registryName = "blockStirlingGenerator",
         meta = 0,
     ),
     Reservoir(
-        block = EnderIO.blockReservoir,
+        registryName = "blockReservoir",
         meta = 0,
     ),
     ElectricLight(
-        block = EnderIO.blockElectricLight,
+        registryName = "blockElectricLight",
         meta = 0,
     ),
     ElectricLight1(
-        block = EnderIO.blockElectricLight,
+        registryName = "blockElectricLight",
         meta = 1,
     ),
     ElectricLight2(
-        block = EnderIO.blockElectricLight,
+        registryName = "blockElectricLight",
         meta = 2,
     ),
     ElectricLight3(
-        block = EnderIO.blockElectricLight,
+        registryName = "blockElectricLight",
         meta = 3,
     ),
     ElectricLight4(
-        block = EnderIO.blockElectricLight,
+        registryName = "blockElectricLight",
         meta = 4,
     ),
     ElectricLight5(
-        block = EnderIO.blockElectricLight,
+        registryName = "blockElectricLight",
         meta = 5,
     ),
     Attractor(
-        block = EnderIO.blockAttractor,
+        registryName = "blockAttractor",
         meta = 0,
     ),
     ExperianceOblisk(
-        block = EnderIO.blockExperianceOblisk,
+        registryName = "blockExperienceObelisk",
         meta = 0,
     ),
     SliceAndSplice(
-        block = EnderIO.blockSliceAndSplice,
+        registryName = "blockSliceAndSplice",
         meta = 0,
     ),
     SoulFuser(
-        block = EnderIO.blockSoulFuser,
+        registryName = "blockSoulBinder",
         meta = 0,
     ),
     PoweredSpawner(
-        block = EnderIO.blockPoweredSpawner,
+        registryName = "blockPoweredSpawner",
         meta = 0,
     ),
     Tank(
-        block = EnderIO.blockTank,
+        registryName = "blockTank",
         meta = 0,
     ),
     Tank1(
-        block = EnderIO.blockTank,
+        registryName = "blockTank",
         meta = 1,
     ),
     DarkSteelAnvil(
-        block = EnderIO.blockDarkSteelAnvil,
+        registryName = "blockDarkSteelAnvil",
         meta = 0,
     ),
     FrankenZombieGenerator(
-        block = EnderIO.blockFrankenZombieGenerator,
+        registryName = "blockFrankenzombieGenerator",
         meta = 0,
     ),
     EnderGenerator(
-        block = EnderIO.blockEnderGenerator,
+        registryName = "blockEnderGenerator",
         meta = 0,
     ),
     FusedQuartz(
-        block = EnderIO.blockFusedQuartz,
+        registryName = "blockFusedQuartz",
         meta = 0,
     ),
     FusedQuartz2(
-        block = EnderIO.blockFusedQuartz,
+        registryName = "blockFusedQuartz",
         meta = 2,
     ),
     FusedQuartz1(
-        block = EnderIO.blockFusedQuartz,
+        registryName = "blockFusedQuartz",
         meta = 1,
     ),
     FusedQuartz3(
-        block = EnderIO.blockFusedQuartz,
+        registryName = "blockFusedQuartz",
         meta = 3,
     );
 
-    public val modId: String = "EnderIO"
-
-    constructor(
-        item: Item,
-        meta: Int = 0,
-    ) : this(
-        item = item,
-        registryName = null,
-        meta = meta,
-    )
-
-    constructor(
-        block: Block,
-        meta: Int = 0,
-    ) : this(
-        item = Item.getItemFromBlock(block),
-        meta = meta,
-    )
-
-    constructor(
-        registryName: String,
-        meta: Int = 0,
-    ) : this(
-        item = null,
-        registryName = registryName,
-        meta = meta,
-    )
-
-    public override fun get(amount: Int): ItemStack? {
-        if (item != null) {
-            return ItemStack(
-                item,
-                amount,
-                meta,
-            )
-        }
-
-        val name = registryName ?: return null
-        return RecipeItems.item(
-            mod = modId,
-            name = name,
-            meta = meta,
-            count = amount,
-        )
-    }
+    public override val modId: String = "EnderIO"
 }
