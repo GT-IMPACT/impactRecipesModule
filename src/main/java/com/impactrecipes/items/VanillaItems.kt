@@ -7,6 +7,18 @@ public enum class VanillaItems(
 
     // Items
 
+    Sign(
+        registryName = "sign",
+        meta = 0,
+    ),
+    GlowstoneDust(
+        registryName = "glowstone_dust",
+        meta = 0,
+    ),
+    Redstone(
+        registryName = "redstone",
+        meta = 0,
+    ),
     Coal1(
         registryName = "coal",
         meta = 1,

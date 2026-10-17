@@ -15,6 +15,8 @@ public enum class ImpactItems(
 
     // Items
 
+    ClearGlassDust(item = Core_List_Items.ClearGlassDust),
+    ChargedQuartzDust(item = Core_List_Items.ChargedQuartzDust),
     LargeScreen(item = Core_List_Items.LargeScreen),
     StargateCrystalDust(item = Core_List_Items.StargateCrystalDust),
     StargateShieldingFoil(item = Core_List_Items.StargateShieldingFoil),

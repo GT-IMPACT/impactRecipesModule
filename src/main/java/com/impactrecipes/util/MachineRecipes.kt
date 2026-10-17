@@ -10,6 +10,25 @@ import net.minecraftforge.fluids.FluidStack
 public object MachineRecipes {
 
     @JvmStatic
+    public fun alloySmelter(
+        input: ItemStack?,
+        secondaryInput: ItemStack?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "alloy smelter") {
+            RA.addAlloySmelterRecipe(
+                input,
+                secondaryInput,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
     public fun forgeHammer(
         input: ItemStack?,
         output: ItemStack?,

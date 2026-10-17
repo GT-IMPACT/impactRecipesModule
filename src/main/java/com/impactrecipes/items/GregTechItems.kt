@@ -1,10 +1,13 @@
 package com.impactrecipes.items
 
+import com.impactrecipes.util.RecipeItems
 import gregtech.api.enums.ItemList
 import net.minecraft.item.ItemStack
 
 public enum class GregTechItems(
-    private val item: ItemList,
+    private val item: ItemList?,
+    private val registryName: String?,
+    private val meta: Int,
 ) : IModItem {
 
     // Items
@@ -250,6 +253,10 @@ public enum class GregTechItems(
 
     // Blocks
 
+    LightConcrete(
+        registryName = "gt.blockconcretes",
+        meta = 8,
+    ),
     CasingAirFilter(item = ItemList.Casing_AirFilter),
     CasingAirFilterVent(item = ItemList.Casing_AirFilter_Vent),
     CasingAssembler(item = ItemList.Casing_Assembler),
@@ -365,7 +372,34 @@ public enum class GregTechItems(
     SuperTankMV(item = ItemList.Super_Tank_MV),
     SuperTankULV(item = ItemList.Super_Tank_ULV);
 
+    public val modId: String = "gregtech"
+
+    constructor(item: ItemList) : this(
+        item = item,
+        registryName = null,
+        meta = 0,
+    )
+
+    constructor(
+        registryName: String,
+        meta: Int = 0,
+    ) : this(
+        item = null,
+        registryName = registryName,
+        meta = meta,
+    )
+
     public override fun get(amount: Int): ItemStack? {
-        return item.get(amount.toLong())?.copy()
+        if (item != null) {
+            return item.get(amount.toLong())?.copy()
+        }
+
+        val name = registryName ?: return null
+        return RecipeItems.item(
+            mod = modId,
+            name = name,
+            meta = meta,
+            count = amount,
+        )
     }
 }
