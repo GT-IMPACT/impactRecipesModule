@@ -7,6 +7,18 @@ public enum class ProjectRedIlluminationItems(
 
     // Blocks
 
+    InvertedGreenLamp(
+        registryName = "projectred.illumination.lamp",
+        meta = 29,
+    ),
+    InvertedYellowLamp(
+        registryName = "projectred.illumination.lamp",
+        meta = 20,
+    ),
+    InvertedRedLamp(
+        registryName = "projectred.illumination.lamp",
+        meta = 30,
+    ),
     ProjectredIlluminationLamp(
         registryName = "projectred.illumination.lamp",
         meta = 0,

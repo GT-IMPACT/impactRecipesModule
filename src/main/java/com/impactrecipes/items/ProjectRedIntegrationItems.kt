@@ -7,6 +7,10 @@ public enum class ProjectRedIntegrationItems(
 
     // Blocks
 
+    Repeater(
+        registryName = "projectred.integration.gate",
+        meta = 10,
+    ),
     ProjectredIntegrationGate26(
         registryName = "projectred.integration.gate",
         meta = 26,

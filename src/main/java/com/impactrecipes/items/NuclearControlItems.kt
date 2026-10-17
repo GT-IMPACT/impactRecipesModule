@@ -39,6 +39,10 @@ public enum class NuclearControlItems(
 
     // Blocks
 
+    WhiteLamp(
+        registryName = "blockNuclearControlLight",
+        meta = 0,
+    ),
     IndustrialInformationPanel(
         registryName = "blockNuclearControlMain",
         meta = 4,

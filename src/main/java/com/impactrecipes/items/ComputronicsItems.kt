@@ -7,6 +7,18 @@ public enum class ComputronicsItems(
 
     // Blocks
 
+    DigitalSignalReceiverBox(
+        registryName = "computronics.digitalReceiverBox",
+        meta = 0,
+    ),
+    DigitalSignalControllerBox(
+        registryName = "computronics.digitalControllerBox",
+        meta = 0,
+    ),
+    DigitalLocomotiveRelay(
+        registryName = "computronics.locomotiveRelay",
+        meta = 0,
+    ),
     CipherBlock(
         registryName = "computronics.cipher",
         meta = 0,

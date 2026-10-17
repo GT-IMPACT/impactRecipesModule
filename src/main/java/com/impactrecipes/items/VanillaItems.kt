@@ -7,6 +7,22 @@ public enum class VanillaItems(
 
     // Items
 
+    Minecart(
+        registryName = "minecart",
+        meta = 0,
+    ),
+    Shears(
+        registryName = "shears",
+        meta = 0,
+    ),
+    ChestMinecart(
+        registryName = "chest_minecart",
+        meta = 0,
+    ),
+    GoldenCarrot(
+        registryName = "golden_carrot",
+        meta = 0,
+    ),
     FilledMap(
         registryName = "filled_map",
         meta = 0,
@@ -342,6 +358,26 @@ public enum class VanillaItems(
 
     // Blocks
 
+    Rail(
+        registryName = "rail",
+        meta = 0,
+    ),
+    GoldenRail(
+        registryName = "golden_rail",
+        meta = 0,
+    ),
+    DetectorRail(
+        registryName = "detector_rail",
+        meta = 0,
+    ),
+    ActivatorRail(
+        registryName = "activator_rail",
+        meta = 0,
+    ),
+    GlassPane32767(
+        registryName = "glass_pane",
+        meta = 32767,
+    ),
     Tnt(
         registryName = "tnt",
         meta = 0,

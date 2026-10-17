@@ -3,6 +3,7 @@ package com.impactrecipes.items
 import com.impact.common.item.Core_List_Items
 import com.impact.loader.ItemRegistery.IGlassBlock
 import com.impact.mods.gregtech.GT_ItemList
+import com.impact.loader.ItemRegistery.UtilBlock
 import net.minecraft.block.Block
 import net.minecraft.item.ItemStack
 
@@ -15,6 +16,15 @@ public enum class ImpactItems(
 
     // Items
 
+    ExtruderShapeRail(item = Core_List_Items.ExtruderShapeRail),
+    AdvancedMixIngot(item = Core_List_Items.AdvancedMixIngot),
+    ElectricMixIngot(item = Core_List_Items.ElectricMixIngot),
+    ReinforcedMixIngot(item = Core_List_Items.ReinforcedMixIngot),
+    HSMixIngot(item = Core_List_Items.HSMixIngot),
+    RailAssemblerCasing(item = GT_ItemList.RailAssemblerCasing),
+    RailAssembler(item = GT_ItemList.Rail_Assembler),
+    ConcreteTie(item = Core_List_Items.ConcreteTie),
+    ConcreteRailbed(item = Core_List_Items.ConcreteRailbed),
     CUBoard(item = Core_List_Items.CUBoard),
     ALUBoard(item = Core_List_Items.ALUBoard),
     RedstonePulsatingChipset(item = GT_ItemList.RedstonePulsatingChipset),
@@ -227,6 +237,10 @@ public enum class ImpactItems(
 
     // Blocks
 
+    UtilityBlock(
+        block = UtilBlock,
+        meta = 0,
+    ),
     BusInputMAX(item = GT_ItemList.Bus_Input_MAX),
     BusInputOPV(item = GT_ItemList.Bus_Input_OPV),
     BusInputUEV(item = GT_ItemList.Bus_Input_UEV),

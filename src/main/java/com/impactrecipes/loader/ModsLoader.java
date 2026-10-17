@@ -19,6 +19,7 @@ import com.impactrecipes.recipes.galacticraft.GalacticraftRegistrar;
 import com.impactrecipes.recipes.tectech.TecTechRegistrar;
 import com.impactrecipes.recipes.vanilla.VanillaRegistrar;
 import com.impactrecipes.recipes.ic2.IC2Registrar;
+import com.impactrecipes.recipes.railcraft.RailcraftRegistrar;
 import com.impactrecipes.recipes.malisisdoors.MalisisDoorsRegistrar;
 import com.impactrecipes.recipes.logisticspipes.LogisticsPipesRegistrar;
 import com.impactrecipes.recipes.buildcraft.BuildCraftRegistrar;
@@ -55,7 +56,7 @@ public class ModsLoader {
         RecipeRegistrars.register(new BuildCraftRegistrar());
         RecipeRegistrars.register(new JabbaRegistrar());
         RecipeRegistrars.register(new OpenComputersRegistrar());
-        if (Loader.isModLoaded("Railcraft")) new RailCraft().run();
+        RecipeRegistrars.register(new RailcraftRegistrar());
         RecipeRegistrars.register(new StevesFactoryManagerRegistrar());
         RecipeRegistrars.register(new StorageDrawersRegistrar());
         RecipeRegistrars.register(new TecTechRegistrar());
@@ -87,7 +88,6 @@ public class ModsLoader {
         RecipeRegistrars.register(new ChiselRegistrar());
 
 
-        registerRecipeClass(RailCraft.class);
         registerRecipeClass(ImpactCore.class);
     
         recipesInit();

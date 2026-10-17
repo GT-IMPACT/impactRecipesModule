@@ -1382,6 +1382,42 @@ public object MachineRecipes {
         }
     }
 
+    @JvmStatic
+    public fun wireAssembler(
+        inputs: Array<out ItemStack?>?,
+        fluidInput: FluidStack?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "wireAssembler") {
+            RA.addWireAssemblerRecipe(
+                inputs,
+                fluidInput,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun trackAssembler(
+        inputs: Array<out ItemStack?>?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "trackAssembler") {
+            impact.I_RA.addTrackAssemblerRecipe(
+                inputs,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
     private fun registerOperation(
         id: String,
         action: () -> Boolean,

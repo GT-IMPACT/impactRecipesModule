@@ -214,6 +214,10 @@ public enum class EnderIOItems(
 
     // Blocks
 
+    BasicCapacitorBank(
+        registryName = "blockCapBank",
+        meta = 1,
+    ),
     YetaWrench(
         registryName = "itemYetaWrench",
         meta = 0,

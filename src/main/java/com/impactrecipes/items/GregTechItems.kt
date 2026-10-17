@@ -12,6 +12,12 @@ public enum class GregTechItems(
 
     // Items
 
+    CasingStripesA(item = ItemList.Casing_Stripes_A),
+    MachineSteelBoiler(item = ItemList.Machine_Steel_Boiler),
+    ComponentMinecartWheelsSteel(item = ItemList.Component_Minecart_Wheels_Steel),
+    GeneratorDieselMV(item = ItemList.Generator_Diesel_MV),
+    HullSteel(item = ItemList.Hull_Steel),
+    ComponentGrinderDiamond(item = ItemList.Component_Grinder_Diamond),
     CasingHV(item = ItemList.Casing_HV),
     CasingMV(item = ItemList.Casing_MV),
     BatteryBuffer1by1MV(item = ItemList.Battery_Buffer_1by1_MV),
