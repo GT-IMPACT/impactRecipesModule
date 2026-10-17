@@ -714,7 +714,7 @@ public class RailCraft implements Runnable {
                 'L', new ItemStack(Blocks.brick_block),
                 'P', OrePrefixes.plate.get(Materials.RedAlloy),
                 'I', new ItemStack(Blocks.heavy_weighted_pressure_plate),
-                'T', GT_ModHandler.getModItem("extracells", "certustank", 1L)
+                'T', GT_ModHandler.getModItem("ae2fc", "certus_quartz_tank", 1L)
         };
         GT_ModHandler.addCraftingRecipe(EnumDetector.TANK.getItem(4), recipe);
         // --- Advanced Detector
@@ -835,7 +835,7 @@ public class RailCraft implements Runnable {
                 'L', "paneGlass",
                 'T', OrePrefixes.pipeMedium.get(Materials.Steel),
                 'I', EnumDetector.TANK.getItem(),
-                'C', GT_ModHandler.getModItem("extracells", "certustank", 1L),
+                'C', GT_ModHandler.getModItem("ae2fc", "certus_quartz_tank", 1L),
                 'U', ItemList.Electric_Pump_LV,
                 'M', ItemList.Electric_Motor_LV
         };
@@ -846,7 +846,7 @@ public class RailCraft implements Runnable {
                 'L', "paneGlass",
                 'T', OrePrefixes.pipeMedium.get(Materials.Steel),
                 'I', EnumDetector.TANK.getItem(),
-                'C', GT_ModHandler.getModItem("extracells", "certustank", 1L),
+                'C', GT_ModHandler.getModItem("ae2fc", "certus_quartz_tank", 1L),
                 'U', ItemList.Electric_Pump_LV,
                 'M', ItemList.Electric_Motor_LV
         };
@@ -1044,7 +1044,7 @@ public class RailCraft implements Runnable {
         // --- Tank Cart
         recipe = new Object[]{
                 "hWw", " C ", " d ",
-                'W', GT_ModHandler.getModItem("extracells", "certustank", 1L),
+                'W', GT_ModHandler.getModItem("ae2fc", "certus_quartz_tank", 1L),
                 'C', new ItemStack(Items.minecart)
         };
         GT_ModHandler.addCraftingRecipe(EnumCart.TANK.getCartItem(), recipe);
@@ -1677,7 +1677,7 @@ public class RailCraft implements Runnable {
                         EnumCart.WORK.getCartItem(), 100, 12);
         // --- Tank Cart
         RA.addAssemblerRecipe(new ItemStack(Items.minecart, 1),
-                GT_ModHandler.getModItem("extracells", "certustank", 1L), EnumCart.TANK.getCartItem(), 100,
+                GT_ModHandler.getModItem("ae2fc", "certus_quartz_tank", 1L), EnumCart.TANK.getCartItem(), 100,
                 12);
         // --- Wheels
         GT_Values.RA

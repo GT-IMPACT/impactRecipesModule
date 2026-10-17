@@ -391,7 +391,7 @@ public class IC2 implements Runnable {
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","itemArmorCFPack",1, 26), tBitMask,
                 new Object[] {"ChC","TST","CdC",'C', OrePrefixes.itemCasing.get(Materials.Steel),
                         'S', OrePrefixes.screw.get(Materials.Steel),
-                        'T', GT_ModHandler.getModItem("extracells", "certustank", 1L)});
+                        'T', GT_ModHandler.getModItem("ae2fc", "certus_quartz_tank", 1L)});
         // --- Obscurator
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","obscurator",1), tBitMask,
                 new Object[] {"SdS","CDC","IBI",'I', OrePrefixes.itemCasing.get(Materials.Iron),
@@ -432,7 +432,7 @@ public class IC2 implements Runnable {
         // --- Fluid Regulator
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","blockMachine2",1, 14), tBitMask,
                 new Object[] {"PPP","OHO","TCT",'P', OrePrefixes.itemCasing.get(Materials.Iron), 'H', ItemList.Electric_Pump_MV.get(1),
-                        'C', OrePrefixes.circuit.get(Materials.Basic), 'T', GT_ModHandler.getModItem("extracells", "certustank", 1L),
+                        'C', OrePrefixes.circuit.get(Materials.Basic), 'T', GT_ModHandler.getModItem("ae2fc", "certus_quartz_tank", 1L),
                         'O', OrePrefixes.pipeMedium.get(Materials.Steel)});
         // --- Tesla Coil
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("IC2","blockMachine2",1, 1), tBitMask,

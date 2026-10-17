@@ -463,10 +463,6 @@ public class AE implements Runnable {
     
         // --- ME Fluid Terminal
         addCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "part_fluid_terminal", 1L), tBitMask, new Object[]{"PAP", "FTY", "PAP", 'P', OrePrefixes.plate.get(Materials.Lapis), 'A', GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 16), 'F', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 43), 'Y', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 44), 'T', GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 380)});
-        // --- Wireless Fluid Terminal
-        addCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "wireless_fluid_terminal", 1L), tBitMask,
-                new Object[]{"FEF", "PMP", "PAP", 'P', OrePrefixes.plate.get(Materials.HastelloyN), 'A', GT_ModHandler.getModItem(AE2, "tile.BlockDenseEnergyCell", 1L), 'F', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 41), 'M', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), 'E', GT_ModHandler.getModItem("ae2fc", "part_fluid_terminal", 1)}
-        );
 
         // --- Level Terminal
         addCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "part_level_terminal", 1L, 0), tBitMask, new Object[]{"dTh", "SOS", "PCP", 'S', OrePrefixes.screw.get(Materials.CertusQuartz), 'P', OrePrefixes.plate.get(Materials.NetherQuartz), 'T', GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 380), 'O', GT_ModHandler.getModItem("ae2fc", "level_maintainer", 1L, 0), 'C', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24)});
@@ -497,7 +493,7 @@ public class AE implements Runnable {
         addCraftingRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 468), tBitMask, new Object[]{"   ", " O ", " d ", 'O', GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 460)});
 
         // --- ME Fluid Auto Filler
-        addCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "fluid_auto_filler", 1L), tBitMask, new Object[]{"PMP", "CIC", "PRP", 'P', "plateLapis", 'M', GT_ModHandler.getModItem("ae2fc", "part_fluid_terminal", 1L), 'C', GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 16), 'R', GT_ModHandler.getModItem("ae2fc", "part_fluid_level_emitter", 1L), 'I', GT_ModHandler.getModItem("ae2fc", "fluid_interface", 1L)});
+        addCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "fluid_auto_filler", 1L), tBitMask, new Object[]{"PMP", "CIC", "PRP", 'P', "plateLapis", 'M', GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 380), 'C', GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 16), 'R', GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 280), 'I', GT_ModHandler.getModItem("ae2fc", "fluid_interface", 1L)});
 
         // --- Wireless Level Terminal
         addCraftingRecipe(GT_ModHandler.getModItem("ae2fc", "wireless_level_terminal", 1L, 0), tBitMask, new Object[]{"WTW", "PCP", "PEP", 'P', OrePrefixes.plate.get(Materials.VanadiumSteel), 'T', GT_ModHandler.getModItem("ae2fc", "part_level_terminal", 1L, 0), 'W', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 41), 'C', GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 24), 'E', GT_ModHandler.getModItem(AE2, "tile.BlockDenseEnergyCell", 1L, 0)});

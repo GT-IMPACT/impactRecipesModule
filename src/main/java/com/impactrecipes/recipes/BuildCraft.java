@@ -252,7 +252,7 @@ public class BuildCraft implements Runnable {
                         tBitMask,
                         new Object[]{"PUP", "GCG", "PGP", 'P', OrePrefixes.itemCasing.get(Materials.Steel), 'G',
                                 CoreItems2.getRecipe(SteelBars.getMetaID(), 1), 'U', ItemList.Electric_Pump_LV, 'C',
-                                GT_ModHandler.getModItem("extracells", "certustank", 1L, 0)});
+                                GT_ModHandler.getModItem("ae2fc", "certus_quartz_tank", 1L, 0)});
 
         // --- Wooden Pipe
         GT_ModHandler.addCraftingRecipe(GT_ModHandler
