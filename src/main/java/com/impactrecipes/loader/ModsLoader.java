@@ -12,6 +12,7 @@ import com.impactrecipes.recipes.catwalks.CatwalksRegistrar;
 import com.impactrecipes.recipes.carpentersblocks.CarpentersBlocksRegistrar;
 import com.impactrecipes.recipes.gregtech.GregTechRegistrar;
 import com.impactrecipes.recipes.gendustry.GendustryRegistrar;
+import com.impactrecipes.recipes.forestry.ForestryRegistrar;
 import com.impactrecipes.recipes.jabba.JabbaRegistrar;
 import com.impactrecipes.recipes.storagedrawers.StorageDrawersRegistrar;
 import com.impactrecipes.recipes.impact.ImpactRegistrar;
@@ -62,7 +63,7 @@ public class ModsLoader {
         RecipeRegistrars.register(new StargateRegistrar());
         RecipeRegistrars.register(new GendustryRegistrar());
         RecipeRegistrars.register(new ZtonesRegistrar());
-        new Forestry().run();
+        RecipeRegistrars.register(new ForestryRegistrar());
         RecipeRegistrars.register(new ChestUpRegistrar());
         new LogisticPipes().run();
         new MalisisDoors().run();
@@ -91,7 +92,6 @@ public class ModsLoader {
         registerRecipeClass(IC2.class);
         registerRecipeClass(ExtraUtilities.class);
         registerRecipeClass(GraviSuite.class);
-        registerRecipeClass(Forestry.class);
         registerRecipeClass(LogisticPipes.class);
         registerRecipeClass(MalisisDoors.class);
         registerRecipeClass(Ender_IO.class);

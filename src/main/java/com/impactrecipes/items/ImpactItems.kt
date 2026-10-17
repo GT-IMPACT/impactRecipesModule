@@ -15,6 +15,7 @@ public enum class ImpactItems(
 
     // Items
 
+    PistonPlate(item = Core_List_Items.PistonPlate),
     IridiumAlloyItemCasing(item = Core_List_Items.IridiumAlloyItemCasing),
     IndustryFrame(item = Core_List_Items.IndustryFrame),
     GeneticCircuit(item = GT_ItemList.GeneticCircuit),

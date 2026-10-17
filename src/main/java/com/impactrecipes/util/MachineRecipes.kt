@@ -998,6 +998,25 @@ public object MachineRecipes {
         }
     }
 
+    @JvmStatic
+    public fun formingPress(
+        input: ItemStack?,
+        secondaryInput: ItemStack?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "forming press") {
+            RA.addFormingPressRecipe(
+                input,
+                secondaryInput,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
     private fun registerOperation(
         id: String,
         action: () -> Boolean,

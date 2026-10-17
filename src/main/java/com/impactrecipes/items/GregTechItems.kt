@@ -12,6 +12,8 @@ public enum class GregTechItems(
 
     // Items
 
+    ShapeMoldBlock(item = ItemList.Shape_Mold_Block),
+    ShapeMoldNugget(item = ItemList.Shape_Mold_Nugget),
     ComponentMinecartWheelsIron(item = ItemList.Component_Minecart_Wheels_Iron),
     ElectricPistonLuV(item = ItemList.Electric_Piston_LuV),
     RobotArmLuV(item = ItemList.Robot_Arm_LuV),

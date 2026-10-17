@@ -7,6 +7,10 @@ public enum class VanillaItems(
 
     // Items
 
+    Feather(
+        registryName = "feather",
+        meta = 0,
+    ),
     NameTag(
         registryName = "name_tag",
         meta = 0,
