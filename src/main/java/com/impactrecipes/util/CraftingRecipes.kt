@@ -5,6 +5,7 @@ import gregtech.api.util.GT_Utility
 import net.minecraft.item.ItemStack
 import net.minecraft.item.crafting.CraftingManager
 import net.minecraft.item.crafting.IRecipe
+import net.minecraftforge.oredict.ShapelessOreRecipe
 
 /** Missing outputs or ingredients skip registration instead of reaching GT as a partial recipe. */
 public object CraftingRecipes {
@@ -88,6 +89,35 @@ public object CraftingRecipes {
                 output,
                 flags,
                 ingredients,
+            )
+        }
+    }
+
+    /** Keeps the declared output instead of transferring electric charge or NBT from ingredients. */
+    @JvmStatic
+    public fun shapelessWithFixedOutput(
+        output: ItemStack?,
+        vararg ingredients: Any?,
+    ) {
+        val id = "shapeless: ${describe(output = output)}"
+        val isValid = valid(
+            id = id,
+            output = output,
+            ingredients = ingredients,
+        )
+        if (!isValid) {
+            return
+        }
+
+        RecipeDiagnostics.attempt(
+            id = id,
+            rejectedReason = "Failed to register the fixed-output shapeless recipe.",
+        ) {
+            CraftingManager.getInstance().recipeList.add(
+                ShapelessOreRecipe(
+                    output,
+                    *ingredients,
+                ),
             )
         }
     }

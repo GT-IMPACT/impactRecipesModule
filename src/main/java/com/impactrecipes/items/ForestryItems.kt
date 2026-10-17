@@ -126,6 +126,10 @@ public enum class ForestryItems(
 
     // Blocks
 
+    RainTank(
+        registryName = "factory2",
+        meta = 1,
+    ),
     Factory22(
         registryName = "factory2",
         meta = 2,

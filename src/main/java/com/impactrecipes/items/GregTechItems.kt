@@ -14,6 +14,10 @@ public enum class GregTechItems(
 
     // Items
 
+    ToolWrench(
+        registryName = "gt.metatool.01",
+        meta = 16,
+    ),
     BatteryHullEVFull(item = ItemList.BatteryHull_EV_Full),
     BatteryHullLuVFull(item = ItemList.BatteryHull_LuV_Full),
     BatteryHullZPMFull(item = ItemList.BatteryHull_ZPM_Full),
@@ -544,6 +548,7 @@ public enum class GregTechItems(
     AutomationChestBufferHV(item = ItemList.Automation_ChestBuffer_HV),
     CasingGearboxTitanium(item = ItemList.Casing_Gearbox_Titanium),
     MachineLVAssembler(item = ItemList.Machine_LV_Assembler),
+    MachineLVCanner(item = ItemList.Machine_LV_Canner),
     HullBronze(item = ItemList.Hull_Bronze),
     TransformerIVEV(item = ItemList.Transformer_IV_EV),
     TransformerLuVIV(item = ItemList.Transformer_LuV_IV),

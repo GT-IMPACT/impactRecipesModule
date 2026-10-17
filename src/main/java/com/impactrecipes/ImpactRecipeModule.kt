@@ -1,5 +1,6 @@
 import com.impactrecipes.DebugCommand
 import com.impactrecipes.MODID
+import com.impactrecipes.integration.ic2.IC2Integration
 import com.impactrecipes.loader.ModsLoader
 import com.impactrecipes.util.RecipeDebugConfig
 import cpw.mods.fml.common.Mod
@@ -36,5 +37,6 @@ public object ImpactRecipeModule {
     public fun postInit(event: FMLPostInitializationEvent): Unit {
         ClientCommandHandler.instance.registerCommand(DebugCommand())
         ModsLoader.loader()
+        IC2Integration.register()
     }
 }

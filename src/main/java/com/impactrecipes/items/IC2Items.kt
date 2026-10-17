@@ -9,6 +9,19 @@ public enum class IC2Items(
 
     // Items
 
+    MfsuUpgradeKit(apiName = "mfsukit"),
+    EmptyCell(apiName = "cell"),
+    HydratingCell(apiName = "hydratingCell"),
+    ObsidianDust(apiName = "obsidianDust"),
+    LapisPlate(apiName = "platelapi"),
+    LapisDust(apiName = "lapiDust"),
+    SmallLapisDust(apiName = "smallLapiDust"),
+    ReactorCondensatorLap(apiName = "reactorCondensatorLap"),
+    ReactorCondensator(apiName = "reactorCondensator"),
+    Chainsaw(apiName = "chainsaw"),
+    IridiumDrill(apiName = "iridiumDrill"),
+    DiamondDrill(apiName = "diamondDrill"),
+    MiningDrill(apiName = "miningDrill"),
     NightvisionGoggles(apiName = "nightvisionGoggles"),
     BoatCarbon(apiName = "boatCarbon"),
     BoatRubber(apiName = "boatRubber"),
@@ -139,6 +152,7 @@ public enum class IC2Items(
 
     // Blocks
 
+    UraniumBlock(apiName = "uraniumBlock"),
     RubberWood(apiName = "rubberWood"),
     RubberLeaves(apiName = "rubberLeaves"),
     RubberSapling(apiName = "rubberSapling"),

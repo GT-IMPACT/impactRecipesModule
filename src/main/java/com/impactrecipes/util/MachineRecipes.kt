@@ -6,6 +6,9 @@ import com.impact.impact
 import gregtech.api.enums.GT_Values.RA
 import gregtech.api.util.GT_Recipe.GT_Recipe_Map
 import gregtech.api.util.GT_Utility
+import ic2.api.recipe.IMachineRecipeManagerExt
+import ic2.api.recipe.RecipeInputItemStack
+import ic2.api.recipe.Recipes
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
 
@@ -138,6 +141,60 @@ public object MachineRecipes {
                 eu,
                 cleanroom,
             )
+        }
+    }
+
+    @JvmStatic
+    public fun arcFurnace(
+        input: ItemStack?,
+        fluidInput: FluidStack?,
+        outputs: Array<out ItemStack?>,
+        chances: IntArray,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "arc furnace") {
+            RA.addSimpleArcFurnaceRecipe(
+                input,
+                fluidInput,
+                outputs,
+                chances,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun ic2Compressor(
+        input: ItemStack?,
+        output: ItemStack?,
+    ) {
+        if (input == null || output == null) {
+            return
+        }
+
+        RecipeDiagnostics.attempt(
+            id = "IC2 compressor",
+            rejectedReason = "IC2 rejected the compressor recipe. Check its input and output.",
+        ) {
+            val manager = Recipes.compressor
+            val recipeInput = RecipeInputItemStack(input)
+            if (manager is IMachineRecipeManagerExt) {
+                manager.addRecipe(
+                    recipeInput,
+                    null,
+                    true,
+                    output,
+                )
+            } else {
+                manager.addRecipe(
+                    recipeInput,
+                    null,
+                    output,
+                )
+                true
+            }
         }
     }
 

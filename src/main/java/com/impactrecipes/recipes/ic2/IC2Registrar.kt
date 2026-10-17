@@ -11,6 +11,8 @@ public class IC2Registrar : IRecipeRegistrar {
         }
 
     public override fun register() {
+        IC2OreDictionaryChanges.register()
+        IC2ScriptRecipeRemovals().register()
         IC2RecipeRemovals().register()
         IC2CompactGeneratorRemovals().register()
         IC2ReactorComponentCraftingRecipes().register()
@@ -47,5 +49,9 @@ public class IC2Registrar : IRecipeRegistrar {
         IC2DensePlateBendingRecipes().register()
         IC2CoalBallMixingRecipes().register()
         IC2UraniumSmeltingRecipes().register()
+        IC2CondensatorCraftingRecipes().register()
+        IC2MachineConversionRecipes().register()
+        IC2ToolAndCellConversionRecipes().register()
+        IC2ScriptMachineRecipes().register()
     }
 }

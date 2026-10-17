@@ -382,6 +382,7 @@ public enum class VanillaItems(
 
     // Blocks
 
+    Obsidian(registryName = "obsidian"),
     Chest32767(
         registryName = "chest",
         meta = 32767,

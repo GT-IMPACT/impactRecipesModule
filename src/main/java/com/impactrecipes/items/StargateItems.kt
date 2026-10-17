@@ -24,6 +24,7 @@ public enum class StargateItems(
     Base(registryName = "stargateBase"),
     Controller(registryName = "stargateController"),
     IC2PowerUnit(registryName = "ic2PowerUnit"),
+    RFPowerUnit(registryName = "rfPowerUnit"),
     OpenComputersInterface(registryName = "ocInterface");
 
     public override val modId: String = "SGCraft"

@@ -75,5 +75,12 @@ internal class StargateRecipeRemovals {
             keepShapeless = false,
             nativeOnly = false,
         )
+
+        val rfPowerUnit = StargateItems.RFPowerUnit
+        CraftingRecipes.removeCraftingRecipesByOutputIfPresent(
+            mod = rfPowerUnit.modId,
+            name = rfPowerUnit.registryName,
+            meta = rfPowerUnit.meta,
+        )
     }
 }
