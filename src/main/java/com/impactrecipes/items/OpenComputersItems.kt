@@ -26,6 +26,14 @@ public enum class OpenComputersItems(
 
     // Blocks
 
+    Item19(
+        registryName = "item",
+        meta = 19,
+    ),
+    Keyboard(
+        registryName = "keyboard",
+        meta = 0,
+    ),
     CaseTier3(registryName = "case3");
 
     public override val modId: String = "OpenComputers"

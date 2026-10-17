@@ -15,6 +15,9 @@ public enum class ImpactItems(
 
     // Items
 
+    RedstoneIronChipset(item = GT_ItemList.RedstoneIronChipset),
+    RedstoneGoldChipset(item = GT_ItemList.RedstoneGoldChipset),
+    RedstoneDiamondChipset(item = GT_ItemList.RedstoneDiamondChipset),
     IceCompressedPlate(item = Core_List_Items.IceCompressedPlate),
     MeitneriumCompressedPlate(item = Core_List_Items.MeitneriumCompressedPlate),
     MysteriousCrystalCompressedPlate(item = Core_List_Items.MysteriousCrystalCompressedPlate),

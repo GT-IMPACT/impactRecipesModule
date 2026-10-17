@@ -12,6 +12,12 @@ public enum class GregTechItems(
 
     // Items
 
+    MVCoil(item = ItemList.MV_Coil),
+    BatteryREMVLithium(item = ItemList.Battery_RE_MV_Lithium),
+    LargeFluidCellSteel(item = ItemList.Large_Fluid_Cell_Steel),
+    CircuitBoardCoated(item = ItemList.Circuit_Board_Coated),
+    CircuitBoardPhenolic(item = ItemList.Circuit_Board_Phenolic),
+    CircuitBoardPlastic(item = ItemList.Circuit_Board_Plastic),
     EVCoil(item = ItemList.EV_Coil),
     LargeFluidCellChrome(item = ItemList.Large_Fluid_Cell_Chrome),
     LargeFluidCellIridium(item = ItemList.Large_Fluid_Cell_Iridium),

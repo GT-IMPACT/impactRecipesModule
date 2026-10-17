@@ -12,6 +12,10 @@ public enum class EnderIOItems(
 
     // Blocks
 
+    BlockInventoryPanel(
+        registryName = "blockInventoryPanel",
+        meta = 0,
+    ),
     DarkSteelPressurePlate(registryName = "blockDarkSteelPressurePlate"),
     BlockDarkIronBars(
         registryName = "blockDarkIronBars",

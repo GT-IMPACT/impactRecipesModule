@@ -16,6 +16,7 @@ import com.impactrecipes.recipes.forestry.ForestryRegistrar;
 import com.impactrecipes.recipes.gravisuite.GraviSuiteRegistrar;
 import com.impactrecipes.recipes.galaxyspace.GalaxySpaceRegistrar;
 import com.impactrecipes.recipes.malisisdoors.MalisisDoorsRegistrar;
+import com.impactrecipes.recipes.logisticspipes.LogisticsPipesRegistrar;
 import com.impactrecipes.recipes.extrautilities.ExtraUtilitiesRegistrar;
 import com.impactrecipes.recipes.jabba.JabbaRegistrar;
 import com.impactrecipes.recipes.storagedrawers.StorageDrawersRegistrar;
@@ -69,7 +70,7 @@ public class ModsLoader {
         RecipeRegistrars.register(new ZtonesRegistrar());
         RecipeRegistrars.register(new ForestryRegistrar());
         RecipeRegistrars.register(new ChestUpRegistrar());
-        new LogisticPipes().run();
+        RecipeRegistrars.register(new LogisticsPipesRegistrar());
         RecipeRegistrars.register(new MalisisDoorsRegistrar());
         RecipeRegistrars.register(new BackpackRegistrar());
         RecipeRegistrars.register(new BiblioCraftRegistrar());
@@ -93,7 +94,6 @@ public class ModsLoader {
         registerRecipeClass(ImpactCore.class);
         registerRecipeClass(GalactiCraft.class);
         registerRecipeClass(IC2.class);
-        registerRecipeClass(LogisticPipes.class);
         registerRecipeClass(Ender_IO.class);
     
         recipesInit();
