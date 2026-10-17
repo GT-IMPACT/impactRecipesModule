@@ -31,7 +31,7 @@ internal class BiblioCraftUtilityRecipes {
         )
 
         CraftingRecipes.shapedWithFlags(
-            output = BiblioCraftItems.PaintPress.get(),
+            output = BiblioCraftItems.PaintPressBlock.get(),
             flags = craftingFlags,
             recipe = arrayOf<Any?>(
                 "PPB",

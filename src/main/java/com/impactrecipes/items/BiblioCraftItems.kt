@@ -75,10 +75,6 @@ public enum class BiblioCraftItems(
         registryName = "item.TesterItem",
         meta = 0,
     ),
-    PaintPress(
-        registryName = "item.BiblioPaintPress",
-        meta = 0,
-    ),
 
     // Blocks
 
@@ -90,8 +86,8 @@ public enum class BiblioCraftItems(
         registryName = "Typesetting Machine",
         meta = 0,
     ),
-    FrameGtdChest(
-        registryName = "tile.BiblioframeGtdChest",
+    FramedChest(
+        registryName = "tile.BiblioFramedChest",
         meta = 0,
     ),
     PaintPressBlock(

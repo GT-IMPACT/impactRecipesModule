@@ -30,7 +30,7 @@ internal class BiblioCraftRecipeRemovals {
         )
 
         CraftingRecipes.removeCraftingRecipesByOutput(
-            output = BiblioCraftItems.FrameGtdChest.get(),
+            output = BiblioCraftItems.FramedChest.get(),
             ignoreNbt = true,
             keepShapeless = false,
             nativeOnly = true,

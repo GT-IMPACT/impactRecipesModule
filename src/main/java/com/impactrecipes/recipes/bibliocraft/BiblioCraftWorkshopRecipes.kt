@@ -56,7 +56,7 @@ internal class BiblioCraftWorkshopRecipes {
         )
 
         CraftingRecipes.shapedWithFlags(
-            output = BiblioCraftItems.FrameGtdChest.get(),
+            output = BiblioCraftItems.FramedChest.get(),
             flags = craftingFlags,
             recipe = arrayOf<Any?>(
                 "FFF",
