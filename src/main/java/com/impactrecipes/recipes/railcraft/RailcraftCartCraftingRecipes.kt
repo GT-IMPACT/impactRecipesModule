@@ -3,7 +3,6 @@ package com.impactrecipes.recipes.railcraft
 import com.impactrecipes.items.AE2FCItems
 import com.impactrecipes.items.ComputeryItems
 import com.impactrecipes.items.ComputronicsItems
-import com.impactrecipes.items.EnderIOItems
 import com.impactrecipes.items.GregTechItems
 import com.impactrecipes.items.NuclearControlItems
 import com.impactrecipes.items.RailcraftItems
@@ -169,26 +168,6 @@ internal class RailcraftCartCraftingRecipes {
                 GregTechItems.RobotArmLV.get(),
                 'M',
                 GregTechItems.ElectricMotorLV.get(),
-                'C',
-                VanillaItems.Minecart.get(),
-            ),
-        )
-
-        CraftingRecipes.shapedWithFlags(
-            output = RailcraftItems.CartRedstoneFlux.get(),
-            flags = 0L,
-            recipe = arrayOf<Any?>(
-                "PdP",
-                "OTO",
-                "SCS",
-                'O',
-                EnderIOItems.BasicCapacitorBank.get(),
-                'T',
-                OrePrefixes.circuit.get(Materials.Basic),
-                'P',
-                OrePrefixes.plate.get(Materials.Lead),
-                'S',
-                OrePrefixes.screw.get(Materials.Steel),
                 'C',
                 VanillaItems.Minecart.get(),
             ),

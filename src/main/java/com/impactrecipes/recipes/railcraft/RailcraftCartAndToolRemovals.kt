@@ -63,13 +63,6 @@ internal class RailcraftCartAndToolRemovals {
         )
 
         CraftingRecipes.removeCraftingRecipesByOutput(
-            output = RailcraftItems.CartRedstoneFlux.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
             output = RailcraftItems.CartLocoElectric.get(),
             ignoreNbt = true,
             keepShapeless = false,

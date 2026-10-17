@@ -87,7 +87,6 @@ public enum class RailcraftItems(
     CartUndercutter(stack = EnumCart.UNDERCUTTER.getCartItem()),
     CartTrackLayer(stack = EnumCart.TRACK_LAYER.getCartItem()),
     CartTrackRemover(stack = EnumCart.TRACK_REMOVER.getCartItem()),
-    CartRedstoneFlux(stack = EnumCart.REDSTONE_FLUX.getCartItem()),
     CartLocoElectric(stack = EnumCart.LOCO_ELECTRIC.getCartItem()),
     CartLocoSteamSolid(stack = EnumCart.LOCO_STEAM_SOLID.getCartItem()),
     CartBore(stack = EnumCart.BORE.getCartItem()),
@@ -154,26 +153,6 @@ public enum class RailcraftItems(
     ),
     LapotronLoaderUpgrade(
         registryName = "upgrade.lapotron",
-        meta = 0,
-    ),
-    ToolSteelSword(
-        registryName = "tool.steel.sword",
-        meta = 0,
-    ),
-    ToolSteelHovel(
-        registryName = "tool.steel.hovel",
-        meta = 0,
-    ),
-    ToolSteelPickaxe(
-        registryName = "tool.steel.pickaxe",
-        meta = 0,
-    ),
-    ToolSteelAxe(
-        registryName = "tool.steel.axe",
-        meta = 0,
-    ),
-    ToolSteelHoe(
-        registryName = "tool.steel.hoe",
         meta = 0,
     ),
 

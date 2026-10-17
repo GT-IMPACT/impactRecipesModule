@@ -95,41 +95,6 @@ internal class RailcraftComponentRemovals {
         )
 
         CraftingRecipes.removeCraftingRecipesByOutput(
-            output = RailcraftItems.ToolSteelSword.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
-            output = RailcraftItems.ToolSteelHovel.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
-            output = RailcraftItems.ToolSteelPickaxe.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
-            output = RailcraftItems.ToolSteelAxe.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
-            output = RailcraftItems.ToolSteelHoe.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
             output = RailcraftItems.RailStandard.get(),
             ignoreNbt = true,
             keepShapeless = false,
