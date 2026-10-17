@@ -7,6 +7,18 @@ public enum class VanillaItems(
 
     // Items
 
+    FlowerPot(
+        registryName = "flower_pot",
+        meta = 0,
+    ),
+    WoodenDoor(
+        registryName = "wooden_door",
+        meta = 0,
+    ),
+    ClayBall(
+        registryName = "clay_ball",
+        meta = 0,
+    ),
     Book(
         registryName = "book",
         meta = 0,
@@ -42,6 +54,26 @@ public enum class VanillaItems(
 
     // Blocks
 
+    DaylightDetector(
+        registryName = "daylight_detector",
+        meta = 0,
+    ),
+    Carpet(
+        registryName = "carpet",
+        meta = 0,
+    ),
+    FenceGate(
+        registryName = "fence_gate",
+        meta = 0,
+    ),
+    Trapdoor(
+        registryName = "trapdoor",
+        meta = 0,
+    ),
+    Lever(
+        registryName = "lever",
+        meta = 0,
+    ),
     WoodenSlab(
         registryName = "wooden_slab",
         meta = 0,

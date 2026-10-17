@@ -8,6 +8,7 @@ import com.impactrecipes.recipes.bibliocraft.BiblioCraftRegistrar;
 import com.impactrecipes.recipes.chickenchunks.ChickenChunksRegistrar;
 import com.impactrecipes.recipes.chestup.ChestUpRegistrar;
 import com.impactrecipes.recipes.catwalks.CatwalksRegistrar;
+import com.impactrecipes.recipes.carpentersblocks.CarpentersBlocksRegistrar;
 import com.impactrecipes.recipes.gregtech.GregTechRegistrar;
 import com.impactrecipes.recipes.impact.ImpactRegistrar;
 import com.impactrecipes.recipes.opencomputers.OpenComputersRegistrar;
@@ -64,7 +65,7 @@ public class ModsLoader {
         RecipeRegistrars.register(new BiblioCraftRegistrar());
         RecipeRegistrars.register(new ChickenChunksRegistrar());
         RecipeRegistrars.register(new ArchitectureCraftRegistrar());
-        new CarpentersBlocks().run();
+        RecipeRegistrars.register(new CarpentersBlocksRegistrar());
         RecipeRegistrars.register(new NuclearControlRegistrar());
         if (Loader.isModLoaded("EnderIO")) new Ender_IO().run();
         RecipeRegistrars.register(new CatwalksRegistrar());
@@ -92,7 +93,6 @@ public class ModsLoader {
         registerRecipeClass(Forestry.class);
         registerRecipeClass(LogisticPipes.class);
         registerRecipeClass(MalisisDoors.class);
-        registerRecipeClass(CarpentersBlocks.class);
         registerRecipeClass(Ender_IO.class);
         registerRecipeClass(ChiselRecipes.class);
     

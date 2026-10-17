@@ -19,6 +19,7 @@ public enum class IC2Items(
 
     // Blocks
 
+    PersonalSafe(apiName = "personalSafe"),
     ReinforcedGlass(apiName = "reinforcedGlass"),
     MachineCasing(apiName = "machine"),
     Luminator(apiName = "luminator");
