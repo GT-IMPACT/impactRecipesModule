@@ -114,6 +114,10 @@ public enum class ForestryItems(
 
     // Blocks
 
+    Factory22(
+        registryName = "factory2",
+        meta = 2,
+    ),
     ApicultureChest(
         registryName = "apicultureChest",
         meta = 0,

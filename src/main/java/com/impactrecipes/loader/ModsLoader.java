@@ -58,7 +58,6 @@ public class ModsLoader {
         RecipeRegistrars.register(new StorageDrawersRegistrar());
         if (Loader.isModLoaded("tectech")) new TecTech().run();
         RecipeRegistrars.register(new ProjectRedRegistrar());
-        new ProjectRed().run();
         RecipeRegistrars.register(new OpenBlocksRegistrar());
         RecipeRegistrars.register(new ImpactRegistrar());
         new ImpactCore().run();
@@ -91,7 +90,6 @@ public class ModsLoader {
         registerRecipeClass(OpenComputers.class);
         registerRecipeClass(RailCraft.class);
         registerRecipeClass(TecTech.class);
-        registerRecipeClass(ProjectRed.class);
         registerRecipeClass(ImpactCore.class);
         registerRecipeClass(GalactiCraft.class);
         registerRecipeClass(IC2.class);

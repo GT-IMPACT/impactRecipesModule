@@ -12,6 +12,23 @@ public enum class GregTechItems(
 
     // Items
 
+    MachineLVAssembler(item = ItemList.Machine_LV_Assembler),
+    Dye00(item = ItemList.Color_00),
+    Dye01(item = ItemList.Color_01),
+    Dye02(item = ItemList.Color_02),
+    Dye03(item = ItemList.Color_03),
+    Dye04(item = ItemList.Color_04),
+    Dye05(item = ItemList.Color_05),
+    Dye06(item = ItemList.Color_06),
+    Dye07(item = ItemList.Color_07),
+    Dye08(item = ItemList.Color_08),
+    Dye09(item = ItemList.Color_09),
+    Dye10(item = ItemList.Color_10),
+    Dye11(item = ItemList.Color_11),
+    Dye12(item = ItemList.Color_12),
+    Dye13(item = ItemList.Color_13),
+    Dye14(item = ItemList.Color_14),
+    Dye15(item = ItemList.Color_15),
     BatteryREHVLithium(item = ItemList.Battery_RE_HV_Lithium),
     BatteryHullLV(item = ItemList.Battery_Hull_LV),
     HullBronze(item = ItemList.Hull_Bronze),
@@ -417,6 +434,28 @@ public enum class GregTechItems(
     SuperTankLV(item = ItemList.Super_Tank_LV),
     SuperTankMV(item = ItemList.Super_Tank_MV),
     SuperTankULV(item = ItemList.Super_Tank_ULV);
+
+    public companion object {
+
+        public val dyes: List<GregTechItems> = listOf(
+            Dye00,
+            Dye01,
+            Dye02,
+            Dye03,
+            Dye04,
+            Dye05,
+            Dye06,
+            Dye07,
+            Dye08,
+            Dye09,
+            Dye10,
+            Dye11,
+            Dye12,
+            Dye13,
+            Dye14,
+            Dye15,
+        )
+    }
 
     public val modId: String = "gregtech"
 

@@ -5,7 +5,7 @@ public enum class ProjectRedTransmissionItems(
     public override val meta: Int = 0,
 ) : IRegistryModItem {
 
-    // Blocks
+    // Items
 
     RedAlloyWire(
         registryName = "projectred.transmission.wire",

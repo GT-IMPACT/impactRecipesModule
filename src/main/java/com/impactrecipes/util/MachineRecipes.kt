@@ -1099,6 +1099,23 @@ public object MachineRecipes {
         }
     }
 
+    @JvmStatic
+    public fun wiremill(
+        input: ItemStack?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "wiremill") {
+            RA.addWiremillRecipe(
+                input,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
     private fun registerOperation(
         id: String,
         action: () -> Boolean,
