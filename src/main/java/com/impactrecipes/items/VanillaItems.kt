@@ -7,6 +7,10 @@ public enum class VanillaItems(
 
     // Items
 
+    IronDoor(
+        registryName = "iron_door",
+        meta = 0,
+    ),
     Bucket(
         registryName = "bucket",
         meta = 0,
@@ -110,6 +114,70 @@ public enum class VanillaItems(
 
     // Blocks
 
+    Carpet10(
+        registryName = "carpet",
+        meta = 10,
+    ),
+    Carpet4(
+        registryName = "carpet",
+        meta = 4,
+    ),
+    Carpet2(
+        registryName = "carpet",
+        meta = 2,
+    ),
+    Carpet6(
+        registryName = "carpet",
+        meta = 6,
+    ),
+    Carpet11(
+        registryName = "carpet",
+        meta = 11,
+    ),
+    Carpet7(
+        registryName = "carpet",
+        meta = 7,
+    ),
+    Carpet9(
+        registryName = "carpet",
+        meta = 9,
+    ),
+    Carpet14(
+        registryName = "carpet",
+        meta = 14,
+    ),
+    Carpet12(
+        registryName = "carpet",
+        meta = 12,
+    ),
+    Carpet5(
+        registryName = "carpet",
+        meta = 5,
+    ),
+    Carpet1(
+        registryName = "carpet",
+        meta = 1,
+    ),
+    Carpet8(
+        registryName = "carpet",
+        meta = 8,
+    ),
+    Carpet13(
+        registryName = "carpet",
+        meta = 13,
+    ),
+    Carpet3(
+        registryName = "carpet",
+        meta = 3,
+    ),
+    Carpet15(
+        registryName = "carpet",
+        meta = 15,
+    ),
+    Door(
+        registryName = "door",
+        meta = 0,
+    ),
     RedstoneBlock(
         registryName = "redstone_block",
         meta = 0,
