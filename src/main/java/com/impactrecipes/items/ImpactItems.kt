@@ -15,6 +15,7 @@ public enum class ImpactItems(
 
     // Items
 
+    LargeScreen(item = Core_List_Items.LargeScreen),
     StargateCrystalDust(item = Core_List_Items.StargateCrystalDust),
     StargateShieldingFoil(item = Core_List_Items.StargateShieldingFoil),
     StargateFramePart(item = Core_List_Items.StargateFramePart),

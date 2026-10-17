@@ -5,6 +5,11 @@ public enum class EnderIOItems(
     public override val meta: Int = 0,
 ) : IRegistryModItem {
 
+    // Items
+
+    ItemConduit(registryName = "itemItemConduit"),
+    PowerConduit(registryName = "itemPowerConduit"),
+
     // Blocks
 
     DarkSteelPressurePlate(registryName = "blockDarkSteelPressurePlate"),

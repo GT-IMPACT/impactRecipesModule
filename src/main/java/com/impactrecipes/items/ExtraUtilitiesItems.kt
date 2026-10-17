@@ -7,6 +7,10 @@ public enum class ExtraUtilitiesItems(
 
     // Blocks
 
+    BlockUpdateDetector(
+        registryName = "budoff",
+        meta = 3,
+    ),
     TrashCan(registryName = "trashcan");
 
     public override val modId: String = "ExtraUtilities"

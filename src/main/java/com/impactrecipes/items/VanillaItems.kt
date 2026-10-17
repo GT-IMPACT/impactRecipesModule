@@ -18,6 +18,7 @@ public enum class VanillaItems(
 
     // Blocks
 
+    Hopper(registryName = "hopper"),
     BrickBlock(
         registryName = "brick_block",
         meta = 0,

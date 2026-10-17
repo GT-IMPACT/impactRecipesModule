@@ -9,6 +9,7 @@ public enum class IC2Items(
 
     // Items
 
+    Painter(apiName = "painter"),
     ElectronicCircuit(apiName = "electronicCircuit"),
     AdvancedCircuit(apiName = "advancedCircuit"),
     FuelRod(apiName = "fuelRod"),

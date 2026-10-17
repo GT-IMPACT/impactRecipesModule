@@ -9,6 +9,9 @@ public enum class GregTechItems(
 
     // Items
 
+    CoverActivityDetector(item = ItemList.Cover_ActivityDetector),
+    CoverItemDetector(item = ItemList.Cover_ItemDetector),
+    ToolScanner(item = ItemList.Tool_Scanner),
     ElectricPistonUEV(item = ItemList.Electric_Piston_UEV),
     EmitterUEV(item = ItemList.Emitter_UEV),
     ZPM3(item = ItemList.ZPM3),
