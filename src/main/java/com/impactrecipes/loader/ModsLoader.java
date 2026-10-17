@@ -13,6 +13,7 @@ import com.impactrecipes.recipes.carpentersblocks.CarpentersBlocksRegistrar;
 import com.impactrecipes.recipes.gregtech.GregTechRegistrar;
 import com.impactrecipes.recipes.gendustry.GendustryRegistrar;
 import com.impactrecipes.recipes.jabba.JabbaRegistrar;
+import com.impactrecipes.recipes.storagedrawers.StorageDrawersRegistrar;
 import com.impactrecipes.recipes.impact.ImpactRegistrar;
 import com.impactrecipes.recipes.opencomputers.OpenComputersRegistrar;
 import com.impactrecipes.recipes.projectred.ProjectRedRegistrar;
@@ -46,7 +47,7 @@ public class ModsLoader {
         if (Loader.isModLoaded("OpenComputers")) new OpenComputers().run();
         if (Loader.isModLoaded("Railcraft")) new RailCraft().run();
         RecipeRegistrars.register(new StevesFactoryManagerRegistrar());
-        if (Loader.isModLoaded("StorageDrawers")) new StorageDrawers().run();
+        RecipeRegistrars.register(new StorageDrawersRegistrar());
         if (Loader.isModLoaded("tectech")) new TecTech().run();
         RecipeRegistrars.register(new ProjectRedRegistrar());
         new ProjectRed().run();
@@ -82,7 +83,6 @@ public class ModsLoader {
         registerRecipeClass(BuildCraft.class);
         registerRecipeClass(OpenComputers.class);
         registerRecipeClass(RailCraft.class);
-        registerRecipeClass(StorageDrawers.class);
         registerRecipeClass(TecTech.class);
         registerRecipeClass(ProjectRed.class);
         registerRecipeClass(ImpactCore.class);

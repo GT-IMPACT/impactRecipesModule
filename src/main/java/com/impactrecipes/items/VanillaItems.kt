@@ -7,6 +7,10 @@ public enum class VanillaItems(
 
     // Items
 
+    NameTag(
+        registryName = "name_tag",
+        meta = 0,
+    ),
     WaterBucket(
         registryName = "water_bucket",
         meta = 0,
