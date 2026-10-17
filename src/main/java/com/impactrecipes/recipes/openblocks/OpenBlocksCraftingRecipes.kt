@@ -81,7 +81,7 @@ internal class OpenBlocksCraftingRecipes {
             flags = craftingFlags,
             recipe = arrayOf(
                 "PLP",
-                "LOL",
+                "LEL",
                 "PLP",
                 'P',
                 OrePrefixes.plate.get(Materials.Obsidian),
