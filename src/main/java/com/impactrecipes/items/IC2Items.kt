@@ -17,7 +17,8 @@ public enum class IC2Items(
     // Blocks
 
     ReinforcedGlass(apiName = "reinforcedGlass"),
-    MachineCasing(apiName = "machine");
+    MachineCasing(apiName = "machine"),
+    Luminator(apiName = "luminator");
 
     public override fun get(amount: Int): ItemStack? {
         return GT_ModHandler.getIC2Item(

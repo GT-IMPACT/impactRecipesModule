@@ -5,6 +5,7 @@ import com.impactrecipes.recipes.architecturecraft.ArchitectureCraftRegistrar;
 import com.impactrecipes.recipes.chickenchunks.ChickenChunksRegistrar;
 import com.impactrecipes.recipes.gregtech.GregTechRegistrar;
 import com.impactrecipes.recipes.nuclearcontrol.NuclearControlRegistrar;
+import com.impactrecipes.recipes.openblocks.OpenBlocksRegistrar;
 import com.impactrecipes.recipes.laser.LaserEngraver;
 
 import static com.impactrecipes.RecipeKotlinKt.recipesInit;
@@ -32,7 +33,7 @@ public class ModsLoader {
         if (Loader.isModLoaded("StorageDrawers")) new StorageDrawers().run();
         if (Loader.isModLoaded("tectech")) new TecTech().run();
         new ProjectRed().run();
-        new OpenBlocks().run();
+        RecipeRegistrars.register(new OpenBlocksRegistrar());
         new ImpactCore().run();
         new GalaxySpace().run();
         new GalactiCraft().run();
@@ -69,7 +70,6 @@ public class ModsLoader {
         registerRecipeClass(StorageDrawers.class);
         registerRecipeClass(TecTech.class);
         registerRecipeClass(ProjectRed.class);
-        registerRecipeClass(OpenBlocks.class);
         registerRecipeClass(ImpactCore.class);
         registerRecipeClass(GalaxySpace.class);
         registerRecipeClass(GalactiCraft.class);
