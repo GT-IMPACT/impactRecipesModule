@@ -4,6 +4,8 @@ import com.github.technus.tectech.recipe.TT_recipeAdder
 import com.impact.common.te.TE_DryingRack
 import com.impact.impact
 import gregtech.api.enums.GT_Values.RA
+import gregtech.api.util.GT_Recipe.GT_Recipe_Map
+import gregtech.api.util.GT_Utility
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.FluidStack
 
@@ -633,12 +635,17 @@ public object MachineRecipes {
         eu: Int,
     ) {
         registerOperation(id = "distillation tower") {
-            RA.addDistillationTowerRecipe(
+            val accepted = RA.addDistillationTowerRecipe(
                 fluidInput,
                 outputs,
                 secondaryOutput,
                 ticks,
                 eu,
+            )
+            accepted || isDistillationRegistered(
+                fluidInput = fluidInput,
+                outputs = outputs,
+                secondaryOutput = secondaryOutput,
             )
         }
     }
@@ -934,12 +941,17 @@ public object MachineRecipes {
         eu: Int,
     ) {
         registerOperation(id = "universal distillation") {
-            RA.addUniversalDistillationRecipe(
+            val accepted = RA.addUniversalDistillationRecipe(
                 fluidInput,
                 outputs,
                 secondaryOutput,
                 ticks,
                 eu,
+            )
+            accepted || isDistillationRegistered(
+                fluidInput = fluidInput,
+                outputs = outputs,
+                secondaryOutput = secondaryOutput,
             )
         }
     }
@@ -1555,6 +1567,40 @@ public object MachineRecipes {
                 ticks,
                 eu,
             )
+        }
+    }
+
+    private fun isDistillationRegistered(
+        fluidInput: FluidStack?,
+        outputs: Array<out FluidStack?>?,
+        secondaryOutput: ItemStack?,
+    ): Boolean {
+        if (fluidInput == null || outputs.isNullOrEmpty()) {
+            return false
+        }
+        if (outputs.any {
+            it == null
+        }) {
+            return false
+        }
+
+        // GT registers tower recipes but returns false even on success.
+        return GT_Recipe_Map.sDistillationRecipes.mRecipeList.any { recipe ->
+            val inputMatches = recipe.mFluidInputs.singleOrNull()?.isFluidStackIdentical(fluidInput) == true
+            val outputsMatch = recipe.mFluidOutputs.size == outputs.size && outputs.indices.all { index ->
+                recipe.mFluidOutputs[index].isFluidStackIdentical(outputs[index])
+            }
+            val itemOutput = recipe.mOutputs.singleOrNull()
+            val itemMatches = if (secondaryOutput == null) {
+                recipe.mOutputs.isEmpty()
+            } else {
+                itemOutput != null && itemOutput.stackSize == secondaryOutput.stackSize && GT_Utility.areStacksEqual(
+                    itemOutput,
+                    secondaryOutput,
+                )
+            }
+
+            inputMatches && outputsMatch && itemMatches
         }
     }
 
