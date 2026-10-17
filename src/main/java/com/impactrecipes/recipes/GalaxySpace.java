@@ -563,7 +563,9 @@ public class GalaxySpace implements Runnable {
 
     private void extractor() {
         for (byte i = 0; i < 6; ++i) {
-            RA.addExtractorRecipe(GT_ModHandler.getModItem("GalaxySpace", "tcetiedandelions", 64L, i),
+            ItemStack input = GT_ModHandler.getModItem("GalaxySpace", "tcetiedandelions", 64L, i);
+            if (input == null) continue;
+            RA.addExtractorRecipe(input,
                     CoreItems.getRecipe(TCetiESeaweedExtract.getMetaID(), 1), 400, 262132);
         }
     }
