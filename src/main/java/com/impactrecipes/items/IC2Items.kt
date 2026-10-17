@@ -9,6 +9,8 @@ public enum class IC2Items(
 
     // Items
 
+    SmallPowerUnit(apiName = "powerunitsmall"),
+    RechargeableBattery(apiName = "reBattery"),
     Painter(apiName = "painter"),
     ElectronicCircuit(apiName = "electronicCircuit"),
     AdvancedCircuit(apiName = "advancedCircuit"),

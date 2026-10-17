@@ -9,6 +9,12 @@ public enum class GregTechItems(
 
     // Items
 
+    PlankOak(item = ItemList.Plank_Oak),
+    PlankSpruce(item = ItemList.Plank_Spruce),
+    PlankBirch(item = ItemList.Plank_Birch),
+    PlankJungle(item = ItemList.Plank_Jungle),
+    PlankAcacia(item = ItemList.Plank_Acacia),
+    PlankDarkOak(item = ItemList.Plank_DarkOak),
     CoverActivityDetector(item = ItemList.Cover_ActivityDetector),
     CoverItemDetector(item = ItemList.Cover_ItemDetector),
     ToolScanner(item = ItemList.Tool_Scanner),

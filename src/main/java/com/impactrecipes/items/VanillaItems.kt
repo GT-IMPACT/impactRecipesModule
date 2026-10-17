@@ -7,6 +7,22 @@ public enum class VanillaItems(
 
     // Items
 
+    Book(
+        registryName = "book",
+        meta = 0,
+    ),
+    Diamond(
+        registryName = "diamond",
+        meta = 0,
+    ),
+    Clock(
+        registryName = "clock",
+        meta = 0,
+    ),
+    Stick(
+        registryName = "stick",
+        meta = 0,
+    ),
     FlintAndSteel(
         registryName = "flint_and_steel",
         meta = 0,
@@ -26,6 +42,74 @@ public enum class VanillaItems(
 
     // Blocks
 
+    WoodenSlab(
+        registryName = "wooden_slab",
+        meta = 0,
+    ),
+    Planks(
+        registryName = "planks",
+        meta = 0,
+    ),
+    WoodenSlab1(
+        registryName = "wooden_slab",
+        meta = 1,
+    ),
+    Planks1(
+        registryName = "planks",
+        meta = 1,
+    ),
+    WoodenSlab2(
+        registryName = "wooden_slab",
+        meta = 2,
+    ),
+    Planks2(
+        registryName = "planks",
+        meta = 2,
+    ),
+    WoodenSlab3(
+        registryName = "wooden_slab",
+        meta = 3,
+    ),
+    Planks3(
+        registryName = "planks",
+        meta = 3,
+    ),
+    WoodenSlab4(
+        registryName = "wooden_slab",
+        meta = 4,
+    ),
+    Planks4(
+        registryName = "planks",
+        meta = 4,
+    ),
+    WoodenSlab5(
+        registryName = "wooden_slab",
+        meta = 5,
+    ),
+    Planks5(
+        registryName = "planks",
+        meta = 5,
+    ),
+    GlassPane(
+        registryName = "glass_pane",
+        meta = 0,
+    ),
+    Torch(
+        registryName = "torch",
+        meta = 0,
+    ),
+    StonePressurePlate(
+        registryName = "stone_pressure_plate",
+        meta = 0,
+    ),
+    Compass(
+        registryName = "compass",
+        meta = 0,
+    ),
+    Paper(
+        registryName = "paper",
+        meta = 0,
+    ),
     Ladder(
         registryName = "ladder",
         meta = 0,
