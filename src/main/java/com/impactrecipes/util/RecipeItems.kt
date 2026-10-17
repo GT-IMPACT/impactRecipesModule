@@ -1,5 +1,6 @@
 package com.impactrecipes.util
 
+import gregtech.api.GregTech_API
 import gregtech.api.enums.Materials
 import gregtech.api.enums.OrePrefixes
 import gregtech.api.util.GT_ModHandler
@@ -8,6 +9,18 @@ import net.minecraft.item.ItemStack
 
 /** Missing ingredients return null and are reported; registration helpers skip incomplete recipes. */
 public object RecipeItems {
+
+    @JvmStatic
+    @JvmOverloads
+    public fun ore(
+        name: String,
+        count: Int = 1,
+    ): ItemStack? {
+        return GregTech_API.getStackofAmountFromOreDict(
+            name,
+            count,
+        )
+    }
 
     @JvmStatic
     @JvmOverloads

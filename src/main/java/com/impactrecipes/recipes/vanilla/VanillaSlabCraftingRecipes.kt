@@ -3,7 +3,7 @@ package com.impactrecipes.recipes.vanilla
 import com.impactrecipes.items.ModItemVariant
 import com.impactrecipes.items.VanillaItems
 import com.impactrecipes.util.CraftingRecipes
-import com.impactrecipes.util.RecipeUtils
+import com.impactrecipes.util.RecipeItems
 
 internal class VanillaSlabCraftingRecipes {
 
@@ -16,7 +16,7 @@ internal class VanillaSlabCraftingRecipes {
                 'T',
                 "craftingToolSaw",
                 'B',
-                RecipeUtils.ordictItemStack("stone"),
+                RecipeItems.ore("stone"),
             ),
         )
 
@@ -28,7 +28,7 @@ internal class VanillaSlabCraftingRecipes {
                 'T',
                 "craftingToolSaw",
                 'B',
-                RecipeUtils.ordictItemStack("sandstone"),
+                RecipeItems.ore("sandstone"),
             ),
         )
 
@@ -40,7 +40,7 @@ internal class VanillaSlabCraftingRecipes {
                 'T',
                 "craftingToolSaw",
                 'B',
-                RecipeUtils.ordictItemStack("cobblestone"),
+                RecipeItems.ore("cobblestone"),
             ),
         )
 
@@ -64,7 +64,7 @@ internal class VanillaSlabCraftingRecipes {
                 'T',
                 "craftingToolSaw",
                 'B',
-                RecipeUtils.ordictItemStack("stoneBricks"),
+                RecipeItems.ore("stoneBricks"),
             ),
         )
 
@@ -76,7 +76,7 @@ internal class VanillaSlabCraftingRecipes {
                 'T',
                 "craftingToolSaw",
                 'B',
-                RecipeUtils.ordictItemStack("stoneNetherBrick"),
+                RecipeItems.ore("stoneNetherBrick"),
             ),
         )
 
@@ -88,7 +88,7 @@ internal class VanillaSlabCraftingRecipes {
                 'T',
                 "craftingToolSaw",
                 'B',
-                RecipeUtils.ordictItemStack("blockQuartz"),
+                RecipeItems.ore("blockQuartz"),
             ),
         )
 

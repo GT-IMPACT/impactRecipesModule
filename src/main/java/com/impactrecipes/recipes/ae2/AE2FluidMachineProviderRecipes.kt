@@ -7,7 +7,6 @@ import com.impactrecipes.items.GregTechItems
 import com.impactrecipes.items.ImpactItems
 import com.impactrecipes.util.MachineRecipes
 import com.impactrecipes.util.RecipeItems
-import com.impactrecipes.util.RecipeUtils
 import gregtech.api.enums.Materials
 import gregtech.api.enums.OrePrefixes
 
@@ -200,10 +199,10 @@ internal class AE2FluidMachineProviderRecipes {
                 ),
                 AE2Items.BlankPattern.get(),
                 GregTechItems.ElectricPumpEV.get(),
-                RecipeUtils.ordictItemStack("oc:circuitChip3"),
-                RecipeUtils.ordictItemStack(
-                    oredict = "oc:cable",
-                    amount = 2,
+                RecipeItems.ore("oc:circuitChip3"),
+                RecipeItems.ore(
+                    name = "oc:cable",
+                    count = 2,
                 ),
                 AE2Items.CalculationProcessor.get(),
             ),
