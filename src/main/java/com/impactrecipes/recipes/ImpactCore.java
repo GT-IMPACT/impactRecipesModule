@@ -2439,12 +2439,6 @@ public class ImpactCore implements Runnable {
 				GT_Values.NI, GT_Values.NI, GT_Values.NI, new int[]{10000, 7500, 2000}, 400, 30
 		);
 		
-		RA.addCentrifugeRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardaCgrass", 1L),
-				GT_Values.NI, GT_Values.NF, GT_Values.NF, CoreItems2.getRecipe(151, 1),
-				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Neutronium, 1L),
-				GT_ModHandler.getModItem("minecraft", "sand", 1L), GT_Values.NI, GT_Values.NI, GT_Values.NI,
-				new int[]{5000, 100, 5000}, 400, 8
-		);
 		RA.addCentrifugeRecipe(GT_ModHandler.getModItem("GalaxySpace", "barnardacblocks", 1L),
 				GT_Values.NI, GT_Values.NF, GT_Values.NF, CoreItems2.getRecipe(151, 1),
 				GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Neutronium, 1L),
