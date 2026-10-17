@@ -5,6 +5,7 @@ import com.impactrecipes.recipes.ae2.AE2Registrar;
 import com.impactrecipes.recipes.architecturecraft.ArchitectureCraftRegistrar;
 import com.impactrecipes.recipes.backpack.BackpackRegistrar;
 import com.impactrecipes.recipes.chickenchunks.ChickenChunksRegistrar;
+import com.impactrecipes.recipes.chestup.ChestUpRegistrar;
 import com.impactrecipes.recipes.gregtech.GregTechRegistrar;
 import com.impactrecipes.recipes.impact.ImpactRegistrar;
 import com.impactrecipes.recipes.opencomputers.OpenComputersRegistrar;
@@ -53,7 +54,7 @@ public class ModsLoader {
         new Gendustry().run();
         new Ztones().run();
         new Forestry().run();
-        new ChestUp().run();
+        RecipeRegistrars.register(new ChestUpRegistrar());
         new LogisticPipes().run();
         new MalisisDoors().run();
         RecipeRegistrars.register(new BackpackRegistrar());
@@ -86,7 +87,6 @@ public class ModsLoader {
         registerRecipeClass(Gendustry.class);
         registerRecipeClass(Ztones.class);
         registerRecipeClass(Forestry.class);
-        registerRecipeClass(ChestUp.class);
         registerRecipeClass(LogisticPipes.class);
         registerRecipeClass(MalisisDoors.class);
         registerRecipeClass(BiblioCraft.class);
