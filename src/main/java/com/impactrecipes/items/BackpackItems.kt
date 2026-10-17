@@ -7,7 +7,25 @@ public enum class BackpackItems(
 
     // Items
 
-    TannedLeather(registryName = "tannedLeather");
+    TannedLeather(registryName = "tannedLeather"),
+    BoundLeather(registryName = "boundLeather"),
+    SmallBackpack(registryName = "backpack"),
+    MediumBackpack(
+        registryName = "backpack",
+        meta = 100,
+    ),
+    LargeBackpack(
+        registryName = "backpack",
+        meta = 200,
+    ),
+    WorkbenchBackpack(
+        registryName = "workbenchbackpack",
+        meta = 17,
+    ),
+    LargeWorkbenchBackpack(
+        registryName = "workbenchbackpack",
+        meta = 217,
+    );
 
     public override val modId: String = "Backpack"
 }

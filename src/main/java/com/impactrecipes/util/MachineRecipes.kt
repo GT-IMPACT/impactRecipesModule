@@ -1,5 +1,6 @@
 package com.impactrecipes.util
 
+import com.impact.common.te.TE_DryingRack
 import com.impact.impact
 import gregtech.api.enums.GT_Values.RA
 import net.minecraft.item.ItemStack
@@ -7,6 +8,36 @@ import net.minecraftforge.fluids.FluidStack
 
 /** Keeps positional machine APIs here so recipe definitions can use named Kotlin arguments. */
 public object MachineRecipes {
+
+    @JvmStatic
+    public fun dryingRack(
+        input: ItemStack?,
+        ticks: Int,
+        output: ItemStack?,
+    ) {
+        TE_DryingRack.DryingRackRecipes.addDryingRecipe(
+            input,
+            ticks,
+            output,
+        )
+    }
+
+    @JvmStatic
+    public fun dryingOven(
+        input: ItemStack?,
+        outputs: Array<out ItemStack?>,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "drying oven") {
+            impact.I_RA.addDryingOvenRecipe(
+                input,
+                outputs,
+                ticks,
+                eu,
+            )
+        }
+    }
 
     @JvmStatic
     public fun laserEngraver(
