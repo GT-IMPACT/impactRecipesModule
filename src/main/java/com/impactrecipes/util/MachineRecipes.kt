@@ -10,6 +10,25 @@ import net.minecraftforge.fluids.FluidStack
 public object MachineRecipes {
 
     @JvmStatic
+    public fun pulverizer(
+        input: ItemStack?,
+        outputs: Array<out ItemStack?>,
+        chances: IntArray?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "pulverizer") {
+            RA.addPulveriserRecipe(
+                input,
+                outputs,
+                chances,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
     public fun spaceAutoclave(
         input: ItemStack?,
         fluid: FluidStack?,

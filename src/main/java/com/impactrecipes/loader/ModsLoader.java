@@ -12,6 +12,7 @@ import com.impactrecipes.recipes.opencomputers.OpenComputersRegistrar;
 import com.impactrecipes.recipes.projectred.ProjectRedRegistrar;
 import com.impactrecipes.recipes.stargate.StargateRegistrar;
 import com.impactrecipes.recipes.stevesfactorymanager.StevesFactoryManagerRegistrar;
+import com.impactrecipes.recipes.undergroundbiomes.UndergroundBiomesRegistrar;
 import com.impactrecipes.recipes.nuclearcontrol.NuclearControlRegistrar;
 import com.impactrecipes.recipes.openblocks.OpenBlocksRegistrar;
 
@@ -65,7 +66,7 @@ public class ModsLoader {
         RecipeRegistrars.register(new NuclearControlRegistrar());
         if (Loader.isModLoaded("EnderIO")) new Ender_IO().run();
         new CatWalks().run();
-        new UBC().run();
+        RecipeRegistrars.register(new UndergroundBiomesRegistrar());
         new ChiselRecipes().run();
 
 
@@ -93,7 +94,6 @@ public class ModsLoader {
         registerRecipeClass(CarpentersBlocks.class);
         registerRecipeClass(Ender_IO.class);
         registerRecipeClass(CatWalks.class);
-        registerRecipeClass(UBC.class);
         registerRecipeClass(ChiselRecipes.class);
     
         recipesInit();
