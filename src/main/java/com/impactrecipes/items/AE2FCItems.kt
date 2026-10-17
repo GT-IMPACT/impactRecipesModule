@@ -3,7 +3,7 @@ package com.impactrecipes.items
 public enum class AE2FCItems(
     public override val registryName: String,
     public override val meta: Int = 0,
-) : IModItem {
+) : IRegistryModItem {
 
     EnergyCard(registryName = "energy_card"),
     InfinityWaterStorageCell(registryName = "fluid_storage.infinity.water"),
