@@ -104,7 +104,7 @@ public class BiblioCraft implements Runnable {
         // --- Dark Oak Furniture Paneler
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("BiblioCraft", "BiblioPaneler", 1L, 5), tBitMask, new Object[]{"PsP", "WGW", "LLL", 'G', GT_ModHandler.getModItem("gregtech", "gt.metaitem.02", 1L, 32475), 'P', OrePrefixes.plate.get(Materials.Iron), 'W', GT_ModHandler.getModItem("minecraft", "wooden_slab", 1L, 5),  'L', GT_ModHandler.getModItem("minecraft", "planks", 1L, 5)});
         // --- Framed Furniture Paneler
-        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("BiblioCraft", "BiblioPaneler", 1L, 6), tBitMask, new Object[]{"PsP", "WLW", "LLL", 'P', OrePrefixes.plate.get(Materials.Iron), 'W', GT_ModHandler.getModItem("BiblioCraft", "item.FramingBoard", 1L, 0),  'L', GT_ModHandler.getModItem("BiblioCraft", "FramingSheet", 1L, 0)});
+        GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("BiblioCraft", "BiblioPaneler", 1L, 6), tBitMask, new Object[]{"PsP", "WLW", "LLL", 'P', OrePrefixes.plate.get(Materials.Iron), 'W', GT_ModHandler.getModItem("BiblioCraft", "item.FramingBoard", 1L, 0),  'L', GT_ModHandler.getModItem("BiblioCraft", "item.FramingSheet", 1L, 0)});
         // --- Atlas
         GT_ModHandler.addCraftingRecipe(GT_ModHandler.getModItem("BiblioCraft", "item.AtlasBook", 1L, 0), tBitMask, new Object[]{"PTP", "PBP", "PMP", 'P', OrePrefixes.plate.get(Materials.Paper), 'B', OreDictNames.craftingBook, 'M', "paperMap", 'T', GT_ModHandler.getModItem("BiblioCraft", "item.BiblioMapTool", 1L, 0)});
         // --- Painting Press
