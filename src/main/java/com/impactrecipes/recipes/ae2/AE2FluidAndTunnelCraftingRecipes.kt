@@ -2,7 +2,6 @@ package com.impactrecipes.recipes.ae2
 
 import com.impactrecipes.items.AE2FCItems
 import com.impactrecipes.items.AE2Items
-import com.impactrecipes.items.ExtraCellsItems
 import com.impactrecipes.util.CraftingRecipes
 import gregtech.api.enums.Materials
 import gregtech.api.enums.OrePrefixes
@@ -50,22 +49,6 @@ internal class AE2FluidAndTunnelCraftingRecipes {
                 AE2FCItems.MELevelMaintainer.get(),
                 'C',
                 AE2Items.EngineeringProcessor.get(),
-            ),
-        )
-
-        CraftingRecipes.shapelessWithFlags(
-            output = ExtraCellsItems.PartBase9.get(),
-            flags = craftingFlags,
-            ingredients = arrayOf<Any?>(
-                ExtraCellsItems.Ecbaseblock.get(),
-            ),
-        )
-
-        CraftingRecipes.shapelessWithFlags(
-            output = ExtraCellsItems.Ecbaseblock.get(),
-            flags = craftingFlags,
-            ingredients = arrayOf<Any?>(
-                ExtraCellsItems.PartBase9.get(),
             ),
         )
 

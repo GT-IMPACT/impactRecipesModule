@@ -6,7 +6,6 @@ public object Reference {
     public const val GALACTICRAFT: String = "GalacticraftCore"
     public const val GALAXYSPACE: String = "GalaxySpace"
     public const val AE2: String = "appliedenergistics2"
-    public const val EC2: String = "extracells"
     public const val CHISEL: String = "chisel"
     public const val BUILDCRAFT: String = "BuildCraft|Core"
     public const val ENDERIO: String = "EnderIO"

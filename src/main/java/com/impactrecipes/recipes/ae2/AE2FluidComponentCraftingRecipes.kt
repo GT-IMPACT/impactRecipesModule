@@ -2,7 +2,6 @@ package com.impactrecipes.recipes.ae2
 
 import com.impactrecipes.items.AE2FCItems
 import com.impactrecipes.items.AE2Items
-import com.impactrecipes.items.ExtraCellsItems
 import com.impactrecipes.util.CraftingRecipes
 import gregtech.api.enums.Materials
 import gregtech.api.enums.OrePrefixes
@@ -54,22 +53,6 @@ internal class AE2FluidComponentCraftingRecipes {
         )
 
         CraftingRecipes.shapelessWithFlags(
-            output = AE2FCItems.MEFluidImportBus.get(),
-            flags = 0,
-            ingredients = arrayOf<Any?>(
-                ExtraCellsItems.PartBase1.get(),
-            ),
-        )
-
-        CraftingRecipes.shapelessWithFlags(
-            output = AE2FCItems.FluidExportBus.get(),
-            flags = 0,
-            ingredients = arrayOf<Any?>(
-                ExtraCellsItems.PartBase.get(),
-            ),
-        )
-
-        CraftingRecipes.shapelessWithFlags(
             output = AE2FCItems.MEDualInterfaceMeta0.get(),
             flags = 0,
             ingredients = arrayOf<Any?>(
@@ -78,82 +61,10 @@ internal class AE2FluidComponentCraftingRecipes {
         )
 
         CraftingRecipes.shapelessWithFlags(
-            output = AE2FCItems.MEDualInterfaceMeta0.get(),
-            flags = 0,
-            ingredients = arrayOf<Any?>(
-                ExtraCellsItems.PartBase9.get(),
-            ),
-        )
-
-        CraftingRecipes.shapelessWithFlags(
             output = AE2FCItems.DualInterface.get(),
             flags = 0,
             ingredients = arrayOf<Any?>(
                 AE2FCItems.MEDualInterfaceMeta0.get(),
-            ),
-        )
-
-        CraftingRecipes.shapelessWithFlags(
-            output = AE2FCItems.DualInterface.get(),
-            flags = 0,
-            ingredients = arrayOf<Any?>(
-                ExtraCellsItems.Ecbaseblock.get(),
-            ),
-        )
-
-        CraftingRecipes.shapelessWithFlags(
-            output = AE2FCItems.FluidStorageComponent1k.get(),
-            flags = 0,
-            ingredients = arrayOf<Any?>(
-                ExtraCellsItems.StorageComponent4.get(),
-            ),
-        )
-
-        CraftingRecipes.shapelessWithFlags(
-            output = AE2FCItems.Item4kMEFluidStorageComponent.get(),
-            flags = 0,
-            ingredients = arrayOf<Any?>(
-                ExtraCellsItems.StorageComponent5.get(),
-            ),
-        )
-
-        CraftingRecipes.shapelessWithFlags(
-            output = AE2FCItems.Item16kMEFluidStorageComponent.get(),
-            flags = 0,
-            ingredients = arrayOf<Any?>(
-                ExtraCellsItems.StorageComponent6.get(),
-            ),
-        )
-
-        CraftingRecipes.shapelessWithFlags(
-            output = AE2FCItems.Item64kMEFluidStorageComponent.get(),
-            flags = 0,
-            ingredients = arrayOf<Any?>(
-                ExtraCellsItems.StorageComponent7.get(),
-            ),
-        )
-
-        CraftingRecipes.shapelessWithFlags(
-            output = AE2FCItems.Item256kMEFluidStorageComponent.get(),
-            flags = 0,
-            ingredients = arrayOf<Any?>(
-                ExtraCellsItems.StorageComponent8.get(),
-            ),
-        )
-
-        CraftingRecipes.shapelessWithFlags(
-            output = AE2FCItems.Item1024kMEFluidStorageComponent.get(),
-            flags = 0,
-            ingredients = arrayOf<Any?>(
-                ExtraCellsItems.StorageComponent9.get(),
-            ),
-        )
-
-        CraftingRecipes.shapelessWithFlags(
-            output = AE2FCItems.Item4096kMEFluidStorageComponent.get(),
-            flags = 0,
-            ingredients = arrayOf<Any?>(
-                ExtraCellsItems.StorageComponent10.get(),
             ),
         )
     }

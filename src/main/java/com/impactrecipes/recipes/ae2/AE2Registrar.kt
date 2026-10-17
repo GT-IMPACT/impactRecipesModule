@@ -14,7 +14,6 @@ public class AE2Registrar : IRecipeRegistrar {
         }
 
     public override fun register() {
-        AE2ExtraCellsRemovals().register()
         AE2AddonRemovals().register()
         AE2DeviceRemovals().register()
         AE2NetworkAndCellRemovals().register()

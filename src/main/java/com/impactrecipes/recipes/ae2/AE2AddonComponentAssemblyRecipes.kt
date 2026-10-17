@@ -3,7 +3,6 @@ package com.impactrecipes.recipes.ae2
 import com.impactrecipes.items.AE2FCItems
 import com.impactrecipes.items.AE2Items
 import com.impactrecipes.items.AE2WirelessCraftingTerminalItems
-import com.impactrecipes.items.ExtraCellsItems
 import com.impactrecipes.items.GregTechItems
 import com.impactrecipes.items.VanillaItems
 import com.impactrecipes.util.MachineRecipes
@@ -68,14 +67,6 @@ internal class AE2AddonComponentAssemblyRecipes {
         )
 
         MachineRecipes.assembler(
-            input = AE2FCItems.FluidStorageHousing.get(),
-            secondaryInput = VanillaItems.Bucket.get(),
-            output = ExtraCellsItems.PatternFluid.get(),
-            ticks = 100,
-            eu = 120,
-        )
-
-        MachineRecipes.assembler(
             input = AE2Items.LevelEmitter.get(),
             secondaryInput = RecipeItems.ore(
                 prefix = OrePrefixes.plate,
@@ -84,54 +75,6 @@ internal class AE2AddonComponentAssemblyRecipes {
             ),
             output = AE2FCItems.PartFluidLevelEmitter.get(),
             ticks = 100,
-            eu = 120,
-        )
-
-        MachineRecipes.assembler(
-            input = AE2Items.MEAnnihilationPlane.get(),
-            secondaryInput = RecipeItems.ore(
-                prefix = OrePrefixes.plate,
-                material = Materials.Lapis,
-                count = 3,
-            ),
-            output = ExtraCellsItems.PartBase5.get(),
-            ticks = 300,
-            eu = 120,
-        )
-
-        MachineRecipes.assembler(
-            input = AE2Items.MEFormationPlane.get(),
-            secondaryInput = RecipeItems.ore(
-                prefix = OrePrefixes.plate,
-                material = Materials.Lapis,
-                count = 3,
-            ),
-            output = ExtraCellsItems.PartBase6.get(),
-            ticks = 300,
-            eu = 120,
-        )
-
-        MachineRecipes.assembler(
-            input = AE2Items.MEDrive.get(),
-            secondaryInput = RecipeItems.ore(
-                prefix = OrePrefixes.plate,
-                material = Materials.StainlessSteel,
-                count = 1,
-            ),
-            output = ExtraCellsItems.PartBase7.get(),
-            ticks = 300,
-            eu = 120,
-        )
-
-        MachineRecipes.assembler(
-            input = AE2Items.EnergyCell.get(),
-            secondaryInput = RecipeItems.ore(
-                prefix = OrePrefixes.plate,
-                material = Materials.StainlessSteel,
-                count = 1,
-            ),
-            output = ExtraCellsItems.PartBase8.get(),
-            ticks = 300,
             eu = 120,
         )
 
