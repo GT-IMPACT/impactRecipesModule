@@ -2,7 +2,6 @@ package com.impactrecipes.recipes.ic2
 
 import com.impactrecipes.items.GregTechItems
 import com.impactrecipes.items.IC2Items
-import com.impactrecipes.items.ModItemVariant
 import com.impactrecipes.util.MachineRecipes
 import com.impactrecipes.util.RecipeItems
 import gregtech.api.enums.Materials
@@ -18,10 +17,7 @@ internal class IC2ComponentExtrusionRecipes {
                 count = 1,
             ),
             mold = GregTechItems.ShapeExtruderShaft.get(amount = 0),
-            output = ModItemVariant(
-                item = IC2Items.ItemRecipePart,
-                meta = 11,
-            ).get(),
+            output = IC2Items.Ironshaft.get(),
             ticks = 2000,
             eu = 120,
         )
@@ -33,10 +29,7 @@ internal class IC2ComponentExtrusionRecipes {
                 count = 1,
             ),
             mold = GregTechItems.ShapeExtruderShaft.get(amount = 0),
-            output = ModItemVariant(
-                item = IC2Items.ItemRecipePart,
-                meta = 12,
-            ).get(),
+            output = IC2Items.Steelshaft.get(),
             ticks = 2000,
             eu = 480,
         )

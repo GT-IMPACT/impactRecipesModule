@@ -109,7 +109,6 @@ public enum class IC2Items(
     QuantumHelmet(apiName = "quantumHelmet"),
     QuantumLeggings(apiName = "quantumLeggings"),
     QuantumBoots(apiName = "quantumBoots"),
-    ItemRecipePart(apiName = "itemRecipePart"),
     AdvancedAlloy(apiName = "advancedAlloy"),
     HazmatHelmet(apiName = "hazmatHelmet"),
     CopperBoiler(apiName = "copperboiler"),
