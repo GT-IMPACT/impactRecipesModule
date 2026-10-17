@@ -1,12 +1,16 @@
 package com.impactrecipes.loader;
 
 import com.impactrecipes.recipes.*;
+import com.impactrecipes.recipes.ae2.AE2Registrar;
 import com.impactrecipes.recipes.architecturecraft.ArchitectureCraftRegistrar;
 import com.impactrecipes.recipes.chickenchunks.ChickenChunksRegistrar;
 import com.impactrecipes.recipes.gregtech.GregTechRegistrar;
+import com.impactrecipes.recipes.impact.ImpactRegistrar;
+import com.impactrecipes.recipes.opencomputers.OpenComputersRegistrar;
+import com.impactrecipes.recipes.projectred.ProjectRedRegistrar;
+import com.impactrecipes.recipes.stargate.StargateRegistrar;
 import com.impactrecipes.recipes.nuclearcontrol.NuclearControlRegistrar;
 import com.impactrecipes.recipes.openblocks.OpenBlocksRegistrar;
-import com.impactrecipes.recipes.laser.LaserEngraver;
 
 import static com.impactrecipes.RecipeKotlinKt.recipesInit;
 import static com.impactrecipes.util.RecipeUtils.registerRecipeClass;
@@ -21,25 +25,29 @@ public class ModsLoader {
     public static void loader() {
         if (Loader.isModLoaded("chisel")) ChiselGroup.run();
 
-        new LaserEngraver();
         new Vanilla().run();
         RecipeRegistrars.register(new GregTechRegistrar());
+        RecipeRegistrars.register(new AE2Registrar());
         new AE().run();
         new BuildCraft().run();
         if (Loader.isModLoaded("JABBA")) new Jabba().run();
+        RecipeRegistrars.register(new OpenComputersRegistrar());
         if (Loader.isModLoaded("OpenComputers")) new OpenComputers().run();
         if (Loader.isModLoaded("Railcraft")) new RailCraft().run();
         if (Loader.isModLoaded("StevesFactoryManager")) new StevesFactoryManager().run();
         if (Loader.isModLoaded("StorageDrawers")) new StorageDrawers().run();
         if (Loader.isModLoaded("tectech")) new TecTech().run();
+        RecipeRegistrars.register(new ProjectRedRegistrar());
         new ProjectRed().run();
         RecipeRegistrars.register(new OpenBlocksRegistrar());
+        RecipeRegistrars.register(new ImpactRegistrar());
         new ImpactCore().run();
         new GalaxySpace().run();
         new GalactiCraft().run();
         new IC2().run();
         new ExtraUtilities().run();
         new GraviSuite().run();
+        RecipeRegistrars.register(new StargateRegistrar());
         new StarGate().run();
         new Gendustry().run();
         new Ztones().run();
@@ -59,7 +67,6 @@ public class ModsLoader {
         new ChiselRecipes().run();
 
 
-        registerRecipeClass(LaserEngraver.class);
         registerRecipeClass(Vanilla.class);
         registerRecipeClass(AE.class);
         registerRecipeClass(BuildCraft.class);

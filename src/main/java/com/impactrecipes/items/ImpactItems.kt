@@ -15,6 +15,18 @@ public enum class ImpactItems(
 
     // Items
 
+    QuantumCrystal(item = Core_List_Items.QuantumCrystal),
+    NanoCrystal(item = Core_List_Items.NanoCrystal),
+    MicrochipBoard1(item = Core_List_Items.MicrochipBoard1),
+    MicrochipBoard2(item = Core_List_Items.MicrochipBoard2),
+    MicrochipBoard3(item = Core_List_Items.MicrochipBoard3),
+    FlawedFluixCrystal(item = Core_List_Items.FlawedFluixCrystal),
+    FlawlessFluixCrystal(item = Core_List_Items.FlawlessFluixCrystal),
+    RedstoneRedChipset(item = GT_ItemList.RedstoneRedChipset),
+    EngravedEnergyChip(item = GT_ItemList.EngravedEnergyChip),
+    EngravedDiamondCrystalChip(item = GT_ItemList.EngravedDiamondCrystalChip),
+    EngravedQuantumChip(item = GT_ItemList.EngravedQuantumChip),
+    EngravedGoldChip(item = GT_ItemList.EngravedGoldChip),
     AluminiumIronPlate(item = Core_List_Items.AluminiumIronPlate),
     BarnardaCBiochaff(item = Core_List_Items.BarnardaCBiochaff),
     BarnardaCBiomass(item = Core_List_Items.BarnardaCBiomass),

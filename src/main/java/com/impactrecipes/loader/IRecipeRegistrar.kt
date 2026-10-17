@@ -4,5 +4,7 @@ public interface IRecipeRegistrar {
 
     public val available: Boolean
 
-    public fun register()
+    public fun register() {}
+
+    public fun registerOreRecipes(oreRecipes: IOreRecipeRegistry) {}
 }

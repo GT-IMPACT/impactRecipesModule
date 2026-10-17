@@ -9,6 +9,27 @@ import net.minecraftforge.fluids.FluidStack
 public object MachineRecipes {
 
     @JvmStatic
+    public fun laserEngraver(
+        input: ItemStack?,
+        lens: ItemStack?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+        cleanroom: Boolean,
+    ) {
+        registerOperation(id = "laser engraver") {
+            RA.addLaserEngraverRecipe(
+                input,
+                lens,
+                output,
+                ticks,
+                eu,
+                cleanroom,
+            )
+        }
+    }
+
+    @JvmStatic
     public fun assembler(
         inputs: Array<out ItemStack?>,
         fluid: FluidStack?,

@@ -9,6 +9,8 @@ public enum class GregTechItems(
 
     // Items
 
+    EnergyCrystal(item = ItemList.EnergyCrystal),
+    LapotronCrystal(item = ItemList.LapotronCrystal),
     AdsorptionFilter(item = ItemList.AdsorptionFilter),
     AdsorptionFilterCasing(item = ItemList.AdsorptionFilterCasing),
     AdsorptionFilterDirty(item = ItemList.AdsorptionFilterDirty),

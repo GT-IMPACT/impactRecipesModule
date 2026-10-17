@@ -7,6 +7,22 @@ public enum class AE2Items(
 
     // Items
 
+    PrintedCalculationCircuit(
+        registryName = "item.ItemMultiMaterial",
+        meta = 13,
+    ),
+    PrintedEngineeringCircuit(
+        registryName = "item.ItemMultiMaterial",
+        meta = 14,
+    ),
+    PrintedLogicCircuit(
+        registryName = "item.ItemMultiMaterial",
+        meta = 15,
+    ),
+    PrintedSilicon(
+        registryName = "item.ItemMultiMaterial",
+        meta = 19,
+    ),
     LogicProcessor(
         registryName = "item.ItemMultiMaterial",
         meta = 22,
