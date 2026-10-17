@@ -131,7 +131,7 @@ internal class UndergroundBiomesPulverizingRecipes {
                 ),
                 RecipeItems.ore(
                     prefix = OrePrefixes.dust,
-                    material = Materials.Quartz,
+                    material = Materials.NetherQuartz,
                     count = 1,
                 ),
             ),
