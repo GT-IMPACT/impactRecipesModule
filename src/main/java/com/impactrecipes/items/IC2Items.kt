@@ -9,6 +9,7 @@ public enum class IC2Items(
 
     // Items
 
+    NightvisionGoggles(apiName = "nightvisionGoggles"),
     BoatCarbon(apiName = "boatCarbon"),
     BoatRubber(apiName = "boatRubber"),
     BoatRubberBroken(apiName = "boatRubberBroken"),
@@ -139,6 +140,9 @@ public enum class IC2Items(
 
     // Blocks
 
+    RubberWood(apiName = "rubberWood"),
+    RubberLeaves(apiName = "rubberLeaves"),
+    RubberSapling(apiName = "rubberSapling"),
     IndustrialTnt(apiName = "industrialTnt"),
     Generator(apiName = "generator"),
     GeothermalGenerator(apiName = "geothermalGenerator"),

@@ -63,7 +63,6 @@ public class ModsLoader {
         RecipeRegistrars.register(new ProjectRedRegistrar());
         RecipeRegistrars.register(new OpenBlocksRegistrar());
         RecipeRegistrars.register(new ImpactRegistrar());
-        new ImpactCore().run();
         RecipeRegistrars.register(new GalaxySpaceRegistrar());
         RecipeRegistrars.register(new GalacticraftRegistrar());
         RecipeRegistrars.register(new IC2Registrar());
@@ -88,7 +87,6 @@ public class ModsLoader {
         RecipeRegistrars.register(new ChiselRegistrar());
 
 
-        registerRecipeClass(ImpactCore.class);
     
         recipesInit();
     }

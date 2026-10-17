@@ -214,6 +214,10 @@ public enum class EnderIOItems(
 
     // Blocks
 
+    TravelAnchor(
+        registryName = "blockTravelAnchor",
+        meta = 0,
+    ),
     BasicCapacitorBank(
         registryName = "blockCapBank",
         meta = 1,

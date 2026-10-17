@@ -7,6 +7,18 @@ public enum class GalaxySpaceItems(
 
     // Items
 
+    ItemCompressedDualBronze(
+        registryName = "item.CompressedDualBronze",
+        meta = 0,
+    ),
+    ItemCompressedCoal(
+        registryName = "item.CompressedCoal",
+        meta = 0,
+    ),
+    CompressedNickel(
+        registryName = "item.CompressedPlates",
+        meta = 2,
+    ),
     ItemThermalClothT2(
         registryName = "item.ThermalClothT2",
         meta = 0,
@@ -238,6 +250,18 @@ public enum class GalaxySpaceItems(
 
     // Blocks
 
+    BarnardaCdandelion3(
+        registryName = "barnardaCdandelion3",
+        meta = 0,
+    ),
+    BarnardaCreed(
+        registryName = "barnardaCreed",
+        meta = 0,
+    ),
+    BarnardaCdandelions(
+        registryName = "barnardaCdandelions",
+        meta = 0,
+    ),
     Futureglass(
         registryName = "futureglass",
         meta = 0,

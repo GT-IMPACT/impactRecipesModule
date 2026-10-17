@@ -7,6 +7,22 @@ public enum class VanillaItems(
 
     // Items
 
+    Boat(
+        registryName = "boat",
+        meta = 0,
+    ),
+    Brick(
+        registryName = "brick",
+        meta = 0,
+    ),
+    CocoaBeans(
+        registryName = "dye",
+        meta = 3,
+    ),
+    EnderPearl(
+        registryName = "ender_pearl",
+        meta = 0,
+    ),
     Minecart(
         registryName = "minecart",
         meta = 0,
@@ -358,6 +374,94 @@ public enum class VanillaItems(
 
     // Blocks
 
+    Chest32767(
+        registryName = "chest",
+        meta = 32767,
+    ),
+    OakWood(
+        registryName = "log",
+        meta = 0,
+    ),
+    OakSapling(
+        registryName = "sapling",
+        meta = 0,
+    ),
+    OakLeaves(
+        registryName = "leaves",
+        meta = 0,
+    ),
+    SpruceWood(
+        registryName = "log",
+        meta = 1,
+    ),
+    SpruceSapling(
+        registryName = "sapling",
+        meta = 1,
+    ),
+    Mushroom(
+        registryName = "brown_mushroom",
+        meta = 0,
+    ),
+    SpruceLeaves(
+        registryName = "leaves",
+        meta = 1,
+    ),
+    BirchWood(
+        registryName = "log",
+        meta = 2,
+    ),
+    BirchSapling(
+        registryName = "sapling",
+        meta = 2,
+    ),
+    BirchLeaves(
+        registryName = "leaves",
+        meta = 2,
+    ),
+    JungleWood(
+        registryName = "log",
+        meta = 3,
+    ),
+    JungleSapling(
+        registryName = "sapling",
+        meta = 3,
+    ),
+    JungleLeaves(
+        registryName = "leaves",
+        meta = 3,
+    ),
+    AcaciaWood(
+        registryName = "log2",
+        meta = 0,
+    ),
+    AcaciaSapling(
+        registryName = "sapling",
+        meta = 4,
+    ),
+    DeadBush(
+        registryName = "deadbush",
+        meta = 0,
+    ),
+    AcaciaLeaves(
+        registryName = "leaves2",
+        meta = 0,
+    ),
+    DarkOakWood(
+        registryName = "log2",
+        meta = 1,
+    ),
+    DarkOakSapling(
+        registryName = "sapling",
+        meta = 5,
+    ),
+    DarkOakLeaves(
+        registryName = "leaves2",
+        meta = 1,
+    ),
+    HeavyWeightedPressurePlate32767(
+        registryName = "heavy_weighted_pressure_plate",
+        meta = 32767,
+    ),
     Rail(
         registryName = "rail",
         meta = 0,

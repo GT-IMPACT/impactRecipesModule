@@ -172,4 +172,19 @@ public object CraftingRecipes {
         }
         return true
     }
+    @JvmStatic
+    public fun smelting(
+        input: ItemStack?,
+        output: ItemStack?,
+    ) {
+        RecipeDiagnostics.attempt(
+            id = "furnace smelting",
+            rejectedReason = "GregTech rejected the furnace recipe.",
+        ) {
+            GT_ModHandler.addSmeltingRecipe(
+                input,
+                output,
+            )
+        }
+    }
 }

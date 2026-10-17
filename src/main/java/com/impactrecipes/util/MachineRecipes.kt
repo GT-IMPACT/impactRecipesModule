@@ -1418,6 +1418,146 @@ public object MachineRecipes {
         }
     }
 
+    @JvmStatic
+    public fun lathe(
+        input: ItemStack?,
+        output: ItemStack?,
+        secondaryOutput: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "lathe") {
+            RA.addLatheRecipe(
+                input,
+                output,
+                secondaryOutput,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun formingPress(
+        inputs: Array<out ItemStack?>?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "formingPress") {
+            RA.addFormingPressRecipe(
+                inputs,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun farm(
+        input: ItemStack?,
+        secondaryInput: ItemStack?,
+        input3: ItemStack?,
+        fluidInput: FluidStack?,
+        fluidOutput: FluidStack?,
+        outputs: Array<out ItemStack?>?,
+        chances: IntArray?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "farm") {
+            RA.addFarmRecipe(
+                input,
+                secondaryInput,
+                input3,
+                fluidInput,
+                fluidOutput,
+                outputs,
+                chances,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun multiblockChemicalReactor(
+        inputs: Array<out ItemStack?>?,
+        fluidInputs: Array<out FluidStack?>?,
+        fluidOutputs: Array<out FluidStack?>?,
+        outputs: Array<out ItemStack?>?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "multiblockChemicalReactor") {
+            RA.addMultiblockChemicalRecipe(
+                inputs,
+                fluidInputs,
+                fluidOutputs,
+                outputs,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun cyclone(
+        inputs: Array<out ItemStack?>?,
+        fluidInputs: Array<out FluidStack?>?,
+        fluidOutputs: Array<out FluidStack?>?,
+        outputs: Array<out ItemStack?>?,
+        chances: IntArray?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "cyclone") {
+            RA.addCyclonRecipe(
+                inputs,
+                fluidInputs,
+                fluidOutputs,
+                outputs,
+                chances,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun tesseract(
+        input: ItemStack?,
+        fluidInput: FluidStack?,
+        fluidOutput: FluidStack?,
+        output: ItemStack?,
+        secondaryOutput: ItemStack?,
+        output3: ItemStack?,
+        output4: ItemStack?,
+        output5: ItemStack?,
+        output6: ItemStack?,
+        chances: IntArray?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "tesseract") {
+            RA.addTesseractRecipe(
+                input,
+                fluidInput,
+                fluidOutput,
+                output,
+                secondaryOutput,
+                output3,
+                output4,
+                output5,
+                output6,
+                chances,
+                ticks,
+                eu,
+            )
+        }
+    }
+
     private fun registerOperation(
         id: String,
         action: () -> Boolean,
