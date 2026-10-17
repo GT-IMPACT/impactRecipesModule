@@ -1,6 +1,5 @@
 package com.impactrecipes.recipes.chisel
 
-import com.impactrecipes.items.ExtraUtilitiesItems
 import com.impactrecipes.items.UndergroundBiomesItems
 import com.impactrecipes.util.CarvingRecipes
 import cpw.mods.fml.common.Loader
@@ -22,21 +21,6 @@ internal class ChiselOptionalCarvingRecipes {
                 meta = 0,
                 sortOrder = 0,
             )
-        }
-
-        if (Loader.isModLoaded("ExtraUtilities")) {
-            for (i in 0 until 16) {
-                val find = ExtraUtilitiesItems.Greenscreen.getBlock()
-
-                if (find != null) {
-                    CarvingRecipes.variation(
-                        group = "antiBlock",
-                        block = find,
-                        meta = i,
-                        sortOrder = 0,
-                    )
-                }
-            }
         }
     }
 }

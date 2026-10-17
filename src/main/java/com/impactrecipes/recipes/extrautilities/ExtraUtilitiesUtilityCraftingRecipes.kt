@@ -2,7 +2,6 @@ package com.impactrecipes.recipes.extrautilities
 
 import com.impactrecipes.items.BackpackItems
 import com.impactrecipes.items.ExtraUtilitiesItems
-import com.impactrecipes.items.GregTechItems
 import com.impactrecipes.items.VanillaItems
 import com.impactrecipes.util.CraftingRecipes
 import gregtech.api.enums.Materials
@@ -79,22 +78,6 @@ internal class ExtraUtilitiesUtilityCraftingRecipes {
                 BackpackItems.SmallBackpack.get(),
                 'P',
                 OrePrefixes.plate.get(Materials.Gold),
-            ),
-        )
-
-        CraftingRecipes.shapedWithFlags(
-            output = ExtraUtilitiesItems.Drum.get(),
-            flags = craftingFlags,
-            recipe = arrayOf<Any?>(
-                "PRP",
-                "PCP",
-                "PRP",
-                'R',
-                OrePrefixes.ring.get(Materials.Steel),
-                'C',
-                GregTechItems.CasingTank0.get(),
-                'P',
-                OrePrefixes.plateDouble.get(Materials.Steel),
             ),
         )
     }

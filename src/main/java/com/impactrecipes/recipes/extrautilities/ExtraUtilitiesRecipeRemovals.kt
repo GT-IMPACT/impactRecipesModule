@@ -1,7 +1,6 @@
 package com.impactrecipes.recipes.extrautilities
 
 import com.impactrecipes.items.ExtraUtilitiesItems
-import com.impactrecipes.items.ModItemVariant
 import com.impactrecipes.util.CraftingRecipes
 
 internal class ExtraUtilitiesRecipeRemovals {
@@ -19,20 +18,6 @@ internal class ExtraUtilitiesRecipeRemovals {
             ignoreNbt = true,
             keepShapeless = false,
             nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
-            output = ExtraUtilitiesItems.DarkPortal2.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
-            output = ExtraUtilitiesItems.DarkPortal.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = true,
         )
 
         CraftingRecipes.removeCraftingRecipesByOutput(
@@ -237,17 +222,5 @@ internal class ExtraUtilitiesRecipeRemovals {
             keepShapeless = false,
             nativeOnly = true,
         )
-
-        for (i in 0 until 16) {
-            CraftingRecipes.removeCraftingRecipesByOutput(
-                output = ModItemVariant(
-                    item = ExtraUtilitiesItems.Greenscreen,
-                    meta = i,
-                ).get(),
-                ignoreNbt = true,
-                keepShapeless = false,
-                nativeOnly = true,
-            )
-        }
     }
 }

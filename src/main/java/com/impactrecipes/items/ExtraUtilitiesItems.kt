@@ -26,14 +26,6 @@ public enum class ExtraUtilitiesItems(
         registryName = "endMarker",
         meta = 0,
     ),
-    DarkPortal2(
-        registryName = "dark_portal",
-        meta = 2,
-    ),
-    DarkPortal(
-        registryName = "dark_portal",
-        meta = 0,
-    ),
     ThermionicPump(
         registryName = "enderThermicPump",
         meta = 0,
@@ -130,10 +122,6 @@ public enum class ExtraUtilitiesItems(
         registryName = "decorativeBlock1",
         meta = 8,
     ),
-    Greenscreen(
-        registryName = "greenscreen",
-        meta = 0,
-    ),
     FilingCabinet(
         registryName = "filing",
         meta = 0,
@@ -141,10 +129,6 @@ public enum class ExtraUtilitiesItems(
     AdvancedFilingCabinet(
         registryName = "filing",
         meta = 1,
-    ),
-    Drum(
-        registryName = "drum",
-        meta = 0,
     ),
     QuarryUpgrade(
         registryName = "enderQuarryUpgrade",
