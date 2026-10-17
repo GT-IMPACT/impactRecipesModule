@@ -18,7 +18,8 @@ internal class StevesAddonsAssemblyRecipes {
             inputs = arrayOf(
                 StevesFactoryManagerItems.InventoryCable.get(),
                 EnderIOItems.PowerConduit.get(),
-                GT_Utility.getIntegratedCircuit(1),
+                // Circuit 1 collides with Advanced Cable Cluster during GregTech's registration check.
+                GT_Utility.getIntegratedCircuit(3),
             ),
             fluid = Materials.Redstone.getMolten(288),
             output = StevesAddonsItems.RFNode.get(),
