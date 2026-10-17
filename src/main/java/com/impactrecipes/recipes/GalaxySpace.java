@@ -15,7 +15,6 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 
 import static com.impact.common.item.Core_List_Items.IceCompressedPlate;
-import static com.impact.common.item.Core_List_Items.TCetiESeaweedExtract;
 import static com.impactrecipes.util.RecipeUtils.getItemStack;
 import static gregtech.api.enums.GT_Values.RA;
 import static gregtech.api.util.GT_ModHandler.removeRecipeByOutput;
@@ -34,7 +33,6 @@ public class GalaxySpace implements Runnable {
         sifter();
         pulverizer();
         fluidCanner();
-        extractor();
         centrifuge();
         arcFurnace();
         assembler();
@@ -549,13 +547,6 @@ public class GalaxySpace implements Runnable {
                 GT_ModHandler.getModItem("GalaxySpace", "item.oxygentank_t6", 1L, 14400),
                 GT_ModHandler.getModItem("GalaxySpace", "item.oxygentank_t6", 1L, 0),
                 Materials.Oxygen.getGas(14400L), GT_Values.NF);
-    }
-
-    private void extractor() {
-        for (byte i = 0; i < 6; ++i) {
-            RA.addExtractorRecipe(GT_ModHandler.getModItem("GalaxySpace", "tcetiedandelions", 64L, i),
-                    CoreItems.getRecipe(TCetiESeaweedExtract.getMetaID(), 1), 400, 262132);
-        }
     }
 
     private void centrifuge() {
