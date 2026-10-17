@@ -12,6 +12,8 @@ public enum class GregTechItems(
 
     // Items
 
+    CircuitIntegrated(item = ItemList.Circuit_Integrated),
+    ShapeSlicerFlat(item = ItemList.Shape_Slicer_Flat),
     WetTransformerZPMLuV(item = ItemList.WetTransformer_ZPM_LuV),
     EmitterUV(item = ItemList.Emitter_UV),
     SensorUV(item = ItemList.Sensor_UV),

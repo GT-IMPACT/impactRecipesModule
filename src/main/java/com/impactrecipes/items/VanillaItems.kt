@@ -7,6 +7,210 @@ public enum class VanillaItems(
 
     // Items
 
+    IronSword(
+        registryName = "iron_sword",
+        meta = 0,
+    ),
+    IronShovel(
+        registryName = "iron_shovel",
+        meta = 0,
+    ),
+    IronPickaxe(
+        registryName = "iron_pickaxe",
+        meta = 0,
+    ),
+    IronAxe(
+        registryName = "iron_axe",
+        meta = 0,
+    ),
+    IronHoe(
+        registryName = "iron_hoe",
+        meta = 0,
+    ),
+    GoldenSword(
+        registryName = "golden_sword",
+        meta = 0,
+    ),
+    GoldenShovel(
+        registryName = "golden_shovel",
+        meta = 0,
+    ),
+    GoldenPickaxe(
+        registryName = "golden_pickaxe",
+        meta = 0,
+    ),
+    GoldenAxe(
+        registryName = "golden_axe",
+        meta = 0,
+    ),
+    GoldenHoe(
+        registryName = "golden_hoe",
+        meta = 0,
+    ),
+    DiamondSword(
+        registryName = "diamond_sword",
+        meta = 0,
+    ),
+    DiamondShovel(
+        registryName = "diamond_shovel",
+        meta = 0,
+    ),
+    DiamondPickaxe(
+        registryName = "diamond_pickaxe",
+        meta = 0,
+    ),
+    DiamondAxe(
+        registryName = "diamond_axe",
+        meta = 0,
+    ),
+    DiamondHoe(
+        registryName = "diamond_hoe",
+        meta = 0,
+    ),
+    DiamondHelmet(
+        registryName = "diamond_helmet",
+        meta = 0,
+    ),
+    DiamondChestplate(
+        registryName = "diamond_chestplate",
+        meta = 0,
+    ),
+    DiamondLeggings(
+        registryName = "diamond_leggings",
+        meta = 0,
+    ),
+    DiamondBoots(
+        registryName = "diamond_boots",
+        meta = 0,
+    ),
+    Saddle(
+        registryName = "saddle",
+        meta = 0,
+    ),
+    ItemFrame(
+        registryName = "item_frame",
+        meta = 0,
+    ),
+    Bed(
+        registryName = "bed",
+        meta = 0,
+    ),
+    FishingRod(
+        registryName = "fishing_rod",
+        meta = 0,
+    ),
+    BrewingStand(
+        registryName = "brewing_stand",
+        meta = 0,
+    ),
+    Comparator(
+        registryName = "comparator",
+        meta = 0,
+    ),
+    Repeater(
+        registryName = "repeater",
+        meta = 0,
+    ),
+    EnderEye(
+        registryName = "ender_eye",
+        meta = 0,
+    ),
+    EnchantedBook(
+        registryName = "enchanted_book",
+        meta = 0,
+    ),
+    IronIngot(
+        registryName = "iron_ingot",
+        meta = 0,
+    ),
+    Arrow(
+        registryName = "arrow",
+        meta = 0,
+    ),
+    WoodenSword(
+        registryName = "wooden_sword",
+        meta = 0,
+    ),
+    WoodenShovel(
+        registryName = "wooden_shovel",
+        meta = 0,
+    ),
+    WoodenPickaxe(
+        registryName = "wooden_pickaxe",
+        meta = 0,
+    ),
+    WoodenAxe(
+        registryName = "wooden_axe",
+        meta = 0,
+    ),
+    WoodenHoe(
+        registryName = "wooden_hoe",
+        meta = 0,
+    ),
+    StoneSword(
+        registryName = "stone_sword",
+        meta = 0,
+    ),
+    StoneShovel(
+        registryName = "stone_shovel",
+        meta = 0,
+    ),
+    StonePickaxe(
+        registryName = "stone_pickaxe",
+        meta = 0,
+    ),
+    StoneAxe(
+        registryName = "stone_axe",
+        meta = 0,
+    ),
+    StoneHoe(
+        registryName = "stone_hoe",
+        meta = 0,
+    ),
+    Lead(
+        registryName = "lead",
+        meta = 0,
+    ),
+    IronHorseArmor(
+        registryName = "iron_horse_armor",
+        meta = 0,
+    ),
+    IronHelmet(
+        registryName = "iron_helmet",
+        meta = 0,
+    ),
+    IronChestplate(
+        registryName = "iron_chestplate",
+        meta = 0,
+    ),
+    IronLeggings(
+        registryName = "iron_leggings",
+        meta = 0,
+    ),
+    GoldenHorseArmor(
+        registryName = "golden_horse_armor",
+        meta = 0,
+    ),
+    GoldenHelmet(
+        registryName = "golden_helmet",
+        meta = 0,
+    ),
+    GoldenChestplate(
+        registryName = "golden_chestplate",
+        meta = 0,
+    ),
+    GoldenLeggings(
+        registryName = "golden_leggings",
+        meta = 0,
+    ),
+    DiamondHorseArmor(
+        registryName = "diamond_horse_armor",
+        meta = 0,
+    ),
+    Flint(
+        registryName = "flint",
+        meta = 0,
+    ),
     Apple(
         registryName = "apple",
         meta = 0,
@@ -134,6 +338,114 @@ public enum class VanillaItems(
 
     // Blocks
 
+    TrappedChest(
+        registryName = "trapped_chest",
+        meta = 0,
+    ),
+    Dispenser(
+        registryName = "dispenser",
+        meta = 0,
+    ),
+    Dropper(
+        registryName = "dropper",
+        meta = 0,
+    ),
+    Noteblock(
+        registryName = "noteblock",
+        meta = 0,
+    ),
+    Jukebox(
+        registryName = "jukebox",
+        meta = 0,
+    ),
+    WoodenPressurePlate(
+        registryName = "wooden_pressure_plate",
+        meta = 0,
+    ),
+    TripwireHook(
+        registryName = "tripwire_hook",
+        meta = 0,
+    ),
+    Anvil(
+        registryName = "anvil",
+        meta = 0,
+    ),
+    EnchantingTable(
+        registryName = "enchanting_table",
+        meta = 0,
+    ),
+    LitPumpkin(
+        registryName = "lit_pumpkin",
+        meta = 0,
+    ),
+    RedstoneLamp(
+        registryName = "redstone_lamp",
+        meta = 0,
+    ),
+    EnderChest(
+        registryName = "ender_chest",
+        meta = 0,
+    ),
+    WoodenButton(
+        registryName = "wooden_button",
+        meta = 0,
+    ),
+    OakStairs(
+        registryName = "oak_stairs",
+        meta = 0,
+    ),
+    SpruceStairs(
+        registryName = "spruce_stairs",
+        meta = 0,
+    ),
+    BirchStairs(
+        registryName = "birch_stairs",
+        meta = 0,
+    ),
+    JungleStairs(
+        registryName = "jungle_stairs",
+        meta = 0,
+    ),
+    AcaciaStairs(
+        registryName = "acacia_stairs",
+        meta = 0,
+    ),
+    DarkOakStairs(
+        registryName = "dark_oak_stairs",
+        meta = 0,
+    ),
+    StoneSlab1(
+        registryName = "stone_slab",
+        meta = 1,
+    ),
+    StoneSlab3(
+        registryName = "stone_slab",
+        meta = 3,
+    ),
+    StoneSlab4(
+        registryName = "stone_slab",
+        meta = 4,
+    ),
+    StoneSlab6(
+        registryName = "stone_slab",
+        meta = 6,
+    ),
+    StoneSlab7(
+        registryName = "stone_slab",
+        meta = 7,
+    ),
+    Pumpkin(
+        registryName = "pumpkin",
+        meta = 0,
+    ),
+    Glowstone(
+        registryName = "glowstone",
+        meta = 0,
+    ),
+    MelonBlock(
+        registryName = "melon_block",
+        meta = 0,
+    ),
     StainedGlassPane(
         registryName = "stained_glass_pane",
         meta = 0,

@@ -17,6 +17,7 @@ import com.impactrecipes.recipes.gravisuite.GraviSuiteRegistrar;
 import com.impactrecipes.recipes.galaxyspace.GalaxySpaceRegistrar;
 import com.impactrecipes.recipes.galacticraft.GalacticraftRegistrar;
 import com.impactrecipes.recipes.tectech.TecTechRegistrar;
+import com.impactrecipes.recipes.vanilla.VanillaRegistrar;
 import com.impactrecipes.recipes.malisisdoors.MalisisDoorsRegistrar;
 import com.impactrecipes.recipes.logisticspipes.LogisticsPipesRegistrar;
 import com.impactrecipes.recipes.buildcraft.BuildCraftRegistrar;
@@ -47,7 +48,7 @@ public class ModsLoader {
     public static void loader() {
         if (Loader.isModLoaded("chisel")) ChiselGroup.run();
 
-        new Vanilla().run();
+        RecipeRegistrars.register(new VanillaRegistrar());
         RecipeRegistrars.register(new GregTechRegistrar());
         RecipeRegistrars.register(new AE2Registrar());
         new AE().run();
@@ -87,7 +88,6 @@ public class ModsLoader {
         RecipeRegistrars.register(new ChiselRegistrar());
 
 
-        registerRecipeClass(Vanilla.class);
         registerRecipeClass(AE.class);
         registerRecipeClass(OpenComputers.class);
         registerRecipeClass(RailCraft.class);

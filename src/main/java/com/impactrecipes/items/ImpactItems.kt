@@ -15,6 +15,7 @@ public enum class ImpactItems(
 
     // Items
 
+    BlankPattern(item = Core_List_Items.BlankPattern),
     NaqChamberPart(item = Core_List_Items.NaqChamberPart),
     OrbCasingI(item = Core_List_Items.OrbCasingI),
     AdamantiumCompressedPlate(item = Core_List_Items.AdamantiumCompressedPlate),

@@ -1211,6 +1211,46 @@ public object MachineRecipes {
         }
     }
 
+    @JvmStatic
+    public fun slicer(
+        input: ItemStack?,
+        blade: ItemStack?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "slicer") {
+            RA.addSlicerRecipe(
+                input,
+                blade,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun autoclave(
+        input: ItemStack?,
+        fluidInput: FluidStack?,
+        output: ItemStack?,
+        chance: Int,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "autoclave") {
+            RA.addAutoclaveRecipe(
+                input,
+                fluidInput,
+                output,
+                chance,
+                ticks,
+                eu,
+            )
+        }
+    }
+
     private fun registerOperation(
         id: String,
         action: () -> Boolean,
