@@ -1363,6 +1363,25 @@ public object MachineRecipes {
         }
     }
 
+    @JvmStatic
+    public fun laserEngraver(
+        input: ItemStack?,
+        lens: ItemStack?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "laser engraver") {
+            RA.addLaserEngraverRecipe(
+                input,
+                lens,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
     private fun registerOperation(
         id: String,
         action: () -> Boolean,

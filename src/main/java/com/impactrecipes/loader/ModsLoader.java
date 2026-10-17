@@ -55,7 +55,6 @@ public class ModsLoader {
         RecipeRegistrars.register(new BuildCraftRegistrar());
         RecipeRegistrars.register(new JabbaRegistrar());
         RecipeRegistrars.register(new OpenComputersRegistrar());
-        if (Loader.isModLoaded("OpenComputers")) new OpenComputers().run();
         if (Loader.isModLoaded("Railcraft")) new RailCraft().run();
         RecipeRegistrars.register(new StevesFactoryManagerRegistrar());
         RecipeRegistrars.register(new StorageDrawersRegistrar());
@@ -88,7 +87,6 @@ public class ModsLoader {
         RecipeRegistrars.register(new ChiselRegistrar());
 
 
-        registerRecipeClass(OpenComputers.class);
         registerRecipeClass(RailCraft.class);
         registerRecipeClass(ImpactCore.class);
     

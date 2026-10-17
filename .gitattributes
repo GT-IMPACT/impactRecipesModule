@@ -1,0 +1,4 @@
+
+
+# EEPROM contents must retain their original byte sequence.
+src/main/resources/assets/impactrecipes/oc/lua-bios.lua text eol=lf

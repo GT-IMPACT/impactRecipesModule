@@ -7,6 +7,10 @@ public enum class VanillaItems(
 
     // Items
 
+    FilledMap(
+        registryName = "filled_map",
+        meta = 0,
+    ),
     IronSword(
         registryName = "iron_sword",
         meta = 0,
@@ -338,6 +342,10 @@ public enum class VanillaItems(
 
     // Blocks
 
+    Tnt(
+        registryName = "tnt",
+        meta = 0,
+    ),
     BlockOfQuartz(
         registryName = "quartz_block",
         meta = 0,

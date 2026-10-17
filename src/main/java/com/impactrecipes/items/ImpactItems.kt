@@ -15,6 +15,9 @@ public enum class ImpactItems(
 
     // Items
 
+    CUBoard(item = Core_List_Items.CUBoard),
+    ALUBoard(item = Core_List_Items.ALUBoard),
+    RedstonePulsatingChipset(item = GT_ItemList.RedstonePulsatingChipset),
     LogicProcessorItemGoldCore(item = GT_ItemList.LogicProcessorItemGoldCore),
     GoldCoreChip(item = GT_ItemList.GoldCoreChip),
     EngineeringProcessorItemDiamondCore(item = GT_ItemList.EngineeringProcessorItemDiamondCore),

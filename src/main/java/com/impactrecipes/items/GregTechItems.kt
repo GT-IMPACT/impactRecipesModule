@@ -12,6 +12,15 @@ public enum class GregTechItems(
 
     // Items
 
+    CasingHV(item = ItemList.Casing_HV),
+    CasingMV(item = ItemList.Casing_MV),
+    BatteryBuffer1by1MV(item = ItemList.Battery_Buffer_1by1_MV),
+    ToolNoteBook(item = ItemList.Tool_NoteBook),
+    CellEmpty(item = ItemList.Cell_Empty),
+    CircuitPartsGlassFiber(item = ItemList.Circuit_Parts_GlassFiber),
+    CasingEV(item = ItemList.Casing_EV),
+    GeneratorDieselLV(item = ItemList.Generator_Diesel_LV),
+    DyeSquidInk(item = ItemList.Dye_SquidInk),
     BatteryHullIVFull(item = ItemList.BatteryHull_IV_Full),
     MachineHVAssembler(item = ItemList.Machine_HV_Assembler),
     MachineHVDisassembler(item = ItemList.Machine_HV_Disassembler),
