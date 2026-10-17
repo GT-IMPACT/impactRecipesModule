@@ -6,7 +6,9 @@ import com.impactrecipes.util.MachineRecipes
 import com.impactrecipes.util.RecipeItems
 import gregtech.api.enums.Materials
 import gregtech.api.enums.OrePrefixes
+import gregtech.api.util.GT_OreDictUnificator
 import gregtech.api.util.GT_Utility
+import net.minecraft.item.ItemStack
 import net.minecraftforge.oredict.OreDictionary
 
 internal class ZtonesBaseAssemblyRecipes {
@@ -74,14 +76,42 @@ internal class ZtonesBaseAssemblyRecipes {
             eu = 30,
         )
 
-        for (i in 0 until OreDictionary.getOres("dye").size) {
+        registerAurora()
+    }
+
+    private fun registerAurora() {
+        val registeredDyes = ArrayList<ItemStack>()
+        // Register wildcard entries first so they also cover their concrete metadata variants.
+        val dyes = OreDictionary.getOres("dye").sortedBy {
+            it.itemDamage != OreDictionary.WILDCARD_VALUE
+        }
+        for (dye in dyes) {
+            val alreadyRegistered = registeredDyes.any {
+                GT_Utility.areUnificationsEqual(
+                    dye,
+                    it,
+                    true,
+                ) || GT_Utility.areUnificationsEqual(
+                    GT_OreDictUnificator.get(
+                        false,
+                        dye,
+                    ),
+                    it,
+                    true,
+                )
+            }
+            if (alreadyRegistered) {
+                continue
+            }
+
             MachineRecipes.assembler(
                 input = VanillaItems.Glass.get(amount = 4),
-                secondaryInput = OreDictionary.getOres("dye").get(i),
+                secondaryInput = dye,
                 output = ZtonesItems.Aurora.get(amount = 8),
                 ticks = 160,
                 eu = 4,
             )
+            registeredDyes.add(dye)
         }
     }
 }
