@@ -108,7 +108,7 @@ public object CraftingRecipes {
         )
     }
 
-    /** Matches RecipeUtils removal, including recipes outside GregTech's crafting cache. */
+    /** Removes matching recipes from the full crafting list, including entries outside GregTech's cache. */
     @JvmStatic
     @Suppress("UNCHECKED_CAST")
     public fun removeMatchingCraftingRecipesByOutput(output: ItemStack?) {

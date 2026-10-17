@@ -202,8 +202,8 @@ internal class AE2FluidMachineProviderRecipes {
                 GregTechItems.ElectricPumpEV.get(),
                 RecipeUtils.ordictItemStack("oc:circuitChip3"),
                 RecipeUtils.ordictItemStack(
-                    "oc:cable",
-                    2,
+                    oredict = "oc:cable",
+                    amount = 2,
                 ),
                 AE2Items.CalculationProcessor.get(),
             ),

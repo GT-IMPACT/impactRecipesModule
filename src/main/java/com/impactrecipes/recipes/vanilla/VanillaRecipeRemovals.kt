@@ -3,7 +3,6 @@ package com.impactrecipes.recipes.vanilla
 import com.impactrecipes.items.ModItemVariant
 import com.impactrecipes.items.VanillaItems
 import com.impactrecipes.util.CraftingRecipes
-import com.impactrecipes.util.RecipeUtils
 import gregtech.api.enums.GT_Values
 import gregtech.api.util.GT_ModHandler
 import gregtech.api.util.GT_ModHandler.removeFurnaceSmelting
@@ -18,7 +17,7 @@ internal class VanillaRecipeRemovals {
 
         GT_ModHandler.removeFurnaceSmelting(VanillaItems.Gravel.get())
 
-        RecipeUtils.removeRecipeByOutput(VanillaItems.WoodenSlab.get())
+        CraftingRecipes.removeMatchingCraftingRecipesByOutput(VanillaItems.WoodenSlab.get())
 
         CraftingRecipes.removeCraftingRecipesByOutput(
             output = VanillaItems.CraftingTable.get(),
