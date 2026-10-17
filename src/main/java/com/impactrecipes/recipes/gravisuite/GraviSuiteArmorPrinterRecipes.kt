@@ -16,7 +16,10 @@ internal class GraviSuiteArmorPrinterRecipes {
     internal fun register() {
         MachineRecipes.printer3d4x4(
             inputs = arrayOf(
-                IC2Items.QuantumChestplate.get(),
+                ModItemVariant(
+                    item = IC2Items.QuantumChestplate,
+                    meta = GT_Values.W.toInt(),
+                ).get(),
                 GregTechItems.TransformerZPMLuV.get(),
                 ModItemVariant(
                     item = GraviSuiteItems.UltimateLappack,
