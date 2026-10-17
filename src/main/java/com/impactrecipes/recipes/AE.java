@@ -43,6 +43,7 @@ public class AE implements Runnable {
         latheRecipe();
         fluidSolidifierRecipe();
         meSystemProvider();
+        AEMinimal.run();
     }
 
     private void removeAE() {
@@ -887,19 +888,15 @@ public class AE implements Runnable {
                 RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 36), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 35 - i), GT_Values.NI, GT_Values.NI, null, 20, 2);
                 RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 56), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 55 - i), GT_Values.NI, GT_Values.NI, null, 20, 2);
                 RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 76), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 75 - i), GT_Values.NI, GT_Values.NI, null, 20, 2);
-				RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 576), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 575 - i), GT_Values.NI, GT_Values.NI, null, 20, 2);
                 RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 6), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem(AE2, "item.ItemPaintBall", 1L, 15 - i), GT_Values.NI, GT_Values.NI, null, 20, 2);
                 RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 536), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 535 - i), GT_Values.NI, GT_Values.NI, null, 20, 2);
-				RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 556), Dyes.VALUES[i].getFluidDye(j, 36L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 555 - i), GT_Values.NI, GT_Values.NI, null, 20, 2);
             }
             RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 15 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 16), GT_Values.NI, GT_Values.NI, null, 20, 2);
             RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 35 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 36), GT_Values.NI, GT_Values.NI, null, 20, 2);
             RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 55 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 56), GT_Values.NI, GT_Values.NI, null, 20, 2);
             RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 75 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 76), GT_Values.NI, GT_Values.NI, null, 20, 2);
-			RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 575 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 576), GT_Values.NI, GT_Values.NI, null, 20, 2);
             RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemPaintBall", 1L, 15 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiMaterial", 1L, 6), GT_Values.NI, GT_Values.NI, null, 20, 2);
 			RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 535 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 536), GT_Values.NI, GT_Values.NI, null, 20, 2);
-			RA.addChemicalBathRecipe(GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 555 - i), Materials.Chlorine.getGas(50L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 556), GT_Values.NI, GT_Values.NI, null, 20, 2);
         }
     }
 
@@ -972,8 +969,6 @@ public class AE implements Runnable {
         RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 4L, 16), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.PolyvinylChloride, 1L)}, Materials.Silicone.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 4L, 36), 100, 8, false);
         // --- Dense Cable
         RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 4L, 56), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Vanadium, 2L), GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.EnergeticAlloy, 2L)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 76), 200, 480, false);
-        // --- Backbone Cable
-        RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 4L, 76), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Palladium, 2L), GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.VibrantAlloy, 2L)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 576), 300, 1920, false);
 		// --- Smart Cable
         RA.addWireAssemblerRecipe(new ItemStack[]{GT_OreDictUnificator.get(OrePrefixes.foil, Materials.Silicon, 2L), GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.RedAlloy, 1L), GT_OreDictUnificator.get(OrePrefixes.wireFine, Materials.Electrum, 1L), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 36)}, null, GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 56), 100, 120, false);
         // --- Covered Dense Cable
@@ -982,12 +977,6 @@ public class AE implements Runnable {
         RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 76), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.PolyvinylChloride, 1), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)}, Materials.Silicone.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 536), 200, 8, false);
         RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 76), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Polydimethylsiloxane, 1), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)}, Materials.StyreneButadieneRubber.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 536), 200, 8, false);
         RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 76), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Polydimethylsiloxane, 1), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)}, Materials.Silicone.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 536), 200, 8, false);
-		// --- Covered Backbone Cable
-        RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 576), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 2), GT_Utility.getIntegratedCircuit(24)}, Materials.Silicone.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 1L, 556), 100, 8, false);
-        RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 576), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.PolyvinylChloride, 1), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)}, Materials.StyreneButadieneRubber.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 556), 200, 8, false);
-        RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 576), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.PolyvinylChloride, 1), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)}, Materials.Silicone.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 556), 200, 8, false);
-        RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 576), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Polydimethylsiloxane, 1), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)}, Materials.StyreneButadieneRubber.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 556), 200, 8, false);
-        RA.addWireAssemblerRecipe(new ItemStack[]{GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 576), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Polydimethylsiloxane, 1), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.PolyphenyleneSulfide, 4)}, Materials.Silicone.getMolten(144), GT_ModHandler.getModItem(AE2, "item.ItemMultiPart", 2L, 556), 200, 8, false);
     }
 
     private void unboxingRecipe() {
