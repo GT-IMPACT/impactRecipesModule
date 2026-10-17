@@ -10,6 +10,23 @@ import net.minecraftforge.fluids.FluidStack
 public object MachineRecipes {
 
     @JvmStatic
+    public fun forgeHammer(
+        input: ItemStack?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "forge hammer") {
+            RA.addForgeHammerRecipe(
+                input,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
     public fun pulverizer(
         input: ItemStack?,
         outputs: Array<out ItemStack?>,

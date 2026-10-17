@@ -16,6 +16,7 @@ import com.impactrecipes.recipes.projectred.ProjectRedRegistrar;
 import com.impactrecipes.recipes.stargate.StargateRegistrar;
 import com.impactrecipes.recipes.stevesfactorymanager.StevesFactoryManagerRegistrar;
 import com.impactrecipes.recipes.undergroundbiomes.UndergroundBiomesRegistrar;
+import com.impactrecipes.recipes.ztones.ZtonesRegistrar;
 import com.impactrecipes.recipes.nuclearcontrol.NuclearControlRegistrar;
 import com.impactrecipes.recipes.openblocks.OpenBlocksRegistrar;
 
@@ -56,7 +57,7 @@ public class ModsLoader {
         new GraviSuite().run();
         RecipeRegistrars.register(new StargateRegistrar());
         new Gendustry().run();
-        new Ztones().run();
+        RecipeRegistrars.register(new ZtonesRegistrar());
         new Forestry().run();
         RecipeRegistrars.register(new ChestUpRegistrar());
         new LogisticPipes().run();
@@ -89,7 +90,6 @@ public class ModsLoader {
         registerRecipeClass(ExtraUtilities.class);
         registerRecipeClass(GraviSuite.class);
         registerRecipeClass(Gendustry.class);
-        registerRecipeClass(Ztones.class);
         registerRecipeClass(Forestry.class);
         registerRecipeClass(LogisticPipes.class);
         registerRecipeClass(MalisisDoors.class);

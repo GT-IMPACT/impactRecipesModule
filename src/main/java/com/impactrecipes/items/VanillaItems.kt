@@ -7,6 +7,14 @@ public enum class VanillaItems(
 
     // Items
 
+    Coal1(
+        registryName = "coal",
+        meta = 1,
+    ),
+    Coal(
+        registryName = "coal",
+        meta = 0,
+    ),
     FlowerPot(
         registryName = "flower_pot",
         meta = 0,
@@ -54,6 +62,34 @@ public enum class VanillaItems(
 
     // Blocks
 
+    StoneSlab(
+        registryName = "stone_slab",
+        meta = 0,
+    ),
+    Stone(
+        registryName = "stone",
+        meta = 0,
+    ),
+    Sand(
+        registryName = "sand",
+        meta = 0,
+    ),
+    Dirt(
+        registryName = "dirt",
+        meta = 0,
+    ),
+    Netherrack(
+        registryName = "netherrack",
+        meta = 0,
+    ),
+    Sandstone(
+        registryName = "sandstone",
+        meta = 0,
+    ),
+    Ice(
+        registryName = "ice",
+        meta = 0,
+    ),
     DaylightDetector(
         registryName = "daylight_detector",
         meta = 0,
