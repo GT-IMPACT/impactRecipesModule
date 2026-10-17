@@ -1,8 +1,13 @@
 package com.impactrecipes.items
 
+import com.riciJak.Ztones.init.ModBlocks
+import cpw.mods.fml.common.registry.GameRegistry
+import net.minecraft.block.Block
+
 public enum class ZtonesItems(
+    private val block: Block?,
     public override val registryName: String,
-    public override val meta: Int = 0,
+    public override val meta: Int,
 ) : IRegistryModItem {
 
     // Items
@@ -34,6 +39,10 @@ public enum class ZtonesItems(
 
     // Blocks
 
+    Myst(
+        block = ModBlocks.mystBlock,
+        registryName = "tile.mystBlock",
+    ),
     StoneTile(
         registryName = "stoneTile",
         meta = 0,
@@ -63,189 +72,217 @@ public enum class ZtonesItems(
         meta = 0,
     ),
     Korp(
+        block = ModBlocks.korpBlock,
         registryName = "tile.korpBlock",
-        meta = 0,
     ),
     Tank(
+        block = ModBlocks.tankBlock,
         registryName = "tile.tankBlock",
-        meta = 0,
     ),
     Sols(
+        block = ModBlocks.solsBlock,
         registryName = "tile.solsBlock",
-        meta = 0,
     ),
     Ztyl(
+        block = ModBlocks.ztylBlock,
         registryName = "tile.ztylBlock",
-        meta = 0,
     ),
     Vect(
+        block = ModBlocks.vectBlock,
         registryName = "tile.vectBlock",
-        meta = 0,
     ),
     Jelt(
+        block = ModBlocks.jeltBlock,
         registryName = "tile.jeltBlock",
-        meta = 0,
     ),
     Reed(
+        block = ModBlocks.reedBlock,
         registryName = "tile.reedBlock",
-        meta = 0,
     ),
     Vena(
+        block = ModBlocks.venaBlock,
         registryName = "tile.venaBlock",
-        meta = 0,
     ),
     Kryp(
+        block = ModBlocks.krypBlock,
         registryName = "tile.krypBlock",
-        meta = 0,
     ),
     Mint(
+        block = ModBlocks.mintBlock,
         registryName = "tile.mintBlock",
-        meta = 0,
     ),
     Ztyl4(
         registryName = "tile.ztylBlock",
         meta = 4,
     ),
     Zech(
+        block = ModBlocks.zechBlock,
         registryName = "tile.zechBlock",
-        meta = 0,
     ),
     Sync(
+        block = ModBlocks.syncBlock,
         registryName = "tile.syncBlock",
-        meta = 0,
     ),
     Ztyl10(
         registryName = "tile.ztylBlock",
         meta = 10,
     ),
     Zkul(
+        block = ModBlocks.zkulBlock,
         registryName = "tile.zkulBlock",
-        meta = 0,
     ),
     Lair(
+        block = ModBlocks.lairBlock,
         registryName = "tile.lairBlock",
-        meta = 0,
     ),
     Reds(
+        block = ModBlocks.redsBlock,
         registryName = "tile.redsBlock",
-        meta = 0,
     ),
     Ztyl8(
         registryName = "tile.ztylBlock",
         meta = 8,
     ),
     Iszm(
+        block = ModBlocks.iszmBlock,
         registryName = "tile.iszmBlock",
-        meta = 0,
     ),
     Roen(
+        block = ModBlocks.roenBlock,
         registryName = "tile.roenBlock",
-        meta = 0,
     ),
     Lave(
+        block = ModBlocks.laveBlock,
         registryName = "tile.laveBlock",
-        meta = 0,
     ),
     Ztyl11(
         registryName = "tile.ztylBlock",
         meta = 11,
     ),
     Zest(
+        block = ModBlocks.zestBlock,
         registryName = "tile.zestBlock",
-        meta = 0,
     ),
     Ztyl15(
         registryName = "tile.ztylBlock",
         meta = 15,
     ),
     Zyth(
+        block = ModBlocks.zythBlock,
         registryName = "tile.zythBlock",
-        meta = 0,
     ),
     Bitt(
+        block = ModBlocks.bittBlock,
         registryName = "tile.bittBlock",
-        meta = 0,
     ),
     Glaxx(
+        block = ModBlocks.glaxx,
         registryName = "tile.glaxx",
-        meta = 0,
     ),
     Agon(
+        block = ModBlocks.agonBlock,
         registryName = "tile.agonBlock",
-        meta = 0,
     ),
     Ztyl3(
         registryName = "tile.ztylBlock",
         meta = 3,
     ),
     Zone(
+        block = ModBlocks.zoneBlock,
         registryName = "tile.zoneBlock",
-        meta = 0,
     ),
     Ztyl14(
         registryName = "tile.ztylBlock",
         meta = 14,
     ),
     Zoea(
+        block = ModBlocks.zoeaBlock,
         registryName = "tile.zoeaBlock",
-        meta = 0,
     ),
     Ztyl13(
         registryName = "tile.ztylBlock",
         meta = 13,
     ),
     Zeta(
+        block = ModBlocks.zetaBlock,
         registryName = "tile.zetaBlock",
-        meta = 0,
     ),
     Cray(
+        block = ModBlocks.crayBlock,
         registryName = "tile.crayBlock",
-        meta = 0,
     ),
     Ztyl9(
         registryName = "tile.ztylBlock",
         meta = 9,
     ),
     Fort(
+        block = ModBlocks.fortBlock,
         registryName = "tile.fortBlock",
-        meta = 0,
     ),
     Ztyl7(
         registryName = "tile.ztylBlock",
         meta = 7,
     ),
     Zion(
+        block = ModBlocks.zionBlock,
         registryName = "tile.zionBlock",
-        meta = 0,
     ),
     Ztyl6(
         registryName = "tile.ztylBlock",
         meta = 6,
     ),
     Zome(
+        block = ModBlocks.zomeBlock,
         registryName = "tile.zomeBlock",
-        meta = 0,
     ),
     Ztyl12(
         registryName = "tile.ztylBlock",
         meta = 12,
     ),
     Zane(
+        block = ModBlocks.zaneBlock,
         registryName = "tile.zaneBlock",
-        meta = 0,
     ),
     Azur(
+        block = ModBlocks.azurBlock,
         registryName = "tile.azurBlock",
-        meta = 0,
     ),
     Ztyl5(
         registryName = "tile.ztylBlock",
         meta = 5,
     ),
     Zorg(
+        block = ModBlocks.zorgBlock,
         registryName = "tile.zorgBlock",
-        meta = 0,
     );
 
     public override val modId: String = "Ztones"
+
+    constructor(
+        registryName: String,
+        meta: Int = 0,
+    ) : this(
+        block = null,
+        registryName = registryName,
+        meta = meta,
+    )
+
+    constructor(
+        block: Block,
+        registryName: String,
+    ) : this(
+        block = block,
+        registryName = registryName,
+        meta = 0,
+    )
+
+    public override fun getBlock(): Block? {
+        if (block != null) {
+            return block
+        }
+        return GameRegistry.findBlock(
+            modId,
+            registryName,
+        )
+    }
 }

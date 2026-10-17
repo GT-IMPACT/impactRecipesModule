@@ -22,6 +22,8 @@ import mods.railcraft.common.items.ItemTicketGold
 import mods.railcraft.common.items.ItemTie
 import mods.railcraft.common.items.ItemWhistleTuner
 import mods.railcraft.common.items.RailcraftItem
+import cpw.mods.fml.common.registry.GameRegistry
+import net.minecraft.block.Block
 import net.minecraft.item.ItemStack
 
 public enum class RailcraftItems(
@@ -149,6 +151,7 @@ public enum class RailcraftItems(
 
     // Blocks
 
+    Cube(registryName = "cube"),
     TrackmanSGoggles(
         registryName = "armor.goggles",
         meta = 0,
@@ -330,6 +333,17 @@ public enum class RailcraftItems(
             meta = meta,
             count = amount,
         )
+    }
+
+    public override fun getBlock(): Block? {
+        val name = registryName
+        if (name != null) {
+            return GameRegistry.findBlock(
+                modId,
+                name,
+            )
+        }
+        return super<IModItem>.getBlock()
     }
 
     public fun recipeObject(): Any? {

@@ -8,6 +8,7 @@ import com.impactrecipes.recipes.bibliocraft.BiblioCraftRegistrar;
 import com.impactrecipes.recipes.chickenchunks.ChickenChunksRegistrar;
 import com.impactrecipes.recipes.chestup.ChestUpRegistrar;
 import com.impactrecipes.recipes.chisel.ChiselRegistrar;
+import com.impactrecipes.recipes.chisel.ChiselCarvingRegistrar;
 import com.impactrecipes.recipes.catwalks.CatwalksRegistrar;
 import com.impactrecipes.recipes.carpentersblocks.CarpentersBlocksRegistrar;
 import com.impactrecipes.recipes.gregtech.GregTechRegistrar;
@@ -48,7 +49,7 @@ import cpw.mods.fml.common.Loader;
 public class ModsLoader {
 
     public static void loader() {
-        if (Loader.isModLoaded("chisel")) ChiselGroup.run();
+        RecipeRegistrars.register(new ChiselCarvingRegistrar());
 
         RecipeRegistrars.register(new VanillaRegistrar());
         RecipeRegistrars.register(new GregTechRegistrar());

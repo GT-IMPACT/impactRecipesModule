@@ -34,6 +34,10 @@ public enum class ChiselItems(
 
     // Blocks
 
+    Glowstone(registryName = "glowstone"),
+    Cobblestone(registryName = "cobblestone"),
+    Glass(registryName = "glass"),
+    Glass2(registryName = "glass2"),
     Valentines(
         registryName = "valentines",
         meta = 0,

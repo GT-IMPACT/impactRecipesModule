@@ -2,6 +2,8 @@ package com.impactrecipes.items
 
 import com.impactrecipes.util.RecipeItems
 import gregtech.api.enums.ItemList
+import cpw.mods.fml.common.registry.GameRegistry
+import net.minecraft.block.Block
 import net.minecraft.item.ItemStack
 
 public enum class GregTechItems(
@@ -543,6 +545,11 @@ public enum class GregTechItems(
 
     // Blocks
 
+    Stones(registryName = "gt.blockstones"),
+    Granites(registryName = "gt.blockgranites"),
+    MachineCasings2(registryName = "gt.blockcasings2"),
+    MachineCasings3(registryName = "gt.blockcasings3"),
+    Concrete(registryName = "gt.blockconcretes"),
     TheMill(
         registryName = "gt.blockmachines",
         meta = 14074,
@@ -761,5 +768,16 @@ public enum class GregTechItems(
             meta = meta,
             count = amount,
         )
+    }
+
+    public override fun getBlock(): Block? {
+        val name = registryName
+        if (name != null) {
+            return GameRegistry.findBlock(
+                modId,
+                name,
+            )
+        }
+        return super<IModItem>.getBlock()
     }
 }

@@ -18,6 +18,7 @@ import com.impact.loader.ItemRegistery.InsideBlock
 import com.impact.loader.ItemRegistery.CoalBlock
 import com.impact.loader.ItemRegistery.CeramicBlock
 import com.impact.loader.ItemRegistery.FluidTankBlock
+import cpw.mods.fml.common.registry.GameRegistry
 import net.minecraft.block.Block
 import net.minecraft.item.ItemStack
 
@@ -655,6 +656,7 @@ public enum class ImpactItems(
 
     // Blocks
 
+    ImpactUtil(registryName = "impact_util"),
     SawMillConveyor(
         registryName = "impact_sawmill_block",
         meta = 0,
@@ -1015,5 +1017,19 @@ public enum class ImpactItems(
             meta = meta,
             count = amount,
         )
+    }
+
+    public override fun getBlock(): Block? {
+        val name = registryName
+        if (name != null) {
+            return GameRegistry.findBlock(
+                modId,
+                name,
+            )
+        }
+        if (blockItem != null) {
+            return blockItem
+        }
+        return super<IModItem>.getBlock()
     }
 }
