@@ -33,6 +33,10 @@ public enum class ImpactItems(
 
     // Items
 
+    HandProspectorEV(item = GT_ItemList.HandProspectorEV),
+    HandProspectorIV(item = GT_ItemList.HandProspectorIV),
+    HandProspectorLuV(item = GT_ItemList.HandProspectorLuV),
+    HandProspectorZPM(item = GT_ItemList.HandProspectorZPM),
     CokeOvenBrick(item = Core_List_Items.CokeOvenBrick),
     UnfiredClayBrick(item = Core_List_Items.UnfiredClayBrick),
     UnfiredCokeOvenBrick(item = Core_List_Items.UnfiredCokeOvenBrick),
@@ -135,6 +139,30 @@ public enum class ImpactItems(
     SteelDrillHead(
         item = DrillHeads.getInstance(),
         meta = 1,
+    ),
+    StainlessSteelDrillHead(
+        item = DrillHeads.getInstance(),
+        meta = 2,
+    ),
+    TitaniumDrillHead(
+        item = DrillHeads.getInstance(),
+        meta = 3,
+    ),
+    TungstenSteelDrillHead(
+        item = DrillHeads.getInstance(),
+        meta = 4,
+    ),
+    Inconel690DrillHead(
+        item = DrillHeads.getInstance(),
+        meta = 5,
+    ),
+    IridiumDrillHead(
+        item = DrillHeads.getInstance(),
+        meta = 6,
+    ),
+    NeutroniumDrillHead(
+        item = DrillHeads.getInstance(),
+        meta = 7,
     ),
     ExtruderShapeRail(item = Core_List_Items.ExtruderShapeRail),
     AdvancedMixIngot(item = Core_List_Items.AdvancedMixIngot),

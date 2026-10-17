@@ -119,6 +119,8 @@ public class ImpactRegistrar : IRecipeRegistrar {
         ImpactProductionCasingArcRecyclingRecipes().register()
         ImpactSpaceCasingArcRecyclingRecipes().register()
         ImpactHammeringRecipes().register()
+        ImpactDrillHeadAssemblyRecipes().register()
+        ImpactHandProspectorCraftingRecipes().register()
     }
 
     public override fun registerOreRecipes(oreRecipes: IOreRecipeRegistry) {

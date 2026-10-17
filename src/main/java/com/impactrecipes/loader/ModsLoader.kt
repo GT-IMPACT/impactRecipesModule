@@ -1,6 +1,5 @@
 package com.impactrecipes.loader
 
-import com.impactrecipes.recipesInit
 import com.impactrecipes.recipes.ae2.AE2Registrar
 import com.impactrecipes.recipes.architecturecraft.ArchitectureCraftRegistrar
 import com.impactrecipes.recipes.backpack.BackpackRegistrar
@@ -78,7 +77,5 @@ public object ModsLoader {
         RecipeRegistrars.register(CatwalksRegistrar())
         RecipeRegistrars.register(UndergroundBiomesRegistrar())
         RecipeRegistrars.register(ChiselRegistrar())
-
-        recipesInit()
     }
 }

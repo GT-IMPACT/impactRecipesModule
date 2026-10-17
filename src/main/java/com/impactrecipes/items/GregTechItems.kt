@@ -14,6 +14,9 @@ public enum class GregTechItems(
 
     // Items
 
+    BatteryHullEVFull(item = ItemList.BatteryHull_EV_Full),
+    BatteryHullLuVFull(item = ItemList.BatteryHull_LuV_Full),
+    BatteryHullZPMFull(item = ItemList.BatteryHull_ZPM_Full),
     CompressedFireclay(item = ItemList.CompressedFireclay),
     ElectricPistonZPM(item = ItemList.Electric_Piston_ZPM),
     EnergyCrystalIV(item = ItemList.EnergyCrystal_IV),
