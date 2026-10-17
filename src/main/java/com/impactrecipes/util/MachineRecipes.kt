@@ -1,5 +1,6 @@
 package com.impactrecipes.util
 
+import com.github.technus.tectech.recipe.TT_recipeAdder
 import com.impact.common.te.TE_DryingRack
 import com.impact.impact
 import gregtech.api.enums.GT_Values.RA
@@ -1145,6 +1146,64 @@ public object MachineRecipes {
         registerOperation(id = "extractor") {
             RA.addExtractorRecipe(
                 input,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun researchAssemblyLine(
+        researchItem: ItemStack?,
+        researchComputation: Int,
+        computationPerSecond: Int,
+        researchEu: Int,
+        researchAmperage: Int,
+        inputs: Array<out ItemStack?>?,
+        fluidInputs: Array<out FluidStack?>?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "research assembly line") {
+            TT_recipeAdder.addResearchableAssemblylineRecipe(
+                researchItem,
+                researchComputation,
+                computationPerSecond,
+                researchEu,
+                researchAmperage,
+                inputs,
+                fluidInputs,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
+    @JvmStatic
+    public fun researchAssemblyLineWithOreInputs(
+        researchItem: ItemStack?,
+        researchComputation: Int,
+        computationPerSecond: Int,
+        researchEu: Int,
+        researchAmperage: Int,
+        inputs: Array<out Any?>?,
+        fluidInputs: Array<out FluidStack?>?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "research assembly line") {
+            TT_recipeAdder.addResearchableAssemblylineRecipe(
+                researchItem,
+                researchComputation,
+                computationPerSecond,
+                researchEu,
+                researchAmperage,
+                inputs,
+                fluidInputs,
                 output,
                 ticks,
                 eu,

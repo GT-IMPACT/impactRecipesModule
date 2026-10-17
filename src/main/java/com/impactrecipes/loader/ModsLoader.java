@@ -16,6 +16,7 @@ import com.impactrecipes.recipes.forestry.ForestryRegistrar;
 import com.impactrecipes.recipes.gravisuite.GraviSuiteRegistrar;
 import com.impactrecipes.recipes.galaxyspace.GalaxySpaceRegistrar;
 import com.impactrecipes.recipes.galacticraft.GalacticraftRegistrar;
+import com.impactrecipes.recipes.tectech.TecTechRegistrar;
 import com.impactrecipes.recipes.malisisdoors.MalisisDoorsRegistrar;
 import com.impactrecipes.recipes.logisticspipes.LogisticsPipesRegistrar;
 import com.impactrecipes.recipes.buildcraft.BuildCraftRegistrar;
@@ -57,7 +58,7 @@ public class ModsLoader {
         if (Loader.isModLoaded("Railcraft")) new RailCraft().run();
         RecipeRegistrars.register(new StevesFactoryManagerRegistrar());
         RecipeRegistrars.register(new StorageDrawersRegistrar());
-        if (Loader.isModLoaded("tectech")) new TecTech().run();
+        RecipeRegistrars.register(new TecTechRegistrar());
         RecipeRegistrars.register(new ProjectRedRegistrar());
         RecipeRegistrars.register(new OpenBlocksRegistrar());
         RecipeRegistrars.register(new ImpactRegistrar());
@@ -90,7 +91,6 @@ public class ModsLoader {
         registerRecipeClass(AE.class);
         registerRecipeClass(OpenComputers.class);
         registerRecipeClass(RailCraft.class);
-        registerRecipeClass(TecTech.class);
         registerRecipeClass(ImpactCore.class);
         registerRecipeClass(IC2.class);
     

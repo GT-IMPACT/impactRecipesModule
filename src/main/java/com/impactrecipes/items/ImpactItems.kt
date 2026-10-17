@@ -15,6 +15,13 @@ public enum class ImpactItems(
 
     // Items
 
+    NaqChamberPart(item = Core_List_Items.NaqChamberPart),
+    OrbCasingI(item = Core_List_Items.OrbCasingI),
+    AdamantiumCompressedPlate(item = Core_List_Items.AdamantiumCompressedPlate),
+    OrbCasingII(item = Core_List_Items.OrbCasingII),
+    NaquadahLiquidEnriched(item = GT_ItemList.Naquadah_Liquid_Enriched),
+    NaquadahMulti(item = GT_ItemList.Naquadah_multi),
+    Maintenance(item = GT_ItemList.Maintenance),
     NaquadahCompressedPlate(item = Core_List_Items.NaquadahCompressedPlate),
     PortableTankHV(item = GT_ItemList.Portable_Tank_HV),
     SchematicsTier1(item = Core_List_Items.SchematicsTier1),
