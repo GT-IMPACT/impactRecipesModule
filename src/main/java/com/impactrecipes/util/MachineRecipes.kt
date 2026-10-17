@@ -1061,6 +1061,23 @@ public object MachineRecipes {
         }
     }
 
+    @JvmStatic
+    public fun compressor(
+        input: ItemStack?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "compressor") {
+            RA.addCompressorRecipe(
+                input,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
     private fun registerOperation(
         id: String,
         action: () -> Boolean,

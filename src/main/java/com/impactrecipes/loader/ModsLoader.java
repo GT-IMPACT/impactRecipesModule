@@ -14,6 +14,7 @@ import com.impactrecipes.recipes.gregtech.GregTechRegistrar;
 import com.impactrecipes.recipes.gendustry.GendustryRegistrar;
 import com.impactrecipes.recipes.forestry.ForestryRegistrar;
 import com.impactrecipes.recipes.gravisuite.GraviSuiteRegistrar;
+import com.impactrecipes.recipes.galaxyspace.GalaxySpaceRegistrar;
 import com.impactrecipes.recipes.malisisdoors.MalisisDoorsRegistrar;
 import com.impactrecipes.recipes.extrautilities.ExtraUtilitiesRegistrar;
 import com.impactrecipes.recipes.jabba.JabbaRegistrar;
@@ -58,7 +59,7 @@ public class ModsLoader {
         RecipeRegistrars.register(new OpenBlocksRegistrar());
         RecipeRegistrars.register(new ImpactRegistrar());
         new ImpactCore().run();
-        new GalaxySpace().run();
+        RecipeRegistrars.register(new GalaxySpaceRegistrar());
         new GalactiCraft().run();
         new IC2().run();
         RecipeRegistrars.register(new ExtraUtilitiesRegistrar());
@@ -90,7 +91,6 @@ public class ModsLoader {
         registerRecipeClass(TecTech.class);
         registerRecipeClass(ProjectRed.class);
         registerRecipeClass(ImpactCore.class);
-        registerRecipeClass(GalaxySpace.class);
         registerRecipeClass(GalactiCraft.class);
         registerRecipeClass(IC2.class);
         registerRecipeClass(LogisticPipes.class);
