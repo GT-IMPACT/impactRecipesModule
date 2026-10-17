@@ -12,8 +12,8 @@ public enum class GalaxySpaceItems(
         meta = 0,
     ),
     ItemCompressedCoal(
-        registryName = "item.CompressedCoal",
-        meta = 0,
+        registryName = "item.CompressedPlates",
+        meta = 3,
     ),
     CompressedNickel(
         registryName = "item.CompressedPlates",
@@ -259,7 +259,7 @@ public enum class GalaxySpaceItems(
         meta = 0,
     ),
     BarnardaCdandelions(
-        registryName = "barnardaCdandelions",
+        registryName = "barnardacdandelions",
         meta = 0,
     ),
     Futureglass(
