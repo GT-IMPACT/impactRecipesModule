@@ -1,6 +1,7 @@
 package com.impactrecipes.recipes.architecturecraft
 
-import com.impactrecipes.recipes.vanilla.VanillaItems
+import com.impactrecipes.items.ArchitectureCraftItems
+import com.impactrecipes.items.VanillaItems
 import com.impactrecipes.util.CraftingRecipes.removeCraftingRecipesByOutput
 import com.impactrecipes.util.CraftingRecipes.shapedWithFlags
 import com.impactrecipes.util.CraftingRecipes.shapelessWithFlags

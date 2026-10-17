@@ -5,6 +5,8 @@ public enum class AE2Items(
     public override val meta: Int = 0,
 ) : IRegistryModItem {
 
+    // Items
+
     LogicProcessor(
         registryName = "item.ItemMultiMaterial",
         meta = 22,
@@ -109,6 +111,14 @@ public enum class AE2Items(
         registryName = "item.ItemMultiPart",
         meta = 473,
     ),
+    Colorizer(registryName = "item.ToolColorizer"),
+    WirelessKit(registryName = "item.ToolWirelessKit"),
+    NetworkVisualiser(registryName = "item.ToolNetworkVisualiser"),
+    UniverseStorageCell(registryName = "item.ItemExtremeStorageCell.Universe"),
+    SingularityStorageCell(registryName = "item.ItemExtremeStorageCell.Singularity"),
+
+    // Blocks
+
     WirelessConnector(registryName = "tile.BlockWirelessConnector"),
     WirelessHub(registryName = "tile.BlockWirelessHub"),
     PatternOptimizationMatrix(registryName = "tile.BlockPatternOptimizationMatrix"),
@@ -127,12 +137,7 @@ public enum class AE2Items(
     Controller(registryName = "tile.BlockController"),
     Chest(registryName = "tile.BlockChest"),
     SuperMEReplenisher(registryName = "tile.BlockSuperMEReplenisher"),
-    InterfaceBlock(registryName = "tile.BlockInterface"),
-    Colorizer(registryName = "item.ToolColorizer"),
-    WirelessKit(registryName = "item.ToolWirelessKit"),
-    NetworkVisualiser(registryName = "item.ToolNetworkVisualiser"),
-    UniverseStorageCell(registryName = "item.ItemExtremeStorageCell.Universe"),
-    SingularityStorageCell(registryName = "item.ItemExtremeStorageCell.Singularity");
+    InterfaceBlock(registryName = "tile.BlockInterface");
 
     public override val modId: String = "appliedenergistics2"
 }
