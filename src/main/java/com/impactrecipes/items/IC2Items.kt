@@ -12,10 +12,12 @@ public enum class IC2Items(
     ElectronicCircuit(apiName = "electronicCircuit"),
     AdvancedCircuit(apiName = "advancedCircuit"),
     FuelRod(apiName = "fuelRod"),
+    CarbonPlate(apiName = "carbonPlate"),
 
     // Blocks
 
-    ReinforcedGlass(apiName = "reinforcedGlass");
+    ReinforcedGlass(apiName = "reinforcedGlass"),
+    MachineCasing(apiName = "machine");
 
     public override fun get(amount: Int): ItemStack? {
         return GT_ModHandler.getIC2Item(

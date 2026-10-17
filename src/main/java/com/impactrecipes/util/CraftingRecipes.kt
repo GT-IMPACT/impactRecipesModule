@@ -1,7 +1,10 @@
 package com.impactrecipes.util
 
 import gregtech.api.util.GT_ModHandler
+import gregtech.api.util.GT_Utility
 import net.minecraft.item.ItemStack
+import net.minecraft.item.crafting.CraftingManager
+import net.minecraft.item.crafting.IRecipe
 
 /** Missing outputs or ingredients skip registration instead of reaching GT as a partial recipe. */
 public object CraftingRecipes {
@@ -103,6 +106,24 @@ public object CraftingRecipes {
             keepShapeless,
             nativeOnly,
         )
+    }
+
+    /** Matches RecipeUtils removal, including recipes outside GregTech's crafting cache. */
+    @JvmStatic
+    @Suppress("UNCHECKED_CAST")
+    public fun removeMatchingCraftingRecipesByOutput(output: ItemStack?) {
+        if (output == null) {
+            return
+        }
+
+        val recipes = CraftingManager.getInstance().recipeList as MutableList<IRecipe>
+        recipes.removeAll {
+            GT_Utility.areStacksEqual(
+                output,
+                it.recipeOutput,
+                true,
+            )
+        }
     }
 
     @JvmStatic

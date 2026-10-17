@@ -54,6 +54,11 @@ public enum class VanillaItems(
         registryName = "stained_glass",
         meta = 0,
     ),
+    LimeStainedGlassPane(
+        registryName = "stained_glass_pane",
+        meta = 5,
+    ),
+    StoneButton(registryName = "stone_button"),
     StainedHardenedClay(
         registryName = "stained_hardened_clay",
         meta = 0,
