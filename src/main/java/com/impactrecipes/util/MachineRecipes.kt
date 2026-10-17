@@ -1017,6 +1017,27 @@ public object MachineRecipes {
         }
     }
 
+    @JvmStatic
+    public fun chemicalReactor(
+        input: ItemStack?,
+        secondaryInput: ItemStack?,
+        fluidInput: FluidStack?,
+        fluidOutput: FluidStack?,
+        output: ItemStack?,
+        ticks: Int,
+    ) {
+        registerOperation(id = "chemical reactor") {
+            RA.addChemicalRecipe(
+                input,
+                secondaryInput,
+                fluidInput,
+                fluidOutput,
+                output,
+                ticks,
+            )
+        }
+    }
+
     private fun registerOperation(
         id: String,
         action: () -> Boolean,

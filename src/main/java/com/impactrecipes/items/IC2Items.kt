@@ -9,6 +9,7 @@ public enum class IC2Items(
 
     // Items
 
+    Resin(apiName = "resin"),
     EjectorUpgrade(apiName = "ejectorUpgrade"),
     PullingUpgrade(apiName = "pullingUpgrade"),
     RedstoneInverterUpgrade(apiName = "redstoneinvUpgrade"),

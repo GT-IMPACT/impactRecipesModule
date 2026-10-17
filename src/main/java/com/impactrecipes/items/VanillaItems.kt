@@ -7,6 +7,18 @@ public enum class VanillaItems(
 
     // Items
 
+    Bucket(
+        registryName = "bucket",
+        meta = 0,
+    ),
+    Gunpowder(
+        registryName = "gunpowder",
+        meta = 0,
+    ),
+    Dye9(
+        registryName = "dye",
+        meta = 9,
+    ),
     Feather(
         registryName = "feather",
         meta = 0,
@@ -98,6 +110,26 @@ public enum class VanillaItems(
 
     // Blocks
 
+    RedstoneBlock(
+        registryName = "redstone_block",
+        meta = 0,
+    ),
+    Stonebrick(
+        registryName = "stonebrick",
+        meta = 0,
+    ),
+    Gravel(
+        registryName = "gravel",
+        meta = 0,
+    ),
+    StoneSlab5(
+        registryName = "stone_slab",
+        meta = 5,
+    ),
+    EndStone1(
+        registryName = "end_stone",
+        meta = 1,
+    ),
     Grass(
         registryName = "grass",
         meta = 0,

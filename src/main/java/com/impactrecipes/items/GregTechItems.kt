@@ -12,6 +12,21 @@ public enum class GregTechItems(
 
     // Items
 
+    EmitterLuV(item = ItemList.Emitter_LuV),
+    CasingGearboxTungstenSteel2(item = ItemList.Casing_Gearbox_TungstenSteel2),
+    PumpIV(item = ItemList.Pump_IV),
+    GtMetaitem0117811(
+        registryName = "gt.metaitem.01",
+        meta = 17811,
+    ),
+    GtMetaitem0132731(
+        registryName = "gt.metaitem.01",
+        meta = 32731,
+    ),
+    GtMetaitem012804(
+        registryName = "gt.metaitem.01",
+        meta = 2804,
+    ),
     ShapeMoldBlock(item = ItemList.Shape_Mold_Block),
     ShapeMoldNugget(item = ItemList.Shape_Mold_Nugget),
     ComponentMinecartWheelsIron(item = ItemList.Component_Minecart_Wheels_Iron),
