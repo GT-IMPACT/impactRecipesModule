@@ -12,6 +12,7 @@ import com.impactrecipes.recipes.catwalks.CatwalksRegistrar;
 import com.impactrecipes.recipes.carpentersblocks.CarpentersBlocksRegistrar;
 import com.impactrecipes.recipes.gregtech.GregTechRegistrar;
 import com.impactrecipes.recipes.gendustry.GendustryRegistrar;
+import com.impactrecipes.recipes.jabba.JabbaRegistrar;
 import com.impactrecipes.recipes.impact.ImpactRegistrar;
 import com.impactrecipes.recipes.opencomputers.OpenComputersRegistrar;
 import com.impactrecipes.recipes.projectred.ProjectRedRegistrar;
@@ -40,7 +41,7 @@ public class ModsLoader {
         RecipeRegistrars.register(new AE2Registrar());
         new AE().run();
         new BuildCraft().run();
-        if (Loader.isModLoaded("JABBA")) new Jabba().run();
+        RecipeRegistrars.register(new JabbaRegistrar());
         RecipeRegistrars.register(new OpenComputersRegistrar());
         if (Loader.isModLoaded("OpenComputers")) new OpenComputers().run();
         if (Loader.isModLoaded("Railcraft")) new RailCraft().run();
@@ -79,7 +80,6 @@ public class ModsLoader {
         registerRecipeClass(Vanilla.class);
         registerRecipeClass(AE.class);
         registerRecipeClass(BuildCraft.class);
-        registerRecipeClass(Jabba.class);
         registerRecipeClass(OpenComputers.class);
         registerRecipeClass(RailCraft.class);
         registerRecipeClass(StorageDrawers.class);

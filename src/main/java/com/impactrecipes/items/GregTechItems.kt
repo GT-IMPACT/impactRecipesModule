@@ -12,6 +12,7 @@ public enum class GregTechItems(
 
     // Items
 
+    ComponentMinecartWheelsIron(item = ItemList.Component_Minecart_Wheels_Iron),
     ElectricPistonLuV(item = ItemList.Electric_Piston_LuV),
     RobotArmLuV(item = ItemList.Robot_Arm_LuV),
     BatteryRELVLithium(item = ItemList.Battery_RE_LV_Lithium),

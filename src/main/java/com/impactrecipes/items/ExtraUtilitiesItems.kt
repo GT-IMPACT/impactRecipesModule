@@ -7,6 +7,10 @@ public enum class ExtraUtilitiesItems(
 
     // Blocks
 
+    ChestFull(
+        registryName = "chestFull",
+        meta = 0,
+    ),
     DecorativeBlock27(
         registryName = "decorativeBlock2",
         meta = 7,
