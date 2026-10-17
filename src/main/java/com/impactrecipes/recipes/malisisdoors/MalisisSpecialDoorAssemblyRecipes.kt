@@ -7,6 +7,7 @@ import com.impactrecipes.util.MachineRecipes
 import com.impactrecipes.util.RecipeItems
 import gregtech.api.enums.Materials
 import gregtech.api.enums.OrePrefixes
+import gregtech.api.util.GT_Utility
 
 internal class MalisisSpecialDoorAssemblyRecipes {
 
@@ -160,12 +161,17 @@ internal class MalisisSpecialDoorAssemblyRecipes {
         )
 
         MachineRecipes.assembler(
-            input = VanillaItems.Paper.get(amount = 2),
-            secondaryInput = RecipeItems.ore(
-                prefix = OrePrefixes.stick,
-                material = Materials.Wood,
-                count = 2,
+            inputs = arrayOf(
+                VanillaItems.Paper.get(amount = 2),
+                RecipeItems.ore(
+                    prefix = OrePrefixes.stick,
+                    material = Materials.Wood,
+                    count = 2,
+                ),
+                // Keep this recipe distinct from Chisel's Paperwall recipes.
+                GT_Utility.getIntegratedCircuit(1),
             ),
+            fluid = null,
             output = MalisisDoorsItems.ItemShojiDoor.get(),
             ticks = 400,
             eu = 4,
