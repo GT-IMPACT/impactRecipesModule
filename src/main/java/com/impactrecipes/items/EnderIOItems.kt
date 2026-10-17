@@ -8,19 +8,19 @@ public enum class EnderIOItems(
     // Items
 
     DarkSteelHelmet(
-        registryName = "darkSteel_helmet",
+        registryName = "item.darkSteel_helmet",
         meta = 0,
     ),
     DarkSteelChestplate(
-        registryName = "darkSteel_chestplate",
+        registryName = "item.darkSteel_chestplate",
         meta = 0,
     ),
     DarkSteelLeggings(
-        registryName = "darkSteel_leggings",
+        registryName = "item.darkSteel_leggings",
         meta = 0,
     ),
     DarkSteelBoots(
-        registryName = "darkSteel_boots",
+        registryName = "item.darkSteel_boots",
         meta = 0,
     ),
     FunctionUpgrade(
