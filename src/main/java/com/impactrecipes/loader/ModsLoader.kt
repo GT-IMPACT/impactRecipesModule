@@ -3,6 +3,7 @@ package com.impactrecipes.loader
 import com.impactrecipes.recipes.ae2.AE2Registrar
 import com.impactrecipes.recipes.architecturecraft.ArchitectureCraftRegistrar
 import com.impactrecipes.recipes.backpack.BackpackRegistrar
+import com.impactrecipes.recipes.betterbuilderswands.BetterBuildersWandsRegistrar
 import com.impactrecipes.recipes.bibliocraft.BiblioCraftRegistrar
 import com.impactrecipes.recipes.buildcraft.BuildCraftRegistrar
 import com.impactrecipes.recipes.carpentersblocks.CarpentersBlocksRegistrar
@@ -78,6 +79,7 @@ public object ModsLoader {
             CatwalksRegistrar(),
             UndergroundBiomesRegistrar(),
             ChiselRegistrar(),
+            BetterBuildersWandsRegistrar(),
         )
     }
 }
