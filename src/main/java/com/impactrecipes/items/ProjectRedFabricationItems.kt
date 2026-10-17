@@ -11,9 +11,6 @@ public enum class ProjectRedFabricationItems(
         registryName = "projectred.fabrication.icchip",
         meta = 0,
     ),
-
-    // Blocks
-
     ProjectredIntegrationIcblock(
         registryName = "projectred.integration.icblock",
         meta = 0,

@@ -5,6 +5,17 @@ public enum class BuildCraftBuildersItems(
     public override val meta: Int = 0,
 ) : IRegistryModItem {
 
+    // Items
+
+    BlueprintItem(
+        registryName = "blueprintItem",
+        meta = 0,
+    ),
+    TemplateItem(
+        registryName = "templateItem",
+        meta = 0,
+    ),
+
     // Blocks
 
     FillerBlock(
@@ -21,14 +32,6 @@ public enum class BuildCraftBuildersItems(
     ),
     LibraryBlock(
         registryName = "libraryBlock",
-        meta = 0,
-    ),
-    BlueprintItem(
-        registryName = "blueprintItem",
-        meta = 0,
-    ),
-    TemplateItem(
-        registryName = "templateItem",
         meta = 0,
     ),
     MachineBlock(

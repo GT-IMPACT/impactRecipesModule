@@ -5,7 +5,7 @@ public enum class ProjectRedIntegrationItems(
     public override val meta: Int = 0,
 ) : IRegistryModItem {
 
-    // Blocks
+    // Items
 
     Repeater(
         registryName = "projectred.integration.gate",

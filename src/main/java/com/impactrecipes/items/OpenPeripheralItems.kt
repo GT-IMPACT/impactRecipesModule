@@ -5,18 +5,21 @@ public enum class OpenPeripheralItems(
     public override val meta: Int = 0,
 ) : IRegistryModItem {
 
-    // Blocks
+    // Items
 
     WirelessKeyboard(
         registryName = "keyboard",
         meta = 0,
     ),
-    TerminalGlassesBridge(
-        registryName = "glassesbridge",
-        meta = 0,
-    ),
     TerminalGlasses(
         registryName = "glasses",
+        meta = 0,
+    ),
+
+    // Blocks
+
+    TerminalGlassesBridge(
+        registryName = "glassesbridge",
         meta = 0,
     ),
     Sensor(

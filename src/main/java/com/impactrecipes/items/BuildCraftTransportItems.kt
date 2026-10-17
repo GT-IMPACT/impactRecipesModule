@@ -155,19 +155,19 @@ public enum class BuildCraftTransportItems(
         registryName = "item.buildcraftPipe.pipestructurecobblestone",
         meta = 0,
     ),
-
-    // Blocks
-
-    FilteredBufferBlock(
-        registryName = "filteredBufferBlock",
-        meta = 0,
-    ),
     PipeWaterproof(
         registryName = "pipeWaterproof",
         meta = 0,
     ),
     PipePlug(
         registryName = "pipePlug",
+        meta = 0,
+    ),
+
+    // Blocks
+
+    FilteredBufferBlock(
+        registryName = "filteredBufferBlock",
         meta = 0,
     );
 

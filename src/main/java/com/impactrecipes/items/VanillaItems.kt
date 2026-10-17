@@ -371,6 +371,14 @@ public enum class VanillaItems(
         registryName = "string",
         meta = 0,
     ),
+    Compass(
+        registryName = "compass",
+        meta = 0,
+    ),
+    Paper(
+        registryName = "paper",
+        meta = 0,
+    ),
 
     // Blocks
 
@@ -828,14 +836,6 @@ public enum class VanillaItems(
     ),
     StonePressurePlate(
         registryName = "stone_pressure_plate",
-        meta = 0,
-    ),
-    Compass(
-        registryName = "compass",
-        meta = 0,
-    ),
-    Paper(
-        registryName = "paper",
         meta = 0,
     ),
     Ladder(

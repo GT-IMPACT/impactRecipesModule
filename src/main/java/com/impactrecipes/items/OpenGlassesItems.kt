@@ -5,14 +5,17 @@ public enum class OpenGlassesItems(
     public override val meta: Int = 0,
 ) : IRegistryModItem {
 
+    // Items
+
+    ARGlasses(
+        registryName = "openglasses",
+        meta = 0,
+    ),
+
     // Blocks
 
     GlassesTerminal(
         registryName = "openglassesterminal",
-        meta = 0,
-    ),
-    ARGlasses(
-        registryName = "openglasses",
         meta = 0,
     );
 

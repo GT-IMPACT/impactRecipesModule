@@ -5,36 +5,8 @@ public enum class ComputronicsItems(
     public override val meta: Int = 0,
 ) : IRegistryModItem {
 
-    // Blocks
+    // Items
 
-    DigitalSignalReceiverBox(
-        registryName = "computronics.digitalReceiverBox",
-        meta = 0,
-    ),
-    DigitalSignalControllerBox(
-        registryName = "computronics.digitalControllerBox",
-        meta = 0,
-    ),
-    DigitalLocomotiveRelay(
-        registryName = "computronics.locomotiveRelay",
-        meta = 0,
-    ),
-    CipherBlock(
-        registryName = "computronics.cipher",
-        meta = 0,
-    ),
-    SpeechBox(
-        registryName = "computronics.speechBox",
-        meta = 0,
-    ),
-    IronNoteBlock(
-        registryName = "computronics.ironNoteBlock",
-        meta = 0,
-    ),
-    Radar(
-        registryName = "computronics.radar",
-        meta = 0,
-    ),
     ChromiumDioxideTapeReel(
         registryName = "computronics.gt_parts",
         meta = 0,
@@ -98,6 +70,37 @@ public enum class ComputronicsItems(
     SpeechUpgrade(
         registryName = "computronics.ocParts",
         meta = 14,
+    ),
+
+    // Blocks
+
+    DigitalSignalReceiverBox(
+        registryName = "computronics.digitalReceiverBox",
+        meta = 0,
+    ),
+    DigitalSignalControllerBox(
+        registryName = "computronics.digitalControllerBox",
+        meta = 0,
+    ),
+    DigitalLocomotiveRelay(
+        registryName = "computronics.locomotiveRelay",
+        meta = 0,
+    ),
+    CipherBlock(
+        registryName = "computronics.cipher",
+        meta = 0,
+    ),
+    SpeechBox(
+        registryName = "computronics.speechBox",
+        meta = 0,
+    ),
+    IronNoteBlock(
+        registryName = "computronics.ironNoteBlock",
+        meta = 0,
+    ),
+    Radar(
+        registryName = "computronics.radar",
+        meta = 0,
     ),
     Speaker(
         registryName = "computronics.speaker",

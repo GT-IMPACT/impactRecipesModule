@@ -111,6 +111,18 @@ public enum class ForestryItems(
         registryName = "honeyDrop",
         meta = 0,
     ),
+    CraftingMaterial3(
+        registryName = "craftingMaterial",
+        meta = 3,
+    ),
+    RoyalJelly(
+        registryName = "royalJelly",
+        meta = 0,
+    ),
+    Grafter(
+        registryName = "grafter",
+        meta = 0,
+    ),
 
     // Blocks
 
@@ -156,18 +168,6 @@ public enum class ForestryItems(
     ),
     SlabsFireproof(
         registryName = "slabsFireproof",
-        meta = 0,
-    ),
-    CraftingMaterial3(
-        registryName = "craftingMaterial",
-        meta = 3,
-    ),
-    RoyalJelly(
-        registryName = "royalJelly",
-        meta = 0,
-    ),
-    Grafter(
-        registryName = "grafter",
         meta = 0,
     ),
     Apiculture(

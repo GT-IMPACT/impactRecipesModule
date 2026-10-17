@@ -367,13 +367,21 @@ public enum class OpenComputersItems(
         registryName = "item",
         meta = 26,
     ),
-
-    // Blocks
-
     Scrench(
         registryName = "wrench",
         meta = 0,
     ),
+    HoverBoots(
+        registryName = "hoverBoots",
+        meta = 0,
+    ),
+    Item19(
+        registryName = "item",
+        meta = 19,
+    ),
+
+    // Blocks
+
     ComputerCaseTier1(
         registryName = "case1",
         meta = 0,
@@ -470,10 +478,6 @@ public enum class OpenComputersItems(
         registryName = "screen3",
         meta = 0,
     ),
-    HoverBoots(
-        registryName = "hoverBoots",
-        meta = 0,
-    ),
     HologramProjectorTier2(
         registryName = "hologram2",
         meta = 0,
@@ -485,10 +489,6 @@ public enum class OpenComputersItems(
     Cable(
         registryName = "cable",
         meta = 0,
-    ),
-    Item19(
-        registryName = "item",
-        meta = 19,
     ),
     Keyboard(
         registryName = "keyboard",

@@ -31,6 +31,14 @@ public enum class ChiselItems(
         registryName = "upgrade",
         meta = 2,
     ),
+    Cloudinabottle(
+        registryName = "cloudinabottle",
+        meta = 0,
+    ),
+    Smashingrock(
+        registryName = "smashingrock",
+        meta = 0,
+    ),
 
     // Blocks
 
@@ -40,14 +48,6 @@ public enum class ChiselItems(
     Glass2(registryName = "glass2"),
     Valentines(
         registryName = "valentines",
-        meta = 0,
-    ),
-    Cloudinabottle(
-        registryName = "cloudinabottle",
-        meta = 0,
-    ),
-    Smashingrock(
-        registryName = "smashingrock",
         meta = 0,
     ),
     AutoChisel(

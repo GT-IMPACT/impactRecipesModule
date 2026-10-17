@@ -103,9 +103,6 @@ public enum class GraviSuiteItems(
         registryName = "itemSimpleItem",
         meta = 1,
     ),
-
-    // Blocks
-
     AdvNanoChestPlate(
         registryName = "advNanoChestPlate",
         meta = 0,

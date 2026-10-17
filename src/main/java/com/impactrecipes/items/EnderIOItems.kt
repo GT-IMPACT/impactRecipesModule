@@ -211,6 +211,14 @@ public enum class EnderIOItems(
         item = DarkSteelItems.itemMagnet,
         meta = 16,
     ),
+    YetaWrench(
+        registryName = "itemYetaWrench",
+        meta = 0,
+    ),
+    AdvancedItemFilter(
+        registryName = "itemBasicFilterUpgrade",
+        meta = 1,
+    ),
 
     // Blocks
 
@@ -220,14 +228,6 @@ public enum class EnderIOItems(
     ),
     BasicCapacitorBank(
         registryName = "blockCapBank",
-        meta = 1,
-    ),
-    YetaWrench(
-        registryName = "itemYetaWrench",
-        meta = 0,
-    ),
-    AdvancedItemFilter(
-        registryName = "itemBasicFilterUpgrade",
         meta = 1,
     ),
     BlockInventoryPanel(

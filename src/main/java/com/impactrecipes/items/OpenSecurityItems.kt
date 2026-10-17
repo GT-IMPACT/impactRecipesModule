@@ -5,6 +5,49 @@ public enum class OpenSecurityItems(
     public override val meta: Int = 0,
 ) : IRegistryModItem {
 
+    // Items
+
+    MagneticStripCard(
+        registryName = "opensecurity.magCard",
+        meta = 0,
+    ),
+    RFIDCard(
+        registryName = "opensecurity.rfidCard",
+        meta = 0,
+    ),
+    RFIDReaderCard(
+        registryName = "opensecurity.rfidReaderCard",
+        meta = 0,
+    ),
+    SecureNetworkCard(
+        registryName = "opensecurity.secureNetworkCard",
+        meta = 0,
+    ),
+    SecurityDoor(
+        registryName = "opensecurity.securityDoor",
+        meta = 0,
+    ),
+    PrivateSecurityDoor(
+        registryName = "opensecurity.securityDoorPrivate",
+        meta = 0,
+    ),
+    DamageUpgrade(
+        registryName = "opensecurity.damageUpgrade",
+        meta = 0,
+    ),
+    CooldownUpgrade(
+        registryName = "opensecurity.cooldownUpgrade",
+        meta = 0,
+    ),
+    EnergyUpgrade(
+        registryName = "opensecurity.energyUpgrade",
+        meta = 0,
+    ),
+    MovementUpgrade(
+        registryName = "opensecurity.movementUpgrade",
+        meta = 0,
+    ),
+
     // Blocks
 
     MagneticCardReader(
@@ -53,46 +96,6 @@ public enum class OpenSecurityItems(
     ),
     BiometricReader(
         registryName = "biometricScanner",
-        meta = 0,
-    ),
-    MagneticStripCard(
-        registryName = "opensecurity.magCard",
-        meta = 0,
-    ),
-    RFIDCard(
-        registryName = "opensecurity.rfidCard",
-        meta = 0,
-    ),
-    RFIDReaderCard(
-        registryName = "opensecurity.rfidReaderCard",
-        meta = 0,
-    ),
-    SecureNetworkCard(
-        registryName = "opensecurity.secureNetworkCard",
-        meta = 0,
-    ),
-    SecurityDoor(
-        registryName = "opensecurity.securityDoor",
-        meta = 0,
-    ),
-    PrivateSecurityDoor(
-        registryName = "opensecurity.securityDoorPrivate",
-        meta = 0,
-    ),
-    DamageUpgrade(
-        registryName = "opensecurity.damageUpgrade",
-        meta = 0,
-    ),
-    CooldownUpgrade(
-        registryName = "opensecurity.cooldownUpgrade",
-        meta = 0,
-    ),
-    EnergyUpgrade(
-        registryName = "opensecurity.energyUpgrade",
-        meta = 0,
-    ),
-    MovementUpgrade(
-        registryName = "opensecurity.movementUpgrade",
         meta = 0,
     );
 

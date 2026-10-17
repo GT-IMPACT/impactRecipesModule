@@ -148,24 +148,12 @@ public enum class RailcraftItems(
         item = RailcraftItem.tie,
         itemMeta = ItemTie.EnumTie.STONE,
     ),
-
-    // Blocks
-
-    Cube(registryName = "cube"),
     TrackmanSGoggles(
         registryName = "armor.goggles",
         meta = 0,
     ),
     LapotronLoaderUpgrade(
         registryName = "upgrade.lapotron",
-        meta = 0,
-    ),
-    WireSupportFrame(
-        registryName = "frame",
-        meta = 0,
-    ),
-    ElectricShuntingWire(
-        registryName = "machine.delta",
         meta = 0,
     ),
     ToolSteelSword(
@@ -186,6 +174,18 @@ public enum class RailcraftItems(
     ),
     ToolSteelHoe(
         registryName = "tool.steel.hoe",
+        meta = 0,
+    ),
+
+    // Blocks
+
+    Cube(registryName = "cube"),
+    WireSupportFrame(
+        registryName = "frame",
+        meta = 0,
+    ),
+    ElectricShuntingWire(
+        registryName = "machine.delta",
         meta = 0,
     ),
     TrackControl(stack = EnumTrack.CONTROL.getItem()),

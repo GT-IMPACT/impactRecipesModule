@@ -5,6 +5,17 @@ public enum class CompactKineticGeneratorsItems(
     public override val meta: Int = 0,
 ) : IRegistryModItem {
 
+    // Items
+
+    IridiumRotor(
+        registryName = "IridiumRotor",
+        meta = 0,
+    ),
+    IridiumBlade(
+        registryName = "IridiumBlade",
+        meta = 0,
+    ),
+
     // Blocks
 
     BlockCkg(
@@ -54,14 +65,6 @@ public enum class CompactKineticGeneratorsItems(
     BlockCkg11(
         registryName = "BlockCkg",
         meta = 11,
-    ),
-    IridiumRotor(
-        registryName = "IridiumRotor",
-        meta = 0,
-    ),
-    IridiumBlade(
-        registryName = "IridiumBlade",
-        meta = 0,
     );
 
     public override val modId: String = "compactkineticgenerators"
