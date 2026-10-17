@@ -169,24 +169,6 @@ internal class ImpactRodCraftingRecipes {
         )
 
         CraftingRecipes.shapedWithFlags(
-            output = ImpactItems.RawSDHCAlloy.get(),
-            flags = craftingFlags,
-            recipe = arrayOf<Any?>(
-                "SdS",
-                "BTA",
-                "ShS",
-                'T',
-                GalacticraftCoreItems.ItemBasicItem9.get(),
-                'S',
-                OrePrefixes.screw.get(Materials.StainlessSteel),
-                'B',
-                GalaxySpaceItems.ItemCompressedDualBronze.get(),
-                'A',
-                ImpactItems.AluminiumDualCompressedPlate.get(),
-            ),
-        )
-
-        CraftingRecipes.shapedWithFlags(
             output = ImpactItems.HeavyDutyNoseConeTier4.get(),
             flags = craftingFlags,
             recipe = arrayOf<Any?>(

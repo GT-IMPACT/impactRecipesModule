@@ -66,54 +66,6 @@ internal class ImpactBarnardaBiomassCentrifugeRecipes {
         )
 
         MachineRecipes.centrifuge(
-            input = GalaxySpaceItems.BarnardaCdandelion3.get(amount = 64),
-            secondaryInput = GT_Values.NI,
-            fluidInput = GT_Values.NF,
-            fluidOutput = Materials.Biomass.getGas(1000),
-            output = IC2Items.PlantBall.get(amount = 64),
-            secondaryOutput = ImpactItems.BarnardaCBall.get(amount = 16),
-            output3 = RecipeItems.ore(
-                prefix = OrePrefixes.dust,
-                material = Materials.AlienOrganic,
-                count = 4,
-            ),
-            output4 = GT_Values.NI,
-            output5 = GT_Values.NI,
-            output6 = GT_Values.NI,
-            chances = intArrayOf(
-                10000,
-                10000,
-                10000,
-            ),
-            ticks = 400,
-            eu = 8,
-        )
-
-        MachineRecipes.centrifuge(
-            input = GalaxySpaceItems.BarnardaCreed.get(amount = 64),
-            secondaryInput = GT_Values.NI,
-            fluidInput = GT_Values.NF,
-            fluidOutput = Materials.Biomass.getGas(1000),
-            output = IC2Items.PlantBall.get(amount = 64),
-            secondaryOutput = ImpactItems.BarnardaCBall.get(amount = 16),
-            output3 = RecipeItems.ore(
-                prefix = OrePrefixes.dust,
-                material = Materials.AlienOrganic,
-                count = 4,
-            ),
-            output4 = GT_Values.NI,
-            output5 = GT_Values.NI,
-            output6 = GT_Values.NI,
-            chances = intArrayOf(
-                10000,
-                10000,
-                10000,
-            ),
-            ticks = 400,
-            eu = 8,
-        )
-
-        MachineRecipes.centrifuge(
             input = GalaxySpaceItems.BarnardaCdandelions.get(amount = 64),
             secondaryInput = GT_Values.NI,
             fluidInput = GT_Values.NF,
