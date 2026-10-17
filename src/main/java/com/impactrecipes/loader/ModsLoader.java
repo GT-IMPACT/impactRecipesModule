@@ -17,6 +17,7 @@ import com.impactrecipes.recipes.gravisuite.GraviSuiteRegistrar;
 import com.impactrecipes.recipes.galaxyspace.GalaxySpaceRegistrar;
 import com.impactrecipes.recipes.malisisdoors.MalisisDoorsRegistrar;
 import com.impactrecipes.recipes.logisticspipes.LogisticsPipesRegistrar;
+import com.impactrecipes.recipes.buildcraft.BuildCraftRegistrar;
 import com.impactrecipes.recipes.extrautilities.ExtraUtilitiesRegistrar;
 import com.impactrecipes.recipes.jabba.JabbaRegistrar;
 import com.impactrecipes.recipes.storagedrawers.StorageDrawersRegistrar;
@@ -47,7 +48,7 @@ public class ModsLoader {
         RecipeRegistrars.register(new GregTechRegistrar());
         RecipeRegistrars.register(new AE2Registrar());
         new AE().run();
-        new BuildCraft().run();
+        RecipeRegistrars.register(new BuildCraftRegistrar());
         RecipeRegistrars.register(new JabbaRegistrar());
         RecipeRegistrars.register(new OpenComputersRegistrar());
         if (Loader.isModLoaded("OpenComputers")) new OpenComputers().run();
@@ -86,7 +87,6 @@ public class ModsLoader {
 
         registerRecipeClass(Vanilla.class);
         registerRecipeClass(AE.class);
-        registerRecipeClass(BuildCraft.class);
         registerRecipeClass(OpenComputers.class);
         registerRecipeClass(RailCraft.class);
         registerRecipeClass(TecTech.class);

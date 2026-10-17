@@ -114,6 +114,10 @@ public enum class VanillaItems(
 
     // Blocks
 
+    StainedGlassPane(
+        registryName = "stained_glass_pane",
+        meta = 0,
+    ),
     Carpet10(
         registryName = "carpet",
         meta = 10,

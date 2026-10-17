@@ -7,6 +7,38 @@ public enum class BuildCraftFactoryItems(
 
     // Blocks
 
+    MiningWellBlock(
+        registryName = "miningWellBlock",
+        meta = 0,
+    ),
+    TankBlock(
+        registryName = "tankBlock",
+        meta = 0,
+    ),
+    PumpBlock(
+        registryName = "pumpBlock",
+        meta = 0,
+    ),
+    FloodGateBlock(
+        registryName = "floodGateBlock",
+        meta = 0,
+    ),
+    RefineryBlock(
+        registryName = "refineryBlock",
+        meta = 0,
+    ),
+    BlockHopper(
+        registryName = "blockHopper",
+        meta = 0,
+    ),
+    ZonePlan(
+        registryName = "zonePlan",
+        meta = 0,
+    ),
+    Requester(
+        registryName = "requester",
+        meta = 0,
+    ),
     AutoWorkbenchBlock(
         registryName = "autoWorkbenchBlock",
         meta = 0,

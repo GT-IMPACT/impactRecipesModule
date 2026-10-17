@@ -15,6 +15,8 @@ public enum class ImpactItems(
 
     // Items
 
+    CobblestoneRod(item = Core_List_Items.CobblestoneRod),
+    SandstoneRod(item = Core_List_Items.SandstoneRod),
     RedstoneIronChipset(item = GT_ItemList.RedstoneIronChipset),
     RedstoneGoldChipset(item = GT_ItemList.RedstoneGoldChipset),
     RedstoneDiamondChipset(item = GT_ItemList.RedstoneDiamondChipset),

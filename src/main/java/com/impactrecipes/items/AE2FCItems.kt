@@ -20,6 +20,10 @@ public enum class AE2FCItems(
 
     // Blocks
 
+    CertusQuartzTank(
+        registryName = "certus_quartz_tank",
+        meta = 0,
+    ),
     SuperStockReplenisher(registryName = "super_stock_replenisher"),
     DualInterface(registryName = "fluid_interface"),
     FluidAutoFiller(registryName = "fluid_auto_filler");

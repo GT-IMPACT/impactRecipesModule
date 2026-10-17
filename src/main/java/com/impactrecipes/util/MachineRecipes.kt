@@ -1078,6 +1078,27 @@ public object MachineRecipes {
         }
     }
 
+    @JvmStatic
+    public fun cutter(
+        input: ItemStack?,
+        output: ItemStack?,
+        secondaryOutput: ItemStack?,
+        ticks: Int,
+        eu: Int,
+        cleanroom: Boolean,
+    ) {
+        registerOperation(id = "cutter") {
+            RA.addCutterRecipe(
+                input,
+                output,
+                secondaryOutput,
+                ticks,
+                eu,
+                cleanroom,
+            )
+        }
+    }
+
     private fun registerOperation(
         id: String,
         action: () -> Boolean,
