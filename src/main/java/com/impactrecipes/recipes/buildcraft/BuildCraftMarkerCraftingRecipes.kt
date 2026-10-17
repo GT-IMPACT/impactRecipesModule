@@ -32,7 +32,7 @@ internal class BuildCraftMarkerCraftingRecipes {
         )
 
         CraftingRecipes.shapedWithFlags(
-            output = BuildCraftCoreItems.ConstructionMarkerBlock.get(),
+            output = BuildCraftBuildersItems.ConstructionMarkerBlock.get(),
             flags = craftingFlags,
             recipe = arrayOf<Any?>(
                 " S ",

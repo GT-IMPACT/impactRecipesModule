@@ -18,6 +18,10 @@ public enum class BuildCraftBuildersItems(
 
     // Blocks
 
+    ConstructionMarkerBlock(
+        registryName = "constructionMarkerBlock",
+        meta = 0,
+    ),
     FillerBlock(
         registryName = "fillerBlock",
         meta = 0,

@@ -34,10 +34,6 @@ public enum class BuildCraftCoreItems(
         registryName = "markerBlock",
         meta = 0,
     ),
-    ConstructionMarkerBlock(
-        registryName = "constructionMarkerBlock",
-        meta = 0,
-    ),
     PathMarkerBlock(
         registryName = "pathMarkerBlock",
         meta = 0,

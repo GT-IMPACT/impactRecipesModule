@@ -49,7 +49,7 @@ internal class BuildCraftRecipeRemovals {
         )
 
         CraftingRecipes.removeCraftingRecipesByOutput(
-            output = BuildCraftCoreItems.ConstructionMarkerBlock.get(),
+            output = BuildCraftBuildersItems.ConstructionMarkerBlock.get(),
             ignoreNbt = true,
             keepShapeless = false,
             nativeOnly = false,
@@ -189,14 +189,14 @@ internal class BuildCraftRecipeRemovals {
         )
 
         CraftingRecipes.removeCraftingRecipesByOutput(
-            output = BuildCraftFactoryItems.ZonePlan.get(),
+            output = BuildCraftRoboticsItems.ZonePlan.get(),
             ignoreNbt = true,
             keepShapeless = false,
             nativeOnly = false,
         )
 
         CraftingRecipes.removeCraftingRecipesByOutput(
-            output = BuildCraftFactoryItems.Requester.get(),
+            output = BuildCraftRoboticsItems.Requester.get(),
             ignoreNbt = true,
             keepShapeless = false,
             nativeOnly = false,

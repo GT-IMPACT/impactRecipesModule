@@ -31,14 +31,6 @@ public enum class BuildCraftFactoryItems(
         registryName = "blockHopper",
         meta = 0,
     ),
-    ZonePlan(
-        registryName = "zonePlan",
-        meta = 0,
-    ),
-    Requester(
-        registryName = "requester",
-        meta = 0,
-    ),
     AutoWorkbenchBlock(
         registryName = "autoWorkbenchBlock",
         meta = 0,
