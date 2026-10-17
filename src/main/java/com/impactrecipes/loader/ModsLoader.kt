@@ -20,6 +20,7 @@ import com.impactrecipes.recipes.galacticraft.GalacticraftRegistrar
 import com.impactrecipes.recipes.galaxyspace.GalaxySpaceRegistrar
 import com.impactrecipes.recipes.gendustry.GendustryRegistrar
 import com.impactrecipes.recipes.gravisuite.GraviSuiteRegistrar
+import com.impactrecipes.recipes.gregslighting.GregsLightingRegistrar
 import com.impactrecipes.recipes.gregtech.GregTechRegistrar
 import com.impactrecipes.recipes.ic2.IC2Registrar
 import com.impactrecipes.recipes.impact.ImpactRegistrar
@@ -82,6 +83,7 @@ public object ModsLoader {
             UndergroundBiomesRegistrar(),
             ChiselRegistrar(),
             BetterBuildersWandsRegistrar(),
+            GregsLightingRegistrar(),
         )
     }
 }
