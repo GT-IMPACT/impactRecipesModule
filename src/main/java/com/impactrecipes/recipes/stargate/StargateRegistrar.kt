@@ -12,6 +12,13 @@ public class StargateRegistrar : IRecipeRegistrar {
             return Loader.isModLoaded(Reference.SG)
         }
 
+    public override fun register() {
+        StargateRecipeRemovals().register()
+        StargatePrinterRecipes().register()
+        StargateAssemblyRecipes().register()
+        StargateCrystalRecipes().register()
+    }
+
     public override fun registerOreRecipes(oreRecipes: IOreRecipeRegistry) {
         oreRecipes.register(StargateLensRecipes())
     }

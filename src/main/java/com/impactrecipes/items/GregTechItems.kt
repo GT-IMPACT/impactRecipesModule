@@ -9,6 +9,9 @@ public enum class GregTechItems(
 
     // Items
 
+    ElectricPistonUEV(item = ItemList.Electric_Piston_UEV),
+    EmitterUEV(item = ItemList.Emitter_UEV),
+    ZPM3(item = ItemList.ZPM3),
     EnergyCrystal(item = ItemList.EnergyCrystal),
     LapotronCrystal(item = ItemList.LapotronCrystal),
     AdsorptionFilter(item = ItemList.AdsorptionFilter),

@@ -49,7 +49,6 @@ public class ModsLoader {
         new ExtraUtilities().run();
         new GraviSuite().run();
         RecipeRegistrars.register(new StargateRegistrar());
-        new StarGate().run();
         new Gendustry().run();
         new Ztones().run();
         new Forestry().run();
@@ -84,7 +83,6 @@ public class ModsLoader {
         registerRecipeClass(IC2.class);
         registerRecipeClass(ExtraUtilities.class);
         registerRecipeClass(GraviSuite.class);
-        registerRecipeClass(StarGate.class);
         registerRecipeClass(Gendustry.class);
         registerRecipeClass(Ztones.class);
         registerRecipeClass(Forestry.class);

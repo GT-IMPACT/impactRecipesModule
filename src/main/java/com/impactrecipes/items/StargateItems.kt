@@ -7,7 +7,24 @@ public enum class StargateItems(
 
     // Items
 
-    ControllerCrystal(registryName = "sgControllerCrystal");
+    ControllerCrystal(registryName = "sgControllerCrystal"),
+    CoreCrystal(registryName = "sgCoreCrystal"),
+    ChevronUpgrade(registryName = "sgChevronUpgrade"),
+    IrisUpgrade(registryName = "sgIrisUpgrade"),
+    IrisBlade(registryName = "sgIrisBlade"),
+    IC2Capacitor(registryName = "ic2Capacitor"),
+
+    // Blocks
+
+    Ring(registryName = "stargateRing"),
+    Chevron(
+        registryName = "stargateRing",
+        meta = 1,
+    ),
+    Base(registryName = "stargateBase"),
+    Controller(registryName = "stargateController"),
+    IC2PowerUnit(registryName = "ic2PowerUnit"),
+    OpenComputersInterface(registryName = "ocInterface");
 
     public override val modId: String = "SGCraft"
 }

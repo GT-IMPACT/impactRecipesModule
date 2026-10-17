@@ -7,6 +7,7 @@ public enum class EnderIOItems(
 
     // Blocks
 
+    DarkSteelPressurePlate(registryName = "blockDarkSteelPressurePlate"),
     BlockDarkIronBars(
         registryName = "blockDarkIronBars",
         meta = 0,

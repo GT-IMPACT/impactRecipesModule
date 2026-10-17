@@ -7,6 +7,10 @@ public enum class OpenComputersItems(
 
     // Items
 
+    APUTier3(
+        registryName = "item",
+        meta = 102,
+    ),
     MicrochipTier1(
         registryName = "item",
         meta = 24,
@@ -18,7 +22,11 @@ public enum class OpenComputersItems(
     MicrochipTier3(
         registryName = "item",
         meta = 26,
-    );
+    ),
+
+    // Blocks
+
+    CaseTier3(registryName = "case3");
 
     public override val modId: String = "OpenComputers"
 }

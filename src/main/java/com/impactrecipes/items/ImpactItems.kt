@@ -15,6 +15,10 @@ public enum class ImpactItems(
 
     // Items
 
+    StargateCrystalDust(item = Core_List_Items.StargateCrystalDust),
+    StargateShieldingFoil(item = Core_List_Items.StargateShieldingFoil),
+    StargateFramePart(item = Core_List_Items.StargateFramePart),
+    StargateChevron(item = Core_List_Items.StargateChevron),
     QuantumCrystal(item = Core_List_Items.QuantumCrystal),
     NanoCrystal(item = Core_List_Items.NanoCrystal),
     MicrochipBoard1(item = Core_List_Items.MicrochipBoard1),

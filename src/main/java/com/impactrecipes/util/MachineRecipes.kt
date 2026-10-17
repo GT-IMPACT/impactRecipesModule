@@ -10,6 +10,29 @@ import net.minecraftforge.fluids.FluidStack
 public object MachineRecipes {
 
     @JvmStatic
+    public fun spaceAutoclave(
+        input: ItemStack?,
+        fluid: FluidStack?,
+        output: ItemStack?,
+        chance: Int,
+        ticks: Int,
+        eu: Int,
+        cleanroom: Boolean,
+    ) {
+        registerOperation(id = "space autoclave") {
+            RA.addAutoclaveSpaceRecipe(
+                input,
+                fluid,
+                output,
+                chance,
+                ticks,
+                eu,
+                cleanroom,
+            )
+        }
+    }
+
+    @JvmStatic
     public fun dryingRack(
         input: ItemStack?,
         ticks: Int,
