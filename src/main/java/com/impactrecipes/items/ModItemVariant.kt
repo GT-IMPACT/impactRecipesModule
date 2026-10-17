@@ -1,5 +1,6 @@
 package com.impactrecipes.items
 
+import gregtech.api.util.GT_Utility
 import net.minecraft.item.ItemStack
 
 public class ModItemVariant(
@@ -9,7 +10,9 @@ public class ModItemVariant(
 
     public override fun get(amount: Int): ItemStack? {
         val stack = item.get(amount) ?: return null
-        stack.itemDamage = meta
-        return stack
+        return GT_Utility.copyMetaData(
+            meta.toLong(),
+            stack,
+        )
     }
 }
