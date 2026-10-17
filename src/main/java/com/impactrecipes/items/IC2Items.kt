@@ -9,6 +9,19 @@ public enum class IC2Items(
 
     // Items
 
+    IridiumPlate(apiName = "iridiumPlate"),
+    AdvancedHeatVent(apiName = "reactorVentDiamond"),
+    OverclockerUpgrade(apiName = "overclockerUpgrade"),
+    AdvancedHeatExchanger(apiName = "reactorHeatSwitchDiamond"),
+    HeatCapacityReactorPlating(apiName = "reactorPlatingHeat"),
+    ElectricHoe(apiName = "electricHoe"),
+    ElectricWrench(apiName = "electricWrench"),
+    ElectricTreetap(apiName = "electricTreetap"),
+    LapotronChargingCrystal(apiName = "chargingLapotronCrystal"),
+    NanoChestplate(apiName = "nanoBodyarmor"),
+    ElectricJetpack(apiName = "electricJetpack"),
+    EnergyPack(apiName = "energyPack"),
+    QuantumChestplate(apiName = "quantumBodyarmor"),
     Resin(apiName = "resin"),
     EjectorUpgrade(apiName = "ejectorUpgrade"),
     PullingUpgrade(apiName = "pullingUpgrade"),

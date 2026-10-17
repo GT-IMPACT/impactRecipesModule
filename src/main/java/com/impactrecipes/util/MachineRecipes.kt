@@ -1038,6 +1038,29 @@ public object MachineRecipes {
         }
     }
 
+    @JvmStatic
+    public fun assemblyLineWithOreInputs(
+        researchItem: ItemStack?,
+        researchTicks: Int,
+        inputs: Array<out Any?>?,
+        fluidInputs: Array<out FluidStack?>?,
+        output: ItemStack?,
+        ticks: Int,
+        eu: Int,
+    ) {
+        registerOperation(id = "assembly line") {
+            RA.addAssemblylineRecipe(
+                researchItem,
+                researchTicks,
+                inputs,
+                fluidInputs,
+                output,
+                ticks,
+                eu,
+            )
+        }
+    }
+
     private fun registerOperation(
         id: String,
         action: () -> Boolean,

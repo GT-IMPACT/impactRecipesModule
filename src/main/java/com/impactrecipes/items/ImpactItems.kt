@@ -15,6 +15,7 @@ public enum class ImpactItems(
 
     // Items
 
+    AdvancedCoolingCore(item = Core_List_Items.AdvancedCoolingCore),
     AdvancedMiner(item = GT_ItemList.AdvancedMiner),
     PistonPlate(item = Core_List_Items.PistonPlate),
     IridiumAlloyItemCasing(item = Core_List_Items.IridiumAlloyItemCasing),

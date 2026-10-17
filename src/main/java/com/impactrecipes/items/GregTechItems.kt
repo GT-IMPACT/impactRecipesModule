@@ -12,6 +12,13 @@ public enum class GregTechItems(
 
     // Items
 
+    IVCoil(item = ItemList.IV_Coil),
+    TransformerLuVIV(item = ItemList.Transformer_LuV_IV),
+    EnergyLapotronicOrb2(item = ItemList.Energy_LapotronicOrb2),
+    TransformerZPMLuV(item = ItemList.Transformer_ZPM_LuV),
+    TransformerUVZPM(item = ItemList.Transformer_UV_ZPM),
+    EnergyModule(item = ItemList.Energy_Module),
+    CircuitWaferNPIC(item = ItemList.Circuit_Wafer_NPIC),
     EmitterLuV(item = ItemList.Emitter_LuV),
     CasingGearboxTungstenSteel2(item = ItemList.Casing_Gearbox_TungstenSteel2),
     PumpIV(item = ItemList.Pump_IV),
