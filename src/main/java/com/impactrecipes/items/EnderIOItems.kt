@@ -167,10 +167,6 @@ public enum class EnderIOItems(
         registryName = "itemMaterial",
         meta = 5,
     ),
-    PowderIngot(
-        registryName = "itemPowderIngot",
-        meta = 0,
-    ),
     Material3(
         registryName = "itemMaterial",
         meta = 3,

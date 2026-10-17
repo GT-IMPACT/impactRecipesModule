@@ -1,10 +1,8 @@
 package com.impactrecipes.recipes.enderio
 
 import com.impactrecipes.items.EnderIOItems
-import com.impactrecipes.items.ModItemVariant
 import com.impactrecipes.util.CraftingRecipes
 import crazypants.enderio.item.darksteel.DarkSteelItems
-import gregtech.api.enums.GT_Values
 
 internal class EnderIORecipeRemovals {
 
@@ -690,16 +688,6 @@ internal class EnderIORecipeRemovals {
 
         CraftingRecipes.removeCraftingRecipesByOutput(
             output = EnderIOItems.Material5.get(),
-            ignoreNbt = true,
-            keepShapeless = false,
-            nativeOnly = false,
-        )
-
-        CraftingRecipes.removeCraftingRecipesByOutput(
-            output = ModItemVariant(
-                item = EnderIOItems.PowderIngot,
-                meta = GT_Values.W.toInt(),
-            ).get(),
             ignoreNbt = true,
             keepShapeless = false,
             nativeOnly = false,
