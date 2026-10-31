@@ -23,7 +23,14 @@ public object OreDictionaryRecipes {
             )
         }
         if (index >= 0) {
-            entries.removeAt(index)
+            // Forge 1.7.10 exposes a read-only view; mutate its backing list and rebuild the reverse lookup.
+            val stacksField = OreDictionary::class.java.getDeclaredField("idToStack")
+            stacksField.isAccessible = true
+
+            @Suppress("UNCHECKED_CAST")
+            val stacksById = stacksField.get(null) as List<MutableList<ItemStack>>
+            stacksById[OreDictionary.getOreID(name)].removeAt(index)
+            OreDictionary.rebakeMap()
         }
     }
 }
