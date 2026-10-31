@@ -39,6 +39,28 @@ internal class AE2HousingCraftingRecipes {
         )
 
         CraftingRecipes.shapedWithFlags(
+            output = AE2FCItems.WirelessPatternTerminal.get(),
+            flags = craftingFlags,
+            recipe = arrayOf<Any?>(
+                "SAE",
+                "PTP",
+                "PBP",
+                'P',
+                OrePrefixes.plate.get(Materials.HastelloyN),
+                'E',
+                GregTechItems.EmitterIV.get(),
+                'B',
+                GregTechItems.BatteryHullIVFull.get(),
+                'S',
+                GregTechItems.SensorIV.get(),
+                'T',
+                AE2Items.MEPatternTerminal.get(),
+                'A',
+                AE2Items.WirelessReceiver.get(),
+            ),
+        )
+
+        CraftingRecipes.shapedWithFlags(
             output = AE2StuffItems.WirelessKit.get(),
             flags = craftingFlags,
             recipe = arrayOf<Any?>(
