@@ -1,46 +1,37 @@
-import settings.getVersionMod
-
 plugins {
-    alias(libs.plugins.setup.minecraft)
-    alias(libs.plugins.setup.publish)
-    id(libs.plugins.buildconfig.get().pluginId)
+    id("minecraft-setup")
+    id("publish-setup")
 }
 
-val modId: String by extra
-val modName: String by extra
-val modGroup: String by extra
+impactMod {
+    modId.set("impact-recipesModule")
+    modName.set("Impact | Recipes Module")
+    modGroup.set("com.impactrecipes")
+    mavenGroup.set("space.impact")
+    mavenUrl.set("https://maven.accident.space/repository/maven-releases/")
+}
 
-extra.set("modVersion", getVersionMod())
+val modId = impactMod.modId.get()
+val modName = impactMod.modName.get()
+val modGroup = impactMod.modGroup.get()
 
 buildConfig {
     packageName("com.impactrecipes")
     buildConfigField("String", "MODID", "\"${modId}\"")
     buildConfigField("String", "MODNAME", "\"${modName}\"")
-    buildConfigField("String", "VERSION", "\"${getVersionMod()}\"")
+    buildConfigField("String", "VERSION", "\"${project.version}\"")
     buildConfigField("String", "GROUPNAME", "\"${modGroup}\"")
-    useKotlinOutput { topLevelConstants = true }
-}
-
-repositories {
-    maven("https://maven.accident.space/repository/maven-public/") {
-        mavenContent {
-            includeGroup("space.impact")
-            includeGroup("com.github.GTNewHorizons")
-            includeGroup("com.github.Azanor")
-            includeGroupByRegex("space\\.impact\\..+")
-        }
-        credentials {
-            username = System.getenv("MAVEN_USER") ?: "NONE"
-            password = System.getenv("MAVEN_PASSWORD") ?: "NONE"
-        }
+    useKotlinOutput {
+        topLevelConstants = true
+        internalVisibility = false
     }
 }
 
 dependencies {
     // impact
     implementation("space.impact:Forgelin:2.1.1")
-    implementation("space.impact:gregtech-impact:5.09.35.42:dev") { isTransitive = false }
-    implementation("space.impact:Impact-Core:1.1.0.27:dev") {
+    implementation("space.impact:gregtech-impact:5.09.36.1:dev") { isTransitive = false }
+    implementation("space.impact:Impact-Core:1.1.1.0:dev") {
         exclude(group = "space.impact", module = "VirtualWorld")
     }
     implementation("space.impact:VirtualWorld:2.0.4:dev") { isTransitive = false }
