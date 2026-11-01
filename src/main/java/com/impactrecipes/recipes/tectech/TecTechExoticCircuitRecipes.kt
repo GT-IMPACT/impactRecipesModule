@@ -311,7 +311,7 @@ internal class TecTechExoticCircuitRecipes {
             ),
             output = GregTechItems.CircuitQuantum.get(),
             ticks = 12000,
-            eu = 134000000,
+            eu = 32000000,
         )
     }
 }

@@ -259,7 +259,7 @@ internal class TecTechStargateAndUtilityRecipes {
             ),
             output = GregTechItems.Teleporter.get(),
             ticks = 300 * 20,
-            eu = 512000000,
+            eu = 32000000,
         )
 
         MachineRecipes.researchAssemblyLineWithOreInputs(
