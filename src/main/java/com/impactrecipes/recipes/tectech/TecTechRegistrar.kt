@@ -1,5 +1,6 @@
 package com.impactrecipes.recipes.tectech
 
+import com.impactrecipes.core.Reference
 import com.impactrecipes.loader.IRecipeRegistrar
 import cpw.mods.fml.common.Loader
 
@@ -21,6 +22,9 @@ public class TecTechRegistrar : IRecipeRegistrar {
         TecTechBatteryRecipes().register()
         TecTechEnergyInfrastructureRecipes().register()
         TecTechEnergyHatchRecipes().register()
+        if (Loader.isModLoaded(Reference.IMPACT)) {
+            TecTechBuckConverterRecipes().register()
+        }
         TecTechStargateAndUtilityRecipes().register()
     }
 }

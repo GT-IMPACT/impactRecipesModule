@@ -27,7 +27,14 @@ public enum class TecTechItems(
     MachineMultiResearch(item = CustomItemList.Machine_Multi_Research),
     MachineMultiScanner(item = CustomItemList.Machine_Multi_Scanner),
     MachineMultiTransformer(item = CustomItemList.Machine_Multi_Transformer),
-    EMComputerBus(item = CustomItemList.eM_Computer_Bus);
+    EMComputerBus(item = CustomItemList.eM_Computer_Bus),
+    BuckConverterIV(item = CustomItemList.Machine_BuckConverter_IV),
+    BuckConverterLuV(item = CustomItemList.Machine_BuckConverter_LuV),
+    BuckConverterZPM(item = CustomItemList.Machine_BuckConverter_ZPM),
+    BuckConverterUV(item = CustomItemList.Machine_BuckConverter_UV),
+    BuckConverterUHV(item = CustomItemList.Machine_BuckConverter_UHV),
+    BuckConverterUEV(item = CustomItemList.Machine_BuckConverter_UEV),
+    ;
 
     public val modId: String = "tectech"
 
