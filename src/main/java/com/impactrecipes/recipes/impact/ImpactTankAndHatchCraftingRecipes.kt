@@ -8,6 +8,7 @@ import com.impactrecipes.util.RecipeItems
 import gregtech.api.enums.Materials
 import gregtech.api.enums.OreDictNames
 import gregtech.api.enums.OrePrefixes
+import gregtech.api.util.GT_ModHandler.RecipeBits
 
 internal class ImpactTankAndHatchCraftingRecipes {
 
@@ -60,7 +61,7 @@ internal class ImpactTankAndHatchCraftingRecipes {
 
         CraftingRecipes.shapedWithFlags(
             output = ImpactItems.ULVConveyorModule.get(),
-            flags = ImpactRecipeFlags.componentCrafting,
+            flags = RecipeBits.NOT_REMOVABLE or RecipeBits.REVERSIBLE,
             recipe = arrayOf<Any?>(
                 "PPP",
                 "MWM",
@@ -76,7 +77,7 @@ internal class ImpactTankAndHatchCraftingRecipes {
 
         CraftingRecipes.shapedWithFlags(
             output = ImpactItems.ULVConveyorModule.get(),
-            flags = ImpactRecipeFlags.componentCrafting,
+            flags = RecipeBits.NOT_REMOVABLE or RecipeBits.REVERSIBLE,
             recipe = arrayOf<Any?>(
                 "PPP",
                 "MWM",
@@ -92,7 +93,7 @@ internal class ImpactTankAndHatchCraftingRecipes {
 
         CraftingRecipes.shapedWithFlags(
             output = ImpactItems.ULVPump.get(),
-            flags = ImpactRecipeFlags.componentCrafting,
+            flags = RecipeBits.NOT_REMOVABLE or RecipeBits.REVERSIBLE,
             recipe = arrayOf<Any?>(
                 "SXO",
                 "dPw",
@@ -112,7 +113,7 @@ internal class ImpactTankAndHatchCraftingRecipes {
 
         CraftingRecipes.shapedWithFlags(
             output = ImpactItems.ULVPump.get(),
-            flags = ImpactRecipeFlags.componentCrafting,
+            flags = RecipeBits.NOT_REMOVABLE or RecipeBits.REVERSIBLE,
             recipe = arrayOf<Any?>(
                 "SXO",
                 "dPw",
@@ -132,7 +133,7 @@ internal class ImpactTankAndHatchCraftingRecipes {
 
         CraftingRecipes.shapedWithFlags(
             output = ImpactItems.ULVPump.get(),
-            flags = ImpactRecipeFlags.componentCrafting,
+            flags = RecipeBits.NOT_REMOVABLE or RecipeBits.REVERSIBLE,
             recipe = arrayOf<Any?>(
                 "SXO",
                 "dPw",
@@ -152,7 +153,7 @@ internal class ImpactTankAndHatchCraftingRecipes {
 
         CraftingRecipes.shapedWithFlags(
             output = ImpactItems.ULVMotor.get(),
-            flags = ImpactRecipeFlags.componentCrafting,
+            flags = RecipeBits.NOT_REMOVABLE or RecipeBits.REVERSIBLE,
             recipe = arrayOf<Any?>(
                 "CWR",
                 "WIW",
@@ -170,7 +171,7 @@ internal class ImpactTankAndHatchCraftingRecipes {
 
         CraftingRecipes.shapedWithFlags(
             output = ImpactItems.ULVRobotArm.get(),
-            flags = ImpactRecipeFlags.componentCrafting,
+            flags = RecipeBits.NOT_REMOVABLE or RecipeBits.REVERSIBLE,
             recipe = arrayOf<Any?>(
                 "CCC",
                 "MSM",
@@ -190,7 +191,7 @@ internal class ImpactTankAndHatchCraftingRecipes {
 
         CraftingRecipes.shapedWithFlags(
             output = ImpactItems.ULVPiston.get(),
-            flags = ImpactRecipeFlags.componentCrafting,
+            flags = RecipeBits.NOT_REMOVABLE or RecipeBits.REVERSIBLE,
             recipe = arrayOf<Any?>(
                 "CPP",
                 "dSS",
