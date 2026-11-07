@@ -14,8 +14,12 @@ public class GregTechRegistrar : IRecipeRegistrar {
     public override fun register() {
         GregTechRecipeRemovals().register()
         GregTechBlockDisassemblyRecipes().register()
+        GregTechMachineDisassemblyRecipes().register()
+        GregTechInfrastructureDisassemblyRecipes().register()
         GregTechComponentCraftingRecipes().register()
+        GregTechComponentMachineDisassemblyRecipes().register()
         GregTechStorageCraftingRecipes().register()
+        GregTechStorageDisassemblyRecipes().register()
         GregTechUtilityCraftingRecipes().register()
         GregTechCasingRecipes().register()
         GregTechWireRecipes().register()

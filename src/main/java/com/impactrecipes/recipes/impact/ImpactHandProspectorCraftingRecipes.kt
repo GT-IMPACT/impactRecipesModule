@@ -9,8 +9,7 @@ import gregtech.api.util.GT_ModHandler
 
 internal class ImpactHandProspectorCraftingRecipes {
 
-    private val craftingFlags = GT_ModHandler.RecipeBits.DISMANTLEABLE or
-        GT_ModHandler.RecipeBits.DO_NOT_CHECK_FOR_COLLISIONS or
+    private val craftingFlags = GT_ModHandler.RecipeBits.DO_NOT_CHECK_FOR_COLLISIONS or
         GT_ModHandler.RecipeBits.BUFFERED
 
     internal fun register() {

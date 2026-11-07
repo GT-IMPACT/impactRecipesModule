@@ -15,6 +15,7 @@ public class ImpactRegistrar : IRecipeRegistrar {
     public override fun register() {
         ImpactTankControllerCraftingRecipes().register()
         ImpactTankAndHatchCraftingRecipes().register()
+        ImpactMachineDisassemblyRecipes().register()
         ImpactToolAndAlloyCraftingRecipes().register()
         ImpactBrickCraftingRecipes().register()
         ImpactBatteryCraftingRecipes().register()
