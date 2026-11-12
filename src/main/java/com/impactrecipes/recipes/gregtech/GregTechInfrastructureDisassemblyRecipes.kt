@@ -1290,10 +1290,6 @@ internal class GregTechInfrastructureDisassemblyRecipes {
             input = ItemList.Machine_LV_RockBreaker.get(1L),
             outputs = arrayOf(
                 ItemList.Hull_LV.get(1L),
-                RecipeItems.ore(
-                    name = "craftingGrinder",
-                    count = 1,
-                ),
                 ItemList.Electric_Motor_LV.get(1L),
                 ItemList.Electric_Piston_LV.get(1L),
                 RecipeItems.ore(
@@ -1311,10 +1307,6 @@ internal class GregTechInfrastructureDisassemblyRecipes {
             input = ItemList.Machine_MV_RockBreaker.get(1L),
             outputs = arrayOf(
                 ItemList.Hull_MV.get(1L),
-                RecipeItems.ore(
-                    name = "craftingGrinder",
-                    count = 1,
-                ),
                 ItemList.Electric_Motor_MV.get(1L),
                 ItemList.Electric_Piston_MV.get(1L),
                 RecipeItems.ore(
@@ -1332,10 +1324,6 @@ internal class GregTechInfrastructureDisassemblyRecipes {
             input = ItemList.Machine_HV_RockBreaker.get(1L),
             outputs = arrayOf(
                 ItemList.Hull_HV.get(1L),
-                RecipeItems.ore(
-                    name = "craftingGrinder",
-                    count = 1,
-                ),
                 ItemList.Electric_Motor_HV.get(1L),
                 ItemList.Electric_Piston_HV.get(1L),
                 RecipeItems.ore(
@@ -1353,10 +1341,6 @@ internal class GregTechInfrastructureDisassemblyRecipes {
             input = ItemList.Machine_EV_RockBreaker.get(1L),
             outputs = arrayOf(
                 ItemList.Hull_EV.get(1L),
-                RecipeItems.ore(
-                    name = "craftingGrinder",
-                    count = 1,
-                ),
                 ItemList.Electric_Motor_EV.get(1L),
                 ItemList.Electric_Piston_EV.get(1L),
                 RecipeItems.ore(
@@ -1374,10 +1358,6 @@ internal class GregTechInfrastructureDisassemblyRecipes {
             input = ItemList.Machine_IV_RockBreaker.get(1L),
             outputs = arrayOf(
                 ItemList.Hull_IV.get(1L),
-                RecipeItems.ore(
-                    name = "craftingGrinder",
-                    count = 1,
-                ),
                 ItemList.Electric_Motor_IV.get(1L),
                 ItemList.Electric_Piston_IV.get(1L),
                 RecipeItems.ore(

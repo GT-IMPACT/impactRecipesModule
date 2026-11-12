@@ -2166,10 +2166,6 @@ internal class GregTechMachineDisassemblyRecipes {
                     material = Materials.Gold,
                     count = 3,
                 ),
-                RecipeItems.ore(
-                    name = "craftingGrinder",
-                    count = 1,
-                ),
             ),
             ticks = 2000,
             eu = 16,
@@ -3120,10 +3116,6 @@ internal class GregTechMachineDisassemblyRecipes {
                     material = Materials.Aluminium,
                     count = 3,
                 ),
-                RecipeItems.ore(
-                    name = "craftingGrinder",
-                    count = 1,
-                ),
             ),
             ticks = 2000,
             eu = 16,
@@ -4073,10 +4065,6 @@ internal class GregTechMachineDisassemblyRecipes {
                     prefix = OrePrefixes.cableGt01,
                     material = Materials.Platinum,
                     count = 3,
-                ),
-                RecipeItems.ore(
-                    name = "craftingGrinder",
-                    count = 1,
                 ),
             ),
             ticks = 2000,
